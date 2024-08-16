@@ -1,1 +1,1188 @@
-Hello CarMaa
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .wave {
+            --size: 50px;
+            --m: 2;
+            --p: calc(var(--m)*var(--size));
+            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+            padding-top: 50px;
+            mask:
+                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
+        }
+
+
+        .elementor-shape-fill {
+            fill: white !important;
+        }
+
+        .container {
+            display: grid;
+            place-content: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            --position: 50%;
+        }
+
+
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            object-position: left;
+        }
+
+        .image-before {
+            position: absolute;
+            inset: 0;
+            width: var(--position);
+            filter: grayscale(100%)
+        }
+
+        .slider {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+            opacity: 0;
+            /* for Firefox */
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider:focus-visible~.slider-button {
+            outline: 5px solid black;
+            outline-offset: 3px;
+        }
+
+        .slider-line {
+            position: absolute;
+            inset: 0;
+            width: .2rem;
+            height: 100%;
+            background-color: #fff;
+            /* z-index: 10; */
+            left: var(--position);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .slider-button {
+            position: absolute;
+            background-color: #fff;
+            color: black;
+            padding: .5rem;
+            border-radius: 100vw;
+            display: grid;
+            place-items: center;
+            top: 50%;
+            left: var(--position);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            /* z-index: 100; */
+            box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+        }
+
+        .slick-list {
+            border-radius: 20px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main-timeline {
+            font-family: tahoma;
+            padding: 20px 0;
+            position: relative;
+
+        }
+
+        .main-timeline::before,
+        .main-timeline::after {
+            content: "";
+            height: 40px;
+            width: 40px;
+            background-color: #e7e7e7;
+            border-radius: 50%;
+            border: 10px solid #303334;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 2;
+            right: 0px;
+            margin: auto;
+        }
+
+        .main-timeline::after {
+            top: unset;
+            bottom: -25px !important;
+
+        }
+
+        .main-timeline::after {
+            top: auto;
+            bottom: 15px;
+        }
+
+        .main-timeline .timeline {
+            padding: 35px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-timeline .timeline::before,
+        .main-timeline .timeline::after {
+            content: "";
+            height: 100%;
+            width: 50%;
+            border-radius: 110px 0 0 110px;
+            border: 15px solid #46b2bc;
+            border-right: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .main-timeline .timeline::after {
+            border-radius: 95px 0 0 95px;
+
+        }
+
+        .main-timeline .timeline::after {
+            height: calc(100% - 30px);
+            width: calc(50% - 12px);
+            border-color: #65c7d0;
+            left: 12px;
+            top: 15px;
+        }
+
+        .main-timeline .timeline-content {
+            display: inline-block;
+        }
+
+        .main-timeline .timeline-content:hover {
+            text-decoration: none;
+        }
+
+        .main-timeline .timeline-year {
+            color: #65c7d0;
+            font-size: 50px;
+            font-weight: 600;
+            display: inline-block;
+            transform: translatey(-50%);
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+
+        .timeline-year {
+            position: static !important;
+            transform: translatey(0%) !important;
+
+        }
+
+        .main-timeline .timeline-icon {
+            color: #65c7d0;
+            font-size: 70px;
+            display: inline-block;
+            transform: translateY(-50%);
+            position: absolute;
+            left: 34%;
+            top: 50%;
+        }
+
+        .main-timeline .content {
+            color: #909090;
+            width: 50%;
+            padding: 20px;
+            display: inline-block;
+            float: right;
+        }
+
+        .main-timeline .title {
+            color: #65c7d0;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .main-timeline .description {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .main-timeline .timeline:nth-child(even)::before {
+            left: auto;
+            right: 0;
+            border-radius: 0 110px 110px 0;
+            border: 15px solid red;
+            border-left: none;
+        }
+
+        .main-timeline .timeline:nth-child(even)::after {
+            left: auto;
+            right: 12px;
+            border-radius: 0 95px 95px 0;
+            border: 15px solid green;
+        }
+
+        .timeline:nth-child(even)::after {
+            border: 15px solid #e5f0fe !important;
+
+            border-left: none !important;
+
+
+        }
+
+        .timeline:nth-child(even)::before {
+            border: 15px solid #f3f9ff !important;
+            border-left: none !important;
+        }
+
+
+        .timeline:nth-child(odd)::after {
+            border: 15px solid #f3f9ff !important;
+            border-right: none !important;
+
+
+        }
+
+        .timeline:nth-child(odd)::before {
+            border: 15px solid #e5f0fe !important;
+            border-right: none !important;
+        }
+
+
+
+        .main-timeline .timeline:nth-child(even) .content {
+            float: left;
+        }
+
+        .main-timeline .timeline:nth-child(even) .timeline-year {
+            left: auto;
+            right: 10%;
+        }
+
+        .main-timeline .timeline:nth-child(even) .timeline-icon {
+            left: auto;
+            right: 32%;
+        }
+
+
+        @media screen and (max-width:1200px) {
+            .main-timeline .timeline:after {
+                border-radius: 88px 0 0 88px;
+            }
+
+            .main-timeline .timeline:nth-child(even):after {
+                border-radius: 0 88px 88px 0;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .main-timeline .timeline {
+                margin-top: -19px;
+            }
+
+            .main-timeline .timeline:before {
+                border-radius: 50px 0 0 50px;
+                border-width: 10px;
+            }
+
+            .main-timeline .timeline:after {
+                height: calc(100% - 18px);
+                width: calc(50% - 9px);
+                border-radius: 43px 0 0 43px;
+                border-width: 10px;
+                top: 9px;
+                left: 9px;
+            }
+
+            .main-timeline .timeline:nth-child(even):before {
+                border-radius: 0 50px 50px 0;
+                border-width: 10px;
+            }
+
+            .main-timeline .timeline:nth-child(even):after {
+                height: calc(100% - 18px);
+                width: calc(50% - 9px);
+                border-radius: 0 43px 43px 0;
+                border-width: 10px;
+                top: 9px;
+                right: 9px;
+            }
+
+            .main-timeline .timeline-icon {
+                font-size: 60px;
+            }
+
+            .main-timeline .timeline-year {
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width:479px) {
+            .main-timeline .timeline-icon {
+                font-size: 50px;
+                transform: translateY(0);
+                top: 25%;
+                left: 10%;
+            }
+
+            .main-timeline .timeline-year {
+                font-size: 25px;
+                transform: translateY(0);
+                top: 65%;
+                left: 9%;
+            }
+
+            .main-timeline .content {
+                width: 68%;
+                padding: 10px;
+            }
+
+            .main-timeline .title {
+                font-size: 18px;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-icon {
+                right: 10%;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-year {
+                right: 9%;
+            }
+        }
+        a {
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="width: 100vw; height: 80px; background-color:transparent;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700;">logo</div>
+            <ul style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; " ><a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="/">Home</a> </li>
+                <li style="cursor: pointer; "><a  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; cursor: no-drop" href="/" >Pricing</a> </li>
+                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; cursor: no-drop"  href="/" >Store</a> </li>
+                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./about.html" >About</a></li>
+                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;cursor: no-drop"  href="/" >Franchise</a></li>
+            </ul>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div
+                    style="border-radius: 50%; background-color: #183ea1; width: 40px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                    <ion-icon name="call" style="font-size: 1.4rem; color: white;"></ion-icon>
+                </div>
+                <div
+                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    <a href="./contactUs.html" style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div style="width: 100vw;  " id="home">
+        <div
+            style="width: 95%;position: relative; align-items: center;  gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <img src="./bg.png"
+                style="position: absolute; right: -70px; top: -80px;width: 70%;z-index: -1; object-fit: contain; height: 200%;"
+                alt="">
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <h1 style="font-size: 2.5rem;" id="homeH1">We Provide premium<br> car cleaning service</h1>
+                <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our Team Member come in you
+                    location
+                    and clean your car</p>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Specialist Cleaning</span>
+                </div>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Multiple Plans</span>
+                </div>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Start with 99RS</span>
+                </div>
+                <div class="homeB"
+                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    Book Now
+                </div>
+            </div>
+            <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
+                <img src="./home.jpg" style="  " alt="">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100vw; background-color:transparent;">
+        <div style="width: 95%;height: 100%; max-width: 1200px;margin: auto;">
+            <h3 class="services" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">How
+                Its Work</h3>
+            <h2 class="services"
+                style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; margin-bottom: 50px;">
+                Here you can see what the process
+            </h2>
+            <div class="main-timeline">
+                <div class="timeline">
+                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="timeline-year"
+                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                            <img src="./car.png" alt="" style="width: 80%; ">
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Contact Us</h3>
+                            <p class="description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been
+                                the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline">
+
+                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Contact Us</h3>
+                            <p class="description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been
+                                the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                        <div class="timeline-year"
+                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                            <img src="./car.png" alt="" style="width: 80%; ">
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="timeline-year"
+                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                            <img src="./car.png" alt="" style="width: 80%; ">
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Contact Us</h3>
+                            <p class="description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been
+                                the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Contact Us</h3>
+                            <p class="description">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been
+                                the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                        <div class="timeline-year"
+                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                            <img src="./car.png" alt="" style="width: 80%; ">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
+        <div
+            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
+            <h3 class="services" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our
+                Services</h3>
+            <h2 class="services"
+                style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
+                We provide amazing vehicle cleaning services
+            </h2>
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 50px;">
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+                <div class="servicesI"
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Car Wash Lift</h4>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available, but the
+                        main majority have suffered alteration.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div style="width: 100vw; position: relative; margin-top: 30px; background-color: #183ea1; overflow: visible;">
+        <div
+            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
+            <h3 style="font-size: 1.2rem; font-weight: 600; color: #ffffff; text-align: center;">Chose us</h3>
+            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: white;">
+                Why Should choose us
+            </h2>
+            <p
+                style="text-align: center; max-width: 700px ;width: 95%; margin: 5px auto;font-size: 1.2rem;color: white; ">
+                Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit. Non vel dolores optio amet vitae sapiente, itaque
+                tempora numquam mollitia rerum.</p>
+               
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;  justify-content: space-between; margin-top: 60px;">
+                <div style="width: 22%;">
+                    <div style="height: 80px; aspect-ratio: 1; background-color: #ffffff; border-radius: 50%;">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water</p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 22%;">
+                    <div style="height: 80px; aspect-ratio: 1; background-color: #ffffff; border-radius: 50%;">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water</p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 22%;">
+                    <div style="height: 80px; aspect-ratio: 1; background-color: #ffffff; border-radius: 50%;">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water</p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 22%;">
+                    <div style="height: 80px; aspect-ratio: 1; background-color: #ffffff; border-radius: 50%;">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water</p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+
+            </div>
+            <div style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden;">
+                <iframe style="width: 100%; height: 100%; border: none; outline: none;"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+            </div>
+        </div>
+       
+    </div>
+    
+
+
+    <!-- <div style="width: 100vw; margin-top: 70px; " id="servicesPage">
+        <h3 class="services2" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our
+            Plans</h3>
+        <h2 class="services2" style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
+            For customer Conviniant we launch Our Plans
+        </h2>
+
+        <div style="width: 95%;  max-width: 1200px;margin: auto; display: flex;gap: 40px; padding: 60px 0px;">
+            <div
+                style="box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178); flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
+                <h4 style="font-size: 1.5rem;">Adhoc</h4>
+                <div style="display: flex; flex-direction:column  ; gap: 5px;">
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">On-demand Service</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178); flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
+                <h4 style="font-size: 1.5rem;">Adhoc</h4>
+                <div style="display: flex; flex-direction:column  ; gap: 5px;">
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">On-demand Service</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
+                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div style="display: flex; align-items: center; justify-content: center; padding: 50px 0px;">
+
+        <img src="./p.png" style="margin: auto;" alt="">
+    </div> -->
+    <!-- <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
+
+
+        <div style="width: 95%;  max-width: 1200px;margin: auto; display: flex;gap: 10%; padding: 60px 0px; ">
+            <div style="background-color: gray; width: 400px; border-radius: 10px;overflow: hidden;">
+                <iframe style="width: 100%; height: 100%; border: none; outline: none;"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+            </div>
+            <div style=" flex: 1; display: flex; flex-direction: column; gap: 10px;">
+                <p style="font-weight: 500;">Why Us</p>
+                <h1 style="font-size: 2.5rem;" id="homeH1">Why washing your car <br> with us?</h1>
+                <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our company employs only
+                    highly qualified specialists, we use high-quality cleaning agents and equipment as well as premium
+                    materials.</p>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Automated and waterless wash</span>
+                </div>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Experienced team</span>
+                </div>
+                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <span style="font-size: 1.2rem; font-weight: 500;">24/7 emergency service</span>
+                </div>
+                <div class="homeB"
+                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    View All
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+    <!-- <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
+
+        <div
+            style="width: 95%;gap: 30px;  max-width: 1200px;margin: auto; display: flex;gap: 40px; padding: 60px 0px; align-items: center;">
+            <div style=" flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="border: 1px solid #183ea1; height: 0px; width:100px;"></div> <span
+                        style="font-size: 1.2rem; font-weight: 500; color: #183ea1;">Modern
+                        Equipment</span>
+                </div>
+                <h4 style="font-size: 2rem;">Professional washing <br> and cleaning of your car</h4>
+                <p style="font-size: 1.2rem;">Phasellus in arcu dapibus, lobortis est in, suscipit diam. Vivamus
+                    faucibus faucibus eros et porttitor. Sed est nulla, tincidunt ac ex eget, dictum mollis tortor.
+                    Vivamus faucibus nec ipsum id aliquam lobortis est.</p>
+                <div
+                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    View All
+                </div>
+            </div>
+            <div style="flex: 1; ">
+                <img src="./car2.png" style="height: 160% ; width: 120%; object-fit: cover;" alt="">
+            </div>
+        </div>
+    </div> -->
+
+
+    <div style="width: 100vw; ">
+        <div style="width: 95%; max-width: 1200px;margin: auto; margin-top: 50px;">
+            <p style="color: #183ea1; font-weight: 600; font-size: 1.2rem;">Before After</p>
+            <div style="width: 100%; border: 1px solid rgb(44, 44, 44); margin: 10px 0px;">
+            </div>
+            <h2 style=" font-weight: 600; font-size: 2rem;">Before After Car Wash</h2>
+            <div class="container" style="margin-top: 40px;">
+                <div class="image-container">
+                    <img class="image-before slider-image"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="color photo" />
+                    <img class="image-after slider-image"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="black and white" />
+                </div>
+                <!-- step="10" -->
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                    class="slider" />
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div style="width: 100vw; ">
+        <div style="width: 95%; max-width: 1200px;margin: auto; margin-top: 50px;">
+            <div style="display: flex; justify-content: space-between; ">
+
+                <div>
+                    <h3 style="font-size: 1.2rem;">Our Services</h3>
+                    <h2 style="font-size: 2rem;">Lorem ipsum dolor, sit amet <br> consectetur adipisicing.</h2>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; align-items: end; justify-content: center; gap: 20px; ">
+                    <p style="max-width: 500px; text-align: right; font-weight: 1.2rem; font-weight: 400;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non corporis fugit rem ex tempora
+                        magni.
+                    </p>
+                    <button
+                        style="width: fit-content; padding: 10px 0px 10px 0px; cursor: pointer; margin-top: 20px;  font-size: 1.2rem; font-weight: 600; color: #183ea1; display: flex; align-items: center; gap: 10px; border: none; outline: none; background-color: transparent;border-bottom: 2px solid #183ea1;">
+                        <span>Contact us</span>
+                        <ion-icon style="font-size: 1.2rem;" name="arrow-forward"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <div style="width: 100%; margin-top: 20px; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden;">
+
+                <iframe style="width: 100%;height: 100%;"
+                    src="https://www.youtube.com/embed/DF8jM6pjuQ8?si=42q93OPBKgWiV6IE&autoplay=1&loop=1&controls=0&mute=0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div style="width: 100vw; margin-top: 60px; display: flex; justify-content: center;" id="servicesPage">
+        <img src="./m.png" style="width: 95%; max-width:1200px ;" alt="">
+    </div> -->
+    <div
+        style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
+        <img src="./bg.jpg"
+            style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
+            alt="">
+        <div
+            style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
+            <div style="display: flex;flex-direction: column; ">
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="56">1</span>M</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
+            </div>
+            <div style=" display: flex;flex-direction: column;  ">
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="200">1</span>M</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
+            </div>
+            <div style=" display: flex;flex-direction: column;">
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="100">1</span>M</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="width: 100vw; ">
+        <h3 style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Testimonial</h3>
+        <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
+            Hear from our clients
+        </h2>
+        <p style="width: 95%; max-width: 450px; margin: auto; text-align: center; margin-top: 20px; ">Pamper
+            your car
+            with premier full wash complete with interior vacuum and window cleaning.</p>
+        <div
+            style="width: 95%;  height: 100%; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between; margin-top: 20px; margin-bottom: 50px;">
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 50px;">
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1;overflow: hidden; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <img src="./t3.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
+                        but the
+                        main majority have suffered alteration.</p>
+                    <h4 style="font-size: 1.4rem; ">Maria</h4>
+                </div>
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1;overflow: hidden; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <img src="./t2.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
+                        but the
+                        main majority have suffered alteration.</p>
+                    <h4 style="font-size: 1.4rem; ">Jon Doe</h4>
+                </div>
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px;">
+                    <div
+                        style="border-radius: 50%; background-color: #183ea1;overflow: hidden; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <img src="./t1.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
+                    <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
+                        but the
+                        main majority have suffered alteration.</p>
+                    <h4 style="font-size: 1.4rem; ">Ally</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        const container = document.querySelector('.container');
+        document.querySelector('.slider').addEventListener('input', (e) => {
+            container.style.setProperty('--position', `${e.target.value}%`);
+        })
+        document.querySelectorAll('.number').forEach((numberElement) => {
+            const targetNumber = parseInt(numberElement.getAttribute('data-target'), 10);
+            gsap.to(numberElement, {
+                scrollTrigger: {
+                    trigger: numberElement,
+                    start: "top 80%",
+                    end: "bottom 50%",
+                },
+                opacity: 1,
+                textContent: targetNumber,
+                duration: 1.5,
+                ease: "power1.inOut",
+                onUpdate: function () {
+                    const currentValue = parseInt(numberElement.textContent, 10);
+                    numberElement.textContent = currentValue.toLocaleString();
+                }
+            });
+        });
+    </script>
+    <script>
+        const home = gsap.timeline()
+        home.from("#homeH1", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+        })
+        home.from(".homeCar", {
+            y: 20,
+            duration: 1,
+            repeat: -1, // Repeat infinitely
+            yoyo: true, // Reverse the animation after each cycle
+            ease: "power1.inOut" // Easing function
+
+        })
+        home.from("#homeP", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+        })
+        home.from(".homeB", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+        })
+        gsap.from(".services ", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".services",
+                scroller: "body",
+                start: "top 80%",
+                marker: true
+            }
+        })
+        gsap.from(".services2 ", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".services2",
+                scroller: "body",
+                start: "top 80%",
+                marker: true
+            }
+        })
+        gsap.from(".servicesI ", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".servicesI",
+                scroller: "body",
+                start: "top 90%",
+                marker: true,
+                scrub: true,
+                end: "top 50%"
+            },
+            stagger: 0.3
+        })
+        // timeline-content
+        gsap.from(".timeline-content", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".timeline-content",
+                scroller: "body",
+                start: "top 80%",
+                marker: true,
+                scrub: 3,
+                end: "top 50%"
+            },
+            stagger: 0.3
+        })
+        // gsap.from("#servicesPage .services", {
+        //     y: 100,
+        //     duration: 1,
+        //     opacity: 0,
+        //     scrollTrigger:"#servicesPage .services"
+        // })
+
+    </script>
+     <div style=" width: 100vw;">
+        <div
+            style=" position: relative; height: 700px; top: 70px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <h2 style="position: relative; z-index: 10; text-align: center; color: white; font-size: 2.5rem;">Lorem
+                ipsum dolor sit amet consectetur <br> Recusandae error, repellat rerum
+            </h2>
+            <p
+                style="position: relative; z-index: 10; text-align: center; color: white; font-size: 1.3rem;font-weight: 400;margin-top: 20px; max-width: 800px; width: 95%;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis iusto accusantium. Possimus
+                aliquam ea minima culpa beatae fugiat repudiandae harum consequatur! Suscipit</p>
+            <div
+                style=" position: relative; z-index: 10; margin-top: 20px;  background-color: #183ea1; color: white; padding: 10px 25px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 50px;">
+                Book Now
+            </div>
+            <video src="./v1.mp4" muted style="position: absolute; width: 100%; height: 100%; object-fit: cover;"
+                autoplay></video>
+            <div style="width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.541);">
+
+            </div>
+            <div
+                style="width: 100%;  position: absolute; z-index: 1;top: 0px;  overflow: hidden; left: 0; line-height: 45px;direction: ltr;">
+
+                <svg xmlns="http://www.w3.org/2000/svg" style="height: 100px; width: 100%;" viewBox="0 0 283.5 27.8"
+                    preserveAspectRatio="none">
+                    <path class="elementor-shape-fill"
+                        d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7	s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7	c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3	c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6	c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7	C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5	c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1	c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7	c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6	C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8	c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2	C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3	C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1	z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1	c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C267.7,18.8,269.7,18,269.6,18z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2	S227.6,9.9,227.4,9.8z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4	C206.4,12.9,204.6,13.5,204.5,13.4z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6	S201,10.7,201,10.6z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C152.6,27.5,154.6,26.8,154.5,26.7z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6	c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0	C76.9,11.5,75.3,12.5,75.5,12.6z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z">
+                    </path>
+                </svg>
+
+
+            </div>
+        </div>
+        <footer class="wave" style="width: 100vw;  background-color: #F2F8FE;">
+            <div
+                style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; display: flex; padding: 60px 0px; gap: 20px; justify-content: space-between; align-items: flex-start;">
+                <div style="max-width: 380px; width: 100%;">
+                    <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; margin-bottom: 5px;">
+                        logo
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, distinctio. Illum dolores
+                        quis amet
+                        debitis provident. Voluptatibus quae doloribus ut.</p>
+                </div>
+                <div style="max-width: 360px;width: 100%; ">
+                    <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 5px;">Contact Us</div>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Call Us <span style="font-weight: 700;">+91 6732432723</span></p>
+                    <p>example@gmail.com</p>
+                </div>
+                <div style="max-width: 380px;width: 100%;">
+                    <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 10px;">Sign Up for Email
+                        Updates</div>
+                    <div
+                        style="background: white;margin-bottom: 10px; display: flex;  border-radius: 50px;overflow: hidden; box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178);">
+                        <input type="text" style="flex: 1; border: none; outline: none; padding: 10px 15px;">
+                        <button
+                            style=" border: none; outline: none; padding: 10px 15px; background-color: #0A2540; color: white; border-radius: 100px;">
+                            Subscribe
+                        </button>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, explicabo.</p>
+                </div>
+                <div style="max-width: 380px;width: 100%;display: flex; gap: 30px;">
+                    <div
+                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
+                    </div>
+                    <div
+                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
+                    </div>
+                    <div
+                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider1').slick({
+                infinite: true,
+                dots: true,
+                speed: 300,
+            });
+        });
+    </script>
+</body>
+
+</html>
