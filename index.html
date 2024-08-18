@@ -397,13 +397,15 @@
     <nav style="width: 100vw; height: 80px; background-color:transparent;">
         <div
             style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700;">logo</div>
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+                <img src="./logo.png" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+            </div>
             <ul style="display: flex;align-items: center;justify-content: center;gap: 30px;">
                 <li style="cursor: pointer; " ><a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="/">Home</a> </li>
-                <li style="cursor: pointer; "><a  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; cursor: no-drop" href="/" >Pricing</a> </li>
-                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; cursor: no-drop"  href="/" >Store</a> </li>
+                <li style="cursor: pointer; "><a  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; " href="./pricing.html" >Pricing</a> </li>
+                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./store.html" >Store</a> </li>
                 <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./about.html" >About</a></li>
-                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;cursor: no-drop"  href="/" >Franchise</a></li>
+                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./franchise.html" >Franchise</a></li>
             </ul>
             <div style="display: flex; gap: 20px; align-items: center;">
                 <div
@@ -412,7 +414,7 @@
                 </div>
                 <div
                     style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    <a href="./contactUs.html" style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white;">
+                    <a href="./contactUs.html" style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                         Contact Us
                     </a>
                 </div>
@@ -427,7 +429,7 @@
                 alt="">
 
             <div style="display: flex; flex-direction: column; gap: 10px;">
-                <h1 style="font-size: 2.5rem;" id="homeH1">We Provide premium<br> car cleaning service</h1>
+                <h1 style="font-size: 2.5rem; font-weight: 700;" id="homeH1">We Provide premium<br> <span class="ityped" style="font-size: 2.5rem; font-weight: 700;"></span> </h1>
                 <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our Team Member come in you
                     location
                     and clean your car</p>
@@ -453,6 +455,13 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/ityped@0.0.10"></script>
+    <script>
+        window.ityped.init(document.querySelector('.ityped'), {
+            strings: ['Car clean services', 'car wash in dehradun', "car cleaning service"],
+            loop: true
+        })
+    </script>
     <div style="width: 100vw; background-color:transparent;">
         <div style="width: 95%;height: 100%; max-width: 1200px;margin: auto;">
             <h3 class="services" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">How
@@ -678,7 +687,12 @@
        
     </div>
     
+<div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
+    <a href="https://wa.me/11234567890" target="_blank">
 
+        <img style="height: 100%; width: 100%;" src="./what.png" alt="">
+    </a>
+</div>
 
     <!-- <div style="width: 100vw; margin-top: 70px; " id="servicesPage">
         <h3 class="services2" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our
@@ -956,11 +970,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-        const container = document.querySelector('.container');
-        document.querySelector('.slider').addEventListener('input', (e) => {
-            container.style.setProperty('--position', `${e.target.value}%`);
-        })
         document.querySelectorAll('.number').forEach((numberElement) => {
             const targetNumber = parseInt(numberElement.getAttribute('data-target'), 10);
             gsap.to(numberElement, {
@@ -1013,7 +1022,6 @@
                 trigger: ".services",
                 scroller: "body",
                 start: "top 80%",
-                marker: true
             }
         })
         gsap.from(".services2 ", {
@@ -1125,8 +1133,8 @@
             <div
                 style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; display: flex; padding: 60px 0px; gap: 20px; justify-content: space-between; align-items: flex-start;">
                 <div style="max-width: 380px; width: 100%;">
-                    <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; margin-bottom: 5px;">
-                        logo
+                    <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;  width: 100px;">
+                        <img src="./logo.png" style="height: 100%; width: 100%; object-fit: contain;" alt="">
                     </div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, distinctio. Illum dolores
                         quis amet
@@ -1134,9 +1142,12 @@
                 </div>
                 <div style="max-width: 360px;width: 100%; ">
                     <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 5px;">Contact Us</div>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <p>Call Us <span style="font-weight: 700;">+91 6732432723</span></p>
-                    <p>example@gmail.com</p>
+                    <p>Sai Plaza , Near Balliwala chowk
+Shivalik Puram, Dehradun
+Uttarakhand 248001
+</p>
+                    <p>Call Us <span style="font-weight: 700;">+91 7042555401</span></p>
+                    <p>info@carmaa.shop</p>
                 </div>
                 <div style="max-width: 380px;width: 100%;">
                     <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 10px;">Sign Up for Email
