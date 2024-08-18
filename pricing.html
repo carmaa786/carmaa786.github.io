@@ -33,6 +33,25 @@
         .elementor-shape-fill {
             fill: white !important;
         }
+        .TestimonialCard> div {
+            cursor: pointer;
+            transition: all 0.5s;
+            box-shadow: 0px 0px 10px #65c7d06e !important;
+        }
+
+        .TestimonialCard > div:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0px 0px 10px #65c7d0 !important;
+        }
+        *::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,23 +67,33 @@
         <div
             style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
             <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
-                <img src="./logo.png" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                <a href="/" style="height: 100%;">
+                    <img src="./logo.png" style="height: 100%; object-fit: contain;" alt="">
+                </a>
             </div>
             <ul style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-                <li style="cursor: pointer; " ><a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="/">Home</a> </li>
-                <li style="cursor: pointer; "><a  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; " href="./pricing.html" >Pricing</a> </li>
-                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./store.html" >Store</a> </li>
-                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./about.html" >About</a></li>
-                <li style="cursor: pointer; "> <a style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"  href="./franchise.html" >Franchise</a></li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="/">Home</a> </li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                        href="./pricing.html">Pricing</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./store.html">Store</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./about.html">About</a></li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./franchise.html">Franchise</a></li>
             </ul>
             <div style="display: flex; gap: 20px; align-items: center;">
-                <div
-                    style="border-radius: 50%; background-color: #183ea1; width: 40px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                    <ion-icon name="call" style="font-size: 1.4rem; color: white;"></ion-icon>
-                </div>
+
                 <div
                     style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    <a href="./contactUs.html" style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    <a href="./contactUs.html"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                         Contact Us
                     </a>
                 </div>
@@ -83,8 +112,10 @@
         </div>
     </div>
     <div style="width: 100vw;">
-        <div style="width: 95%; max-width: 1200px;margin: auto; display: flex;padding-bottom: 50px; gap: 20px;">
-            <div style="min-height: 300px; flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+        <div class="TestimonialCard"
+            style="width: 95%; max-width: 1200px;margin: auto; display: flex;padding-bottom: 50px; gap: 20px; flex-wrap: wrap;">
+            <div 
+                style="min-height: 300px;min-width:300px; flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
                 <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
                 <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
                 <div></div>
@@ -92,23 +123,149 @@
                 <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
 
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
                     </div>
                 </div>
-                <button style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book Now</button>
+                <button 
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"> <a href="./contactUs.html"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
+                Get Quote
+                </a></button>
             </div>
-            <div style="min-height: 300px; flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+            <div
+                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
+                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
+                <div></div>
+                <div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                    </div>
+                </div>
+                <button
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book
+                    Now</button>
+            </div>
+            <div
+                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
+                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
+                <div></div>
+                <div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                    </div>
+                </div>
+                <button
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book
+                    Now</button>
+            </div>
+            <div
+                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
+                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
+                <div></div>
+                <div></div>
+                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                    </div>
+                </div>
+                <button
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book
+                    Now</button>
+            </div>
+            <div
+                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
                 <p style="color: rgb(138, 138, 138); font-size: 1.8rem; font-weight: 400;">Silver Package</p>
                 <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
                 <div></div>
@@ -116,23 +273,36 @@
                 <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
 
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
                     </div>
                 </div>
-                <button style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book Now</button>
+                <button
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book
+                    Now</button>
             </div>
-            <div style="min-height: 300px; flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
+            <div
+                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
                 <p style="color: gold; font-size: 1.8rem; font-weight: 400;">Gold Package</p>
                 <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
                 <div></div>
@@ -140,40 +310,43 @@
                 <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
 
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div><div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
+                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
                     </div>
                 </div>
-                <button style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book Now</button>
+                <button
+                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">Book
+                    Now</button>
             </div>
         </div>
     </div>
-   
+
 
     <div style=" width: 100vw;">
         <div
             style=" position: relative; height: 700px; top: 70px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
-            <h2 style="position: relative; z-index: 10; text-align: center; color: white; font-size: 2.5rem;">Lorem
-                ipsum dolor sit amet consectetur <br> Recusandae error, repellat rerum
-            </h2>
-            <p
-                style="position: relative; z-index: 10; text-align: center; color: white; font-size: 1.3rem;font-weight: 400;margin-top: 20px; max-width: 800px; width: 95%;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis iusto accusantium. Possimus
-                aliquam ea minima culpa beatae fugiat repudiandae harum consequatur! Suscipit</p>
-            <div
-                style=" position: relative; z-index: 10; margin-top: 20px;  background-color: #183ea1; color: white; padding: 10px 25px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 50px;">
-                Book Now
-            </div>
+           
+           
             <video src="./v1.mp4" muted style="position: absolute; width: 100%; height: 100%; object-fit: cover;"
                 autoplay></video>
             <div style="width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.541);">
@@ -218,39 +391,20 @@
         </div>
         <footer class="wave" style="width: 100vw;  background-color: #F2F8FE;">
             <div
-                style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; display: flex; padding: 60px 0px; gap: 20px; justify-content: space-between; align-items: flex-start;">
+                style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; display: flex; padding: 60px 0px 0px 0px; gap: 20px; justify-content: space-between; align-items: flex-start;">
                 <div style="max-width: 380px; width: 100%;">
                     <div
-                        style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;  width: 100px;">
-                        <img src="./logo.png" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                        style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;  width: 100px; display: flex; gap: 20px; align-items: center;">
+                        <a href="/" style="height: 100%;">
+                            <img src="./logo.png" style="height: 100%; object-fit: contain;" alt="">
+                        </a>
+                        <img src="./startupindia.png" style="height: 70%; object-fit: contain;" alt="">
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, distinctio. Illum dolores
-                        quis amet
-                        debitis provident. Voluptatibus quae doloribus ut.</p>
+                    
                 </div>
-                <div style="max-width: 360px;width: 100%; ">
-                    <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 5px;">Contact Us</div>
-                    <p>Sai Plaza , Near Balliwala chowk
-Shivalik Puram, Dehradun
-Uttarakhand 248001
-</p>
-                    <p>Call Us <span style="font-weight: 700;">+91 7042555401</span></p>
-                    <p>info@carmaa.shop</p>
-                </div>
-                <div style="max-width: 380px;width: 100%;">
-                    <div style="font-size: 1.2rem;  font-weight: 500; margin-bottom: 10px;">Sign Up for Email
-                        Updates</div>
-                    <div
-                        style="background: white;margin-bottom: 10px; display: flex;  border-radius: 50px;overflow: hidden; box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178);">
-                        <input type="text" style="flex: 1; border: none; outline: none; padding: 10px 15px;">
-                        <button
-                            style=" border: none; outline: none; padding: 10px 15px; background-color: #0A2540; color: white; border-radius: 100px;">
-                            Subscribe
-                        </button>
-                    </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, explicabo.</p>
-                </div>
-                <div style="max-width: 380px;width: 100%;display: flex; gap: 30px;">
+                
+               
+                <div style="max-width: 380px;display: flex; gap: 30px;">
                     <div
                         style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
                         <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
@@ -265,7 +419,20 @@ Uttarakhand 248001
                     </div>
                 </div>
             </div>
+            <div style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; justify-content: center;  display: flex;gap: 15px; padding-bottom:60px ; padding-top: 20px ;">
+                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="/">Home</a>
+                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="./pricing.html">Pricing</a>
+                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="./store.html">Store</a>
+                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="./about.html">About us</a>
+                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="./franchise.html">Franchise</a>
+            </div>
         </footer>
+        <div style="width: 100vw;  background-color: #F2F8FE; border-top: 1px solid gray; padding: 20px;">
+            <p style="text-align: center;">By continuing past this page, you agree to our Terms of Service, Cookie
+                Policy. Privacy Policy and Content Policies</p>
+            <p style="text-align: center;">
+                © 2024 CarMaa Technologies Private Limited. All Rights Reserved.</p>
+        </div>
     </div>
 </body>
 
