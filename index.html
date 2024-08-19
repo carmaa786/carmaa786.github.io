@@ -65,7 +65,6 @@
             inset: 0;
             cursor: pointer;
             opacity: 0;
-            /* for Firefox */
             width: 100%;
             height: 100%;
         }
@@ -81,7 +80,6 @@
             width: .2rem;
             height: 100%;
             background-color: #fff;
-            /* z-index: 10; */
             left: var(--position);
             transform: translateX(-50%);
             pointer-events: none;
@@ -99,12 +97,8 @@
             left: var(--position);
             transform: translate(-50%, -50%);
             pointer-events: none;
-            /* z-index: 100; */
+            z-index: 999;
             box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
-        }
-
-        .slick-list {
-            border-radius: 20px;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -413,66 +407,39 @@
             transform: scale(1.1) !important;
             box-shadow: 0px 0px 10px #65c7d0 !important;
         }
-        *::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+        .hover>div {
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        .hover>div:hover {
+            transform: scale(1.1) !important;
+        }
     </style>
 </head>
 
 <body>
-    <nav style="width: 100vw; height: 80px; background-color:transparent;">
-        <div
-            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
-                <a href="/" style="height: 100%;">
-                    <img src="./logo.png" style="height: 100%; object-fit: contain;" alt="">
-                </a>
-            </div>
-            <ul style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-                <li style="cursor: pointer; "><a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                        href="/">Home</a> </li>
-                <li style="cursor: pointer; "><a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
-                        href="./pricing.html">Pricing</a> </li>
-                <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                        href="./store.html">Store</a> </li>
-                <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                        href="./about.html">About</a></li>
-                <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                        href="./franchise.html">Franchise</a></li>
-            </ul>
-            <div style="display: flex; gap: 20px; align-items: center;">
-
-                <div
-                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    <a href="./contactUs.html"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
+    <nav id="nav-placeholder"
+        style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <script>
+            fetch('./components/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                });
+        </script>
     </nav>
     <div style="width: 100vw;  " id="home">
         <div
             style="width: 95%;position: relative; align-items: center;  gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap;">
-            <img src="./bg.png"
-                style="position: absolute; right: -70px; top: -80px;width: 70%;z-index: -1; object-fit: contain; height: 200%;"
+            <img src="./images/heroBackground.png"
+                style="position: absolute; right: -70px; top: -80px;width: 70%;z-index: -1; object-fit: contain; height: 180%;"
                 alt="">
 
             <div style="display: flex; flex-direction: column; gap: 10px;">
                 <h1 style="font-size: 2.5rem; font-weight: 700;" id="homeH1">Premium Doorstep <br> <span class="ityped"
-                        style="font-size: 2.5rem; font-weight: 700;"></span> </h1>
+                        style="font-size: 2.5rem; font-weight: 700; color: #e77640;"></span> </h1>
                 <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our team member will come
                     at door step for all services</p>
                 <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
@@ -496,7 +463,7 @@
                 </div>
             </div>
             <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
-                <img src="./home.jpg" style="  " alt="">
+                <img src="./images/home.jpg" style=" position: relative; top: -50px; height: 100%; " alt="">
             </div>
         </div>
     </div>
@@ -520,7 +487,7 @@
                     <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./car.png" alt="" style="width: 80%; ">
+                            <img src="./images/car.png" alt="" style="width: 80%; ">
                         </div>
                         <div class="timeline-icon">
                             <i class="fa fa-rocket" aria-hidden="true"></i>
@@ -551,7 +518,7 @@
                         </div>
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./car.png" alt="" style="width: 80%; ">
+                            <img src="./images/car.png" alt="" style="width: 80%; ">
                         </div>
                     </a>
                 </div>
@@ -559,7 +526,7 @@
                     <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./car.png" alt="" style="width: 80%; ">
+                            <img src="./images/car.png" alt="" style="width: 80%; ">
                         </div>
                         <div class="timeline-icon">
                             <i class="fa fa-rocket" aria-hidden="true"></i>
@@ -589,7 +556,7 @@
                         </div>
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./car.png" alt="" style="width: 80%; ">
+                            <img src="./images/car.png" alt="" style="width: 80%; ">
                         </div>
                     </a>
                 </div>
@@ -606,21 +573,25 @@
             <div id="servicesContainer" class="servicesBox"
                 style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; justify-content: center; margin-top: 50px;">
 
-              
+
             </div>
-        <button style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;" id="showMoreBtn" style="display: none; margin-top: 20px;">Show More</button>
-        <button style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;" id="showLessBtn" style="display: none; margin-top: 20px;">Show Less</button>
+            <button
+                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
+                id="showMoreBtn" style="display: none; margin-top: 20px;">Show More</button>
+            <button
+                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
+                id="showLessBtn" style="display: none; margin-top: 20px;">Show Less</button>
         </div>
     </div>
     <script>
         const services = [
-            { title: "Car Wash Lift", description: "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.", img: "./service.jpeg", flag: false },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
+            { title: "Car Wash Lift", description: "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.", img: "./images/service.jpeg", flag: false },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
         ];
 
         const servicesContainer = document.getElementById('servicesContainer');
@@ -675,8 +646,8 @@
 
         showMoreBtn.addEventListener('click', renderServices);
         showLessBtn.addEventListener('click', showLess);
+        window.addEventListener("DOMContentLoaded", renderServices)
 
-        renderServices();
 
         if (services.length > itemsToShow) {
             showMoreBtn.style.display = 'block';
@@ -691,20 +662,23 @@
                 Why Carmaa?
             </h2>
 
-            <div style="display: flex; gap: 20px;">
+            <div style="display: flex; gap: 30px;">
                 <div
                     style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
                     <iframe style="width: 100%; height: 100%; border: none; outline: none;"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
                 </div>
-                <div
-                    style="display: flex; flex: 1; padding: 20px; flex-wrap: wrap; gap: 20px; align-items: center;  justify-content: space-between; margin-top: 60px;">
+                <div class="hover"
+                    style="display: flex; flex: 1; padding: 20px; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; margin-top: 30px; ">
                     <div style="width: 48%;">
                         <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%;">
-                            <img src="./what.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
+                                alt="">
                         </div>
-                        <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water
+                        <p
+                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                            Save 20% Water
                         </p>
                         <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
                             ipsum dolor sit amet
@@ -712,10 +686,13 @@
                     </div>
                     <div style="width: 48%;">
                         <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%;">
-                            <img src="./what.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
+                                alt="">
                         </div>
-                        <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water
+                        <p
+                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                            Save 20% Water
                         </p>
                         <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
                             ipsum dolor sit amet
@@ -723,10 +700,13 @@
                     </div>
                     <div style="width: 48%;">
                         <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%;">
-                            <img src="./what.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
+                                alt="">
                         </div>
-                        <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water
+                        <p
+                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                            Save 20% Water
                         </p>
                         <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
                             ipsum dolor sit amet
@@ -734,10 +714,13 @@
                     </div>
                     <div style="width: 48%;">
                         <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%;">
-                            <img src="./what.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
+                                alt="">
                         </div>
-                        <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; ">Save 20% Water
+                        <p
+                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                            Save 20% Water
                         </p>
                         <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
                             ipsum dolor sit amet
@@ -755,130 +738,9 @@
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
         <a href="https://wa.me/11234567890" target="_blank">
 
-            <img style="height: 100%; width: 100%;" src="./what.png" alt="">
+            <img style="height: 100%; width: 100%;" src="./images/whatsapp.png" alt="">
         </a>
     </div>
-
-    <!-- <div style="width: 100vw; margin-top: 70px; " id="servicesPage">
-        <h3 class="services2" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our
-            Plans</h3>
-        <h2 class="services2" style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
-            For customer Conviniant we launch Our Plans
-        </h2>
-
-        <div style="width: 95%;  max-width: 1200px;margin: auto; display: flex;gap: 40px; padding: 60px 0px;">
-            <div
-                style="box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178); flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
-                <h4 style="font-size: 1.5rem;">Adhoc</h4>
-                <div style="display: flex; flex-direction:column  ; gap: 5px;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">On-demand Service</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                </div>
-            </div>
-            <div
-                style="box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.178); flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
-                <h4 style="font-size: 1.5rem;">Adhoc</h4>
-                <div style="display: flex; flex-direction:column  ; gap: 5px;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">On-demand Service</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 15px; height: 15px; border-radius: 100px; background-color: #183ea1;"></div>
-                        <span style="font-weight: 400; font-size: 1.2rem;">Start with 99-/Rs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div style="display: flex; align-items: center; justify-content: center; padding: 50px 0px;">
-
-        <img src="./p.png" style="margin: auto;" alt="">
-    </div> -->
-    <!-- <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
-
-
-        <div style="width: 95%;  max-width: 1200px;margin: auto; display: flex;gap: 10%; padding: 60px 0px; ">
-            <div style="background-color: gray; width: 400px; border-radius: 10px;overflow: hidden;">
-                <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
-            </div>
-            <div style=" flex: 1; display: flex; flex-direction: column; gap: 10px;">
-                <p style="font-weight: 500;">Why Us</p>
-                <h1 style="font-size: 2.5rem;" id="homeH1">Why washing your car <br> with us?</h1>
-                <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our company employs only
-                    highly qualified specialists, we use high-quality cleaning agents and equipment as well as premium
-                    materials.</p>
-                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
-                    <span style="font-size: 1.2rem; font-weight: 500;">Automated and waterless wash</span>
-                </div>
-                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
-                    <span style="font-size: 1.2rem; font-weight: 500;">Experienced team</span>
-                </div>
-                <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
-                    <span style="font-size: 1.2rem; font-weight: 500;">24/7 emergency service</span>
-                </div>
-                <div class="homeB"
-                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    View All
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-    <!-- <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
-
-        <div
-            style="width: 95%;gap: 30px;  max-width: 1200px;margin: auto; display: flex;gap: 40px; padding: 60px 0px; align-items: center;">
-            <div style=" flex: 1; padding: 20px; border-radius: 10px;gap: 10px; display: flex;flex-direction: column;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <div style="border: 1px solid #183ea1; height: 0px; width:100px;"></div> <span
-                        style="font-size: 1.2rem; font-weight: 500; color: #183ea1;">Modern
-                        Equipment</span>
-                </div>
-                <h4 style="font-size: 2rem;">Professional washing <br> and cleaning of your car</h4>
-                <p style="font-size: 1.2rem;">Phasellus in arcu dapibus, lobortis est in, suscipit diam. Vivamus
-                    faucibus faucibus eros et porttitor. Sed est nulla, tincidunt ac ex eget, dictum mollis tortor.
-                    Vivamus faucibus nec ipsum id aliquam lobortis est.</p>
-                <div
-                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    View All
-                </div>
-            </div>
-            <div style="flex: 1; ">
-                <img src="./car2.png" style="height: 160% ; width: 120%; object-fit: cover;" alt="">
-            </div>
-        </div>
-    </div> -->
-
-
     <div style="width: 100vw; ">
         <div style="width: 95%; max-width: 1200px;margin: auto; margin-top: 50px;">
             <h2
@@ -895,7 +757,6 @@
                             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="black and white" />
                     </div>
-                    <!-- step="10" -->
                     <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
                         class="slider" />
                     <div class="slider-line" aria-hidden="true"></div>
@@ -926,7 +787,6 @@
                             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="black and white" />
                     </div>
-                    <!-- step="10" -->
                     <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
                         class="slider" />
                     <div class="slider-line" aria-hidden="true"></div>
@@ -957,7 +817,6 @@
                             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="black and white" />
                     </div>
-                    <!-- step="10" -->
                     <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
                         class="slider" />
                     <div class="slider-line" aria-hidden="true"></div>
@@ -979,12 +838,18 @@
                     </div>
                 </div>
             </div>
+            <script>
+                const container = document.querySelector('.container');
+                document.querySelector('.slider').addEventListener('input', (e) => {
+                    container.style.setProperty('--position', `${e.target.value}%`);
+                })
+            </script>
         </div>
     </div>
 
     <div
         style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
-        <img src="./bg.jpg"
+        <img src="./images/counter.jpg"
             style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
             alt="">
         <div
@@ -1084,7 +949,15 @@
             </div>
         </div>
     </div>
-
+    <div id="footer">
+        <script>
+            fetch('./components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1201,75 +1074,11 @@
                             })
                         }
                     },
-                    // onLeaveBack: () => {
-                    //     if (index > 0) {
-                    //         gsap.to(timelines[index - 1], {
-                    //             opacity: 1,
-                    //             scrollTrigger: {
-                    //                 trigger: timeline,
-                    //                 start: 'top 50%',
-                    //                 end: 'top 80%',
-                    //                 scrub: true,
-                    //             }
-
-                    //         });
-                    //     }
-                    // }
                 }
             });
         });
     </script>
-    <div style=" width: 100vw;">
-        <footer class="wave" style="width: 100vw;  background-color: #F2F8FE;">
-            <div
-                style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; display: flex; padding: 60px 0px 0px 0px; gap: 20px; justify-content: space-between; align-items: flex-start;">
-                <div style="max-width: 380px; width: 100%;">
-                    <div
-                        style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;  width: 100px; display: flex; gap: 20px; align-items: center;">
-                        <a href="/" style="height: 100%;">
-                            <img src="./logo.png" style="height: 100%; object-fit: contain;" alt="">
-                        </a>
-                        <img src="./startupindia.png" style="height: 70%; object-fit: contain;" alt="">
-                    </div>
 
-                </div>
-
-
-                <div style="max-width: 380px;display: flex; gap: 30px;">
-                    <div
-                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
-                    </div>
-                    <div
-                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
-                    </div>
-                    <div
-                        style="border-radius: 50%; background-color: #0A2540; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                        <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
-                    </div>
-                </div>
-            </div>
-            <div
-                style="width: 95%; flex-wrap: wrap;  max-width: 1200px;margin: auto; justify-content: center;  display: flex;gap: 15px; padding-bottom:60px ; padding-top: 20px ;">
-                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;" href="/">Home</a>
-                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;"
-                    href="./pricing.html">Pricing</a>
-                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;"
-                    href="./store.html">Store</a>
-                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;"
-                    href="./about.html">About us</a>
-                <a style="font-size: 1.1rem; text-decoration: none;font-weight: 900; color: #000;"
-                    href="./franchise.html">Franchise</a>
-            </div>
-        </footer>
-        <div style="width: 100vw;  background-color: #F2F8FE; border-top: 1px solid gray; padding: 20px;">
-            <p style="text-align: center;">By continuing past this page, you agree to our Terms of Service, Cookie
-                Policy. Privacy Policy and Content Policies</p>
-            <p style="text-align: center;">
-                © 2024 CarMaa Technologies Private Limited. All Rights Reserved.</p>
-        </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1277,11 +1086,13 @@
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
         $(document).ready(function () {
             $('.slider1').slick({
                 infinite: true,
                 dots: true,
                 speed: 300,
+                draggable: false
             });
         });
     </script>
