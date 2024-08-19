@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .wave {
+            --size: 50px;
+            --m: 2;
+            --p: calc(var(--m)*var(--size));
+            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+            padding-top: 50px;
+            mask:
+                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
+        }
+    </style>
 </head>
 
 <body>

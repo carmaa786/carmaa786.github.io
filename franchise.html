@@ -18,16 +18,7 @@
             list-style: none;
         }
 
-        .wave {
-            --size: 50px;
-            --m: 2;
-            --p: calc(var(--m)*var(--size));
-            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
-            padding-top: 50px;
-            mask:
-                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
-                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
-        }
+        
 
 
         .elementor-shape-fill {
@@ -72,13 +63,9 @@
     <div style="width: 100vw; background-color: white;">
         <div style="width: 95%; max-width: 1200px;margin: auto; display: flex;flex-direction: column; padding-bottom: 50px;">
             <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Carmaa Premium Franchise</h2>
-            <p
-                style="font-size: 1.2rem; padding: 10px; text-align: center; margin: auto; color: #454545; font-weight: 400;width: 95%; max-width: 600px;">
-Coming Soon...            </p>
+            <img src="./images/comingSoon.png" style="width: 50%; margin: auto;" alt="">
         </div>
     </div>
-
-   
     <div id="footer">
         <script>
             fetch('./components/footer.html')
