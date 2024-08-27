@@ -43,6 +43,11 @@
             overflow: visible;
 
         }
+        @media screen and (max-width:950px) {
+            .a{
+                flex-direction: column;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +76,7 @@
             style="font-size: 1.2rem; padding: 10px; text-align: center; margin: auto; color: #454545; font-weight: 400;width: 95%; max-width: 600px;">
             Our company was founded in 2000. We work daily to become better and we are ready to share best practices.
         </p>
-        <div
+        <div class="a"
             style="width: 95%; max-width: 1200px;margin: auto; display: flex; gap: 30px;margin-top: 50px; align-items: flex-start;">
             <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: center;">
                 <div

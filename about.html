@@ -4,64 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carmaa - About</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-            font-size: 16px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        .wave {
-            --size: 50px;
-            --m: 2;
-            --p: calc(var(--m)*var(--size));
-            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
-            padding-top: 50px;
-            mask:
-                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
-                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
-        }
-
-
         .servicesI {
             cursor: pointer;
             transition: all 0.5s;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0px 0px 10px #65c7d06e;
-
         }
 
         .servicesI:hover {
             transform: scale(1.1) !important;
             box-shadow: 0px 0px 10px #65c7d0;
         }
-        *::-webkit-scrollbar {
-            display: none;
+
+        @media screen and (max-width: 1200px) {
+            .a {
+                justify-content: center !important;
+            }
         }
 
-        /* Hide scrollbar for IE, Edge and Firefox */
-        * {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
+        @media screen and (max-width: 900px) {
+            .b {
+                flex-direction: column;
+            }
+
+            .b img {
+                min-height: 300px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .c {
+                flex-direction: column;
+            }
         }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
@@ -77,7 +59,6 @@
     </nav>
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
         <a href="https://wa.me/11234567890" target="_blank">
-
             <img style="height: 100%; width: 100%;" src="./images/whatsapp.png" alt="">
         </a>
     </div>
@@ -91,8 +72,8 @@
         </div>
     </div>
     <div style="width: 100vw;">
-        <div
-            style="width: 95%; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
+        <div class="a"
+            style="width: 95%; gap: 20px;max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
             <div style="display: flex; gap: 15px; align-items: center;">
                 <div
                     style="border-radius: 50%; background-color: #183ea1; width: 80px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
@@ -136,7 +117,7 @@
         </div>
     </div>
     <div style="width: 100vw;">
-        <div
+        <div class="b"
             style="width: 95%; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
             <div
                 style="flex: 5; display: flex;flex-direction: column; aspect-ratio: 1;border-radius: 7px; overflow: hidden;">
@@ -160,7 +141,7 @@
                 </button>
             </div>
         </div>
-        <div
+        <div class="b"
             style="width: 95%; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
             <div style=" flex: 7; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="font-size: 1.2rem; font-weight: 600; color: #454545;">Our Experience</h3>
@@ -185,7 +166,7 @@
             </div>
 
         </div>
-        <div
+        <div class="b"
             style="width: 95%; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
             <div
                 style="flex: 5; display: flex;flex-direction: column; aspect-ratio: 1;border-radius: 7px; overflow: hidden;">
@@ -211,44 +192,42 @@
         </div>
     </div>
     <div
-    style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
-    <img src="./images/counter.jpg"
-        style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
-        alt="">
-    <div
-        style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
-        <div style="display: flex;flex-direction: column; gap: 10px; ">
-            <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                            alt="">
-                    </div>
-            <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                    style="font-size: 2rem; color: white;" class="number" data-target="56">1</span>M+</h3>
-            <p style=" font-size: 1.2rem; color: white; text-align:center ;">CUSTOMERS SERVED</p>
-        </div>
-        <div style=" display: flex;flex-direction: column; gap: 10px; ">
-            <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                            alt="">
-                    </div>
-            <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                    style="font-size: 2rem; color: white;" class="number" data-target="200">1</span>L+</h3>
-            <p style=" font-size: 1.2rem; color: white; text-align:center ;">WATER SAVED</p>
-        </div>
-        <div style=" display: flex;flex-direction: column;gap: 10px;">
-            <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                            alt="">
-                    </div>
-            <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                    style="font-size: 2rem; color: white;" class="number" data-target="100">1</span>M+</h3>
-            <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
+        style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
+        <img src="./images/counter.jpg"
+            style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
+            alt="">
+
+        <div class="c"
+            style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
+            <div style="display: flex;flex-direction: column; gap: 10px; ">
+                <div
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="56">1</span>M+</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CUSTOMERS SERVED</p>
+            </div>
+            <div style=" display: flex;flex-direction: column; gap: 10px; ">
+                <div
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="200">1</span>L+</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">WATER SAVED</p>
+            </div>
+            <div style=" display: flex;flex-direction: column;gap: 10px;">
+                <div
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
+                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
+                        style="font-size: 2rem; color: white;" class="number" data-target="100">1</span>M+</h3>
+                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
+            </div>
         </div>
     </div>
-</div>
     <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
         <div
             style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
@@ -258,21 +237,25 @@
             <div id="servicesContainer" class="servicesBox"
                 style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; justify-content: center; margin-top: 50px;">
 
-              
+
             </div>
-        <button style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;" id="showMoreBtn" style="display: none; margin-top: 20px;">Show More</button>
-        <button style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;" id="showLessBtn" style="display: none; margin-top: 20px;">Show Less</button>
+            <button
+                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
+                id="showMoreBtn" style="display: none; margin-top: 20px;">Show More</button>
+            <button
+                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
+                id="showLessBtn" style="display: none; margin-top: 20px;">Show Less</button>
         </div>
     </div>
     <script>
         const services = [
-            { title: "Car Wash Lift", description: "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.", img: "./service.jpeg", flag: false },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./service.jpeg", flag: true },
+            { title: "Car Wash Lift", description: "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.", img: "./images/service.jpeg", flag: false },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
         ];
 
         const servicesContainer = document.getElementById('servicesContainer');
@@ -472,7 +455,7 @@
             }
         })
     </script>
-      <div id="footer">
+    <div id="footer">
         <script>
             fetch('./components/footer.html')
                 .then(response => response.text())

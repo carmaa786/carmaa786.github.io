@@ -6,18 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-            font-size: 16px;
-        }
-
-        li {
-            list-style: none;
-        }
-
         .wave {
             --size: 50px;
             --m: 2;
@@ -100,6 +88,33 @@
             z-index: 999;
             box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
         }
+        @media screen and (max-width:1050px) {
+            .a{
+                overflow: hidden;
+                justify-content: center !important;
+                padding-top: 60px;
+            }
+            .homeCar{
+                transform: rotate(0deg) !important;
+                max-height: none !important;
+                height: 80vh;
+
+            }
+        }
+        @media screen and (max-width:950px){
+            .a{
+                flex-wrap: wrap;
+            }
+            .homeCar{
+                transform: rotate(90deg) !important;
+                height: 80vw;
+
+            }
+            .homeCar> img{
+                top: 0px !important;
+                left: -70px;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +135,9 @@
             font-family: tahoma;
             padding: 20px 0;
             position: relative;
+            max-width: 1200px;
+            width: 95%;
+            margin: auto;
 
         }
 
@@ -154,7 +172,6 @@
             padding: 35px 0;
             position: relative;
             z-index: 1;
-            transform: scale(1.2);
         }
 
         .main-timeline .timeline::before,
@@ -298,6 +315,7 @@
         }
 
 
+       
         @media screen and (max-width:1200px) {
             .main-timeline .timeline:after {
                 border-radius: 88px 0 0 88px;
@@ -307,47 +325,21 @@
                 border-radius: 0 88px 88px 0;
             }
         }
-
-        @media screen and (max-width:767px) {
-            .main-timeline .timeline {
-                margin-top: -19px;
+        @media screen and (max-width:1130px) {
+.b{
+    flex-direction: column !important;
+}
+        }
+        @media screen and (max-width:800px) {
+            .c{
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width:650px) {
+            .timeline-content{
+                flex-direction: column !important;
             }
 
-            .main-timeline .timeline:before {
-                border-radius: 50px 0 0 50px;
-                border-width: 10px;
-            }
-
-            .main-timeline .timeline:after {
-                height: calc(100% - 18px);
-                width: calc(50% - 9px);
-                border-radius: 43px 0 0 43px;
-                border-width: 10px;
-                top: 9px;
-                left: 9px;
-            }
-
-            .main-timeline .timeline:nth-child(even):before {
-                border-radius: 0 50px 50px 0;
-                border-width: 10px;
-            }
-
-            .main-timeline .timeline:nth-child(even):after {
-                height: calc(100% - 18px);
-                width: calc(50% - 9px);
-                border-radius: 0 43px 43px 0;
-                border-width: 10px;
-                top: 9px;
-                right: 9px;
-            }
-
-            .main-timeline .timeline-icon {
-                font-size: 60px;
-            }
-
-            .main-timeline .timeline-year {
-                font-size: 40px;
-            }
         }
 
         @media screen and (max-width:479px) {
@@ -358,29 +350,13 @@
                 left: 10%;
             }
 
-            .main-timeline .timeline-year {
-                font-size: 25px;
-                transform: translateY(0);
-                top: 65%;
-                left: 9%;
-            }
-
+           
             .main-timeline .content {
                 width: 68%;
                 padding: 10px;
             }
 
-            .main-timeline .title {
-                font-size: 18px;
-            }
-
-            .main-timeline .timeline:nth-child(even) .timeline-icon {
-                right: 10%;
-            }
-
-            .main-timeline .timeline:nth-child(even) .timeline-year {
-                right: 9%;
-            }
+          
         }
 
         .servicesI {
@@ -431,13 +407,13 @@
         </script>
     </nav>
     <div style="width: 100vw;  " id="home">
-        <div
-            style="width: 95%;position: relative; align-items: center;  gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div class="a"
+            style="width: 95%;position: relative; align-items: center;  gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; ">
             <img src="./images/heroBackground.png"
                 style="position: absolute; right: -70px; top: -80px;width: 70%;z-index: -1; object-fit: contain; height: 180%;"
                 alt="">
 
-            <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 10;">
                 <h1 style="font-size: 2.5rem; font-weight: 700;" id="homeH1">Premium Doorstep <br> <span class="ityped"
                         style="font-size: 2.5rem; font-weight: 700; color: #e77640;"></span> </h1>
                 <p id="homeP" style="font-size: 1.2rem; font-weight: 500; max-width: 350px;">Our team member will come
@@ -462,7 +438,7 @@
                     </a>
                 </div>
             </div>
-            <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
+            <div  class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
                 <img src="./images/home.jpg" style=" position: relative; top: -50px; height: 100%; " alt="">
             </div>
         </div>
@@ -662,7 +638,7 @@
                 Why Carmaa?
             </h2>
 
-            <div style="display: flex; gap: 30px;">
+            <div class="b" style="display: flex; gap: 30px;">
                 <div
                     style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
                     <iframe style="width: 100%; height: 100%; border: none; outline: none;"
@@ -852,8 +828,8 @@
         <img src="./images/counter.jpg"
             style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
             alt="">
-        <div
-            style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 60px 0px;">
+        <div class="c"
+            style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; padding: 60px 0px;">
             <div style="display: flex;flex-direction: column; gap: 10px; ">
                 <div
                             style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc !important;
+            padding-left: 20px;
+        }
+.ul li {
+    list-style: disc !important;
+}
+        p {
+            margin: 10px 0;
+        }
+
+        .terms-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav-placeholder"
+    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <script>
+        fetch('./components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</nav>
+    <div class="terms-container" style="margin-top:20px ;">
+        <h1>Terms & Conditions</h1>
+        <p>We are dedicated to providing quality service, customer satisfaction at a great value in multiple locations offering convenient hours. Our goal is to provide our customers with the friendliest, most convenient hand car wash experience possible.</p>
+
+        <ul class="ul">
+            <li>The company will provide a monthly service of 24 days in a month which includes 4 exterior detailing along with 4 interior detailing on any of the days when exterior is cleaned. If the company fails to provide the monthly service of 24 days, the missed days will be adjusted in the next consecutive month.</li>
+            <li>Monthly payment needs to be paid in advance. Failure to do so will result in the withdrawal of the car cleaning service by the company.</li>
+            <li>In case your payment process fails due to system issues, your money will be refunded to your specific bank account.</li>
+            <li>The company is not responsible for the quality of work due to bad weather conditions, i.e., rain, fog, etc.</li>
+            <li>If the company washer fails to wash the car after reaching your place due to bad weather conditions, that day will still be counted within your service days.</li>
+            <li>If the company fails to provide interior detailing on the specified day, they will follow up within the next 3-4 days. By the end of the month, the company will ensure you have received your 4 interior detailing services.</li>
+            <li>If you do not receive your 4 interior detailing services by the end of the month, you can report it to the company, and the pending services will be adjusted in the following month.</li>
+            <li>The company is bound to clean only the specific car for which you have taken the service, not any other car if your specified car is not present.</li>
+            <li>If the car washer does not find the car booked for service at the scheduled time, the day will still be included within your booked service days.</li>
+            <li>Receiving any other cleaning services from the company will incur additional charges.</li>
+            <li>All prices mentioned are exclusive of taxes. Taxes will be applied as per the applicable rates.</li>
+            <li>You are requested to remove all luggage and belongings before handing over the car for washing. The company will not be responsible for any damage or loss of items left in the car during the wash.</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <script>
+            fetch('./components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+    </div>
+</body>
+</html>
