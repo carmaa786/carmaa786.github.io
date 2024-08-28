@@ -56,19 +56,115 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
-    <script>
-        fetch('./components/nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
+        style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+                <a href="/" style="height: 100%;">
+                    <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+                </a>
+            </div>
+            <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="/">Home</a>
+                </li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                        href="./pricing.html">Pricing</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./store.html">Store</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./about.html">About</a></li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./franchise.html">Franchise</a></li>
+            </ul>
+            <div style="display: flex; gap: 20px; ">
+                <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                    <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+                </button>
+                <div
+                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    <a href="./contactUs.html"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const toggle = document.getElementById("toggle")
+            const menu = document.getElementById("menu")
+            // alert("asf")
+            toggle.addEventListener("click", function () {
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active");
+                } else {
+                    menu.classList.add("active");
+                }
             });
-    </script>
-</nav>
+
+        </script>
+    </nav>
     <div style="width: 100vw; margin: 50px 0px; margin-bottom: 100px;">
         <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Contact  <span
                 style="font-size: 2.5rem; color: #183ea1;"> information</span> </h2>
@@ -199,7 +295,7 @@
                     };
                     console.log(formData)
                     // Make the POST request
-                    fetch('http://13.234.66.74/api/v1/lead', {
+                    fetch('https://sendmail2.onrender.com', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

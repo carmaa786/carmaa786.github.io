@@ -88,29 +88,34 @@
             z-index: 999;
             box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
         }
+
         @media screen and (max-width:1050px) {
-            .a{
+            .a {
                 overflow: hidden;
                 justify-content: center !important;
                 padding-top: 60px;
             }
-            .homeCar{
+
+            .homeCar {
                 transform: rotate(0deg) !important;
                 max-height: none !important;
                 height: 80vh;
 
             }
         }
-        @media screen and (max-width:950px){
-            .a{
+
+        @media screen and (max-width:950px) {
+            .a {
                 flex-wrap: wrap;
             }
-            .homeCar{
+
+            .homeCar {
                 transform: rotate(90deg) !important;
                 height: 80vw;
 
             }
-            .homeCar> img{
+
+            .homeCar>img {
                 top: 0px !important;
                 left: -70px;
             }
@@ -315,7 +320,7 @@
         }
 
 
-       
+
         @media screen and (max-width:1200px) {
             .main-timeline .timeline:after {
                 border-radius: 88px 0 0 88px;
@@ -325,21 +330,31 @@
                 border-radius: 0 88px 88px 0;
             }
         }
+
         @media screen and (max-width:1130px) {
-.b{
-    flex-direction: column !important;
-}
+            .b {
+                flex-direction: column !important;
+            }
         }
+
         @media screen and (max-width:800px) {
-            .c{
+            .c {
                 flex-direction: column;
             }
         }
+
         @media screen and (max-width:650px) {
-            .timeline-content{
+            .timeline-content {
                 flex-direction: column !important;
             }
 
+            .hover {
+                justify-content: center !important;
+            }
+
+            .hover>div {
+                width: 100% !important;
+            }
         }
 
         @media screen and (max-width:479px) {
@@ -350,13 +365,13 @@
                 left: 10%;
             }
 
-           
+
             .main-timeline .content {
                 width: 68%;
                 padding: 10px;
             }
 
-          
+
         }
 
         .servicesI {
@@ -393,17 +408,114 @@
             transform: scale(1.1) !important;
         }
     </style>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <nav id="nav-placeholder"
         style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+                <a href="/" style="height: 100%;">
+                    <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+                </a>
+            </div>
+            <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="/">Home</a>
+                </li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                        href="./pricing.html">Pricing</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./store.html">Store</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./about.html">About</a></li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./franchise.html">Franchise</a></li>
+            </ul>
+            <div style="display: flex; gap: 20px; ">
+                <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                    <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+                </button>
+                <div
+                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    <a href="./contactUs.html"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
         <script>
-            fetch('./components/nav.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-placeholder').innerHTML = data;
-                });
+            const toggle = document.getElementById("toggle")
+            const menu = document.getElementById("menu")
+            // alert("asf")
+            toggle.addEventListener("click", function () {
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active");
+                } else {
+                    menu.classList.add("active");
+                }
+            });
+
         </script>
     </nav>
     <div style="width: 100vw;  " id="home">
@@ -438,7 +550,7 @@
                     </a>
                 </div>
             </div>
-            <div  class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
+            <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
                 <img src="./images/home.jpg" style=" position: relative; top: -50px; height: 100%; " alt="">
             </div>
         </div>
@@ -832,30 +944,27 @@
             style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; padding: 60px 0px;">
             <div style="display: flex;flex-direction: column; gap: 10px; ">
                 <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
                 <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
                         style="font-size: 2rem; color: white;" class="number" data-target="56">1</span>M+</h3>
                 <p style=" font-size: 1.2rem; color: white; text-align:center ;">CUSTOMERS SERVED</p>
             </div>
             <div style=" display: flex;flex-direction: column; gap: 10px; ">
                 <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
                 <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
                         style="font-size: 2rem; color: white;" class="number" data-target="200">1</span>L+</h3>
                 <p style=" font-size: 1.2rem; color: white; text-align:center ;">WATER SAVED</p>
             </div>
             <div style=" display: flex;flex-direction: column;gap: 10px;">
                 <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
+                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                </div>
                 <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
                         style="font-size: 2rem; color: white;" class="number" data-target="100">1</span>M+</h3>
                 <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
