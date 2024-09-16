@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +29,11 @@
             list-style-type: disc !important;
             padding-left: 20px;
         }
-.ul li {
-    list-style: disc !important;
-}
+
+        .ul li {
+            list-style: disc !important;
+        }
+
         p {
             margin: 10px 0;
         }
@@ -40,130 +43,183 @@
             margin: 0 auto;
         }
     </style>
- <style>
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Inter", sans-serif;
-        font-size: 16px;
-    }
-
-    li {
-        list-style: none;
-    }
-
-    .toggle {
-        display: none;
-    }
-
-    *::-webkit-scrollbar {
-        display: none;
-    }
-
-    * {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    @media screen and (max-width:800px) {
-        .menu {
-            position: fixed;
-            background-color: rgb(255, 255, 255);
-            border-top: 1px solid gray;
-            top: 80px;
-            height: calc(100vh - 80px);
-            width: 100vw;
-            right: 0px;
-            flex-direction: column;
-            justify-content: flex-start !important;
-            padding: 50px 0px;
-            gap: 30px;
-            transform: translateX(100%);
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
         }
 
-        .active {
-            transform: translateX(0%) !important;
+        li {
+            list-style: none;
         }
 
         .toggle {
-            display: inline;
-            cursor: pointer;
+            display: none;
         }
-    }
-</style>
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
-    <div
-        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
-            <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
-            </a>
-        </div>
-        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-            <li style="cursor: pointer; "><a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="/">Home</a>
-            </li>
-            <li style="cursor: pointer; "><a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
-                    href="./pricing.html">Pricing</a> </li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./store.html">Store</a> </li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./about.html">About</a></li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./franchise.html">Franchise</a></li>
-        </ul>
-        <div style="display: flex; gap: 20px; ">
-            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
-                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
-            </button>
-            <div
-                style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                <a href="./contactUs.html"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
-                    Contact Us
+    <nav id="nav-placeholder"
+        style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+                <a href="/" style="height: 100%;">
+                    <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
                 </a>
             </div>
+            <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="/">Home</a>
+                </li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                        href="./pricing.html">Pricing</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./store.html">Store</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./about.html">About</a></li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./franchise.html">Franchise</a></li>
+                <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
+                    <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                        <li><a href="./dehradun.html"
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                    </ul>
+                    <style>
+                        .dropdown {
+                            background-color: white;
+                            display: none;
+                            padding: 20px 0px;
+                        }
+
+                        .dropdownCon:hover .dropdown {
+                            display: flex;
+                        }
+
+                        .dropdown>li>a {
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            transition: all .1s;
+                        }
+
+                        .dropdown>li>a:hover {
+                            background-color: rgb(211, 211, 211);
+
+                        }
+                    </style>
+                </li>
+            </ul>
+            <div style="display: flex; gap: 20px; ">
+                <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                    <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+                </button>
+                <div
+                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    <a href="./contactUs.html"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-    <script>
-        const toggle = document.getElementById("toggle")
-        const menu = document.getElementById("menu")
-        toggle.addEventListener("click", function () {
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-            } else {
-                menu.classList.add("active");
-            }
-        });
-    </script>
-</nav>
+        <script>
+            const toggle = document.getElementById("toggle")
+            const menu = document.getElementById("menu")
+            // alert("asf")
+            toggle.addEventListener("click", function () {
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active");
+                } else {
+                    menu.classList.add("active");
+                }
+            });
+
+        </script>
+    </nav>
     <div class="terms-container" style="margin-top:20px ;">
         <h1>Terms & Conditions</h1>
-        <p>We are dedicated to providing quality service, customer satisfaction at a great value in multiple locations offering convenient hours. Our goal is to provide our customers with the friendliest, most convenient hand car wash experience possible.</p>
+        <p>We are dedicated to providing quality service, customer satisfaction at a great value in multiple locations
+            offering convenient hours. Our goal is to provide our customers with the friendliest, most convenient hand
+            car wash experience possible.</p>
 
         <ul class="ul">
-            <li>The company will provide a monthly service of 24 days in a month which includes 4 exterior detailing along with 4 interior detailing on any of the days when exterior is cleaned. If the company fails to provide the monthly service of 24 days, the missed days will be adjusted in the next consecutive month.</li>
-            <li>Monthly payment needs to be paid in advance. Failure to do so will result in the withdrawal of the car cleaning service by the company.</li>
-            <li>In case your payment process fails due to system issues, your money will be refunded to your specific bank account.</li>
-            <li>The company is not responsible for the quality of work due to bad weather conditions, i.e., rain, fog, etc.</li>
-            <li>If the company washer fails to wash the car after reaching your place due to bad weather conditions, that day will still be counted within your service days.</li>
-            <li>If the company fails to provide interior detailing on the specified day, they will follow up within the next 3-4 days. By the end of the month, the company will ensure you have received your 4 interior detailing services.</li>
-            <li>If you do not receive your 4 interior detailing services by the end of the month, you can report it to the company, and the pending services will be adjusted in the following month.</li>
-            <li>The company is bound to clean only the specific car for which you have taken the service, not any other car if your specified car is not present.</li>
-            <li>If the car washer does not find the car booked for service at the scheduled time, the day will still be included within your booked service days.</li>
+            <li>The company will provide a monthly service of 24 days in a month which includes 4 exterior detailing
+                along with 4 interior detailing on any of the days when exterior is cleaned. If the company fails to
+                provide the monthly service of 24 days, the missed days will be adjusted in the next consecutive month.
+            </li>
+            <li>Monthly payment needs to be paid in advance. Failure to do so will result in the withdrawal of the car
+                cleaning service by the company.</li>
+            <li>In case your payment process fails due to system issues, your money will be refunded to your specific
+                bank account.</li>
+            <li>The company is not responsible for the quality of work due to bad weather conditions, i.e., rain, fog,
+                etc.</li>
+            <li>If the company washer fails to wash the car after reaching your place due to bad weather conditions,
+                that day will still be counted within your service days.</li>
+            <li>If the company fails to provide interior detailing on the specified day, they will follow up within the
+                next 3-4 days. By the end of the month, the company will ensure you have received your 4 interior
+                detailing services.</li>
+            <li>If you do not receive your 4 interior detailing services by the end of the month, you can report it to
+                the company, and the pending services will be adjusted in the following month.</li>
+            <li>The company is bound to clean only the specific car for which you have taken the service, not any other
+                car if your specified car is not present.</li>
+            <li>If the car washer does not find the car booked for service at the scheduled time, the day will still be
+                included within your booked service days.</li>
             <li>Receiving any other cleaning services from the company will incur additional charges.</li>
             <li>All prices mentioned are exclusive of taxes. Taxes will be applied as per the applicable rates.</li>
-            <li>You are requested to remove all luggage and belongings before handing over the car for washing. The company will not be responsible for any damage or loss of items left in the car during the wash.</li>
+            <li>You are requested to remove all luggage and belongings before handing over the car for washing. The
+                company will not be responsible for any damage or loss of items left in the car during the wash.</li>
         </ul>
     </div>
     <div id="footer">
@@ -176,4 +232,5 @@
         </script>
     </div>
 </body>
+
 </html>

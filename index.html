@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarMaa</title>
-    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <title>Document</title>
     <style>
         .wave {
             --size: 50px;
@@ -408,6 +407,10 @@
         .hover>div:hover {
             transform: scale(1.1) !important;
         }
+
+        .ityped-cursor {
+            color: transparent !important;
+        }
     </style>
 
     <style>
@@ -461,6 +464,110 @@
                 cursor: pointer;
             }
         }
+
+       
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .accordion .accordion-item button[aria-expanded='true'] {
+            border-bottom: 1px solid #ed6744;
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #20272e;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #ed6744;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #ed6744;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+            font-size: 1.3rem;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded='true'] {
+            color: #ed6744;
+        }
+
+        .accordion button[aria-expanded='true'] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded='true']+.accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
     </style>
 </head>
 
@@ -491,12 +598,48 @@
                 <li style="cursor: pointer; "> <a
                         style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="./franchise.html">Franchise</a></li>
+                <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
+                    <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                        <li><a href="./dehradun.html"
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                    </ul>
+                    <style>
+                        .dropdown {
+                            background-color: white;
+                            display: none;
+                            padding: 20px 0px;
+                        }
+
+                        .dropdownCon:hover .dropdown {
+                            display: flex;
+                        }
+
+                        .dropdown>li>a {
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            transition: all .1s;
+                        }
+
+                        .dropdown>li>a:hover {
+                            background-color: rgb(211, 211, 211);
+
+                        }
+                    </style>
+                </li>
             </ul>
             <div style="display: flex; gap: 20px; ">
                 <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                     <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
                 </button>
-                <div
+                <div class="btn"
                     style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
                     <a href="./contactUs.html"
                         style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
@@ -541,20 +684,107 @@
                 </div>
                 <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
                     <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
-                    <span style="font-size: 1.2rem; font-weight: 500;">Start with ₹100</span>
+                    <span style="font-size: 1.2rem; font-weight: 500;">Start with ₹99</span>
                 </div>
-                <div class="homeB"
-                    style=" background-color: #183ea1;width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                <div class="homeB btn"
+                    style=" background-color: #183ea1;width: fit-content;margin-top: 20px;  color: white; padding: 15px 20px; font-size: 1.6rem !important; font-weight: 400; cursor: pointer;border-radius: 6px;">
                     <a href="./contactUs.html"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                        style="font-size: 1.4rem;font-weight: 500; text-decoration: none; color: white ;">
                         Book Now
                     </a>
                 </div>
+                <style>
+                    .btn:hover {
+background-color: #ed6744 !important;
+                    }
+                </style>
             </div>
             <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
                 <img src="./images/home.jpg" style=" position: relative; top: -50px; height: 100%; " alt="">
             </div>
         </div>
+    </div>
+    <div style="width: 100vw; position: relative; margin-top: 30px; background-color: #183ea1; overflow: visible;">
+        <div
+            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
+            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: white;">
+                Why Carmaa?
+            </h2>
+
+            <div class="b" style="display: flex; gap: 30px;">
+                <div
+                    style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
+                    <iframe style="width: 100%; height: 100%; border: none; outline: none;"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+                </div>
+                <div
+                    style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
+                    <iframe style="width: 100%; height: 100%; border: none; outline: none;"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+                </div>
+            </div>
+            <div class="hover"
+                style="display: flex; flex: 1; padding: 20px;  gap: 40px; align-items: center; justify-content: space-between; margin-top: 30px; ">
+                <div style="width: 48%;">
+                    <div
+                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                        Save 20% Water
+                    </p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 48%;">
+                    <div
+                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                        Save 20% Water
+                    </p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 48%;">
+                    <div
+                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                        Save 20% Water
+                    </p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+                <div style="width: 48%;">
+                    <div
+                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
+                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
+                    </div>
+                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
+                        Save 20% Water
+                    </p>
+                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
+                        ipsum dolor sit amet
+                        consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
+                </div>
+
+
+            </div>
+            <div class="btn"
+                style=" background-color: white; color: white;margin: 20px auto; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                <a href="./contactUs.html"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: black ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
     </div>
     <script src="https://unpkg.com/ityped@0.0.10"></script>
     <script>
@@ -563,7 +793,7 @@
             loop: true
         })
     </script>
-    <div style="width: 100vw; background-color:transparent;">
+    <div style="width: 100vw; background-color:transparent; margin-top: 50px;">
         <div style="width: 95%;height: 100%; max-width: 1200px;margin: auto;">
             <h3 class="services" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">How
                 Its Work</h3>
@@ -664,12 +894,18 @@
 
 
             </div>
-            <button
-                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
-                id="showMoreBtn" style="display: none; margin-top: 20px;">Show More</button>
-            <button
-                style="display: none; width: fit-content; margin: auto;  background-color: transparent;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;"
-                id="showLessBtn" style="display: none; margin-top: 20px;">Show Less</button>
+        
+                <div class="btn"  id="showMoreBtn"
+                    style="width: fit-content; margin: auto;margin-top: 30px; background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    
+                        Show More
+                </div>
+                   <div class="btn"  id="showLessBtn"
+                    style="display: none; width: fit-content; margin: auto;margin-top: 30px; background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    
+                    Show Less
+                </div>
+            
         </div>
     </div>
     <script>
@@ -744,85 +980,7 @@
 
     </script>
 
-    <div style="width: 100vw; position: relative; margin-top: 30px; background-color: #183ea1; overflow: visible;">
-        <div
-            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
-            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: white;">
-                Why Carmaa?
-            </h2>
 
-            <div class="b" style="display: flex; gap: 30px;">
-                <div
-                    style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
-                    <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
-                </div>
-                <div class="hover"
-                    style="display: flex; flex: 1; padding: 20px; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; margin-top: 30px; ">
-                    <div style="width: 48%;">
-                        <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
-                        <p
-                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                            Save 20% Water
-                        </p>
-                        <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
-                            ipsum dolor sit amet
-                            consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
-                    </div>
-                    <div style="width: 48%;">
-                        <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
-                        <p
-                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                            Save 20% Water
-                        </p>
-                        <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
-                            ipsum dolor sit amet
-                            consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
-                    </div>
-                    <div style="width: 48%;">
-                        <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
-                        <p
-                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                            Save 20% Water
-                        </p>
-                        <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
-                            ipsum dolor sit amet
-                            consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
-                    </div>
-                    <div style="width: 48%;">
-                        <div
-                            style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                            <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;"
-                                alt="">
-                        </div>
-                        <p
-                            style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                            Save 20% Water
-                        </p>
-                        <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Lorem
-                            ipsum dolor sit amet
-                            consectetur adipisicing elit. Minima et, distinctio quisquam minus natus pariatur?</p>
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
 
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
         <a href="https://wa.me/11234567890" target="_blank">
@@ -830,112 +988,55 @@
             <img style="height: 100%; width: 100%;" src="./images/whatsapp.png" alt="">
         </a>
     </div>
-    <div style="width: 100vw; ">
+    <div style="width: 100vw; display: flex; flex-direction: column; align-items: center;">
         <div style="width: 95%; max-width: 1200px;margin: auto; margin-top: 50px;">
             <h2
                 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: #183ea1;">
                 CarMaa is Hassle-Free!</h2>
-            <div class="slider1">
+            <!-- <div class="slider1"> -->
 
-                <div class="container" style="margin-top: 40px;">
-                    <div class="image-container">
-                        <img class="image-before slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="color photo" />
-                        <img class="image-after slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="black and white" />
-                    </div>
-                    <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
-                        class="slider" />
-                    <div class="slider-line" aria-hidden="true"></div>
-                    <div class="slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
-                    </div>
+            <div class="container" style="margin-top: 40px;">
+                <div class="image-container">
+                    <img class="image-before slider-image"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="color photo" />
+                    <img class="image-after slider-image"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="black and white" />
                 </div>
-
-                <div class="container" style="margin-top: 40px;">
-                    <div class="image-container">
-                        <img class="image-before slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="color photo" />
-                        <img class="image-after slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="black and white" />
-                    </div>
-                    <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
-                        class="slider" />
-                    <div class="slider-line" aria-hidden="true"></div>
-                    <div class="slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="container" style="margin-top: 40px;">
-                    <div class="image-container">
-                        <img class="image-before slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="color photo" />
-                        <img class="image-after slider-image"
-                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt="black and white" />
-                    </div>
-                    <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
-                        class="slider" />
-                    <div class="slider-line" aria-hidden="true"></div>
-                    <div class="slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
-                    </div>
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                    class="slider" />
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
                 </div>
             </div>
-            <script>
+
+
+            <!-- <script>
                 const container = document.querySelector('.container');
                 document.querySelector('.slider').addEventListener('input', (e) => {
                     container.style.setProperty('--position', `${e.target.value}%`);
                 })
-            </script>
+            </script> -->
         </div>
+        <button class="btn"
+            style=" width: 150px; margin: auto;  background-color: #183ea1;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: white; padding: 12px 25px ; border-radius: 10px;"
+            >Book Now</button>
     </div>
-
     <div
         style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
         <img src="./images/counter.jpg"
@@ -1050,6 +1151,125 @@
             </div>
         </div>
     </div>
+    <section class="wrapper faq" style="padding: 50px 0px;">
+        <div style=" flex-direction: column;align-items: center; width: 95%;">
+            <!-- <div class="topText"></div> -->
+            <h2 style="font-size: 2rem; text-align: center; width: 95%; ; margin: auto;">
+                Frequently Asked Questions
+            </h2>
+            <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, voluptatibus.
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi perferendis labore amet dolore recusandae doloribus nesciunt consequuntur earum officiis, sapiente, laudantium accusantium nobis voluptate vero. Hic labore vel quibusdam, quam minus laboriosam numquam. Eius deleniti voluptas, cumque ad officia optio quibusdam sed, animi a beatae ipsum quas, sit voluptatem consequuntur!
+                        </p>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+    <script>
+        const toggleSidBar = () => {
+            const sidebar = document.querySelectorAll('.center');
+            const style = window.getComputedStyle(sidebar[0])
+            const top = new WebKitCSSMatrix(style.transform).m41;
+            if (top > 0) {
+                sidebar[0].style.transform = "translateX(0%)"
+            }
+            else {
+
+                sidebar[0].style.transform = "translateX(100%)"
+            }
+        }
+        const items = document.querySelectorAll('.accordion button');
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach((item) => item.addEventListener('click', toggleAccordion));
+    </script>
     <div id="footer">
         <script>
             fetch('./components/footer.html')
@@ -1086,6 +1306,7 @@
             });
         });
     </script>
+   
     <script>
         const home = gsap.timeline()
         home.from("#homeH1", {
@@ -1105,6 +1326,7 @@
             y: 100,
             duration: 1,
             opacity: 0,
+            
         })
         home.from(".homeB", {
             y: 100,
@@ -1179,7 +1401,12 @@
             });
         });
     </script>
-
+ <script>
+    const container = document.querySelector('.container');
+    document.querySelector('.slider').addEventListener('input', (e) => {
+        container.style.setProperty('--position', `${e.target.value}%`);
+    })
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

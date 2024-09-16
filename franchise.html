@@ -122,6 +122,41 @@
                 <li style="cursor: pointer; "> <a
                         style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="./franchise.html">Franchise</a></li>
+                <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
+                    <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                        <li><a href="./dehradun.html" 
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                    </ul>
+                    <style>
+    .dropdown {
+                        background-color: white;
+                            display: none;
+                        padding: 20px 0px;
+                        }
+
+                        .dropdownCon:hover .dropdown {
+                            display: flex;
+                        }
+
+                        .dropdown > li > a{
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            transition: all .1s;
+                        }
+                        .dropdown > li > a:hover{
+                            background-color: rgb(211, 211, 211);
+
+                        }
+                    </style>
+                </li>
             </ul>
             <div style="display: flex; gap: 20px; ">
                 <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
