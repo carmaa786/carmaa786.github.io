@@ -113,94 +113,95 @@
 
 <body>
     <nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
-    <div
-        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
-            <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
-            </a>
-        </div>
-        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-            <li style="cursor: pointer; "><a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="/">Home</a>
-            </li>
-            <li style="cursor: pointer; "><a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
-                    href="./pricing.html">Pricing</a> </li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./store.html">Store</a> </li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./about.html">About</a></li>
-            <li style="cursor: pointer; "> <a
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./franchise.html">Franchise</a></li>
-            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
-                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
-                    <li><a href="./dehradun.html" 
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                    <li><a href=""
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                    <li><a href=""
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                </ul>
-                <style>
-.dropdown {
-                        background-color: white;
-                        display: none;
-                    padding: 20px 0px;
-                    }
-
-                    .dropdownCon:hover .dropdown {
-                        display: flex;
-                    }
-
-                    .dropdown > li > a{
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        transition: all .1s;
-                    }
-                    .dropdown > li > a:hover{
-                        background-color: rgb(211, 211, 211);
-
-                    }
-                </style>
-            </li>
-        </ul>
-        <div style="display: flex; gap: 20px; ">
-            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
-                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
-            </button>
-            <div
-                style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                <a href="./contactUs.html"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
-                    Contact Us
+        style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+                <a href="/" style="height: 100%;">
+                    <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
                 </a>
             </div>
-        </div>
-    </div>
-    <script>
-        const toggle = document.getElementById("toggle")
-        const menu = document.getElementById("menu")
-        // alert("asf")
-        toggle.addEventListener("click", function () {
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-            } else {
-                menu.classList.add("active");
-            }
-        });
+            <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="/">Home</a>
+                </li>
+                <li style="cursor: pointer; "><a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                        href="./pricing.html">Pricing</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./store.html">Store</a> </li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./about.html">About</a></li>
+                <li style="cursor: pointer; "> <a
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                        href="./franchise.html">Franchise</a></li>
+                <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
+                    <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                        <li><a href="./dehradun.html"
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a href=""
+                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                    </ul>
+                    <style>
+                        .dropdown {
+                            background-color: white;
+                            display: none;
+                            padding: 20px 0px;
+                        }
 
-    </script>
-</nav>
+                        .dropdownCon:hover .dropdown {
+                            display: flex;
+                        }
+
+                        .dropdown>li>a {
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            transition: all .1s;
+                        }
+
+                        .dropdown>li>a:hover {
+                            background-color: rgb(211, 211, 211);
+
+                        }
+                    </style>
+                </li>
+            </ul>
+            <div style="display: flex; gap: 20px; ">
+                <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                    <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+                </button>
+                <div
+                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                    <a href="./contactUs.html"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const toggle = document.getElementById("toggle")
+            const menu = document.getElementById("menu")
+            // alert("asf")
+            toggle.addEventListener("click", function () {
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active");
+                } else {
+                    menu.classList.add("active");
+                }
+            });
+
+        </script>
+    </nav>
     <div style="width: 100vw; margin: 50px 0px; margin-bottom: 100px;">
         <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Contact  <span
                 style="font-size: 2.5rem; color: #183ea1;"> information</span> </h2>
@@ -322,6 +323,9 @@
             <script>
                 document.getElementById('contactButton').addEventListener('click', function () {
 
+                    const button = document.getElementById('contactButton');
+                    button.style.pointerEvents = 'none';
+                    button.style.backgroundColor = '#999';
                     const name = document.getElementById('name').value;
                     const number = document.getElementById('number').value;
                     const date = document.getElementById('date').value;
@@ -338,9 +342,6 @@
                         leadsType: leadsType,
                         remark: remark
                     };
-                    console.log(formData)
-                    // Make the POST request
-                    // fetch('https://sendmail2.onrender.com', {
                     fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
                         method: 'POST',
                         headers: {
@@ -348,7 +349,6 @@
                         },
                         body: JSON.stringify(formData)
                     })
-                    alert('Your request has been sent successfully!');
                     window.location.href = 'index.html'
                 });
             </script>
