@@ -1468,7 +1468,7 @@
             function showDivAfterDelay() {
                 setTimeout(() => {
                     document.getElementById("parent-div").style.display = "flex";
-                }, 15000);
+                }, 10000);
             }
 
             // Initially hide the div
@@ -1487,11 +1487,14 @@
 
             document.getElementById('contactButton').addEventListener('click', async function () {
                 // Capture the values from the inputs
+                const button = document.getElementById('contactButton');
+
+                // Disable the button
+                button.style.pointerEvents = 'none';
+                button.style.backgroundColor = '#999';
                 const name = document.getElementById('nameInput').value;
                 const number = document.getElementById('numberInput').value;
                 const address = document.getElementById('addressInput').value;
-
-                // Validate if all fields are filled
                 if (!name || !number || !address) {
                     alert('Please fill all fields.');
                     return;
@@ -1513,18 +1516,15 @@
                         },
                         body: JSON.stringify(formData),
                     });
-
-                    // Handle response
                     if (response.ok) {
-                        // Hide the parent div if successful
-                        document.getElementById('contactForm').style.display = 'none';
-                        alert('Booking submitted successfully!');
+                        document.getElementById('parent-div').style.display = 'none';
                     } else {
-                        alert('Error submitting the booking.');
                     }
                 } catch (error) {
                     console.error('Error:', error);
-                    alert('Error submitting the booking.');
+                } finally {
+                    button.style.pointerEvents = 'auto';
+                    button.style.backgroundColor = '#183ea1';
                 }
             });
 
