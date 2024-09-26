@@ -1424,42 +1424,47 @@ Carmaa provides expert car detailing services, covering both interior and exteri
     </script>
 
     <div id="parent-div"
-        style="height: 100vh; width: 100vw; background-color: #00000059;position: fixed; top: 0px; right: 0px; z-index:19999;display: none; justify-content: center;align-items: center;">
-        <div id="contactForm"
-            style="background-color: white;max-width: 450px; width: 95%;min-height: 300px ;padding: 30px;border-radius: 20px;position: relative; flex: 1; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192);border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
-            <h3 style="font-size: 1.5rem; text-align: center;">Get 15% Discount</h3>
-            <ion-icon id="close-btn" name="close-outline"
-                style="position: absolute; top: 20px;right: 20px; cursor: pointer;"></ion-icon>
+    style="height: 100%; width: 100%; background-color: #00000059;position: fixed; top: 0px; right: 0px; z-index:19999;display: none; justify-content: center;align-items: center;">
+    <div id="contactForm"
+        style="background-color: white;max-width: 450px; width: 95%;min-height: 400px ;padding: 30px;border-radius: 20px;position: relative; flex: 1; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192);border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 1.5rem; text-align: center;">
+            <span style="font-size: 1.5rem; color: #e77640;">Get Upto 15% Off*</span>
+            <span style="font-size: 1.5rem; font-weight: normal;"> on your</span>
+        </h3>
+        <h3 style="font-size: 1.5rem; text-align: center;">First Booking</h3>
+        <ion-icon id="close-btn" name="close-outline"
+            style="position: absolute; top: 20px;right: 20px; cursor: pointer;"></ion-icon>
 
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-                <label for="name" style="font-size: 1.2rem;">Name</label>
-                <input type="text" id="nameInput"
-                    style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-                <label for="number" style="font-size: 1.2rem;">Number</label>
-                <input type="text" id="numberInput"
-                    style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-                <label for="address" style="font-size: 1.2rem;">Address</label>
-                <input type="text" id="addressInput"
-                    style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-            </div>
-
-            <div id="contactButton"
-                style="background-color: #183ea1; width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer; border-radius: 6px;">
-                Book Now
-            </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="name" style="font-size: 1.2rem;">Full Name*</label>
+            <input type="text" id="nameInput" placeholder="Enter your full name"
+                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
         </div>
+
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="number" style="font-size: 1.2rem;">Phone Number*</label>
+            <input type="text" id="numberInput" placeholder="Enter your phone number"
+                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="email" style="font-size: 1.2rem;">Email Address</label>
+            <input type="text" id="emailInput" placeholder="Enter your email address"
+                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+        </div>     
+        <h3 style="font-size: 1.5rem; text-align: center;"></h3>   
+        <div id="contactButton"
+            style="background-color: #183ea1; width: fit-content; color: white; padding: 10px 15px; font-size: 1.5rem; font-weight: 400; cursor: pointer; border-radius: 6px; margin-top: auto; align-self: center;">
+            Book Now
+        </div>
+    </div>
+    </div>
+
         <script>
             // Function to show the parent div after 15 seconds
             function showDivAfterDelay() {
                 setTimeout(() => {
                     document.getElementById("parent-div").style.display = "flex";
-                }, 10000);
+                }, 5000);
             }
 
             // Initially hide the div
