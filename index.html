@@ -19,6 +19,12 @@
 <meta property="og:image" content="https://carmaacarcare.com/images/your-og-image.jpg">
 <meta property="og:site_name" content="CarMaa Car Care">
 <meta property="og:locale" content="en_IN">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Carmaa Doorstep Car Washing Service | Waterless Car Wash">
@@ -27,7 +33,8 @@
     <meta name="robots" content="index, follow"> 
 <meta name="googlebot" content="index, follow">
 <meta name="bingbot" content="index, follow">
-
+<link rel="stylesheet" href="./css/homepage.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         .wave {
@@ -60,7 +67,7 @@
         .slider-image {
             width: 100%;
             height: 100%;
-            aspect-ratio: 16/9;
+         
             object-fit: cover;
             object-position: left;
         }
@@ -69,7 +76,7 @@
             position: absolute;
             inset: 0;
             width: var(--position);
-            filter: grayscale(100%)
+           
         }
 
         .slider {
@@ -699,117 +706,260 @@
                 <p id="homeP" style="font-size: 1.4rem; font-weight: 500; max-width: 380px;">Premium Services starting at ₹249</span></p>
                 <p></p>
                 <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <ion-icon name="checkmark-circle" style="color: #01628F; font-size: 2rem;"></ion-icon>
                     <span style="font-size: 1.2rem; font-weight: 500;">Expert Technicians</span>
                 </div>
                 <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <ion-icon name="checkmark-circle" style="color: #01628F; font-size: 2rem;"></ion-icon>
                     <span style="font-size: 1.2rem; font-weight: 500;">Doorstep Services</span>
                 </div>
                 <div class="homeB" style="display: flex; gap: 10px; align-items: center;">
-                    <ion-icon name="checkmark-circle" style="color: #183ea1; font-size: 2rem;"></ion-icon>
+                    <ion-icon name="checkmark-circle" style="color: #01628F; font-size: 2rem;"></ion-icon>
                     <span style="font-size: 1.2rem; font-weight: 500;">Eco Friendly Approach</span>
                 </div>
-                <div class="homeB btn"
-                    style=" background-color: #183ea1;width: fit-content;margin-top: 20px;  color: white; padding: 15px 20px; font-size: 1.6rem !important; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                    <a href="./contactUs.html"
-                        style="font-size: 1.4rem;font-weight: 500; text-decoration: none; color: white ;">
-                        Book Now
-                    </a>
-                </div>
-                <style>
-                    .btn:hover {
-                        background-color: #ed6744 !important;
-                    }
-                </style>
+               
+                <button class=" open-booking-modal hero-section-btn">Book Now</button>
+                
             </div>
             <div class="homeCar" style=" transform: rotate(90deg); max-height: 700px; ">
                 <img src="./images/home.jpg" style=" position: relative; top: -50px; height: 100%; " alt="">
             </div>
         </div>
     </div>
-    <div style="width: 100vw; position: relative; margin-top: 30px; background-color: #183ea1; overflow: visible;">
-        <div
-            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
-            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: white;">
-                Why Carmaa?
-            </h2>
 
-            <div class="b" style="display: flex; gap: 30px;">
-                <div
-                    style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
-                    <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+
+
+    <section class="benefits-section">
+        <div class="benefit-right second-img ">
+            <div class="description quality-ser">
+                <img src="./images/home-page/benefits/certified.png"/>
+                <p>10+</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="video-description2">
+                <div class="video-description-img">
+                    <img class="car-img"src="./images/home-page/benefits/video-car.jpg"/>
+                    <div class="play-button">
+                        <img src="./images/home-page/benefits/play.png"/>
+                    </div>
                 </div>
-                <div
-                    style="background-color: gray; aspect-ratio: 16/9; margin-top: 30px; border-radius: 10px;overflow: hidden; flex: 1;">
-                    <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
+               
+                
+
+               </div>
+            </div>
+        <div class="benefit-left">
+            <h2>Who We Are ?</h2>
+            <h1>Professional Car Wash and Detailing Center</h1>
+            <p class="benefit-head-desc">At Carmaa, we are a professional car wash and detailing center committed to delivering top-quality care for your vehicle. We specialize in providing doorstep car wash services, offering convenience without compromising on quality. From eco-friendly waterless car wash options to thorough car detailing, we ensure every aspect of your car receives attention. Our range of services includes everything from basic car washing service to comprehensive car interior cleaning, making sure your car looks its best both inside and out. With Carmaa, experience hassle-free car cleaning at your doorstep.
+            </p>
+       <div class="benefit-left-points" >
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>1500+ Cars Cleaned</p>
+        </div>
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>Trusted & Reliable Service</p>
+        </div>
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>Certified & Award-Winning</p>
+        </div>
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>100% Customer Satisfaction</p>
+        </div>
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>Eco-Friendly Waterless Car Wash</p>
+        </div>
+        <div class="benefit-left-points-wrapper">
+            <img src="./images/home-page/benefits/checked.png"/>
+            <p>Convenient Doorstep Car Wash</p>
+        </div>
+        <div class="benefits-cta-section">
+            <button><a class="btn-href" href="./about.html">More About Us</a></button>
+            <div class="call-icon-wrapper">
+                <div class="call-icon">
+                    <img class="fa fa-phone" src="./images/home-page/benefits/phone-call.png"/>
+                </div>
+                <div>
+                    <p>Call Us Anytime!</p>
+                    <h1 class="benefits-mobile-number">+91 7366473827</h1>
                 </div>
             </div>
-            <div class="hover"
-                style="display: flex; flex: 1; padding: 20px;  gap: 40px; align-items: center; justify-content: space-between; margin-top: 30px; ">
-                <div style="width: 48%;">
-                    <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                    </div>
-                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                        Waterless Car Wash
-                    </p>
-                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Environmentally friendly and highly effective.
-At Carmaa, we offer an eco-friendly waterless car wash that’s both efficient and highly effective. Our waterless solution provides a spotless clean without wasting water, making it the perfect choice for those who care about both their vehicle and the environment.
-</p>
-                </div>
-                <div style="width: 48%;">
-                    <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                    </div>
-                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                        Doorstep Convenience
-                    </p>
-                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">We come to you, saving your time and hassle.
-With Carmaa's doorstep car wash service, you can enjoy professional car cleaning without leaving your home. We bring everything to you, saving you time and hassle. Whether you're in Dehradun or anywhere in Uttarakhand, we deliver top-notch car washing service right to your doorstep.
-</p>
-                </div>
-                <div style="width: 48%;">
-                    <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                    </div>
-                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                        Daily Car Wash Service
-                    </p>
-                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Ideal for regular maintenance at your home.
-Keep your car looking its best every day with our daily car wash service at home. This is the ideal solution for regular car maintenance without the need for repeated visits to a wash station. Let us handle the cleaning while you enjoy a sparkling car, all from the comfort of your home.
-</p>
-                </div>
-                <div style="width: 48%;">
-                    <div
-                        style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                        <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                    </div>
-                    <p style="font-weight: 600; margin: 5px auto;font-size: 1.2rem;color: white; text-align: center;">
-                       Professional Detailing 
-                    </p>
-                    <p style="font-weight: 400; margin: 5px auto;font-size: 1rem;color: rgb(241, 241, 241); ">Expert interior and exterior car cleaning.
-Carmaa provides expert car detailing services, covering both interior and exterior cleaning. From upholstery to polishing, our professional car detailing ensures that every part of your vehicle shines. Experience premium car interior cleaning and detailing at your doorstep in Dehradun and Uttarakhand.
-</p>
-                </div>
+          
+           
 
 
+        </div>
+        </div>
+        
+       
+           
+        
+    </div>
+    
+       
+
+       </div>
+        </div>
+      
+        </div>
+
+    </section>
+    <section class="section-why-carmaa" id="why-carma">
+        <div class="why-carmaa-container">
+            <h2>WHAT WE'RE OFFERING</h2>
+            <h1>Your Go-To Solution for Eco-Friendly and Convenient Car Care</h1>
+           <div class="header-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+             
+        </div>
+        <main class="why-carmaa-card-container">
+            <div class="why-carmaa-card">
+                <div class="card-icon-container color-blue">
+                    <img class="card-icon" src="./images/home-page/service/icon-1.png"/>
+
+                </div>
+                <h4>Car Interior Cleaning</h4>
+                <p>From seats to dashboards, our expert car interior cleaning ensures a fresh and spotless interior for a more comfortable ride.</p>
+                <p>Read More</p>
+                <img src="./images/home-page/service/service-1.jpg"/>
             </div>
-            <div class="btn"
-                style=" background-color: white; color: white;margin: 20px auto; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-                <a href="./contactUs.html"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: black ;">
-                    Contact Us
-                </a>
+            <div class="why-carmaa-card">
+                <div class="card-icon-container color-black">
+                    <img class="card-icon" src="./images/home-page/service/icon-2.png"/>
+
+                </div>
+                <h4>Waterless Car Wash</h4>
+                <p>Our eco-friendly waterless car wash leaves your car spotless while conserving water. Perfect for both the environment and your vehicle’s finish.</p>
+                <p>Read More</p>
+                <img src="./images/home-page/service/service-2.jpg"/>
+            </div>
+            <div class="why-carmaa-card">
+                <div class="card-icon-container color-blue">
+                    <img class="card-icon" src="./images/home-page/service/icon-3.png"/>
+
+                </div>
+                <h4>Doorstep Car Wash</h4>
+                <p>We bring professional car cleaning to your doorstep, saving you time and effort. Enjoy top-quality service without leaving home.</p>
+                <p>Read More</p>
+                <img src="./images/home-page/service/service-3.jpg"/>
+            </div>
+            
+        </main>
+        </div>
+       
+
+
+    </section>
+    <section class="benefits-section">
+        <div class="benefit-left">
+            <h2>BENEFITS</h2>
+            <h1>Why Choose Carmaa Car Care</h1>
+          
+        <div>
+            <div class="benefit-element">
+                <div class="benefit-element-img-wrapper">
+                    <img src="./images/home-page/benefits/mechanic.png"/>
+                </div>
+                    <div class="benefit-element-desc">
+                        <h3>Waterless Car Wash </h3>
+                        <p>At Carmaa, we offer an eco-friendly waterless car wash that’s both efficient and highly effective. Our waterless solution provides a spotless clean without wasting water, making it the perfect choice for those who care about both their vehicle and the environment.</p>
+                   
+                </div>
+            </div>
+            <div class="benefit-element">
+                <div class="benefit-element-img-wrapper2">
+                    <img src="./images/home-page/benefits/thumb.png"/>
+                </div>
+                    <div class="benefit-element-desc">
+                        <h3>Doorstep Convenience</h3>
+                        <p>With Carmaa's doorstep car wash service, you can enjoy professional car cleaning without leaving your home. We bring everything to you, saving you time and hassle. Whether you're in Dehradun or anywhere in Uttarakhand, we deliver top-notch car washing service right to your doorstep.</p>
+                   
+                </div>
+            </div>
+            <div class="benefit-element">
+                <div class="benefit-element-img-wrapper">
+                    <img src="./images/home-page/benefits/tool.png"/>
+                </div>
+                    <div class="benefit-element-desc">
+                        <h3>Daily Car Wash Service</h3>
+                        <p>Keep your car looking its best every day with our daily car wash service at home. This is the ideal solution for regular car maintenance without the need for repeated visits to a wash station. Let us handle the cleaning while you enjoy a sparkling car, all from the comfort of your home.</p>
+                   
+                </div>
+            </div>
+            <div class="benefit-element">
+                <div class="benefit-element-img-wrapper2">
+                    <img src="./images/home-page/benefits/car.png"/>
+                </div>
+                    <div class="benefit-element-desc">
+                        <h3>Professional Detailing</h3>
+                        <p>Carmaa provides expert car detailing services, covering both interior and exterior cleaning. From upholstery to polishing, our professional car detailing ensures that every part of your vehicle shines. Experience premium car interior cleaning and detailing at your doorstep in Dehradun and Uttarakhand.
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="benefit-right">
+            <div class="description">
+                <img src="./images/home-page/benefits/quality.png"/>
+                <p>100%</p>
+                <p>Quality Services</p>
+            </div>
+            <div class="video-description">
+                <div class="video-description-img">
+                    <img class="car-img"src="./images/home-page/benefits/video-car.jpg"/>
+                    <div class="play-button">
+                        <img src="./images/home-page/benefits/play.png"/>
+                    </div>
+                </div>
+               
+                
+
+               </div>
             </div>
         </div>
 
+    </section>
+
+
+
+<section class="counter-section">
+    <div class="counter-section-element">
+        <h4>22</h4>
+        <p>YEARS OF EXPERIENCE</p>
     </div>
+    <div class="counter-section-element">
+        <h4>48K</h4>
+        <p>Car Washed</p>
+    </div>
+    <div class="counter-section-element">
+        <h4>32K</h4>
+        <p>Clients Satisfaction</p>
+    </div>
+    <div class="counter-section-element">
+        <h4>12</h4>
+        <p>Awards & Recognition</p>
+    </div>
+
+</section>
+    <section class="parallex-cta">
+        <div class="parallex-cta-inner">
+           <h4> We provide fast & efficient service just for you!</h4>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet</p>
+           <button class=" open-booking-modal hero-section-btn">Book Now</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
     <script src="https://unpkg.com/ityped@0.0.10"></script>
     <script>
         window.ityped.init(document.querySelector('.ityped'), {
@@ -899,102 +1049,7 @@ Carmaa provides expert car detailing services, covering both interior and exteri
             </div>
         </div>
     </div>
-    <div style="width: 100vw; margin-top: 30px; " id="servicesPage">
-        <div
-            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
-            <h3 class="services" style="font-size: 2rem; font-weight: 600; color: #183ea1; text-align: center;">Our
-                Services</h3>
-
-            <div id="servicesContainer" class="servicesBox"
-                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; justify-content: center; margin-top: 50px;">
-
-
-            </div>
-
-            <div class="btn" id="showMoreBtn"
-                style="width: fit-content; margin: auto;margin-top: 30px; background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-
-                Show More
-            </div>
-            <div class="btn" id="showLessBtn"
-                style="display: none; width: fit-content; margin: auto;margin-top: 30px; background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
-
-                Show Less
-            </div>
-
-        </div>
-    </div>
-    <script>
-        const services = [
-            { title: "Waterless Car Wash", description: "Our eco-friendly waterless car wash leaves your car spotless while conserving water. Perfect for both the environment and your vehicle’s finish.", img: "./images/service.jpeg", flag: false },
-            { title: "Doorstep Car Wash", description: "We bring professional car cleaning to your doorstep, saving you time and effort. Enjoy top-quality service without leaving home.", img: "./images/service.jpeg", flag: true },
-            { title: "Car Interior Cleaning", description: "From seats to dashboards, our expert car interior cleaning ensures a fresh and spotless interior for a more comfortable ride.", img: "./images/service.jpeg", flag: true },
-            { title: "Car Detailing", description: "Our complete car detailing service covers every inch of your vehicle, inside and out, for a thorough, polished finish.", img: "./images/service.jpeg", flag: true },
-            { title: "Daily Car Wash Service", description: "Keep your car looking its best with our convenient daily car wash service, ideal for maintaining a clean vehicle every day.", img: "./images/service.jpeg", flag: true },
-            { title: "Car Washing Service in Dehradun & Uttarakhand", description: "We provide reliable and efficient car washing services across Dehradun and Uttarakhand, delivered right to your home.", img: "./images/service.jpeg", flag: true },
-            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "./images/service.jpeg", flag: true },
-        ];
-
-        const servicesContainer = document.getElementById('servicesContainer');
-        const showMoreBtn = document.getElementById('showMoreBtn');
-        const showLessBtn = document.getElementById('showLessBtn');
-        const itemsToShow = 6;
-        let currentIndex = 0;
-
-        function createServiceItem(service) {
-            const serviceItem = document.createElement('div');
-            serviceItem.classList.add('servicesI');
-            serviceItem.style.cssText = "display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; position: relative;";
-
-            const flag = service.flag ? ` <div
-                        style="top: 10px;border: 1px solid red;  height: 25px; left: 0px; position: absolute; background-color: #ff2222; ">
-                         <p style="color: white; font-size: .7rem; padding: 4px 25px 4px 10px ; ">Discount</p>
-                         <div style=" height: 100%; aspect-ratio: 1; background-color: white; position: absolute; right: -10px; top: 0px; transform: rotate(45deg);"></div>
-                    </div>` : '';
-
-            serviceItem.innerHTML = `
-        ${flag}
-        <div style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-            <img src="${service.img}" style="height: 100%; width: 100%;" alt="">
-        </div>
-        <h4 style="font-size: 1.4rem;">${service.title}</h4>
-        <p style="text-align: center;">${service.description}</p>
-    `;
-
-            return serviceItem;
-        }
-
-        function renderServices() {
-            services.slice(currentIndex, currentIndex + itemsToShow).forEach(service => {
-                servicesContainer.appendChild(createServiceItem(service));
-            });
-            currentIndex += itemsToShow;
-
-            if (currentIndex >= services.length) {
-                showMoreBtn.style.display = 'none';
-                showLessBtn.style.display = 'block';
-            }
-        }
-
-        function showLess() {
-            servicesContainer.innerHTML = '';
-            currentIndex = 0;
-            renderServices();
-
-            showMoreBtn.style.display = 'block';
-            showLessBtn.style.display = 'none';
-        }
-
-        showMoreBtn.addEventListener('click', renderServices);
-        showLessBtn.addEventListener('click', showLess);
-        window.addEventListener("DOMContentLoaded", renderServices)
-
-
-        if (services.length > itemsToShow) {
-            showMoreBtn.style.display = 'block';
-        }
-
-    </script>
+   
 
 
 
@@ -1006,18 +1061,20 @@ Carmaa provides expert car detailing services, covering both interior and exteri
     </div>
     <div style="width: 100vw; display: flex; flex-direction: column; align-items: center;">
         <div style="width: 95%; max-width: 1200px;margin: auto; margin-top: 50px;">
-            <h2
-                style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; color: #183ea1;">
-                CarMaa is Hassle-Free!</h2>
+            <div class="why-carmaa-container">
+                <h2 class="before-after-sub-heading">Before and After</h2>
+                <h1 class="before-after-heading">See the Magic of Car Cleaning</h1>
+            </div>
+        
             <!-- <div class="slider1"> -->
 
             <div class="container" style="margin-top: 40px;">
                 <div class="image-container">
                     <img class="image-before slider-image"
-                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        src="./images/home-page/before-afer/dirty-car.png"
                         alt="color photo" />
                     <img class="image-after slider-image"
-                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        src="./images/home-page/before-afer/clean-car.png"
                         alt="black and white" />
                 </div>
                 <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
@@ -1049,130 +1106,201 @@ Carmaa provides expert car detailing services, covering both interior and exteri
                 })
             </script> -->
         </div>
-        <button class="btn"
-            style=" width: 150px; margin: auto;  background-color: #183ea1;margin-top: 30px; outline: none; border: 1px solid #183ea1; color: white; padding: 12px 25px ; border-radius: 10px;">Book
-            Now</button>
+        <button class="cta-btn open-booking-modal">BOOK NOW</button>
     </div>
-    <div
-        style="width: 100vw; background-color: #183ea1;margin: 50px 0px; display: flex;  position: relative;min-height: 250px; ">
-        <img src="./images/counter.jpg"
-            style="height: 100%; width: 100%; position: absolute; object-fit: cover; z-index: 1; mix-blend-mode: multiply;"
-            alt="">
-        <div class="c"
-            style="width: 95%;position: relative; z-index: 2; align-self: center; gap: 40px; max-width: 1200px;margin: auto; display: flex; justify-content: space-between; padding: 60px 0px;">
-            <div style="display: flex;flex-direction: column; gap: 10px; ">
-                <div
-                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                </div>
-                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                        style="font-size: 2rem; color: white;" class="number" data-target="56">1</span>M+</h3>
-                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CUSTOMERS SERVED</p>
-            </div>
-            <div style=" display: flex;flex-direction: column; gap: 10px; ">
-                <div
-                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                </div>
-                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                        style="font-size: 2rem; color: white;" class="number" data-target="200">1</span>L+</h3>
-                <p style=" font-size: 1.2rem; color: white; text-align:center ;">WATER SAVED</p>
-            </div>
-            <div style=" display: flex;flex-direction: column;gap: 10px;">
-                <div
-                    style="height: 80px; aspect-ratio: 1; background-color: #ffffff;overflow: hidden; border-radius: 50%; margin: auto;">
-                    <img src="./images/water.webp" style="height: 100%; width: 100%; object-fit: contain;" alt="">
-                </div>
-                <h3 style=" font-size: 2rem; color: white; text-align:center ;"><span
-                        style="font-size: 2rem; color: white;" class="number" data-target="100">1</span>M+</h3>
-                <p style=" font-size: 1.2rem; color: white; text-align:center ;">CLEAN CARS LAST YEAR</p>
-            </div>
+   
 
+  <section class="testimonial-section">
+    <div class="why-carmaa-container">
+        <h2 class="testimonial-sub-heading">TESTIMONIALS</h2>
+        <h1 class="testimonial-heading">What Client's Say?</h1>
+    </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I recently tried Carmaa's doorstep car wash in Dehradun, and it exceeded my expectations! The car washing service in Dehradun was incredibly convenient, and they even offered a waterless car wash option, which is great for the environment. My car looks spotless, and the car detailing in Dehradun done by Carmaa made it shine like new.
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                   <div class="author-wrapper">
+                    <div class="author-section">
+                        <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                        <div class="author-container">
+                            <p class="author-name">Pranay Rawat</p>
+                            <p class="author-designation">Software Engineer</p>
+                        </div>
+                    </div>
+                    <div class="quote">
+                        <i class="fa fa-quote-right"></i>
+                    </div>
+                   </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Carmaa provides the best car wash service in Uttarakhand! Their team came to my home for a doorstep car wash in Uttarakhand and made my car look fantastic. The car interior cleaning was thorough, and the waterless car wash they offer is a great eco-friendly choice."</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I love the convenience of Carmaa’s doorstep car wash! Their daily car wash service at home saves me so much time, and the results are amazing. Whether it's car detailing or a simple car washing service, they always deliver top-quality service.
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Carmaa’s doorstep car cleaning in Dehradun is the best. I don’t have to waste time driving to a service center. Their car wash in Dehradun leaves my vehicle looking brand new every time, and their car interior cleaning service is also top-notch.
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"If you’re looking for a reliable car wash in Uttarakhand, Carmaa is the way to go. Their car detailing in Uttarakhand is thorough, and the fact that they offer a waterless car wash in Uttarakhand makes them stand out. My car has never looked better.
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Carmaa has revolutionized car wash in Dehradun with their doorstep car wash service. The team arrived on time and provided top-notch car detailing in Dehradun. Plus, their car interior cleaning was thorough and left my car smelling fresh.
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Looking for the best car washing service in Uttarakhand? Carmaa is your go-to! Their car cleaning at doorstep in Uttarakhand is a game-changer, and their car wash in Uttarakhand service is extremely professional. I also love the eco-friendly waterless car wash they provide.
+
+                        "</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="author-wrapper">
+                        <div class="author-section">
+                            <img class="testimonial-img" src="./images/home-page/testimonial/testimonial-1.jpg">
+                            <div class="author-container">
+                                <p class="author-name">Pranay Rawat</p>
+                                <p class="author-designation">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                       </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
         </div>
-    </div>
 
-    <div style="width: 100vw; ">
-        <!-- <h3 style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Testimonial</h3> -->
-        <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
-            What are people saying?
-        </h2>
-        <!-- <p style="width: 95%; max-width: 450px; margin: auto; text-align: center; margin-top: 20px; ">Pamper
-            your car
-            with premier full wash complete with interior vacuum and window cleaning.</p> -->
-        <div
-            style="width: 95%;  height: 100%; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between; margin-top: 20px; margin-bottom: 50px;">
-            <div
-                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 50px;">
-                <div class="TestimonialCard"
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 20px; box-shadow: 0px 1px 3px gray; padding: 20px; border-radius: 8px; ">
-                    <div
-                        style="border-radius: 10px; background-color: #183ea1;overflow: hidden; width: 300px; aspect-ratio:1 ; display: flex;align-items: center;justify-content: center;">
-                        <!-- <img src="./t3.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;"> -->
-                        <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
-                    </div>
-                    <div>
 
-                        <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
-                            but the
-                            main majority have suffered alteration.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus dolores
-                            accusantium neque rerum autem reprehenderit sequi debitis ab odio est voluptatem, recusandae
-                            excepturi! Iste consequatur autem numquam pariatur excepturi?
-                        </p>
-                        <h4 style="font-size: 1.4rem; text-align: right;margin-top: 10px;">~Maria</h4>
-                    </div>
-                </div>
-                <div class="TestimonialCard"
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 20px; box-shadow: 0px 1px 3px gray; padding: 20px; border-radius: 8px; ">
-                    <div
-                        style="border-radius: 10px; background-color: #183ea1;overflow: hidden; width: 300px; aspect-ratio:1 ; display: flex;align-items: center;justify-content: center;">
-                        <!-- <img src="./t3.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;"> -->
-                        <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&controls=0&mute=0"></iframe>
-                    </div>
-                    <div>
+  </section>
 
-                        <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
-                            but the
-                            main majority have suffered alteration.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus dolores
-                            accusantium neque rerum autem reprehenderit sequi debitis ab odio est voluptatem, recusandae
-                            excepturi! Iste consequatur autem numquam pariatur excepturi?
-                        </p>
-                        <h4 style="font-size: 1.4rem; text-align: right;margin-top: 10px;">~Maria</h4>
-                    </div>
-                </div>
-                <div class="TestimonialCard"
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 20px; box-shadow: 0px 1px 3px gray; padding: 20px; border-radius: 8px; ">
-                    <div
-                        style="border-radius: 10px; background-color: #183ea1;overflow: hidden; width: 300px; aspect-ratio:1 ; display: flex;align-items: center;justify-content: center;">
-                        <!-- <img src="./t3.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;"> -->
-                        <iframe style="width: 100%; height: 100%; border: none; outline: none;"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&loop=1&mute=0"></iframe>
-                    </div>
-                    <div style=" border-radius: 6px;">
 
-                        <p style="text-align: center; ">There are many variations passages of Lorem Ipsum available,
-                            but the
-                            main majority have suffered alteration.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellendus dolores
-                            accusantium neque rerum autem reprehenderit sequi debitis ab odio est voluptatem, recusandae
-                            excepturi! Iste consequatur autem numquam pariatur excepturi?
-                        </p>
-                        <h4 style="font-size: 1.4rem; text-align: right;margin-top: 10px;">~Maria</h4>
-                    </div>
-                </div>
 
-            </div>
+
+
+
+
+
+    <section class="wrapper faq" >
+        <div class="why-carmaa-container">
+            <h2 class="testimonial-sub-heading">FREQUENTLY ASKED QUESTIONS</h2>
+            <h1 class="faq-heading">Get Your Questions Answered</h1>
         </div>
-    </div>
-    <section class="wrapper faq" style="padding: 50px 0px;">
-        <div style=" flex-direction: column;align-items: center; width: 95%;">
-            <!-- <div class="topText"></div> -->
-            <h2 style="font-size: 2rem; text-align: center; width: 95%; ; margin: auto;">
-                Frequently Asked Questions
-            </h2>
             <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
                 <div class="accordion-item">
                     <button id="accordion-button-1" aria-expanded="false">
@@ -1257,11 +1385,27 @@ Carmaa provides expert car detailing services, covering both interior and exteri
                         </p>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">How often should I get my car cleaned?
+
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We recommend our daily car wash service for those who want to maintain a spotless vehicle. You can choose regular or one-time car washing services.
+
+
+                        </p>
+                    </div>
+                </div>
 
             </div>
 
         </div>
     </section>
+    <script src="./js/testimonial-slider.js"></script>
     <script>
         const toggleSidBar = () => {
             const sidebar = document.querySelectorAll('.center');
@@ -1423,48 +1567,66 @@ Carmaa provides expert car detailing services, covering both interior and exteri
         });
     </script>
 
-    <div id="parent-div"
-    style="height: 100%; width: 100%; background-color: #00000059;position: fixed; top: 0px; right: 0px; z-index:19999;display: none; justify-content: center;align-items: center;">
-    <div id="contactForm"
-        style="background-color: white;max-width: 450px; width: 95%;min-height: 400px ;padding: 30px;border-radius: 20px;position: relative; flex: 1; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192);border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 1.5rem; text-align: center;">
-            <span style="font-size: 1.5rem; color: #e77640;">Get Upto 15% Off*</span>
-            <span style="font-size: 1.5rem; font-weight: normal;"> on your</span>
-        </h3>
-        <h3 style="font-size: 1.5rem; text-align: center;">First Booking</h3>
-        <ion-icon id="close-btn" name="close-outline"
-            style="position: absolute; top: 20px;right: 20px; cursor: pointer;"></ion-icon>
+    <div id="parent-div">
+        <section class="modal-container">
+            <div class="modal-wrapper">
+                <div class="image-section">
+                    <div class="modal-left">
+                        <h2>BOOK AN APPOINTMENT</h2>
+                        <h1>Get Upto 15% OFF on your First Booking</h1>
+                         
+                            <div class="contact">
+                                <div class="img-wrapper">
+                                    <img src="./images/home-page/modal/icon-phone.png"/>
+                                </div>
+                                <div class="details">
+                                    <h1>Customer Services</h1>
+                                    <p>+91 7366473827</p>
+                                </div>
+                               
+                               
+                            </div>
+                            <div class="contact">
+                                <div class="img-wrapper2">
+                                    <img src="./images/home-page/modal/icon-clock.png"/>
+                                </div>
+                                <div class="details">
+                                    <h1>Opening Hours</h1>
+                                    <p>Mon-Sat: 09.00-20.00</p>
+                                </div>
+                               
+                               
+                            </div>
+                        </div>
+                   
 
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-            <label for="name" style="font-size: 1.2rem;">Full Name*</label>
-            <input type="text" id="nameInput" placeholder="Enter your full name"
-                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-        </div>
 
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-            <label for="number" style="font-size: 1.2rem;">Phone Number*</label>
-            <input type="text" id="numberInput" placeholder="Enter your phone number"
-                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-            <label for="email" style="font-size: 1.2rem;">Email Address</label>
-            <input type="text" id="emailInput" placeholder="Enter your email address"
-                style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
-        </div>     
-        <h3 style="font-size: 1.5rem; text-align: center;"></h3>   
-        <div class="homeB btn" id="contactButton"
-                    style=" background-color: #183ea1;width: fit-content;margin-top: 20px;  color: white; padding: 15px 20px; font-size: 1.6rem !important; font-weight: 400; cursor: pointer;border-radius: 6px; align-self: center;">
-                    <a 
-                    style="font-size: 1.4rem;font-weight: 500; text-decoration: none; color: white ;">
-                        Book Now
-                    </a>
                 </div>
-                <style>
-                    .btn:hover {
-                        background-color: #ed6744 !important;
-                    }
-                </style>
-    </div>
+                <div class="modal-form">
+                    <img id="close-btn" src="./images/home-page/modal/cancel.png"/>
+                    <div>
+                        <p class="modal-form-label">Name</p>
+                        <input class="modal-input" type="text" id="nameInput" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <p class="modal-form-label">Phone Number</p>
+                        <input class="modal-input" type="text" id="numberInput" placeholder="Enter your phone number"
+                >
+                    </div>
+                    <div>
+                        <p class="modal-form-label">Email</p>
+                        <input class="modal-input" type="text" id="emailInput" placeholder="Enter your email address"
+                       >
+                    </div>
+                    
+                    <button  id="contactButton">Make Appointment</button>
+
+
+                </div>
+            </div>
+
+        </section>
+
     </div>
 
         <script>
@@ -1557,6 +1719,14 @@ Carmaa provides expert car detailing services, covering both interior and exteri
                 draggable: false
             });
         });
+    </script>
+    <script>
+        const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+        bookingOpenBtn.forEach(button => {
+        button.addEventListener('click', () => {
+            document.getElementById("parent-div").style.display = "flex";
+        });
+    });
     </script>
 </body>
 
