@@ -1,0 +1,62 @@
+:root{
+    --primary-color:#01628F;
+    --font:"Bai Jamjuree", sans-serif;
+    --body-font:"Sarabun", sans-serif;
+    --silver:#BAC4C9
+}
+.city-header-section{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 5rem;
+    width: 100%;
+    background-position: left top;
+    background-size: cover;
+    background-image: url('../images/header-img.jpg');
+    
+}
+.city-header-section p{
+    color: white;
+    position: relative;
+    font-size: 2.2rem;
+    font-family: var(--font);
+    line-height: 2;
+    font-weight: 700;
+    z-index: 2;
+
+}
+.city-header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  bottom: 0;
+  right: 0;
+    padding: 8rem 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+.city-header-section .breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+position: relative;
+z-index: 2;
+}
+.city-header-section .breadcrumb p{
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 300;
+}
+.city-header-section .breadcrumb img{
+    
+width: 1rem;
+height: 1rem;
+}
+@media screen and (min-width:300px) {
+  .city-header-section{
+    padding: 8rem 2rem;
+  }
+    
+}

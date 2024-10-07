@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/contactus.css"/>
+    <link rel="stylesheet" href="./css/aboutus.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -109,6 +113,8 @@
             }
         }
     </style>
+     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -122,33 +128,33 @@
                 </a>
             </div>
             <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-                <li style="cursor: pointer; "><a
+                <li style="cursor: pointer; "><a class="nav-item-list"
                         style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="/">Home</a>
                 </li>
                 <li style="cursor: pointer; "><a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                    class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
                         href="./pricing.html">Pricing</a> </li>
                 <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="./store.html">Store</a> </li>
                 <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="./about.html">About</a></li>
                 <li style="cursor: pointer; "> <a
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
                         href="./franchise.html">Franchise</a></li>
                 <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Citys</span>
+                    class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
                     <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
-                        <li><a href="./dehradun.html"
+                        <li><a class="nav-item-list" href="./dehradun.html"
                                 style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
                         </li>
-                        <li><a href=""
-                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        <li><a class="nav-item-list" href="./cities/noida.html"
+                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
                         </li>
-                        <li><a href=""
-                                style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                        <li><a class="nav-item-list"   href="./cities/gurugram.html"
+                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Gurugram</a>
                         </li>
                     </ul>
                     <style>
@@ -179,8 +185,8 @@
                 <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                     <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
                 </button>
-                <div
-                    style=" background-color: #183ea1; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;border-radius: 6px;">
+                <div class="btn"
+                    style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
                     <a href="./contactUs.html"
                         style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                         Contact Us
@@ -202,6 +208,17 @@
 
         </script>
     </nav>
+    <header class="city-header-section">
+        <p>Contact Us</p>
+        <div class="breadcrumb">
+            <img class="" src="../common/home.png"/>
+                <p><a href="./index.html" class="breadcrumb-link">Home</a></p>
+                <p>/</p>
+                <p><a href="./contactus.html" class="breadcrumb-link">Contact Us</a></p>
+           
+        </div>
+    </header>
+
     <div style="width: 100vw; margin: 50px 0px; margin-bottom: 100px;">
         <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Contact  <span
                 style="font-size: 2.5rem; color: #183ea1;"> information</span> </h2>

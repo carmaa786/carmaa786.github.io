@@ -4,13 +4,58 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    font-family: var(--body-font);
+}
 
+.success-message {
+    color: green;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-family: var(--body-font);
+}
 
+#messageContainer {
+    margin-top: 15px;
+}
+.nav-item-list{
+    font-family: var(--font) !important;
+}
+.nav-item-list:hover{
+    color: var(--primary-color) !important;
+}
+.contact-us-nav{
+    color: white !important;
+    margin-top: 2rem !important;
+    margin-bottom: 4rem !important;
+        background-color: var(--primary-color) !important;
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+        padding: 18px 28px !important;
+        border: none !important;
+        cursor: pointer !important;
+        text-transform: uppercase !important;
+        transition: transform 0.3s ease !important;     
+}
+.contact-us-nav:hover{
+    transform: scale(0.95) !important;
+}
+.wrapper-faq{
+    padding: 0px 1rem;
+}
 
 .btn-href{
    text-decoration: none; 
    color: white;
 }
+
 .hero-section-btn{
     color: white;
     background-color: var(--primary-color);
@@ -21,10 +66,69 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.3s ease; 
+    width: 10rem;
+
 }
 .hero-section-btn:hover{
     transform: scale(0.95);
 }
+.microfiber-button {
+    position: absolute;
+    
+    
+    padding: .5rem;
+    
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999;
+    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+
+
+
+
+    background-color: #a8d5e2; /* Light blue to resemble microfiber cloth */
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px; /* Rounded corners to make it look soft */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-image: radial-gradient(circle, #c4e8f3, #a8d5e2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adding a fabric-like texture */
+  .microfiber-button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    z-index: 1;
+    border-radius: 20px;
+    pointer-events: none;
+  }
+  
+  .microfiber-button:hover {
+    background-color: #9bc4cf; /* Darker shade on hover */
+    transform: translateY(-3px);
+  }
+  
+  .microfiber-button:active {
+    background-color: #88b0ba; /* Even darker on click */
+    transform: translateY(2px);
+  }
+  
 
 
 
@@ -34,6 +138,7 @@
     display: flex;
     justify-content: center;
     padding: 6rem 0rem;
+    overflow-x: hidden;
     
 }
 .why-carmaa-container{
@@ -392,7 +497,7 @@ font-family: var(--body-font);
 .accordion-title, .accordion-content p{
     font-family: var(--body-font) !important;
 }
-#parent-div{
+#parent-div,#parent-div2{
     display: none;
 }
 .modal-container{
@@ -418,7 +523,7 @@ font-family: var(--body-font);
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(-50px);
+    transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
     z-index: 200;
     display: flex;
@@ -426,6 +531,33 @@ font-family: var(--body-font);
     overflow: hidden;
     padding-right: 4rem;
     position: relative;
+}
+.modal-wrapper2{
+    border-radius: 6px;
+    position:fixed;
+    width: 40rem;
+    height: 20rem;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-50px);
+    animation: slideIn 0.5s forwards ease-out;
+    z-index: 200;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+ #close-btn2{
+    position: absolute;
+    width: 2rem;
+    height:2rem;
+    right: 10px;
+    cursor: pointer;
+    top:85px
+}
+.modal-wrapper2 iframe{
+    width: 100%;
+    height: 100%;
 }
 .modal-wrapper .image-section{
     width: 50%;
@@ -544,7 +676,7 @@ font-family: var(--body-font);
     width: 100%;
     padding: 0.5rem 1rem;
     margin-top: 0.6rem;
-    margin-bottom: 1.5rem;
+   
 }
 .modal-form img{
     position: absolute;
@@ -581,6 +713,7 @@ font-family: var(--body-font);
 
 
 .benefits-section{
+    overflow-x:hidden ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -917,7 +1050,7 @@ margin-top: 0.5rem;
         background-color: white;
         top: 60%;
         left: 50%;
-        transform: translate(-50%, -50%) translateY(-50px);
+        transform: translate(-50%, -50%);
         animation: slideIn 0.5s forwards ease-out;
         z-index: 200;
         display: flex;
@@ -1059,7 +1192,7 @@ margin-top: 0.5rem;
         width: 100%;
         padding: 0.5rem 1rem;
         margin-top: 0.4rem;
-        margin-bottom: 1rem;
+       
     }
     .modal-form img{
         
@@ -1089,6 +1222,7 @@ margin-top: 0.5rem;
     }
     
     .benefits-section{
+        overflow-x:hidden ;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1355,6 +1489,7 @@ margin-top: 0.5rem;
         cursor: pointer;
         text-transform: uppercase;
         transition: transform 0.3s ease; 
+        width: 10rem;
     }
     .hero-section-btn:hover{
         transform: scale(0.95);
@@ -1368,6 +1503,7 @@ margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     padding: 6rem 0rem;
+    overflow-x: hidden;
     
 }
 .why-carmaa-container{
@@ -1551,7 +1687,8 @@ margin-top: 0.5rem;
 }
 
 .parallex-cta-inner{
-    width: 40%;
+    width: 70%;
+    max-width: 1200px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -1726,7 +1863,7 @@ font-family: var(--body-font);
 .accordion-title, .accordion-content p{
     font-family: var(--body-font) !important;
 }
-#parent-div{
+#parent-div,#parent-div2{
     display: none;
 }
 .modal-container{
@@ -1754,7 +1891,7 @@ font-family: var(--body-font);
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(-50px);
+    transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
     z-index: 200;
     display: flex;
@@ -1880,7 +2017,7 @@ font-family: var(--body-font);
     width: 100%;
     padding: 0.5rem 1rem;
     margin-top: 0.6rem;
-    margin-bottom: 1.5rem;
+   
 }
 .modal-form img{
     position: absolute;
@@ -1917,6 +2054,7 @@ font-family: var(--body-font);
 
 
 .benefits-section{
+    overflow-x:hidden ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2245,6 +2383,7 @@ margin-top: 0.5rem;
     position: relative;
 }
 .benefits-section{
+    overflow-x:hidden ;
     display: flex;
     flex-direction: row;
     align-items: center;
