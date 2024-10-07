@@ -1,0 +1,58 @@
+:root{
+    --primary-color:#01628F;
+    --font:"Bai Jamjuree", sans-serif;
+    --body-font:"Sarabun", sans-serif;
+    --silver:#BAC4C9
+}
+.contact-main h2{
+text-align: center;
+font-size: 1.2rem;
+font-family: var(--font);
+text-transform: uppercase;
+color: var(--primary-color);
+font-weight: 600;
+margin-top: 3rem;
+}
+.contact-main .heading{
+    text-align: center;
+    font-size: 3.5rem;
+   font-family: var(--font);
+    color: black;
+
+    font-weight: 800;
+    margin-top: 0.6rem;
+}
+.contact-main .desc{
+    text-align: center;
+    color:#424649;
+    width: 35%;
+    margin: 1.3rem auto;
+}
+.contact-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-card-container .img-wrapper{
+    background-color: #0E111B;
+    padding: 1.5rem 1.5rem;
+    border-radius: 100%;
+    display: inline-block;
+
+}
+.contact-card-container .card{
+    border-width: 2px;
+    border-style: solid;
+    padding: ;
+
+}
+.contact-card-container .card-heading{
+font-size: 1.4rem;
+font-family: var(--font);
+margin-top: 1.5rem;
+}
+.contact-card-container .img-wrapper img{
+
+    width: 2.5rem;
+    height: 2.5rem;
+}
