@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmaa - About</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/aboutus.css"/>
+    <link rel="stylesheet" href="../css/homepage.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .servicesI {
+            cursor: pointer;
+            transition: all 0.5s;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #65c7d06e;
+        }
+
+        .servicesI:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0px 0px 10px #65c7d0;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .a {
+                justify-content: center !important;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .bh {
+                flex-direction: column;
+            }
+
+            .bh img {
+                min-height: 300px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .c {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav-placeholder"
+    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <div
+        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+            <a href="/" style="height: 100%;">
+                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+            </a>
+        </div>
+        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+            <li style="cursor: pointer; "><a class="nav-item-list"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="/">Home</a>
+            </li>
+            <li style="cursor: pointer; "><a
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                    href="../pricing/">Pricing</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="../store/">Store</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="./">About</a></li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="../franchise/">Franchise</a></li>
+            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
+                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
+                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                    </li>
+                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
+                    </li>
+                    <li><a class="nav-item-list"   href="../doorstep-car-washing-service-in-dehradun/"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Gurugram</a>
+                    </li>
+                </ul>
+                <style>
+                    .dropdown {
+                        background-color: white;
+                        display: none;
+                        padding: 20px 0px;
+                    }
+
+                    .dropdownCon:hover .dropdown {
+                        display: flex;
+                    }
+
+                    .dropdown>li>a {
+                        padding: 5px 10px;
+                        border-radius: 4px;
+                        transition: all .1s;
+                    }
+
+                    .dropdown>li>a:hover {
+                        background-color: rgb(211, 211, 211);
+
+                    }
+                </style>
+            </li>
+        </ul>
+        <div style="display: flex; gap: 20px; ">
+            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+            </button>
+            <div class="btn"
+                style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="./contactus/"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle")
+        const menu = document.getElementById("menu")
+        // alert("asf")
+        toggle.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        });
+
+    </script>
+</nav>
+<header class="city-header-section">
+    <p>About Carmaa</p>
+    <div class="breadcrumb">
+        <img class="" src="../common/home.png"/>
+            <p><a href="/" class="breadcrumb-link">Home</a></p>
+            <p>/</p>
+            <p><a href="./" class="breadcrumb-link">About Us</a></p>
+       
+    </div>
+</header>
+
+<section class="about-us-section">
+    <div class="about-us-left">
+        <div class="about-us-header">
+            <h2>About CarMaa</h2>
+            <h1>The Future of Doorstep Car Cleaning Services</h1>
+
+        </div>
+        <p class="about-us-para">At CarMaa Car Care, established in January 2024, we are committed to providing hassle-free, professional car care directly to your doorstep. As a trusted name in the car cleaning industry, we specialize in both on-demand and daily car cleaning services, tailored to meet the unique needs of our customers. With a focus on eco-friendly, waterless car wash solutions and the latest technology, CarMaa ensures a spotless, scratch-free finish every time, making car care both convenient and environmentally conscious.</p>
+        <div class="benefits-cta-section">
+            <button><a class="btn-href open-booking-modal" >Book Now</a></button>
+            <div class="call-icon-wrapper">
+                <div class="call-icon">
+                    <img class="fa fa-phone" src="../images/home-page/benefits/phone-call.png"/>
+                </div>
+                <div>
+                    <p>Call Us Anytime!</p>
+                    <h1 class="benefits-mobile-number">+91 70425 55401</h1>
+                </div>
+            </div>
+          
+           
+
+
+        </div>
+    </div>
+    <div class="about-us-right">
+        <img class="main-img" src="../images/aboutus/about-us.png"/>
+        <img class="element-img" src="../images/aboutus/element.png"/>
+        <div class="about-us-trophy">
+            <img src="../images/aboutus/trophy.png"/>
+            <p>Rated 5 Stars by Thousands of Happy Customers
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="mission-section-wrapper">
+    <div class="mission-section-counter">
+        <div class="counter-desc">
+            <h1>25</h1>
+            <p class="desc">Years of Experience</p>
+        </div>
+        <div class="counter-desc">
+            <h1>38K</h1>
+            <p class="desc">Total Cars Washed</p>
+        </div>
+        <div class="counter-desc">
+            <h1>17</h1>
+            <p class="desc">Awards and Recognitions</p>
+        </div>
+        <div class="counter-desc">
+            <h1>14K</h1>
+            <p class="desc">Trusted Clients</p>
+        </div>
+
+    </div>
+    <div class="mission-section">
+        <div class="about-us-header">
+            <h2>CarMaa</h2>
+            <h1 class="mission-section-heading">Our Mission, Vision, Values</h1>
+
+        </div>
+        <div class="mission-container">
+            <div class="mission-container-element">
+                <img src="../images/aboutus/customer.png"/>
+                <h3>Our Values</h3>
+                <p>We are guided by values of professionalism, quality, and sustainability. We believe in providing services that not only meet but exceed customer expectations, ensuring their vehicles look their best while protecting the environment.</p>
+            </div>
+           
+            <div class="mission-container-element">
+                <img src="../images/aboutus/shared-vision.png"/>
+                <h3>Our Vission</h3>
+                <p>Our vision is to become the most trusted and innovative car care provider in India, known for our exceptional service and environmental stewardship. We strive to set new standards in the car detailing industry by combining cutting-edge techniques with a focus on customer convenience and satisfaction.
+                </p>
+            </div>
+            <div class="mission-container-element">
+                <img src="../images/aboutus/mission.png"/>
+                <h3>Our Mission</h3>
+                <p>At CarMaa, our mission is to revolutionize the car cleaning industry by offering eco-friendly, convenient, and high-quality car care services directly to your doorstep. We aim to make car maintenance hassle-free and accessible, ensuring that every customer receives personalized care for their vehicle. By embracing waterless technology and sustainable practices, we are committed to reducing water waste while delivering spotless results.</p>
+            </div>
+           
+            <div class="mission-container-element">
+                <img src="../images/aboutus/light-bulb.png"/>
+                <h3>Inspire People to Shine</h3>
+                <p>At CarMaa, we believe that a clean car is more than just an aesthetic choice—it's a reflection of care, pride, and confidence. Through our innovative doorstep car care services, we aim to inspire people to take better care of their vehicles while making eco-conscious choices. By offering waterless car washes and sustainable practices, we empower our customers to maintain their cars with ease and responsibility, ensuring they always shine, both on the road and in life. Let us help you keep your vehicle spotless, effortlessly.
+                </p>
+            </div>
+
+        </div>
+      
+    </div>
+   
+</section>
+
+
+
+<section class="aboutus-cta">
+    <div class="aboutus-cta-left">
+        <img src="../images/aboutus/aboutus-bluecar.webp"/>
+        <div class="description-abs">
+            <article>150+ Residential Societies Served</article>
+
+        </div>
+    </div>
+    <div class="aboutus-cta-right">
+        <h2>Here to Help You</h2>
+        <h1>We’re Ready to Wash Your Cars</h1>
+        <p class="desc">At CarMaa, we’re always ready to provide top-notch car care whenever you need it. Whether it's a quick on-demand wash or a regular daily service, our team is dedicated to making your car cleaning experience seamless and stress-free. With just a simple booking, we bring our expert services to your doorstep, ensuring your car looks its best with minimal effort from your side. Trust us to take care of your vehicle while you focus on the things that matter most.
+        </p>
+        <ul>
+            <div class="aboutus-cta-right-points"><img src="../images/home-page/benefits/checked.png"/><p>Professional and Certified Car Washers</p></div>
+            <div class="aboutus-cta-right-points"><img src="../images/home-page/benefits/checked.png"/><p>Eco-Friendly, Waterless Cleaning Solutions</p></div>
+            <div class="aboutus-cta-right-points"><img src="../images/home-page/benefits/checked.png"/><p>Convenient Doorstep Services</p></div>
+            <div class="aboutus-cta-right-points"><img src="../images/home-page/benefits/checked.png"/><p>Committed to 100% Customer Satisfaction            </p></div>
+            <div class="aboutus-cta-right-points"><img src="../images/home-page/benefits/checked.png"/><p>Specialized in Car Detailing and Interior Cleaning</p></div>
+
+        </ul>
+        <div class="call-container">
+            <div class="call-icon-wrapper">
+                <div class="call-icon">
+                    <img class="fa fa-phone" src="../images/home-page/benefits/phone-call.png"/>
+                </div>
+                <div>
+                    <p>Call Us Anytime!</p>
+                    <p class="benefits-mobile-number">+91 70425 55401</p>
+                </div>
+            </div>
+<button class="open-booking-modal">Book Now</button>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<div id="footer">
+    <script>
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</div>
+
+
+<div id="parent-div">
+    <section class="modal-container">
+        <div class="modal-wrapper">
+            <div class="image-section">
+                <div class="modal-left">
+                    <h2>BOOK AN APPOINTMENT</h2>
+                    <h1>Get Upto 15% OFF on your First Booking</h1>
+                     
+                        <div class="contact">
+                            <div class="img-wrapper">
+                                <img src="../images/home-page/modal/icon-phone.png"/>
+                            </div>
+                            <div class="details">
+                                <h1>Customer Services</h1>
+                                <p>+91 70425 55401</p>
+                            </div>
+                           
+                           
+                        </div>
+                        <div class="contact">
+                            <div class="img-wrapper2">
+                                <img src="../images/home-page/modal/icon-clock.png"/>
+                            </div>
+                            <div class="details">
+                                <h1>Opening Hours</h1>
+                                <p>Mon-Sat: 09.00-20.00</p>
+                            </div>
+                           
+                           
+                        </div>
+                    </div>
+               
+
+
+            </div>
+            <div class="modal-form">
+                <img id="close-btn" src="../images/home-page/modal/cancel.png"/>
+                <div>
+                    <p class="modal-form-label">Name</p>
+                    <input class="modal-input" type="text" id="nameInput" placeholder="Enter your full name">
+                    <span id="nameError" class="error-message"></span>
+                </div>
+                <div>
+                    <p class="modal-form-label">Phone Number</p>
+                    <input class="modal-input" type="text" id="numberInput" placeholder="Enter your phone number">
+                    <span id="phoneError" class="error-message"></span>
+                </div>
+                <div>
+                    <p class="modal-form-label">Email</p>
+                    <input class="modal-input" type="text" id="emailInput" placeholder="Enter your email address"
+                   >
+                   <span id="emailError" class="error-message"></span>
+                </div>
+                
+                <button  id="modal-booking-btn">Book </button>
+                <div id="messageContainer">
+                    <span id="successMessage" class="success-message"></span>
+                    <span id="errorMessage" class="error-message"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<script>
+      document.getElementById("close-btn").addEventListener("click", function () {
+                // Hide the parent div
+                document.getElementById("parent-div").style.display = "none";
+                
+
+                // Show the div again after 15 seconds
+            });
+    const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+    bookingOpenBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById("parent-div").style.display = "flex";
+    });
+});
+</script>
+    <script>
+        const services = [
+            { title: "Car Wash Lift", description: "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.", img: "./images/service.jpeg", flag: false },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+            { title: "Service Two", description: "Lorem Ipsum has been the industry's standard dummy text.", img: "../images/service.jpeg", flag: true },
+        ];
+
+        const servicesContainer = document.getElementById('servicesContainer');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const showLessBtn = document.getElementById('showLessBtn');
+        const itemsToShow = 6;
+        let currentIndex = 0;
+
+        function createServiceItem(service) {
+            const serviceItem = document.createElement('div');
+            serviceItem.classList.add('servicesI');
+            serviceItem.style.cssText = "display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; position: relative;";
+
+            const flag = service.flag ? ` <div
+                        style="top: 10px;border: 1px solid red;  height: 25px; left: 0px; position: absolute; background-color: #ff2222; ">
+                         <p style="color: white; font-size: .7rem; padding: 4px 25px 4px 10px ; ">Discount</p>
+                         <div style=" height: 100%; aspect-ratio: 1; background-color: white; position: absolute; right: -10px; top: 0px; transform: rotate(45deg);"></div>
+                    </div>` : '';
+
+            serviceItem.innerHTML = `
+        ${flag}
+        <div style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+            <img src="${service.img}" style="height: 100%; width: 100%;" alt="">
+        </div>
+        <h4 style="font-size: 1.4rem;">${service.title}</h4>
+        <p style="text-align: center;">${service.description}</p>
+    `;
+
+            return serviceItem;
+        }
+
+        function renderServices() {
+            services.slice(currentIndex, currentIndex + itemsToShow).forEach(service => {
+                servicesContainer.appendChild(createServiceItem(service));
+            });
+            currentIndex += itemsToShow;
+
+            if (currentIndex >= services.length) {
+                showMoreBtn.style.display = 'none';
+                showLessBtn.style.display = 'block';
+            }
+        }
+
+        function showLess() {
+            servicesContainer.innerHTML = '';
+            currentIndex = 0;
+            renderServices();
+
+            showMoreBtn.style.display = 'block';
+            showLessBtn.style.display = 'none';
+        }
+
+        showMoreBtn.addEventListener('click', renderServices);
+        showLessBtn.addEventListener('click', showLess);
+        window.addEventListener("DOMContentLoaded", renderServices)
+
+
+        if (services.length > itemsToShow) {
+            showMoreBtn.style.display = 'block';
+        }
+
+    </script>
+
+    <!-- <div style="width: 100vw; margin-top: 30px; ">
+        <div
+            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
+            <h3 style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our Team</h3>
+            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
+                Meet Our Team
+            </h2>
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 50px;">
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
+                    <div
+                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
+                    <p style="text-align: center; ">Founder</p>
+                    <div style="display: flex; width: 90%; justify-content: space-around;">
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
+                    <div
+                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
+                    <p style="text-align: center; ">Founder</p>
+                    <div style="display: flex; width: 90%; justify-content: space-around;">
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
+                    <div
+                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
+
+                    </div>
+                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
+                    <p style="text-align: center; ">Founder</p>
+                    <div style="display: flex; width: 90%; justify-content: space-around;">
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
+                        </div>
+                        <div
+                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
+                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        document.querySelectorAll('.number').forEach((numberElement) => {
+            const targetNumber = parseInt(numberElement.getAttribute('data-target'), 10);
+            gsap.to(numberElement, {
+                scrollTrigger: {
+                    trigger: numberElement,
+                    start: "top 80%",
+                    end: "bottom 50%",
+                },
+                opaCitys: 1,
+                textContent: targetNumber,
+                duration: 1.5,
+                ease: "power1.inOut",
+                onUpdate: function () {
+                    const currentValue = parseInt(numberElement.textContent, 10);
+                    numberElement.textContent = currentValue.toLocaleString();
+                }
+            });
+        });
+        gsap.from(".servicesI ", {
+            y: 100,
+            duration: 1,
+            opaCitys: 0,
+            scrollTrigger: {
+                trigger: ".servicesI",
+                scroller: "body",
+                start: "top 90%",
+                start: "top 90%",
+                marker: true,
+                scrub: true,
+                end: "top 50%"
+            },
+            stagger: 0.3
+        })
+        gsap.from(".services ", {
+            y: 100,
+            duration: 1,
+            opaCitys: 0,
+            scrollTrigger: {
+                trigger: ".services",
+                scroller: "body",
+                start: "top 80%",
+            }
+        })
+    </script>
+    <div id="footer">
+        <script>
+            fetch('../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+    </div>
+    <script>
+        document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            // Get input values
+            const name = document.getElementById('nameInput').value.trim();
+            const phoneNumber = document.getElementById('numberInput').value.trim();
+            const email = document.getElementById('emailInput').value.trim();
+            
+            let isValid = true;
+            
+            // Clear previous error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            
+            // Validate Name
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            }
+            if (email === '') {
+                document.getElementById('nameError').textContent = 'Email is required.';
+                isValid = false;
+            }
+            if (phoneNumber === '') {
+                document.getElementById('nameError').textContent = 'Phone Number is required.';
+                isValid = false;
+            }
+    
+            // Validate Phone Number (10 digits only)
+            if (!/^\d{10}$/.test(phoneNumber)) {
+                document.getElementById('phoneError').textContent = 'Phone number must be exactly 10 digits.';
+                isValid = false;
+            }
+    
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+    
+            // If the form is valid, send data through API
+            if (isValid) {
+                const data = {
+                    name: name,
+                    phone: phoneNumber,
+                    email: email
+                };
+                const contactButton = document.getElementById('modal-booking-btn');
+                contactButton.disabled = true;
+                contactButton.textContent = "Submitting...";
+    
+                // Send data to API using fetch
+                fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+               
+                .then(response => {
+                    if (response.status === 200) {
+                        // Display success message
+                        document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                    } else {
+                        // Display error message
+                        document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
+                    }
+                })
+                .catch((error) => {
+                    // Display error message
+                    document.getElementById('errorMessage').textContent = 'There was a problem connecting to the server. Please try again.';
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    // Re-enable the button after the request completes
+                    contactButton.disabled = false;
+                    contactButton.textContent = "BOOK"; // Reset button text
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>
