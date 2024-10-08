@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/contactus.css"/>
+    <link rel="stylesheet" href="../css/aboutus.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .wave {
+            --size: 50px;
+            --m: 2;
+            --p: calc(var(--m)*var(--size));
+            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+            padding-top: 50px;
+            mask:
+                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
+        }
+
+
+        .elementor-shape-fill {
+            fill: white !important;
+        }
+
+        .toolTip {
+            overflow: hidden;
+            height: 15px;
+        }
+
+        .toolTip:hover {
+            overflow: visible;
+
+        }
+
+        @media screen and (max-width:950px) {
+            .a {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
+     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav-placeholder"
+    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <div
+        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+            <a href="/" style="height: 100%;">
+                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+            </a>
+        </div>
+        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+            <li style="cursor: pointer; "><a class="nav-item-list"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="/">Home</a>
+            </li>
+            <li style="cursor: pointer; "><a
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                    href="../pricing/">Pricing</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="../store/">Store</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="../about/">About</a></li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    href="../franchise/">Franchise</a></li>
+            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
+                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
+                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
+                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                    </li>
+                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
+                    </li>
+                    <li><a class="nav-item-list"   href="../doorstep-car-washing-service-in-dehradun/"
+                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Gurugram</a>
+                    </li>
+                </ul>
+                <style>
+                    .dropdown {
+                        background-color: white;
+                        display: none;
+                        padding: 20px 0px;
+                    }
+
+                    .dropdownCon:hover .dropdown {
+                        display: flex;
+                    }
+
+                    .dropdown>li>a {
+                        padding: 5px 10px;
+                        border-radius: 4px;
+                        transition: all .1s;
+                    }
+
+                    .dropdown>li>a:hover {
+                        background-color: rgb(211, 211, 211);
+
+                    }
+                </style>
+            </li>
+        </ul>
+        <div style="display: flex; gap: 20px; ">
+            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+            </button>
+            <div class="btn"
+                style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="./"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle")
+        const menu = document.getElementById("menu")
+        // alert("asf")
+        toggle.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        });
+
+    </script>
+</nav>
+    <header class="city-header-section">
+        <p>Contact Us</p>
+        <div class="breadcrumb">
+            <img class="" src="../common/home.png"/>
+                <p><a href="/" class="breadcrumb-link">Home</a></p>
+                <p>/</p>
+                <p><a href="./" class="breadcrumb-link">Contact Us</a></p>
+           
+        </div>
+    </header>
+
+    <div style="width: 100vw; margin: 50px 0px; margin-bottom: 100px;">
+        <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Contact  <span
+                style="font-size: 2.5rem; color: #183ea1;"> information</span> </h2>
+        <p
+            style="font-size: 1.2rem; padding: 10px; text-align: center; margin: auto; color: #454545; font-weight: 400;width: 95%; max-width: 600px;">
+            Our company was founded in 2000. We work daily to become better and we are ready to share best practices.
+        </p>
+        <div class="a"
+            style="width: 95%; max-width: 1200px;margin: auto; display: flex; gap: 30px;margin-top: 50px; align-items: flex-start;">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+                <div
+                    style="display: flex; flex-direction: column; gap: 10px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192); padding: 20px;">
+                    <h3 style="font-size: 1.5rem;">Contact Us</h3>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <ion-icon style="font-size: 1.5rem; color: #183ea1;" name="map"></ion-icon> <span>Dehradun,
+                            Uttarakhand 228001</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <ion-icon style="font-size: 1.5rem; color: #183ea1;" name="call"></ion-icon> <span>+91
+                            70425 55401</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <ion-icon style="font-size: 1.5rem; color: #183ea1;" name="mail"></ion-icon>
+                        <span>support@carmaacarcare.com</span>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; gap: 10px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192); padding: 20px;">
+                    <h3 style="font-size: 1.5rem;">Opening Hours</h3>
+                    <img src="../images/map.png" style="width: 100%;" alt="">
+
+                </div>
+            </div>
+
+            <div
+                style="flex: 1; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.192);border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+                <h3 style="font-size: 1.5rem;">Send Us a Message</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="name" style="font-size: 1.2rem;">Name</label>
+                    <input type="text" id="name"
+                        style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="number" style="font-size: 1.2rem;">Number</label>
+                    <input type="text" id="number"
+                        style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="date" style="font-size: 1.2rem;">Available on</label>
+                    <input type="date" id="date"
+                        style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label for="time" style="font-size: 1.2rem;">Available Time</label>
+                    <input type="time" id="time"
+                        style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <label style="font-size: 1.2rem; display: flex; align-items: center; gap:10px; text-wrap: nowrap;"
+                        for="leadsType">Subscription Type <span class="toolTip" style="position: relative; "><ion-icon
+                                name="alert-circle-outline" style="cursor: pointer;"></ion-icon>
+                            <div
+                                style="background-color: white; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.349);padding: 10px; border-radius: 3px;">
+                                <div>
+                                    <span style="font-weight: 700; font-size: .8rem;">Adhoc : </span> <span
+                                        style="font-weight:500; font-size: .8rem; text-wrap: wrap;">Lorem ipsum dolor
+                                        sit amet, consectetur adipisicing elit. Eligendi repellat commodi aliquam.
+                                        Quaerat, illo corrupti? Dolores voluptatem voluptates, aspernatur fugit aperiam
+                                        laudantium magnam fugiat! Corporis sed magnam quo temporibus quasi?</span>
+                                </div>
+                                <div style="margin-top:5px;">
+                                    <span style="font-weight: 700; font-size: .8rem;">Adhoc : </span> <span
+                                        style="font-weight:500; font-size: .8rem; text-wrap: wrap;">Lorem ipsum dolor
+                                        sit amet, consectetur adipisicing elit. Eligendi repellat commodi aliquam.
+                                        Quaerat, illo corrupti? Dolores voluptatem voluptates, aspernatur fugit aperiam
+                                        laudantium magnam fugiat! Corporis sed magnam quo temporibus quasi?</span>
+                                </div>
+                            </div>
+                        </span></label>
+                    <select name="leadsType" id="leadsType"
+                        style="outline: none; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;">
+                        <option default>Select Type</option>
+                        <option value="adhoc">adhoc</option>
+                        <option value="subscription">subscription</option>
+                        <option value="package1">package1</option>
+                        <option value="package2">package2</option>
+                        <option value="package3">package3</option>
+                    </select>
+                    <script>
+                        window.onload = function () {
+                            const params = new URLSearchParams(window.location.search);
+                            const packageValue = params.get('package');
+
+                            if (packageValue) {
+                                const dropdown = document.getElementById('leadsType');
+                                dropdown.value = packageValue;
+                            }
+                        };
+                    </script>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px; height: 150px;">
+                    <label for="remark" style="font-size: 1.2rem;">Your Message</label>
+                    <textarea id="remark"
+                        style="outline: none;height: 100%; font-size: 1.2rem; padding: 5px 15px; border: 1px solid #0A2540; border-radius: 5px;"></textarea>
+                </div>
+
+                <div id="contactButton"
+                    style="background-color: #183ea1; width: fit-content; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer; border-radius: 6px;">
+                    Book Now
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('contactButton').addEventListener('click', function () {
+
+                    const button = document.getElementById('contactButton');
+                    button.style.pointerEvents = 'none';
+                    button.style.backgroundColor = '#999';
+                    const name = document.getElementById('name').value;
+                    const number = document.getElementById('number').value;
+                    const date = document.getElementById('date').value;
+                    const time = document.getElementById('time').value;
+                    const leadsType = document.getElementById('leadsType').value;
+                    const remark = document.getElementById('remark').value;
+
+                    // Prepare data for the POST request
+                    const formData = {
+                        name: name,
+                        number: number,
+                        date: date,
+                        time: time,
+                        leadsType: leadsType,
+                        remark: remark
+                    };
+                    fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    window.location.href = 'index.html'
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>
+            fetch('../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+    </div>
+</body>
+
+</html>
