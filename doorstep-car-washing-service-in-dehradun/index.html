@@ -477,7 +477,8 @@
                        <span id="emailError" class="error-message"></span>
                     </div>
                     
-                    <button  id="modal-booking-btn">Book </button>
+                    <button  id="modal-booking-btn"> <span class="button-text">BOOK</span>
+                        <span class="button-loader spinner" style="display: none;"></span></button>
                     <div id="messageContainer">
                         <span id="successMessage" class="success-message"></span>
                         <span id="errorMessage" class="error-message"></span>
@@ -508,91 +509,98 @@
             });
         });
     </script>
-      <script>
+     <script>
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            // Get input values
-            const name = document.getElementById('nameInput').value.trim();
-            const phoneNumber = document.getElementById('numberInput').value.trim();
-            const email = document.getElementById('emailInput').value.trim();
-            
-            let isValid = true;
-            
-            // Clear previous error messages
-            document.getElementById('nameError').textContent = '';
-            document.getElementById('phoneError').textContent = '';
-            document.getElementById('emailError').textContent = '';
-            
-            // Validate Name
-            if (name === '') {
-                document.getElementById('nameError').textContent = 'Name is required.';
-                isValid = false;
-            }
-            if (email === '') {
-                document.getElementById('nameError').textContent = 'Email is required.';
-                isValid = false;
-            }
-            if (phoneNumber === '') {
-                document.getElementById('nameError').textContent = 'Phone Number is required.';
-                isValid = false;
-            }
-    
-            // Validate Phone Number (10 digits only)
-            if (!/^\d{10}$/.test(phoneNumber)) {
-                document.getElementById('phoneError').textContent = 'Phone number must be exactly 10 digits.';
-                isValid = false;
-            }
-    
-            // Validate Email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
-                isValid = false;
-            }
-    
-            // If the form is valid, send data through API
-            if (isValid) {
-                const data = {
-                    name: name,
-                    phone: phoneNumber,
-                    email: email
-                };
-                const contactButton = document.getElementById('modal-booking-btn');
-                contactButton.disabled = true;
-                contactButton.textContent = "Submitting...";
-    
-                // Send data to API using fetch
-                fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                })
-               
-                .then(response => {
-                    if (response.status === 200) {
-                        // Display success message
-                        document.getElementById('successMessage').textContent = 'Appointment successfully made!';
-                    } else {
-                        // Display error message
-                        document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
-                    }
-                })
-                .catch((error) => {
-                    // Display error message
-                    document.getElementById('errorMessage').textContent = 'There was a problem connecting to the server. Please try again.';
-                    console.error('Error:', error);
-                })
-                .finally(() => {
-                    // Re-enable the button after the request completes
-                    contactButton.disabled = false;
-                    contactButton.textContent = "BOOK"; // Reset button text
-                })
-            }
-        });
-    </script>
+          event.preventDefault();
+          
+          // Get input values
+          const name = document.getElementById('nameInput').value.trim();
+          const phoneNumber = document.getElementById('numberInput').value.trim();
+          const email = document.getElementById('emailInput').value.trim();
+          
+          let isValid = true;
+          
+          // Clear previous error messages
+          document.getElementById('nameError').textContent = '';
+          document.getElementById('phoneError').textContent = '';
+          document.getElementById('emailError').textContent = '';
+          
+          // Validate Name
+          if (name === '') {
+              document.getElementById('nameError').textContent = 'Name is required.';
+              isValid = false;
+          }
+          if (email === '') {
+              document.getElementById('emailError').textContent = 'Email is required.';
+              isValid = false;
+          }
+          if (phoneNumber === '') {
+              document.getElementById('phoneError').textContent = 'Phone Number is required.';
+              isValid = false;
+          }
+      
+          // Validate Phone Number (10 digits only)
+          if (!/^\d{10}$/.test(phoneNumber)) {
+              document.getElementById('phoneError').textContent = 'Phone number must be exactly 10 digits.';
+              isValid = false;
+          }
+      
+          // Validate Email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+              document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+              isValid = false;
+          }
+      
+          // If the form is valid, send data through API
+          if (isValid) {
+              const data = {
+                  name: name,
+                  phone: phoneNumber,
+                  email: email
+              };
+              const contactButton = document.getElementById('modal-booking-btn');
+              const buttonText = document.querySelector('.button-text');
+              const buttonLoader = document.querySelector('.button-loader');
+      
+              // Disable button and show loader
+              contactButton.disabled = true;
+              buttonText.style.display = "none";
+              buttonLoader.style.display = "inline-block";
+      
+              // Send data to API using fetch
+              fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(data),
+              })
+             
+              .then(response => {
+                  if (response.status === 200) {
+                      // Display success message
+                      document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                  } else {
+                      // Display error message
+                      document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
+                  }
+              })
+              .catch((error) => {
+                  // Display error message
+                  document.getElementById('errorMessage').textContent = 'There was a problem connecting to the server. Please try again.';
+                  console.error('Error:', error);
+              })
+              .finally(() => {
+                  // Re-enable the button after the request completes and reset the button state
+                  contactButton.disabled = false;
+                  buttonText.style.display = "inline";
+                  buttonLoader.style.display = "none";
+              });
+          }
+      });
+      
+      </script>
     <script>
         document.getElementById("close-btn").addEventListener("click", function () {
                   // Hide the parent div
