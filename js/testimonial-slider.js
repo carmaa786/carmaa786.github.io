@@ -1,4 +1,4 @@
-let currentSlideIndex = 0;
+/* let currentSlideIndex = 0;
 const slidesToShow = 3; // Number of cards to show at once
 const slides = document.querySelectorAll('.testimonial-card');
 const dots = document.querySelectorAll('.dot');
@@ -48,4 +48,4 @@ ScrollReveal().reveal('.parallex-cta-inner',{...scrollRevealOption,distance:'100
 
 
 
-
+*/

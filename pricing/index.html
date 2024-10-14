@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing</title>
+    <link rel="stylesheet" href="../css/pricing.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+       <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="../css/city.css"/>
+       <link rel="stylesheet" href="../css/homepage.css"/>
+       <link rel="stylesheet" href="../css/common.css"/>
+       <link rel="stylesheet" href="../css/aboutus.css"/>
+       
     <style>
         * {
             margin: 0px;
@@ -118,75 +126,40 @@
 
 <body>
     <nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
     <div
         style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
         <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
             <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
             </a>
         </div>
         <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
             <li style="cursor: pointer; "><a class="nav-item-list"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="/">Home</a>
             </li>
             <li style="cursor: pointer; "><a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
-                    href="../pricing/">Pricing</a> </li>
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
+                    href="./">Pricing</a> </li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="../store/">Store</a> </li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="../about/">About</a></li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="../franchise/">Franchise</a></li>
-            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
-                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
-                    </li>
-                    <li><a class="nav-item-list"   href="../doorstep-car-washing-service-in-dehradun/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Gurugram</a>
-                    </li>
-                </ul>
-                <style>
-                    .dropdown {
-                        background-color: white;
-                        display: none;
-                        padding: 20px 0px;
-                    }
-
-                    .dropdownCon:hover .dropdown {
-                        display: flex;
-                    }
-
-                    .dropdown>li>a {
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        transition: all .1s;
-                    }
-
-                    .dropdown>li>a:hover {
-                        background-color: rgb(211, 211, 211);
-
-                    }
-                </style>
-            </li>
+         
         </ul>
         <div style="display: flex; gap: 20px; ">
             <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                 <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
             </button>
             <div class="btn"
-                style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
-                <a href="/contactus/"
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="../contactus/"
                     style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                     Contact Us
                 </a>
@@ -207,270 +180,200 @@
 
     </script>
 </nav>
-    <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
-        <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-
-            <img style="height: 100%; width: 100%;" src="../images/whatsapp.png" alt="">
-        </a>
+<header class="city-header-section">
+    <p>Pricing</p>
+    <div class="breadcrumb">
+        <img class="" src="../common/home.png"/>
+            <p><a href="/" class="breadcrumb-link">Home</a></p>
+            <p>/</p>
+            <p><a href="./" class="breadcrumb-link">Pricing</a></p>
+       
     </div>
-    <div style="width: 100vw;">
-        <div
-            style="width: 95%; max-width: 1200px;margin: auto; display: flex;flex-direction: column; padding-bottom: 50px;">
-            <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Service Pricing starting
-            </h2>
-            <p
-                style="font-size: 1.2rem; padding: 10px; text-align: center; margin: auto; color: #454545; font-weight: 400;width: 95%; max-width: 600px;">
-                Pamper your car with premier full wash complete with interior vacuum and window cleaning.
-            </p>
-        </div>
-    </div>
-    <div style="width: 100vw;">
-        <div class="TestimonialCard"
-            style="width: 95%; max-width: 1200px;margin: auto; display: flex;padding-bottom: 50px; gap: 20px; flex-wrap: wrap;">
-            <div
-                style="min-height: 300px;min-width:300px; flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
+</header>
 
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+<section class="pricing-section">
+    <div class="pricing-heading-section">
+        <h2 class="pricing-sub">Pricing Package</h2>
+        <h1 class="pricing-heading">Choose your Best Package</h1>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <p class="pricing-label">Popular</p>
+                <h1 class="pricing-plan-name">Basic Wash</h1>
+                <p class="pricing-starting">Starting At</p>
+                <p class="pricing-price">₹200.00</p>
+                <p class="whats-included">What's Included:</p>
+                <div class="whats-included-container">
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
+                    <button class="pricing-section-card-btn  open-booking-modal">Book Now</button>
+                    
+              
                 </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
+    
             </div>
-            <div
-                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+            <div class="pricing-card">
+                <p class="pricing-label">Popular</p>
+                <h1 class="pricing-plan-name">Basic Wash</h1>
+                <p class="pricing-starting">Starting At</p>
+                <p class="pricing-price">₹200.00</p>
+                <p class="whats-included">What's Included:</p>
+                <div class="whats-included-container">
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
+                    <button class="pricing-section-card-btn open-booking-modal">Book Now</button>
+                    
+              
                 </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
+    
             </div>
-            <div
-                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
+            <div class="pricing-card">
+                <p class="pricing-label">Popular</p>
+                <h1 class="pricing-plan-name">Basic Wash</h1>
+                <p class="pricing-starting">Starting At</p>
+                <p class="pricing-price">₹200.00</p>
+                <p class="whats-included">What's Included:</p>
+                <div class="whats-included-container">
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
+                    <div class="whats-included-pt-wrapper">
+                        <div class="whats-included-pts"><img src="../images/home-page/benefits/checked.png"/><p>Exterior hand wash and drying</p></div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
+                    <button class="pricing-section-card-btn open-booking-modal">Book Now</button>
+                    
+              
                 </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
-            </div>
-            <div
-                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: brown; font-size: 1.8rem; font-weight: 400;">Bronze Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
-                </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
-            </div>
-            <div
-                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: rgb(138, 138, 138); font-size: 1.8rem; font-weight: 400;">Silver Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
-                </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
-            </div>
-            <div
-                style="min-height: 300px;min-width:300px;  flex: 1; max-width: 32%; display: flex; flex-direction: column;gap: 15px; align-items: center; padding: 20px 0px; box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.356); border-radius: 10px;">
-                <p style="color: gold; font-size: 1.8rem; font-weight: 400;">Gold Package</p>
-                <p style="color: #183ea1; font-size: 2.2rem; font-weight: 900;">$55</p>
-                <div></div>
-                <div></div>
-                <div style="display: flex; flex-direction: column; gap: 8px; width: 90%; margin: auto;">
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Exterior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">While Shine</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="checkmark-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 700;">Tire Dressing</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Window In and out</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Interior Hand Wash</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <ion-icon style="color: #183ea1; font-size: 1.4rem;" name="close-sharp"></ion-icon><span
-                            style="font-size: 1rem; font-weight: 500; color: #6b6b6b;">Exterior Shine</span>
-                    </div>
-                </div>
-                <button
-                    style="background-color: transparent;margin-top: 10px; outline: none; border: 1px solid #183ea1; color: #183ea1; padding: 12px 25px ; border-radius: 10px;">
-                    <a href="../contactus/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #183ea1 ;">
-                        Get Quote
-                    </a></button>
+    
             </div>
         </div>
+       
+
     </div>
 
+</section>
+<div id="parent-div">
+    <section class="modal-container">
+        <div class="modal-wrapper">
+            <div class="image-section">
+                <div class="modal-left">
+                    <h2>BOOK AN APPOINTMENT</h2>
+                    <h1>Get Upto 15% OFF on your First Booking</h1>
+                     
+                        <div class="contact">
+                            <div class="img-wrapper">
+                                <img src="../images/home-page/modal/icon-phone.png"/>
+                            </div>
+                            <div class="details">
+                                <h1>Call us now</h1>
+                                <p>+91 70425 55401</p>
+                            </div>
+                           
+                           
+                        </div>
+                        <div class="contact">
+                            <div class="img-wrapper2">
+                                <img src="../images/home-page/modal/icon-clock.png"/>
+                            </div>
+                            <div class="details">
+                                <h1>Opening Hours</h1>
+                                <p>Sat-Thurs: 09.00am-06.00pm</p>
+                            </div>
+                           
+                           
+                        </div>
+                    </div>
+               
 
+
+            </div>
+            <div class="modal-form">
+                <h1 class="modal-form-heading">Get Upto 15% OFF on your First Booking</h1>
+                <img id="close-btn" src="../images/home-page/modal/cancel.png"/>
+                <div>
+                    <p class="modal-form-label">Name*</p>
+                    <input class="modal-input" type="text" id="nameInput" placeholder="Enter your full name">
+                    <span id="nameError" class="error-message"></span>
+                </div>
+                <div>
+                    <p class="modal-form-label">Phone Number*</p>
+                    <input class="modal-input" type="text" id="numberInput" placeholder="Enter your phone number">
+                    <span id="phoneError" class="error-message"></span>
+                </div>
+                <div style="display: flex; gap:1rem" class="input-box">
+                    <div>
+                        <p class="modal-form-label">Address</p>
+                        <input class="modal-input" type="text" id="addressInput" placeholder="Enter your  address"
+                       >
+                       <span id="addressError" class="error-message"></span>
+                    </div>
+                    <div>
+                        <p class="modal-form-label">City</p>
+                        <input class="modal-input" type="text" id="cityInput" placeholder="Enter your city"
+                       >
+                       <span id="cityError" class="error-message"></span>
+                    </div>
+
+                </div>
+          
+                
+                <button style="border-radius: 10px;"  id="modal-booking-btn"> <span class="button-text">BOOK</span>
+                    <span class="button-loader spinner" style="display: none;"></span></button>
+                <div id="messageContainer">
+                    <span id="successMessage" class="success-message"></span>
+                    <span id="errorMessage" class="error-message"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+    const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+    bookingOpenBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById("parent-div").style.display = "flex";
+    });
+});
+</script>
     <div id="footer">
         <script>
             fetch('../components/footer.html')
@@ -479,6 +382,78 @@
                     document.getElementById('footer').innerHTML = data;
                 });
         </script>
+
+<script>
+    // Function to show the parent div after 15 seconds
+
+    // Initially hide the div
+    let parentDiv = document.getElementById("parent-div");
+    let parentDiv2 = document.getElementById("parent-div2");
+
+    // Show the div after 15 seconds
+
+
+    // Close button functionality
+    document.getElementById("close-btn").addEventListener("click", function () {
+        // Hide the parent div
+        parentDiv.style.display = "none";
+        
+
+        // Show the div again after 15 seconds
+    });
+    document.getElementById("close-btn2").addEventListener("click", function () {
+        // Hide the parent div
+        parentDiv2.style.display = "none";
+        
+
+        // Show the div again after 15 seconds
+    });
+
+    document.getElementById('contactButton').addEventListener('click', async function () {
+        // Capture the values from the inputs
+        const button = document.getElementById('contactButton');
+
+        // Disable the button
+        button.style.pointerEvents = 'none';
+        button.style.backgroundColor = '#999';
+        const name = document.getElementById('nameInput').value;
+        const number = document.getElementById('numberInput').value;
+        const address = document.getElementById('addressInput').value;
+        if (!name || !number || !address) {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        // Prepare the data object
+        const formData = {
+            name: name,
+            number: number,
+            address: address
+        };
+
+        try {
+            // Send POST request to the API
+            const response = await fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            if (response.ok) {
+                document.getElementById('parent-div').style.display = 'none';
+            } else {
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        } finally {
+            button.style.pointerEvents = 'auto';
+            button.style.backgroundColor = '#183ea1';
+        }
+    });
+
+
+</script>
     </div>
 </body>
 

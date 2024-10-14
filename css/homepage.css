@@ -4,6 +4,10 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+.microfiber-button img{
+    width: 7rem;
+    height:3.5rem
+}
 .error-message {
     color: red;
     font-size: 12px;
@@ -11,6 +15,9 @@
     margin-top: 5px;
     margin-bottom: 1.5rem;
     font-family: var(--body-font);
+}
+.why-carmaa-card-desc{
+    height: 5rem;
 }
 
 .success-message {
@@ -58,7 +65,7 @@
 
 .hero-section-btn{
     color: white;
-    background-color: var(--primary-color);
+    background-color: #D06A28;
     font-size: 14px;
     letter-spacing: 2px;
     padding: 18px 28px;
@@ -74,10 +81,7 @@
 }
 .microfiber-button {
     position: absolute;
-    
-    
     padding: .5rem;
-    
     display: grid;
     place-items: center;
     top: 50%;
@@ -86,10 +90,6 @@
     pointer-events: none;
     z-index: 999;
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
-
-
-
-
     background-color: #a8d5e2; /* Light blue to resemble microfiber cloth */
     color: #fff;
     font-size: 1.2em;
@@ -129,10 +129,6 @@
     transform: translateY(2px);
   }
   
-
-
-
-
 .section-why-carmaa{
     background-color: #F0F3FF;
     display: flex;
@@ -197,17 +193,24 @@
 }
 .why-carmaa-card-container{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-content: space-between;
     margin-top: 5rem;
 }
 .why-carmaa-card{
     width: 31%;
+    border-radius: 10px;
     padding: 4rem 1rem 1rem 1rem;
     background-color: white;
     position: relative;
+    border-color: #01628F;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 1s;
+    cursor: pointer;
 
 }
 .why-carmaa-card .card-icon-container{
@@ -263,7 +266,8 @@
 
 .counter-section{
     padding: 4.5rem ;
-    background-color: #0E111B;
+    background-color: var(--primary-color);
+    background-image: url('../images/aboutus/textture-bg.png');
     display: flex;
    
     justify-content: center;
@@ -397,20 +401,27 @@ font-family: var(--body-font);
 
 .testimonial-track {
     display: flex;
-    transition: transform 0.5s ease;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:2rem
+   
 }
 
 .testimonial-card {
-    min-width: 35%; 
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 25%; 
+    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
     background-color: #fff;
-
+    border-radius: 10px;
     margin: 10px;
+
 }
 
+
 .testimonial-text {
-    height:7rem;
+    
     font-size: 1rem;
     color:#424649;
     font-family:var(--body-font);
@@ -449,7 +460,7 @@ font-family: var(--body-font);
 
 .stars i {
     color: #ffc402; 
-    font-size: 1rem; 
+    font-size: 2rem; 
     margin-right: 3px; 
 }
 .testimonial-img{
@@ -571,7 +582,7 @@ font-family: var(--body-font);
     animation: slideIn 0.5s forwards ease-out;
     z-index: 200;
     display: flex;
-    overflow: hidden;
+    
     position: relative;
 }
  #close-btn2{
@@ -580,7 +591,8 @@ font-family: var(--body-font);
     height:2rem;
     right: 10px;
     cursor: pointer;
-    top:85px
+    top:-20px;
+    right:-40px
 }
 .modal-wrapper2 iframe{
     width: 100%;
@@ -1001,7 +1013,7 @@ font-family: var(--body-font);
     align-items:center;
     gap:1rem
 }
-.benefits-cta-section button{
+.benefits-cta-section .benefits-cta-section-btn-new{
     color: white;
     background-color: var(--primary-color);
     font-size: 14px;
@@ -1012,7 +1024,7 @@ font-family: var(--body-font);
     text-transform: uppercase;
     transition: transform 0.3s ease; 
 }
-.benefits-cta-section button:hover{
+.benefits-cta-section .benefits-cta-section-btn-new:hover{
     transform: scale(0.95);
 }
 .benefits-cta-section .call-icon{
@@ -1069,6 +1081,75 @@ margin-top: 0.5rem;
     position: relative;
 }
 @media screen and (min-width:300px) {
+    .modal-wrapper2{
+        border-radius: 6px;
+        position:fixed;
+        width: 80%;
+        height: 15rem;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: slideIn 0.5s forwards ease-out;
+        z-index: 200;
+        display: flex;
+        
+        position: relative;
+    }
+    .modal-form-heading{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-family: var(--font);
+    }
+    .microfiber-button img{
+        width: 4rem;
+        height:2rem
+    }
+    .testimonial-track {
+        display: flex;
+        padding: 0rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:2rem;
+        max-width: 500px;
+        margin: 0px auto;
+       
+    }
+    .video-section{
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        border-radius: 10px;
+        overflow: hidden; /* Round corners for video */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Elevation effect */
+    }
+    video{
+        width: 100%;
+      
+        border-radius: 10px;
+        filter: brightness(0.9); /* Slightly dimmed for a polished look */
+        transition: transform 0.3s, filter 0.3s; /* Smooth animation */
+    }
+    .home-video-desc{
+        text-align: justify;
+        
+        margin: 0px auto;
+        width: 90% !important;
+       font-family: var(--body-font);
+       font-size: 1rem;
+       color: #424649;
+    }
+    
+    video:hover {
+        transform: scale(1.02); /* Subtle zoom effect */
+        filter: brightness(1);
+    }
     .modal-wrapper{
         border-radius: 6px;
         max-width: 700px;
@@ -1125,6 +1206,7 @@ margin-top: 0.5rem;
     }
     .modal-left{
         position: relative;
+        display: none;
         z-index: 10000;
         padding: 4rem 4rem;
     }
@@ -1429,6 +1511,9 @@ margin-top: 0.5rem;
     background-color: white;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 1s;
+    cursor: pointer;
 
 }
 
@@ -1454,7 +1539,27 @@ margin-top: 0.5rem;
     }
 }
 @media screen and (min-width:750px) {
-    
+    .modal-wrapper2{
+        border-radius: 6px;
+        position:fixed;
+        width: 40;
+        height: 20rem;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: slideIn 0.5s forwards ease-out;
+        z-index: 200;
+        display: flex;
+        
+        position: relative;
+    }
+   
+    .microfiber-button img{
+        width: 7rem;
+        height:3.5rem
+    }
+  
     .why-carmaa-card-container{
         display: flex;
         flex-direction: row;
@@ -1474,7 +1579,8 @@ margin-top: 0.5rem;
     }
     .counter-section{
         padding: 4.5rem 0rem ;
-        background-color: #0E111B;
+        background-color: var(--primary-color);
+        background-image: url('../images/aboutus/textture-bg.png');
         display: flex;
         flex-direction: row;
        flex-wrap: wrap;
@@ -1503,24 +1609,128 @@ margin-top: 0.5rem;
     
     }
 }
+@media screen and (min-width:1100px) {
+    .microfiber-button img{
+        width: 7rem;
+        height:3.5rem
+    }
+    .testimonial-track {
+        display: flex;
+        padding: 0rem 1rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:2rem;
+        width: 100%;
+        max-width: 2000px;
+        margin: 0px auto;
+       
+    }
+    
+}
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 @media screen and (min-width:1300px){
-  
+    .modal-form-heading{
+        display: none;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-family: var(--font);
+    }
+    .modal-left{
+        position: relative;
+        display: block;
+        z-index: 10000;
+        padding: 4rem 4rem;
+    }
+      .microfiber-button img{
+        width: 7rem;
+        height:3.5rem
+    }
+    .video-section{
+        width: 40%;
+        margin: 4rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        border-radius: 10px;
+        overflow: hidden; /* Round corners for video */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Elevation effect */
+    }
+    video{
+        width: 100%;
+      
+        border-radius: 10px;
+        filter: brightness(0.9); /* Slightly dimmed for a polished look */
+        transition: transform 0.3s, filter 0.3s; /* Smooth animation */
+    }
+    
+    video:hover {
+        transform: scale(1.02); /* Subtle zoom effect */
+        filter: brightness(1);
+    }
+    .home-video-desc{
+        text-align: justify;
+        
+        margin: 0px auto;
+        width: 40% !important;
+       font-family: var(--body-font);
+       font-size: 1rem;
+       color: #424649;
+    }
+    @keyframes rotation {
+        from {--gradient-angle:0deg;}
+    to {--gradient-angle:360deg;}
+
+        
+    }
     .hero-section-btn{
         color: white;
+        background-color:#01628F;
         margin-top: 1rem;
-        background-color: var(--primary-color);
-        font-size: 14px;
+       border-radius: 0.7rem;
+        font-size: 1rem;
         letter-spacing: 2px;
         padding: 18px 28px;
         border: none;
         cursor: pointer;
+        position: relative;
+        font-weight: 800;
         text-transform: uppercase;
         transition: transform 0.3s ease; 
-        width: 10rem;
+        width: 12rem;
+    }
+    .hero-section-btn::after, .hero-section-btn::before{
+        content: "";
+        position: absolute;
+  
+      padding: 0.3rem;
+        top:50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        translate: -50% -50%;
+        z-index: -1;
+        background: conic-gradient(from var(--gradient-angle),#01628F, #0280B0, #02A1D6, #01628F, #0280B0, #02A1D6);
+        border-radius: inherit;
+    animation:4s rotation  linear infinite;
+        
+    }
+    .hero-section-btn::after{
+        filter: blur(4rem);
+        opacity: 0.5;
     }
     .hero-section-btn:hover{
         transform: scale(0.95);
     }
+  
 
 
 
@@ -1589,22 +1799,46 @@ margin-top: 0.5rem;
 }
 .why-carmaa-card-container{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-content: space-between;
     margin-top: 5rem;
 }
 .why-carmaa-card{
     width: 31%;
+    
     padding: 4rem 1rem 1rem 1rem;
     background-color: white;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 1s;
+    cursor: pointer;
+    
 
+}
+.why-carmaa-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #90d6f6; /* The color that fills the card */
+    transition: height 0.5s;
+    z-index: -1;
+}
+
+.why-carmaa-card:hover::before {
+    height: 100%; /* Fills the card from bottom to top */
+}
+
+.why-carmaa-card:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+    color: white; /* Optional: change text color to white */
 }
 .why-carmaa-card .card-icon-container{
     position: absolute;
-    top: -35px;
+    top: -30px;
     left: 25px;
     width: 5rem;
     height: 5rem;
@@ -1655,7 +1889,8 @@ margin-top: 0.5rem;
 
 .counter-section{
     padding: 4.5rem ;
-    background-color: #0E111B;
+    background-color: var(--primary-color);
+    background-image: url('../images/aboutus/textture-bg.png');
     display: flex;
    
     justify-content: center;
@@ -1790,20 +2025,22 @@ font-family: var(--body-font);
 
 .testimonial-track {
     display: flex;
-    transition: transform 0.5s ease;
+   
 }
 
 .testimonial-card {
-    min-width: 35%; 
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 25%; 
+    padding: 1rem 1rem;
+    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
     background-color: #fff;
 
     margin: 10px;
 }
 
 .testimonial-text {
-    height:7rem;
+ 
     font-size: 1rem;
     color:#424649;
     font-family:var(--body-font);
@@ -2015,7 +2252,7 @@ font-family: var(--body-font);
     justify-content: center;
 }
 .modal-left .img-wrapper2{
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 0.8rem;
   
     border-radius: 100%;
@@ -2342,7 +2579,7 @@ font-family: var(--body-font);
     align-items:center;
     gap:1rem
 }
-.benefits-cta-section button{
+.benefits-cta-section .benefits-cta-section-btn-new{
     color: white;
     background-color: var(--primary-color);
     font-size: 14px;
@@ -2353,7 +2590,7 @@ font-family: var(--body-font);
     text-transform: uppercase;
     transition: transform 0.3s ease; 
 }
-.benefits-cta-section button:hover{
+.benefits-cta-section .benefits-cta-section-btn-new:hover{
     transform: scale(0.95);
 }
 .benefits-cta-section .call-icon{
@@ -2440,13 +2677,13 @@ margin-top: 0.5rem;
 
 .testimonial-track {
     display: flex;
-    transition: transform 0.5s ease;
+   
 }
 
 .testimonial-card {
     flex: 0 0 60%; 
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 1rem 1rem;
     text-align: center;
 }
 
@@ -2484,7 +2721,7 @@ margin-top: 0.5rem;
 /* Medium screens (tablets) */
 @media (min-width: 768px) {
     .testimonial-card {
-        flex: 0 0 50%; /* On tablets, each card takes 50% width */
+        flex: 0 0 25%; /* On tablets, each card takes 50% width */
     }
 
     .testimonial-text {
@@ -2504,10 +2741,85 @@ margin-top: 0.5rem;
 /* Large screens (desktops) */
 @media (min-width: 1024px) {
     .testimonial-card {
-        flex: 0 0 33%; /* On desktops, each card takes 33% width */
+        
+        flex: 0 0 25%; /* On desktops, each card takes 33% width */
     }
 
     .testimonial-text {
         font-size: 1rem;
     }
+}
+
+
+
+.home-video{
+    display: flex;
+    padding: 5rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    width: 100%;
+    background: hsla(228, 100%, 97%, 1);
+
+    background: linear-gradient(45deg, hsla(228, 100%, 97%, 1) 0%, hsla(199, 99%, 28%, 1) 100%);
+    
+    background: -moz-linear-gradient(45deg, hsla(228, 100%, 97%, 1) 0%, hsla(199, 99%, 28%, 1) 100%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(228, 100%, 97%, 1) 0%, hsla(199, 99%, 28%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F3FF", endColorstr="#01628F", GradientType=1 );
+   
+}
+
+.hero-section-btn2{
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background-color:var(--primary-color);
+    margin-top: 2rem;
+   border-radius: 0.7rem;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    padding: 18px 40px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: transform 0.3s ease; 
+    overflow: hidden;
+   
+}
+.hero-section-btn2:before{
+    content:'';
+    position:absolute;
+    height: 100px;
+    width: 15px;
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 10px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    top:-30px;
+    transition: 0.7s;
+    transform: rotate(-20deg) translateX(-60px);
+    animation: slide 2s infinite;
+}
+@keyframes slide {
+    0% {
+        transform: rotate(-20deg) translateX(-60px);
+    }
+    100% {
+        transform: rotate(-20deg) translateX(200px) translateY(70px);
+    }
+}
+
+
+
+
+
+.services-card-container{
+    display: flex;
+}
+.hero-section-btn-width{
+    width: 15rem;
 }

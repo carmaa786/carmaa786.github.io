@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carma Car Care Services</title>
+    <link rel="stylesheet" href="../css/service.css">
+</head>
+<body>
+    <nav id="nav-placeholder"
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <div
+        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+            <a href="/" style="height: 100%;">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
+            </a>
+        </div>
+        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+            <li style="cursor: pointer; "><a class="nav-item-list"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="/">Home</a>
+            </li>
+            <li style="cursor: pointer; "><a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
+                    href="./pricing/">Pricing</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./store/">Store</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./about/">About</a></li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./franchise/">Franchise</a></li>
+         
+        </ul>
+        <div style="display: flex; gap: 20px; ">
+            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+            </button>
+            <div class="btn"
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="./contactus/"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle")
+        const menu = document.getElementById("menu")
+        // alert("asf")
+        toggle.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        });
+
+    </script>
+</nav>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="../images/city-page/intro-img.jpg" alt="Car Service" class="service-image">
+            <div class="description">
+                <p>
+                    At Carma Car Care, we provide top-notch services for all your automotive needs. Our services include oil changes, tire rotations, engine diagnostics, and complete car detailing. We ensure that your vehicle is in its best condition through our state-of-the-art facilities and experienced technicians. Our mission is to deliver quality service with utmost customer satisfaction. From routine maintenance to major repairs, Carma Car Care is your one-stop solution for all your car care needs. (Continue for 50 lines...)
+                </p>
+            </div>
+            <div class="faqs">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <ul>
+                    <li>What types of car services do you offer?</li>
+                    <li>How can I book a service appointment?</li>
+                    <li>What are the operating hours of Carma Car Care?</li>
+                    <li>Do you provide roadside assistance?</li>
+                    <!-- Add more FAQs as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section (Sticky) -->
+        <div class="right-section">
+            <div class="enquiry-form">
+                <h3>Make an Enquiry</h3>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="number">Number:</label>
+                    <input type="tel" id="number" name="number" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="services-list">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#oil-change">Oil Change</a></li>
+                    <li><a href="#tire-rotation">Tire Rotation</a></li>
+                    <li><a href="#engine-diagnostics">Engine Diagnostics</a></li>
+                    <li><a href="#car-detailing">Car Detailing</a></li>
+                    <!-- Add more services as needed -->
+                </ul>
+            </div>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p>Email: contact@carmacare.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Carma Street, Auto City, USA</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

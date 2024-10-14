@@ -1,0 +1,160 @@
+:root{
+    --primary-color:#01628F;
+    --font:"Bai Jamjuree", sans-serif;
+    --body-font:"Sarabun", sans-serif;
+    --silver:#BAC4C9
+}
+.pricing-section{
+    padding: 2rem 0rem;
+    background-color: #F0F3FF;
+}
+.pricing-sub{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: var(--font);
+    text-align: center;
+    font-weight: 600;
+    color: #01628F;
+}
+.pricing-heading{
+    font-family: var(--font);
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;  
+}
+.pricing-container{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.pricing-card{
+    position: relative;
+    background-color: #ffffff;
+    border: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 2rem 2rem;
+    width: 400px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px hsl(0, 50%, 2%, .5);
+    transition: all 0.3s ease-in;
+}
+.pricing-card:hover{
+    box-shadow: 10px 10px 10px hsl(0, 50%, 2%, .5);
+    scale: 1.03;
+
+}
+.pricing-label{
+    position: absolute;
+    right: -50px;
+    top:15px;
+    font-weight: 600;
+    background-color: #D06A28;
+    color: white;
+    font-size: 1.2rem;
+    transform: rotate(30deg);
+    padding:0.5rem 5rem;
+
+}
+.pricing-plan-name{
+    color: #0E111B;
+    font-family: var(--font);
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.2rem;
+}
+.pricing-starting{
+    color: #424649;
+    margin-top: 2rem;
+    margin-bottom: 0.3rem;
+    font-family: var(--font);
+    font-size: 1.1rem;
+}
+.pricing-price{
+    color: #0E111B;
+    font-family: var(--font);
+    font-size: 52px;
+    font-weight: 700;
+  
+   
+
+}
+.whats-included{
+    color: #0E111B;
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 2rem;
+
+}
+.whats-included-pts{
+display: flex;
+align-items: center;
+gap: 0.5rem;
+margin-top: 1rem;
+}
+.whats-included-pts img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.whats-included-pt-wrapper:after {
+    content: "";
+    display: block;
+    
+    width: 100%; /* Full width of the parent container */
+    height: 1px; /* Thickness of the line */
+    background-color: #0000002e; /* Line color */
+    margin-top: 0.8rem; /* Space above the line */
+}
+.pricing-section-card-btn{
+    padding: 20px 30px 20px 30px;
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #01628F;
+    color: white;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease !important;
+
+}
+.pricing-section-card-btn:hover{
+    transform: scale(0.95)
+}
+@media screen and (min-width:300px) {
+    .pricing-container{
+        flex-direction: column;
+    }
+    
+}
+@media screen and (min-width:1250px) {
+    .pricing-container{
+        flex-direction: row;
+        gap:1rem
+        
+    }
+    
+}
+@media screen and (min-width:1380px) {
+    .pricing-container{
+        flex-direction: row;
+        gap:3rem
+        
+    }
+    
+}
+
+

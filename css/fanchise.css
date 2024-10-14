@@ -1,0 +1,149 @@
+:root{
+    --primary-color:#01628F;
+    --font:"Bai Jamjuree", sans-serif;
+    --body-font:"Sarabun", sans-serif;
+    --silver:#BAC4C9
+}
+.franchise-hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:8rem;
+    
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.franchise-hero-section-left{
+width: 25%;
+}
+.franchise-hero-section-left h1{
+    font-size: 36px;
+    color: #212529;
+    font-family: var(--font);
+    margin-bottom: 1.5rem;
+    line-height: 48px;
+    font-weight: 700;
+}
+.franchise-hero-section-left h2{
+    font-size: 24px;
+    font-family: var(--body-font);
+    color: #585858;
+    margin-bottom: 1rem;
+    line-height: 28px;
+    font-weight: 200;
+}
+.franchise-hero-section-right{
+    width: 38%;
+   
+}
+.franchise-hero-section-right iframe{
+    width: 100%;
+    height:25rem;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px hsl(0, 50%, 2%, .5);
+
+}
+.franchise-cta-btn{
+    background-color: #01628F;
+    color: #ffffff;
+    padding:1.5rem 3rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 15px 15px 15px hsl(0, 50%, 2%, .5);
+
+}
+.franchise-success-stories{
+    background-color: #F0F3FF;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.franchise-success-stories .heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font);
+
+}
+.franchise-success-stories .subheading{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: var(--font);
+    margin-bottom: 0.8rem;
+
+}
+.franchise-success-stories-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap:2rem
+}
+.franchise-success-stories-card{
+    width:23%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.7rem;
+   
+
+}
+.franchise-success-stories-card iframe{
+    width: 100%;
+    box-shadow: 5px 5px 5px hsl(0, 50%, 2%, .5);
+    border-radius: inherit;
+    height:235px
+}
+
+
+
+
+
+
+
+.franchise-impact{
+    
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.franchise-impact .heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font);
+
+}
+.franchise-impact .subheading{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: var(--font);
+    margin-bottom: 0.8rem;
+
+}
+
+.franchise-impact-main-component-left-points{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+}
+.franchise-effect-icon{
+    background-color: var(--primary-color);
+    display: flex;
+    
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+   
+    
+}
+.franchise-pt-head{
+    font-weight: 300;
+    
+}
+.franchise-effect-icon img{
+    width: 3rem;
+    height: 3rem;
+}
