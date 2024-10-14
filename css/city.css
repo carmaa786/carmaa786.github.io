@@ -4,6 +4,90 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+
+.city-why-choose-heading{
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    font-family: var(--font);
+}
+.city-benefits-section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 70%;
+    margin: 0px auto;
+}
+
+.city-benefits-heading h2{
+    color: #01628F;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.city-benefits-heading h1{
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+}
+.city-benefit-container{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    gap: 2rem;
+
+}
+.city-benefit-element{
+    width: 46%;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #01628F;
+    box-shadow: 5px 5px 5px hsl(0, 50%, 2%, .5);
+    
+}
+.city-benefit-element-img-wrapper{
+    width: 4.5rem;
+    height:4.5rem;  
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+.city-benefit-element-img-wrapper2{
+    width: 4.5rem;
+    height:4.5rem;  
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+.city-benefit-element-img-wrapper2 img{
+    width: 2.5rem;
+    height:2.5rem;  
+  }
+.city-benefit-element-img-wrapper img{
+    width: 2.5rem;
+    height:2.5rem;  
+  }
+
+
+
+
+
+
+
+
+
 .city-header-section{
     display: flex;
     position: relative;
@@ -101,6 +185,7 @@ height: 1rem;
 .city-why-choose .left-heading{
     width: 35%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 3rem;
     font-family: var(--font);
@@ -285,7 +370,205 @@ font-family: var(--body-font);
 
 
 
+ .city-call-to-action-btn{
+        background-color: var(--primary-color);
+        padding: 4rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        background-image: url('../images/aboutus/textture-bg.png');
+    }
+.city-call-to-action-wrapper{
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        width:80%;
+        gap:3rem;
+    }
+.city-call-to-action-left{
+    width: 34%;
+    position: relative;
+    }
+.city-call-to-action-right{
+        width: 40%;
+        }
+.city-call-to-action-left img{
+        width: 100%;
+        position: absolute;
+        bottom: -230px;
+    }
+.city-call-to-action-heading{
+        color: white;
+        font-family: var(--font);
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    
+    }
+.city-call-to-action-para{
+        color: #BAC4C9;
+        font-family: var(--body-font);
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+.city-call-to-action-btn-component{
+    background-color: #E77640;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 10px 10px 10px hsl(0, 50%, 2%, .5);
+    border-radius: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:300px) {
+    
+    .city-call-to-action-btn{
+        background-color: var(--primary-color);
+        padding: 4rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        background-image: url('../images/aboutus/textture-bg.png');
+    }
+    .city-call-to-action-wrapper{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        width:80%;
+        gap:3rem;
+       
+    }
+    .city-call-to-action-left{
+    width: 100%;
+  
+   
+    }
+    .city-call-to-action-right{
+        width: 100%;
+        }
+    .city-call-to-action-left img{
+        width: 100%;
+       
+      position: static;
+      
+    }
+    .city-call-to-action-heading{
+        color: white;
+        font-family: var(--font);
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    
+    }
+    .city-call-to-action-para{
+        color: #BAC4C9;
+        font-family: var(--body-font);
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+    .city-call-to-action-btn-component{
+    background-color: #E77640;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 10px 10px 10px hsl(0, 50%, 2%, .5);
+    border-radius: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .city-benefits-section{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      
+        margin: 0px auto;
+    }
+    
+    .city-benefits-heading h2{
+        color: #01628F;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .city-benefits-heading h1{
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1.4rem;
+    }
+   
+    .city-benefit-element{
+        width: 100%;
+        padding: 2rem 2rem;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #01628F;
+        box-shadow: 5px 5px 5px hsl(0, 50%, 2%, .5);
+        
+    }
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .our-services-section-city{
         background-color: #0E111B;
         display: flex;
@@ -369,7 +652,7 @@ font-family: var(--body-font);
         background-size: cover;
     }
     .city-why-choose .img-component{
-        width: 75%;
+        width: 100%;
         max-width: 1000px;
         margin: 0px auto;
         display: flex;
@@ -419,6 +702,153 @@ font-family: var(--body-font);
     
 }
 @media screen and (min-width:1100px){
+
+    .city-call-to-action-btn{
+        background-color: var(--primary-color);
+        padding: 4rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        background-image: url('../images/aboutus/textture-bg.png');
+    }
+.city-call-to-action-wrapper{
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        width:80%;
+        gap:3rem;
+    }
+.city-call-to-action-left{
+    width: 50%;
+    max-width: 515px;
+    position: relative;
+    }
+.city-call-to-action-right{
+        width: 50%;
+        max-width: 600px;
+        }
+.city-call-to-action-left img{
+        width: 100%;
+        position: absolute;
+        bottom: -230px;
+    }
+.city-call-to-action-heading{
+        color: white;
+        font-family: var(--font);
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    
+    }
+.city-call-to-action-para{
+        color: #BAC4C9;
+        font-family: var(--body-font);
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+.city-call-to-action-btn-component{
+    background-color: #E77640;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 10px 10px 10px hsl(0, 50%, 2%, .5);
+    border-radius: 10px;
+    }
+
+
+
+
+
+
+
+    .city-benefits-section{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 70%;
+        margin: 0px auto;
+    }
+    
+    .city-benefits-heading h2{
+        color: #01628F;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .city-benefits-heading h1{
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        font-size: 1.4rem;
+        margin-top: 1.4rem;
+    }
+    .city-benefit-container{
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        gap: 2rem;
+    
+    }
+    .city-benefit-element{
+        width: 46%;
+        max-width: 800px;
+        padding: 2rem 2rem;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #01628F;
+        box-shadow: 5px 5px 5px hsl(0, 50%, 2%, .5);
+        
+    }
+    .city-benefit-element-img-wrapper{
+        width: 4.5rem;
+        height:4.5rem;  
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 100%;
+        margin-bottom: 1rem;
+    }
+    .city-benefit-element-img-wrapper2{
+        width: 4.5rem;
+        height:4.5rem;  
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 100%;
+        margin-bottom: 1rem;
+    }
+    .city-benefit-element-img-wrapper2 img{
+        width: 2.5rem;
+        height:2.5rem;  
+      }
+    .city-benefit-element-img-wrapper img{
+        width: 2.5rem;
+        height:2.5rem;  
+      }
+    
+
+
+
+
+
+
+
+
+
+
+    
     .city-header-section{
         display: flex;
         position: relative;
@@ -491,7 +921,7 @@ font-family: var(--body-font);
         background-color: #F0F3FF;
     }
     .city-why-choose .img-component{
-        width: 75%;
+        width: 100%;
         max-width: 1000px;
         margin: 0px auto;
         display: flex;
@@ -516,6 +946,7 @@ font-family: var(--body-font);
     .city-why-choose .left-heading{
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         gap: 3rem;
         font-family: var(--font);
@@ -539,8 +970,16 @@ font-family: var(--body-font);
         justify-content: center;
         align-items: center;
         gap: 2%;
-        padding: 1rem;
+        padding: 2rem;
     
+    }
+    .our-services-section-city-right-points{
+        margin-bottom: 0.5rem;
+
+    }
+    .our-services-section-city-right-points strong{
+        color: #01628F;
+       font-weight: 700;
     }
     .our-services-section-city-left{
     width: 80%;
@@ -720,6 +1159,7 @@ font-family: var(--body-font);
     
 }
 @media screen and (min-width:1300px) {
+    
     .benefit-right2{
         position: relative;
         width: 43%;
@@ -806,7 +1246,7 @@ font-family: var(--body-font);
         background-color: #F0F3FF;
     }
     .city-why-choose .img-component{
-        width: 75%;
+        width: 100%;
         max-width: 1000px;
         margin: 0px auto;
         display: flex;
@@ -831,6 +1271,7 @@ font-family: var(--body-font);
     .city-why-choose .left-heading{
         width: 35%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         gap: 3rem;
         font-family: var(--font);
@@ -890,7 +1331,7 @@ font-family: var(--body-font);
     
     
     .commitment-quality{
-        padding:4rem 4rem;
+        padding:2rem 2rem;
         display: flex;
         gap: 2.5rem;
         
@@ -921,7 +1362,7 @@ font-family: var(--body-font);
         width: 40%;
     }
     .commitment-quality-right{
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -1014,3 +1455,11 @@ font-family: var(--body-font);
     
     
 }
+
+
+
+
+
+
+
+

@@ -34,6 +34,8 @@
   scrollbar-width: none;  /* Firefox */
 }
     </style>
+    <link rel="stylesheet" href="../css/fanchise.css"/>
+    <link rel="stylesheet" href="../css/"/>
        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
@@ -100,75 +102,40 @@
 
 <body>
     <nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
     <div
         style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
         <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
             <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
             </a>
         </div>
         <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
             <li style="cursor: pointer; "><a class="nav-item-list"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="/">Home</a>
             </li>
             <li style="cursor: pointer; "><a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
                     href="../pricing/">Pricing</a> </li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="../store/">Store</a> </li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="../about/">About</a></li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="./">Franchise</a></li>
-            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
-                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
-                    </li>
-                    <li><a class="nav-item-list"   href="../doorstep-car-washing-service-in-dehradun/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Gurugram</a>
-                    </li>
-                </ul>
-                <style>
-                    .dropdown {
-                        background-color: white;
-                        display: none;
-                        padding: 20px 0px;
-                    }
-
-                    .dropdownCon:hover .dropdown {
-                        display: flex;
-                    }
-
-                    .dropdown>li>a {
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        transition: all .1s;
-                    }
-
-                    .dropdown>li>a:hover {
-                        background-color: rgb(211, 211, 211);
-
-                    }
-                </style>
-            </li>
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="../franchise/">Franchise</a></li>
+         
         </ul>
         <div style="display: flex; gap: 20px; ">
             <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                 <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
             </button>
             <div class="btn"
-                style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
-                <a href="/contactus/"
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="../contactus/"
                     style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                     Contact Us
                 </a>
@@ -189,18 +156,80 @@
 
     </script>
 </nav>
-    <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
-        <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
+<!--
+<section class="franchise-hero-section">
+  
+    <div class="franchise-hero-section-left">
+        <h1>Boost your Income by Joining Carmaa as a Partner Manager</h1>
+        <h2>Join Us Today and Experience Rapid Growth with an 8-Month ROI</h2>
+        <button class="franchise-cta-btn">Become a Partner Manager</button>
+    </div>
+    <div class="franchise-hero-section-right">
+        <iframe  src="https://www.youtube.com/embed/MLpWrANjFbI?si=0pgw56Sgas_boALq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
-            <img style="height: 100%; width: 100%;" src="../images/whatsapp.png" alt="">
-        </a>
-    </div>
-    <div style="width: 100vw; background-color: white;">
-        <div style="width: 95%; max-width: 1200px;margin: auto; display: flex;flex-direction: column; padding-bottom: 50px;">
-            <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Carmaa Premium Franchise</h2>
-            <img src="../images/comingSoon.png" style="width: 50%; margin: auto;" alt="">
+</section>
+
+
+<section class="franchise-success-stories">
+    <h2 class="subheading">Witness the power of partnership</h2>
+    <h1 class="heading">Partner’s Success Stories</h1>
+    <div class="franchise-success-stories-card-container">
+        <div class="franchise-success-stories-card">
+            <iframe  src="https://www.youtube.com/embed/MLpWrANjFbI?si=0pgw56Sgas_boALq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <div class="franchise-success-stories-card">
+            <iframe  src="https://www.youtube.com/embed/MLpWrANjFbI?si=0pgw56Sgas_boALq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="franchise-success-stories-card">
+            <iframe  src="https://www.youtube.com/embed/MLpWrANjFbI?si=0pgw56Sgas_boALq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
     </div>
+
+</section>
+
+
+
+
+<section class="franchise-impact">
+    <h2 class="subheading">Driving Growth Across Every City</h2>
+    <h1 class="heading">CarMaa's Nationwide Impact</h1>
+    <div class="franchise-impact-main-component">
+        <div class="franchise-impact-main-component-left">
+            <div class="franchise-impact-main-component-left-points">
+                <div class="franchise-effect-icon">
+                    
+                    <img src="../images/franchise/skyline.png"/>
+                </div>
+                <div>
+                    <p class="franchise-pt-head">57+ Cities Nationwide</p>
+                    <p>Expanding Our Reach, Making a Difference Across the Nation</p>
+                    <img src="../images/franchise/line.png"/>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+  
+
+</section> -->
+
+<div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
+    <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
+
+        <img style="height: 100%; width: 100%;" src="../images/whatsapp.png" alt="">
+    </a>
+</div>
+<div style="width: 100vw; background-color: white;">
+    <div
+        style="width: 95%; max-width: 1200px;margin: auto; display: flex;flex-direction: column; padding-bottom: 50px;">
+        <h2 style="font-size: 2.5rem; text-align: center; margin: auto; margin-top: 80px;">Carmaa store</h2>
+        <img src="../images/comingSoon.png" style="width: 50%; margin: auto;" alt="">
+    </div>
+</div>
+  
     <div id="footer">
         <script>
             fetch('../components/footer.html')
