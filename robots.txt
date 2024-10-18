@@ -1,0 +1,6 @@
+# Allow all bots to access everything
+User-agent: *
+Disallow:
+
+# Provide the location of the sitemap
+Sitemap: https://carmaacarcare.com/sitemap.xml

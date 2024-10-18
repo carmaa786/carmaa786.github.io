@@ -123,74 +123,163 @@
 
 <body>
     <nav id="nav-placeholder"
-    style="width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
     <div
         style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
         <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
             <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 100%; object-fit: contain;" alt="">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
             </a>
         </div>
         <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
             <li style="cursor: pointer; "><a class="nav-item-list"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="/">Home</a>
             </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="../about/">About Us</a></li>
+                    <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
+                        <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Services</span>
+                        <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
+                            <li>
+                                <a class="nav-item-list" href="../interior-car-cleaning-service/" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Interior Car Cleaning</a>
+                            </li>
+                            <li>
+                                <a class="nav-item-list" href="../exterior-car-cleaning-washing" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Exterior Car Cleaning & Washing</a>
+                            </li>
+                            <li>
+                                <a class="nav-item-list" href="../car-dry-cleaning-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Car Dry Cleaning</a>
+                            </li>
+                            <li>
+                                <a class="nav-item-list" href="../car-body-polish-and-car-waxing-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Complete Car Body Polish and Wax</a>
+                            </li>
+                            <li>
+                                <a class="nav-item-list" href="../full-car-wash-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Full Car Wash</a>
+                            </li>
+                            <li>
+                                <a class="nav-item-list" href="../car-deep-cleaning-services/" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Deep Cleaning</a>
+                            </li>
+                        </ul>
+                        <style>
+                            .dropdown {
+                                background-color: white;
+                                display: none;
+                                padding: 10px 0;
+                                width: 16rem; /* Set a consistent width for all dropdowns */
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+                                border-radius: 4px;
+                            }
+                    
+                            .dropdownCon:hover .dropdown {
+                                display: flex;
+                                flex-direction: column; /* Ensures all items are vertically aligned */
+                            }
+                    
+                            .dropdown>li>a {
+                                padding: 8px 10px;
+                                border-radius: 4px;
+                                transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
+                            }
+                    
+                            .dropdown>li>a:hover {
+                            color: #01628F; /* Background color change on hover */
+                                color: white; /* Change text color to white when hovered */
+                            }
+                    
+                            .nav-item-list {
+                                width: 100%;
+                                display: block;
+                            }
+                    
+                            /* Hover effect for the main dropdown container */
+                            .dropdownCon:hover .nav-item-list {
+                                color: #01628F; /* Background color for the hovered nav */
+                                color: white; /* Change text color to white */
+                                border-radius: 4px;
+                                padding: 4px 8px;
+                                transition: background-color 0.2s, color 0.2s;
+                            }
+                        </style>
+                    </li>
+                    <li style="cursor: pointer; "> <a
+                        class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                            href="../franchise/">Partner with Us</a></li>
+                            <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
+                                <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Our Locations</span>
+                                <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
+                                    <li>
+                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-noida" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Noida</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-uttarakhand" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Uttarakhand</a>
+                                    </li>
+                                 
+                                </ul>
+                                <style>
+                                    .dropdown {
+                                        background-color: white;
+                                        display: none;
+                                        padding: 10px 0;
+                                        width: 16rem; /* Set a consistent width for all dropdowns */
+                                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+                                        border-radius: 4px;
+                                    }
+                            
+                                    .dropdownCon:hover .dropdown {
+                                        display: flex;
+                                        flex-direction: column; /* Ensures all items are vertically aligned */
+                                    }
+                            
+                                    .dropdown>li>a {
+                                        padding: 8px 10px;
+                                        border-radius: 4px;
+                                        transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
+                                    }
+                            
+                                    .dropdown>li>a:hover {
+                                    color: #01628F; /* Background color change on hover */
+                                        color: white; /* Change text color to white when hovered */
+                                    }
+                            
+                                    .nav-item-list {
+                                        width: 100%;
+                                        display: block;
+                                    }
+                            
+                                    /* Hover effect for the main dropdown container */
+                                    .dropdownCon:hover .nav-item-list {
+                                        color: #01628F; /* Background color for the hovered nav */
+                                        color: white; /* Change text color to white */
+                                        border-radius: 4px;
+                                        padding: 4px 8px;
+                                        transition: background-color 0.2s, color 0.2s;
+                                    }
+                                </style>
+                            </li>
             <li style="cursor: pointer; "><a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000; "
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
                     href="../pricing/">Pricing</a> </li>
-            <li style="cursor: pointer; "> <a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="../store/">Store</a> </li>
-            <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="../about/">About</a></li>
-            <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;"
-                    href="../franchise/">Franchise</a></li>
-            <li class="dropdownCon" style="cursor: pointer;position: relative; "> <span
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Find us at</span>
-                <ul style="position: absolute;  flex-direction: column; gap: 20px;" class="dropdown">
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun/"
-                            style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                    </li>
-                    <li><a class="nav-item-list" href="../doorstep-car-washing-service-in-noida/"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Noida</a>
-                    </li>
-                    <li><a class="nav-item-list"   href="./"
-                        style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: #000;">Uttarakhand</a>
-                    </li>
-                </ul>
-                <style>
-                    .dropdown {
-                        background-color: white;
-                        display: none;
-                        padding: 20px 0px;
-                    }
-
-                    .dropdownCon:hover .dropdown {
-                        display: flex;
-                    }
-
-                    .dropdown>li>a {
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        transition: all .1s;
-                    }
-
-                    .dropdown>li>a:hover {
-                        background-color: rgb(211, 211, 211);
-
-                    }
-                </style>
-            </li>
+          
+                 
+                    
+           
+                
+         
+             
+                         
+                          
+         
         </ul>
         <div style="display: flex; gap: 20px; ">
             <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                 <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
             </button>
             <div class="btn"
-                style=" background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
                 <a href="../contactus/"
                     style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
                     Contact Us

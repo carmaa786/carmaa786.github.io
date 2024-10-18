@@ -2794,7 +2794,7 @@ margin-top: 0.5rem;
     content:'';
     position:absolute;
     height: 100px;
-    width: 15px;
+    width: 10px;
     background-color: #f3f3f3;
     box-shadow: 0px 0px 10px #fff;
     filter: blur(1px);
@@ -2822,4 +2822,60 @@ margin-top: 0.5rem;
 }
 .hero-section-btn-width{
     width: 15rem;
+}
+
+
+
+
+
+
+
+
+
+.testimonial-slider-2 {
+
+    width: 100%;
+   
+ margin: 2rem auto;
+ 
+    --speed:45s;
+    --item-width:500px;
+    --item-gap:25px;
+    overflow: hidden;
+    --item-width-plus-gap:calc(var(--item-width) + var(--item-gap));
+    --track-width:calc(var(--item-width-plus-gap)*calc(var(--numItems) - 1))
+
+   
+}
+
+.testimonial-track-2 {
+    cursor: pointer;
+    display: grid;
+    container-type: inline-size;
+    grid-template-columns: var(--track-width) [track] 0px [resting];
+    width: max-content;
+   
+}
+
+.testimonial-card {
+    grid-area: resting;
+    width: var(--item-width);
+    animation: marquee-move var(--speed) linear infinite;
+    animation-delay: calc(var(--speed)/var(--numItems)*var(--itemIndex)*-1);
+    
+    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+@keyframes marquee-move{
+    to{
+        transform: translateX(calc(-100cqw - 100%));
+    }
+}
+.testimonial-track-2:hover .testimonial-card {
+    animation-play-state: paused;
 }

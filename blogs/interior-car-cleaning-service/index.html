@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+
+
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .accordion .accordion-item button[aria-expanded='true'] {
+            border-bottom: 1px solid #ed6744;
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #20272e;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #ed6744;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #ed6744;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+            font-size: 1.3rem;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded='true'] {
+            color: #ed6744;
+        }
+
+        .accordion button[aria-expanded='true'] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded='true']+.accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+    </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carmaa Interior Car Cleaning Service | Dehradun | Noida</title>
+        <meta name="description" content="Carmaa offers expert Interior Car Cleaning Service in Dehradun and Noida, keeping your car's interior fresh & spotless. Book Your car interior cleaning service." />
+        <meta name="keywords" content=" Interior Car Cleaning Service, car interior cleaning service, car interior cleaning in Dehradun, Interior Car Cleaning Service In Dehradun"/>
+        <link rel="stylesheet" href="../../css/common.css"/>
+        <link rel="stylesheet" href="../../css/aboutus.css"/>
+        <link rel="stylesheet" href="../../css/homepage.css"/>
+        <link rel="stylesheet" href="../../css/service.css"/>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <style>
+            .servicesI {
+                cursor: pointer;
+                transition: all 0.5s;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0px 0px 10px #65c7d06e;
+            }
+    
+            .servicesI:hover {
+                transform: scale(1.1) !important;
+                box-shadow: 0px 0px 10px #65c7d0;
+            }
+    
+            @media screen and (max-width: 1200px) {
+                .a {
+                    justify-content: center !important;
+                }
+            }
+    
+            @media screen and (max-width: 900px) {
+                .bh {
+                    flex-direction: column;
+                }
+    
+                .bh img {
+                    min-height: 300px;
+                }
+            }
+    
+            @media screen and (max-width:800px) {
+                .c {
+                    flex-direction: column;
+                }
+            }
+        </style>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+            }
+    
+            li {
+                list-style: none;
+            }
+    
+            .toggle {
+                display: none;
+            }
+    
+            *::-webkit-scrollbar {
+                display: none;
+            }
+    
+            * {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+    
+            @media screen and (max-width:800px) {
+                .menu {
+                    position: fixed;
+                    background-color: rgb(255, 255, 255);
+                    border-top: 1px solid gray;
+                    top: 80px;
+                    height: calc(100vh - 80px);
+                    width: 100vw;
+                    right: 0px;
+                    flex-direction: column;
+                    justify-content: flex-start !important;
+                    padding: 50px 0px;
+                    gap: 30px;
+                    transform: translateX(100%);
+                }
+    
+                .active {
+                    transform: translateX(0%) !important;
+                }
+    
+                .toggle {
+                    display: inline;
+                    cursor: pointer;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <nav id="nav-placeholder"
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <div
+        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+            <a href="/" style="height: 100%;">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
+            </a>
+        </div>
+        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+            <li style="cursor: pointer; "><a class="nav-item-list"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="/">Home</a>
+            </li>
+            <li style="cursor: pointer; "><a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
+                    href="./pricing/">Pricing</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./store/">Services</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./about/">About</a></li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./franchise/">Franchise</a></li>
+         
+        </ul>
+        <div style="display: flex; gap: 20px; ">
+            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+            </button>
+            <div class="btn"
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="./contactus/"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle")
+        const menu = document.getElementById("menu")
+        // alert("asf")
+        toggle.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        });
+
+    </script>
+</nav>
+<header class="city-header-section">
+    <p>Carmaa Interior Car Cleaning</p>
+    <div class="breadcrumb">
+        <img class="" src="../../common/home.png"/>
+            <p><a href="/" class="breadcrumb-link">Home</a></p>
+            <p>/</p>
+            <p><a href="../" class="breadcrumb-link">Blogs</a></p>
+            <p>/</p>
+            <p><a href="./" class="breadcrumb-link">Carmaa Interior Car Cleaning</a></p>
+       
+    </div>
+</header>
+<section class="service-main-section">
+    <div class="service-left-section">
+        <img style="border-radius:10px" src="../../images/services/1.webp"/>
+        <h1 class="service-heading">Interior Car Cleaning</h1>
+        <p class="service-para">Experience premium Interior Car Cleaning Service at your doorstep with Carmaa. Our team of skilled professionals provides comprehensive car interior cleaning service, ensuring your vehicle’s interior is spotless and refreshed. Whether you're in Dehradun or Noida, we specialize in deep car interior cleaning in Dehradun, tackling everything from vacuuming to stain removal, leaving your car in pristine condition.</p>
+        <p class="service-para">Our Interior Car Cleaning Service in Dehradun includes thorough vacuuming of all surfaces, deep cleaning of carpets and upholstery with eco-friendly products, polishing the dashboard, and cleaning windows for crystal-clear visibility. Whether you need routine maintenance or a detailed refresh, Carmaa ensures your car's interior looks and feels brand new.        </p>
+        <p class="service-para">With a focus on sustainability, Carmaa uses eco-friendly and waterless cleaning methods to reduce environmental impact. Choose Carmaa for a professional, reliable, and eco-conscious Interior Car Cleaning Service that brings your vehicle’s interior back to life, right at your doorstep.</p>
+        <p class="service-para">Your car deserves premium care, and that’s exactly what Carmaa's Interior Car Cleaning Service in Dehradun and Noida delivers with unmatched expertise and attention to detail.
+        </p>
+        
+   
+        <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">How much time does Carmaa's Interior Car Cleaning Service typically require?
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        The time required for our Interior Car Cleaning Service generally ranges between 1 to 2 hours, depending on your vehicle's size and interior condition.
+
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Is Carmaa's car interior cleaning safe for delicate upholstery and leather materials?
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        Yes, our car interior cleaning service uses specialized, safe cleaning products that are gentle on delicate materials like leather and upholstery, ensuring thorough cleaning without any damage.
+
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Can I arrange Carmaa's car interior cleaning service for more than one vehicle in Dehradun?
+
+
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        Absolutely! You can book our Interior Car Cleaning Service in Dehradun for multiple cars at once, making it convenient for families or businesses with several vehicles. Let us know your needs, and we’ll take care of the rest.
+
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+   
+    </div>
+    <div class="service-right-section">
+        <div class="form-container">
+            <h2>Make an enquiry</h2>
+            <hr class="underline" />
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <button type="submit" id="submitBtn">Submit</button>
+                <p id="message"></p>
+            </form>
+        </div>
+        <p style="margin-top: 2rem;font-weight: 700;font-size: 1.2rem;margin-bottom: -0.5rem; padding-left: 0.5rem;">Related Blogs</p>
+        <a href="" class="service-link-point-link"><div class="services-links">
+            <div class="service-link-point">
+                <p class="link-name" >Interior Car Cleaning</p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div>
+        </a>
+        <a href="" class="service-link-point-link"><div class="service-link-point">
+                <p class="link-name" >Exterior Car Cleaning and washing</p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div>
+            </a>
+            <a href="" class="service-link-point-link"> <div class="service-link-point">
+                <p class="link-name" >Full Wash</p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div></a>
+            <a href="" class="service-link-point-link"> <div class="service-link-point">
+                <p class="link-name" >Complete Car Body polishing and wax</p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div>
+            </a>
+
+            <a href="" class="service-link-point-link">
+            <div class="service-link-point">
+                <p class="link-name" >Car Dry Cleaning </p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div>
+            </a>
+           <a href="" class="service-link-point-link"><div class="service-link-point">
+                <p class="link-name" >Deep Cleaning </p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div>
+        </a> 
+        <a href="" class="service-link-point-link"> <div class="service-link-point">
+                <p  class="link-name" >Detailing </p>
+                <i class="fa fa-chevron-right" style="font-size:15px"></i>
+                
+            </div></a>
+           
+
+        </div>
+
+        <div class="contact-section">
+            <h1 class="service-contact-section-heading">Contact Us</h1>
+            <div class="service-contact-section-points">
+                <img src="../../images/services/location.png" style="width: 1.5rem;height: 1.5rem;"/>
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Address</p>
+                    <p>345 Park Avenue, San Jose, CA 95110</p>
+                </div>
+
+            </div>
+            <div class="service-contact-section-points">
+                <img src="../../images/services/phone-call.png" style="width: 1.5rem;height: 1.5rem;"/>
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Phone</p>
+                    <p>+91-70425 55401</p>
+                </div>
+
+            </div>
+            <div class="service-contact-section-points">
+                <img src="../../images/services/mail.png" style="width: 1.5rem;height: 1.5rem;"/>
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Email</p>
+                    <p>support@carmaacarcare.com</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</section>
+<div id="footer">
+    <script>
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</div>
+<script>
+    const toggleSidBar = () => {
+        const sidebar = document.querySelectorAll('.center');
+        const style = window.getComputedStyle(sidebar[0])
+        const top = new WebKitCSSMatrix(style.transform).m41;
+        if (top > 0) {
+            sidebar[0].style.transform = "translateX(0%)"
+        }
+        else {
+
+            sidebar[0].style.transform = "translateX(100%)"
+        }
+    }
+    const items = document.querySelectorAll('.accordion button');
+
+    function toggleAccordion() {
+        const itemToggle = this.getAttribute('aria-expanded');
+
+        for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+        }
+
+        if (itemToggle == 'false') {
+            this.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    items.forEach((item) => item.addEventListener('click', toggleAccordion));
+</script>
+    <script>
+        document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const messageElement = document.getElementById('message');
+    const submitBtn = document.getElementById('submitBtn');
+
+    // Form validation
+    if (!name || !mobile) {
+        messageElement.textContent = 'Name and Mobile number are required.';
+        messageElement.style.color = 'red';
+        return;
+    }
+
+    if (!/^\d{10}$/.test(mobile)) {
+        messageElement.textContent = 'Mobile number must be a 10-digit number.';
+        messageElement.style.color = 'red';
+        return;
+    }
+
+    // Reset message and set loading state
+    messageElement.textContent = '';
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+
+    // Simulate API request
+ 
+    fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, mobile })
+    })
+    .then(response => {
+        submitBtn.textContent = 'Submit';
+        submitBtn.disabled = false;
+        if(response.ok){
+            messageElement.textContent = 'Enquiry submitted successfully!';
+            messageElement.style.color = 'white';
+    }
+    else{
+        messageElement.textContent = 'There was an error submitting your enquiry.';
+        messageElement.style.color = 'red';
+    }
+
+}).catch(error => {
+        submitBtn.textContent = 'Submit';
+        submitBtn.disabled = false;
+        messageElement.textContent = 'An error occurred. Please try again.';
+        messageElement.style.color = 'red';
+    });
+});
+    </script>
+</body>
+</html>

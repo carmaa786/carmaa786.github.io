@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="../css/pricing.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+       <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="../css/city.css"/>
+       <link rel="stylesheet" href="../css/homepage.css"/>
+       <link rel="stylesheet" href="../css/common.css"/>
+       <link rel="stylesheet" href="../css/aboutus.css"/>
+       <link rel="stylesheet" href="./blogs.css"/>
+       
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .wave {
+            --size: 50px;
+            --m: 2;
+            --p: calc(var(--m)*var(--size));
+            --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
+            padding-top: 50px;
+            mask:
+                radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
+                radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
+        }
+
+
+        .elementor-shape-fill {
+            fill: white !important;
+        }
+
+        .TestimonialCard>div {
+            cursor: pointer;
+            transition: all 0.5s;
+            box-shadow: 0px 0px 10px #65c7d06e !important;
+        }
+
+        .TestimonialCard>div:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0px 0px 10px #65c7d0 !important;
+        }
+
+        @media screen and (max-width:1000px) {
+            .TestimonialCard>div {
+                flex: 1 !important;
+                max-width: none !important;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav-placeholder"
+    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+    <div
+        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+            <a href="/" style="height: 100%;">
+                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
+            </a>
+        </div>
+        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+            <li style="cursor: pointer; "><a class="nav-item-list"
+                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="/">Home</a>
+            </li>
+            <li style="cursor: pointer; "><a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
+                    href="./">Pricing</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="../store/">Store</a> </li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="../about/">About</a></li>
+            <li style="cursor: pointer; "> <a
+                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="../franchise/">Franchise</a></li>
+         
+        </ul>
+        <div style="display: flex; gap: 20px; ">
+            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+            </button>
+            <div class="btn"
+                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
+                <a href="../contactus/"
+                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle")
+        const menu = document.getElementById("menu")
+        // alert("asf")
+        toggle.addEventListener("click", function () {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        });
+
+    </script>
+</nav>
+<header class="city-header-section">
+    <p>Blogs</p>
+    <div class="breadcrumb">
+        <img class="" src="../common/home.png"/>
+            <p><a href="/" class="breadcrumb-link">Home</a></p>
+            <p>/</p>
+            <p><a href="./" class="breadcrumb-link">Blogs</a></p>
+       
+    </div>
+</header>
+
+<main class="blog-container">
+  
+  
+ 
+    
+    
+   <a href="./interior-car-cleaning-service/" class="blog-card-href"> <div class="blog-card">
+        <img class="blog-image" src="../images/city-page/intro-img.jpg"/>
+        <div class="blog-desc">
+            <h1 class="blog-heading">Intro To Carmaa</h1>
+            <p class="blog-short-desc">Discover expert tips, maintenance guides, and product reviews at Carma Car Care. We provide everything you need to keep your car in top shape</p>
+            <div class="blog-card-detail-section">
+                <div>
+                    <p class="blog-author">Pranay Rawat</p>
+                    <p class="blog-auth-des">Full Stack Developer</p>
+                </div>
+                <p>16th October, 2024</p>
+            </div>
+        </div>
+    </div></a>
+</main>
+
+<script>
+    const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+    bookingOpenBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById("parent-div").style.display = "flex";
+    });
+});
+</script>
+    <div id="footer">
+        <script>
+            fetch('../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+
+<script>
+    // Function to show the parent div after 15 seconds
+
+    // Initially hide the div
+    let parentDiv = document.getElementById("parent-div");
+    let parentDiv2 = document.getElementById("parent-div2");
+
+    // Show the div after 15 seconds
+
+
+    // Close button functionality
+    document.getElementById("close-btn").addEventListener("click", function () {
+        // Hide the parent div
+        parentDiv.style.display = "none";
+        
+
+        // Show the div again after 15 seconds
+    });
+    document.getElementById("close-btn2").addEventListener("click", function () {
+        // Hide the parent div
+        parentDiv2.style.display = "none";
+        
+
+        // Show the div again after 15 seconds
+    });
+
+    document.getElementById('contactButton').addEventListener('click', async function () {
+        // Capture the values from the inputs
+        const button = document.getElementById('contactButton');
+
+        // Disable the button
+        button.style.pointerEvents = 'none';
+        button.style.backgroundColor = '#999';
+        const name = document.getElementById('nameInput').value;
+        const number = document.getElementById('numberInput').value;
+        const address = document.getElementById('addressInput').value;
+        if (!name || !number || !address) {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        // Prepare the data object
+        const formData = {
+            name: name,
+            number: number,
+            address: address
+        };
+
+        try {
+            // Send POST request to the API
+            const response = await fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            if (response.ok) {
+                document.getElementById('parent-div').style.display = 'none';
+            } else {
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        } finally {
+            button.style.pointerEvents = 'auto';
+            button.style.backgroundColor = '#183ea1';
+        }
+    });
+
+
+</script>
+    </div>
+
+
+
+
+ <script>
+    let scrollContainer = document.querySelector('.gallery');
+    let backBtn = document.getElementById('back-btn');
+    let nextBtn = document.getElementById('next-btn');
+    const scrollAmount = 900;
+
+    // Function to scroll forward
+    function scrollForward() {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += scrollAmount;
+
+        // If the scroll reaches the end, reset to the beginning
+        if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
+            scrollContainer.scrollLeft = 0;
+        }
+    }
+
+    // Function to scroll backward
+    function scrollBackward() {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= scrollAmount;
+
+        // If the scroll goes before the start, move to the end
+        if (scrollContainer.scrollLeft <= 0) {
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+        }
+    }
+
+    // Add event listeners for manual scrolling
+    nextBtn.addEventListener("click", scrollForward);
+    backBtn.addEventListener("click", scrollBackward);
+
+    // Auto-scroll functionality
+    function autoScroll() {
+        scrollForward();
+    }
+
+    // Start auto-scrolling every 3 seconds
+    let autoScrollInterval = setInterval(autoScroll, 2000);
+
+    // Pause auto-scrolling when user hovers over the gallery
+    scrollContainer.addEventListener('mouseover', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    // Resume auto-scrolling when user leaves the gallery
+    scrollContainer.addEventListener('mouseout', () => {
+        autoScrollInterval = setInterval(autoScroll, 2000);
+    });
+</script>
+</body>
+
+</html>
