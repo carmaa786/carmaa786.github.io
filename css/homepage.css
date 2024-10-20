@@ -4,10 +4,46 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
-.microfiber-button img{
-    width: 7rem;
-    height:3.5rem
+
+.topbar-section{
+    
 }
+
+.content {
+    width: 300px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+.more-text {
+    max-height: 0;
+    overflow: hidden;
+    display: none;
+  
+    transition: max-height 0.5s ease;
+}
+
+.expanded {
+    max-height: 500px; /* Set to a high value to accommodate longer text */
+}
+
+
+.read-more-btn {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+    background-color: #005f73;
+}
+
+
+
+
 .error-message {
     color: red;
     font-size: 12px;
@@ -239,15 +275,7 @@
 .why-carmaa-card img{
     width: 100%;
 }
-.why-carmaa-card h4{
-    font-size: 25px;
-    padding-left: 0.3rem;
-    font-family: var(--font);
-    color: #0E111B;
-    font-weight: 600;
-    line-height: 1.2em;
-    width: 100%;
-}
+
 .why-carmaa-card p{
     color: #424649;
     padding-left: 0.3rem;
@@ -256,7 +284,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.6em;
    
@@ -301,67 +329,6 @@
 
 
 
-
-.parallex-cta{
-    background-image: url('../images/home-page/cta/cta-bg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    padding: 8rem 0px;
-    background-position: center center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-}
-.parallex-cta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
-}
-
-.parallex-cta-inner{
-    width: 40%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-.parallex-cta-inner h4{
-    text-align: center;
-    font-size: 3.75rem;
-    color: white;
-    font-family: var(--font);
-    
-}
-.parallex-cta-inner p{
-color: #BAC4C9;
-font-size: 1.2rem;
-text-align: center;
-margin-top: 2rem;
-margin-bottom: 2rem;
-font-family: var(--body-font);
-}
-.parallex-cta-inner button{
-    margin: 0px auto;
-    text-align: center;
-    color: white;
-    background-color: var(--primary-color);
-    font-size: 14px;
-    letter-spacing: 2px;
-    padding: 18px 28px;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font);
-    text-transform: uppercase;
-    transition: transform 0.3s ease; 
-    }
 
 
 
@@ -777,16 +744,7 @@ font-family: var(--body-font);
     margin-bottom: 0.5rem;
 
 }
-.benefit-left h1{
-   
-    color:#0E111B;
-    font-family: var(--font);
-    font-size: 48px;
-    font-weight:700 ;
-    text-transform:none ;
-    text-decoration:none ;
-    line-height:1.2em ;
-}
+
 .benefit-left .benefit-head-desc{
     color: #424649;
     font-size: 1.1rem;
@@ -799,51 +757,9 @@ font-family: var(--body-font);
     gap: 20px;
     align-items:start;
 }
-.benefit-element-img-wrapper{
-    width: 4.5rem;
-    height:4.5rem;  
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 100%;
 
-}
-.benefit-element-img-wrapper2{
-    width: 4.5rem;
-    height:4.5rem;  
-    background-color: #0E111B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 100%;
 
-}
-.benefit-element-img-wrapper img{
-  width: 2.5rem;
-  height:2.5rem;  
-}
-.benefit-element-img-wrapper2 img{
-    width: 2.5rem;
-    height:2.5rem;  
-  }
-.benefit-element h3{
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.2em;
-    font-family: var(--font);
-}
-.benefit-element-desc p{
-    color: #424649;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6em;
-    margin-top: 0.2rem;
-    font-family: var(--body-font);
-  
-}
+
 .benefit-right{
     position: relative;
     width: 43%;
@@ -1081,6 +997,177 @@ margin-top: 0.5rem;
     position: relative;
 }
 @media screen and (min-width:300px) {
+
+
+
+    .parallex-cta{
+        background-image: url('../images/home-page/cta/cta-bg.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        padding: 8rem 0px;
+        background-position: center center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
+    .parallex-cta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1; 
+    }
+    
+    .parallex-cta-inner{
+        width: 70%;
+        max-width: 1200px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .parallex-cta-inner h4{
+        text-align: center;
+        font-size: 2rem !important;
+        color: white;
+        font-family: var(--font);
+        
+    }
+    .parallex-cta-inner p{
+    color: #BAC4C9;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--body-font);
+    }
+    .parallex-cta-inner button{
+        margin: 0px auto;
+        text-align: center;
+        color: white;
+        background-color: var(--primary-color);
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding: 18px 28px;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font);
+        text-transform: uppercase;
+        transition: transform 0.3s ease; 
+        }
+
+
+
+
+
+
+
+    .benefit-element-img-wrapper{
+        width: 3.5rem;
+        height:3.5rem;  
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 100%;
+    
+    }
+    .benefit-element-img-wrapper img{
+        width: 2rem;
+        height:2rem;  
+      }
+      .benefit-element-img-wrapper2 img{
+          width: 2rem;
+          height:2rem;  
+        }
+      
+    .benefit-element-img-wrapper2{
+        width: 3.5rem;
+        height:3.5rem;  
+        background-color: #0E111B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 100%;
+    
+    }
+    .benefit-element-desc p{
+        color: #424649;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.6em;
+        margin-top: 0.2rem;
+        font-family: var(--body-font);
+      
+    }
+    .benefit-left h1{
+   
+        color:#0E111B;
+        font-family: var(--font);
+        font-size: 25px !important;
+        font-weight:700 ;
+        text-transform:none ;
+        text-decoration:none ;
+        line-height:1.2em ;
+    }
+    .why-carmaa-card h4{
+        font-size: 18px;
+        padding-left: 0.3rem;
+        font-family: var(--font);
+        color: #0E111B;
+        font-weight: 600;
+        line-height: 1.2em;
+        width: 100%;
+    }
+    .hero-section-btn2{
+        color: white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        background-color:var(--primary-color);
+        margin-top: 2rem;
+       border-radius: 0.7rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        padding: 18px 40px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: transform 0.3s ease; 
+        overflow: hidden;
+       
+    }
+    .hero-section-btn2:hover{
+        transform: scale(0.95);
+        background-color: #D06A28;
+    }
+    
+    .hero-section-btn-width{
+        width: 12rem;
+    }
+    
+    .hero-section-pricingtext{
+        font-size: 1.3rem;
+         font-weight: 500;
+          max-width: 380px;
+    }
+    .hero-section-heading{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .hero-section-subheading{
+        font-size: 1.8rem;
+         font-weight: 700; 
+         color: #e77640;
+    }
     .modal-wrapper2{
         border-radius: 6px;
         position:fixed;
@@ -1102,8 +1189,8 @@ margin-top: 0.5rem;
         font-family: var(--font);
     }
     .microfiber-button img{
-        width: 4rem;
-        height:2rem
+        width: 3rem;
+        height:1rem
     }
     .testimonial-track {
         display: flex;
@@ -1396,6 +1483,12 @@ margin-top: 0.5rem;
         gap:10px
 
     }
+    .benefit-element h3{
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.2em;
+        font-family: var(--font);
+    }
     .benefit-element-desc{
         text-align: justify;
     }
@@ -1480,7 +1573,7 @@ margin-top: 0.5rem;
     
 }
 .before-after-heading, .testimonial-heading{
- font-size: 2rem !important;
+ font-size: 1.5rem !important;
 }
 
 .why-carmaa-container h1{
@@ -1516,9 +1609,103 @@ margin-top: 0.5rem;
     cursor: pointer;
 
 }
+.testimonial-slider-2 {
+
+    width: 100%;
+   
+ margin: 2rem auto;
+ 
+    --speed:45s;
+    --item-width:300px;
+    --item-gap:25px;
+    overflow: hidden;
+    --item-width-plus-gap:calc(var(--item-width) + var(--item-gap));
+    --track-width:calc(var(--item-width-plus-gap)*calc(var(--numItems) - 1))
+
+   
+}
+
+.testimonial-track-2 {
+    cursor: pointer;
+    display: grid;
+    container-type: inline-size;
+    grid-template-columns: var(--track-width) [track] 0px [resting];
+    width: max-content;
+   
+}
+
+.testimonial-card {
+    grid-area: resting;
+    width: var(--item-width);
+    animation: marquee-move var(--speed) linear infinite;
+    animation-delay: calc(var(--speed)/var(--numItems)*var(--itemIndex)*-1);
+    
+    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+@keyframes marquee-move{
+    to{
+        transform: translateX(calc(-100cqw - 100%));
+    }
+}
+.testimonial-track-2:hover .testimonial-card {
+    animation-play-state: paused;
+}
 
 }
 @media screen and (min-width:550px) {
+    .testimonial-slider-2 {
+
+        width: 100%;
+       
+     margin: 2rem auto;
+     
+        --speed:45s;
+        --item-width:300px;
+        --item-gap:25px;
+        overflow: hidden;
+        --item-width-plus-gap:calc(var(--item-width) + var(--item-gap));
+        --track-width:calc(var(--item-width-plus-gap)*calc(var(--numItems) - 1))
+    
+       
+    }
+    
+    .testimonial-track-2 {
+        cursor: pointer;
+        display: grid;
+        container-type: inline-size;
+        grid-template-columns: var(--track-width) [track] 0px [resting];
+        width: max-content;
+       
+    }
+    
+    .testimonial-card {
+        grid-area: resting;
+        width: var(--item-width);
+        animation: marquee-move var(--speed) linear infinite;
+        animation-delay: calc(var(--speed)/var(--numItems)*var(--itemIndex)*-1);
+        
+        -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+        -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+        box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 10px;
+    
+    }
+    @keyframes marquee-move{
+        to{
+            transform: translateX(calc(-100cqw - 100%));
+        }
+    }
+    .testimonial-track-2:hover .testimonial-card {
+        animation-play-state: paused;
+    }
     .benefits-cta-section{
         display: flex;
         flex-direction: row;
@@ -1539,6 +1726,108 @@ margin-top: 0.5rem;
     }
 }
 @media screen and (min-width:750px) {
+
+
+    
+
+    .parallex-cta{
+        background-image: url('../images/home-page/cta/cta-bg.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        padding: 8rem 0px;
+        background-position: center center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
+    .parallex-cta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1; 
+    }
+    
+    .parallex-cta-inner{
+        width: 70%;
+        max-width: 1200px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .parallex-cta-inner h4{
+        text-align: center;
+        font-size: 3rem !important;
+        color: white;
+        font-family: var(--font);
+        
+    }
+    .parallex-cta-inner p{
+    color: #BAC4C9;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--body-font);
+    }
+    .parallex-cta-inner button{
+        margin: 0px auto;
+        text-align: center;
+        color: white;
+        background-color: var(--primary-color);
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding: 18px 28px;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font);
+        text-transform: uppercase;
+        transition: transform 0.3s ease; 
+        }
+
+    .benefit-left h1{
+   
+        color:#0E111B;
+        font-family: var(--font);
+        font-size: 48px;
+        font-weight:700 ;
+        text-transform:none ;
+        text-decoration:none ;
+        line-height:1.2em ;
+    }
+    .why-carmaa-card h4{
+        font-size: 25px;
+        padding-left: 0.3rem;
+        font-family: var(--font);
+        color: #0E111B;
+        font-weight: 600;
+        line-height: 1.2em;
+        width: 100%;
+    }
+    .hero-section-btn-width{
+        width: 15rem;
+    }
+    .hero-section-pricingtext{
+        font-size: 1.5rem;
+         font-weight: 500;
+          max-width: 380px;
+    }
+    .hero-section-subheading{
+        font-size: 2rem;
+         font-weight: 700; 
+         color: #e77640;
+    }
+    .hero-section-heading{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
     .modal-wrapper2{
         border-radius: 6px;
         position:fixed;
@@ -1925,67 +2214,6 @@ margin-top: 0.5rem;
 
 
 
-.parallex-cta{
-    background-image: url('../images/home-page/cta/cta-bg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    padding: 8rem 0px;
-    background-position: center center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-}
-.parallex-cta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
-}
-
-.parallex-cta-inner{
-    width: 70%;
-    max-width: 1200px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-.parallex-cta-inner h4{
-    text-align: center;
-    font-size: 3.75rem;
-    color: white;
-    font-family: var(--font);
-    
-}
-.parallex-cta-inner p{
-color: #BAC4C9;
-font-size: 1.2rem;
-text-align: center;
-margin-top: 2rem;
-margin-bottom: 2rem;
-font-family: var(--body-font);
-}
-.parallex-cta-inner button{
-    margin: 0px auto;
-    text-align: center;
-    color: white;
-    background-color: var(--primary-color);
-    font-size: 14px;
-    letter-spacing: 2px;
-    padding: 18px 28px;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font);
-    text-transform: uppercase;
-    transition: transform 0.3s ease; 
-    }
 
 
 
@@ -2522,6 +2750,9 @@ font-family: var(--body-font);
     color: var(--primary-color) !important;
     text-align: center;
 }
+.before-after-heading, .testimonial-heading{
+    font-size: 2rem !important;
+   }
 .before-after-heading{
     color: #0E111B !important;
     text-align: center;
@@ -2657,7 +2888,62 @@ margin-top: 0.5rem;
     width: 80%;
     margin: 0px auto;
 
-}  
+}
+.testimonial-slider-2 {
+
+    width: 100%;
+   
+ margin: 2rem auto;
+ 
+    --speed:45s;
+    --item-width:500px;
+    --item-gap:25px;
+    overflow: hidden;
+    --item-width-plus-gap:calc(var(--item-width) + var(--item-gap));
+    --track-width:calc(var(--item-width-plus-gap)*calc(var(--numItems) - 1))
+
+   
+}
+
+.testimonial-track-2 {
+    cursor: pointer;
+    display: grid;
+    container-type: inline-size;
+    grid-template-columns: var(--track-width) [track] 0px [resting];
+    width: max-content;
+   
+}
+
+.testimonial-card {
+    grid-area: resting;
+    width: var(--item-width);
+    animation: marquee-move var(--speed) linear infinite;
+    animation-delay: calc(var(--speed)/var(--numItems)*var(--itemIndex)*-1);
+    
+    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+@keyframes marquee-move{
+    to{
+        transform: translateX(calc(-100cqw - 100%));
+    }
+}
+.testimonial-track-2:hover .testimonial-card {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+
+
 }
 
 
@@ -2681,7 +2967,7 @@ margin-top: 0.5rem;
 }
 
 .testimonial-card {
-    flex: 0 0 60%; 
+    flex: 0 0 40%; 
     box-sizing: border-box;
     padding: 1rem 1rem;
     text-align: center;
@@ -2748,6 +3034,7 @@ margin-top: 0.5rem;
     .testimonial-text {
         font-size: 1rem;
     }
+    
 }
 
 
@@ -2772,24 +3059,7 @@ margin-top: 0.5rem;
    
 }
 
-.hero-section-btn2{
-    color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background-color:var(--primary-color);
-    margin-top: 2rem;
-   border-radius: 0.7rem;
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    padding: 18px 40px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    font-weight: 800;
-    text-transform: uppercase;
-    transition: transform 0.3s ease; 
-    overflow: hidden;
-   
-}
+
 .hero-section-btn2:before{
     content:'';
     position:absolute;
@@ -2820,9 +3090,6 @@ margin-top: 0.5rem;
 .services-card-container{
     display: flex;
 }
-.hero-section-btn-width{
-    width: 15rem;
-}
 
 
 
@@ -2832,50 +3099,3 @@ margin-top: 0.5rem;
 
 
 
-.testimonial-slider-2 {
-
-    width: 100%;
-   
- margin: 2rem auto;
- 
-    --speed:45s;
-    --item-width:500px;
-    --item-gap:25px;
-    overflow: hidden;
-    --item-width-plus-gap:calc(var(--item-width) + var(--item-gap));
-    --track-width:calc(var(--item-width-plus-gap)*calc(var(--numItems) - 1))
-
-   
-}
-
-.testimonial-track-2 {
-    cursor: pointer;
-    display: grid;
-    container-type: inline-size;
-    grid-template-columns: var(--track-width) [track] 0px [resting];
-    width: max-content;
-   
-}
-
-.testimonial-card {
-    grid-area: resting;
-    width: var(--item-width);
-    animation: marquee-move var(--speed) linear infinite;
-    animation-delay: calc(var(--speed)/var(--numItems)*var(--itemIndex)*-1);
-    
-    -webkit-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
-    -moz-box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
-    box-shadow: 10px 10px 29px -3px rgba(26,63,87,1);
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
-
-}
-@keyframes marquee-move{
-    to{
-        transform: translateX(calc(-100cqw - 100%));
-    }
-}
-.testimonial-track-2:hover .testimonial-card {
-    animation-play-state: paused;
-}

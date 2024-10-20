@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="../css/contactus.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franchise</title>
@@ -37,6 +38,8 @@
     <link rel="stylesheet" href="../css/fanchise.css"/>
     <link rel="stylesheet" href="../css/homepage.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    
        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
@@ -102,7 +105,36 @@
 </head>
 
 <body>
-   
+    <div class="topbar-section-common">
+        <div class="topbar-section-container">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img src="../images/contactus/facebook.png"/></div></a>
+                <a  href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img src="../images/contactus/instagram.png"/></div></a>
+               <a  href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"> <img src="../images/contactus/youtube.png"/></div></a>
+               <a  href="../blogs/"><div class="img-wrapper"> <img src="../images/home-page/topbar/blogger.png"/></div></a>
+            </div>
+         
+            <p id="topbar-text" style="color: #fff; font-weight: 400; font-size: 1.1rem; margin: 0;font-weight: 600;">
+                Bring your car's showroom shine back!
+            </p>
+
+           
+            <div style="display:flex;flex-direction: column; align-items: center;">
+                <div  style="display:flex;align-items: center;gap:0.3rem">
+                    <img style="width: 1.5rem;height:1.5rem" src="../images/home-page/topbar/phone.png"/>
+                    <p style="color: #fff;font-weight: 400;">+91 70425 55401</p>
+
+                </div>
+                <div  style="display:flex;align-items: center;gap:0.3rem">
+                    <img style="width: 1.5rem;height:1.5rem" src="../images/home-page/topbar/email.png"/>
+                    <p style="color: #fff;font-weight: 400;">support@carmaacarcare.com</p>
+
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
     <nav id="nav-placeholder"
     style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
     <div
@@ -288,7 +320,7 @@
     <div class="franchise-hero-section-left">
         <h1>Boost your Income by Joining Carmaa as a Partner Manager</h1>
         <h2>Join Us Today and Experience Rapid Growth with an 8-Month ROI</h2>
-        <button class="franchise-cta-btn">Become a Partner Manager</button>
+        <a href="#registration"><button class=" hero-section-btn2-franchise">Become a Partner Manager</button></a>
     </div>
     <div class="franchise-hero-section-right">
         <iframe  src="https://www.youtube.com/embed/MLpWrANjFbI?si=0pgw56Sgas_boALq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -321,7 +353,7 @@
     <div class="parallex-cta-inner">
        <h4>Join Our Network of Successful Car Wash Partners Today!</h4>
        <p>Ready to grow your car wash business and reach more customers? Partner with us and take advantage of our powerful platform, marketing support, and advanced technology. Click below to get started and see how we can drive success together!</p>
-       <button class=" open-booking-modal hero-section-btn">Book Now</button>
+       <a href="#registration"><button class=" open-booking-modal  hero-section-btn2-franchise">Become a Partner</button></a>
     </div>
 </section>
 <section class="section-why-carmaa" id="why-carma">
@@ -394,7 +426,62 @@
     </main>
     </div>
     </section>
-   
+    <section id="registration" style="background-color: white;" class="franchise-success-stories">
+        <h2 class="subheading">Witness the power of partnership</h2>
+        <h1 class="heading">Apply Now to Become Carmaa's Partner</h1>
+      
+    
+    </section>
+    <div style="display: flex;align-items: center;justify-content: center;margin-top: 1rem;margin-bottom: 2rem;padding-left:1rem;padding-right: 1rem ;">
+        <div class="contactus-right-section">
+            <h1>Registeration Details</h1>
+          
+                <form id="subscriptionForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                     
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Enter additional details..."></textarea>
+                        </div>
+                    </div>
+                    <button class="btn-submit-contact"  style="cursor: pointer;" type="submit" id="submitBtn">
+                        <span class="spinner" id="spinner" style="display: none;"></span>
+                        <span id="btnText">Submit</span>
+                    </button>
+                    <div class="success-message" id="successMessage"></div>
+                    <div class="error-message" id="errorMessage"></div>
+                </form>
+            
+        
+        </div>
+    </div>
+    
 
  
 </section>
@@ -407,7 +494,7 @@
                 });
         </script>
     </div>
-   
+    <script src="../js/franchise.js"></script>
 </body>
 
 </html>

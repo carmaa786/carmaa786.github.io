@@ -104,6 +104,23 @@ margin-top: 1rem;
 
     
 }
+.footer-link2{
+    font-family: var(--body-font);
+    color:white;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    text-decoration: none;
+}
+
+.footer-link2:hover{
+    color:var(--primary-color);
+
+    
+}
+
 
 @media screen and (min-width:300px) {
     .footer-container{
