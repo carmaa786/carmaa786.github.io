@@ -197,35 +197,14 @@ margin-top: 0.5rem;
  .mission-section-wrapper{
     position: relative;
  }
- .mission-section-counter {
-    position: absolute;
-    padding: 4rem 4rem;
-    width: 80%;
-    left: 50%;
-    top:-110px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    background-image: url('../images/aboutus/textture-bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
+
 .mission-section-counter .counter-desc{
     display: flex;
     justify-content: center;
     align-items: center;
     gap:0.5rem;
 }
-.mission-section-counter .counter-desc h1{
-font-size: 2rem;
-font-size: 4.5rem;
-font-family: var(--font);
-color: white;
-}
+
 .mission-section-counter .counter-desc .desc{
     width: 40%;
     color: white;
@@ -322,7 +301,7 @@ font-weight: 600;
 }
 .aboutus-cta-right .call-container button{
     color:white ;
-    background-color: #E77640;
+   
     font-size: 20px;
     letter-spacing: 2px;
     padding: 18px 32px;
@@ -367,6 +346,12 @@ font-weight: 600;
    margin-top: 1rem;
 }
 @media screen and (min-width:300px) {
+    .mission-section-counter .counter-desc h1{
+        font-size: 2rem;
+        
+        font-family: var(--font);
+        color: white;
+        }
     .mission-section-counter{
         display: flex;
         flex-direction: column;
@@ -409,11 +394,11 @@ font-weight: 600;
     }
 
     .mission-section-counter {
-       
         width: 100%;
         border-radius: 20px;
         display: flex;
         align-items: center;
+        gap:1.2rem;
         justify-content: space-between;
         background-color: var(--primary-color);
         background-image: url('../images/aboutus/textture-bg.png');
@@ -426,7 +411,7 @@ font-weight: 600;
         color: white;
         text-transform: uppercase;
         font-family: var(--font);
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.5rem;
     }
      .mission-section{
@@ -507,6 +492,22 @@ font-weight: 600;
         font-size: 2rem;
       
     }
+    .mission-section-counter {
+        position: absolute;
+        padding: 2rem 2rem;
+        width: 80%;
+        left: 50%;
+        top:-110px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        transform: translateX(-50%);
+        background-color: var(--primary-color);
+        background-image: url('../images/aboutus/textture-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
 }
 @media screen and (min-width:412px) {
@@ -533,6 +534,12 @@ font-weight: 600;
     
 }
 @media screen and (min-width:850px) {
+    .mission-section-counter .counter-desc h1{
+        font-size: 2rem;
+        font-size: 3.5rem;
+        font-family: var(--font);
+        color: white;
+        }
     .mission-container{
         margin-top: 3rem;
         display: flex;
@@ -556,6 +563,24 @@ font-weight: 600;
     
 }
 @media screen and (min-width:1200px) {
+    .mission-section-counter {
+        position: absolute;
+        padding: 4rem 2rem;
+        width: 80%;
+        left: 50%;
+        top:-110px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 0rem;
+        justify-content: space-between;
+        transform: translateX(-50%);
+        background-color: var(--primary-color);
+        background-image: url('../images/aboutus/textture-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
     .breadcrumb-link{
         font-family: var(--body-font);
         color: white;
@@ -751,7 +776,7 @@ font-weight: 600;
      }
      .mission-section-counter {
         position: absolute;
-        padding: 4rem 4rem;
+        padding: rem 1rem;
         width: 80%;
         left: 50%;
         top:-110px;
@@ -776,7 +801,7 @@ font-weight: 600;
     }
     .mission-section-counter .counter-desc h1{
     font-size: 2rem;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: var(--font);
     color: white;
     }
@@ -785,7 +810,7 @@ font-weight: 600;
         color: white;
         text-transform: uppercase;
         font-family: var(--font);
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.5rem;
     }
     
@@ -883,7 +908,7 @@ width: 50%;
     }
     .aboutus-cta-right .call-container button{
         color:white ;
-        background-color: #E77640;
+       
         font-size: 20px;
         letter-spacing: 2px;
         padding: 18px 32px;
