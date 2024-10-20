@@ -19,7 +19,7 @@
     overflow: hidden;
     display: none;
   
-    transition: max-height 0.5s ease;
+    transition: height 10s ease;
 }
 
 .expanded {
@@ -2093,9 +2093,12 @@ margin-top: 0.5rem;
     justify-content: space-between;
     margin-top: 5rem;
 }
+.why-carmaa-card-desc{
+    height:8rem
+}
 .why-carmaa-card{
-    width: 31%;
-    
+    width: 30%;
+
     padding: 4rem 1rem 1rem 1rem;
     background-color: white;
     position: relative;
