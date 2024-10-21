@@ -4,27 +4,9 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
-.blog-container{
-    background-color: #f0f3ff;
-    padding: 2rem 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap:1.5rem;
-}
-.blog-card-href{
-    width: 30%;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    transition: all 0.3s ease-in;
-}
+
 .blog-card-href:hover{
-    width: 30%;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+    
     scale: 1.05;
 }
 
@@ -69,4 +51,44 @@ background-color: white;
 .blog-auth-des{
     margin-top: 0.4rem;
     color: #424649;
+}
+@media screen and (min-width:300px) {
+    .blog-card-href{
+        width: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-in;
+    }
+    .blog-container{
+        background-color: #f0f3ff;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap:1.5rem;
+    }
+    
+    
+}
+@media screen and (min-width:1200px) {
+    .blog-card-href{
+        width: 30%;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-in;
+    }
+    .blog-container{
+        background-color: #f0f3ff;
+        padding: 2rem 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap:1.5rem;
+    }
+    
+    
 }

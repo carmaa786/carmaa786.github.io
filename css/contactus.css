@@ -111,13 +111,13 @@ margin-top: 1.5rem;
     border-style: solid;
     border-color: var(--silver);
 }
-.social-media-icons{
+.social-media-icons2{
     margin-top: 2.3rem;
     display: flex;
     gap:0.5rem
 }
 
-.social-media-icons .img-wrapper{
+.social-media-icons2 .img-wrapper{
    width: 3rem;
    height: 3rem;
     display: flex;
@@ -127,10 +127,10 @@ margin-top: 1.5rem;
     background-color: #01628F;
     
 }
-.social-media-icons .img-wrapper:hover{
+.social-media-icons2 .img-wrapper:hover{
     background-color: #E77640;
 }
-.social-media-icons img{
+.social-media-icons2 img{
     width: 1.2rem;
     height: 1.2rem;
   

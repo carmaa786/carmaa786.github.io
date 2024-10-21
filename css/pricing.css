@@ -4,8 +4,18 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.6s linear infinite;
+    margin-left: 8px; /* Adjust for spacing */
+    vertical-align: middle;
+}
 .pricing-section{
-    padding: 2rem 0rem;
+    padding: 2rem 1rem !important;
     background-color: #F0F3FF;
 }
 .pricing-sub{
@@ -24,6 +34,7 @@
     font-size: 2rem;  
 }
 .pricing-container{
+    
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
@@ -33,18 +44,7 @@
     justify-content: center;
 
 }
-.pricing-card{
-    position: relative;
-    background-color: #ffffff;
-    border: 1px;
-    border-radius: 10px;
-    border-style: solid;
-    padding: 2rem 2rem;
-    width: 400px;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px hsl(0, 50%, 2%, .5);
-    transition: all 0.3s ease-in;
-}
+
 .pricing-card:hover{
     box-shadow: 10px 10px 10px hsl(0, 50%, 2%, .5);
     scale: 1.03;
@@ -135,8 +135,23 @@ margin-top: 1rem;
     transform: scale(0.95)
 }
 @media screen and (min-width:300px) {
+    
     .pricing-container{
+       
         flex-direction: column;
+    }
+    .pricing-card{
+    
+        position: relative;
+        background-color: #ffffff;
+        border: 1px;
+        border-radius: 10px;
+        border-style: solid;
+        padding: 2rem 2rem;
+        width: 350px;
+        overflow: hidden;
+        box-shadow: 3px 3px 3px hsl(0, 50%, 2%, .5);
+        transition: all 0.3s ease-in;
     }
     
 }
@@ -145,6 +160,19 @@ margin-top: 1rem;
         flex-direction: row;
         gap:1rem
         
+    }
+    .pricing-card{
+    
+        position: relative;
+        background-color: #ffffff;
+        border: 1px;
+        border-radius: 10px;
+        border-style: solid;
+        padding: 2rem 2rem;
+        width: 400px;
+        overflow: hidden;
+        box-shadow: 3px 3px 3px hsl(0, 50%, 2%, .5);
+        transition: all 0.3s ease-in;
     }
     
 }
@@ -227,6 +255,85 @@ margin-top: 1rem;
 
 
 
+.gallery2{
+    width: 1500px;
+    max-width: 40rem;
+    display: flex;
+   
+    overflow-x: scroll;
+}
+.gallery2::-webkit-scrollbar{
+    display: none;
+}
+.gallery2 .gallery2-wrapper{
+    width: 100%;
+    min-width: 380px;
+    max-width: 380px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    padding: 2px;
+    flex: none;
+
+} 
+.gallery2 div img{
+    width: 100%;
+    
+  
+}
+.gallery2-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+.gallery2-card{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.gallery2-card:before{
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery2-card-desc{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.gallery2-card-desc h1{
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .gallery{
     width: 1500px;
     display: flex;
@@ -285,4 +392,69 @@ margin-top: 1rem;
     font-weight: 600;
     margin-bottom: 2rem;
     font-family: var(--font);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:300px) {
+    #back-btn{
+        display: none;
+    }
+    #next-btn{
+        display: none;
+    }
+    .gallery2{
+       
+        width: 1500px;
+        max-width: 40rem;
+        display: flex;
+       
+        overflow-x: scroll;
+    }
+    .gallery{
+        width: 1500px;
+      
+        display: none;
+        overflow-x: scroll;
+    }
+    
+}
+@media screen and (min-width:1200px) {
+    #back-btn{
+        display: block;
+    }
+    #next-btn{
+        display: block;
+    }
+    #back2-btn{
+        display: none;
+    }
+    #next2-btn{
+        display: none;
+    }
+    .gallery2{
+       
+        width: 1500px;
+        max-width: 40rem;
+        display: none;
+       
+        overflow-x: scroll;
+    }
+    .gallery{
+        width: 1500px;
+      
+        display: flex;
+        overflow-x: scroll;
+    }
 }
