@@ -74,7 +74,7 @@
            
     }
     .franchise-hero-section-left h1{
-            font-size: 30px;
+            font-size: 25px;
             color: #212529;
             font-family: var(--font);
             margin-bottom: 1.5rem;
@@ -82,7 +82,7 @@
             font-weight: 700;
     }
     .franchise-hero-section-left h2{
-            font-size: 24px;
+            font-size: 20px;
             font-family: var(--body-font);
             color: #585858;
             margin-bottom: 1rem;
@@ -145,6 +145,23 @@
     
 }
 @media screen and (min-width:1200px) {
+    .franchise-hero-section-left h1{
+        font-size: 30px;
+        color: #212529;
+        font-family: var(--font);
+        margin-bottom: 1.5rem;
+        line-height: 32px;
+        font-weight: 700;
+}
+.franchise-hero-section-left h2{
+        font-size: 24px;
+        font-family: var(--body-font);
+        color: #585858;
+        margin-bottom: 1rem;
+        line-height: 28px;
+        font-weight: 200;
+        margin:0px auto;
+}
     .franchise-impact .heading{
         text-align: center;
         font-size: 2rem;

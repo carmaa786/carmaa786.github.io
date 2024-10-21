@@ -103,8 +103,7 @@ height: 1rem;
     padding: 8rem 2rem;
   }
   .topbar-section-common{
-    padding: 0.5rem 0.5rem;
-    background-color: #01628F;
+ display: none;
   }
   .topbar-section-container{
     margin-top: 0rem !important;
@@ -113,7 +112,7 @@ height: 1rem;
     gap:1.5rem;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0px auto;
   }
 }
@@ -129,6 +128,9 @@ height: 1rem;
 
 }
 @media screen and (min-width:1200px) {
+  .topbar-section-common{
+    display:block;
+     }
 
  
   .topbar-section-common{
@@ -137,3 +139,7 @@ height: 1rem;
   }
     
 }
+
+
+
+

@@ -42,7 +42,7 @@ body{
    
 }
 .service-link-point:hover{
-color: var(--primary-color);
+color: #ed6744;
 }
 .link-name{
     font-family: var(--font);
@@ -52,7 +52,7 @@ color: var(--primary-color);
 }
 
 .link-name:hover{
-    color: var(--primary-color);
+    color: #ed6744;
 }
 .service-right-section{
    
@@ -153,6 +153,7 @@ button {
 /* Button hover effect */
 button:hover {
     background-color: #f2f2f2;
+   
 }
 
 /* Message styling */
@@ -175,7 +176,7 @@ button:hover {
 }
 .service-link-point-link:hover{
     text-decoration: none;
-    color: #01628F;
+    color:  #ed6744;
 }
 @media screen and (min-width:300px) {
     .service-main-section{

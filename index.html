@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="canonical" href="https://carmaacarcare.com"/>
+    <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -183,7 +185,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .main-timeline {
-            font-family: tahoma;
+        
             padding: 20px 0;
             position: relative;
             max-width: 1200px;
@@ -231,7 +233,7 @@
             height: 100%;
             width: 50%;
             border-radius: 110px 0 0 110px;
-            border: 15px solid #46b2bc;
+            border: 15px solid #01628F;
             border-right: none;
             position: absolute;
             left: 0;
@@ -247,7 +249,7 @@
         .main-timeline .timeline::after {
             height: calc(100% - 30px);
             width: calc(50% - 12px);
-            border-color: #65c7d0;
+            border-color: #01628F;
             left: 12px;
             top: 15px;
         }
@@ -261,7 +263,7 @@
         }
 
         .main-timeline .timeline-year {
-            color: #65c7d0;
+            color: #01628F;
             font-size: 50px;
             font-weight: 600;
             display: inline-block;
@@ -278,7 +280,7 @@
         }
 
         .main-timeline .timeline-icon {
-            color: #65c7d0;
+            color: #01628F;
             font-size: 70px;
             display: inline-block;
             transform: translateY(-50%);
@@ -296,7 +298,7 @@
         }
 
         .main-timeline .title {
-            color: #65c7d0;
+            color: #01628F;
             font-size: 20px;
             font-weight: 600;
             text-transform: uppercase;
@@ -485,7 +487,7 @@
             scrollbar-width: none;
         }
 
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:1150px) {
             .menu {
                 position: fixed;
                 background-color: rgb(255, 255, 255);
@@ -540,6 +542,9 @@
             cursor: pointer;
             color: #ed6744;
         }
+        .accordion-title{
+            width: 50%;
+        }
 
         .accordion button:hover::after,
         .accordion button:focus::after {
@@ -551,12 +556,13 @@
         .accordion button .accordion-title {
             padding: 1em 1.5em 1em 0;
             font-size: 1.3rem;
+            
         }
 
         .accordion button .icon {
             display: inline-block;
             position: absolute;
-            top: 18px;
+            bottom: 10px;
             right: 0;
             width: 22px;
             height: 22px;
@@ -678,39 +684,39 @@
     style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
     <div
         style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
+        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700;">
             <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="">
+                <img src="./images/logo.png" width="150"  height="80" alt="">
             </a>
         </div>
         <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
             <li style="cursor: pointer; "><a class="nav-item-list"
-                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
+                    style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
                     href="/">Home</a>
             </li>
             <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
-                    href="../about/">About Us</a></li>
-                    <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
-                        <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Services</span>
+                class="nav-item-list"   style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                    href="./about/">About Us</a></li>
+                    <li class="dropdownCon" style="cursor: pointer; position: relative;z-index: 1000;"> 
+                        <span class="nav-item-list" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Services</span>
                         <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
                             <li>
-                                <a class="nav-item-list" href="./interior-car-cleaning-service/" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Interior Car Cleaning</a>
+                                <a class="nav-item-list" href="./interior-car-cleaning-service/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Interior Car Cleaning</a>
                             </li>
                             <li>
-                                <a class="nav-item-list" href="./exterior-car-cleaning-washing" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Exterior Car Cleaning & Washing</a>
+                                <a class="nav-item-list" href="./exterior-car-cleaning-washing" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Exterior Car Cleaning & Washing</a>
                             </li>
                             <li>
-                                <a class="nav-item-list" href="./car-dry-cleaning-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Car Dry Cleaning</a>
+                                <a class="nav-item-list" href="./car-dry-cleaning-service" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Car Dry Cleaning</a>
                             </li>
                             <li>
-                                <a class="nav-item-list" href="./car-body-polish-and-car-waxing-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Complete Car Body Polish and Wax</a>
+                                <a class="nav-item-list" href="./car-body-polish-and-car-waxing-service" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Complete Car Body Polish and Wax</a>
                             </li>
                             <li>
-                                <a class="nav-item-list" href="./full-car-wash-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Full Car Wash</a>
+                                <a class="nav-item-list" href="./full-car-wash-service" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Full Car Wash</a>
                             </li>
                             <li>
-                                <a class="nav-item-list" href="./car-deep-cleaning-services/" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Deep Cleaning</a>
+                                <a class="nav-item-list" href="./car-deep-cleaning-services/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Deep Cleaning</a>
                             </li>
                         </ul>
                         <style>
@@ -735,7 +741,7 @@
                             }
                     
                             .dropdown>li>a:hover {
-                            color: #01628F; /* Background color change on hover */
+                            color: #ed6744; /* Background color change on hover */
                                 color: white; /* Change text color to white when hovered */
                             }
                     
@@ -746,7 +752,7 @@
                     
                             /* Hover effect for the main dropdown container */
                             .dropdownCon:hover .nav-item-list {
-                                color: #01628F; /* Background color for the hovered nav */
+                                color: #ed6744; /* Background color for the hovered nav */
                                 color: white; /* Change text color to white */
                                 border-radius: 4px;
                                 padding: 4px 8px;
@@ -755,19 +761,19 @@
                         </style>
                     </li>
                     <li style="cursor: pointer; "> <a
-                        class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
-                            href="../franchise/">Partner with Us</a></li>
+                        class="nav-item-list"   style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                            href="./franchise/">Partner with Us</a></li>
                             <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
-                                <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Our Locations</span>
+                                <span class="nav-item-list" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Our Locations</span>
                                 <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
                                     <li>
-                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-dehradun" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
+                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-dehradun" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Dehradun</a>
                                     </li>
                                     <li>
-                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-noida" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Noida</a>
+                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-noida" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Noida</a>
                                     </li>
                                     <li>
-                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-uttarakhand" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Uttarakhand</a>
+                                        <a class="nav-item-list" href="./doorstep-car-washing-service-in-uttarakhand" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Uttarakhand</a>
                                     </li>
                                  
                                 </ul>
@@ -793,7 +799,7 @@
                                     }
                             
                                     .dropdown>li>a:hover {
-                                    color: #01628F; /* Background color change on hover */
+                                    color:#ed6744; /* Background color change on hover */
                                         color: white; /* Change text color to white when hovered */
                                     }
                             
@@ -804,7 +810,7 @@
                             
                                     /* Hover effect for the main dropdown container */
                                     .dropdownCon:hover .nav-item-list {
-                                        color: #01628F; /* Background color for the hovered nav */
+                                        color: #ed6744; /* Background color for the hovered nav */
                                         color: white; /* Change text color to white */
                                         border-radius: 4px;
                                         padding: 4px 8px;
@@ -813,11 +819,14 @@
                                 </style>
                             </li>
             <li style="cursor: pointer; "><a
-                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
-                    href="../pricing/">Pricing</a> </li>
+                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000; "
+                    href="./pricing/">Pricing</a> </li>
+                    <li style="cursor: pointer; "><a
+                        class="nav-item-list"  style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000; "
+                            href="./contactus/">Contact Us</a> </li>
           
                  
-                    
+                   
            
                 
          
@@ -830,13 +839,7 @@
             <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
                 <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
             </button>
-            <div class="btn"
-                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
-                <a href="../contactus/"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
-                    Contact Us
-                </a>
-            </div>
+         
         </div>
     </div>
     <script>
@@ -853,6 +856,7 @@
 
     </script>
 </nav>
+
     
     <div style="width: 100vw;  " id="home">
         <div class="a"
@@ -888,7 +892,7 @@
 <section class="home-video">
     
         <div class="why-carmaa-container">
-            <h2 class="testimonial-sub-heading">WHO WE ARE</h2>
+            <h2 class="testimonial-sub-heading color-white" style="color: #fff;">WHO WE ARE</h2>
             <h1 class="faq-heading">Professional Car Wash and Detailing Center</h1>
         </div>
             
@@ -1125,19 +1129,19 @@
 
     <section class="counter-section">
         <div class="counter-section-element">
-            <h4 data-target="1500">1400</h4>
+            <h4  class="counter-js target-1500" data-target="1500">1450</h4>
             <p>Car Cleaned</p>
         </div>
         <div class="counter-section-element">
-            <h4 data-target="650">0</h4>
+            <h4 class="counter-js" data-target="650">600</h4>
             <p>Car Washed</p>
         </div>
         <div class="counter-section-element">
-            <h4 data-target="100">0</h4>
+            <h4 class="counter-js" data-target="100">0</h4>
             <p>Customer Satisfaction</p>
         </div>
         <div class="counter-section-element">
-            <h4 data-target="110">0</h4>
+            <h4 class="counter-js" data-target="50">0</h4>
             <p>Professional Team Members</p>
         </div>
     </section>
@@ -1167,18 +1171,16 @@
     </script>
     <div style="width: 100vw; background-color:transparent; margin-top: 50px;">
         <div style="width: 95%;height: 100%; max-width: 1200px;margin: auto;">
-            <h3 class="services" style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">How
-                Its Work</h3>
-            <h2 class="services"
-                style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto; margin-bottom: 50px;">
-                Discover How Our Easy, Hassle-Free Process Works
-            </h2>
+            <div class="why-carmaa-container">
+                <h2 class="testimonial-sub-heading">Discover</h2>
+                <h1 class="before-after-heading " style="margin-bottom: 2rem;">How Carmaa Works</h1>
+            </div>
             <div class="main-timeline">
                 <div class="timeline">
                     <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/car.png" alt="" style="width: 80%; ">
+                            <img src="./images/home-page/timeline/Image-1.png" alt="" style="width: 20rem;height: 20rem; ">
                         </div>
                         <div class="timeline-icon">
                           
@@ -1205,7 +1207,7 @@
                         </div>
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/car.png" alt="" style="width: 80%; ">
+                            <img src="./images/home-page/timeline/Image-2.png" alt="" style="width: 20rem;height: 20rem; ">
                         </div>
                     </a>
                 </div>
@@ -1213,7 +1215,7 @@
                     <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/car.png" alt="" style="width: 80%; ">
+                            <img src="./images/home-page/timeline/Image-3.png" alt="" style="width: 20rem;height: 20rem; ">
                         </div>
                         <div class="timeline-icon">
                           
@@ -1228,9 +1230,7 @@
                 </div>
                 <div class="timeline">
                     <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
-                        <div class="timeline-icon">
-                            <i class="fa fa-rocket" aria-hidden="true"></i>
-                        </div>
+                     
                         <div class="content">
                             <h3 class="title">Enjoy a Spotless Car Without the Hassle</h3>
                             <p class="description">
@@ -1239,7 +1239,7 @@
                         </div>
                         <div class="timeline-year"
                             style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/car.png" alt="" style="width: 80%; ">
+                            <img src="./images/home-page/timeline/Image-4.png" alt="" style="width: 20rem;height: 20rem; ">
                         </div>
                     </a>
                 </div>
@@ -1520,10 +1520,7 @@
                            
                             <div class="author-container">
                                 <p class="author-name">Tanya Bhatt</p>
-                                <div style="display: flex;gap:0.3rem">
-                                    <img width="5rem" height="5rem" src="./images/home-page/testimonial/star.png"/>
-
-                                </div>
+                                
                                 <div style="display: flex;gap:0.5rem;margin-top:1rem">
                                     <img width="14rem" height="14rem" src="./images/home-page/testimonial/star.png"/>
                                     <img width="14rem" height="14rem" src="./images/home-page/testimonial/star.png"/>
@@ -1993,6 +1990,22 @@
 
             // Close button functionality
             document.getElementById("close-btn").addEventListener("click", function () {
+                document.getElementById('nameError').textContent = '';
+          document.getElementById('phoneError').textContent = '';
+          document.getElementById('addressError').textContent = '';
+          document.getElementById('cityError').textContent = '';
+          document.getElementById('nameInput').value='';
+        document.getElementById('numberInput').value='';
+document.getElementById('addressInput').value='';
+          document.getElementById('cityInput').value='';
+          document.getElementById('errorMessage').textContent=''
+          document.getElementById('successMessage').textContent=''
+        
+        
+                  // Re-enable the button after the request completes and reset the button state
+                  document.getElementById('modal-booking-btn').disabled= false;
+                  document.querySelector('.button-text').style.display = "inline";
+                  document.querySelector('.button-loader').style.display = "none";
                 // Hide the parent div
                 parentDiv.style.display = "none";
                 
@@ -2007,49 +2020,7 @@
                 // Show the div again after 15 seconds
             });
 
-            document.getElementById('contactButton').addEventListener('click', async function () {
-                // Capture the values from the inputs
-                const button = document.getElementById('contactButton');
-
-                // Disable the button
-                button.style.pointerEvents = 'none';
-                button.style.backgroundColor = '#999';
-                const name = document.getElementById('nameInput').value;
-                const number = document.getElementById('numberInput').value;
-                const address = document.getElementById('addressInput').value;
-                if (!name || !number || !address) {
-                    alert('Please fill all fields.');
-                    return;
-                }
-
-                // Prepare the data object
-                const formData = {
-                    name: name,
-                    number: number,
-                    address: address
-                };
-
-                try {
-                    // Send POST request to the API
-                    const response = await fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData),
-                    });
-                    if (response.ok) {
-                        document.getElementById('parent-div').style.display = 'none';
-                    } else {
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                } finally {
-                    button.style.pointerEvents = 'auto';
-                    button.style.backgroundColor = '#183ea1';
-                }
-            });
-
+         
 
         </script>
         
@@ -2103,6 +2074,7 @@
       // Function to animate the counter
       const animateCounter = (counter) => {
         const target = +counter.getAttribute("data-target");
+        console.log(target,"target")
         const count = +counter.innerText;
         const increment = Math.ceil(target / speed); // Calculate the increment for counting
   
@@ -2119,7 +2091,8 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const counter = entry.target.querySelector("h4");
-            counter.innerText = 0; // Start from 0
+            counter.innerText = counter.innerText; // Start from 0
+            
             animateCounter(counter); // Start the animation
             observer.unobserve(entry.target); // Stop observing after animation starts
           }
@@ -2140,6 +2113,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to animate the counter
   const animateCounter = (counter) => {
     const target = +counter.getAttribute("data-target");
+    console.log(target,"target")
     const count = +counter.innerText;
     const increment = Math.ceil(target / speed); // Calculate the increment for counting
 
@@ -2167,41 +2141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const counter = document.querySelector(".counter-js2");
-      const speed = 100; // Adjust the speed of the count-up animation
-    
-      // Function to animate the counter
-      const animateCounter = (counter) => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const increment = Math.ceil(target / speed); // Calculate the increment for counting
-    
-        if (count < target) {
-          counter.innerText = count + increment; // Increment the counter
-          setTimeout(() => animateCounter(counter), 20); // Call the function recursively until the target is reached
-        } else {
-          counter.innerText = target; // Ensure the final value is the target
-        }
-      };
-    
-      // IntersectionObserver to trigger the animation when the counter comes into view
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            counter.innerText = 0; // Start from 0
-            animateCounter(counter); // Start the animation
-            observer.unobserve(entry.target); // Stop observing after animation starts
-          }
-        });
-      });
-    
-      // Observe the single counter element directly
-      observer.observe(counter);
-    });
-    
-    </script>
+
      <script>
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
           event.preventDefault();
@@ -2219,6 +2159,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById('phoneError').textContent = '';
           document.getElementById('addressError').textContent = '';
           document.getElementById('cityError').textContent = '';
+          
           // Validate Name
           if (name === '') {
               document.getElementById('nameError').textContent = 'Name is required.';
@@ -2280,6 +2221,15 @@ document.addEventListener("DOMContentLoaded", function () {
                   console.error('Error:', error);
               })
               .finally(() => {
+                document.getElementById('nameError').textContent = '';
+          document.getElementById('phoneError').textContent = '';
+          document.getElementById('addressError').textContent = '';
+          document.getElementById('cityError').textContent = '';
+          document.getElementById('nameInput').value='';
+        document.getElementById('numberInput').value='';
+document.getElementById('addressInput').value='';
+          document.getElementById('cityInput').value='';
+        
                   // Re-enable the button after the request completes and reset the button state
                   contactButton.disabled = false;
                   buttonText.style.display = "inline";

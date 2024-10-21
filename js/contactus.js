@@ -78,6 +78,12 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
             document.getElementById('successMessage').className = 'success-message error';
             document.getElementById('successMessage').textContent = 'An error occurred while submitting the form. Please try again.';
         } finally {
+            document.getElementById('name').value='';
+    document.getElementById('phone').value='';
+    document.getElementById('date').value='';
+    document.getElementById('time').value='';
+    document.getElementById('subscription').value='';
+    document.getElementById('message').value='';
             submitBtn.disabled = false;
             spinner.style.display = 'none'; // Hide the spinner
             btnText.style.display = 'inline'; // Show the text again
