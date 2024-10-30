@@ -14,13 +14,33 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
     // Reset error messages
     document.getElementById('nameError').textContent = '';
     document.getElementById('phoneError').textContent = '';
+    document.getElementById('cityError').textContent = '';
+    document.getElementById('emailError').textContent = '';
     document.getElementById('successMessage').style.display = 'none';
     document.getElementById('successMessage').textContent = '';
     document.getElementById('submitBtn').disabled = false;
+    const nameRegex = /^[A-Za-z\s]+$/;
 
     // Validation for name
     if (name === '') {
         document.getElementById('nameError').textContent = 'Name is required.';
+        isValid = false;
+    }
+    else if(!nameRegex.test(name)){
+        document.getElementById('nameError').textContent = 'Only alphabets are allowed.';
+        isValid = false;
+      }
+
+    if (city === '') {
+        document.getElementById('cityError').textContent = 'City is required.';
+        isValid = false;
+    }
+    else if(!nameRegex.test(city)){
+        document.getElementById('cityError').textContent = 'Only alphabets are allowed.';
+        isValid = false;
+      }
+      if (email === '') {
+        document.getElementById('emailError').textContent = 'Email is required.';
         isValid = false;
     }
 
@@ -50,8 +70,8 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
             phone,
             email,
             city,
-          
-            message
+            message,
+            queryFrom:"Partner With us Page"
         };
         console.log(formData,"formData")
 

@@ -372,8 +372,9 @@ font-weight: 600;
     .about-us-left{
         width: 100%;
     }
+   
     .about-us-header h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .about-us-para{
         width: 100%;
@@ -489,7 +490,7 @@ font-weight: 600;
     }
     .aboutus-cta-right h1{
        
-        font-size: 2rem;
+        font-size: 1.5rem;
       
     }
     .mission-section-counter {
@@ -518,6 +519,7 @@ font-weight: 600;
     
 }
 @media screen and (min-width:460px) {
+ 
     .aboutus-cta-right .call-container{
         display: flex;
         flex-direction: row;
@@ -929,7 +931,7 @@ width: 50%;
     }
     .mission-container-element{
         width: 29%;
-        height: 520px;
+        min-height: 600px;
     }
     .mission-container-element img{
         width: 4rem;
@@ -975,6 +977,7 @@ width: 50%;
     }
     .mission-container-element{
         width: 23%;
+        min-height: 490px;
     }  
     .about-us-left{
         width: 38%;

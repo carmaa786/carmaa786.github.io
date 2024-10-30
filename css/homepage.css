@@ -14,17 +14,7 @@
     margin: 20px;
     font-family: Arial, sans-serif;
 }
-.more-text {
-    max-height: 0;
-    overflow: hidden;
-    display: none;
-  
-    transition: height 10s ease;
-}
 
-.expanded {
-    max-height: 500px; /* Set to a high value to accommodate longer text */
-}
 
 
 .read-more-btn {
@@ -53,9 +43,7 @@
     margin-bottom: 1.5rem;
     font-family: var(--body-font);
 }
-.why-carmaa-card-desc{
-    height: 5rem;
-}
+
 
 .success-message {
     color: green;
@@ -125,7 +113,7 @@
     left: var(--position);
     transform: translate(-50%, -50%);
     pointer-events: none;
-    z-index: 999;
+    z-index: 1;
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
     background-color: #a8d5e2; /* Light blue to resemble microfiber cloth */
     color: #fff;
@@ -310,7 +298,7 @@
     align-items: center;
     gap: 15px;
 }
-.counter-section-element h4{
+.counter-section-element h4,.counter-section-sign{
     justify-self: center;
     color: #ffffff;
     font-size: 3.5rem;
@@ -477,6 +465,7 @@
     font-family: var(--body-font) !important;
 }
 #parent-div,#parent-div2{
+    z-index: 1000;
     display: none;
 }
 .spinner {
@@ -530,7 +519,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
-    z-index: 200;
+    z-index: 10000;
     display: flex;
     gap:6rem;
     overflow: hidden;
@@ -548,7 +537,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
-    z-index: 200;
+    z-index: 10000;
     display: flex;
     
     position: relative;
@@ -998,9 +987,19 @@ margin-top: 0.5rem;
     position: relative;
 }
 @media screen and (min-width:300px) {
-
-
-
+    .more-text {
+        min-height: 0;
+       
+      text-align: justify !important;
+        overflow: hidden;
+        display: none;
+      
+        transition: height 10s ease;
+    }
+    
+    .expanded {
+        min-height: 25rem; /* Set to a high value to accommodate longer text */
+    }
     .parallex-cta{
         background-image: url('../images/home-page/cta/cta-bg.jpg');
         background-attachment: fixed;
@@ -1179,7 +1178,7 @@ margin-top: 0.5rem;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: slideIn 0.5s forwards ease-out;
-        z-index: 200;
+        z-index: 10000;
         display: flex;
         
         position: relative;
@@ -1248,7 +1247,7 @@ margin-top: 0.5rem;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: slideIn 0.5s forwards ease-out;
-        z-index: 200;
+        z-index: 10000;
         display: flex;
         gap:0rem;
         flex-direction: column;
@@ -1530,7 +1529,7 @@ margin-top: 0.5rem;
         align-items: center;
         gap: 15px;
     }
-    .counter-section-element h4{
+    .counter-section-element h4,.counter-section-sign{
         justify-self: center;
         color: #ffffff;
         font-size: 2.5rem;
@@ -1661,6 +1660,19 @@ margin-top: 0.5rem;
 
 }
 @media screen and (min-width:550px) {
+    .more-text {
+        min-height: 0;
+       
+      text-align: justify !important;
+        overflow: hidden;
+        display: none;
+      
+        transition: height 10s ease;
+    }
+    
+    .expanded {
+        min-height: 15rem; /* Set to a high value to accommodate longer text */
+    }
     .testimonial-slider-2 {
 
         width: 100%;
@@ -1728,8 +1740,19 @@ margin-top: 0.5rem;
     }
 }
 @media screen and (min-width:750px) {
-
-
+    .more-text {
+        min-height: 0;
+       
+      text-align: justify !important;
+        overflow: hidden;
+        display: none;
+      
+        transition: height 10s ease;
+    }
+    
+    .expanded {
+        min-height: 35rem; /* Set to a high value to accommodate longer text */
+    }
     
 
     .parallex-cta{
@@ -1840,7 +1863,7 @@ margin-top: 0.5rem;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: slideIn 0.5s forwards ease-out;
-        z-index: 200;
+        z-index: 10000;
         display: flex;
         
         position: relative;
@@ -1885,7 +1908,7 @@ margin-top: 0.5rem;
         align-items: center;
         gap: 15px;
     }
-    .counter-section-element h4{
+    .counter-section-element h4,.counter-section-sign{
         justify-self: center;
         color: #ffffff;
         font-size: 3.5rem;
@@ -1926,6 +1949,20 @@ margin-top: 0.5rem;
 }
 
 @media screen and (min-width:1300px){
+    .more-text {
+        min-height: 0;
+       
+      text-align: justify !important;
+        overflow: hidden;
+        display: none;
+      
+        transition: height 10s ease;
+    }
+    
+    .expanded {
+        min-height: 40rem; /* Set to a high value to accommodate longer text */
+    }
+    
     .modal-form-heading{
         display: none;
         font-size: 2rem;
@@ -2095,9 +2132,7 @@ margin-top: 0.5rem;
     justify-content: space-between;
     margin-top: 5rem;
 }
-.why-carmaa-card-desc{
-    height:8rem
-}
+
 .why-carmaa-card{
     width: 30%;
 
@@ -2157,6 +2192,7 @@ margin-top: 0.5rem;
     width: 100%;
 }
 .why-carmaa-card h4{
+    min-height: 3.9rem;
     font-size: 25px;
     padding-left: 0.3rem;
     font-family: var(--font);
@@ -2166,6 +2202,7 @@ margin-top: 0.5rem;
     width: 100%;
 }
 .why-carmaa-card p{
+    min-height: 9rem;
     color: #424649;
     padding-left: 0.3rem;
     padding-right: 0.6rem;
@@ -2176,7 +2213,6 @@ margin-top: 0.5rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6em;
-   
 
 }
 
@@ -2198,13 +2234,14 @@ margin-top: 0.5rem;
     align-items: center;
     gap: 15px;
 }
-.counter-section-element h4{
+.counter-section-element h4,.counter-section-sign{
     justify-self: center;
     color: #ffffff;
     font-size: 3.5rem;
     font-family: var(--font);
 
 }
+
 .counter-section-element p{
     color: #BAC4C9;
     width: 35%;
@@ -2361,6 +2398,7 @@ margin-top: 0.5rem;
     font-family: var(--body-font) !important;
 }
 #parent-div,#parent-div2{
+    z-index: 1000;
     display: none;
 }
 .modal-container{
@@ -2391,7 +2429,7 @@ margin-top: 0.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
-    z-index: 200;
+    z-index: 10000;
     display: flex;
     gap:6rem;
     overflow: hidden;
@@ -2950,6 +2988,35 @@ margin-top: 0.5rem;
 
 
 
+}
+@media screen and (min-width:1650px) {
+    .more-text {
+        min-height: 0;
+       
+      text-align: justify !important;
+        overflow: hidden;
+        display: none;
+      
+        transition: height 10s ease;
+    }
+    
+    .expanded {
+        min-height: 25rem; /* Set to a high value to accommodate longer text */
+    }
+    .why-carmaa-card p{
+        min-height: 2rem;
+        color: #424649;
+        padding-left: 0.3rem;
+        padding-right: 0.6rem;
+        text-align: justify;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6em;
+    
+    }
 }
 
 

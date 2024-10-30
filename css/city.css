@@ -429,6 +429,9 @@ font-family: var(--body-font);
 
 
 @media screen and (min-width:300px) {
+    .benefit-element-desc p{
+        min-height:10rem ;
+    }
     .city-benefits-heading h1{
         color: black;
         text-transform: uppercase;
@@ -703,6 +706,12 @@ font-family: var(--body-font);
     
 }
 @media screen and (min-width:1100px){
+    .benefit-element-desc h3{
+        min-height:3rem ;
+    }
+    .benefit-element-desc p{
+        min-height:20rem ;
+    }
     .city-benefits-heading h1{
         color: black;
         text-transform: uppercase;
@@ -1168,7 +1177,12 @@ font-family: var(--body-font);
     
 }
 @media screen and (min-width:1300px) {
-    
+    .benefit-element-desc h3{
+        min-height:3rem ;
+    }
+    .benefit-element-desc p{
+        min-height:18rem ;
+    }
     .benefit-right2{
         position: relative;
         width: 43%;
@@ -1466,6 +1480,15 @@ font-family: var(--body-font);
 }
 
 
+
+@media screen and (min-width:1500px) {
+    .benefit-element-desc h3{
+        min-height:2rem ;
+    }
+    .benefit-element-desc p{
+        min-height:16rem ;
+    }
+}
 
 
 

@@ -88,11 +88,7 @@
 position: relative;
 z-index: 2;
 }
-.city-header-section .breadcrumb p{
-    font-family: var(--body-font);
-    font-size: 1rem;
-    font-weight: 300;
-}
+
 .city-header-section .breadcrumb img{
     
 width: 1rem;
@@ -100,7 +96,7 @@ height: 1rem;
 }
 @media screen and (min-width:300px) {
   .city-header-section{
-    padding: 8rem 2rem;
+    padding: 5.5rem 1rem;
   }
   .topbar-section-common{
  display: none;
@@ -115,6 +111,17 @@ height: 1rem;
     max-width: 1200px;
     margin: 0px auto;
   }
+  .city-header-section p{
+   
+    font-size: 1.55rem;
+   
+
+}
+.city-header-section .breadcrumb p{
+
+  font-size: 0.55rem;
+  font-weight: 300;
+}
 }
 @media screen and (min-width:600px) {
   .topbar-section-container{
@@ -137,7 +144,33 @@ height: 1rem;
     padding: 0.5rem 2rem;
     background-color: #01628F;
   }
+  .city-header-section{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 5rem;
+    width: 100%;
+    background-position: left top;
+    background-size: cover;
+    background-image: url('../images/header-img.jpg');
     
+}
+.city-header-section p{
+  color: white;
+  position: relative;
+  font-size: 2.2rem;
+  font-family: var(--font);
+  line-height: 2;
+  font-weight: 700;
+  z-index: 2;
+
+}
+.city-header-section .breadcrumb p{
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 300;
+}
 }
 
 
