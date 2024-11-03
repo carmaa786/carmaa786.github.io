@@ -512,6 +512,7 @@
             <div class="modal-form">
                 <h1 class="modal-form-heading">Get Upto 15% OFF on your First Booking</h1>
                 <img id="close-btn" src="../images/home-page/modal/cancel.png"/>
+                <div style="display: flex; gap:1rem" class="input-box">
                 <div>
                     <p class="modal-form-label">Name*</p>
                     <input class="modal-input" type="text" id="nameInput" placeholder="Enter your full name">
@@ -519,9 +520,10 @@
                 </div>
                 <div>
                     <p class="modal-form-label">Phone Number*</p>
-                    <input class="modal-input" type="text" id="numberInput" placeholder="Enter your phone number">
+                    <input class="modal-input" type="text" id="numberInput" placeholder="Enter your number">
                     <span id="phoneError" class="error-message"></span>
                 </div>
+            </div>
                 <div style="display: flex; gap:1rem" class="input-box">
                     <div>
                         <p class="modal-form-label">Address</p>
@@ -536,6 +538,21 @@
                        <span id="cityError" class="error-message"></span>
                     </div>
 
+
+                </div>
+                <div>
+                    <p class="modal-form-label">Query Related to</p>
+                    <select class="modal-input" id="serviceSelect">
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="interior-car-cleaning">Interior Car Cleaning</option>
+                        <option value="exterior-car-cleaning">Exterior Car Cleaning and Washing</option>
+                        <option value="car-dry-cleaning">Car Dry Cleaning</option>
+                        <option value="body-polish-wax">Complete Car Body Polish and Wax</option>
+                        <option value="full-car-wash">Full Car Wash</option>
+                        <option value="deep-cleaning">Deep Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="serviceError" class="error-message"></span>
                 </div>
           
                 
@@ -779,7 +796,7 @@
           // Get input values
           const name = document.getElementById('nameInput').value.trim();
           const phoneNumber = document.getElementById('numberInput').value.trim();
-
+          const service = document.getElementById('serviceSelect').value;
           const address = document.getElementById('addressInput').value.trim();
           const city = document.getElementById('cityInput').value.trim();
           let isValid = true;
@@ -789,12 +806,16 @@
           document.getElementById('phoneError').textContent = '';
           document.getElementById('addressError').textContent = '';
           document.getElementById('cityError').textContent = '';
+          const nameRegex = /^[A-Za-z\s]+$/;
           // Validate Name
           if (name === '') {
               document.getElementById('nameError').textContent = 'Name is required.';
               isValid = false;
           }
-         
+          else if(!nameRegex.test(name)){
+            document.getElementById('nameError').textContent = 'Only alphabets are allowed.';
+            isValid = false;
+          }
           if (phoneNumber === '') {
               document.getElementById('phoneError').textContent = 'Phone Number is required.';
               isValid = false;
@@ -814,7 +835,8 @@
                   name: name,
                   phone: phoneNumber,
                   address:address,
-                  city:city
+                  city:city,
+                  queryrelatedto:service
               };
               const contactButton = document.getElementById('modal-booking-btn');
               const buttonText = document.querySelector('.button-text');

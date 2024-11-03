@@ -189,12 +189,7 @@
     text-decoration:none ;
     line-height:1.2em ;
 }
-.why-carmaa-container p{
-   
-    width: 50%;
-    color: #424649;
-    font-size: 18px;
-}
+
 .why-carmaa-container .header-description{
     margin-top:1.2rem;
     display: flex;
@@ -265,7 +260,7 @@
     width: 100%;
 }
 
-.why-carmaa-card p{
+.why-carmaa-card .why-carmaa-card-desc{
     color: #424649;
     padding-left: 0.3rem;
     padding-right: 0.6rem;
@@ -1133,7 +1128,7 @@ margin-top: 0.5rem;
         background-color:var(--primary-color);
         margin-top: 2rem;
        border-radius: 0.7rem;
-        font-size: 1rem;
+        font-size: 0.85rem;
         letter-spacing: 2px;
         padding: 18px 40px;
         border: none;
@@ -1155,16 +1150,17 @@ margin-top: 0.5rem;
     }
     
     .hero-section-pricingtext{
-        font-size: 1.3rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
          font-weight: 500;
           max-width: 380px;
     }
     .hero-section-heading{
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 700;
     }
     .hero-section-subheading{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
          font-weight: 700; 
          color: #e77640;
     }
@@ -1740,6 +1736,12 @@ margin-top: 0.5rem;
     }
 }
 @media screen and (min-width:750px) {
+    .why-carmaa-card h4{
+        min-height: 4rem;
+    }
+    .why-carmaa-card .why-carmaa-card-desc{
+min-height: 10rem;
+    }
     .more-text {
         min-height: 0;
        
@@ -1751,7 +1753,7 @@ margin-top: 0.5rem;
     }
     
     .expanded {
-        min-height: 35rem; /* Set to a high value to accommodate longer text */
+        min-height: 65rem; /* Set to a high value to accommodate longer text */
     }
     
 
@@ -1949,10 +1951,13 @@ margin-top: 0.5rem;
 }
 
 @media screen and (min-width:1300px){
+  
+
     .more-text {
-        min-height: 0;
-       
-      text-align: justify !important;
+        min-height: 100rem;
+        font-size: 16px;
+        color: #424649;
+        text-align: justify !important;
         overflow: hidden;
         display: none;
       
@@ -1960,7 +1965,8 @@ margin-top: 0.5rem;
     }
     
     .expanded {
-        min-height: 40rem; /* Set to a high value to accommodate longer text */
+        text-align: justify !important;
+        min-height: 500rem; /* Set to a high value to accommodate longer text */
     }
     
     .modal-form-heading{
@@ -2098,12 +2104,7 @@ margin-top: 0.5rem;
     text-decoration:none ;
     line-height:1.2em ;
 }
-.why-carmaa-container p{
-   
-    width: 50%;
-    color: #424649;
-    font-size: 18px;
-}
+
 .why-carmaa-container .header-description{
     margin-top:1.2rem;
     display: flex;
@@ -2192,7 +2193,7 @@ margin-top: 0.5rem;
     width: 100%;
 }
 .why-carmaa-card h4{
-    min-height: 3.9rem;
+    min-height: 6rem;
     font-size: 25px;
     padding-left: 0.3rem;
     font-family: var(--font);
@@ -2201,8 +2202,8 @@ margin-top: 0.5rem;
     line-height: 1.2em;
     width: 100%;
 }
-.why-carmaa-card p{
-    min-height: 9rem;
+.why-carmaa-card .why-carmaa-card-desc{
+    min-height: 20rem;
     color: #424649;
     padding-left: 0.3rem;
     padding-right: 0.6rem;
@@ -3003,8 +3004,8 @@ margin-top: 0.5rem;
     .expanded {
         min-height: 25rem; /* Set to a high value to accommodate longer text */
     }
-    .why-carmaa-card p{
-        min-height: 2rem;
+    .why-carmaa-card .why-carmaa-card-desc {
+        min-height: 16rem;
         color: #424649;
         padding-left: 0.3rem;
         padding-right: 0.6rem;
@@ -3018,11 +3019,14 @@ margin-top: 0.5rem;
     
     }
 }
-
-
-
-
-
+@media screen and (min-width:1800px) {
+    .why-carmaa-card h4{
+        min-height: 3rem;
+    }
+    .why-carmaa-card .why-carmaa-card-desc{
+        min-height: 16rem;
+    }
+}
 
 
 

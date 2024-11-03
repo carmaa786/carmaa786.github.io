@@ -346,6 +346,12 @@ font-weight: 600;
    margin-top: 1rem;
 }
 @media screen and (min-width:300px) {
+    .about-us-para{
+       
+        font-size: 1rem;
+       
+    }
+
     .mission-section-counter .counter-desc h1{
         font-size: 2rem;
         
@@ -378,6 +384,11 @@ font-weight: 600;
     }
     .about-us-para{
         width: 100%;
+    }
+    .benefits-cta-section{
+      
+        margin-top: 1rem !important;
+       
     }
     .benefits-cta-section{
         flex-direction: column;
@@ -513,10 +524,19 @@ font-weight: 600;
 }
 @media screen and (min-width:412px) {
    
+        
         .benefits-cta-section{
+            border-top: #BAC4C9;
+            border-top-width: 2px;
+            border-top-style: solid;
+            width: 100%;
+            padding: 2rem 0rem;
+            margin-top: 2rem;
+            display: flex;
             flex-direction: row;
+            align-items:center;
+            gap:1rem
         }
-    
 }
 @media screen and (min-width:460px) {
  
@@ -565,6 +585,14 @@ font-weight: 600;
     
 }
 @media screen and (min-width:1200px) {
+    .about-us-para{
+        width: 90%;
+        margin-top: 1rem;
+        font-family: var(--body-font);
+        text-align: justify;
+        font-size: 1.2rem;
+        color:#424649;
+    }
     .mission-section-counter {
         position: absolute;
         padding: 4rem 2rem;
