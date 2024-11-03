@@ -15,6 +15,21 @@ body{
     padding-top: 2rem;
     gap: 2rem;
 }
+.service-img-container{
+    position: relative;
+}
+.service-img-price-txt{
+    background-color: #01628F;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
+    font-family: var(--body-font);
+}
 .service-left-section{
     width: 40%;
 }

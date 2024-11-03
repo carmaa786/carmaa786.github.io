@@ -256,7 +256,7 @@ margin-top: 1rem;
 
 
 .gallery2{
-    width: 1500px;
+    width: 330px;
     max-width: 40rem;
     display: flex;
    
@@ -265,17 +265,7 @@ margin-top: 1rem;
 .gallery2::-webkit-scrollbar{
     display: none;
 }
-.gallery2 .gallery2-wrapper{
-    width: 100%;
-    min-width: 380px;
-    max-width: 380px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    padding: 2px;
-    flex: none;
 
-} 
 .gallery2 div img{
     width: 100%;
     
@@ -416,7 +406,7 @@ margin-top: 1rem;
     }
     .gallery2{
        
-        width: 1500px;
+        width: 330px;
         max-width: 40rem;
         display: flex;
        
@@ -428,8 +418,28 @@ margin-top: 1rem;
         display: none;
         overflow-x: scroll;
     }
+
+
+
+    .gallery2 .gallery2-wrapper{
+      
+        min-width: 330px;
+        max-width: 330px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 5px;
+        padding: 2px;
+        flex: none;
+    
+    } 
+    .gallery2 div img{
+        width: 100%;
+        
+      
+    }
     
 }
+
 @media screen and (min-width:1200px) {
     #back-btn{
         display: block;
