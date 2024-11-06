@@ -4,6 +4,9 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+.whats-included-container{
+    min-height: 21rem;
+}
 .spinner {
     border: 2px solid rgba(255, 255, 255, 0.3);
     width: 16px;
