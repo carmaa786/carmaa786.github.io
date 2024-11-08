@@ -1925,6 +1925,14 @@ min-height: 10rem;
     
     }
 }
+@media screen and (min-width:1000px){
+    .why-carmaa-card h4{
+        min-height: 2rem;
+    }
+    .why-carmaa-card .why-carmaa-card-desc {
+    min-height: 8.5rem;
+    }
+}
 @media screen and (min-width:1100px) {
     .microfiber-button img{
         width: 7rem;
@@ -1949,7 +1957,14 @@ min-height: 10rem;
     initial-value: 0deg;
     inherits: false;
 }
-
+@media screen and (min-width:1200px){
+    .why-carmaa-card h4{
+        min-height: 2rem;
+    }
+    .why-carmaa-card .why-carmaa-card-desc {
+    min-height: 7rem;
+    }
+}
 @media screen and (min-width:1300px){
   
 
@@ -2130,12 +2145,12 @@ min-height: 10rem;
     display: flex;
     gap: 2.1rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 5rem;
 }
 
 .why-carmaa-card{
-    width: 30%;
+    width: 45%;
 
     padding: 4rem 1rem 1rem 1rem;
     background-color: white;
@@ -2193,7 +2208,7 @@ min-height: 10rem;
     width: 100%;
 }
 .why-carmaa-card h4{
-    min-height: 6rem;
+    min-height: 4rem;
     font-size: 25px;
     padding-left: 0.3rem;
     font-family: var(--font);
@@ -2203,7 +2218,7 @@ min-height: 10rem;
     width: 100%;
 }
 .why-carmaa-card .why-carmaa-card-desc{
-    min-height: 20rem;
+    min-height: 11rem;
     color: #424649;
     padding-left: 0.3rem;
     padding-right: 0.6rem;
@@ -3004,8 +3019,11 @@ margin-top: 0.5rem;
     .expanded {
         min-height: 25rem; /* Set to a high value to accommodate longer text */
     }
+    .why-carmaa-card h4{
+        min-height: 2rem;
+    }
     .why-carmaa-card .why-carmaa-card-desc {
-        min-height: 16rem;
+        min-height: 10rem;
         color: #424649;
         padding-left: 0.3rem;
         padding-right: 0.6rem;
@@ -3021,10 +3039,10 @@ margin-top: 0.5rem;
 }
 @media screen and (min-width:1800px) {
     .why-carmaa-card h4{
-        min-height: 3rem;
+        min-height: 2rem;
     }
     .why-carmaa-card .why-carmaa-card-desc{
-        min-height: 16rem;
+        min-height: 8rem;
     }
 }
 
