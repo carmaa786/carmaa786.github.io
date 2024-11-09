@@ -4,6 +4,22 @@
     --body-font:"Sarabun", sans-serif;
     --silver:#BAC4C9
 }
+.mobile-number-ref{
+  color: white;
+  text-decoration: none;
+ 
+}
+.mobile-number-ref:hover{
+color:#E77640  !important;
+}
+.mobile-number-ref2{
+  color: black;
+  text-decoration: none;
+ 
+}
+.mobile-number-ref2:hover{
+color:#E77640  !important;
+}
 .social-media-icons{
 
   display: flex;
@@ -172,6 +188,7 @@ height: 1rem;
   font-weight: 300;
 }
 }
+
 
 
 

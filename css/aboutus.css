@@ -116,6 +116,10 @@ border-radius: 100%;
 font-size: 1rem;
 margin-top: 0.5rem;
 }
+.benefits-mobile-number:hover{
+  
+    color: #ED6744;
+    }
 
 .call-icon-wrapper{
     display: flex;
