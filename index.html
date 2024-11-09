@@ -46,6 +46,7 @@
 <meta name="googlebot" content="index, follow">
 <meta name="bingbot" content="index, follow">
 <link rel="stylesheet" href="./css/homepage.css"/>
+<link rel="stylesheet" href="./css/timeline.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
@@ -1150,7 +1151,41 @@
         </div>
     </section>
 
+<section class="carmaa-timeline-section">
+    <div class="why-carmaa-container">
+        <h2 class="before-after-sub-heading">DISCOVER</h2>
+        <h1 class="before-after-heading">How Carmaa Works</h1>
+    </div>
+    <div class="carmaa-timeline-container">
+        <div class="carmaa-timeline-left">
+            <div onclick="carmaaTimelineButton(0)" id="step-one" class="carmaa-timeline-points-wrapper">
+                <h1>1. Schedule Your Doorstep Car Wash</h1>
+                <p> You can easily schedule a car wash service in Dehradun or Uttarakhand through our website or by giving us a call. Select a time that suits you, and we’ll bring our waterless car wash service right to your doorstep, saving your time and effort.</p>
+                <div class="bottom-line"></div>
+            </div>
+            <div  onclick="carmaaTimelineButton(1)" id="step-two" class="carmaa-timeline-points-wrapper">
+                <h1>2. We Arrive With All The Equipment</h1>
+                <p> Once your car washing service is booked, our professional team arrives fully equipped with everything needed, including eco-friendly waterless car wash products. Whether you need daily car wash service or a one-time car interior cleaning, we ensure that all areas are covered with our high-quality car detailing tools and experti</p>
+                <div class="bottom-line"></div>
+            </div>
+            <div  onclick="carmaaTimelineButton(2)" id="step-three" class="carmaa-timeline-points-wrapper carmaa-timeline-active">
+                <h1>3. Expert Car Detailing And Cleaning</h1>
+                <p> Our trained technicians handle your car with care, providing expert car detailing and interior cleaning. We use advanced waterless car wash techniques that not only clean your car but also protect its finish. From exterior polishing to deep interior cleaning, our doorstep car wash in Dehradun and Uttarakhand ensures a spotless result every time.</p>
+                <div class="bottom-line"></div>
+            </div>
+            <div  onclick="carmaaTimelineButton(3)" id="step-four" class="carmaa-timeline-points-wrapper">
+                <h1>4. Enjoy A Spotless Car Whithout The Hassle</h1>
+                <p> Our professional car cleaning is complete, your vehicle will look as good as new. Thanks to Carmaa’s convenient doorstep car wash service, you won’t need to worry about visiting a car wash again. Whether you opt for regular daily car wash service or a specialized car wash in Dehradun, we make sure you drive away in a pristine vehicle without any hassle.</p>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+        <div class="carmaa-timeline-right">
+            <img id="timeline-image" src="./images/car-cleaning.webp"/>
+        </div>
+    </div>
 
+    </div>
+</section>
 
 
 
@@ -1163,84 +1198,6 @@
             loop: true
         })
     </script>
-    <div style="width: 100vw; background-color:transparent; margin-top: 50px;">
-        <div style="width: 95%;height: 100%; max-width: 1200px;margin: auto;">
-            <div class="why-carmaa-container">
-                <h2 class="testimonial-sub-heading">Discover</h2>
-                <h1 class="before-after-heading " style="margin-bottom: 2rem;">How Carmaa Works</h1>
-            </div>
-            <div class="main-timeline">
-                <div class="timeline">
-                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
-                        <div class="timeline-year"
-                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/home-page/timeline/Image-1.png" alt="" style="width: 20rem;height: 20rem; ">
-                        </div>
-                        <div class="timeline-icon">
-                          
-                        </div>
-                        <div class="content">
-                            <h3 class="title">Schedule Your Doorstep Car Wash</h3>
-                            <p class="description">
-                               Booking your doorstep car wash with Carmaa is simple and hassle-free. You can easily schedule a car wash service in Dehradun or Uttarakhand through our website or by giving us a call. Select a time that suits you, and we’ll bring our waterless car wash service right to your doorstep, saving your time and effort.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="timeline">
-
-                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
-                        <div class="timeline-icon">
-                            
-                        </div>
-                        <div class="content">
-                            <h3 class="title">We Arrive with All the Equipment</h3>
-                            <p class="description">
-                                Once your car washing service is booked, our professional team arrives fully equipped with everything needed, including eco-friendly waterless car wash products. Whether you need daily car wash service or a one-time car interior cleaning, we ensure that all areas are covered with our high-quality car detailing tools and expertise.
-                            </p>
-                        </div>
-                        <div class="timeline-year"
-                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/home-page/timeline/Image-2.png" alt="" style="width: 20rem;height: 20rem; ">
-                        </div>
-                    </a>
-                </div>
-                <div class="timeline">
-                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
-                        <div class="timeline-year"
-                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/home-page/timeline/Image-3.png" alt="" style="width: 20rem;height: 20rem; ">
-                        </div>
-                        <div class="timeline-icon">
-                          
-                        </div>
-                        <div class="content">
-                            <h3 class="title">Expert Car Detailing and Cleaning</h3>
-                            <p class="description">
-                               Our trained technicians handle your car with care, providing expert car detailing and interior cleaning. We use advanced waterless car wash techniques that not only clean your car but also protect its finish. From exterior polishing to deep interior cleaning, our doorstep car wash in Dehradun and Uttarakhand ensures a spotless result every time.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="timeline">
-                    <a href="#" class="timeline-content" style="display: flex; align-items: center; gap: 10px;">
-                     
-                        <div class="content">
-                            <h3 class="title">Enjoy a Spotless Car Without the Hassle</h3>
-                            <p class="description">
-                              Our professional car cleaning is complete, your vehicle will look as good as new. Thanks to Carmaa’s convenient doorstep car wash service, you won’t need to worry about visiting a car wash again. Whether you opt for regular daily car wash service or a specialized car wash in Dehradun, we make sure you drive away in a pristine vehicle without any hassle.
-                            </p>
-                        </div>
-                        <div class="timeline-year"
-                            style="flex: 1; align-self: center; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                            <img src="./images/home-page/timeline/Image-4.png" alt="" style="width: 20rem;height: 20rem; ">
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
    
 
 
@@ -2258,6 +2215,57 @@ document.getElementById('addressInput').value='';
       });
       
       </script>
+ <script>
+    let selectedOverview = 0;
+    let intervalId;
+    const steps = document.querySelectorAll('.carmaa-timeline-points-wrapper');
+    const images = [
+        "./images/car-cleaning1.jpeg",
+        "./images/car-cleaning2.jpeg",
+        "./images/car-cleaning3.jpeg",
+        "./images/car-cleaning4.jpeg"
+    ];
+    const timelineImage = document.getElementById("timeline-image");
+
+    function carmaaTimelineButton(index) {
+        steps.forEach((step, i) => {
+            const bottomLine = step.querySelector('.bottom-line');
+            if (i === index) {
+                step.classList.add('carmaa-timeline-active');
+                bottomLine.classList.add('bottom-line-animation');
+                timelineImage.src = images[index];
+            } else {
+                step.classList.remove('carmaa-timeline-active');
+                bottomLine.classList.remove('bottom-line-animation');
+            }
+        });
+        selectedOverview = index;
+      resetInterval();
+    }
+
+    // Auto-toggle every 5 seconds
+function resetInterval() {
+    clearInterval(intervalId); // Clear the current interval
+    intervalId = setInterval(() => {
+        selectedOverview = (selectedOverview + 1) % steps.length;
+        carmaaTimelineButton(selectedOverview);
+    }, 10000); // Restart interval from 5 seconds
+}
+const carmaaSection = document.querySelector('.carmaa-timeline-section');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            carmaaTimelineButton(selectedOverview); // Start the animation
+            resetInterval(); // Start the interval
+            observer.unobserve(carmaaSection); // Unobserve after initial load
+        }
+    });
+}, { threshold: 0.5 }); // Adjust threshold as needed
+
+// Start observing the section
+observer.observe(carmaaSection);
+</script>
+      
 
 </body>
 
