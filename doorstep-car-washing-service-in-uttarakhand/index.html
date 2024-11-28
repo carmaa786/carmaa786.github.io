@@ -648,7 +648,8 @@
             });
         });
     </script>
-     <script>
+     <script type="module">
+          import { CTAApi } from '../js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
           event.preventDefault();
           
@@ -707,13 +708,7 @@
               buttonLoader.style.display = "inline-block";
       
               // Send data to API using fetch
-              fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(data),
-              })
+              CTAApi(data)
              
               .then(response => {
                   if (response.status === 200) {

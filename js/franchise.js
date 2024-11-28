@@ -1,3 +1,4 @@
+import {franchiseApi} from "./external-integration.js";
 document.getElementById('subscriptionForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -73,17 +74,11 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
             message,
             queryFrom:"Partner With us Page"
         };
-        console.log(formData,"formData")
+       
 
         try {
             // Send POST request to the API
-            const response = await fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            const response = await franchiseApi(formData)
             if (response.ok) {
                 document.getElementById('successMessage').style.display = 'block';
                 document.getElementById('successMessage').className = 'success-message success';
