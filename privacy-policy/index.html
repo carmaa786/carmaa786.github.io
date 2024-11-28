@@ -508,7 +508,8 @@
 
     items.forEach((item) => item.addEventListener('click', toggleAccordion));
 </script>
-    <script>
+<script type="module">
+          import { CTAApi } from '../js/external-integration.js';
         document.getElementById('enquiryForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -537,11 +538,8 @@
 
     // Simulate API request
  
-    fetch('https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, mobile,enquiryPage:"Carmaa Interior Car Cleaning",enquiryPageLink:"https://carmaacarcare.com/interior-car-cleaning-service/" })
-    })
+    
+    CTAApi({ name, mobile })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;

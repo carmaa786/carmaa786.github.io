@@ -2094,7 +2094,8 @@
           });
       </script>
 
-      <script>
+<script type="module">
+          import { CTAApi } from '../js/external-integration.js';
         // Initially hide the div
         let parentDiv = document.getElementById("parent-div");
         parentDiv.style.display = "none";
@@ -2179,16 +2180,7 @@
 
             try {
               // Send POST request to the API
-              const response = await fetch(
-                "https://sxmcshw4rhnmioduf75cgpzw6i0fzlxt.lambda-url.ap-south-1.on.aws/",
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(formData),
-                }
-              );
+              const response = await  CTAApi(formData)
 
               if (response.ok) {
                 // Hide the parent div
