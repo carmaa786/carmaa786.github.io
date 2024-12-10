@@ -1,5 +1,5 @@
 export const CTAApi = async (data) => {
- const response1=await fetch("https://cc82c132-219a-4fb6-80ba-8b40d2f70f0f.neodove.com/integration/custom/35f54933-a64a-4c01-8145-a3d4001bcde9/leads",{
+ const response1=await fetch("https://cc82c132-219a-4fb6-80ba-8b40d2f70f0f.neodove.com/integration/custom/72e4358b-fa93-4983-a1d4-cea3d4340d97/leads",{
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
