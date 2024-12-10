@@ -21,7 +21,7 @@ export const CTAApi = async (data) => {
   
 
   export const franchiseApi = async (data) => {
-    const response1=await fetch("https://cc82c132-219a-4fb6-80ba-8b40d2f70f0f.neodove.com/integration/custom/1ff3272b-0e84-4961-82a0-2b50d7ff5ed1/leads",{
+    const response1=await fetch("https://cc82c132-219a-4fb6-80ba-8b40d2f70f0f.neodove.com/integration/custom/34f3e4b7-7463-4047-8ef2-58fe8e7fccb8/leads",{
      method: 'POST',
      headers: {
        'Content-Type': 'application/json',
