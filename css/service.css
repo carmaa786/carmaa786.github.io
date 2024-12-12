@@ -47,6 +47,14 @@ body{
     font-size: 1.1rem;
     margin-bottom: 1rem;
     font-family: var(--body-font);
+    
+}
+.service-para2{
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+    font-family: var(--body-font);
+    margin-left: 2rem;
 }
 .service-link-point{
     display: flex;
