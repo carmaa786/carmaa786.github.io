@@ -2180,7 +2180,7 @@
 
             try {
               // Send POST request to the API
-              const response = await  CTAApi({ name, number,address, city, clickedOnPricingPageService })
+              const response = await  CTAApi(formData)
 
               if (response.ok) {
                 // Hide the parent div
