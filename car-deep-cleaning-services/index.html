@@ -668,7 +668,7 @@
 
     // Simulate API request
  
-    CTAApi({ name, mobile,enquiryPage:"Carmaa Deep Cleaning",enquiryPageLink:" https://carmaacarcare.com/car-deep-cleaning-services" })
+    CTAApi({ name, phone:mobile,enquiryPage:"Carmaa Deep Cleaning",enquiryPageLink:" https://carmaacarcare.com/car-deep-cleaning-services" })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;
