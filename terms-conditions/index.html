@@ -597,7 +597,7 @@
 
     // Simulate API request
  
-    CTAApi({ name, phone:mobile,enquiryPage:"Terms and Conditions"})
+    CTAApi({ name, mobile})
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;
