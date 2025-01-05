@@ -659,7 +659,7 @@
     // Simulate API request
  
    
-    CTAApi({ name, mobile,enquiryPage:"Complete Car Body Polish and Wax",enquiryPageLink:"https://carmaacarcare.com/car-body-polish-and-car-waxing-service" })
+    CTAApi({ name, phone:mobile,enquiryPage:"Complete Car Body Polish and Wax",enquiryPageLink:"https://carmaacarcare.com/car-body-polish-and-car-waxing-service" })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;

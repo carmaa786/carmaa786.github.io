@@ -585,7 +585,7 @@
 
     // Simulate API request
  
-    CTAApi(data)
+    CTAApi({name,phone:mobile,enquiryPage:"Blog Page, Doorstep car wash Dehradun"})
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;

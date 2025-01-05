@@ -642,7 +642,7 @@
             submitBtn.disabled = true;
 
             // Simulate API request
-            CTAApi({ name, mobile })
+            CTAApi({ name, phone:mobile })
                 .then(response => {
                     submitBtn.textContent = 'Submit';
                     submitBtn.disabled = false;

@@ -582,7 +582,7 @@
     // Simulate API request
  
     
-    CTAApi({ name, mobile })
+    CTAApi({ name, phone:mobile,enquiryPage:"Privacy Policy" })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;

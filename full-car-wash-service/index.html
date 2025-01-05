@@ -663,7 +663,7 @@
     // Simulate API request
  
    
-    CTAApi({ name, mobile,enquiryPage:"Carmaa Full Car Wash",enquiryPageLink:"https://carmaacarcare.com/full-car-wash-service" })
+    CTAApi({ name, phone:mobile,enquiryPage:"Carmaa Full Car Wash",enquiryPageLink:"https://carmaacarcare.com/full-car-wash-service" })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;
