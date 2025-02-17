@@ -32,9 +32,10 @@ background-color: #0E111b;
    
 }
 .footer-logo{
-    width: 18rem;
-    height: 9rem;
+    width: 15rem;
+    height: 12rem;
     cursor: pointer;
+    margin-left: 12px;
 }
 .follow-us{
     display: flex;
@@ -222,10 +223,10 @@ margin-top: 1rem;
            
         }
         .footer-logo{
-            width: 18rem;
-            height: 9rem;
+            width: 15rem;
+            height: 12rem;
             cursor: pointer;
-            margin-left: 0px;
+            margin-left: 12px;
         }
         .follow-us{
             display: flex;
