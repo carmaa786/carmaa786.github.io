@@ -6,10 +6,11 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
     // Collecting all form values
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const subscription = document.getElementById('subscription').value;
+    // const date = document.getElementById('date').value;
+    // const time = document.getElementById('time').value;
+    // const subscription = document.getElementById('subscription').value;
     const message = document.getElementById('message').value.trim();
+
 
     let isValid = true;
 
@@ -50,9 +51,9 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
         const formData = {
             name,
             phone,
-            date,
-            time,
-            subscription,
+            // date,
+            // time,
+            // subscription,
             message
         };
         console.log(formData,"formData")
@@ -77,9 +78,9 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
         } finally {
             document.getElementById('name').value='';
     document.getElementById('phone').value='';
-    document.getElementById('date').value='';
-    document.getElementById('time').value='';
-    document.getElementById('subscription').value='';
+    // document.getElementById('date').value='';
+    // document.getElementById('time').value='';
+    // document.getElementById('subscription').value='';
     document.getElementById('message').value='';
             submitBtn.disabled = false;
             spinner.style.display = 'none'; // Hide the spinner
