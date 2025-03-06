@@ -124,6 +124,20 @@ margin-top: 1rem;
 
     
 }
+/* .dpiit-logo-container {
+    /* display: flex; */
+    /* justify-content: right;
+    align-items: center;
+    margin-right: 0px; */
+    /* width: 100px;
+    margin-top: 20px; */
+} */
+
+/* .dpiit-logo {
+    width: 250px;
+    height: auto;
+    margin-right: -90px;
+} */
 
 
 @media screen and (min-width:300px) {
