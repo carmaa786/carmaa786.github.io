@@ -14,7 +14,6 @@ background-color: #0E111b;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0rem;
     max-width: 2000px;
     margin: 0px auto;
 }
@@ -27,6 +26,7 @@ background-color: #0E111b;
     color:var(--silver) ;
     font-size: 0.95rem;
     margin-top: 0.2rem;
+    margin-left: 1rem;
     text-align: justify;
     width: 60%;
    
@@ -45,6 +45,7 @@ color: #ffffff;
 font-size: 1.3rem;
 font-family: var(--font);
 margin-top: 1rem;
+margin-left: 1rem;
 }
 .follow-us:hover{
     color: #ed6744;
@@ -112,6 +113,7 @@ margin-top: 1rem;
     font-family: var(--body-font);
     color:white;
     margin-top: 3rem;
+    margin-left: 1rem;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
@@ -124,20 +126,22 @@ margin-top: 1rem;
 
     
 }
-/* .dpiit-logo-container {
-    /* display: flex; */
-    /* justify-content: right;
-    align-items: center;
-    margin-right: 0px; */
-    /* width: 100px;
-    margin-top: 20px; */
-} */
 
-/* .dpiit-logo {
+ .dpiit-logo-container {
+     display: flex; 
+     justify-content: right;
+    align-items: center;
+    margin-right: 0px; 
+    width: 100px;
+    margin-top: 20px; 
+    margin-left: 1rem;
+} 
+
+ .dpiit-logo {
     width: 250px;
     height: auto;
     margin-right: -90px;
-} */
+} 
 
 
 @media screen and (min-width:300px) {
@@ -149,7 +153,7 @@ margin-top: 1rem;
        
     }
     .logo-section{
-        width: 80%;
+        width: 100%;
         margin: 0px auto;
         margin-bottom: 50px;
         
@@ -163,7 +167,7 @@ margin-top: 1rem;
         flex-wrap: wrap;
         justify-content: space-between;
         gap:20px;
-        padding: 4rem 2rem;
+        padding-left: 1.5rem ;
         width: 100%;
     }
     .link-section-child{
@@ -232,6 +236,7 @@ margin-top: 1rem;
             color:var(--silver) ;
             font-size: 0.95rem;
             margin-top: 0.2rem;
+            margin-left: 1rem;
             text-align: justify;
             width: 60%;
            
@@ -250,6 +255,7 @@ margin-top: 1rem;
         font-size: 1.3rem;
         font-family: var(--font);
         margin-top: 1rem;
+        margin-left: 1rem;
         }
         .follow-us img{
             width: 2.3rem;
