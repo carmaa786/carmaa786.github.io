@@ -1,27 +1,50 @@
+## Type of PR (check all applicable)
+
+- [ ] Refactor
+- [ ] Feature
+- [ ] Bug Fix
+- [ ] Optimization
+- [ ] Documentation Update
+
 ## Description
 
 <!-- Describe your changes in detail -->
 
-## Related Issue
+## Related Tickets & Documents
 
-<!-- Please link to the issue here: -->
+Related Issue #
+Closes #
 
-Fixes #[issue_number]
+## QA Instructions, Screenshots, Recordings
 
-## Type of change
+<!-- Please provide instructions on how to test your changes, including notes on devices and browsers tested, and any relevant images for UI changes. -->
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
+## UI Accessibility Checklist
 
-## How Has This Been Tested?
+<!-- If your PR includes UI changes, please complete this checklist: -->
 
-<!-- Please describe the tests that you ran to verify your changes -->
+- [ ] Semantic HTML implemented
+- [ ] Keyboard operability supported
+- [ ] Checked with axe DevTools and addressed Critical and Serious issues
+- [ ] Color contrast tested
 
-- [ ] Local Testing
-- [ ] Browser Testing
-- [ ] Unit Tests (if applicable)
+For more info, check out the Forem Accessibility Docs.
+
+## Testing
+
+We encourage you to keep the code coverage percentage at 80% and above.
+
+- [ ] Yes
+- [ ] No, because: <!-- explain why tests weren't included -->
+- [ ] Need help with writing tests
+
+## Post Deployment Tasks
+
+<!-- Optional: List any tasks that need to be performed after deployment -->
+
+## PR Visual
+
+<!-- Optional: Add a GIF that describes this PR or how it makes you feel -->
 
 ## Checklist:
 
