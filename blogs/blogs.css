@@ -6,7 +6,6 @@
 }
 
 .blog-card-href:hover{
-    
     scale: 1.05;
 }
 
@@ -53,6 +52,7 @@ background-color: white;
     margin-top: 0.4rem;
     color: #424649;
 }
+
 @media screen and (min-width:300px) {
     .blog-card-href{
         width: 100%;

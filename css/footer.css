@@ -32,8 +32,7 @@ background-color: #0E111b;
    
 }
 .footer-logo{
-    
-    height: 12rem;
+    height: 3rem;
     cursor: pointer;
     margin-left: 12px;
 }
@@ -243,7 +242,7 @@ margin-left: 1rem;
         }
         .footer-logo{
         
-            height: 12rem;
+            height: 3rem;
             cursor: pointer;
             margin-left: 12px;
         }
