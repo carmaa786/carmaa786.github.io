@@ -2088,6 +2088,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const recaptchaResponse = grecaptcha.getResponse();
 
           if (!recaptchaResponse) {
+              document.getElementById('result').style.color = 'red';
               document.getElementById('result').textContent = 'Please complete the CAPTCHA';
               return;
           }
