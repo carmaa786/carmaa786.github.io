@@ -108,7 +108,7 @@ body{
   flex-direction: column;
 }
 
-b {
+.bold-tag {
   color: #424242;
 }
 .terms-conditions-para-points {
