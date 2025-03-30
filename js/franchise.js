@@ -55,6 +55,14 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
         isValid = false;
     }
 
+     const recaptchaResponse = grecaptcha.getResponse();
+
+     if (!recaptchaResponse) {
+       document.getElementById("result").textContent =
+         "Please complete the CAPTCHA";
+       return;
+     }
+
     // If form is valid, show success message and call API
     if (isValid) {
         const submitBtn = document.getElementById('submitBtn');
@@ -72,6 +80,7 @@ document.getElementById('subscriptionForm').addEventListener('submit', async fun
             email,
             city,
             message,
+            recaptchaResponse,
             queryFrom:"Partner With us Page"
         };
        

@@ -614,6 +614,9 @@
                         </select>
                         <span id="serviceError" class="error-message"></span>
                     </div>
+                     <!--Captcha Code for Auth-->
+                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+
               
                     
                     <button style="border-radius: 10px;"  id="modal-booking-btn"> <span class="button-text">BOOK</span>
@@ -630,6 +633,11 @@
         </section>
 
     </div>
+
+        <!-- Load reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -685,8 +693,15 @@
               document.getElementById('phoneError').textContent = 'Phone number must be exactly 10 digits.';
               isValid = false;
           }
-      
-          // Validate Email
+
+
+           const recaptchaResponse = grecaptcha.getResponse();
+
+          if (!recaptchaResponse) {
+              document.getElementById('result').textContent = 'Please complete the CAPTCHA';
+              return;
+          }
+        
    
           // If the form is valid, send data through API
           if (isValid) {
@@ -695,7 +710,8 @@
                   phone: phoneNumber,
                   address:address,
                   city:city,
-                  queryrelatedto:service
+                  queryrelatedto:service,
+                  recaptchaResponse:recaptchaResponse
               };
               const contactButton = document.getElementById('modal-booking-btn');
               const buttonText = document.querySelector('.button-text');

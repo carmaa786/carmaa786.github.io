@@ -473,10 +473,18 @@
                     <label for="mobile">Mobile Number:</label>
                     <input type="text" id="mobile" name="mobile" required>
                 </div>
+
+                <!--Captcha Code for Auth-->
+                <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+
                 <button type="submit" id="submitBtn">Submit</button>
                 <p id="message"></p>
             </form>
         </div>
+
+        <!-- Load reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <p style="margin-top: 2rem;font-weight: 700;font-size: 1.2rem;margin-bottom: -0.5rem; padding-left: 0.5rem;">Related Blogs</p>
         <a href="../../interior-car-cleaning-service/" class="service-link-point-link"><div class="services-links">
             <div class="service-link-point">
@@ -588,33 +596,39 @@
         return;
     }
 
+     const recaptchaResponse = grecaptcha.getResponse();
+
+        if (!recaptchaResponse) {
+            document.getElementById('result').textContent = 'Please complete the CAPTCHA';
+            return;
+        }
+
     // Reset message and set loading state
     messageElement.textContent = '';
     submitBtn.textContent = 'Submitting...';
     submitBtn.disabled = true;
 
-    // Simulate API request
- 
-    CTAApi(data)
-    .then(response => {
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        if(response.ok){
-            messageElement.textContent = 'Enquiry submitted successfully!';
-            messageElement.style.color = 'white';
-    }
-    else{
-        messageElement.textContent = 'There was an error submitting your enquiry.';
-        messageElement.style.color = 'red';
-    }
+       // Simulate API request
+            CTAApi({ name, mobile, recaptchaResponse })
+                .then(response => {
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.disabled = false;
+                    if (response.ok) {
+                        messageElement.textContent = 'Enquiry submitted successfully!';
+                        messageElement.style.color = 'white';
+                    }
+                    else {
+                        messageElement.textContent = 'There was an error submitting your enquiry.';
+                        messageElement.style.color = 'red';
+                    }
 
-}).catch(error => {
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        messageElement.textContent = 'An error occurred. Please try again.';
-        messageElement.style.color = 'red';
-    });
-});
+                }).catch(error => {
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.disabled = false;
+                    messageElement.textContent = 'An error occurred. Please try again.';
+                    messageElement.style.color = 'red';
+                });
+        });
     </script>
 </body>
 </html>

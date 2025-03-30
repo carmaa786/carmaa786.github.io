@@ -2078,6 +2078,9 @@
               </div>
             </div>
 
+              <!--Captcha Code for Auth-->
+                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+
             <button style="border-radius: 10px" id="modal-booking-btn">
               <span class="button-text">BOOK</span>
               <span class="button-loader spinner" style="display: none"></span>
@@ -2090,6 +2093,9 @@
         </div>
       </section>
     </div>
+
+     <!-- Load reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script>
       const bookingOpenBtn = document.querySelectorAll(".open-booking-modal");
@@ -2156,6 +2162,7 @@
           const city = document.getElementById("cityInput").value;
           const phoneRegex = /^[0-9]{10}$/;
 
+
           if (name === "") {
             document.getElementById("nameError").textContent =
               "Name is required.";
@@ -2178,10 +2185,19 @@
             isValid = false;
           }
 
+          const recaptchaResponse = grecaptcha.getResponse();
+
+          if (!recaptchaResponse) {
+              document.getElementById('result').textContent = 'Please complete the CAPTCHA';
+              return;
+          }
+
           if (isValid) {
             button.disabled = true;
             spinner.style.display = "inline-block"; // Show the spinner
             btnText.style.display = "none";
+
+
 
             // Prepare the data object
             const formData = {
@@ -2190,6 +2206,8 @@
               address: address,
               city: city,
               clickedOnPricingPageService: currentModalTarget,
+              recaptchaResponse:recaptchaResponse
+
             };
             console.log(formData, "formData");
 
