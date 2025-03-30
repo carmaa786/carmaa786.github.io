@@ -673,6 +673,10 @@
               ></textarea>
             </div>
           </div>
+
+          <!--Captcha Code for Auth-->
+          <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+
           <button
             class="btn-submit-contact"
             style="cursor: pointer"
@@ -688,6 +692,9 @@
       </div>
     </section>
 
+    <!-- Load reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <div style="margin-top: 4rem">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9508978443537!2d78.00875827556449!3d30.323914474784026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b220f7bb141%3A0x4dcd92ffe2c4d873!2sCarmaa!5e0!3m2!1sen!2sin!4v1728807804305!5m2!1sen!2sin"
@@ -700,7 +707,12 @@
       ></iframe>
     </div>
 
-    <script type="module" src="../js/contactus.js"></script>
+
+    
+
+    <script type="module" src="../js/contactus.js">
+
+    </script>
     <div id="footer">
       <script>
         fetch("../components/footer.html")

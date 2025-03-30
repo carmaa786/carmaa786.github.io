@@ -566,10 +566,18 @@
                     <label for="mobile">Mobile Number:</label>
                     <input type="text" id="mobile" name="mobile" required>
                 </div>
+
+                <!--Captcha Code for Auth-->
+                <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+
                 <button type="submit" id="submitBtn">Submit</button>
                 <p id="message"></p>
             </form>
         </div>
+
+        <!-- Load reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <a href="../interior-car-cleaning-service" class="service-link-point-link"><div class="services-links">
             <div class="service-link-point">
                 <p class="link-name" >Carmaa Interior Car Cleaning</p>
@@ -710,6 +718,13 @@
         return;
     }
 
+     const recaptchaResponse = grecaptcha.getResponse();
+
+          if (!recaptchaResponse) {
+              document.getElementById('result').textContent = 'Please complete the CAPTCHA';
+              return;
+          }
+
     // Reset message and set loading state
     messageElement.textContent = '';
     submitBtn.textContent = 'Submitting...';
@@ -718,7 +733,7 @@
     // Simulate API request
  
 
-    CTAApi({ name, mobile,enquiryPage:"Carmaa Car Detailing",enquiryPageLink:"https://carmaacarcare.com/car-detailing-services" })
+    CTAApi({ name, mobile, recaptchaResponse,enquiryPage:"Carmaa Car Detailing",enquiryPageLink:"https://carmaacarcare.com/car-detailing-services" })
     .then(response => {
         submitBtn.textContent = 'Submit';
         submitBtn.disabled = false;

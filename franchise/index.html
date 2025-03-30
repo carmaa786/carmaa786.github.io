@@ -405,6 +405,10 @@
                             <textarea id="message" name="message" rows="4" placeholder="Enter additional details..."></textarea>
                         </div>
                     </div>
+
+                     <!--Captcha Code for Auth-->
+                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+                    
                     <button class="btn-submit-contact"  style="cursor: pointer;" type="submit" id="submitBtn">
                         <span class="spinner" id="spinner" style="display: none;"></span>
                         <span id="btnText">Submit</span>
@@ -412,6 +416,9 @@
                     <div class="success-message" id="successMessage"></div>
                     <div class="error-message" id="errorMessage"></div>
                 </form>
+
+                <!-- Load reCAPTCHA -->
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             
         
         </div>
