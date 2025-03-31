@@ -708,7 +708,7 @@
             <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
         </button>
     </div>
-    <button class=" open-booking-modal hero-section-btn2" style="margin-bottom: 2rem;">Book Now</button>
+    <button class=" open-booking-modal hero-section-btn2 bookNowBtnHide" style="margin-bottom: 2rem;">Book Now</button>
     </div>
 
     <style>
@@ -767,9 +767,7 @@
 
     
     <div style="width: 100vw; margin-top: 2rem; " id="home">
-        <div class="a"
-            style="width: 85%;position: relative; align-items: center;  gap: 10px;margin: auto; display: flex; justify-content: space-between; "
-            >
+        <div class="home-page-main-container">
             
 
         <div style="position: relative; z-index: 10; " class="homepage-left-services-container">
@@ -856,6 +854,9 @@
        <!-- <div style="padding-bottom: 2rem;">
         <button class="open-booking-modal hero-section-btn3 hero-section-btn-width" id="book-service-btn">Booking Services</button>
     </div> -->
+
+     <button class=" open-booking-modal hero-section-btn2">Book Now</button>
+
    
 
     <div class="rating-customer-container">
@@ -909,22 +910,19 @@
 
 
 
+    <!-- slider section -->
 
-
-
-    <div class="pdInline pb">
+    <div class="pdInline pb carousal-main-container">
 
     <section class="carousal-section">
     <div class="carousel-container">
         <button class="prev carousal-left-btn" onclick="moveSlide(-1)">❮</button>
         <div class="carousel">
-            <div class="card"><img src="./images/ui_change_images/carousal1.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal5.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal1.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal5.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal1.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal5.png" alt="Dry Cleaning"></div>
-            <div class="card"><img src="./images/ui_change_images/carousal1.png" alt="Dry Cleaning"></div>
+            <div class="card"><img src="./images/banners/BANNER1.jpg" alt="Dry Cleaning"></div>
+            <div class="card"><img src="./images/banners/BANNER3.jpg" alt="Dry Cleaning"></div>
+            <div class="card"><img src="./images/banners/BANNER4.jpg" alt="Dry Cleaning"></div>
+            <div class="card"><img src="./images/banners/BANNER5.jpg" alt="Dry Cleaning"></div>
+            <div class="card"><img src="./images/banners/BANNER6.jpg" alt="Dry Cleaning"></div>
         </div>
         <button class="next carousal-right-btn" onclick="moveSlide(1)">❯</button>
     </div>

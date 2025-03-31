@@ -242,7 +242,16 @@
   padding-bottom: 3rem;
 }
 
+.carousal-main-container {
+  padding-top: 65px;
+}
+
 @media (max-width: 700px) and (min-width: 10px) {
+  .rating-customer-container {
+    flex-direction: column;
+    align-items: start;
+  }
+
   .car-services-container {
     width: 100%;
   }
@@ -258,6 +267,12 @@
   }
   .right {
     padding-right: 11px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 10px) {
+  .carousal-main-container {
+    padding-top: 0px;
   }
 }
 
@@ -309,7 +324,6 @@
 
 .card {
   flex: 0 0 calc(100% / 3); /* Default: 3 cards per slide */
-  height: 40vh;
   border-radius: 10px;
   text-align: center;
   background: white;
@@ -318,7 +332,6 @@
 
 .card img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -355,6 +368,19 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.home-page-main-container {
+  width: 85%;
+  position: relative;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  /* justify-content: center !important; */
+  padding-top: 60px;
+}
+
 /* Tablet View: First slide - 1 card centered, then 2 cards */
 @media (max-width: 1024px) {
   .card {
@@ -375,4 +401,17 @@
 
 .pb {
   padding-bottom: 65px;
+}
+
+@media (max-width: 700px) and (min-width: 10px) {
+  .home-page-main-container {
+    width: 90%;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bookNowBtnHide {
+    display: none;
+  }
 }
