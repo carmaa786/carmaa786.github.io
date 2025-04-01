@@ -700,62 +700,149 @@
             </a>
         </div>
 
-              <div class="search-location-container">
-        <!-- <div class="location">
-            <div class="location-text">
-                <span class="icon">
-               <i class="fa-solid fa-location-dot"></i></span>
-                <span>Dehradun</span>
-            </div>
-            <i class="fa-solid fa-angle-down"></i>
-            
-        </div> -->
-        <!-- <div class="search-box">
-            <span class="icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-           <p class="hero-section-search-heading"> Search for "<span class="iityped hero-section-search-heading"></span>"</p> -->
 
-           <div>
-               <input type="text" placeholder="Search For" id="searchInput" />
-           
-               <div id="search-option-main-container" class="search-option-main-container">
-                <a href="./interior-car-cleaning-service/" class="service-link-content">
-                    <p class="services-content">Interior Car Cleaning</p>
-                </a>
-                <a href="./paint-protection-and-coating-services/">
-                    <p class="services-content" class="service-link-content">Paint Protection And Coating</p>
-                </a>
-                <a href="./ceramic-coating-service/" class="service-link-content">
-                    <p class="services-content">Ceramic Coating</p>
-                </a>  
-                
-                <a href="./glass-and-surface-coating-services/" class="service-link-content">
-                    <p class="services-content">Glass And Surface Coating</p>
-                </a>
-                 <a href="./full-car-detailing-service/" class="service-link-content">
-                    <p class="services-content">Full car detailing</p>
-                </a>
-                <a href="./exterior-car-cleaning-washing/" class="service-link-content">
-                    <p class="services-content">Exterior Car Cleaning & Washing</p>
-                </a>
-                <a href="./car-dry-cleaning-service/" class="service-link-content">
-                    <p class="services-content">Car Dry Cleaning</p>
-                </a>
 
-                   <a href="./car-body-polish-and-car-waxing-service/" class="service-link-content">
-                    <p class="services-content">Complete Car Body Polish and Wax</p>
-                </a>
-                   <a href="./full-car-wash-service/" class="service-link-content">
-                    <p class="services-content">Full Car Wash</p>
-                </a>
-                   <a href="./car-deep-cleaning-services/" class="service-link-content">
-                    <p class="services-content">Deep Cleaning</p>
-                </a>
-               </div>
-           </div>
-    <!-- </div>
-    </div> -->
+
+           <style>
+    .search-container {
+    position: relative;
+    display: inline-block;
+    }
+
+.search-box {
+    display: flex;
+    align-items: center;
+    padding: 4px 19px 4px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+    background-color: white;
+}
+
+.search-icon {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height: 225px;
+    width: 100%;
+    overflow-y: scroll; /* Always show scrollbar */
+    overflow-x: hidden;    
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Thumb and track color */
+    padding: 10px 5px;
+    border-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+}
+
+.service-link {
+    padding: 4px 10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.service-box:hover {
+    background-color: #ddd;
+    color: #ed6744;
+    cursor: pointer;
+}
+
+
+  </style>
+
+
+        <div class="search-container">
+        <div class="search-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="Search Icon" class="search-icon">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for services..." autocomplete="off">
+        </div>
+        
+        <div id="dropdownList" class="dropdown-content">
+              <a href="./interior-car-cleaning-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/interior.png" alt="Interior Car Cleaning">
+                    <p class="dropdown-para">Interior Car Cleaning</p>
+                </div>
+            </a>
+
+            <a href="./full-car-detailing-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Full Car Detailing">
+                    <p class="dropdown-para">Full Car Detailing</p>
+                </div>
+            </a>
+            <a href="./exterior-car-cleaning-washing/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Exterior Car Cleaning & Washing">
+                    <p class="dropdown-para">Exterior Car Cleaning & Washing</p>
+                </div>
+            </a>
+
+            <a href="./car-dry-cleaning-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Car Dry Cleaning">
+                    <p class="dropdown-para">Car Dry Cleaning</p>
+                </div>
+            </a>
+            <a href="./full-car-wash-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Full Car Wash">
+                    <p class="dropdown-para">Full Car Wash</p>
+                </div>
+            </a>
+
+            <a href="./car-deep-cleaning-services/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Deep Cleaning">
+                    <p class="dropdown-para">Deep Cleaning</p>
+                </div>
+            </a>
+
+              <a href="./car-body-polish-and-car-waxing-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/interior.png" alt="Body Polish and Wax">
+                    <p class="dropdown-para">Body Polish and Wax</p>
+                </div>
+            </a>
+
+            <a href="./paint-protection-and-coating-services/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Paint Protection and coating">
+                    <p class="dropdown-para">Paint Protection and coating</p>
+                </div>
+            </a>
+
+            <a href="./ceramic-coating-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Ceramic Coating">
+                    <p class="dropdown-para">Ceramic Coating</p>
+                </div>
+            </a>
+
+              <a href="./full-car-detailing-service/" target="_blank" class="service-link">
+                <div class="service-box" id="service-img-content">
+                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Full Car Detailing">
+                    <p class="dropdown-para">Full Car Detailing</p>
+                </div>
+            </a>       
+
+        </div>
+    </div>
 
     
     
@@ -767,52 +854,54 @@
     <button class=" open-booking-modal hero-section-btn2 bookNowBtnHide" style="margin-bottom: 2rem;">Book Now</button>
     </div>
 
-
     <script>
-   let inputSearch = document.getElementById("searchInput");
-let searchContainer = document.getElementById("search-option-main-container");
-let services = Array.from(searchContainer.querySelectorAll(".services-content"));
 
-// Show the dropdown when clicking on the input
-inputSearch.addEventListener("click", function () {
-    searchContainer.style.display = "block";
-});
-
-// Filter service based on input
-inputSearch.addEventListener("input", function () {
-    let filter = inputSearch.value.toLowerCase();
-    let hasVisibleItems = false;
-
-    services.forEach((service) => {
-        let text = service.textContent.toLowerCase();
-        if (text.includes(filter)) {
-            service.style.display = "block";
-            hasVisibleItems = true;
+    document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const dropdownList = document.getElementById("dropdownList");
+    
+    const labels = ["'Full Car Wash'", "'Car Dry Cleaning'", "'Ceramic Coating'"];
+    let labelIndex = 0;
+    let charIndex = 0;
+    
+    function displayProgressivePlaceholder() {
+        if (charIndex < labels[labelIndex].length) {
+            searchInput.setAttribute("placeholder", `Search for ${labels[labelIndex].substring(0, charIndex + 1)}`);
+            charIndex++;
         } else {
-            service.style.display = "none";
+            charIndex = 0;
+            labelIndex = (labelIndex + 1) % labels.length;
+            setTimeout(displayProgressivePlaceholder, 1000);
+            return;
+        }
+        setTimeout(displayProgressivePlaceholder, 100);
+    }
+    displayProgressivePlaceholder();
+    
+    searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toUpperCase();
+        const links = dropdownList.getElementsByTagName("a");
+        dropdownList.style.display = "block";
+        
+        for (let i = 0; i < links.length; i++) {
+            const txtValue = links[i].textContent || links[i].innerText;
+            links[i].style.display = txtValue.toUpperCase().includes(filter) ? "block" : "none";
         }
     });
-
-    // Hide dropdown if no results
-    searchContainer.style.display = hasVisibleItems ? "block" : "none";
-});
-
-// Select item and fill input
-  services.forEach((service) => {
-    service.addEventListener("click", function () {
-        inputSearch.value = service.textContent;
-        searchContainer.style.display = "none"; // Hide dropdown after selection
+    
+    searchInput.addEventListener("focus", function () {
+        dropdownList.style.display = "block";
+    });
+    
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".search-container")) {
+            dropdownList.style.display = "none";
+        }
     });
 });
-
-// Hide the dropdown when clicking outside
-document.addEventListener("click", function (event) {
-    if (!inputSearch.contains(event.target) && !searchContainer.contains(event.target)) {
-        searchContainer.style.display = "none";
-    }
-});
-
     </script>
+
+
 
     <style>
         /* Dropdown menu styling */
@@ -866,8 +955,6 @@ document.addEventListener("click", function (event) {
         });
     </script>
 </nav>
-
-
     
     <div style="width: 100vw; margin-top: 2rem; " id="home">
         <div class="home-page-main-container">
@@ -885,67 +972,67 @@ document.addEventListener("click", function (event) {
         <div class="looking-for-container" style="display: flex; flex-wrap: wrap; gap: 18px;">
             <a href="./interior-car-cleaning-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/interior.png" alt="Salon">
+                    <img src="./images/ui_change_images/interior.png" alt="Interior Car Cleaning">
                     <p>Interior Car Cleaning</p>
                 </div>
             </a>
             <a href="./full-car-detailing-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_car_wash.png" alt="AC Repair">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Full Car Detailing">
                     <p>Full Car Detailing</p>
                 </div>
             </a>
             <a href="./exterior-car-cleaning-washing/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_wash.png" alt="Cleaning">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Exterior Car Cleaning & Washing">
                     <p>Exterior Car Cleaning & Washing</p>
                 </div>
             </a>
 
             <a href="./car-dry-cleaning-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Electrician">
+                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Car Dry Cleaning">
                     <p>Car Dry Cleaning</p>
                 </div>
             </a>
             <a href="./full-car-wash-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_car_wash.png" alt="Painting">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Full Car Wash">
                     <p>Full Car Wash</p>
                 </div>
             </a>
 
             <a href="./car-deep-cleaning-services/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_wash.png" alt="Pest Control">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Deep Cleaning">
                     <p>Deep Cleaning</p>
                 </div>
             </a>
 
               <a href="./car-body-polish-and-car-waxing-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/interior.png" alt="Pest Control">
+                    <img src="./images/ui_change_images/interior.png" alt="Body Polish and Wax">
                     <p>Body Polish and Wax</p>
                 </div>
             </a>
 
             <a href="./paint-protection-and-coating-services/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_car_wash.png" alt="Pest Control">
+                    <img src="./images/ui_change_images/full_car_wash.png" alt="Paint Protection and coating">
                     <p>Paint Protection and coating</p>
                 </div>
             </a>
 
             <a href="./ceramic-coating-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/full_wash.png" alt="Pest Control">
+                    <img src="./images/ui_change_images/full_wash.png" alt="Ceramic Coating">
                     <p>Ceramic Coating</p>
                 </div>
             </a>
 
               <a href="./full-car-detailing-service/" target="_blank" class="homepage-services">
                 <div class="service-box">
-                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Pest Control">
+                    <img src="./images/ui_change_images/dry_cleaning.png" alt="Full Car Detailing">
                     <p>Full Car Detailing</p>
                 </div>
             </a>       
@@ -958,7 +1045,7 @@ document.addEventListener("click", function (event) {
         <button class="open-booking-modal hero-section-btn3 hero-section-btn-width" id="book-service-btn">Booking Services</button>
     </div> -->
 
-     <button class=" open-booking-modal hero-section-btn2">Book Now</button>
+     <!-- <button class=" open-booking-modal hero-section-btn2">Book Now</button> -->
 
    
 
@@ -966,17 +1053,19 @@ document.addEventListener("click", function (event) {
 
          <div class="btns-container">
             <div class="download-btn">
-            <img src="./images/ui_change_images/download2.jpeg" alt="">
+            <img src="./images/ui_change_images/download2.jpeg" alt="Play Store Download">
             </div>
         </div>
 
+        <a href="https://g.co/kgs/VgMhb2d" target="_blank">
         <div class="rating-container">
-            <img src="https://cdn-icons-png.flaticon.com/128/1828/1828970.png" alt="Star Icon">
-            <div class="rating-text">
-                <span class="rating-number">4.8</span>
-                <span class="rating-label">Service Rating</span>
+                <img src="https://cdn-icons-png.flaticon.com/128/1828/1828970.png" alt="Star Icon">
+                <div class="rating-text">
+                    <span class="rating-number">4.8</span>
+                    <span class="rating-label">Service Rating</span>
+                </div>
             </div>
-        </div>
+        </a>
     
         <!-- <div class="rating-container">
             <img src="./images/ui_change_images/customer_icon.png" alt="Star Icon">
@@ -1035,35 +1124,48 @@ document.addEventListener("click", function (event) {
 
 <script>
 let index = 0;
-const carousel = document.querySelector('.carousel');
-const cards = document.querySelectorAll('.card');
+const carousel = document.querySelector(".carousel");
+const cards = document.querySelectorAll(".card");
 let visibleCards = getVisibleCards();
-let cardWidth = cards[0].offsetWidth + 20; // Updated width with increased gap
+let cardWidth = cards[0].offsetWidth + 20; // Updated width with gap
+let direction = 1; // 1 for right, -1 for left
 
-function moveSlide(direction) {
+function moveSlide() {
     visibleCards = getVisibleCards();
-    cardWidth = cards[0].offsetWidth + 20; // Update width dynamically with increased gap
+    cardWidth = cards[0].offsetWidth + 20; // Update dynamically
 
     index += direction;
-    if (index < 0) {
-        index = cards.length - visibleCards;
-    } else if (index > cards.length - visibleCards) {
-        index = 0;
+
+    // When reaching the rightmost side, change direction to left
+    if (index >= cards.length - visibleCards) {
+        direction = -1;
+    }
+    // When reaching the leftmost side, change direction to right
+    else if (index <= 0) {
+        direction = 1;
     }
 
     carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 }
 
+// Function to determine the number of visible cards based on screen width
 function getVisibleCards() {
     if (window.innerWidth < 600) return 1; // Mobile
     if (window.innerWidth < 1024) return 2; // Tablet
-    return 3; // Laptop
+    return 3; // Laptop/Desktop
 }
 
-window.addEventListener('resize', () => {
+// Auto-slide every 3 seconds
+setInterval(() => {
+    moveSlide();
+}, 3000);
+
+// Handle screen resize
+window.addEventListener("resize", () => {
     index = 0;
-    moveSlide(0);
+    moveSlide();
 });
+
 </script>
 
 
@@ -1072,25 +1174,39 @@ window.addEventListener('resize', () => {
 
 <section class="pb" style="width: 95%; max-width: 1200px; margin: auto;">
     <h1 class="hero-section-heading-update">Other Services</h1>
-    <div style="display: flex; gap: 25px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 25px; flex-wrap: inherit;">
 
-    <div class="sofa-cleaning-container">
+    <div class="sofa-cleaning-container open-booking-modal bookNowBtnHide">
+        <p style="padding-top: 20px; padding-bottom: 30px; font-weight: 600;">Jumpstart</p>
+        <div class="sofa-img-container" style="height: 100%; width: 100%;">
+            <img class="sofa-img" src="./images/ui_change_images/jumpstart.jpg" alt="Sofa Cleaning">
+        </div>
+    </div>
+
+    <div class="sofa-cleaning-container open-booking-modal bookNowBtnHide">
+        <p style="padding-top: 20px; padding-bottom: 30px; font-weight: 600;">Mechanical Services</p>
+        <div class="sofa-img-container" style="height: 100%; width: 100%;">
+            <img class="sofa-img" src="./images/ui_change_images/mechanical_services.jpg" alt="Sofa Cleaning">
+        </div>
+    </div>
+
+    <div class="sofa-cleaning-container open-booking-modal bookNowBtnHide">
         <p style="padding-top: 20px; padding-bottom: 30px; font-weight: 600;">Sofa Cleaning</p>
-        <div class="sofa-img-container">
+        <div class="sofa-img-container" style="height: 100%; width: 100%;">
             <img class="sofa-img" src="./images/ui_change_images/sofa.webp" alt="Sofa Cleaning">
         </div>
     </div>
 
-      <div class="sofa-cleaning-container">
+    <div class="sofa-cleaning-container open-booking-modal bookNowBtnHide">
         <p style="padding-top: 20px; padding-bottom: 30px; font-weight: 600;">Mattress cleaning</p>
-        <div class="sofa-img-container">
+        <div class="sofa-img-container" style="height: 100%; width: 100%;">
             <img class="sofa-img" src="./images/ui_change_images/mattress.webp" alt="Sofa Cleaning">
         </div>
     </div>
 
-      <div class="sofa-cleaning-container">
+    <div class="sofa-cleaning-container open-booking-modal bookNowBtnHide">
         <p style="padding-top: 20px; padding-bottom: 30px; font-weight: 600;">Carpet Cleaning</p>
-        <div class="sofa-img-container">
+        <div class="sofa-img-container" style="height: 100%; width: 100%;">
             <img class="sofa-img" src="./images/ui_change_images/carpet.jpeg" alt="Sofa Cleaning">
         </div>
             </div>
@@ -1099,8 +1215,20 @@ window.addEventListener('resize', () => {
 </section>
 </div>
 
+<!-- 
+<div class="download-fixed-container">
+    <div style="font-weight: bold;">
+
+    </div>
+    <div class="btns-container">
+            <div class="download-btn">
+            <img src="./images/ui_change_images/download2.jpeg" alt="Play Store Download">
+            </div>
+        </div>
+</div> -->
+
  
-<section class="section-why-carmaa" id="why-carma">
+<!-- <section class="section-why-carmaa" id="why-carma">
         <div class="why-carmaa-container">
             <h2>WHAT WE'RE OFFERING</h2>
             <h1>Your Go-To Solution for Eco-Friendly and Convenient Car Care</h1>
@@ -1187,7 +1315,7 @@ window.addEventListener('resize', () => {
        
 
 
-    </section>
+    </section> -->
 
 
 
@@ -1252,14 +1380,20 @@ window.addEventListener('resize', () => {
             </div>
             <div class="video-description">
                 <div class="video-description-img">
-                    <img class="car-img"src="./images/home-page/benefits/video-car.jpg"/>
-                    <div  class="play-button youtube-video-btn">
-                        <img src="./images/home-page/benefits/play.png"/>
-                    </div>
+                    <!-- <img class="car-img"src="./images/home-page/benefits/video-car.jpg"/> -->
+                    <!-- <div  class="play-button youtube-video-btn"> -->
+                        <!-- <img src="./images/home-page/benefits/play.png"/> -->
+
+                        <iframe 
+                        style="height: 100%; width: 100%;" 
+                        frameborder="0" 
+                        src="https://www.youtube.com/embed/a7YL-k7HC3E?autoplay=1&mute=1" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen>
+                        </iframe>
+                    <!-- </div> -->
                 </div>
                
-                
-
                </div>
             </div>
         </div>
@@ -1269,11 +1403,11 @@ window.addEventListener('resize', () => {
 
     <section class="counter-section">
         <div class="counter-section-element">
-            <div style="display: flex;"> <h4  class="counter-js target-1500" data-target="1500">1450</h4><span class="counter-section-sign">+</span></div>
+            <div style="display: flex;"> <h4  class="counter-js target-1500" data-target="84">10</h4><span class="counter-section-sign">K+</span></div>
             <p>Car Cleaned</p>
         </div>
         <div class="counter-section-element">
-            <div style="display: flex;"> <h4 class="counter-js" data-target="650">600</h4><span class="counter-section-sign">+</span></div>
+            <div style="display: flex;"> <h4 class="counter-js" data-target="1000">950</h4><span class="counter-section-sign">+</span></div>
             <p>Car Polished</p>
         </div>
         <div class="counter-section-element">
@@ -1281,7 +1415,7 @@ window.addEventListener('resize', () => {
             <p>Customer Satisfaction</p>
         </div>
         <div class="counter-section-element">
-            <div style="display: flex;">  <h4 class="counter-js" data-target="50">0</h4><span class="counter-section-sign">+</span></div>
+            <div style="display: flex;">  <h4 class="counter-js" data-target="30">0</h4><span class="counter-section-sign">+</span></div>
             <p>Professional Team Members</p>
         </div>
     </section>
@@ -1357,18 +1491,60 @@ window.addEventListener('resize', () => {
         <h1 class="testimonial-heading">What Client's Say?</h1>
     </div>
 
+<style>
+.review-client-says-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Aligns items in the center */
+    gap: 20px; /* Adjust the gap between elements */
+    width: 100%;
+}
+
+.google-review, .video-section, #download-rating-container {
+    flex: 1; /* Makes all divs take equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-section iframe {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+}
+
+.google-review img,
+.download-btn img {
+    width: 100%; /* Ensures images fit within the div */
+    max-width: 26rem; /* Adjust based on design */
+    height: auto;
+}
+</style>
+
+
+<!-- <div class="review-client-says-container"> -->
+    <!-- <div class="google-review">
+        <img src="./images/ui_change_images/google_review.png" alt="Google Review" class="review-image">
+    </div> -->
+
     <div class="video-section">
-
-<iframe 
-    style="height: 100%; width: 100%;" 
-    frameborder="0" 
-    src="https://www.youtube.com/embed/Q8WhEqMAUuc?autoplay=1&mute=1&loop=1&playlist=Q8WhEqMAUuc&rel=0"
-    allow="autoplay; encrypted-media"
->
-</iframe>
-        
-
+        <iframe 
+            frameborder="0" 
+            src="https://www.youtube.com/embed/Q8WhEqMAUuc?autoplay=1&mute=1&loop=1&playlist=Q8WhEqMAUuc&rel=0"
+            allow="autoplay; encrypted-media"
+        >
+        </iframe>
     </div>
+
+    <!-- <div id="download-rating-container">
+        <div class="download-btn">
+            <img src="./images/ui_change_images/download2.jpeg" alt="Play Store Download">
+        </div>
+    </div> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<div class="pdInline">
+
         <div class="testimonial-slider-2" style="--numItems:10">
             <div class="testimonial-track-2" >
                 <div class="testimonial-card" style="--itemIndex:1">
@@ -1655,17 +1831,15 @@ window.addEventListener('resize', () => {
                    
                  
                 </div>
+
                 
             </div>
 
         </div>
+    </div>
 
 
   </section>
-
-
-
-
 
 
 
@@ -1828,7 +2002,7 @@ window.addEventListener('resize', () => {
       </div>
     <div id="footer">
         <script>
-            fetch('../components/footer.html')
+            fetch('../components/footer1.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer').innerHTML = data;
@@ -1964,7 +2138,7 @@ window.addEventListener('resize', () => {
                 <div class="image-section">
                     <div class="modal-left">
                         <h2>BOOK AN APPOINTMENT</h2>
-                        <h1>Get Upto 15% OFF on your First Booking</h1>
+                        <h1>Download the App now & get 15% off</h1>
                          
                             <div class="contact">
                                 <div class="img-wrapper">
@@ -1977,7 +2151,13 @@ window.addEventListener('resize', () => {
                                
                                
                             </div>
-                            <div class="contact">
+
+                        <div class="download-modal-container">
+                            <div class="download-btn">
+                            <img src="./images/ui_change_images/download2.jpeg" alt="Play Store Download">
+                            </div>
+                        </div>
+                            <!-- <div class="contact">
                                 <div class="img-wrapper2">
                                     <img src="./images/home-page/modal/icon-clock.png"/>
                                 </div>
@@ -1987,7 +2167,7 @@ window.addEventListener('resize', () => {
                                 </div>
                                
                                
-                            </div>
+                            </div> -->
                         </div>
                    
 
@@ -2027,7 +2207,7 @@ window.addEventListener('resize', () => {
                     <div>
                         <p class="modal-form-label">Query Related to</p>
                         <select class="modal-input" id="serviceSelect">
-                            <option value="" disabled selected>Select a service</option>
+                            <option value="" disabled selected >Select a service</option>
                             <option value="interior-car-cleaning">Interior Car Cleaning</option>
                             <option value="paint-protection-and-coating-services">
                                 Paint Protection And Coating Services
@@ -2101,13 +2281,13 @@ window.addEventListener('resize', () => {
 
             // Close button functionality
             document.getElementById("close-btn").addEventListener("click", function () {
-                document.getElementById('nameError').textContent = '';
+            document.getElementById('nameError').textContent = '';
           document.getElementById('phoneError').textContent = '';
           document.getElementById('addressError').textContent = '';
           document.getElementById('cityError').textContent = '';
           document.getElementById('nameInput').value='';
-        document.getElementById('numberInput').value='';
-document.getElementById('addressInput').value='';
+          document.getElementById('numberInput').value='';
+          document.getElementById('addressInput').value='';
           document.getElementById('cityInput').value='';
           document.getElementById('errorMessage').textContent=''
           document.getElementById('successMessage').textContent=''

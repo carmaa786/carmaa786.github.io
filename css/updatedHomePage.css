@@ -1,20 +1,17 @@
 /* navbar section logo + search */
 
-#searchInput{
-      padding: 10px 50px 10px 10px;
+#close-btn {
+  cursor: pointer;
+}
+
+#searchInput {
+  padding: 10px 50px 10px 10px;
 }
 .pdInline {
   padding-inline: 92px;
 }
-
-.location-selection {
-  /* border: none; */
-}
-
-.hero-section-search-heading {
-  /* font-size: 2rem; */
-  /* font-weight: 700; */
-  /* color: #e77640; */
+.search-location-container {
+  height: 100%;
 }
 
 .service-link-content {
@@ -67,7 +64,7 @@
   border: none;
   outline: none;
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
 }
 
@@ -86,16 +83,29 @@
   font-weight: 600;
   padding-bottom: 22px;
 }
+
 .car-services-container {
-  width: 92%;
-  /* background: white; */
+  width: 94%;
   padding: 24px 24px 32px;
   border-radius: 10px;
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
   border: 1px solid lightgrey;
-  /* max-width: 400px; */
-  /* text-align: center; */
+  height: 45vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
+
+/* For Firefox: Hide scrollbar buttons (dots or triangles) */
+.car-services-container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 .looking-for-heading {
   font-size: 20px;
   margin-bottom: 20px;
@@ -105,6 +115,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-top: 3rem;
 }
 .service-box {
   display: flex;
@@ -173,6 +184,47 @@
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
 }
+
+.download-modal-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+/* .download-btn{
+  border-radius: 10px;
+}
+.btns-container{
+   border-radius: 10px;
+
+} */
+
+.review-client-says-container {
+  display: flex;
+  align-items: center;
+  padding-inline: 100px;
+  gap: 40px;
+}
+/* .google-review {
+  flex: 0 30%;
+}
+.download-rating-container {
+  flex: 0 30%;
+} */
+
+.download-fixed-container {
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  height: 150px;
+  width: 390px;
+  border: 0.5px solid rgb(194, 194, 194);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 34px 34px 0px;
+  position: fixed;
+  bottom: 35px;
+  left: 13px;
+  z-index: 9;
+}
 .rating-container {
   display: flex;
   align-items: center;
@@ -180,9 +232,31 @@
   color: #333;
   font-size: 18px;
   gap: 10px;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  border: 1px solid gray;
+  padding: 0.6rem 2.3rem;
+  border-radius: 10px;
 }
+.rating-container:hover {
+  cursor: pointer;
+}
+
+.download-btn img {
+  border-radius: 8px;
+  display: block; /* Ensures no extra spacing below the image */
+}
+.review-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .download-rating-container{
+  flex: 0 30%;
+}
+
+.video-section{
+  flex: 0 30%;
+} */
 .rating-container img {
   width: 20px;
   height: 20px;
@@ -232,9 +306,17 @@
 .img4 {
   border-bottom-right-radius: 20px;
 }
-/* .looking-for-container{
-            display: flex;
-         } */
+/* .looking-for-container {
+  overflow-y: scroll; 
+  overflow-x: hidden;
+  scrollbar-width: thin; 
+} */
+
+#service-img-content {
+  margin-bottom: 0px;
+  padding: 0px;
+  gap: 4px;
+}
 
 .homepage-left-services-container {
   flex: 0 45%;
@@ -367,6 +449,12 @@
 .prev {
   left: 10px;
 }
+.prev:hover {
+  cursor: pointer;
+}
+.next:hover {
+  cursor: pointer;
+}
 .next {
   right: 10px;
 }
@@ -382,14 +470,14 @@
 .home-page-main-container {
   width: 85%;
   position: relative;
-  align-items: center;
+  /* align-items: center; */
   gap: 10px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   /* justify-content: center !important; */
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
 
 /* Tablet View: First slide - 1 card centered, then 2 cards */
