@@ -683,7 +683,7 @@
             </a>
         </div>
 
-              <!-- <div class="search-location-container"> -->
+              <div class="search-location-container">
         <!-- <div class="location">
             <div class="location-text">
                 <span class="icon">
@@ -697,8 +697,47 @@
             <span class="icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </span>
-           <p class="hero-section-search-heading"> Search for "<span class="iityped hero-section-search-heading"></span>"</p>
-    </div>
+           <p class="hero-section-search-heading"> Search for "<span class="iityped hero-section-search-heading"></span>"</p> -->
+
+           <div>
+               <input type="text" placeholder="Search For" id="searchInput" />
+           
+               <div id="search-option-main-container" class="search-option-main-container">
+                <a href="./interior-car-cleaning-service/" class="service-link-content">
+                    <p class="services-content">Interior Car Cleaning</p>
+                </a>
+                <a href="./paint-protection-and-coating-services/">
+                    <p class="services-content" class="service-link-content">Paint Protection And Coating</p>
+                </a>
+                <a href="./ceramic-coating-service/" class="service-link-content">
+                    <p class="services-content">Ceramic Coating</p>
+                </a>  
+                
+                <a href="./glass-and-surface-coating-services/" class="service-link-content">
+                    <p class="services-content">Glass And Surface Coating</p>
+                </a>
+                 <a href="./full-car-detailing-service/" class="service-link-content">
+                    <p class="services-content">Full car detailing</p>
+                </a>
+                <a href="./exterior-car-cleaning-washing/" class="service-link-content">
+                    <p class="services-content">Exterior Car Cleaning & Washing</p>
+                </a>
+                <a href="./car-dry-cleaning-service/" class="service-link-content">
+                    <p class="services-content">Car Dry Cleaning</p>
+                </a>
+
+                   <a href="./car-body-polish-and-car-waxing-service/" class="service-link-content">
+                    <p class="services-content">Complete Car Body Polish and Wax</p>
+                </a>
+                   <a href="./full-car-wash-service/" class="service-link-content">
+                    <p class="services-content">Full Car Wash</p>
+                </a>
+                   <a href="./car-deep-cleaning-services/" class="service-link-content">
+                    <p class="services-content">Deep Cleaning</p>
+                </a>
+               </div>
+           </div>
+    <!-- </div>
     </div> -->
 
     
@@ -710,6 +749,53 @@
     </div>
     <button class=" open-booking-modal hero-section-btn2 bookNowBtnHide" style="margin-bottom: 2rem;">Book Now</button>
     </div>
+
+
+    <script>
+   let inputSearch = document.getElementById("searchInput");
+let searchContainer = document.getElementById("search-option-main-container");
+let services = Array.from(searchContainer.querySelectorAll(".services-content"));
+
+// Show the dropdown when clicking on the input
+inputSearch.addEventListener("click", function () {
+    searchContainer.style.display = "block";
+});
+
+// Filter service based on input
+inputSearch.addEventListener("input", function () {
+    let filter = inputSearch.value.toLowerCase();
+    let hasVisibleItems = false;
+
+    services.forEach((service) => {
+        let text = service.textContent.toLowerCase();
+        if (text.includes(filter)) {
+            service.style.display = "block";
+            hasVisibleItems = true;
+        } else {
+            service.style.display = "none";
+        }
+    });
+
+    // Hide dropdown if no results
+    searchContainer.style.display = hasVisibleItems ? "block" : "none";
+});
+
+// Select item and fill input
+  services.forEach((service) => {
+    service.addEventListener("click", function () {
+        inputSearch.value = service.textContent;
+        searchContainer.style.display = "none"; // Hide dropdown after selection
+    });
+});
+
+// Hide the dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    if (!inputSearch.contains(event.target) && !searchContainer.contains(event.target)) {
+        searchContainer.style.display = "none";
+    }
+});
+
+    </script>
 
     <style>
         /* Dropdown menu styling */

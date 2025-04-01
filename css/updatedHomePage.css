@@ -1,5 +1,8 @@
 /* navbar section logo + search */
 
+#searchInput{
+      padding: 10px 50px 10px 10px;
+}
 .pdInline {
   padding-inline: 92px;
 }
@@ -14,6 +17,14 @@
   /* color: #e77640; */
 }
 
+.service-link-content {
+  color: #000;
+}
+
+.service-link-content::before {
+  color: #e68900; /* Change to orange after visiting */
+}
+
 .location-text {
   display: flex;
   /* align-items: center; */
@@ -26,7 +37,7 @@
   gap: 10px;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .location,
@@ -414,4 +425,23 @@
   .bookNowBtnHide {
     display: none;
   }
+}
+
+.search-option-main-container {
+  display: none;
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.search-option-main-container p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.search-option-main-container p:hover {
+  background-color: #f0f0f0;
 }
