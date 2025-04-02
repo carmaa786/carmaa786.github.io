@@ -562,7 +562,7 @@
   }
 
   .navbar-main-container {
-    gap: 14px;
+    gap: 5px;
     justify-content: center;
     width: 100% !important;
   }
