@@ -1,5 +1,10 @@
 /* navbar section logo + search */
 
+.toggle-hamburger{
+  display: none;
+}
+
+
 .navbar-main-container {
   justify-content: space-between;
 }
@@ -623,6 +628,10 @@
 
   .carmaa-timeline-container {
     margin-top: 0rem !important;
+  }
+
+  .toggle-hamburger{
+    display: block;
   }
 }
 
