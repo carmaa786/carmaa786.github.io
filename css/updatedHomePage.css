@@ -1,5 +1,9 @@
 /* navbar section logo + search */
 
+.navbar-main-container {
+  justify-content: space-between;
+}
+
 #close-btn {
   cursor: pointer;
 }
@@ -552,8 +556,8 @@
     padding-top: 0px;
   }
 
-  .navbar-main-container{
-    gap: 16px;
+  .navbar-main-container {
+    gap: 14px;
     justify-content: center;
   }
 
