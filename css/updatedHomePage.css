@@ -564,6 +564,7 @@
   .navbar-main-container {
     gap: 14px;
     justify-content: center;
+    width: 100% !important;
   }
 
   .pb {

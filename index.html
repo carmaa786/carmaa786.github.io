@@ -860,12 +860,136 @@
 
     
     <button class=" open-booking-modal hero-section-btn2 booking-button" style="margin-bottom: 2rem;">Book Now</button>
+
+    <style>
+        .hamburger-button{
+            border: none;
+            background-color: #ffffff;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            right: 375px;            
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .hamburger-content {
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+            display: block;
+            text-align: center;
+            font-weight: 600;
+        }
+        .hamburger-content:hover{
+            color: #28b097;
+        }
+
+        .hamburger-content:active{
+            color: #28b097;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .services-ten{
+        /* border: 1px solid black; */
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 187px;
+        background: white;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+            .menu.show {
+                display: flex;
+                gap: 20px !important;
+                padding: 36px 0px !important;
+            }
+            .services-ten{
+                display: none;
+                height: 40vh;
+                overflow: scroll;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            }
+            .service-show{
+                display: block;
+            }
+        }
+    </style>
+
+
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger-button">
+              <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+        </button>
+    </div>
+        <div class="menu" id="menu">
+            <a href="/" class="hamburger-content">Home</a>
+            <a href="/about/" class="hamburger-content">About</a>
+            <p class="hamburger-content services-mobile-view" onclick="toggleServices()">Services</p>
+            <div class="services-ten" id="services-ten">
+                <a  href="../interior-car-cleaning-service/" class="hamburger-content">Interior Car Cleaning</a>
+                <a  href="../paint-protection-and-coating-services/" class="hamburger-content">Paint Protection And Coating</a>
+                <a href="../glass-and-surface-coating-services/" class="hamburger-content">Glass And Surface Coating</a>
+                  <a  href="../full-car-detailing-service/" class="hamburger-content">Full Car Detailing</a>
+                <a   href="../exterior-car-cleaning-washing/" class="hamburger-content">Exterior Car Cleaning & Washing</a>
+                <a href="../car-dry-cleaning-service/" class="hamburger-content">Car Dry Cleaning</a>
+                <a  href="../car-body-polish-and-car-waxing-service/" class="hamburger-content">Complete Car Body Polish and Wax</a>
+                <a  href="../full-car-wash-service/" class="hamburger-content">Full Car Wash</a>
+                <a href="../car-deep-cleaning-services/" class="hamburger-content">Deep Cleaning</a>
+            </div>
+
+            <a href="../doorstep-car-washing-service-in-dehradun/" class="hamburger-content">Our Locations</a>
+            <a href="/contactus/" class="hamburger-content">Contact Us</a>
+        </div>
+
+
+        
+
+        <script>
+            function toggleMenu() {
+               document.getElementById("menu").classList.toggle("show");
+            }
+
+             function setActive(link) {
+            let links = document.querySelectorAll(".menu a");
+            links.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+        }
+
+        function toggleServices(){
+            document.getElementById("services-ten").classList.toggle("service-show");
+        }
+
+        </script>
+
     
-    <div class="toggle-hamburger">
+    <!-- <div class="toggle-hamburger">
         <button class="toggle " id="toggle" style="background-color:transparent; border: none; outline: none; ">
             <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
         </button>
-    </div>
+    </div> -->
+
+
+
+
+
     </div>
 
     <script>
