@@ -389,7 +389,7 @@
   }
 
   .booking-button {
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
     /* letter-spacing: 2px; */
     padding: 14px 19px !important;
   }
@@ -563,7 +563,7 @@
 
   .navbar-main-container {
     gap: 5px;
-    justify-content: center;
+    justify-content: space-around;
     width: 100% !important;
   }
 

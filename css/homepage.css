@@ -1043,10 +1043,10 @@
   }
   .hero-section-btn2 {
     color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: -1 3px 13px;
     background-color: var(--primary-color);
     margin-top: 2rem;
-    border-radius: 0.7rem;
+    border-radius: 0.5rem;
     font-size: 0.85rem;
     letter-spacing: 2px;
     padding: 18px 40px;
