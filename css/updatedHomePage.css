@@ -237,29 +237,35 @@
   border-radius: 10px;
 } */
 
+.download-btn-container {
+  flex: 1 44%;
+}
+
 .rating-container {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Arial, sans-serif;
-  color: #FFFFFF; /* White text color */
-  background-color: #0C4C9D; /* Background color */
+  color: #ffffff; /* White text color */
+  background-color: #0c4c9d; /* Background color */
   font-size: 18px;
   gap: 10px;
   border: none; /* No border */
-  padding: 0.4rem 1.5rem;
-  border-radius: 10px;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
   transition: transform 0.2s;
   cursor: pointer;
   text-decoration: none;
+  flex: 1 44%;
 }
+
 .rating-container:hover {
   transform: scale(1.02);
 }
 .rating-text p {
   margin: 0;
   font-size: 0.8rem;
-  color: #FFFFFF; /* Ensure the text remains white */
+  color: #ffffff; /* Ensure the text remains white */
 }
 
 .rating-container:hover {
@@ -356,9 +362,10 @@
 .rating-customer-container {
   display: flex;
   align-items: center;
-  gap: 26.5%;
+  gap: 20%;
   padding-top: 2rem;
   padding-bottom: 3rem;
+  padding-right: 2rem;
 }
 
 .carousal-main-container {
@@ -368,7 +375,18 @@
 @media (max-width: 700px) and (min-width: 10px) {
   .rating-customer-container {
     flex-direction: column;
-    align-items: start;
+    /* align-items: c; */
+    padding-right: 0rem;
+  }
+
+  .booking-button {
+    font-size: 0.75rem !important;
+    /* letter-spacing: 2px; */
+    padding: 14px 19px !important;
+  }
+
+  .rating-container {
+    width: 63%;
   }
 
   .car-services-container {
@@ -528,16 +546,14 @@
   padding-bottom: 65px;
 }
 
-@media (max-width: 700px) and (min-width: 10px) {
+@media (max-width: 700px) and (min-width: 0px) {
   .home-page-main-container {
     width: 90%;
     padding-top: 0px;
   }
-}
 
-@media (max-width: 900px) {
-  .bookNowBtnHide {
-    display: none;
+  .pb {
+    padding-bottom: 40px;
   }
 }
 
@@ -558,4 +574,55 @@
 
 .search-option-main-container p:hover {
   background-color: #f0f0f0;
+}
+
+/* .testimonial-heading{
+  color: #0e111b !important
+} */
+
+.why-carmaa-container h1 {
+  color: #0e111b !important;
+}
+
+@media (max-width: 900px) and (min-width: 0px) {
+  .bookNowBtnHide {
+    display: none;
+  }
+
+  .homepage-services {
+    width: 46%;
+  }
+  .service-box img {
+    width: 30px;
+    height: 25px;
+    /* margin-right: 8px; */
+  }
+  .service-box p {
+    font-size: 12px;
+  }
+  .car-services-container {
+    height: 33vh;
+  }
+  .rating-customer-container {
+    gap: 20px;
+  }
+  .rating-container {
+    /* padding: 0.7rem 1.5rem; */
+    padding-left: 2px;
+    /* width: 72%; */
+  }
+
+  .carmaa-timeline-container {
+    margin-top: 0rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .other-services-main-container {
+    display: none;
+  }
+
+  .carmaa-timeline-container {
+    margin-top: 0rem;
+  }
 }

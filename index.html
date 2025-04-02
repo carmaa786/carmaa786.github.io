@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-32x32.png">
 <link rel="stylesheet" href="./css/updatedHomePage.css">
 
 <link rel="stylesheet" href="./css/timelin.css"/>
@@ -704,6 +704,12 @@
 
 
            <style>
+
+            
+
+
+
+
     .search-container {
     position: relative;
     display: inline-block;
@@ -760,6 +766,14 @@
     background-color: #ddd;
     color: #28b097;
     cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .search-container{
+        display: none;
+    }
+    
 }
 
 
@@ -845,13 +859,13 @@
     </div>
 
     
+    <button class=" open-booking-modal hero-section-btn2 booking-button" style="margin-bottom: 2rem;">Book Now</button>
     
     <div style="display: flex; gap: 20px; ">
         <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
             <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
         </button>
     </div>
-    <button class=" open-booking-modal hero-section-btn2 bookNowBtnHide" style="margin-bottom: 2rem;">Book Now</button>
     </div>
 
     <script>
@@ -1054,7 +1068,7 @@
     <div class="rating-customer-container">
 
          <div class="btns-container">
-            <div class="download-btn">
+            <div class="download-btn download-btn-container">
             <img src="./images/ui_change_images/download2.jpeg" alt="Play Store Download">
             </div>
         </div>
@@ -1171,7 +1185,7 @@ window.addEventListener("resize", () => {
 <div class="pdInline">
 
 
-<section class="pb" style="width: 95%; max-width: 1200px; margin: auto;">
+<section class="pb other-services-main-container" style="width: 95%; max-width: 1200px; margin: auto;">
     <h1 class="hero-section-heading-update">Other Services</h1>
     <div style="display: flex; gap: 25px; flex-wrap: inherit;">
 
