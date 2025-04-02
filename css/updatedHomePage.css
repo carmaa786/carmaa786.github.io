@@ -552,6 +552,11 @@
     padding-top: 0px;
   }
 
+  .navbar-main-container{
+    gap: 16px;
+    justify-content: center;
+  }
+
   .pb {
     padding-bottom: 40px;
   }
