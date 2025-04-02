@@ -128,7 +128,8 @@ margin-top: 1.5rem;
     
 }
 .social-media-icons2 .img-wrapper:hover{
-    background-color: #E77640;
+    background-color: #28b097 !important
+;
 }
 .social-media-icons2 img{
     width: 1.2rem;
@@ -195,7 +196,7 @@ input, select, textarea {
 
 .btn-submit-contact:hover {
     cursor: pointer;
-    background-color:#E77640;;
+    background-color:#28b097;;
 }
 
 .error-message {

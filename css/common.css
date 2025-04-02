@@ -1,54 +1,51 @@
-:root{
-    --primary-color:#01628F;
-    --font:"Bai Jamjuree", sans-serif;
-    --body-font:"Sarabun", sans-serif;
-    --silver:#BAC4C9
+:root {
+  --primary-color: #01628f;
+  --font: "Bai Jamjuree", sans-serif;
+  --body-font: "Sarabun", sans-serif;
+  --silver: #bac4c9;
 }
-.mobile-number-ref{
+.mobile-number-ref {
   color: white;
   text-decoration: none;
- 
 }
-.mobile-number-ref:hover{
-color:#E77640  !important;
+.mobile-number-ref:hover {
+  color: #28b097 !important;
 }
-.mobile-number-ref2{
+.mobile-number-ref2 {
   color: black;
   text-decoration: none;
- 
 }
-.mobile-number-ref2:hover{
-color:#E77640  !important;
+.mobile-number-ref2:hover {
+  color: #28b097 !important;
 }
-.social-media-icons{
-
+.social-media-icons {
   display: flex;
-  gap:0.2rem
+  gap: 0.2rem;
 }
 
-  @keyframes fadeInOut {
-        0% {
-            opacity: 0;
-        }
-        20% {
-            opacity: 1;
-        }
-        80% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
-    /* Apply the animation to the top bar text */
-    #topbar-text {
-        animation: fadeInOut 3s infinite ease-in;
-    }
+/* Apply the animation to the top bar text */
+#topbar-text {
+  animation: fadeInOut 3s infinite ease-in;
+}
 
-.social-media-icons .img-wrapper{
- width: 2rem;
- height: 2rem;
+.social-media-icons .img-wrapper {
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,123 +53,28 @@ color:#E77640  !important;
   background-color: #01415f;
   
 }
-.social-media-icons .img-wrapper:hover{
-  background-color: #E77640;
+/* .social-media-icons .img-wrapper:hover {
+  color: #28b097 !important;
+} */
+.img-wrapper:hover {
+  background-color: #28b097 !important;
 }
-.social-media-icons img{
+.social-media-icons img {
   width: 1rem;
   height: 1rem;
-
 }
-.city-header-section{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 5rem;
-    width: 100%;
-    background-position: left top;
-    background-size: cover;
-    background-image: url('../images/header-img.jpg');
-    
+.city-header-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 5rem;
+  width: 100%;
+  background-position: left top;
+  background-size: cover;
+  background-image: url("../images/header-img.jpg");
 }
-.city-header-section p{
-    color: white;
-    position: relative;
-    font-size: 2.2rem;
-    font-family: var(--font);
-    line-height: 2;
-    font-weight: 700;
-    z-index: 2;
-
-}
-.city-header-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-  bottom: 0;
-  right: 0;
-    padding: 8rem 5rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
-}
-.city-header-section .breadcrumb{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-position: relative;
-z-index: 2;
-}
-
-.city-header-section .breadcrumb img{
-    
-width: 1rem;
-height: 1rem;
-}
-@media screen and (min-width:300px) {
-  .city-header-section{
-    padding: 5.5rem 1rem;
-  }
-  .topbar-section-common{
- display: none;
-  }
-  .topbar-section-container{
-    margin-top: 0rem !important;
-    display: flex;
-    align-items: center;
-    gap:1.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0px auto;
-  }
-  .city-header-section p{
-   
-    font-size: 1.55rem;
-   
-
-}
-.city-header-section .breadcrumb p{
-
-  font-size: 0.55rem;
-  font-weight: 300;
-}
-}
-@media screen and (min-width:600px) {
-  .topbar-section-container{
-    margin-top: 0rem !important;
-    display: flex;
-    flex-direction: row;
-   
-    align-items: center;
-    justify-content: space-between;
-  }
-
-}
-@media screen and (min-width:1200px) {
-  .topbar-section-common{
-    display:block;
-     }
-
- 
-  .topbar-section-common{
-    padding: 0.5rem 2rem;
-    background-color: #01628F;
-  }
-  .city-header-section{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 5rem;
-    width: 100%;
-    background-position: left top;
-    background-size: cover;
-    background-image: url('../images/header-img.jpg');
-    
-}
-.city-header-section p{
+.city-header-section p {
   color: white;
   position: relative;
   font-size: 2.2rem;
@@ -180,16 +82,97 @@ height: 1rem;
   line-height: 2;
   font-weight: 700;
   z-index: 2;
-
 }
-.city-header-section .breadcrumb p{
-  font-family: var(--body-font);
-  font-size: 1rem;
-  font-weight: 300;
+.city-header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 8rem 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
+.city-header-section .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
+.city-header-section .breadcrumb img {
+  width: 1rem;
+  height: 1rem;
+}
+@media screen and (min-width: 300px) {
+  .city-header-section {
+    padding: 5.5rem 1rem;
+  }
+  .topbar-section-common {
+    display: none;
+  }
+  .topbar-section-container {
+    margin-top: 0rem !important;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  .city-header-section p {
+    font-size: 1.55rem;
+  }
+  .city-header-section .breadcrumb p {
+    font-size: 0.55rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 600px) {
+  .topbar-section-container {
+    margin-top: 0rem !important;
+    display: flex;
+    flex-direction: row;
 
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .topbar-section-common {
+    display: block;
+  }
 
-
-
+  .topbar-section-common {
+    padding: 0.5rem 2rem;
+    background-color: #01628f;
+  }
+  .city-header-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 5rem;
+    width: 100%;
+    background-position: left top;
+    background-size: cover;
+    background-image: url("../images/header-img.jpg");
+  }
+  .city-header-section p {
+    color: white;
+    position: relative;
+    font-size: 2.2rem;
+    font-family: var(--font);
+    line-height: 2;
+    font-weight: 700;
+    z-index: 2;
+  }
+  .city-header-section .breadcrumb p {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}

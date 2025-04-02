@@ -19,7 +19,7 @@
 }
 
 .service-link-content::before {
-  background: #e68900;
+  background: #28b097;
 }
 
 .location-text {
@@ -159,7 +159,7 @@
   color: white;
 }
 #book-service-btn:hover {
-  background: #e68900;
+  background: #28b097;
 }
 .btns-container {
   display: flex;

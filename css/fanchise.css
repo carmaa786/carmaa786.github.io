@@ -25,7 +25,8 @@
 }
 .hero-section-btn2-franchise:hover{
     transform: scale(0.95);
-    background-color: #D06A28;
+    background-color: #28b097 !important
+;
 }
 .hero-section-btn2-franchise:before{
     content:'';
