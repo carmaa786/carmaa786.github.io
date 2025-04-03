@@ -289,7 +289,7 @@
 }
 
 .testimonial-section {
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   padding: 3rem 0rem;
   margin-top: 3rem;
 }
@@ -1073,10 +1073,10 @@
     font-weight: 500;
     max-width: 380px;
   }
-  .hero-section-heading {
+  /* .hero-section-heading {
     font-size: 1.6rem;
     font-weight: 700;
-  }
+  } */
   .hero-section-subheading {
     font-size: 1.5rem;
     font-weight: 700;
@@ -2126,7 +2126,7 @@
   }
 
   .testimonial-section {
-    background-color: #FAF9F6;
+    background-color: #faf9f6;
     padding: 3rem 0rem;
     margin-top: 3rem;
   }

@@ -1,9 +1,8 @@
 /* navbar section logo + search */
 
-.toggle-hamburger{
+.toggle-hamburger {
   display: none;
 }
-
 
 .navbar-main-container {
   justify-content: space-between;
@@ -101,14 +100,6 @@
   height: 45vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-/* For Firefox: Hide scrollbar buttons (dots or triangles) */
-.car-services-container {
   scrollbar-width: thin;
   scrollbar-color: #888 transparent;
   scroll-behavior: smooth;
@@ -234,17 +225,6 @@
   left: 13px;
   z-index: 9;
 }
-/* .rating-container {
-  display: flex;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  color: #333;
-  font-size: 18px;
-  gap: 15px;
-  border: 1px solid gray;
-  padding: 0.40rem 3.3rem;
-  border-radius: 10px;
-} */
 
 .download-btn-container {
   flex: 1 44%;
@@ -254,7 +234,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
   color: #ffffff; /* White text color */
   background-color: #0c4c9d; /* Background color */
   font-size: 18px;
@@ -265,7 +244,7 @@
   transition: transform 0.2s;
   cursor: pointer;
   text-decoration: none;
-  flex: 1 44%;
+  /* flex: 1 44%; */
 }
 
 .rating-container:hover {
@@ -317,11 +296,6 @@
 }
 .main-image {
   width: 350px;
-  /* height: 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center; */
-  /* overflow: hidden; */
 }
 
 .main-image img {
@@ -347,16 +321,26 @@
 .img4 {
   border-bottom-right-radius: 20px;
 }
-/* .looking-for-container {
-  overflow-y: scroll; 
-  overflow-x: hidden;
-  scrollbar-width: thin; 
-} */
-
+.looking-for-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
+}
+.material-symbols-outlined {
+  font-size: 26px;
+}
 #service-img-content {
   margin-bottom: 0px;
   padding: 0px;
   gap: 4px;
+}
+.star-icon-rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .homepage-left-services-container {
@@ -374,28 +358,71 @@
   gap: 20%;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  padding-right: 2rem;
+  padding-right: 5px;
+  width: 95%;
+  justify-content: space-between;
 }
 
 .carousal-main-container {
   padding-top: 65px;
 }
 
-@media (max-width: 700px) and (min-width: 10px) {
-  .rating-customer-container {
-    flex-direction: column;
-    /* align-items: c; */
-    padding-right: 0rem;
+@media (max-width: 900px) and (min-width: 700px) {
+  .main-image {
+    width: 150px;
+  }
+  .homepage-left-services-container {
+    flex: 0 54%;
   }
 
+  .service-box {
+    padding: 10px 2px;
+  }
+  .rating-container {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 950px) {
+    .main-image {
+    width: 190px;
+  }
+  .homepage-left-services-container {
+    flex: 0 54%;
+  }
+
+  .service-box {
+    padding: 10px 2px;
+  }
+  .rating-container {
+    width: 13rem;
+  }
+}
+
+@media (min-width: 1024px) {
+    .main-image {
+    width: 262px;
+}
+.homepage-left-services-container {
+    flex: 0 47%;
+}
+ .service-box {
+    padding: 10px 2px;
+  }
+  .rating-container {
+    width: 13rem;
+  }
+  .rating-customer-container {
+  width: 95%;
+  justify-content: space-between;
+}
+  
+}
+
+@media (max-width: 700px) and (min-width: 10px) {
   .booking-button {
     font-size: 0.65rem !important;
-    /* letter-spacing: 2px; */
     padding: 14px 19px !important;
-  }
-
-  .rating-container {
-    width: 63%;
   }
 
   .car-services-container {
@@ -413,6 +440,34 @@
   }
   .right {
     padding-right: 11px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  /* .rating-customer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  } */
+
+  .rating-customer-container {
+    align-items: start;
+    padding-left: 5px;
+  }
+  .car-services-container {
+    height: 42vh;
+  }
+  .rating-container {
+    padding: 0.45rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rating-customer-container {
+    flex-direction: column;
+  }
+  .rating-container {
+    width: 13rem;
+    flex: 0;
   }
 }
 
@@ -615,15 +670,13 @@
   .service-box p {
     font-size: 12px;
   }
-  .car-services-container {
-    height: 33vh;
-  }
+
   .rating-customer-container {
     gap: 20px;
   }
   .rating-container {
     /* padding: 0.7rem 1.5rem; */
-    padding-left: 2px;
+    /* padding-left: 2px; */
     /* width: 72%; */
   }
 
@@ -631,7 +684,7 @@
     margin-top: 0rem !important;
   }
 
-  .toggle-hamburger{
+  .toggle-hamburger {
     display: block;
   }
 }
