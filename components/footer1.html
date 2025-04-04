@@ -42,7 +42,7 @@
         }
 
         .a>a:hover {
-            color: #ed6744 !important;
+            color: #28b097 !important;
         }
         .download-btn:hover{
             cursor: pointer;
@@ -53,13 +53,21 @@
             object-fit: contain;
             object-position: center;
         }
+        .download-btn {
+        padding-top: 30px;
+        height: 10rem;
+        width: 10rem;
+    }
+
+
+
     </style>
 
     <style>
         .footer-logo-container{
             padding-top: 4rem;
             padding-bottom: 2rem;
-            padding-left: 12.5rem;
+            padding-left: 8.5rem;
         }
         .footer-support-number-container{
             padding-inline: 80px;
@@ -68,7 +76,7 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            padding-bottom: 50px;
+            /* padding-bottom: 50px; */
         }
         .link-section-child-container{
             flex: 0 14%;
@@ -83,7 +91,7 @@
             color: #28b097 !important
         }
 
-        @media (max-width: 700px) and (min-width:0px) {
+        @media (max-width: 900px) and (min-width:0px) {
             .footer-logo-container{
                 padding-left: 0px;
             }
@@ -96,20 +104,65 @@
             .footer-support-number-container {
                 padding-inline: 0px;
                 gap: 25px;
+            }
+            .link-section-child-container {
+                padding-left: 20px;
+            }
+            .footer{
+                padding-bottom: 4rem;
+            }
+            .footer-padding-left{
+                padding-left: 30px;
+            }
         }
+
+        @media (max-width: 900px) and (min-width: 800px) {
+            .footer-logo{
+                margin-left: 0px;
+            }
+            .footer-logo-container {
+                padding-left: 18px;
+            }
+            
+        }
+
+    @media (max-width: 1024px) and (min-width: 900px) {
+        .footer-logo-container{
+            padding-left: 0px;
+        }
+        /* .footer-logo {
+        margin-left: 24px;
+    } */
+        .footer-support-number-container {
+            padding-inline: 20px;
+        }
+
+        .footer-content-main-container{
+            padding-right: 20px;
+        }  
+
         .link-section-child-container {
             padding-left: 20px;
+        }
+
     }
-    .footer{
-            padding-bottom: 4rem;
+
+
+    @media  (min-width: 1124px) {
+    .footer-logo-container {
+        padding-left: 10.5rem;
     }
 }
-        </style>
+        
+    
+    </style>
 </head>
 
 <body>
   <footer class="footer">
-    <div class="pdBottom24">
+    <div>
+        <div class="footer-padding-left">
+
         <div class="footer-logo-container">
            <a href="/">
                 <div style="width:10rem;">
@@ -147,14 +200,11 @@
                     <a  href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"> <img src="./images/contactus/youtube.png"/></div></a>
                     <a  href="./blogs/"><div class="img-wrapper"> <img src="./images/home-page/topbar/blogger.png"/></div></a>
             </div>     
-        <div class="btns-container" style="padding-top: 3rem;">
+        <!-- <div class="btns-container" style="padding-top: 3rem;"> -->
             <div class="download-btn" >
                 <img src="./images/ui_change_images/download2.jpeg" alt="">
             </div>
-            <div class="download-btn" >
-                <img src="./images/ui_change_images/download1.png" alt="">
-            </div>
-        </div>
+        <!-- </div> -->
         </div>
         </div>
 
@@ -162,7 +212,9 @@
         <img src="https://www.startupindia.gov.in/content/dam/invest-india/newhomepage/DPIIT-header.png" class="dpiit-logo" >
         </div> -->
 
-    </div>
+        </div>
+        </div>
+
 
    
     <div class="copyright">

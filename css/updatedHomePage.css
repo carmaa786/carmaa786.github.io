@@ -295,7 +295,8 @@
   color: gray;
 }
 .main-image {
-  width: 350px;
+  /* width: 272px; */
+  width: 300px;
 }
 
 .main-image img {
@@ -384,7 +385,7 @@
 }
 
 @media (max-width: 1024px) and (min-width: 950px) {
-    .main-image {
+  .main-image {
     width: 190px;
   }
   .homepage-left-services-container {
@@ -400,23 +401,22 @@
 }
 
 @media (min-width: 1024px) {
-    .main-image {
+  /* .main-image {
     width: 262px;
-}
-.homepage-left-services-container {
+} */
+  .homepage-left-services-container {
     flex: 0 47%;
-}
- .service-box {
+  }
+  .service-box {
     padding: 10px 2px;
   }
   .rating-container {
     width: 13rem;
   }
   .rating-customer-container {
-  width: 95%;
-  justify-content: space-between;
-}
-  
+    width: 95%;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 700px) and (min-width: 10px) {
@@ -461,7 +461,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .rating-customer-container {
     flex-direction: column;
   }
@@ -696,5 +696,49 @@
 
   .carmaa-timeline-container {
     margin-top: 0rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-page-main-container {
+    width: 85%;
+  }
+
+  .car-services-container {
+    width: 96%;
+
+    /* .car-services-container {
+    width: 100%;
+  } */
+  }
+}
+
+@media (max-width: 950px) and (min-width: 900px) {
+  .main-image {
+    width: 225px;
+  }
+  .car-services-container {
+    width: 100%;
+  }
+
+  .rating-container {
+    width: 13rem;
+    padding: 0.35rem 1.1rem;
+  }
+  .btns-container{
+        height: 50px;
+        width: 64%;
+  }
+
+    .home-page-main-container {
+        width: 95%;
+    }
+  
+}
+
+
+@media (max-width: 1198px) and (min-width: 1024px) {
+  .main-image {
+  width: 225px;
   }
 }
