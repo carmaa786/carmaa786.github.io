@@ -161,12 +161,7 @@
 #book-service-btn:hover {
   background: #28b097;
 }
-.btns-container {
-  display: flex;
-  justify-content: space-between;
-  /* width: 92%; */
-  gap: 20px;
-}
+
 .hero-section-btn3 {
   color: white;
   max-width: 20rem;
@@ -190,26 +185,12 @@
   margin-top: 2rem;
 }
 
-/* .download-btn{
-  border-radius: 10px;
-}
-.btns-container{
-   border-radius: 10px;
-
-} */
-
 .review-client-says-container {
   display: flex;
   align-items: center;
   padding-inline: 100px;
   gap: 40px;
 }
-/* .google-review {
-  flex: 0 30%;
-}
-.download-rating-container {
-  flex: 0 30%;
-} */
 
 .download-fixed-container {
   justify-content: space-around;
@@ -247,9 +228,15 @@
   /* flex: 1 44%; */
 }
 
+.rating-container {
+  transition: transform 0.5s ease-in-out, background-color 0.2s ease-in-out;
+}
+
 .rating-container:hover {
   transform: scale(1.02);
+  background-color: #28b097;
 }
+
 .rating-text p {
   margin: 0;
   font-size: 0.8rem;
@@ -270,13 +257,6 @@
   object-fit: cover;
 }
 
-/* .download-rating-container{
-  flex: 0 30%;
-}
-
-.video-section{
-  flex: 0 30%;
-} */
 .rating-container img {
   width: 20px;
   height: 20px;
@@ -349,7 +329,6 @@
 }
 
 .homepage-services {
-  /* flex: 1 45%; */
   width: 47.6%;
 }
 
@@ -357,9 +336,9 @@
   display: flex;
   align-items: center;
   gap: 20%;
-  padding-top: 2rem;
   padding-bottom: 3rem;
   padding-right: 5px;
+  padding-top: 40px;
   width: 95%;
   justify-content: space-between;
 }
@@ -725,20 +704,18 @@
     width: 13rem;
     padding: 0.35rem 1.1rem;
   }
-  .btns-container{
-        height: 50px;
-        width: 64%;
+  .btns-container {
+    height: 50px;
+    width: 64%;
   }
 
-    .home-page-main-container {
-        width: 95%;
-    }
-  
+  .home-page-main-container {
+    width: 95%;
+  }
 }
-
 
 @media (max-width: 1198px) and (min-width: 1024px) {
   .main-image {
-  width: 225px;
+    width: 225px;
   }
 }
