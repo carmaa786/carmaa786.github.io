@@ -278,6 +278,24 @@
   /* width: 272px; */
   width: 300px;
 }
+.map-address-footer-container {
+  text-align: center;
+  background-color: #28b097;
+}
+.location-map {
+  height: 500px;
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  .location-map {
+    height: 250px;
+  }
+}
+
+.map-address-footer-container p {
+  font-weight: 600;
+  color: white;
+}
 
 .main-image img {
   width: 100%;
