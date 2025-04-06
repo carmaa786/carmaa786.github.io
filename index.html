@@ -728,13 +728,7 @@
 
 
 
-           <style>
-
-            
-
-
-
-
+    <style>
     .search-container {
     position: relative;
     display: inline-block;
@@ -915,24 +909,37 @@
         .hamburger-content:active{
             color: #28B097;
         }
-        /* .hamburger {
+
+        .services-ten {
             display: none;
-            cursor: pointer;
-            font-size: 24px;
-        } */
-        .services-ten{
-        /* border: 1px solid black; */
-        width: 50%;
-        position: absolute;
-        right: 0;
-        top: 187px;
-        background: white;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 187px;
+            background: white;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: scroll;
+            height: 40vh;
+            z-index: 5;
+        }
+
+        .service-show {
+            display: block;
         }
 
         .hamburger{
-            display: none;
+           display: none;
+        }
+
+        .our-locations-container{
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 245px;
+            background: white;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -947,14 +954,22 @@
                 gap: 20px !important;
                 padding: 36px 0px !important;
             }
-            .services-ten{
+
+            .our-locations-container{
                 display: none;
-                height: 40vh;
                 overflow: scroll;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
             }
-            .service-show{
+
+            .location-show{
+                display: block;
+            }
+
+            .service-hide{
+                display: none;
+            }
+
+            .show-services{
                 display: block;
             }
         }
@@ -964,67 +979,85 @@
 
     <div class="hamburger" onclick="toggleMenu()">
         <button class="hamburger-button">
-            <span class="material-symbols-outlined" style="font-size: 2rem;">
-menu
-</span>
-                <!-- <ion-icon
-              name="menu"
-              style="font-size: 2rem; color: black"
-            ></ion-icon> -->
-
-            <!-- <ion-icon name="menu-outline"></ion-icon> -->
+            <span class="material-symbols-outlined" style="font-size: 2rem;">menu</span>
         </button>
     </div>
-        <div class="menu" id="menu">
+    
+        <div class="menu" id="menu" onclick="closeContainer()">
             <a href="/" class="hamburger-content">Home</a>
             <a href="/about/" class="hamburger-content">About</a>
-            <p class="hamburger-content services-mobile-view" onclick="toggleServices()">Services</p>
-            <div class="services-ten" id="services-ten">
-                <a  href="../interior-car-cleaning-service/" class="hamburger-content">Interior Car Cleaning</a>
-                <a  href="../paint-protection-and-coating-services/" class="hamburger-content">Paint Protection And Coating</a>
-                <a href="../glass-and-surface-coating-services/" class="hamburger-content">Glass And Surface Coating</a>
-                  <a  href="../full-car-detailing-service/" class="hamburger-content">Full Car Detailing</a>
-                <a   href="../exterior-car-cleaning-washing/" class="hamburger-content">Exterior Car Cleaning & Washing</a>
-                <a href="../car-dry-cleaning-service/" class="hamburger-content">Car Dry Cleaning</a>
-                <a  href="../car-body-polish-and-car-waxing-service/" class="hamburger-content">Complete Car Body Polish and Wax</a>
-                <a  href="../full-car-wash-service/" class="hamburger-content">Full Car Wash</a>
-                <a href="../car-deep-cleaning-services/" class="hamburger-content">Deep Cleaning</a>
+           <p class="hamburger-content services-mobile-view" Id="services-para"  onclick="toggleServices()">Services</p>
+
+<div class="services-ten" id="services-ten">
+    <a href="../interior-car-cleaning-service/" class="hamburger-content">Interior Car Cleaning</a>
+    <a href="../paint-protection-and-coating-services/" class="hamburger-content">Paint Protection And Coating</a>
+    <a href="../glass-and-surface-coating-services/" class="hamburger-content">Glass And Surface Coating</a>
+    <a href="../full-car-detailing-service/" class="hamburger-content">Full Car Detailing</a>
+    <a href="../exterior-car-cleaning-washing/" class="hamburger-content">Exterior Car Cleaning & Washing</a>
+    <a href="../car-dry-cleaning-service/" class="hamburger-content">Car Dry Cleaning</a>
+    <a href="../car-body-polish-and-car-waxing-service/" class="hamburger-content">Complete Car Body Polish and Wax</a>
+    <a href="../full-car-wash-service/" class="hamburger-content">Full Car Wash</a>
+    <a href="../car-deep-cleaning-services/" class="hamburger-content">Deep Cleaning</a>
+</div>
+
+            <p class="hamburger-content services-mobile-view" onclick="toggleLocation()">Our Locations</p>
+            <div class="our-locations-container" id="our-locations-container">
+                <a href="../doorstep-car-washing-service-in-dehradun/" class="hamburger-content">Dehradun</a>
             </div>
 
-            <a href="../doorstep-car-washing-service-in-dehradun/" class="hamburger-content">Our Locations</a>
             <a href="/contactus/" class="hamburger-content">Contact Us</a>
         </div>
 
 
-        
 
-        <script>
-            function toggleMenu() {
-               document.getElementById("menu").classList.toggle("show");
-            }
+     <script>
+  // Toggle Services section
+  function toggleServices() {
+    document.getElementById("services-ten").classList.toggle("service-show");
+  }
 
-             function setActive(link) {
-            let links = document.querySelectorAll(".menu a");
-            links.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
-        }
+  // Hide the services section when a service link is clicked
+  document.addEventListener("DOMContentLoaded", () => {
+    const serviceLinks = document.querySelectorAll("#services-ten .hamburger-content");
 
-        function toggleServices(){
-            document.getElementById("services-ten").classList.toggle("service-show");
-        }
+    serviceLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("services-ten").classList.remove("service-show");
+      });
+    });
+  });
 
-        </script>
+  // Toggle hamburger menu
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
 
-    
-    <!-- <div class="toggle-hamburger">
-        <button class="toggle " id="toggle" style="background-color:transparent; border: none; outline: none; ">
-            <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
-        </button>
-    </div> -->
+  function toggleServices() {
+  document.getElementById("services-ten").classList.toggle("service-show");
+}
+// Close services and location dropdown when anything in menu is clicked (except on those toggles)
+document.getElementById("menu").addEventListener("click", function (e) {
+  const clickedElement = e.target;
+
+  // If you clicked on the "Services" or "Locations" toggler, do nothing
+  if (
+    clickedElement.id === "services-para" ||
+    clickedElement.textContent.trim() === "Our Locations"
+  ) {
+    return;
+  }
+
+  // Close both dropdowns
+  document.getElementById("services-ten").classList.remove("service-show");
+  document.getElementById("our-locations-container").classList.remove("location-show");
+});
 
 
-
-
+  // Toggle Location section
+  function toggleLocation() {
+    document.getElementById("our-locations-container").classList.toggle("location-show");
+  }
+</script>
 
     </div>
 
@@ -1076,7 +1109,6 @@ menu
     </script>
 
 
-
     <style>
         /* Dropdown menu styling */
         .dropdown {
@@ -1125,7 +1157,7 @@ menu
         const menu = document.getElementById("menu");
 
         toggle.addEventListener("click", function () {
-            menu.classList.toggle("active");
+        menu.classList.toggle("active");
         });
     </script>
 </nav>
@@ -2167,7 +2199,7 @@ window.addEventListener("resize", () => {
 
       <div class="map-address-footer-container">
         <p>Carmaa Car Care
-        Tea Estate, near Bhadri guest house, Banjarawala, Dehradun, Uttarakhand 248001</p>
+        Tea Estate, Near Bhadri Guest House, Banjarawala, Dehradun, Uttarakhand 248001</p>
       </div>
     <div id="footer">
         <script>

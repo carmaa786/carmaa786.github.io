@@ -280,7 +280,7 @@
 }
 .map-address-footer-container {
   text-align: center;
-  background-color: #28b097;
+  background-color: #0e111b;
 }
 .location-map {
   height: 500px;
@@ -293,8 +293,10 @@
 }
 
 .map-address-footer-container p {
-  font-weight: 600;
+  /* font-weight: 600; */
   color: white;
+  font-size: 14px;
+  
 }
 
 .main-image img {
