@@ -1,0 +1,110 @@
+.main-navbar-container {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  background-color: white;
+}
+
+.navbar-main-container {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-carmaa-logo-container {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-carmaa-logo-link {
+  height: 100%;
+}
+.navbar-carmaa-logo-img {
+  width: 150px;
+  margin-top: 10px;
+}
+.navbar-menu-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar-menu-ul li:hover {
+  cursor: pointer;
+}
+.navbar-item-menu-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+.nav-dropdown {
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+.hamburger-menu-container {
+  display: flex;
+  gap: 20px;
+}
+.navbar-toggle-menu {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.navbar-hamburger-menu {
+  font-size: 2rem;
+  color: black;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  background-color: white;
+  visibility: hidden;
+  padding: 10px 0;
+  width: 16rem; /* Consistent width for all dropdowns */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+}
+
+/* Show dropdown on hover */
+.dropdownCon:hover .dropdown {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown item styling */
+.dropdown > li > a {
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown > li > a:hover {
+  color: #28b097;
+}
+
+/* Hover effect for the main dropdown container */
+.nav-item-list {
+  width: 100%;
+  display: block;
+}
+
+/* Hover effect for main dropdown container */
+.dropdownCon:hover .nav-item-list {
+  color: #000;
+}
+
+.breadcrumb-link:hover {
+  color: #28b097 !important;
+}
