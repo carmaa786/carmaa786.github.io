@@ -6,6 +6,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+      <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css">
+
     <style>
       * {
         margin: 0px;
@@ -59,7 +61,7 @@
       }
 
       .accordion .accordion-item button[aria-expanded="true"] {
-        border-bottom: 1px solid #ed6744;
+        border-bottom: 1px solid #28b097;
       }
 
       .accordion button {
@@ -79,7 +81,7 @@
       .accordion button:hover,
       .accordion button:focus {
         cursor: pointer;
-        color: #ed6744;
+        color: #28b097;
       }
       .accordion-title {
         width: 50%;
@@ -88,7 +90,7 @@
       .accordion button:hover::after,
       .accordion button:focus::after {
         cursor: pointer;
-        color: #ed6744;
+        color: #28b097;
         border: 1px solid #03b5d2;
       }
 
@@ -131,7 +133,7 @@
       }
 
       .accordion button[aria-expanded="true"] {
-        color: #ed6744;
+        color: #28b097;
       }
 
       .accordion button[aria-expanded="true"] .icon::after {
@@ -364,294 +366,103 @@
         </div>
       </div>
     </div>
-    <nav
-      id="nav-placeholder"
-      style="
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-        width: 100vw;
-        height: 80px;
-        background-color: transparent;
-        position: sticky;
-        top: 0px;
-        z-index: 9999;
-        background-color: white;
-      "
-    >
-      <div
-        style="
-          width: 95%;
-          height: 100%;
-          position: relative;
-          max-width: 1200px;
-          margin: auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        "
-      >
-        <div
-          style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700"
-        >
-          <a href="/" style="height: 100%">
+     <nav id="nav-placeholder" class="main-navbar-container">
+      <div class="navbar-main-container">
+        <div class="navbar-carmaa-logo-container">
+          <a href="/" class="navbar-carmaa-logo-link">
             <img
-              src="../images/logo.png"
-              width="150"
-              style="margin-top: 10px"
-              alt="car interior cleaning in Noida"
+              class="navbar-carmaa-logo-img"
+              src="../../images/logo.png"
+              alt="Car Washing Service in Dehradun"
             />
           </a>
         </div>
-        <ul
-          class="menu"
-          id="menu"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-          "
-        >
-          <li style="cursor: pointer; list-style: none">
-            <a
-              class="nav-item-list"
-              style="
-                font-size: 1.1rem;
-                font-weight: 700;
-                text-decoration: none;
-                color: #000;
-              "
-              href="/"
-              >Home</a
-            >
+        <ul class="menu navbar-menu-ul" id="menu">
+          <li>
+            <a class="nav-item-list navbar-item-menu-link" href="/">Home</a>
           </li>
-          <li style="cursor: pointer; list-style: none">
-            <a
-              class="nav-item-list"
-              style="
-                font-size: 1.1rem;
-                font-weight: 700;
-                text-decoration: none;
-                color: #000;
-              "
-              href="../about/"
+          <li>
+            <a class="nav-item-list navbar-item-menu-link" href="../about/"
               >About Us</a
             >
           </li>
-          <li
-            class="dropdownCon"
-            style="
-              cursor: pointer;
-              position: relative;
-              z-index: 1000;
-              list-style: none;
-            "
-          >
-            <span
-              class="nav-item-list"
-              style="
-                font-size: 1.1rem;
-                font-weight: 700;
-                text-decoration: none;
-                color: #000;
-              "
-              >Services</span
-            >
+          <li class="dropdownCon nav-dropdown">
+            <span class="nav-item-list navbar-item-menu-link">Services</span>
             <ul class="dropdown">
-              <li style="list-style: none">
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../interior-car-cleaning-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Interior Car Cleaning</a
                 >
               </li>
               <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../paint-protection-and-coating-services/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
-                  >Paint Protection And Coating</a
-                >
+                  >Paint Protection And Coating
+                </a>
               </li>
               <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../ceramic-coating-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Ceramic Coating
                 </a>
               </li>
               <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../glass-and-surface-coating-services/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Glass And Surface Coating</a
                 >
               </li>
               <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../full-car-detailing-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Full Car Detailing</a
                 >
               </li>
-              <li style="list-style: none">
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../exterior-car-cleaning-washing/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Exterior Car Cleaning & Washing</a
                 >
               </li>
-              <li style="list-style: none">
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../car-dry-cleaning-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Car Dry Cleaning</a
                 >
               </li>
-              <li style="list-style: none">
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../car-body-polish-and-car-waxing-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Complete Car Body Polish and Wax</a
                 >
               </li>
-              <li style="list-style: none">
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../full-car-wash-service/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Full Car Wash</a
                 >
               </li>
-              <li style="list-style: none">
+
+              <li>
                 <a
-                  class="nav-item-list"
+                  class="nav-item-list navbar-item-menu-link"
                   href="../car-deep-cleaning-services/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
                   >Deep Cleaning</a
                 >
               </li>
             </ul>
           </li>
-          <!-- <li style="cursor: pointer;list-style: none; "> <a
-                class="nav-item-list" style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
-                href="../franchise/">Partner with Us</a></li> -->
-          <li
-            class="dropdownCon"
-            style="cursor: pointer; position: relative; list-style: none"
-          >
-            <span
-              class="nav-item-list"
-              style="
-                font-size: 1.1rem;
-                font-weight: 700;
-                text-decoration: none;
-                color: #000;
-              "
-              >Our Locations</span
-            >
-            <ul class="dropdown">
-              <li style="list-style: none">
-                <a
-                  class="nav-item-list"
-                  href="../doorstep-car-washing-service-in-dehradun/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
-                  >Dehradun</a
-                >
-              </li>
-              <li style="list-style: none">
-                <a
-                  class="nav-item-list"
-                  href="../doorstep-car-washing-service-in-noida/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
-                  >Noida</a
-                >
-              </li>
-              <li style="list-style: none">
-                <a
-                  class="nav-item-list"
-                  href="../doorstep-car-washing-service-in-uttarakhand/"
-                  style="
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                  "
-                  >Uttarakhand</a
-                >
-              </li>
-            </ul>
-          </li>
-          <!-- <li style="cursor: pointer; list-style: none;"><a
-                class="nav-item-list"  style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
-                    href="../pricing/">Pricing</a> </li> -->
-          <li style="cursor: pointer; list-style: none">
+          <!-- <li style="cursor: pointer">
             <a
               class="nav-item-list"
               style="
@@ -660,66 +471,63 @@
                 text-decoration: none;
                 color: #000;
               "
-              href="../contactus/"
+              href="../franchise/"
+              >Partner with Us</a
+            >
+          </li> -->
+          <li class="dropdownCon" style="cursor: pointer; position: relative">
+            <span class="nav-item-list navbar-item-menu-link"
+              >Our Locations</span
+            >
+            <ul class="dropdown">
+              <li>
+                <a
+                  class="nav-item-list navbar-item-menu-link"
+                  href="../doorstep-car-washing-service-in-dehradun/"
+                  >Dehradun</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item-list navbar-item-menu-link"
+                  href="../doorstep-car-washing-service-in-noida/"
+                  >Noida</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-item-list navbar-item-menu-link"
+                  href="../doorstep-car-washing-service-in-uttarakhand/"
+                  >Uttarakhand</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- <li style="cursor: pointer">
+            <a
+              class="nav-item-list"
+              style="
+                font-size: 1.1rem;
+                font-weight: 700;
+                text-decoration: none;
+                color: #000;
+              "
+              href="../pricing/"
+              >Pricing</a
+            >
+          </li> -->
+          <li style="cursor: pointer">
+            <a class="nav-item-list navbar-item-menu-link" href="../contactus/"
               >Contact Us</a
             >
           </li>
         </ul>
-        <div style="display: flex; gap: 20px">
-          <button
-            class="toggle"
-            id="toggle"
-            style="background-color: transparent; border: none; outline: none"
-          >
-            <ion-icon
-              name="menu"
-              style="font-size: 2rem; color: black"
-            ></ion-icon>
+        <div class="hamburger-menu-container">
+          <button class="toggle navbar-toggle-menu" id="toggle">
+            <ion-icon name="menu"></ion-icon>
           </button>
         </div>
       </div>
-
-      <style>
-        /* Dropdown menu styling */
-        .dropdown {
-          background-color: white;
-          visibility: hidden;
-          padding: 10px 0;
-          width: 16rem; /* Consistent width for all dropdowns */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          border-radius: 4px;
-          position: absolute;
-        }
-
-        /* Show dropdown on hover */
-        .dropdownCon:hover .dropdown {
-          visibility: visible;
-          display: flex;
-          flex-direction: column;
-        }
-
-        /* Dropdown item styling */
-        .dropdown > li > a {
-          padding: 8px 10px;
-          border-radius: 4px;
-          transition: background-color 0.2s, color 0.2s;
-        }
-
-        .dropdown > li > a:hover {
-          color: #ed6744;
-        }
-
-        /* Hover effect for the main dropdown container */
-        .nav-item-list {
-          width: 100%;
-          display: block;
-        }
-
-        /* Hover effect for main dropdown container */
-        .dropdownCon:hover .nav-item-list {
-          color: #ed6744;
-        }
-      </style>
 
       <script>
         const toggle = document.getElementById("toggle");
