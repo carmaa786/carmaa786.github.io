@@ -65,7 +65,7 @@ body{
    
 }
 .service-link-point:hover{
-color: #ed6744;
+color: #28b097;
 }
 .link-name{
     font-family: var(--font);
@@ -75,7 +75,7 @@ color: #ed6744;
 }
 
 .link-name:hover{
-    color: #ed6744;
+    color: #28b097;
 }
 .service-right-section{
    
@@ -199,7 +199,7 @@ button:hover {
 }
 .service-link-point-link:hover{
     text-decoration: none;
-    color:  #ed6744;
+    color:  #28b097;
 }
 @media screen and (min-width:300px) {
     .service-main-section{

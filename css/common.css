@@ -20,7 +20,7 @@
 }
 .social-media-icons {
   display: flex;
-  gap: 0.2rem;
+  gap: 10px;
 }
 
 @keyframes fadeInOut {
@@ -120,8 +120,10 @@
     gap: 1.5rem;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0px auto;
+    width: 88%;
+    /* margin: auto; */
   }
   .city-header-section p {
     font-size: 1.55rem;

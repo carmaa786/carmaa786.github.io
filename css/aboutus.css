@@ -15,7 +15,8 @@
 }
 
 .breadcrumb-link:hover {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #28b097 !important;
 }
 .about-us-section {
   margin-top: 4rem;
@@ -114,7 +115,8 @@
   margin-top: 0.5rem;
 }
 .benefits-mobile-number:hover {
-  color: #ed6744;
+  /* color: #28b097; */
+  color: #28b097 !important;
 }
 
 .call-icon-wrapper {
@@ -289,7 +291,7 @@
 .aboutus-cta-right .call-container button {
   color: white;
 
-  font-size: 20px;
+  /* font-size: 20px; */
   letter-spacing: 2px;
   padding: 18px 32px;
   border: none;
@@ -358,7 +360,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
   }
   .about-us-left {
     width: 100%;
@@ -410,7 +412,7 @@
     line-height: 1.5rem;
   }
   .mission-section {
-    padding-top: 28rem;
+    padding-top: 18rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -579,7 +581,8 @@
   }
 
   .breadcrumb-link:hover {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: #28b097 !important;
   }
   .about-us-section {
     margin-top: 4rem;
@@ -590,7 +593,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
   }
   .about-us-left {
     width: 40%;

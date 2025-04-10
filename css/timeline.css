@@ -136,15 +136,14 @@ width: 100%;
 }
 @media screen and (min-width:800px) {
     .carmaa-timeline-container{
+        width: 85%;
+        margin: auto;
         display:flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-       
         margin-top: 5rem;
         gap:4rem
-    
-    
     }
     .carmaa-timeline-left{
         width: 50%;

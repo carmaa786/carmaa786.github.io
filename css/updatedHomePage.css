@@ -4,23 +4,10 @@
   display: none;
 }
 
-.navbar-main-container {
-  justify-content: space-between;
-}
-
-#close-btn {
-  cursor: pointer;
-}
-
-#searchInput {
-  padding: 10px 50px 10px 10px;
-}
 .pdInline {
   padding-inline: 92px;
 }
-.search-location-container {
-  height: 100%;
-}
+
 
 .service-link-content {
   color: #000;
@@ -30,56 +17,6 @@
   background: #28b097;
 }
 
-.location-text {
-  display: flex;
-  /* align-items: center; */
-  gap: 20px;
-}
-.search-location-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  /* background-color: white; */
-}
-
-.location,
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: white;
-  width: 30rem;
-  color: gray;
-  border: 1px solid black;
-}
-
-.location {
-  /* width: 250px; */
-  justify-content: space-between;
-}
-/* 
-        .search-box {
-            width: 250px;
-        } */
-
-.search-box input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 15px;
-  color: #666;
-}
-
-.icon {
-  font-size: 18px;
-  color: #666;
-}
 
 .pt {
   padding-top: 65px;
@@ -208,7 +145,7 @@
 }
 
 .download-btn-container {
-  flex: 1 44%;
+  flex: 0 32%;
 }
 
 .rating-container {
@@ -246,6 +183,9 @@
 .rating-container:hover {
   cursor: pointer;
 }
+.download-btn {
+  width: 15rem;
+}
 
 .download-btn img {
   border-radius: 8px;
@@ -282,21 +222,12 @@
   text-align: center;
   background-color: #0e111b;
 }
-.location-map {
-  height: 500px;
-}
-
-@media (max-width: 900px) and (min-width: 10px) {
-  .location-map {
-    height: 250px;
-  }
-}
 
 .map-address-footer-container p {
   /* font-weight: 600; */
   color: white;
   font-size: 14px;
-  
+  padding-top: 1rem;
 }
 
 .main-image img {
@@ -365,7 +296,13 @@
 
 .carousal-main-container {
   padding-top: 65px;
+  margin: auto;
+  width: 85%;
 }
+
+/* .see-all-btn {
+  display: none;
+} */
 
 @media (max-width: 900px) and (min-width: 700px) {
   .main-image {
@@ -443,11 +380,6 @@
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
-  /* .rating-customer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  } */
-
   .rating-customer-container {
     align-items: start;
     padding-left: 5px;
@@ -460,7 +392,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 10px) {
   .rating-customer-container {
     flex-direction: column;
   }
@@ -468,29 +400,35 @@
     width: 13rem;
     flex: 0;
   }
+
+  .download-btn {
+    width: 13rem;
+  }
 }
 
 @media (max-width: 400px) and (min-width: 10px) {
   .carousal-main-container {
     padding-top: 0px;
   }
+  .other-services-web-container {
+    flex-wrap: nowrap;
+  }
 }
 
 /* other services */
 
 .sofa-cleaning-container {
-  width: 14rem;
-  height: 15rem;
+  width: 47%;
+  /* height: 12rem; */
   border: 1px solid lightgray;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   transition: background-color 0.5s, ease-in-out;
+  text-align: center;
+  padding: 8px;
 }
 
 .sofa-cleaning-container:hover {
@@ -503,8 +441,40 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 5px;
+}
+
+.hide-services {
+  display: none;
+}
+
+.show-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-all-btn {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-bottom: 20px;
+}
+
+.see-all-btn button {
+  padding: 5px 10px;
+  background-color: #0c4c9d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.see-all-btn button:hover {
+  background-color: #28b097;
+  cursor: pointer;
 }
 
 /* carousal */
@@ -518,12 +488,13 @@
 
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 19px;
   transition: transform 0.5s ease-in-out;
 }
 
 .card {
-  flex: 0 0 calc(100% / 3); /* Default: 3 cards per slide */
+  /* flex: 0 0 calc(100% / 3); Default: 3 cards per slide */
+  flex: 0 0 100%;
   border-radius: 10px;
   text-align: center;
   background: white;
@@ -544,12 +515,12 @@
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 3px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   z-index: 10;
 }
 
@@ -587,14 +558,73 @@
   /* padding-top: 60px; */
 }
 
-/* Tablet View: First slide - 1 card centered, then 2 cards */
-@media (max-width: 1024px) {
+/* other services */
+
+.other-services-web-container {
+  display: flex;
+  gap: 25px;
+  /* flex-wrap: wrap; */
+  /* overflow: hidden; */
+}
+
+@media (max-width: 400px) and (min-width: 10px) {
+  .sofa-cleaning-container {
+    width: 9rem;
+  }
+}
+
+.services-sub-section {
+  background-color: rgba(245, 245, 245, 0.874);
+  /* border: 0.5px solid black; */
+  width: 15rem;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
+  transition: ease-in-out;
+}
+
+.services-sub-section:hover {
+  box-shadow: 2px 2px 1px hsl(0, 50%, 2%, 0.5);
+}
+/* .other-services-sub-section{
+       display: none;
+    } */
+
+@media (max-width: 1024px) and (min-width: 900px) {
   .card {
-    flex: 0 0 80%; /* First card takes full width initially */
+    flex: 0 0 50%;
+  }
+  .carousal-right-btn,
+  .carousal-left-btn {
+    padding: 3px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .sofa-cleaning-container {
+    width: 15rem;
+  }
+}
+
+/* Tablet View: First slide - 1 card centered, then 2 cards */
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 0 32%; /* First card takes full width initially */
   }
 
   .carousel-container {
     padding-inline: 10px;
+  }
+
+  .carousal-right-btn,
+  .carousal-left-btn {
+    padding: 3px;
+    height: 30px;
+    width: 30px;
+  }
+  .sofa-cleaning-container {
+    width: 15rem;
   }
 }
 
@@ -615,15 +645,29 @@
     padding-top: 0px;
   }
 
-  .navbar-main-container {
-    gap: 5px;
-    justify-content: space-around;
-    width: 100% !important;
-  }
-
+  /* .other-services-sub-section{
+        width: 90%;
+        height: 25vh;
+        overflow: scroll;
+        scrollbar-width: thin;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+  } */
   .pb {
     padding-bottom: 40px;
   }
+
+  /* .other-services-web-container{
+    display: none;
+  } */
 }
 
 .search-option-main-container {
@@ -654,10 +698,37 @@
 }
 
 @media (max-width: 900px) and (min-width: 0px) {
-  .bookNowBtnHide {
+  /* .bookNowBtnHide {
     display: none;
+  } */
+
+  /* .see-all-btn {
+    width: 80%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 20px;
   }
 
+  .see-all-btn button {
+    padding: 5px 10px;
+    background-color: #0c4c9d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s ease-in-out;
+  } */
+
+  /* .sofa-cleaning-container {
+    width: 10rem;
+    height: 10rem;
+  } */
+  /* 
+  .sofa-img-container {
+    width: 10rem;
+    height: 6rem;
+  } */
   .homepage-services {
     width: 46%;
   }
@@ -673,26 +744,17 @@
   .rating-customer-container {
     gap: 20px;
   }
-  .rating-container {
-    /* padding: 0.7rem 1.5rem; */
-    /* padding-left: 2px; */
-    /* width: 72%; */
-  }
 
   .carmaa-timeline-container {
     margin-top: 0rem !important;
   }
 
-  .toggle-hamburger {
+  .show-menu {
     display: block;
   }
 }
 
 @media (max-width: 700px) {
-  .other-services-main-container {
-    display: none;
-  }
-
   .carmaa-timeline-container {
     margin-top: 0rem;
   }
@@ -705,10 +767,6 @@
 
   .car-services-container {
     width: 96%;
-
-    /* .car-services-container {
-    width: 100%;
-  } */
   }
 }
 

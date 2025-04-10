@@ -32,20 +32,16 @@
   cursor: pointer;
   margin-left: 12px;
 }
-/* .footer-logo-container {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  padding-left: 12.5rem;
-} */
+
 .follow-us {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 16px;
   font-family: var(--font);
   margin-top: 1rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 .follow-us:hover {
   color: #28b097;
@@ -62,18 +58,18 @@
   width: 50%;
 }
 .link-section-child {
-  width: 100%;
+  /* width: 100%; */
   color: #ffffff;
 }
 .link-section-child h5 {
   font-family: var(--font);
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
-.link-section-child p {
+.link-section-child p a {
   font-family: var(--body-font);
   color: var(--silver);
-  font-size: 1.1rem;
+  font-size: 16px;
   margin-bottom: 0.5rem;
   cursor: pointer;
   transition: color 0.4s ease;
@@ -84,18 +80,18 @@
 .copyright {
   color: var(--silver);
   margin: 0px auto;
-  background-color: #08080e;
+  /* background-color: #08080e; */
   padding-top: 0.6rem;
 }
 .copyright p {
-  text-align: center;
-
+  /* text-align: center; */
   padding-bottom: 0.6rem;
+  font-size: 12px;
 }
 .footer-link {
   font-family: var(--body-font);
   color: var(--silver);
-  font-size: 1.1rem;
+  font-size: 14px;
   margin-bottom: 0.5rem;
   cursor: pointer;
   transition: color 0.4s ease;
@@ -162,7 +158,7 @@
     width: 100%;
   }
   .link-section-child {
-    width: 100%;
+    /* width: 100%; */
     color: #ffffff;
   }
 }
@@ -229,16 +225,6 @@
     cursor: pointer;
     margin-left: 12px;
   }
-  .follow-us {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-family: var(--font);
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
   .follow-us img {
     width: 2.3rem;
     height: 2.3rem;
@@ -252,18 +238,18 @@
     width: 65%;
   }
   .link-section-child {
-    width: 80%;
+    /* width: 80%; */
     color: #ffffff;
   }
   .link-section-child h5 {
     font-family: var(--font);
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   .link-section-child p {
     font-family: var(--body-font);
     color: var(--silver);
-    font-size: 1.1rem;
+    font-size: 16px;
     margin-bottom: 0.5rem;
     cursor: pointer;
     transition: color 0.4s ease;
@@ -271,17 +257,17 @@
   .link-section-child p:hover {
     color: #28b097 !important;
   }
-  .copyright {
+  /* .copyright {
     color: var(--silver);
     margin: 0px auto;
     background-color: #08080e;
     padding-top: 0.6rem;
-  }
-  .copyright p {
+  } */
+  /* .copyright p {
     text-align: center;
 
     padding-bottom: 0.6rem;
-  }
+  } */
 }
 @media screen and (min-width: 1450px) {
   .link-section {
@@ -293,7 +279,7 @@
     width: 60%;
   }
   .link-section-child {
-    width: 80%;
+    /* width: 80%; */
     color: #ffffff;
   }
 }
