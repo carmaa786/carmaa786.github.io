@@ -1,0 +1,14 @@
+/* .download-modal-container {
+  margin-top: 2rem;
+} */
+
+.download-btn {
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.download-btn img {
+  /* max-width: 26rem; */
+  height: auto;
+  width: 100%;
+}
