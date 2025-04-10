@@ -8,7 +8,6 @@
   padding-inline: 92px;
 }
 
-
 .service-link-content {
   color: #000;
 }
@@ -16,7 +15,6 @@
 .service-link-content::before {
   background: #28b097;
 }
-
 
 .pt {
   padding-top: 65px;
@@ -190,6 +188,9 @@
 .download-btn img {
   border-radius: 8px;
   display: block; /* Ensures no extra spacing below the image */
+}
+.download-btn:hover {
+  cursor: pointer;
 }
 .review-image {
   height: 100%;
