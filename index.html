@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
-
+<!-- 
     <style>
         .wave {
             --size: 50px;
@@ -640,7 +640,7 @@
             font-weight: 300;
             margin: 2em 0;
         }
-    </style>
+    </style> -->
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
@@ -926,7 +926,7 @@
                   >Dehradun</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="../doorstep-car-washing-service-in-noida/"
@@ -939,7 +939,7 @@
                   href="../doorstep-car-washing-service-in-uttarakhand/"
                   >Uttarakhand</a
                 >
-              </li>
+              </li> -->
             </ul>
           </li>
           <!-- <li style="cursor: pointer">
@@ -1108,7 +1108,7 @@
 
     <div class="rating-customer-container">
             <div class="download-btn download-btn-container">
-            <img src="./images/ui_change_images/play_store.png" alt="Play Store Download">
+                <img src="./images/ui_change_images/play_store.png" alt="Play Store Download">
             </div>
 
         <a href="https://g.co/kgs/VgMhb2d" target="_blank" class="rating-container">
@@ -1218,11 +1218,6 @@ window.addEventListener("resize", () => {
 
 
 <div class="pdInline">
-
-
-
-
-
 <div  style="position: relative;">
 <section class="pb other-services-main-container" style="width: 85%; margin: auto;">
     <h1 class="hero-section-heading-update">Other Services</h1>
@@ -1784,6 +1779,317 @@ window.addEventListener("resize", () => {
 
 
   </section>
+
+ <style>
+    .our-partners-main-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 8rem;
+    }
+
+    .our-partners-main-container h2{
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
+        font-family: var(--font) !important;
+    }
+  .scroller-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 16px;
+    /* background-color: #ffffff; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+  }
+
+  .image-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    scroll-snap-type: none;
+  }
+
+  .image-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .image-scroller img {
+    min-width: 300px;
+    height: 200px;
+    margin: 0 10px;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    flex-shrink: 0;
+    /* opacity: 0.6; */
+  }
+/* 
+  .image-scroller img.active {
+    transform: scale(1.15);
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  } */
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    user-select: none;
+  }
+
+  .scroll-btn:hover {
+    background-color: #fff;
+  }
+
+  .scroll-btn.left {
+    left: 10px;
+  }
+
+  .scroll-btn.right {
+    right: 10px;
+  }
+</style>
+
+
+
+<div class="our-partners-main-container">
+<h2>Our Partners</h2>
+<div class="scroller-container">
+  <!-- <button class="scroll-btn left" onclick="scrollImages('left')">&#8249;</button> -->
+
+  <div class="image-scroller" id="scroller">
+    <!-- Images -->
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/131825/be-6e-exterior-right-front-three-quarter-5.jpeg?q=80" alt="Image 1" />
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/131825/be-6e-exterior-right-front-three-quarter-5.jpeg?q=80" alt="Image 2" />
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/131825/be-6e-exterior-right-front-three-quarter-5.jpeg?q=80" alt="Image 3" />
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/131825/be-6e-exterior-right-front-three-quarter-5.jpeg?q=80" alt="Image 4" />
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/131825/be-6e-exterior-right-front-three-quarter-5.jpeg?q=80" alt="Image 5" />
+  </div>
+
+  <!-- <button class="scroll-btn right" onclick="scrollImages('right')">&#8250;</button> -->
+</div>
+</div>
+<script>
+  const scroller = document.getElementById('scroller');
+  const scrollSpeed = 1; // Speed of auto-scroll
+  let autoScroll;
+
+  // Clone images for infinite effect
+  function cloneImages() {
+    const originalImages = Array.from(scroller.children);
+    originalImages.forEach(img => {
+      const clone = img.cloneNode(true);
+      scroller.appendChild(clone);
+    });
+  }
+
+  // Start auto scrolling
+  function startAutoScroll() {
+    autoScroll = setInterval(() => {
+      scroller.scrollLeft += scrollSpeed;
+
+      // Reset scroll to the start to create infinite effect
+      if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+        scroller.scrollLeft = 0;
+      }
+    }, 15); // Smaller interval = smoother animation
+  }
+
+  // Manual scroll with buttons
+  function scrollImages(dir) {
+    const amount = dir === 'left' ? -320 : 320;
+    scroller.scrollBy({ left: amount, behavior: 'smooth' });
+  }
+
+  // Center image highlight
+  function highlightCenterImage() {
+    const center = scroller.offsetWidth / 2;
+    let closestImg = null;
+    let closestDistance = Infinity;
+    const images = scroller.querySelectorAll('img');
+
+    images.forEach(img => {
+      const imgCenter = img.offsetLeft + img.offsetWidth / 2 - scroller.scrollLeft;
+      const distance = Math.abs(center - imgCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestImg = img;
+      }
+      img.classList.remove('active');
+    });
+
+    if (closestImg) {
+      closestImg.classList.add('active');
+    }
+  }
+
+  // Run on page load
+  window.onload = () => {
+    cloneImages();
+    startAutoScroll();
+    highlightCenterImage();
+  };
+
+  scroller.addEventListener('scroll', () => {
+    clearTimeout(scroller._scrollTimer);
+    scroller._scrollTimer = setTimeout(highlightCenterImage, 100);
+  });
+
+  scroller.addEventListener('mouseenter', () => clearInterval(autoScroll));
+scroller.addEventListener('mouseleave', startAutoScroll);
+
+</script>
+
+
+
+ <!-- <style>
+    .partnership-main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    .partnership-main-container h2 {
+      margin-bottom: 1.5rem;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .all-images-container {
+      display: flex;
+      gap: 11%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .partners-img-container {
+      width: 16rem;
+      height: 10rem;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+
+    .partners-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  </style> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="partnership-main-container">
+  <h2>Our Partners</h2>
+  <div class="carousel-wrapper">
+    <div class="all-images-container" id="partnershipCarousel">
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+      <div class="partners-img-container"><img src="./images/ui_change_images/carpet.jpeg" alt=""></div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+
+
+
+  <!-- <script>
+  const partnershipCarousel = document.getElementById('partnershipCarousel');
+  const partnersImgcards = document.querySelectorAll('.partners-img-container');
+  let ind = 0;
+
+  function scrollToCard(i) {
+    const partnersImgcard = partnersImgcards[i];
+    const wrapper = partnershipCarousel.parentElement;
+    const wrapperWidth = wrapper.offsetWidth;
+    const cardWidth = partnersImgcard.offsetWidth;
+    const cardOffset = partnersImgcards.offsetLeft;
+
+    const scrollTo = cardOffset - (wrapperWidth / 2) + (cardWidth / 2);
+    wrapper.scrollTo({ left: scrollTo, behavior: 'smooth' });
+  }
+
+  function autoScroll() {
+    scrollToCard(ind);
+    ind = (ind + 1) % partnersImgcards.length;
+  }
+
+  setInterval(autoScroll, 3000);
+  window.addEventListener('load', () => scrollToCard(0));
+</script> -->
+
+
+  
+
+  <!-- <script>
+    const partnershipCarousel = document.getElementById("partnership-carousel");
+    let scrollAmount = 0;
+    const scrollStep = 300; // pixels per scroll
+    const scrollDelay = 3000; // 3 seconds
+
+    function autoScrollCarousel() {
+      if (partnershipCarousel.scrollLeft + partnershipCarousel.clientWidth >= partnershipCarousel.scrollWidth) {
+        // If reached end, scroll back to start
+        partnershipCarousel.scrollTo({ left: 0, behavior: "smooth" });
+        scrollAmount = 0;
+      } else {
+        scrollAmount += scrollStep;
+        partnershipCarousel.scrollBy({ left: scrollStep, behavior: "smooth" });
+      }
+    }
+
+    setInterval(autoScrollCarousel, scrollDelay);
+  </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
