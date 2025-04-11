@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css" />
+    <!-- <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css" /> -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -97,13 +97,13 @@
         font-size: 16px;
       }
 
-      li {
+      /* li {
         list-style: none;
       }
 
       .toggle {
         display: none;
-      }
+      } */
 
       *::-webkit-scrollbar {
         display: none;
@@ -179,14 +179,76 @@
   </head>
 
   <body>
+    <div class="topbar-section-common">
+      <div class="topbar-section-container">
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
+            <div class="img-wrapper">
+              <img src="../../images/contactus/facebook.png" />
+            </div>
+          </a>
+          <a href="https://www.instagram.com/carmaa_official" target="_blank">
+            <div class="img-wrapper">
+              <img src="../../images/contactus/instagram.png" />
+            </div>
+          </a>
+          <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
+            <div class="img-wrapper">
+              <img src="../../images/contactus/youtube.png" />
+            </div>
+          </a>
+          <a href="../../blogs/">
+            <div class="img-wrapper">
+              <img src="../../images/home-page/topbar/blogger.png" />
+            </div>
+          </a>
+        </div>
 
-    <div id="navbar">
+        <p
+          id="topbar-text"
+          style="
+            color: #fff;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin: 0;
+            font-weight: 600;
+          "
+        >
+          Bring your car's showroom shine back!
+        </p>
+
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <div style="display: flex; align-items: center; gap: 0.3rem">
+            <img
+              style="width: 1.5rem; height: 1.5rem"
+              src="../../images/home-page/topbar/phone.png"
+            />
+            <a class="mobile-number-ref" href="tel:+917042555401">
+              <p>+91 70425 55401</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar-placeholder" class="navbar-sticky-container">
       <script>
-        fetch("../components/navbar.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("navbar").innerHTML = data;
-          });
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../components/navbar.html")
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById("navbar-placeholder").innerHTML = html;
+
+              // Reinitialize toggle functionality after loading the navbar
+              const toggle = document.getElementById("toggle");
+              const menu = document.getElementById("menu");
+
+              toggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+              });
+            })
+            .catch((error) => console.error("Error loading navbar:", error));
+        });
       </script>
     </div>
 

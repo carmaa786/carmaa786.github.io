@@ -1,13 +1,4 @@
 <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css" />
-<link rel="stylesheet" href="/css/homepage.css" />
-<link rel="stylesheet" href="./css/homeNavbar.css" />
-<link rel="stylesheet" href="./css/common.css" />
-<link rel="canonical" href="https://carmaacarcare.com" />
-<link rel="stylesheet" href="./css/navbar.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="./css/homepage.css" />
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <style>
   * {
@@ -16,18 +7,6 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-  }
-  .servicesI {
-    cursor: pointer;
-    transition: all 0.5s;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px #65c7d06e;
-  }
-
-  .servicesI:hover {
-    transform: scale(1.1) !important;
-    box-shadow: 0px 0px 10px #65c7d0;
   }
 
   li {
@@ -68,61 +47,144 @@
     }
   }
 
-  @media (max-width: 900px) and (min-width: 0px) {
+  /* 
+  @media (max-width: 1150px) and (min-width: 0px) {
+    .toggle {
+      display: inline;
+      cursor: pointer;
+    }
+  } */
+
+  .accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .accordion .accordion-item button[aria-expanded="true"] {
+    border-bottom: 1px solid #28b097;
+  }
+
+  .accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #20272e;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  .accordion button:hover,
+  .accordion button:focus {
+    cursor: pointer;
+    color: #28b097;
+  }
+
+  .accordion button:hover::after,
+  .accordion button:focus::after {
+    cursor: pointer;
+    color: #28b097;
+    border: 1px solid #03b5d2;
+  }
+
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+    font-size: 1.3rem;
+  }
+
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+
+  .accordion button[aria-expanded="true"] {
+    color: #28b097;
+  }
+
+  .accordion button[aria-expanded="true"] .icon::after {
+    width: 0;
+  }
+
+  .accordion button[aria-expanded="true"] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+
+  .accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
+</style>
+
+<style>
+  @media screen and (max-width: 800px) {
+    .menu {
+      position: fixed;
+      background-color: rgb(255, 255, 255);
+      border-top: 1px solid gray;
+      top: 80px;
+      height: calc(100vh - 80px);
+      width: 100vw;
+      right: 0px;
+      flex-direction: column;
+      justify-content: flex-start !important;
+      padding: 50px 0px;
+      gap: 30px;
+      transform: translateX(100%) !important;
+    }
+
+    .active {
+      transform: translateX(0%) !important;
+    }
+
     .toggle {
       display: inline;
       cursor: pointer;
     }
   }
 </style>
-
-<div class="topbar-section-common">
-  <div class="topbar-section-container">
-    <div class="social-media-icons">
-      <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"
-        ><div class="img-wrapper">
-          <img src="/images/contactus/facebook.png" /></div
-      ></a>
-      <a href="https://www.instagram.com/carmaa_official" target="_blank"
-        ><div class="img-wrapper">
-          <img src="/images/contactus/instagram.png" /></div
-      ></a>
-      <a href="https://www.youtube.com/@carmaa_Official" target="_blank"
-        ><div class="img-wrapper">
-          <img src="/images/contactus/youtube.png" /></div
-      ></a>
-      <a href="/blogs/"
-        ><div class="img-wrapper">
-          <img src="/images/home-page/topbar/blogger.png" /></div
-      ></a>
-    </div>
-
-    <p
-      id="topbar-text"
-      style="
-        color: #fff;
-        font-weight: 400;
-        font-size: 0.95rem;
-        margin: 0;
-        font-weight: 600;
-      "
-    >
-      Bring your car's showroom shine back!
-    </p>
-
-    <div style="display: flex; flex-direction: column; align-items: center">
-      <div style="display: flex; align-items: center; gap: 0.3rem">
-        <img
-          style="width: 1.5rem; height: 1.5rem"
-          src="/images/home-page/topbar/phone.png"
-        />
-        <a class="mobile-number-ref" href="tel:+917042555401"
-          ><p>+91 70425 55401</p></a
-        >
-      </div>
-    </div>
-  </div>
-</div>
 
 <nav id="nav-placeholder" class="main-navbar-container">
   <div class="navbar-main-container">
@@ -135,7 +197,6 @@
         />
       </a>
     </div>
-
     <ul class="menu navbar-menu-ul" id="menu">
       <li>
         <a class="nav-item-list navbar-item-menu-link" href="/">Home</a>
@@ -279,20 +340,10 @@
         >
       </li>
     </ul>
-
     <div class="hamburger-menu-container">
       <button class="toggle navbar-toggle-menu" id="toggle">
         <ion-icon name="menu"></ion-icon>
       </button>
     </div>
   </div>
-
-  <script>
-    const toggle = document.getElementById("toggle");
-    const menu = document.getElementById("menu");
-
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
-  </script>
 </nav>
