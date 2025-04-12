@@ -1,0 +1,13 @@
+.download-btn {
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.download-btn img {
+  height: auto;
+  width: 100%;
+}
+
+.download-btn:hover{
+    cursor: pointer;
+}

@@ -1,164 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="../../css/globalCss/navbarGlobal.css">
         <link rel="canonical" href="https://carmaacarcare.com/car-detailing-services/" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-            font-size: 16px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        .toggle {
-            display: none;
-        }
-
-        *::-webkit-scrollbar {
-            display: none;
-        }
-
-        * {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @media screen and (max-width:800px) {
-            .menu {
-                position: fixed;
-                background-color: rgb(255, 255, 255);
-                border-top: 1px solid gray;
-                top: 80px;
-                height: calc(100vh - 80px);
-                width: 100vw;
-                right: 0px;
-                flex-direction: column;
-                justify-content: flex-start !important;
-                padding: 50px 0px;
-                gap: 30px;
-                transform: translateX(100%);
-            }
-
-            .active {
-                transform: translateX(0%) !important;
-            }
-
-            .toggle {
-                display: inline;
-                cursor: pointer;
-            }
-        }
-
-
-
-        .accordion .accordion-item {
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .accordion .accordion-item button[aria-expanded='true'] {
-            border-bottom: 1px solid #ed6744;
-        }
-
-        .accordion button {
-            position: relative;
-            display: block;
-            text-align: left;
-            width: 100%;
-            padding: 1em 0;
-            color: #20272e;
-            font-size: 1.15rem;
-            font-weight: 400;
-            border: none;
-            background: none;
-            outline: none;
-        }
-
-        .accordion button:hover,
-        .accordion button:focus {
-            cursor: pointer;
-            color: #ed6744;
-        }
-
-        .accordion button:hover::after,
-        .accordion button:focus::after {
-            cursor: pointer;
-            color: #ed6744;
-            border: 1px solid #03b5d2;
-        }
-
-        .accordion button .accordion-title {
-            padding: 1em 1.5em 1em 0;
-            font-size: 1.3rem;
-        }
-
-        .accordion button .icon {
-            display: inline-block;
-            position: absolute;
-            top: 18px;
-            right: 0;
-            width: 22px;
-            height: 22px;
-            border: 1px solid;
-            border-radius: 22px;
-        }
-
-        .accordion button .icon::before {
-            display: block;
-            position: absolute;
-            content: '';
-            top: 9px;
-            left: 5px;
-            width: 10px;
-            height: 2px;
-            background: currentColor;
-        }
-
-        .accordion button .icon::after {
-            display: block;
-            position: absolute;
-            content: '';
-            top: 5px;
-            left: 9px;
-            width: 2px;
-            height: 10px;
-            background: currentColor;
-        }
-
-        .accordion button[aria-expanded='true'] {
-            color: #ed6744;
-        }
-
-        .accordion button[aria-expanded='true'] .icon::after {
-            width: 0;
-        }
-
-        .accordion button[aria-expanded='true']+.accordion-content {
-            opacity: 1;
-            max-height: 9em;
-            transition: all 200ms linear;
-            will-change: opacity, max-height;
-        }
-
-        .accordion .accordion-content {
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: opacity 200ms linear, max-height 200ms linear;
-            will-change: opacity, max-height;
-        }
-
-        .accordion .accordion-content p {
-            font-size: 1rem;
-            font-weight: 300;
-            margin: 2em 0;
-        }
-    </style>
         <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
@@ -213,7 +58,9 @@
                 }
             }
         </style>
-        <style>
+
+    
+        <!-- <style>
             * {
                 margin: 0px;
                 padding: 0px;
@@ -264,7 +111,7 @@
                     cursor: pointer;
                 }
             }
-        </style>
+        </style> -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -278,10 +125,10 @@
     <div class="topbar-section-common">
         <div class="topbar-section-container">
             <div class="social-media-icons">
-                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img src="./images/contactus/facebook.png"/></div></a>
-                <a  href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img src="./images/contactus/instagram.png"/></div></a>
-               <a  href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"> <img src="./images/contactus/youtube.png"/></div></a>
-               <a  href="./blogs/"><div class="img-wrapper"> <img src="./images/home-page/topbar/blogger.png"/></div></a>
+                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img src="/images/contactus/facebook.png"/></div></a>
+                <a  href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img src="/images/contactus/instagram.png"/></div></a>
+               <a  href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"> <img src="/images/contactus/youtube.png"/></div></a>
+               <a  href="./blogs/"><div class="img-wrapper"> <img src="/images/home-page/topbar/blogger.png"/></div></a>
             </div>
          
             <p id="topbar-text" style="color: #fff; font-weight: 400; font-size: 0.95rem; margin: 0;font-weight: 600;">
@@ -291,12 +138,12 @@
            
             <div style="display:flex;flex-direction: column; align-items: center;">
                 <div  style="display:flex;align-items: center;gap:0.3rem">
-                    <img style="width: 1.5rem;height:1.5rem" src="./images/home-page/topbar/phone.png"/>
+                    <img style="width: 1.5rem;height:1.5rem" src="/images/home-page/topbar/phone.png"/>
                     <p style="color: #fff;font-weight: 400;">+91 70425 55401</p>
 
                 </div>
                 <div  style="display:flex;align-items: center;gap:0.3rem">
-                    <img style="width: 1.5rem;height:1.5rem" src="./images/home-page/topbar/email.png"/>
+                    <img style="width: 1.5rem;height:1.5rem" src="/images/home-page/topbar/email.png"/>
                     <p style="color: #fff;font-weight: 400;">support@carmaacarcare.com</p>
 
                 </div>
@@ -305,182 +152,26 @@
         </div>
 
     </div>
-    <nav id="nav-placeholder"
-    style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
-    <div
-        style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
-        <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700; height: 100px;">
-            <a href="/" style="height: 100%;">
-                <img src="../images/logo.png" style="height: 90%; object-fit: contain;" alt="Car Wash Service in Dehradun">
-            </a>
-        </div>
-        <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
-            <li style="cursor: pointer; "><a class="nav-item-list"
-                    style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
-                    href="/">Home</a>
-            </li>
-            <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
-                    href="../about/">About</a></li>
-            <li style="cursor: pointer; "><a
-                class="nav-item-list"  style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000; "
-                    href="../pricing/">Pricing</a> </li>
-          
-                    <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
-                        <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Services</span>
-                        <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
-                            <li>
-                                <a class="nav-item-list" href="./" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Carmaa Interior Car Cleaning</a>
-                            </li>
-                            <li>
-                                <a class="nav-item-list" href="../exterior-car-cleaning-washing" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Carmaa Exterior Car Cleaning & Washing</a>
-                            </li>
-                            <li>
-                                <a class="nav-item-list" href="../car-dry-cleaning-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Carmaa Car Dry Cleaning</a>
-                            </li>
-                            <li>
-                                <a class="nav-item-list" href="../car-body-polish-and-car-waxing-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Complete Car Body Polish and Wax</a>
-                            </li>
-                            <li>
-                                <a class="nav-item-list" href="../full-car-wash-service" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Carmaa Full Car Wash</a>
-                            </li>
-                            <li>
-                                <a class="nav-item-list" href="../car-deep-cleaning-services" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Carmaa Deep Cleaning</a>
-                            </li>
-                        </ul>
-                        <style>
-                            .dropdown {
-                                background-color: white;
-                                display: none;
-                                padding: 10px 0;
-                                width: 16rem; /* Set a consistent width for all dropdowns */
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
-                                border-radius: 4px;
-                            }
-                    
-                            .dropdownCon:hover .dropdown {
-                                display: flex;
-                                flex-direction: column; /* Ensures all items are vertically aligned */
-                            }
-                    
-                            .dropdown>li>a {
-                                padding: 8px 10px;
-                                border-radius: 4px;
-                                transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
-                            }
-                    
-                            .dropdown>li>a:hover {
-                            color: #01628F; /* Background color change on hover */
-                                color: white; /* Change text color to white when hovered */
-                            }
-                    
-                            .nav-item-list {
-                                width: 100%;
-                                display: block;
-                            }
-                    
-                            /* Hover effect for the main dropdown container */
-                            .dropdownCon:hover .nav-item-list {
-                                color: #01628F; /* Background color for the hovered nav */
-                                color: white; /* Change text color to white */
-                                border-radius: 4px;
-                                padding: 4px 8px;
-                                transition: background-color 0.2s, color 0.2s;
-                            }
-                        </style>
-                    </li>
-                    
-           
-                
-            <li style="cursor: pointer; "> <a
-                class="nav-item-list"   style="font-size: 1.3rem;font-weight: 700; text-decoration: none; color: #000;"
-                    href="../franchise/">Partner with Us</a></li>
-             
-                            <li class="dropdownCon" style="cursor: pointer; position: relative;"> 
-                                <span class="nav-item-list" style="font-size: 1.3rem; font-weight: 700; text-decoration: none; color: #000;">Our Locations</span>
-                                <ul style="position: absolute; flex-direction: column; gap: 10px; padding: 0.5rem 1rem;" class="dropdown">
-                                    <li>
-                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-dehradun" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Dehradun</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-noida/" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Noida</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-item-list" href="../doorstep-car-washing-service-in-uttarakhand" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: #000;">Uttarakhand</a>
-                                    </li>
-                                 
-                                </ul>
-                                <style>
-                                    .dropdown {
-                                        background-color: white;
-                                        display: none;
-                                        padding: 10px 0;
-                                        width: 16rem; /* Set a consistent width for all dropdowns */
-                                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
-                                        border-radius: 4px;
-                                    }
-                            
-                                    .dropdownCon:hover .dropdown {
-                                        display: flex;
-                                        flex-direction: column; /* Ensures all items are vertically aligned */
-                                    }
-                            
-                                    .dropdown>li>a {
-                                        padding: 8px 10px;
-                                        border-radius: 4px;
-                                        transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
-                                    }
-                            
-                                    .dropdown>li>a:hover {
-                                    color: #01628F; /* Background color change on hover */
-                                        color: white; /* Change text color to white when hovered */
-                                    }
-                            
-                                    .nav-item-list {
-                                        width: 100%;
-                                        display: block;
-                                    }
-                            
-                                    /* Hover effect for the main dropdown container */
-                                    .dropdownCon:hover .nav-item-list {
-                                        color: #01628F; /* Background color for the hovered nav */
-                                        color: white; /* Change text color to white */
-                                        border-radius: 4px;
-                                        padding: 4px 8px;
-                                        transition: background-color 0.2s, color 0.2s;
-                                    }
-                                </style>
-                            </li>
-                          
-         
-        </ul>
-        <div style="display: flex; gap: 20px; ">
-            <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
-                <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
-            </button>
-            <div class="btn"
-                style=" border-radius: 10px; background-color: #01628F;font-family: 'Bai Jamjuree', sans-serif; color: white; padding: 10px 15px; font-size: 1.2rem; font-weight: 400; cursor: pointer;">
-                <a href="../contactus/"
-                    style="font-size: 1.1rem;font-weight: 500; text-decoration: none; color: white ;">
-                    Contact Us
-                </a>
-            </div>
-        </div>
-    </div>
-    <script>
-        const toggle = document.getElementById("toggle")
-        const menu = document.getElementById("menu")
-        // alert("asf")
-        toggle.addEventListener("click", function () {
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-            } else {
-                menu.classList.add("active");
-            }
-        });
+     <div id="navbar-placeholder" class="navbar-sticky-container">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("/components/navbar.html")
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById("navbar-placeholder").innerHTML = html;
 
-    </script>
-</nav>
+              // Reinitialize toggle functionality after loading the navbar
+              const toggle = document.getElementById("toggle");
+              const menu = document.getElementById("menu");
+
+              toggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+              });
+            })
+            .catch((error) => console.error("Error loading navbar:", error));
+        });
+      </script>
+    </div>
 <header class="city-header-section">
     <p>Carmaa Car Detailing</p>
     <div class="breadcrumb">
@@ -660,13 +351,13 @@
     
 </section>
 <div id="footer">
-    <script>
-        fetch('../components/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+        <script>
+            fetch('../components/footer3.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
 </div>
 <script>
     const toggleSidBar = () => {

@@ -1,0 +1,316 @@
+/* homepage navbar */
+
+.main-navbar-container {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  background-color: white;
+}
+.navbar-main-container {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carmaa-navbar-logo-container {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.carmaa-navbar-logo-link {
+  height: 100%;
+}
+.nav-logo-image {
+  width: 150px;
+  margin-top: 10px;
+}
+
+/* search bar */
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 4px 19px 4px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 400px;
+  background-color: white;
+}
+
+.search-icon {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+#searchInput {
+  padding: 10px 50px 10px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 225px;
+  width: 100%;
+  overflow-y: scroll; /* Always show scrollbar */
+  overflow-x: hidden;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track color */
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+
+.service-link {
+  padding: 4px 10px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.service-box:hover {
+  background-color: #ddd;
+  color: #28b097;
+  cursor: pointer;
+}
+
+/* navbar book now btn */
+.navbar-book-btn {
+  margin-bottom: 2rem;
+}
+
+/* hamburger */
+
+.hamburger-button {
+  border: none;
+  padding: 10px;
+  background-color: #ffffff;
+}
+/* .menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 375px;
+  width: 100%;
+  background-color: #ffffff;
+} */
+.hamburger-content {
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+.hamburger-content:hover {
+  color: #28b097;
+}
+
+.hamburger-content:active {
+  color: #28b097;
+}
+
+.services-ten {
+  display: none;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 187px;
+  background: white;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+  height: 40vh;
+  z-index: 5;
+}
+
+.service-show {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+}
+
+.our-locations-container {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 245px;
+  background: white;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.material-symbols-outlined {
+  font-size: 2rem;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  background-color: white;
+  visibility: hidden;
+  padding: 10px 0;
+  width: 16rem; /* Consistent width for all dropdowns */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+}
+
+/* Show dropdown on hover */
+.dropdownCon:hover .dropdown {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown item styling */
+.dropdown > li > a {
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown > li > a:hover {
+  color: #28b097;
+}
+
+/* Hover effect for the main dropdown container */
+.nav-item-list {
+  width: 100%;
+  display: block;
+}
+
+/* Hover effect for main dropdown container */
+.dropdownCon:hover .nav-item-list {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .search-container {
+    display: none;
+  }
+}
+
+.navbar-carmaa-logo-container {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-carmaa-logo-link {
+  height: 100%;
+}
+.navbar-carmaa-logo-img {
+  width: 150px;
+  margin-top: 10px;
+}
+
+.navbar-menu-ul {
+  display: none;
+}
+
+.hamburger-menu-container{
+  display: none;
+}
+
+@media (max-width: 900px) and (min-width: 0px) {
+  .navbar-menu-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hamburger-menu-container{
+    display: flex;
+  }
+}
+
+
+.navbar-menu-ul li:hover {
+  cursor: pointer;
+}
+.navbar-item-menu-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+.nav-dropdown {
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+.navbar-toggle-menu {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.navbar-hamburger-menu {
+  font-size: 2rem;
+  color: black;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  background-color: white;
+  visibility: hidden;
+  padding: 10px 0;
+  width: 16rem; /* Consistent width for all dropdowns */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: absolute;
+}
+
+/* Show dropdown on hover */
+.dropdownCon:hover .dropdown {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown item styling */
+.dropdown > li > a {
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown > li > a:hover {
+  color: #28b097;
+}
+
+/* Hover effect for the main dropdown container */
+.nav-item-list {
+  width: 100%;
+  display: block;
+}
+
+/* Hover effect for main dropdown container */
+.dropdownCon:hover .nav-item-list {
+  color: #000;
+}
+
+.breadcrumb-link:hover {
+  color: #28b097 !important;
+}
