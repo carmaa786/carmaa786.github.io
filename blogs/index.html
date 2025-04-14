@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs</title>
     <!-- <link rel="stylesheet" href="../css/pricing.css" /> -->
-     <!-- <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css"> -->
+    <!-- <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css"> -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -109,7 +109,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-   
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"
@@ -326,10 +326,7 @@
           </div>
         </div></a
       >
-      <a
-        href="./why-carmaa-carcare-is-perfect-for-car-cleaning-services-at-home"
-        class="blog-card-href"
-      >
+      <a href="./why-carmaa-carcare-is-perfect/" class="blog-card-href">
         <div class="blog-card">
           <img
             class="blog-image"
@@ -447,81 +444,81 @@
       });
     </script>
     <div id="footer">
-        <script>
-            fetch('../components/footer3.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-        </script>
-    </div>
-      <script type="module">
-        import { CTAApi } from "./js/external-integration.js";
-        // Function to show the parent div after 15 seconds
-
-        // Initially hide the div
-        let parentDiv = document.getElementById("parent-div");
-        let parentDiv2 = document.getElementById("parent-div2");
-
-        // Show the div after 15 seconds
-
-        // Close button functionality
-        document
-          .getElementById("close-btn")
-          .addEventListener("click", function () {
-            // Hide the parent div
-            parentDiv.style.display = "none";
-
-            // Show the div again after 15 seconds
-          });
-        document
-          .getElementById("close-btn2")
-          .addEventListener("click", function () {
-            // Hide the parent div
-            parentDiv2.style.display = "none";
-
-            // Show the div again after 15 seconds
-          });
-
-        document
-          .getElementById("contactButton")
-          .addEventListener("click", async function () {
-            // Capture the values from the inputs
-            const button = document.getElementById("contactButton");
-
-            // Disable the button
-            button.style.pointerEvents = "none";
-            button.style.backgroundColor = "#999";
-            const name = document.getElementById("nameInput").value;
-            const number = document.getElementById("numberInput").value;
-            const address = document.getElementById("addressInput").value;
-            if (!name || !number || !address) {
-              alert("Please fill all fields.");
-              return;
-            }
-
-            // Prepare the data object
-            const formData = {
-              name: name,
-              number: number,
-              address: address,
-            };
-
-            try {
-              // Send POST request to the API
-              const response = await CTAApi(formData);
-              if (response.ok) {
-                document.getElementById("parent-div").style.display = "none";
-              } else {
-              }
-            } catch (error) {
-              console.error("Error:", error);
-            } finally {
-              button.style.pointerEvents = "auto";
-              button.style.backgroundColor = "#183ea1";
-            }
+      <script>
+        fetch("../components/footer3.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
           });
       </script>
+    </div>
+    <script type="module">
+      import { CTAApi } from "./js/external-integration.js";
+      // Function to show the parent div after 15 seconds
+
+      // Initially hide the div
+      let parentDiv = document.getElementById("parent-div");
+      let parentDiv2 = document.getElementById("parent-div2");
+
+      // Show the div after 15 seconds
+
+      // Close button functionality
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          // Hide the parent div
+          parentDiv.style.display = "none";
+
+          // Show the div again after 15 seconds
+        });
+      document
+        .getElementById("close-btn2")
+        .addEventListener("click", function () {
+          // Hide the parent div
+          parentDiv2.style.display = "none";
+
+          // Show the div again after 15 seconds
+        });
+
+      document
+        .getElementById("contactButton")
+        .addEventListener("click", async function () {
+          // Capture the values from the inputs
+          const button = document.getElementById("contactButton");
+
+          // Disable the button
+          button.style.pointerEvents = "none";
+          button.style.backgroundColor = "#999";
+          const name = document.getElementById("nameInput").value;
+          const number = document.getElementById("numberInput").value;
+          const address = document.getElementById("addressInput").value;
+          if (!name || !number || !address) {
+            alert("Please fill all fields.");
+            return;
+          }
+
+          // Prepare the data object
+          const formData = {
+            name: name,
+            number: number,
+            address: address,
+          };
+
+          try {
+            // Send POST request to the API
+            const response = await CTAApi(formData);
+            if (response.ok) {
+              document.getElementById("parent-div").style.display = "none";
+            } else {
+            }
+          } catch (error) {
+            console.error("Error:", error);
+          } finally {
+            button.style.pointerEvents = "auto";
+            button.style.backgroundColor = "#183ea1";
+          }
+        });
+    </script>
     <!-- </div> -->
 
     <script>
