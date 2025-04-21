@@ -634,6 +634,14 @@
   .card {
     flex: 0 0 100%; /* Show 1 card per slide */
   }
+
+  .rating-customer-container {
+    padding-top: 15px;
+  }
+
+  .car-services-container {
+    height: 26vh;
+  }
 }
 
 .pb {
