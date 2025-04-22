@@ -2298,6 +2298,15 @@ scroller.addEventListener('mouseleave', startAutoScroll);
                 .then(data => {
                     document.getElementById('footer').innerHTML = data;
                 });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let presentYear = new Date().getFullYear();
+    console.log(presentYear);
+    document.getElementById('yearElement').textContent = presentYear;
+    document.getElementById('yearElement').style.fontSize = "12px";
+  });
         </script>
     </div>
     

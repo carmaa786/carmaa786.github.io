@@ -575,6 +575,13 @@
           .then((data) => {
             document.getElementById("footer").innerHTML = data;
           });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          let presentYear = new Date().getFullYear();
+          console.log(presentYear);
+          document.getElementById("yearElement").textContent = presentYear;
+          document.getElementById("yearElement").style.fontSize = "12px";
+        });
       </script>
     </div>
 
@@ -608,9 +615,12 @@
                   height: auto;
                 }
               </style>
-              
+
               <div class="download-modal-container">
-                <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                  target="_blank"
+                >
                   <div class="download-btn">
                     <img
                       src="../images/ui_change_images/download2.jpeg"
@@ -1002,6 +1012,13 @@
           .then((data) => {
             document.getElementById("footer").innerHTML = data;
           });
+
+            document.addEventListener("DOMContentLoaded", function () {
+    let presentYear = new Date().getFullYear();
+    console.log(presentYear);
+    document.getElementById('yearElement').textContent = presentYear;
+    document.getElementById('yearElement').style.fontSize = "12px";
+  });
       </script>
     </div>
     <script type="module">
