@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css">
+    <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css" />
     <meta charset="UTF-8" />
     <link rel="canonical" href="https://carmaacarcare.com/pricing/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -120,12 +120,27 @@
       gtag("js", new Date());
       gtag("config", "AW-16789669575");
     </script>
-    <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
-      <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-
-          <img style="height: 100%; width: 100%;" src="../images/whatsapp.png" alt="waterless car wash in Noida">
+    <div
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        height: 50px;
+        aspect-ratio: 1;
+        z-index: 99999999;
+      "
+    >
+      <a
+        href="https://api.whatsapp.com/send?phone=917042555401"
+        target="_blank"
+      >
+        <img
+          style="height: 100%; width: 100%"
+          src="../images/whatsapp.png"
+          alt="waterless car wash in Noida"
+        />
       </a>
-  </div>
+    </div>
   </head>
 
   <body>
@@ -1665,12 +1680,20 @@
                 </div>
               </div>
 
-
-              <div class="download-modal-container">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                target="_blank"
+              >
+                <div class="download-modal-container">
                   <div class="download-btn">
-                    <img src="./images/ui_change_images/play_store.png" alt="Play Store Download">
+                    <img
+                      src="./images/ui_change_images/play_store.png"
+                      alt="Play Store Download"
+                    />
+                  </div>
                 </div>
-              </div>
+              </a>
+
               <!-- <div class="contact">
                 <div class="img-wrapper2">
                   <img src="../images/home-page/modal/icon-clock.png" />
@@ -1731,8 +1754,11 @@
               </div>
             </div>
 
-              <!--Captcha Code for Auth-->
-                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+            <!--Captcha Code for Auth-->
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
+            ></div>
 
             <button style="border-radius: 10px" id="modal-booking-btn">
               <span class="button-text">BOOK</span>
@@ -1747,7 +1773,7 @@
       </section>
     </div>
 
-     <!-- Load reCAPTCHA -->
+    <!-- Load reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script>
@@ -1760,136 +1786,133 @@
     </script>
 
     <div id="footer">
-        <script>
-            fetch('../components/footer3.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-        </script>
+      <script>
+        fetch("../components/footer3.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
     </div>
 
-      <script type="module">
-        import { CTAApi } from "../js/external-integration.js";
-        // Initially hide the div
-        let parentDiv = document.getElementById("parent-div");
-        parentDiv.style.display = "none";
+    <script type="module">
+      import { CTAApi } from "../js/external-integration.js";
+      // Initially hide the div
+      let parentDiv = document.getElementById("parent-div");
+      parentDiv.style.display = "none";
 
-        // Close button functionality
-        document
-          .getElementById("close-btn")
-          .addEventListener("click", function () {
+      // Close button functionality
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("nameInput").value = "";
+          document.getElementById("numberInput").value = "";
+          document.getElementById("addressInput").value = "";
+          document.getElementById("cityInput").value = "";
+
+          document.getElementById("modal-booking-btn").disabled = false;
+          document.querySelector(".spinner").style.display = "none"; // Hide the spinner
+          document.querySelector(".button-text").style.display = "inline";
+          parentDiv.style.display = "none";
+        });
+
+      let currentModalTarget = "";
+
+      document.querySelectorAll(".pricing-booking-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document.getElementById("parent-div").style.display = "flex";
+
+          // Capture the values from the button clicked
+          currentModalTarget = btn.getAttribute("data-target");
+          console.log(currentModalTarget);
+        });
+      });
+
+      const button = document.getElementById("modal-booking-btn");
+      const spinner = document.querySelector(".spinner");
+      const btnText = document.querySelector(".button-text");
+
+      // Move the event listener for the modal button outside the loop
+      button.addEventListener("click", async function () {
+        // Disable the button
+        let isValid = true;
+        const name = document.getElementById("nameInput").value;
+        const number = document.getElementById("numberInput").value;
+        const address = document.getElementById("addressInput").value;
+        const city = document.getElementById("cityInput").value;
+        const phoneRegex = /^[0-9]{10}$/;
+
+        if (name === "") {
+          document.getElementById("nameError").textContent =
+            "Name is required.";
+          isValid = false;
+        }
+
+        if (number === "") {
+          document.getElementById("phoneError").textContent =
+            "Phone number is required.";
+          isValid = false;
+        } else if (!phoneRegex.test(number)) {
+          document.getElementById("phoneError").textContent =
+            "Enter a valid 10-digit phone number.";
+          isValid = false;
+        }
+
+        if (city === "") {
+          document.getElementById("cityError").textContent =
+            "City is required.";
+          isValid = false;
+        }
+
+        const recaptchaResponse = grecaptcha.getResponse();
+
+        if (!recaptchaResponse) {
+          document.getElementById("result").textContent =
+            "Please complete the CAPTCHA";
+          return;
+        }
+
+        if (isValid) {
+          button.disabled = true;
+          spinner.style.display = "inline-block"; // Show the spinner
+          btnText.style.display = "none";
+
+          // Prepare the data object
+          const formData = {
+            name: name,
+            phone: number,
+            address: address,
+            city: city,
+            clickedOnPricingPageService: currentModalTarget,
+            recaptchaResponse: recaptchaResponse,
+          };
+          console.log(formData, "formData");
+
+          try {
+            // Send POST request to the API
+            const response = await CTAApi(formData);
+
+            if (response.ok) {
+              // Hide the parent div
+              document.getElementById("parent-div").style.display = "none";
+              // Empty the form fields after submission
+            } else {
+              console.error("Failed to submit the form.");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+          } finally {
+            button.disabled = false;
+            spinner.style.display = "none"; // Hide the spinner
+            btnText.style.display = "inline";
             document.getElementById("nameInput").value = "";
             document.getElementById("numberInput").value = "";
             document.getElementById("addressInput").value = "";
             document.getElementById("cityInput").value = "";
-
-            document.getElementById("modal-booking-btn").disabled = false;
-            document.querySelector(".spinner").style.display = "none"; // Hide the spinner
-            document.querySelector(".button-text").style.display = "inline";
-            parentDiv.style.display = "none";
-          });
-
-        let currentModalTarget = "";
-
-        document.querySelectorAll(".pricing-booking-btn").forEach((btn) => {
-          btn.addEventListener("click", function () {
-            document.getElementById("parent-div").style.display = "flex";
-
-            // Capture the values from the button clicked
-            currentModalTarget = btn.getAttribute("data-target");
-            console.log(currentModalTarget);
-          });
-        });
-
-        const button = document.getElementById("modal-booking-btn");
-        const spinner = document.querySelector(".spinner");
-        const btnText = document.querySelector(".button-text");
-
-        // Move the event listener for the modal button outside the loop
-        button.addEventListener("click", async function () {
-          // Disable the button
-          let isValid = true;
-          const name = document.getElementById("nameInput").value;
-          const number = document.getElementById("numberInput").value;
-          const address = document.getElementById("addressInput").value;
-          const city = document.getElementById("cityInput").value;
-          const phoneRegex = /^[0-9]{10}$/;
-
-
-          if (name === "") {
-            document.getElementById("nameError").textContent =
-              "Name is required.";
-            isValid = false;
           }
-
-          if (number === "") {
-            document.getElementById("phoneError").textContent =
-              "Phone number is required.";
-            isValid = false;
-          } else if (!phoneRegex.test(number)) {
-            document.getElementById("phoneError").textContent =
-              "Enter a valid 10-digit phone number.";
-            isValid = false;
-          }
-
-          if (city === "") {
-            document.getElementById("cityError").textContent =
-              "City is required.";
-            isValid = false;
-          }
-
-          const recaptchaResponse = grecaptcha.getResponse();
-
-          if (!recaptchaResponse) {
-              document.getElementById('result').textContent = 'Please complete the CAPTCHA';
-              return;
-          }
-
-          if (isValid) {
-            button.disabled = true;
-            spinner.style.display = "inline-block"; // Show the spinner
-            btnText.style.display = "none";
-
-
-
-            // Prepare the data object
-            const formData = {
-              name: name,
-              phone: number,
-              address: address,
-              city: city,
-              clickedOnPricingPageService: currentModalTarget,
-              recaptchaResponse:recaptchaResponse
-
-            };
-            console.log(formData, "formData");
-
-            try {
-              // Send POST request to the API
-              const response = await CTAApi(formData);
-
-              if (response.ok) {
-                // Hide the parent div
-                document.getElementById("parent-div").style.display = "none";
-                // Empty the form fields after submission
-              } else {
-                console.error("Failed to submit the form.");
-              }
-            } catch (error) {
-              console.error("Error:", error);
-            } finally {
-              button.disabled = false;
-              spinner.style.display = "none"; // Hide the spinner
-              btnText.style.display = "inline";
-              document.getElementById("nameInput").value = "";
-              document.getElementById("numberInput").value = "";
-              document.getElementById("addressInput").value = "";
-              document.getElementById("cityInput").value = "";
-            }
-          }
-        });
-      </script>
+        }
+      });
+    </script>
     <!-- </div> -->
 
     <script>
