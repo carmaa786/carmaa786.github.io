@@ -105,10 +105,15 @@
   .car-decor-unique-section {
     padding-top: 30px;
   }
+
+  .our-services-section-city-left img {
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
-.pdbottom{
-    padding-bottom: 30px;
+.pdbottom {
+  padding-bottom: 30px;
 }
 
 .city-header-section {
@@ -748,6 +753,8 @@
   .city-benefit-element {
     width: 46%;
     max-width: 800px;
+    max-height: 450px;
+    overflow: scroll;
     padding: 2rem 2rem;
     border-radius: 10px;
     border-style: solid;
@@ -1229,6 +1236,7 @@
   }
   .our-services-section-city-left img {
     width: 100%;
+    object-fit: cover;
   }
 
   .commitment-quality {
