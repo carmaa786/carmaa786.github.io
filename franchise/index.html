@@ -228,61 +228,88 @@
         <div class="contactus-right-section">
             <h1>Registeration Details</h1>
           
-                <form id="subscriptionForm">
+                <form id="subscriptionForm" >
                     <div class="form-row">
                         <div class="input-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                            <label for="name">Name / Workshop Name <span>*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
                             <span class="error-message" id="nameError"></span>
                         </div>
-                        <div class="input-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                            <span class="error-message" id="phoneError"></span>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="email">Email</label>
+                         <div class="input-group">
+                            <label for="email">Email <span>*</span></label>
                             <input type="email" id="email" name="email" placeholder="Enter your email">
                             <span class="error-message" id="emailError"></span>
                         </div>
                     </div>
-                    <div class="form-row">
                         <div class="input-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" placeholder="Enter your city">
+                            <label for="phone">Phone Number <span>*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Whatsapp Number <span>*</span></label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your phone number" required>
+                            
+                            <div style="padding-top: 1rem;">
+                                <input type="checkbox" id="checked" onclick="sameNumber()" >
+                                Same as Phone number
+                            </div>
+                            <span class="error-message" id="whatsappError"></span>
+                        </div>
+
+                       
+                        <div class="input-group">
+                            <label for="city">City <span>*</span></label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
                             <span class="error-message" id="cityError"></span>
                         </div>
-                    </div>
-                    <div class="form-row">
-                     
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Enter additional details..."></textarea>
+                  
+                       <div class="input-group">
+                            <label for="adress">Address<span>*</span></label>
+                            <input type="text" id="address" name="address" placeholder="Enter your Address" required>
+                            <span class="error-message" id="addressError"></span>
                         </div>
-                    </div>
-
+                         <div class="input-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode">
+                            <span class="error-message" id="pincodeError"></span>
+                        </div>
                      <!--Captcha Code for Auth-->
-                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div> -->
                     
-                    <button class="btn-submit-contact"  style="cursor: pointer;" type="submit" id="submitBtn">
-                        <span class="spinner" id="spinner" style="display: none;"></span>
-                        <span id="btnText">Submit</span>
-                    </button>
+
+                    <div class="franchise-submit-btn-container">
+                        <button class="btn-submit-contact"  style="cursor: pointer;" type="submit" id="submitBtn">
+                            <span class="spinner" id="spinner" style="display: none;"></span>
+                            <span id="btnText">Submit</span>
+                        </button>
+                    </div>
                     <div class="success-message" id="successMessage"></div>
                     <div class="error-message" id="errorMessage"></div>
                 </form>
 
                 <!-- Load reCAPTCHA -->
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-            
-        
+                <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
         </div>
-    </div>
-    
+    </div>    
+
+    <script>
+     const sameNumber = () => {
+    const checkbox = document.getElementById("checked");
+    const phoneInput = document.getElementById("phone");
+    const whatsappInput = document.getElementById("whatsapp");
+
+    if (checkbox.checked) {
+        // Set the WhatsApp number to the Phone number
+        whatsappInput.value = phoneInput.value;
+    } else {
+        // Clear the WhatsApp number if the checkbox is unchecked
+        whatsappInput.value = "";
+    }
+};
+    </script>
+
+
 
  
 </section>
@@ -294,9 +321,9 @@
                     document.getElementById('footer').innerHTML = data;
                 });
 
-                  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     let presentYear = new Date().getFullYear();
-    console.log(presentYear);
+    // console.log(presentYear);
     document.getElementById('yearElement').textContent = presentYear;
     document.getElementById('yearElement').style.fontSize = "12px";
   });
