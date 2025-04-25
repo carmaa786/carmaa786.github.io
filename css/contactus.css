@@ -142,9 +142,9 @@ margin-top: 1.5rem;
     box-shadow:  10px 10px 10px 10px hsl(0, 50%, 2%, .5);
  }
 
-
-
-
+ .franchise-submit-btn-container{
+    padding-top: 1rem;
+ }
 
 .form-container {
     background-color: white;
