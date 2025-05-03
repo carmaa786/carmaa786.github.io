@@ -1210,7 +1210,7 @@
   }
   .our-services-section-city-left {
     width: 48%;
-    max-width: 900px;
+    height: 900px;
   }
   .our-services-section-city-right {
     width: 48%;
@@ -1236,6 +1236,7 @@
   }
   .our-services-section-city-left img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
