@@ -182,7 +182,7 @@
   cursor: pointer;
 }
 .download-btn {
-  width: 15rem;
+  width: 11rem;
 }
 
 .download-btn img {
@@ -257,7 +257,7 @@
 .looking-for-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
@@ -274,6 +274,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 }
 
 .homepage-left-services-container {
@@ -348,7 +349,7 @@
     padding: 10px 2px;
   }
   .rating-container {
-    width: 13rem;
+    width: 11rem;
   }
   .rating-customer-container {
     width: 95%;
@@ -386,7 +387,7 @@
     padding-left: 5px;
   }
   .car-services-container {
-    height: 42vh;
+    height: 20vh;
   }
   .rating-container {
     padding: 0.45rem 1.5rem;
@@ -771,6 +772,7 @@
 
   .car-services-container {
     width: 96%;
+    height: 36vh;
   }
 }
 
