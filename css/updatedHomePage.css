@@ -561,8 +561,6 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  /* justify-content: center !important; */
-  /* padding-top: 60px; */
 }
 
 /* other services */
@@ -570,10 +568,53 @@
 .other-services-web-container {
   display: flex;
   gap: 25px;
-  /* flex-wrap: wrap; */
-  /* overflow: hidden; */
 }
 
+.other-services-new-container {
+  display: flex;
+  align-items: stretch;
+  overflow: scroll;
+  gap: 30px;
+}
+.new-sofa-container {
+  border: 1px solid lightgray;
+  width: 10.2rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-sofa-container:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.other-services-img-container {
+  width: 9rem;
+  height: 125px;
+}
+.other-service-new-heading {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.other-services-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-decor-link-heading {
+  height: 50px;
+  padding-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
 @media (max-width: 400px) and (min-width: 10px) {
   .sofa-cleaning-container {
     width: 9rem;
@@ -582,7 +623,6 @@
 
 .services-sub-section {
   background-color: rgba(245, 245, 245, 0.874);
-  /* border: 0.5px solid black; */
   width: 15rem;
   text-align: center;
   padding: 15px 25px;
@@ -594,9 +634,6 @@
 .services-sub-section:hover {
   box-shadow: 2px 2px 1px hsl(0, 50%, 2%, 0.5);
 }
-/* .other-services-sub-section{
-       display: none;
-    } */
 
 @media (max-width: 1024px) and (min-width: 900px) {
   .card {
@@ -614,10 +651,9 @@
   }
 }
 
-/* Tablet View: First slide - 1 card centered, then 2 cards */
 @media (min-width: 1024px) {
   .card {
-    flex: 0 0 32%; /* First card takes full width initially */
+    flex: 0 0 32%;
   }
 
   .carousel-container {
@@ -660,30 +696,9 @@
     width: 90%;
     padding-top: 0px;
   }
-
-  /* .other-services-sub-section{
-        width: 90%;
-        height: 25vh;
-        overflow: scroll;
-        scrollbar-width: thin;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        border: 1px solid black;
-        border-radius: 10px;
-        margin: auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
-  } */
   .pb {
     padding-bottom: 40px;
   }
-
-  /* .other-services-web-container{
-    display: none;
-  } */
 }
 
 .search-option-main-container {
@@ -705,27 +720,11 @@
   background-color: #f0f0f0;
 }
 
-/* .testimonial-heading{
-  color: #0e111b !important
-} */
-
 .why-carmaa-container h1 {
   color: #0e111b !important;
 }
 
 @media (max-width: 900px) and (min-width: 0px) {
-  /* .bookNowBtnHide {
-    display: none;
-  } */
-
-  /* .see-all-btn {
-    width: 80%;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    padding-bottom: 20px;
-  }
-
   .see-all-btn button {
     padding: 5px 10px;
     background-color: #0c4c9d;
@@ -734,24 +733,13 @@
     border-radius: 5px;
     font-size: 12px;
     transition: background-color 0.3s ease-in-out;
-  } */
-
-  /* .sofa-cleaning-container {
-    width: 10rem;
-    height: 10rem;
-  } */
-  /* 
-  .sofa-img-container {
-    width: 10rem;
-    height: 6rem;
-  } */
-  .homepage-services {
+  }
+  */ .homepage-services {
     width: 46%;
   }
   .service-box img {
     width: 30px;
     height: 25px;
-    /* margin-right: 8px; */
   }
   .service-box p {
     font-size: 12px;
