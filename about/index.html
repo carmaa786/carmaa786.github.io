@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css" /> -->
+    <link
+      rel="preload"
+      href="../css/common.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="../css/aboutus.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -38,9 +45,6 @@
       name="keywords"
       content="About Carmaa, doorstep car wash, waterless car wash, car detailing, car interior cleaning"
     />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/aboutus.css" />
-    <link rel="stylesheet" href="../css/homepage.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -1013,12 +1017,12 @@
             document.getElementById("footer").innerHTML = data;
           });
 
-            document.addEventListener("DOMContentLoaded", function () {
-    let presentYear = new Date().getFullYear();
-    console.log(presentYear);
-    document.getElementById('yearElement').textContent = presentYear;
-    document.getElementById('yearElement').style.fontSize = "12px";
-  });
+        document.addEventListener("DOMContentLoaded", function () {
+          let presentYear = new Date().getFullYear();
+          console.log(presentYear);
+          document.getElementById("yearElement").textContent = presentYear;
+          document.getElementById("yearElement").style.fontSize = "12px";
+        });
       </script>
     </div>
     <script type="module">
