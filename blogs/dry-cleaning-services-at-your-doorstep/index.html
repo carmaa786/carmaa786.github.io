@@ -1,1 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <link rel="canonical" href="https://carmaacarcare.com/dry-cleaning-services-at-your-doorstep" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+
+
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .accordion .accordion-item button[aria-expanded='true'] {
+            border-bottom: 1px solid #ed6744;
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #20272e;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #ed6744;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #ed6744;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+            font-size: 1.3rem;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded='true'] {
+            color: #ed6744;
+        }
+
+        .accordion button[aria-expanded='true'] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded='true']+.accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Doorstep Car Cleaning & Car Wash Service in Noida</title>
+    <meta name="keywords"
+        content="  Doorstep Car Cleaning, Car Wash Service in Noida" />
+    <meta name="description" content=" Watch out Carmaa Car care new blog on Top Rated Doorstep Car Cleaning & Car Wash Service in Noida – Effortless & Affordable." />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/aboutus.css" />
+    <link rel="stylesheet" href="../../css/homepage.css" />
+    <link rel="stylesheet" href="../../css/service.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .servicesI {
+            cursor: pointer;
+            transition: all 0.5s;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #65c7d06e;
+        }
+
+        .servicesI:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0px 0px 10px #65c7d0;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .a {
+                justify-content: center !important;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .bh {
+                flex-direction: column;
+            }
+
+            .bh img {
+                min-height: 300px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .c {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media screen and (max-width:800px) {
+            .menu {
+                position: fixed;
+                background-color: rgb(255, 255, 255);
+                border-top: 1px solid gray;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100vw;
+                right: 0px;
+                flex-direction: column;
+                justify-content: flex-start !important;
+                padding: 50px 0px;
+                gap: 30px;
+                transform: translateX(100%);
+            }
+
+            .active {
+                transform: translateX(0%) !important;
+            }
+
+            .toggle {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-16789669575');
+    </script>
+     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
+        <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
+  
+            <img style="height: 100%; width: 100%;" src="../../images/whatsapp.png" alt="Doorstep Car Dry Cleaning Service">
+        </a>
+    </div>
+</head>
+
+<body>
+    <div class="topbar-section-common">
+        <div class="topbar-section-container">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
+                    <div class="img-wrapper"><img src="../../images/contactus/facebook.png" /></div>
+                </a>
+                <a href="https://www.instagram.com/carmaa_official" target="_blank">
+                    <div class="img-wrapper"><img src="../../images/contactus/instagram.png" /></div>
+                </a>
+                <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
+                    <div class="img-wrapper"> <img src="../../images/contactus/youtube.png" /></div>
+                </a>
+                <a href="../../blogs/">
+                    <div class="img-wrapper"> <img src="../../images/home-page/topbar/blogger.png" /></div>
+                </a>
+            </div>
+
+            <p id="topbar-text" style="color: #fff; font-weight: 400; font-size: 0.95rem; margin: 0;font-weight: 600;">
+                Bring your car's showroom shine back!
+            </p>
+
+
+            <div style="display:flex;flex-direction: column; align-items: center;">
+                <div style="display:flex;align-items: center;gap:0.3rem">
+                    <img style="width: 1.5rem;height:1.5rem" src="../../images/home-page/topbar/phone.png" />
+                    <a class="mobile-number-ref" href="tel:+917042555401">
+                        <p>+91 70425 55401</p>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <nav id="nav-placeholder"
+        style="box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); width: 100vw; height: 80px; background-color:transparent; position: sticky; top: 0px; z-index: 9999; background-color: white;">
+        <div
+            style="width: 95%;height: 100%; position: relative; max-width: 1200px;margin: auto; display: flex;align-items: center; justify-content: space-between;">
+            <div style="font-size: 1.5rem; text-transform: uppercase; font-weight: 700;">
+                <a href="/" style="height: 100%;">
+                    <img src="../../images/logo.png" width="150" style="margin-top: 10px;" alt="Doorstep Car Dry Cleaning Service">
+                </a>
+            </div>
+            <ul class="menu" id="menu" style="display: flex;align-items: center;justify-content: center;gap: 30px;">
+                <li style="cursor: pointer; "><a class="nav-item-list"
+                        style="font-size: 1.1rem;font-weight: 700; text-decoration: none;  color: #000;"
+                        href="/">Home</a>
+                </li>
+                <li style="cursor: pointer; "> <a class="nav-item-list"
+                        style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                        href="../../about/">About Us</a></li>
+                <li class="dropdownCon" style="cursor: pointer; position: relative;z-index: 1000;">
+                    <span class="nav-item-list"
+                        style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Services</span>
+                    <ul class="dropdown">
+                        <li><a class="nav-item-list" href="../../interior-car-cleaning-service/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Interior
+                                Car Cleaning</a></li>
+                                <li><a class="nav-item-list" href="../../paint-protection-and-coating-services/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Paint Protection And Coating </a></li>
+                    <li><a class="nav-item-list" href="../../ceramic-coating-service/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Ceramic Coating </a></li>
+                    <li><a class="nav-item-list" href="../../glass-and-surface-coating-services/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Glass And Surface Coating</a></li>
+                    <li><a class="nav-item-list" href="../../full-car-detailing-service/" style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Full Car Detailing</a></li>
+                        <li><a class="nav-item-list" href="../../exterior-car-cleaning-washing/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Exterior
+                                Car Cleaning & Washing</a></li>
+                        <li><a class="nav-item-list" href="../../car-dry-cleaning-service/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Car Dry
+                                Cleaning</a></li>
+                        <li><a class="nav-item-list" href="../../car-body-polish-and-car-waxing-service/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Complete
+                                Car Body Polish and Wax</a></li>
+                        <li><a class="nav-item-list" href="../../full-car-wash-service/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Full
+                                Car Wash</a></li>
+                        <li><a class="nav-item-list" href="../../car-deep-cleaning-services/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Deep
+                                Cleaning</a></li>
+                    </ul>
+                </li>
+                <!-- <li style="cursor: pointer; "> <a class="nav-item-list"
+                        style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                        href="../../franchise/">Partner with Us</a></li> -->
+                <li class="dropdownCon" style="cursor: pointer; position: relative;">
+                    <span class="nav-item-list"
+                        style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Our
+                        Locations</span>
+                    <ul class="dropdown">
+                        <li><a class="nav-item-list" href="../../doorstep-car-washing-service-in-dehradun/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Dehradun</a>
+                        </li>
+                        <li><a class="nav-item-list" href="../../doorstep-car-washing-service-in-noida/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Noida</a>
+                        </li>
+                        <li><a class="nav-item-list" href="../../doorstep-car-washing-service-in-uttarakhand/"
+                                style="font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #000;">Uttarakhand</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li style="cursor: pointer; "><a class="nav-item-list"
+                        style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                        href="../../pricing/">Pricing</a> </li> -->
+                <li style="cursor: pointer; "><a class="nav-item-list"
+                        style="font-size: 1.1rem;font-weight: 700; text-decoration: none; color: #000;"
+                        href="../../contactus/">Contact Us</a> </li>
+            </ul>
+            <div style="display: flex; gap: 20px; ">
+                <button class="toggle" id="toggle" style="background-color:transparent; border: none; outline: none; ">
+                    <ion-icon name="menu" style="font-size: 2rem;color: black;"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <style>
+            /* Dropdown menu styling */
+            .dropdown {
+                background-color: white;
+                visibility: hidden;
+                padding: 10px 0;
+                width: 16rem;
+                /* Consistent width for all dropdowns */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                position: absolute;
+            }
+
+            /* Show dropdown on hover */
+            .dropdownCon:hover .dropdown {
+                visibility: visible;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Dropdown item styling */
+            .dropdown>li>a {
+                padding: 8px 10px;
+                border-radius: 4px;
+                transition: background-color 0.2s, color 0.2s;
+            }
+
+            .dropdown>li>a:hover {
+
+                color: #ed6744;
+            }
+
+            /* Hover effect for the main dropdown container */
+            .nav-item-list {
+                width: 100%;
+                display: block;
+            }
+
+            /* Hover effect for main dropdown container */
+            .dropdownCon:hover .nav-item-list {
+                color: #ed6744;
+            }
+        </style>
+
+        <script>
+            const toggle = document.getElementById("toggle");
+            const menu = document.getElementById("menu");
+
+            toggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        </script>
+    </nav>
+    <header class="city-header-section">
+        <p>Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep </p>
+        <div class="breadcrumb">
+            <img class="" src="../../common/home.png" />
+            <p><a href="/" class="breadcrumb-link">Home</a></p>
+            <p>/</p>
+            <p><a href="../" class="breadcrumb-link">Blogs</a></p>
+            <p>/</p>
+            <p><a href="./" class="breadcrumb-link">Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep
+</a></p>
+
+        </div>
+    </header>
+    <section class="service-main-section">
+        <div class="service-left-section">
+            <img style="border-radius:10px" alt="Doorstep Car Dry Cleaning Service"
+                src="../../images/blogs/car-wash-service-in-noida.webp" />
+                <h2 class="service-heading">Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep
+</h2>
+
+            <p class="service-para">In today’s fast-paced world, finding time for vehicle maintenance has become increasingly difficult. With busy schedules and endless commitments, car owners often struggle to fit in a visit to the car wash. This is where Doorstep Car Dry Cleaning Services step in as a revolutionary solution, bringing professional and Premium Car Dry Cleaning Service directly to your home or workplace. The need for such services is further amplified by the fact that skilled professional car dry cleaners are rare, and trusting a regular service can result in accidental damage to your car’s interior and exterior, including scratches and upholstery wear.</p>
+           <p class="service-para">Premium Car Dry Cleaning Services in locations like Dehradun and Noida have gained significant traction due to their unmatched convenience, eco-friendly practices, and superior results. By opting for these services, car owners save time while ensuring the highest quality care for their vehicles. From waterless car washes to deep cleaning and detailing, these services offer a comprehensive solution. The growing popularity of  <a href="https://carmaacarcare.com/car-dry-cleaning-service/" target="_blank">doorstep car dry cleaning services</a>
+ showcases their vital role in modern car maintenance, allowing customers to enjoy a seamless and efficient way to care for their vehicles without the usual hassle.</p>
+<h2 class="service-heading">1. Convenience Like Never Before</h2>
+            <p class="service-para">One of the primary reasons to choose a Doorstep Car Dry Cleaning Service is the sheer convenience it offers. No need to drive to a car wash or wait in long queues. With this service, professionals arrive at your preferred location—be it your home or workplace—saving you time and effort.
+Whether you're in the serene surroundings of Dehradun or the bustling streets of Noida, this Premium Car Dry Cleaning Services ensures that your car gets the care it deserves without disrupting your busy schedule.
+ </p>
+            <h2 class="service-heading"> 2. Premium Quality Cleaning</h2>
+            <p class="service-para">Dry cleaning services for cars provide a level of attention to detail that traditional car washes often lack. Trained professionals use advanced techniques and high-quality products to deliver exceptional results. A Premium Car Dry Cleaning Service focuses on removing deep-seated dirt, stains, and grime, leaving your car’s interior and exterior looking like new. From meticulous upholstery cleaning to spotless windows, every detail is handled with care with these Doorstep Car Dry Cleaning Services.
+            </p>
+            <h2 class="service-heading">3. Eco-Friendly Solutions</h2>
+            <p class="service-para">Environmental responsibility is at the heart of most Waterless Car Dry Cleaning Services. Unlike traditional car washes that consume large amounts of water, dry cleaning methods use minimal or no water. In addition to conserving water, biodegradable and non-toxic cleaning products are used, ensuring that your car and the environment are both protected. This makes it a sustainable choice for eco-conscious car owners.
+</p>
+            <h2 class="service-heading">4. Comprehensive Care for Your Car</h2>
+            <p class="service-para">Opting for a Premium Doorstep Car Wash in Dehradun or Noida doesn’t just stop at the surface. These services often include a wide range of offerings such as:
+</p>
+          <ul class="service-list">
+  <li>Deep cleaning of interiors</li>
+  <li>Upholstery shampooing</li>
+  <li>Dashboard polishing</li>
+  <li>Stain and odor removal</li>
+</ul>
+          <p class="service-para">
+  This comprehensive care extends the life of your car's components and enhances its overall appearance.
+</p>
+            <h2 class="service-heading">5. Cost-Effective in the Long Run</h2>
+            <p class="service-para">While the upfront cost of a Car Dry Cleaning Service might seem higher than a standard car wash, it provides excellent value for money. The professional cleaning reduces wear and tear on your car, saving you potential expenses on repairs and replacements. By maintaining your car in pristine condition, these Premium Car Dry Cleaning Services preserve the resale value of your vehicle, making them a wise investment.</p>
+
+
+            <h2 class="service-heading">Why Choose Carmaa’s Car Dry Cleaning Services?</h2>
+            <p class="service-para">At Carmaa, we bring you Premium Car Dry Cleaning Services tailored to your needs. With Premium Car Dry Cleaning Service in Dehradun and Car Dry Cleaning Service in Noida, we specialize in providing top-notch Doorstep Car Cleaning Services that combine convenience, quality, and sustainability.
+            </p>
+          <p class="service-para">Whether you’re looking for a quick waterless clean or an extensive detailing session, Carmaa is your trusted partner. Our Doorstep Car Dry Cleaning Services are designed to make car care stress-free, leaving you more time to focus on what matters most. </p>
+                                       
+            <h2 class="service-heading">The Future of Car Care</h2>
+            <p class="service-para">The popularity of Doorstep Car Dry Cleaning Services continues to grow as more car owners realize the benefits of professional, eco-friendly, and convenient vehicle maintenance. Services like these not only save time but also deliver superior results that are hard to achieve with DIY cleaning or traditional car washes.</p>
+           <p class="service-para">By choosing Carmaa, you’re not just opting for a car wash—you’re embracing a smarter, more sustainable way to care for your vehicle. Whether you’re in the tranquil lanes of Dehradun or the vibrant cityscape of Noida, Carmaa ensures your car always looks its best with its <a href="https://carmaacarcare.com/car-dry-cleaning-service/" target="_blank">Premium Car Dry Cleaning Services</a> .</p>
+
+           
+   <h2 class="service-heading">Conclusion</h2>
+            <p class="service-para">A Premium Doorstep Car Dry Cleaning Service is the perfect solution for busy car owners seeking quality and convenience. With advanced techniques, eco-friendly practices, and comprehensive care, your vehicle can maintain its showroom shine all year round. Choose Carmaa for a seamless car care experience in Dehradun, Noida, and beyond. Book your appointment for Doorstep Car Dry Cleaning Service today and see the difference for yourself.
+</p>
+        </div>
+        <div class="service-right-section">
+            <div class="form-container">
+                <h2>Make an enquiry</h2>
+                <hr class="underline" />
+                <form id="enquiryForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="text" id="mobile" name="mobile" required>
+                    </div>
+                    <button type="submit" id="submitBtn">Submit</button>
+                    <p id="message"></p>
+                </form>
+            </div>
+            <p
+                style="margin-top: 2rem;font-weight: 700;font-size: 1.2rem;margin-bottom: -0.5rem; padding-left: 0.5rem;">
+                Related Blogs</p>
+            <a href="../the-ultimate-doorstep-car-wash-service-provider-in-dehradun/" class="service-link-point-link">
+                <div class="services-links">
+                    <div class="service-link-point">
+                        <p class="link-name">The Ultimate Doorstep Car Wash Service Provider in Dehradun</p>
+                        <i class="fa fa-chevron-right" style="font-size:15px"></i>
+
+                    </div>
+            </a>
+
+            
+
+            <a href="../top-tips-for-exterior-and-interior-car-cleaning/" class="service-link-point-link">
+                <div class="service-link-point">
+                    <p class="link-name">Prepare Your Car for Winter - Top Tips for Exterior and Interior Cleaning</p>
+                    <i class="fa fa-chevron-right" style="font-size:15px"></i>
+
+                </div>
+            </a>
+
+
+        </div>
+
+        <div class="contact-section">
+            <h1 class="service-contact-section-heading">Contact Us</h1>
+            <div class="service-contact-section-points">
+               <img src="../../images/services/location.png" style="width: 1.5rem;height: 1.5rem;" />
+
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Address</p>
+                    <p>Tea Estate Banjarawala, Kedarpur, Dehradun</p>
+                </div>
+
+            </div>
+            <div class="service-contact-section-points">
+                <img src="../../images/services/phone-call.png" style="width: 1.5rem;height: 1.5rem;" />
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Phone</p>
+                    <a class="mobile-number-ref2" href="tel:+917042555401">
+                        <p>+91-70425 55401</p>
+                    </a>
+                </div>
+
+            </div>
+            <div class="service-contact-section-points">
+                <img src="../../images/services/mail.png" style="width: 1.5rem;height: 1.5rem;" />
+                <div class="service-contact-section-desc">
+                    <p class="service-contact-section-desc-heading">Email</p>
+                    <a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com">
+                        <p>support@carmaacarcare.com</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <div id="footer">
+        <script>
+            fetch('../../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+    </div>
+    <script>
+        const toggleSidBar = () => {
+            const sidebar = document.querySelectorAll('.center');
+            const style = window.getComputedStyle(sidebar[0])
+            const top = new WebKitCSSMatrix(style.transform).m41;
+            if (top > 0) {
+                sidebar[0].style.transform = "translateX(0%)"
+            }
+            else {
+
+                sidebar[0].style.transform = "translateX(100%)"
+            }
+        }
+        const items = document.querySelectorAll('.accordion button');
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach((item) => item.addEventListener('click', toggleAccordion));
+    </script>
+    <script type="module">
+        import { CTAApi } from '../../js/external-integration.js';
+        document.getElementById('enquiryForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const messageElement = document.getElementById('message');
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Form validation
+            if (!name || !mobile) {
+                messageElement.textContent = 'Name and Mobile number are required.';
+                messageElement.style.color = 'red';
+                return;
+            }
+
+            if (!/^\d{10}$/.test(mobile)) {
+                messageElement.textContent = 'Mobile number must be a 10-digit number.';
+                messageElement.style.color = 'red';
+                return;
+            }
+
+            // Reset message and set loading state
+            messageElement.textContent = '';
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Simulate API request
+            CTAApi({ name, mobile })
+                .then(response => {
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.disabled = false;
+                    if (response.ok) {
+                        messageElement.textContent = 'Enquiry submitted successfully!';
+                        messageElement.style.color = 'white';
+                    }
+                    else {
+                        messageElement.textContent = 'There was an error submitting your enquiry.';
+                        messageElement.style.color = 'red';
+                    }
+
+                }).catch(error => {
+                    submitBtn.textContent = 'Submit';
+                    submitBtn.disabled = false;
+                    messageElement.textContent = 'An error occurred. Please try again.';
+                    messageElement.style.color = 'red';
+                });
+        });
+    </script>
+</body>
+
+</html>
