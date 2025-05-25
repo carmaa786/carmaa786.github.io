@@ -48,6 +48,14 @@ body {
   margin-bottom: 1rem;
   font-family: var(--body-font);
 }
+
+.service-list {
+  text-align: justify;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: var(--body-font);
+  list-style: disc;
+}
 .service-para2 {
   text-align: justify;
   font-size: 1.1rem;
