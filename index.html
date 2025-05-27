@@ -1410,7 +1410,7 @@ window.addEventListener("resize", () => {
         <h2 class="before-after-sub-heading">DISCOVER</h2>
         <h1 class="before-after-heading">How Carmaa Works</h1>
     </div>
-    <div class="carmaa-timeline-container">
+   <!-- <div class="carmaa-timeline-container">
         <div class="carmaa-timeline-left">
             <div onclick="carmaaTimelineButton(0)" id="step-one" class="carmaa-timeline-points-wrapper">
                 <h1>1. Download the Carmaa App</h1>
@@ -1434,10 +1434,19 @@ window.addEventListener("resize", () => {
             </div>
         </div>
         <div class="animated-webp-container">
-            <img id="timeline-image" src="./images/app_animated_steps.webp" style="width: 100%; height: auto;" />
-        </div>
-    </div>
+            <img id="timeline-image1" src="./images/app_flow_1.jpg" class="fade-img" />
+            <img id="timeline-image2" src="./images/app_flow_2.jpg" class="fade-img" />
+            <img id="timeline-image3" src="./images/app_flow_3.jpg" class="fade-img" />
+            <img id="timeline-image4" src="./images/app_flow_4.jpg" class="fade-img" />
+          </div>
+    </div> -->
 
+    <div class="fade-slider">
+        <img class="fade-slide active" src="img1.jpg" />
+        <img class="fade-slide" src="img2.jpg" />
+        <img class="fade-slide" src="img3.jpg" />
+        <!-- Add as many as needed -->
+      </div>
     </div>
 </section>
 
@@ -2823,54 +2832,58 @@ document.addEventListener("DOMContentLoaded", function () {
       
       </script>
  <script>
-    let selectedOverview = 0;
-    let intervalId;
-    const steps = document.querySelectorAll('.carmaa-timeline-points-wrapper');
-    const images = [
-        "./images/app_flow_1.jpg",
-        "./images/app_flow_2.jpg",
-        "./images/app_flow_3.jpg",
-        "./images/app_flow_4.jpg"
-    ];
-    const timelineImage = document.getElementById("timeline-image");
+   let selectedOverview = 0;
+let intervalId;
+const steps = document.querySelectorAll('.carmaa-timeline-points-wrapper');
+const images = [
+    "./images/app_flow_1.jpg",
+    "./images/app_flow_2.jpg",
+    "./images/app_flow_3.jpg",
+    "./images/app_flow_4.jpg"
+];
+const timelineImageElements = document.querySelectorAll('.animated-webp-container img');
 
-    function carmaaTimelineButton(index) {
-        steps.forEach((step, i) => {
-            const bottomLine = step.querySelector('.bottom-line');
-            if (i === index) {
-                step.classList.add('carmaa-timeline-active');
-                bottomLine.classList.add('bottom-line-animation');
-                timelineImage.src = images[index];
-            } else {
-                step.classList.remove('carmaa-timeline-active');
-                bottomLine.classList.remove('bottom-line-animation');
-            }
-        });
-        selectedOverview = index;
-      resetInterval();
-    }
+function carmaaTimelineButton(index) {
+    steps.forEach((step, i) => {
+        const bottomLine = step.querySelector('.bottom-line');
+        if (i === index) {
+            step.classList.add('carmaa-timeline-active');
+            bottomLine.classList.add('bottom-line-animation');
+        } else {
+            step.classList.remove('carmaa-timeline-active');
+            bottomLine.classList.remove('bottom-line-animation');
+        }
+    });
 
-    // Auto-toggle every 5 seconds
-function resetInterval() {
-    clearInterval(intervalId); // Clear the current interval
-    intervalId = setInterval(() => {
-        selectedOverview = (selectedOverview + 1) % steps.length;
-        carmaaTimelineButton(selectedOverview);
-    }, 10000); // Restart interval from 5 seconds
+    timelineImageElements.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+
+    selectedOverview = index;
+    resetInterval();
 }
+
+function resetInterval() {
+    clearInterval(intervalId);
+    intervalId = setInterval(() => {
+        selectedOverview = (selectedOverview + 1) % images.length;
+        carmaaTimelineButton(selectedOverview);
+    }, 10000);
+}
+
 const carmaaSection = document.querySelector('.carmaa-timeline-section');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            carmaaTimelineButton(selectedOverview); // Start the animation
-            resetInterval(); // Start the interval
-            observer.unobserve(carmaaSection); // Unobserve after initial load
+            carmaaTimelineButton(selectedOverview);
+            resetInterval();
+            observer.unobserve(carmaaSection);
         }
     });
-}, { threshold: 0.5 }); // Adjust threshold as needed
+}, { threshold: 0.5 });
 
-// Start observing the section
 observer.observe(carmaaSection);
+
 </script>
       
 
