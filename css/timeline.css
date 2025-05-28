@@ -24,97 +24,65 @@
   border-radius: 10px;
 }
 
-/* .animated-webp-container {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-} */
-
-/* .animated-webp-container {
-  position: relative;
-  width: 600px;
+.swiper {
+  width: 50%;
+  /* max-width: 800px;  */
   height: 100vh;
-  margin: auto;
-  overflow: hidden;
+  margin: 0 auto; /* center horizontally */
+  /* background-color: red; */
 }
 
-.animated-webp-container img {
-  position: absolute;
+.swiper-wrapper {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: fadeAnimation 9s infinite;
+  background-color: red;
 }
-
-.timeline-image1 {
-  animation-delay: 0s;
-}
-
-.timeline-image2 {
-  animation-delay: 3s;
-}
-
-.timeline-image3 {
-  animation-delay: 6s;
-}
-
-/* Fade keyframes */
-/* @keyframes fadeAnimation {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-} */ */
-
-
-
-.animated-webp-container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    animation: fadeAnimation 9s infinite;
-  }
-
-.animated-webp-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   
-  .fade-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .swiper-slide {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 200px) {
+  .swiper {
+    width: 90%;
+    height: auto;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 0;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
-  
-  .fade-img.active {
-    opacity: 1;
-    z-index: 1;
+  .swiper-slide img {
+    width: 100%;
+    height: auto; /* Keep aspect ratio */
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
   }
+}
 
 .carmaa-timeline-left {
   width: 100%;
