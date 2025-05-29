@@ -53,6 +53,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
 <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
@@ -1410,7 +1411,7 @@ window.addEventListener("resize", () => {
         <h2 class="before-after-sub-heading">DISCOVER</h2>
         <h1 class="before-after-heading">How Carmaa Works</h1>
     </div>
-    <div class="carmaa-timeline-container">
+   <div class="carmaa-timeline-container">
         <div class="carmaa-timeline-left">
             <div onclick="carmaaTimelineButton(0)" id="step-one" class="carmaa-timeline-points-wrapper">
                 <h1>1. Download the Carmaa App</h1>
@@ -1433,15 +1434,49 @@ window.addEventListener("resize", () => {
                 <div class="bottom-line"></div>
             </div>
         </div>
-        <div class="animated-webp-container">
-            <img id="timeline-image" src="./images/app_animated_steps.webp" style="width: 100%; height: auto;" />
-        </div>
-    </div>
 
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/app/app1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/app/app2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/app/app3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/app/app4.jpg" />
+              </div>
+            </div>
+          </div>
+    </div>     
     </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+<script>
+    new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 1, // Center slide
+      loop: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+      },
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+    });
+  </script>
 
 
      <script src="https://unpkg.com/ityped@0.0.10"></script>
@@ -2823,55 +2858,61 @@ document.addEventListener("DOMContentLoaded", function () {
       
       </script>
  <script>
-    let selectedOverview = 0;
-    let intervalId;
-    const steps = document.querySelectorAll('.carmaa-timeline-points-wrapper');
-    const images = [
-        "./images/app_flow_1.jpg",
-        "./images/app_flow_2.jpg",
-        "./images/app_flow_3.jpg",
-        "./images/app_flow_4.jpg"
-    ];
-    const timelineImage = document.getElementById("timeline-image");
+   let selectedOverview = 0;
+let intervalId;
+const steps = document.querySelectorAll('.carmaa-timeline-points-wrapper');
+const images = [
+    "./images/app/app1.jpg",
+    "./images/app/app2.jpg",
+    "./images/app/app3.jpg",
+    "./images/app/app4.jpg"
+];
+const timelineImageElements = document.querySelectorAll('.animated-webp-container img');
 
-    function carmaaTimelineButton(index) {
-        steps.forEach((step, i) => {
-            const bottomLine = step.querySelector('.bottom-line');
-            if (i === index) {
-                step.classList.add('carmaa-timeline-active');
-                bottomLine.classList.add('bottom-line-animation');
-                timelineImage.src = images[index];
-            } else {
-                step.classList.remove('carmaa-timeline-active');
-                bottomLine.classList.remove('bottom-line-animation');
-            }
-        });
-        selectedOverview = index;
-      resetInterval();
-    }
+function carmaaTimelineButton(index) {
+    steps.forEach((step, i) => {
+        const bottomLine = step.querySelector('.bottom-line');
+        if (i === index) {
+            step.classList.add('carmaa-timeline-active');
+            bottomLine.classList.add('bottom-line-animation');
+        } else {
+            step.classList.remove('carmaa-timeline-active');
+            bottomLine.classList.remove('bottom-line-animation');
+        }
+    });
 
-    // Auto-toggle every 5 seconds
-function resetInterval() {
-    clearInterval(intervalId); // Clear the current interval
-    intervalId = setInterval(() => {
-        selectedOverview = (selectedOverview + 1) % steps.length;
-        carmaaTimelineButton(selectedOverview);
-    }, 10000); // Restart interval from 5 seconds
+    timelineImageElements.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+
+    selectedOverview = index;
+    resetInterval();
 }
+
+function resetInterval() {
+    clearInterval(intervalId);
+    intervalId = setInterval(() => {
+        selectedOverview = (selectedOverview + 1) % images.length;
+        carmaaTimelineButton(selectedOverview);
+    }, 10000);
+}
+
 const carmaaSection = document.querySelector('.carmaa-timeline-section');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            carmaaTimelineButton(selectedOverview); // Start the animation
-            resetInterval(); // Start the interval
-            observer.unobserve(carmaaSection); // Unobserve after initial load
+            carmaaTimelineButton(selectedOverview);
+            resetInterval();
+            observer.unobserve(carmaaSection);
         }
     });
-}, { threshold: 0.5 }); // Adjust threshold as needed
+}, { threshold: 0.5 });
 
-// Start observing the section
 observer.observe(carmaaSection);
+
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
       
 
 </body>
