@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #01628f;
+  --primary-color: #0b4c9d;;
   --font: "Bai Jamjuree", sans-serif;
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
@@ -27,7 +27,7 @@
 .swiper {
   width: 50%;
   /* max-width: 800px;  */
-  height: 100vh;
+  height: 75vh;
   margin: 0 auto; /* center horizontally */
   /* background-color: red; */
 }
@@ -35,7 +35,6 @@
 .swiper-wrapper {
   width: 100%;
   height: 100%;
-  background-color: red;
 }
 .swiper-slide {
   display: flex;
@@ -43,8 +42,7 @@
   align-items: center;
   margin: auto;
   width: 100%;
-  height: 100%;
-  
+  height: 100%;  
 }
 
 .swiper-slide img {

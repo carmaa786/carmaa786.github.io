@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #01628f;
+  --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
@@ -977,94 +977,91 @@
   }
 }
 
+.tbi-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  padding-bottom: 116px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 
-   .tbi-section {
-        background-color: #ffffff;
-        padding: 60px 20px;
-        padding-bottom: 116px;
-        padding-left: 5rem;
-        padding-right: 5rem;
-      }
+.tbi-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-inline: 20px;
+  flex-direction: column;
+}
 
-      .tbi-container {
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding-inline: 20px;
-        flex-direction: column;
-      }
+.tbi-image {
+  width: 6rem;
+}
 
-      .tbi-image {
-        width: 6rem;
-      }
+.tbi-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-      .tbi-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
+.tbi-content {
+  flex: 1 1 50%;
+}
 
-      .tbi-content {
-        flex: 1 1 50%;
-      }
+.tbi-content h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 15px;
+}
 
-      .tbi-content h2 {
-        font-size: 28px;
-        color: #333333;
-        margin-bottom: 15px;
-      }
+.tbi-content p {
+  font-size: 17px;
+  font-family: var(--body-font);
+  line-height: 1.6;
+  text-align: justify;
+}
 
-      .tbi-content p {
-        font-size: 17px;
-        font-family: var(--body-font);
-        line-height: 1.6;
-        text-align: justify;
-      }
+.tbi-img-content-container {
+  display: inline;
+}
 
-       .tbi-img-content-container {
-          display: inline;
-        }
-    
+.our-journey-heading {
+  color: #0e111b;
+  font-family: var(--font);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1.2em;
+}
 
-      .our-journey-heading {
-        color: #0e111b;
-        font-family: var(--font);
-        font-size: 2rem;
-        font-weight: 700;
-        text-transform: none;
-        text-decoration: none;
-        line-height: 1.2em;
-      }
+.tbi-container h2 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  padding-top: 10px;
+}
 
-      .tbi-container h2 {
-        color: var(--primary-color);
-        font-size: 1.3rem;
-        padding-top: 10px;
-      }
+@media (max-width: 768px) and (min-width: 0px) {
+  .tbi-container {
+    flex-direction: column;
+  }
 
-        @media (max-width: 768px) and (min-width: 0px) {
-        .tbi-container {
-          flex-direction: column;
-        }
+  .tbi-section {
+    padding-inline: 1rem;
+  }
+  .tbi-image img {
+    display: none;
+  }
+}
 
-        .tbi-section {
-          padding-inline: 1rem;
-        }
-        .tbi-image img {
-          display: none;
-        }
-       
-      }
-
-      @media screen and (min-width: 768px) {
-        .tbi-img-content-container {
-          display: flex;
-          align-items: center;
-          gap: 5%;
-        }
-        .tbi-container{
-          padding-inline: 40px;
-        }
-      }
+@media screen and (min-width: 768px) {
+  .tbi-img-content-container {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+  .tbi-container {
+    padding-inline: 40px;
+  }
+}
