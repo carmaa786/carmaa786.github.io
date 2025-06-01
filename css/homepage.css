@@ -1162,6 +1162,20 @@
     filter: brightness(0.9); /* Slightly dimmed for a polished look */
     transition: transform 0.3s, filter 0.3s; /* Smooth animation */
   }
+
+  @media (max-width: 600px) and (min-width: 10px) {
+    .video-section {
+      width: 78%;
+      height: 26vh;
+    }
+  }
+
+  @media (max-width: 900px) and (min-width: 600px) {
+    .video-section {
+      width: 51%;
+      height: 49vh;
+    }
+  }
   .home-video-desc {
     text-align: justify;
 

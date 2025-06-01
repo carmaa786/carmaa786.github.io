@@ -882,8 +882,7 @@
   }
   .aboutus-cta-right .call-container button {
     color: white;
-
-    font-size: 20px;
+    font-size: 0.85rem;
     letter-spacing: 2px;
     padding: 18px 32px;
     border: none;
