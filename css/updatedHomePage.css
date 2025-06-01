@@ -29,10 +29,10 @@
 
 .car-services-container {
   width: 94%;
-  padding: 24px 24px 32px;
+  padding: 22px 10px 24px;
   border-radius: 10px;
   border: 1px solid lightgrey;
-  height: 45vh;
+  height: calc(45px * 6); /* 6 visible boxes */
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -55,7 +55,7 @@
 .service-box {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  gap: 10px;
   background: rgba(245, 245, 245, 1);
   padding: 10px;
   border-radius: 8px;
@@ -63,14 +63,26 @@
   transition: 0.3s;
   color: #000;
   margin-bottom: 10px;
+  padding: 2px;
+  height: 60px;
 }
 .service-box:hover {
   background: #e0e0e0;
 }
+
+.car-care-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
 .service-box img {
-  width: 40px;
-  height: 35px;
-  margin-right: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* margin-right: 8px; */
 }
 .button {
   display: block;
@@ -151,7 +163,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff; /* White text color */
-  background-color: #0c4c9d; /* Background color */
+  background-color: #0b4c9d; /* Background color */
   font-size: 18px;
   gap: 10px;
   border: none; /* No border */
@@ -188,9 +200,11 @@
 .download-btn img {
   border-radius: 8px;
   display: block; /* Ensures no extra spacing below the image */
+  transition: transform 0.5s ease-in-out;
 }
-.download-btn:hover {
+.download-btn img:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 .review-image {
   height: 100%;
@@ -258,6 +272,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  padding-left: 1rem;
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
@@ -314,9 +329,9 @@
     flex: 0 54%;
   }
 
-  .service-box {
+  /* .service-box {
     padding: 10px 2px;
-  }
+  } */
   .rating-container {
     width: 13rem;
   }
@@ -329,10 +344,10 @@
   .homepage-left-services-container {
     flex: 0 54%;
   }
-
+  /* 
   .service-box {
     padding: 10px 2px;
-  }
+  } */
   .rating-container {
     width: 13rem;
   }
@@ -345,9 +360,9 @@
   .homepage-left-services-container {
     flex: 0 47%;
   }
-  .service-box {
+  /* .service-box {
     padding: 10px 2px;
-  }
+  } */
   .rating-container {
     width: 11rem;
   }
@@ -379,6 +394,9 @@
   .right {
     padding-right: 11px;
   }
+  .service-box {
+    gap: 4px;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -386,9 +404,9 @@
     align-items: start;
     padding-left: 5px;
   }
-  .car-services-container {
+  /* .car-services-container {
     height: 20vh;
-  }
+  } */
   .rating-container {
     padding: 0.45rem 1.5rem;
   }
@@ -397,6 +415,7 @@
 @media (max-width: 900px) and (min-width: 10px) {
   .rating-customer-container {
     flex-direction: column;
+    width: 100%;
   }
   .rating-container {
     width: 13rem;
@@ -466,7 +485,7 @@
 
 .see-all-btn button {
   padding: 5px 10px;
-  background-color: #0c4c9d;
+  background-color: #0b4c9d;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -616,6 +635,7 @@
   justify-content: center;
   color: black;
 }
+
 @media (max-width: 400px) and (min-width: 10px) {
   .sofa-cleaning-container {
     width: 9rem;
@@ -683,9 +703,15 @@
     padding-top: 15px;
   }
 
-  .car-services-container {
+  /* .car-services-container {
     height: 26vh;
-  }
+  } */
+}
+
+@media (max-width: 400px) {
+  /* .car-services-container {
+    height: 39vh;
+  } */
 }
 
 .pb {
@@ -728,14 +754,14 @@
 @media (max-width: 900px) and (min-width: 0px) {
   .see-all-btn button {
     padding: 5px 10px;
-    background-color: #0c4c9d;
+    background-color: #0b4c9d;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     font-size: 12px;
     transition: background-color 0.3s ease-in-out;
   }
-  */ .homepage-services {
+  .homepage-services {
     width: 46%;
   }
   .service-box img {
@@ -772,7 +798,7 @@
 
   .car-services-container {
     width: 96%;
-    height: 36vh;
+    /* height: 36vh; */
   }
 }
 

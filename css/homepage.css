@@ -1,11 +1,8 @@
 :root {
-  --primary-color: #01628f;
+  --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
-}
-
-.topbar-section {
 }
 
 .content {
@@ -54,7 +51,7 @@
   font-family: var(--font) !important;
 }
 .nav-item-list:hover {
-  color:#28b097 !important;
+  color: #28b097 !important;
 }
 .contact-us-nav {
   color: white !important;
@@ -642,31 +639,21 @@
 .modal-form button:hover {
   transform: scale(0.95);
 }
-.counter-section-container{
+.counter-section-container {
   display: block;
 }
 
-@media (max-width: 900px) and (min-width: 10px){
-    .benefits-section{
+@media (max-width: 900px) and (min-width: 10px) {
+  .benefits-section {
     display: none;
   }
-  .counter-section-container{
+  .counter-section-container {
     display: none;
   }
 }
 
 @media screen and (min-width: 900px) {
-  /* .benefits-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 4rem 4rem;
-    width: 80%;
-    margin: 0px auto; */
-
-
-      .benefits-section {
+  .benefits-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -675,11 +662,8 @@
     padding: 1rem 1rem;
     width: 85%;
     margin: 0px auto;
-  /* } */
   }
 }
-
-
 
 .benefit-left {
   width: 40%;
@@ -940,6 +924,18 @@
   height: 100%;
   position: relative;
 }
+.car-care-container img {
+  aspect-ratio: 1 / 1;
+}
+.home-service-para {
+  font-size: 12px;
+}
+.dropdown-para {
+  font-size: 12px;
+}
+.rating-star {
+  color: #fcd165;
+}
 @media screen and (min-width: 300px) {
   .more-text {
     min-height: 0;
@@ -1145,7 +1141,9 @@
     margin: 0px auto;
   }
   .video-section {
-    width: 90%;
+    width: 51%;
+    height: 49vh;
+    /* width: 90%; */
     margin: 2rem auto;
     display: flex;
     align-items: center;
@@ -1163,6 +1161,20 @@
     border-radius: 10px;
     filter: brightness(0.9); /* Slightly dimmed for a polished look */
     transition: transform 0.3s, filter 0.3s; /* Smooth animation */
+  }
+
+  @media (max-width: 600px) and (min-width: 10px) {
+    .video-section {
+      width: 78%;
+      height: 26vh;
+    }
+  }
+
+  @media (max-width: 900px) and (min-width: 600px) {
+    .video-section {
+      width: 51%;
+      height: 49vh;
+    }
   }
   .home-video-desc {
     text-align: justify;
@@ -1346,7 +1358,6 @@
   .modal-form button:hover {
     transform: scale(0.95);
   }
-
 
   .benefit-right {
     position: relative;
@@ -1886,7 +1897,8 @@
     height: 3.5rem;
   }
   .video-section {
-    width: 40%;
+    width: 440px;
+    height: 270px;
     margin: 4rem auto;
     display: flex;
     align-items: center;
@@ -1897,10 +1909,9 @@
     border-radius: 10px;
     overflow: hidden; /* Round corners for video */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Elevation effect */
-    height: 300px;
   }
   video {
-    width: 100%;
+    width: 80%;
 
     border-radius: 10px;
     filter: brightness(0.9); /* Slightly dimmed for a polished look */
