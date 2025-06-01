@@ -502,8 +502,8 @@
 
 .carousel-container {
   position: relative;
-  max-width: 1440px;
-  padding-inline: 20px;
+  /* max-width: 1440px; */
+  /* padding-inline: 20px; */
   overflow: hidden;
 }
 
@@ -674,11 +674,11 @@
 
 @media (min-width: 1024px) {
   .card {
-    flex: 0 0 32%;
+    flex: 0 0 33%;
   }
 
   .carousel-container {
-    padding-inline: 10px;
+    /* padding-inline: 10px; */
   }
 
   .carousal-right-btn,
