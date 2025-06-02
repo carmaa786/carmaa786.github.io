@@ -974,8 +974,8 @@
   }
 
   .parallex-cta-inner {
-    width: 70%;
-    max-width: 1200px;
+    width: 85%;
+    /* max-width: 1200px; */
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -1141,9 +1141,11 @@
     margin: 0px auto;
   }
   .video-section {
+    display: none;
+  }
+  /* .video-section {
     width: 51%;
     height: 49vh;
-    /* width: 90%; */
     margin: 2rem auto;
     display: flex;
     align-items: center;
@@ -1152,9 +1154,9 @@
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     border-radius: 10px;
-    overflow: hidden; /* Round corners for video */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Elevation effect */
-  }
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+  } */
   video {
     width: 100%;
 
@@ -1441,7 +1443,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 4%;
   }
   .counter-section-element {
     display: flex;
@@ -1496,6 +1498,11 @@
   }
   .testimonial-section {
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
   }
   .accordian-item {
     padding-left: 1rem !important;
@@ -1688,8 +1695,8 @@
   }
 
   .parallex-cta-inner {
-    width: 70%;
-    max-width: 1200px;
+    width: 85%;
+    /* max-width: 1200px; */
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -1897,6 +1904,7 @@
     height: 3.5rem;
   }
   .video-section {
+    display: none;
     width: 440px;
     height: 270px;
     margin: 4rem auto;
@@ -1907,8 +1915,14 @@
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     border-radius: 10px;
-    overflow: hidden; /* Round corners for video */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Elevation effect */
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 600px) and (min-width: 10px) {
+    .video-section {
+      display: block;
+    }
   }
   video {
     width: 80%;

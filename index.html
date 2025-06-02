@@ -1396,23 +1396,18 @@ window.addEventListener("resize", () => {
             </div>
             <div class="video-description">
                 <div class="video-description-img">
-                    <!-- <img class="car-img"src="./images/home-page/benefits/video-car.jpg"/> -->
-                    <!-- <div  class="play-button youtube-video-btn"> -->
-                        <!-- <img src="./images/home-page/benefits/play.png"/> -->
-
                         <iframe 
                         style="height: 100%; width: 100%;" 
                         frameborder="0" 
-                        src="https://www.youtube.com/embed/a7YL-k7HC3E?autoplay=1&mute=1" 
+                        src="https://www.youtube.com/embed/Q8WhEqMAUuc?autoplay=1&mute=1&loop=1&playlist=Q8WhEqMAUuc&rel=0" 
                         allow="autoplay; encrypted-media" 
                         allowfullscreen>
                         </iframe>
-                    <!-- </div> -->
+                    </div>
                 </div>
-               
                </div>
             </div>
-</div>
+        </div>
 
     </section>
 
@@ -1548,9 +1543,17 @@ window.addEventListener("resize", () => {
 
 .google-review, .video-section, #download-rating-container {
     flex: 1; /* Makes all divs take equal space */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: none;
+}
+
+@media (max-width: 600px) and (min-width: 10px) {
+.video-section{
+        display: block;
+    }
+    
 }
 
 .video-section iframe {
@@ -1585,7 +1588,7 @@ window.addEventListener("resize", () => {
         </iframe>
     </div>
 
-<div class="pdInline">
+<div style="width: 85%">
 
         <div class="testimonial-slider-2" style="--numItems:10">
             <div class="testimonial-track-2" >
@@ -2190,7 +2193,7 @@ scroller.addEventListener('mouseleave', startAutoScroll);
             <h2 class="testimonial-sub-heading">FREQUENTLY ASKED QUESTIONS</h2>
             <h1 class="faq-heading">Get Your Questions Answered</h1>
         </div>
-            <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
+            <div class="accordion" style="margin: 50px auto; width: 85%; margin: 50px auto;">
                 <div class="accordion-item">
                     <button id="accordion-button-1" aria-expanded="false">
                         <span class="accordion-title">What is a waterless car wash?
