@@ -2304,7 +2304,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    z-index: 100;
+    /* z-index: 100; */
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
