@@ -2308,13 +2308,9 @@ window.addEventListener("resize", () => {
           
             <div class="modal-wrapper2">
                 <img id="close-btn2" src="./images/home-page/modal/close.png" alt="waterless car wash" loading="lazy"/>
-              
                 <iframe  src="https://www.youtube.com/embed/R5GJ-2gvEIw?si=WKll75rDHoQ9A2By" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-           
             </div>
-
         </section>
-
     </div> 
 
 
@@ -2327,12 +2323,8 @@ window.addEventListener("resize", () => {
                 <div class="success-img-container">
                     <img src="/images/success.jpg" alt="Thank you" loading="lazy">
                 </div>
-    
-        
                 <h2>Thank You</h2>
-        
                 <p>Your appointment has been successfully submitted.</p>
-        
                 <div class="visit-app-container">
                     <h3>Visit our app</h3>
                     <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
@@ -2343,9 +2335,7 @@ window.addEventListener("resize", () => {
                         </div>
                     </a>
                 </div>
-        
             </div>
-        
         </div>
     </div>
 
@@ -2363,7 +2353,7 @@ window.addEventListener("resize", () => {
            modal.style.display = "none";
            modal.classList.remove("modal-animated-thank-you");
        });
-       </script>
+    </script>
 
 
 
@@ -2422,9 +2412,6 @@ window.addEventListener("resize", () => {
         </script>
         
     </div>
-
-
-
 
 
     <script>
@@ -2547,8 +2534,6 @@ document.addEventListener("DOMContentLoaded", function () {
      <script type="module">
          import { CTAApi } from './js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
-            thankYou();
-
           event.preventDefault();
           
           // Get input values
@@ -2625,9 +2610,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   if (response.status === 200) {
                       // Display success message
                     //   document.getElementById('successMessage').textContent = 'Appointment successfully made!';
-                    //   thankYou();
-
-                      
+                      thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
