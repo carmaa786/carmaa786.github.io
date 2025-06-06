@@ -2193,6 +2193,7 @@ window.addEventListener("resize", () => {
         });
     </script>
 
+
     <div id="parent-div">
         <section class="modal-container" id="booking-modal">
             <div class="modal-wrapper">
@@ -2220,15 +2221,6 @@ window.addEventListener("resize", () => {
                                     </div>
                                 </div>
                             </a>
-                            <!-- <div class="contact">
-                                <div class="img-wrapper2">
-                                    <img src="./images/home-page/modal/icon-clock.png" alt="waterless car wash" loading="lazy"/>
-                                </div>
-                                <div class="details">
-                                    <h2>Opening Hours</h2>
-                                    <p>Sat-Thurs: 09.00am-06.00pm</p>
-                                </div>
-                            </div> -->
                         </div>
                    
 
@@ -2316,14 +2308,54 @@ window.addEventListener("resize", () => {
           
             <div class="modal-wrapper2">
                 <img id="close-btn2" src="./images/home-page/modal/close.png" alt="waterless car wash" loading="lazy"/>
-              
                 <iframe  src="https://www.youtube.com/embed/R5GJ-2gvEIw?si=WKll75rDHoQ9A2By" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-           
             </div>
-
         </section>
-
     </div> 
+
+
+    <div class="animated-thank-you-modal" id="thankYouModal">
+        <div class="thankyou-opacity-container">
+            <div class="thank-you-page-container">
+                <div class="cancel-icon" id="cancel-icon" onclick="cancelThankYouModal()">
+                    <img id="close-btn" src="./images/home-page/modal/cancel.png" alt="waterless car wash" loading="lazy"/>
+                </div>
+                <div class="success-img-container">
+                    <img src="/images/success.jpg" alt="Thank you" loading="lazy">
+                </div>
+                <h2>Thank You</h2>
+                <p>Your appointment has been successfully submitted.</p>
+                <div class="visit-app-container">
+                    <h3>Visit our app</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
+                        <div class="modal-download-container">
+                            <div class="download-btn btn-download">
+                            <img src="./images/ui_change_images/play_store.png" alt="Play Store Download" loading="lazy">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function thankYou() {
+           const modal = document.getElementById("thankYouModal");
+           modal.style.display = "flex"; // Ensure modal is visible
+           modal.classList.add("modal-animated-thank-you");
+       }
+       
+       // Close thank you modal
+       document.getElementById("cancel-icon").addEventListener("click", function () {
+           const modal = document.getElementById("thankYouModal");
+           modal.style.display = "none";
+           modal.classList.remove("modal-animated-thank-you");
+       });
+    </script>
+
+
 
 
 
@@ -2380,9 +2412,6 @@ window.addEventListener("resize", () => {
         </script>
         
     </div>
-
-
-
 
 
     <script>
@@ -2515,6 +2544,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const address = document.getElementById('addressInput').value.trim();
           const city = document.getElementById('cityInput').value.trim();
           let isValid = true;
+
           
           // Clear previous error messages
           document.getElementById('nameError').textContent = '';
@@ -2522,6 +2552,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById('addressError').textContent = '';
           document.getElementById('cityError').textContent = '';
           const nameRegex = /^[A-Za-z\s]+$/;
+
           
           // Validate Name
           if (name === '') {
@@ -2571,13 +2602,15 @@ document.addEventListener("DOMContentLoaded", function () {
               contactButton.disabled = true;
               buttonText.style.display = "none";
               buttonLoader.style.display = "inline-block";
+
       
               // Send data to API using fetch
               CTAApi(data)
               .then(response => {
                   if (response.status === 200) {
                       // Display success message
-                      document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                    //   document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                      thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
@@ -2604,7 +2637,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   buttonLoader.style.display = "none";
               });
           }
-      });
+      }
+    
+    );
       
       </script>
  <script>
