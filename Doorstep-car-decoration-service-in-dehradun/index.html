@@ -498,6 +498,67 @@ Fortifying service and expertise in doorstep car decor for weddings, doorstep br
       <!-- Load reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <div class="animated-thank-you-modal" id="thankYouModal">
+        <div class="thankyou-opacity-container">
+          <div class="thank-you-page-container">
+            <div
+              class="cancel-icon"
+              id="cancel-icon"
+              onclick="cancelThankYouModal()"
+            >
+              <img
+                id="close-btn"
+                src="/images/home-page/modal/cancel.png"
+                alt="waterless car wash"
+                loading="lazy"
+              />
+            </div>
+            <div class="success-img-container">
+              <img src="/images/success.jpg" alt="Thank you" loading="lazy" />
+            </div>
+            <h2>Thank You</h2>
+            <p>Your appointment has been successfully submitted.</p>
+            <div class="visit-app-container">
+              <h3>Visit our app</h3>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                target="_blank"
+              >
+                <div class="modal-download-container">
+                  <div class="btn-download">
+                    <img
+                      src="/images/ui_change_images/play_store.png"
+                      alt="Play Store Download"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        function thankYou() {
+          const modal = document.getElementById("thankYouModal");
+          modal.style.display = "flex"; // Ensure modal is visible
+          modal.classList.add("modal-animated-thank-you");
+        }
+  
+        // Close thank you modal
+        document
+          .getElementById("cancel-icon")
+          .addEventListener("click", function () {
+            const modal = document.getElementById("thankYouModal");
+            modal.style.display = "none";
+            modal.classList.remove("modal-animated-thank-you");
+          });
+      </script>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -587,7 +648,8 @@ Fortifying service and expertise in doorstep car decor for weddings, doorstep br
               .then(response => {
                   if (response.status === 200) {
                       // Display success message
-                      document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                    //   document.getElementById('successMessage').textContent = 'Appointment successfully made!';
+                    thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';

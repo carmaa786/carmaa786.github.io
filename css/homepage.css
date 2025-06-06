@@ -1226,7 +1226,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    z-index: 100;
+    /* z-index: 100; */
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -2304,7 +2304,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    z-index: 100;
+    /* z-index: 100; */
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -2464,6 +2464,101 @@
   }
   .modal-form button:hover {
     transform: scale(0.95);
+  }
+
+  .animated-thank-you-modal {
+    position: fixed;
+    top: -100%;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .modal-animated-thank-you {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  .thankyou-opacity-container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thank-you-page-container {
+    width: 45%;
+    background: white;
+    padding: 1rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .success-img-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .success-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cancel-icon {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+  }
+
+  .thank-you-page-container h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .thank-you-page-container p {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  .visit-app-container {
+    background-color: #28b097;
+    padding: 16px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: white;
+  }
+  .modal-download-container {
+    margin-top: 1rem 16px !important;
+  }
+  .btn-download {
+    width: 200px;
+    height: 60px;
+  }
+  .btn-download img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 0rem !important;
+  }
+
+  .cancel-icon {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
   }
 
   .benefits-section {
