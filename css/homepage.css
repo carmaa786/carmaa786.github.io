@@ -2567,11 +2567,11 @@
     justify-content: center;
     gap: 60px;
     padding: 4rem 4rem;
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
   }
   .benefit-left {
-    width: 40%;
+    width: 54%;
   }
   .benefit-left h2 {
     color: var(--primary-color);
@@ -2889,7 +2889,7 @@
     justify-content: center;
     gap: 60px;
     padding: 4rem 4rem;
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
   }
   .testimonial-slider-2 {
