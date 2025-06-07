@@ -72,8 +72,11 @@
   margin-top: 1rem;
   font-family: var(--body-font);
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #424649;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-top: 0.2rem;
 }
 .benefits-cta-section {
   border-top: #bac4c9;
@@ -335,10 +338,6 @@
   margin-top: 1rem;
 }
 @media screen and (min-width: 300px) {
-  .about-us-para {
-    font-size: 1rem;
-  }
-
   .mission-section-counter .counter-desc h1 {
     font-size: 2rem;
 
@@ -550,7 +549,6 @@
     margin-top: 1rem;
     font-family: var(--body-font);
     text-align: justify;
-    font-size: 1.2rem;
     color: #424649;
   }
   .mission-section-counter {
@@ -640,7 +638,6 @@
     margin-top: 1rem;
     font-family: var(--body-font);
     text-align: justify;
-    font-size: 1.2rem;
     color: #424649;
   }
   .benefits-cta-section {
@@ -849,11 +846,12 @@
   }
   .aboutus-cta-right .desc {
     width: 80%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: var(--body-font);
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     color: #424649;
+    line-height: 1.6em;
   }
   .aboutus-cta-right-points {
     display: flex;
@@ -1015,10 +1013,13 @@
 }
 
 .tbi-content p {
-  font-size: 17px;
   font-family: var(--body-font);
   line-height: 1.6;
   text-align: justify;
+  color: #424649;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
 }
 
 .tbi-img-content-container {

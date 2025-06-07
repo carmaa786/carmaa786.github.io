@@ -91,8 +91,11 @@
 
 .car-decor-bullet-points-container p {
   font-family: "Sarabun", sans-serif;
-  font-size: 18px;
   text-align: justify;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #424649;
+  line-height: 1.6em;
 }
 @media (max-width: 900px) and (min-width: 300px) {
   .car-decor-unique-section {
@@ -891,13 +894,17 @@
     font-weight: 600;
   }
   .city-why-choose .right-desc {
-    font-size: 1.2rem;
     text-align: justify;
-    font-family: var(--body-font);
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 3rem;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    color: #424649;
+    line-height: 1.6em;
   }
 
   .our-services-section-city {
@@ -938,7 +945,7 @@
     color: var(--silver);
     text-align: justify;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .our-services-section-city-left img {
     width: 100%;
