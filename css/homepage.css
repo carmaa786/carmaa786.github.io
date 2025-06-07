@@ -647,6 +647,7 @@
 }
 .modal-form button:hover {
   transform: scale(0.95);
+  background-color: #28b097;
 }
 .counter-section-container {
   display: block;
@@ -1464,6 +1465,7 @@
   }
   .modal-form button:hover {
     transform: scale(0.95);
+    background-color: #28b097;
   }
 
   .benefit-right {
@@ -2569,6 +2571,7 @@
   }
   .modal-form button:hover {
     transform: scale(0.95);
+    background-color: #28b097;
   }
 
   .cancel-icon {

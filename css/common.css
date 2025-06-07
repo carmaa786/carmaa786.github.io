@@ -12,7 +12,7 @@
   width: 100%; /* Cover full width */
   height: 100%; /* Cover full height */
   background: white url("/images/loader.gif") no-repeat center center;
-  background-size: 200px 450px; /* optional: size of the GIF */
+  background-size: 210px 400px;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.9);
 }

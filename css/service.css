@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #0b4c9d;;
+  --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
@@ -42,14 +42,16 @@ body {
   margin-bottom: 1rem;
   font-family: var(--font);
 }
-.unorder-list-container{
+.unorder-list-container {
   padding-left: 2rem;
 }
 .service-para {
   text-align: justify;
-  font-size: 1.1rem;
   margin-bottom: 1rem;
   font-family: var(--body-font);
+  font-size: 1rem;
+  /* color: #424649; */
+  line-height: 1.6em;
 }
 
 .service-list {
@@ -80,13 +82,28 @@ body {
   font-family: var(--font);
   font-weight: 500;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.6em;
 }
 
 .link-name:hover {
   color: #28b097;
 }
-.service-right-section {
+.service-para-ul {
+  padding: 10px;
+}
+
+.service-ul-heading{
+  margin-bottom: 0px !important;
+}
+
+.service-para-ul li {
+  list-style: disc;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  margin-top: .3rem;
+  /* margin-bottom: 1.5rem; */
+  line-height: 1.6em;
 }
 .contact-section {
   margin-top: 2.5rem;
