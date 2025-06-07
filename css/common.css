@@ -4,6 +4,19 @@
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
 }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover full width */
+  height: 100%; /* Cover full height */
+  background: white url("/images/loader.gif") no-repeat center center;
+  background-size: 200px 450px; /* optional: size of the GIF */
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .mobile-number-ref {
   color: white;
   text-decoration: none;
@@ -51,7 +64,6 @@
   justify-content: center;
   border-radius: 50px;
   background-color: #01415f;
-  
 }
 /* .social-media-icons .img-wrapper:hover {
   color: #28b097 !important;
@@ -131,6 +143,12 @@
   .city-header-section .breadcrumb p {
     font-size: 0.55rem;
     font-weight: 300;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  #preloader {
+    background-size: 150px 300px; /* optional: size of the GIF */
   }
 }
 @media screen and (min-width: 600px) {

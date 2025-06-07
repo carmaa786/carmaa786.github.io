@@ -184,9 +184,9 @@
   </head>
 
   <body>
-    <div id="preloader">loading....</div>
+    <div id="preloader"></div>
 
-    <div>
+    <div id="content" style="display: none">
       <div class="topbar-section-common" id="content">
         <div class="topbar-section-container">
           <div class="social-media-icons">
@@ -869,6 +869,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      window.onload = function () {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      };
+    </script>
 
     <script>
       const services = [
