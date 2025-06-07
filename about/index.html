@@ -184,515 +184,526 @@
   </head>
 
   <body>
-    <div class="topbar-section-common">
-      <div class="topbar-section-container">
-        <div class="social-media-icons">
-          <a href="https://www.facebook.com/Carmaaofficialpage" target="_blank">
-            <div class="img-wrapper">
-              <img
-                src="../../images/contactus/facebook.png"
-                alt="facebook logo"
-                loading="lazy"
-              />
-            </div>
-          </a>
-          <a href="https://www.instagram.com/Carmaa_official" target="_blank">
-            <div class="img-wrapper">
-              <img
-                src="../../images/contactus/instagram.png"
-                alt="instargram"
-                loading="lazy"
-              />
-            </div>
-          </a>
-          <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
-            <div class="img-wrapper">
-              <img
-                src="../../images/contactus/youtube.png"
-                alt="youtube"
-                loading="lazy"
-              />
-            </div>
-          </a>
-          <a href="../../blogs/">
-            <div class="img-wrapper">
-              <img
-                src="../../images/home-page/topbar/blogger.png"
-                alt="blog"
-                loading="lazy"
-              />
-            </div>
-          </a>
-        </div>
+    <div id="preloader">loading....</div>
 
-        <p
-          id="topbar-text"
-          style="
-            color: #fff;
-            font-weight: 400;
-            font-size: 0.95rem;
-            margin: 0;
-            font-weight: 600;
-          "
-        >
-          Bring your car's showroom shine back!
-        </p>
-
-        <div style="display: flex; flex-direction: column; align-items: center">
-          <div style="display: flex; align-items: center; gap: 0.3rem">
-            <img
-              style="width: 1.5rem; height: 1.5rem"
-              src="../../images/home-page/topbar/phone.png"
-              loading="lazy"
-            />
-            <a class="mobile-number-ref" href="tel:+917042555401">
-              <p>+91 70425 55401</p>
+    <div>
+      <div class="topbar-section-common" id="content">
+        <div class="topbar-section-container">
+          <div class="social-media-icons">
+            <a
+              href="https://www.facebook.com/Carmaaofficialpage"
+              target="_blank"
+            >
+              <div class="img-wrapper">
+                <img
+                  src="../../images/contactus/facebook.png"
+                  alt="facebook logo"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/Carmaa_official" target="_blank">
+              <div class="img-wrapper">
+                <img
+                  src="../../images/contactus/instagram.png"
+                  alt="instargram"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
+              <div class="img-wrapper">
+                <img
+                  src="../../images/contactus/youtube.png"
+                  alt="youtube"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <a href="../../blogs/">
+              <div class="img-wrapper">
+                <img
+                  src="../../images/home-page/topbar/blogger.png"
+                  alt="blog"
+                  loading="lazy"
+                />
+              </div>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div id="navbar-placeholder" class="navbar-sticky-container">
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          fetch("../components/navbar.html")
-            .then((response) => response.text())
-            .then((html) => {
-              document.getElementById("navbar-placeholder").innerHTML = html;
-
-              // Reinitialize toggle functionality after loading the navbar
-              const toggle = document.getElementById("toggle");
-              const menu = document.getElementById("menu");
-
-              toggle.addEventListener("click", function () {
-                menu.classList.toggle("active");
-              });
-            })
-            .catch((error) => console.error("Error loading navbar:", error));
-        });
-      </script>
-    </div>
-
-    <header class="city-header-section header-background">
-      <p>About Carmaa</p>
-      <div class="breadcrumb">
-        <img class="" src="../common/home.png" loading="lazy" />
-        <p><a href="/" class="breadcrumb-link">Home</a></p>
-        <p>/</p>
-        <p><a href="./" class="breadcrumb-link">About Us</a></p>
-      </div>
-    </header>
-
-    <section class="about-us-section">
-      <div class="about-us-left">
-        <div class="about-us-header">
-          <h2>About Carmaa</h2>
-          <h1 style="font-size: 35px">
-            The Future of Doorstep Car Cleaning Services
-          </h1>
-        </div>
-        <p class="about-us-para">
-          At Carmaa Car Care, established in January 2024, we are committed to
-          providing hassle-free, professional car care directly to your
-          doorstep. As a trusted name in the car cleaning industry, we
-          specialize in both on-demand and daily car cleaning services, tailored
-          to meet the unique needs of our customers. With a focus on
-          eco-friendly, waterless car wash solutions and the latest technology,
-          Carmaa ensures a spotless, scratch-free finish every time, making car
-          care both convenient and environmentally conscious.
-        </p>
-        <div class="benefits-cta-section">
-          <a class="btn-href open-booking-modal"
-            ><button class="hero-section-btn2">Book Now</button></a
+          <p
+            id="topbar-text"
+            style="
+              color: #fff;
+              font-weight: 400;
+              font-size: 0.95rem;
+              margin: 0;
+              font-weight: 600;
+            "
           >
-          <div class="call-icon-wrapper">
-            <div class="call-icon">
+            Bring your car's showroom shine back!
+          </p>
+
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div style="display: flex; align-items: center; gap: 0.3rem">
               <img
-                class="fa fa-phone"
-                src="../images/home-page/benefits/phone-call.png"
+                style="width: 1.5rem; height: 1.5rem"
+                src="../../images/home-page/topbar/phone.png"
                 loading="lazy"
               />
-            </div>
-            <div>
-              <p>Call Us Anytime!</p>
-              <a class="mobile-number-ref2" href="tel:+917042555401">
-                <h2 class="benefits-mobile-number" style="font-size: 20px">
-                  +91 70425 55401
-                </h2></a
-              >
+              <a class="mobile-number-ref" href="tel:+917042555401">
+                <p>+91 70425 55401</p>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="about-us-right">
-        <img
-          class="main-img"
-          src="../images/aboutus/sub-image.jpg"
-          loading="lazy"
-        />
-        <img
-          class="element-img"
-          src="../images/aboutus/element.png"
-          loading="lazy"
-        />
-        <div class="about-us-trophy">
-          <img src="../images/aboutus/trophy.png" loading="lazy" />
-          <p>Rated 5 Stars by Thousands of Happy Customers</p>
-        </div>
-      </div>
-    </section>
 
-    <style>
-      .about-section {
-        padding: 0px 20px 60px 20px;
-        background-color: #0e111b;
-        text-align: center;
-        padding-top: 60px;
-        padding-bottom: 9rem;
-      }
+      <div id="navbar-placeholder" class="navbar-sticky-container">
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            fetch("../components/navbar.html")
+              .then((response) => response.text())
+              .then((html) => {
+                document.getElementById("navbar-placeholder").innerHTML = html;
 
-      .about-section .container {
-        max-width: 900px;
-        margin: 0 auto;
-      }
+                // Reinitialize toggle functionality after loading the navbar
+                const toggle = document.getElementById("toggle");
+                const menu = document.getElementById("menu");
 
-      .about-section p {
-        font-size: 1.2rem;
-        color: #fff;
-        line-height: 1.6;
-        margin-bottom: 30px;
-      }
-
-      .logo-container {
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-      }
-
-      .logo {
-        height: 70px;
-        object-fit: contain;
-      }
-    </style>
-
-    <section class="about-section">
-      <div class="container">
-        <p>
-          <strong>Carmaa</strong> is a registered startup recognized under the
-          <strong>Startup India initiative</strong> by the
-          <strong
-            >Department for Promotion of Industry and Internal Trade
-            (DPIIT)</strong
-          >. We are also proudly recognized under the
-          <strong>Uttarakhand Startup Policy</strong>, reflecting our commitment
-          to innovation, sustainability, and local development.
-        </p>
-
-        <div class="logo-container">
-          <div class="certificate-flex-container">
-            <img
-              src="../images/footer/dpiit-logo.png"
-              alt="DPIIT Logo"
-              class="logo"
-              loading="lazy"
-            />
-            <div class="certificate-container">
-              <img
-                class="certificate-img"
-                src="../images/aboutus/dpiit-recognition.png"
-                alt="DPIIT recognition certificate"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <!-- <hr width="100%"/> -->
-          <div class="certificate-flex-container">
-            <img
-              src="../images/footer/startupUK.webp"
-              alt="Uttarakhand Startup Logo"
-              class="logo"
-              loading="lazy"
-            />
-            <div class="certificate-container">
-              <img
-                class="certificate-img"
-                src="../images/aboutus/ukStartup_recognition.png"
-                alt="Uttarakhand recognition"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tbi-section">
-      <h2 class="our-journey-heading">Our Startup Journey with</h2>
-      <div class="tbi-container">
-        <h2>TBI, Graphic Era</h2>
-        <div class="tbi-img-content-container">
-          <div class="tbi-image">
-            <img
-              src="../images/aboutus/tbiLogo.png"
-              alt="TBI Graphic Era"
-              loading="lazy"
-            />
-          </div>
-          <div class="tbi-content">
-            <p>
-              We are proud to share that our startup is officially incubated at
-              the Technology Business Incubator (TBI), Graphic Era (Deemed to be
-              University). This partnership provides us with valuable support,
-              mentorship, and resources that are crucial to our innovation and
-              growth. Being part of TBI enables us to collaborate with a vibrant
-              ecosystem of entrepreneurs, researchers, and industry experts.
-              With access to state-of-the-art facilities and guidance from
-              experienced professionals, we are well-positioned to scale our
-              solutions and bring impactful change through technology.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mission-section-wrapper">
-      <div class="mission-section-counter">
-        <div class="counter-desc">
-          <h2 style="width: 9rem; font-size: 45px; color: white">80+</h2>
-          <p class="desc">Car Cleaned and Counting</p>
-        </div>
-        <div class="counter-desc">
-          <h2 style="width: 9rem; font-size: 45px; color: white">84K+</h2>
-          <p class="desc">Total Cars Washed</p>
-        </div>
-        <div class="counter-desc">
-          <h2 style="width: 9rem; font-size: 45px; color: white">100%</h2>
-          <p class="desc">Customer Satisfaction</p>
-        </div>
-        <div class="counter-desc">
-          <h2 style="width: 9rem; font-size: 45px; color: white">10000+</h2>
-          <p class="desc">Daily Doorstep Car Cleaning</p>
-        </div>
-      </div>
-      <div class="mission-section">
-        <div class="about-us-header">
-          <h2>Carmaa</h2>
-          <h2 class="mission-section-heading" style="font-size: 30px">
-            Our Mission, Vision, Values
-          </h2>
-        </div>
-        <div class="mission-container">
-          <div class="mission-container-element">
-            <img src="../images/aboutus/customer.png" loading="lazy" />
-            <h3>Our Values</h3>
-            <p>
-              We are guided by values of professionalism, quality, and
-              sustainability. We believe in providing services that not only
-              meet but exceed customer expectations, ensuring their vehicles
-              look their best while protecting the environment.
-            </p>
-          </div>
-
-          <div class="mission-container-element">
-            <img src="../images/aboutus/shared-vision.png" loading="lazy" />
-            <h3>Our Vission</h3>
-            <p>
-              Our vision is to become the most trusted and innovative car care
-              provider in India, known for our exceptional service and
-              environmental stewardship. We strive to set new standards in the
-              car detailing industry by combining cutting-edge techniques with a
-              focus on customer convenience and satisfaction.
-            </p>
-          </div>
-          <div class="mission-container-element">
-            <img src="../images/aboutus/mission.png" loading="lazy" />
-            <h3>Our Mission</h3>
-            <p>
-              At Carmaa, our mission is to revolutionize the car cleaning
-              industry by offering eco-friendly, convenient, and high-quality
-              car care services directly to your doorstep. We aim to make car
-              maintenance hassle-free and accessible, ensuring that every
-              customer receives personalized care for their vehicle. By
-              embracing waterless technology and sustainable practices, we are
-              committed to reducing water waste while delivering spotless
-              results.
-            </p>
-          </div>
-
-          <div class="mission-container-element">
-            <img src="../images/aboutus/light-bulb.png" loading="lazy" />
-            <h3>Inspire People to Shine</h3>
-            <p>
-              At Carmaa, we believe that a clean car is more than just an
-              aesthetic choice—it's a reflection of care, pride, and confidence.
-              Through our innovative doorstep car care services, we aim to
-              inspire people to take better care of their vehicles while making
-              eco-conscious choices. By offering waterless car washes and
-              sustainable practices, we empower our customers to maintain their
-              cars with ease.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="aboutus-cta">
-      <div class="aboutus-cta-left">
-        <img src="../images/aboutus/aboutus-bluecar.webp" loading="lazy" />
-        <div class="description-abs">
-          <article>150+ Residential Societies Served</article>
-        </div>
-      </div>
-      <div class="aboutus-cta-right">
-        <h2>Here to Help You</h2>
-        <h2 style="font-size: 40px; color: #000">
-          We’re Ready to Wash Your Cars
-        </h2>
-        <p class="desc">
-          At Carmaa, we’re always ready to provide top-notch car care whenever
-          you need it. Whether it's a quick on-demand wash or a regular daily
-          service, our team is dedicated to making your car cleaning experience
-          seamless and stress-free. With just a simple booking, we bring our
-          expert services to your doorstep, ensuring your car looks its best
-          with minimal effort from your side. Trust us to take care of your
-          vehicle while you focus on the things that matter most.
-        </p>
-        <ul>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Professional and Certified Car Washers</p>
-          </div>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Eco-Friendly, Waterless Cleaning Solutions</p>
-          </div>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Convenient Doorstep Services</p>
-          </div>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Committed to 100% Customer Satisfaction</p>
-          </div>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Specialized in Car Detailing and Interior Cleaning</p>
-          </div>
-          <div class="aboutus-cta-right-points">
-            <img
-              src="../images/home-page/benefits/checked.png"
-              loading="lazy"
-            />
-            <p>Use of Fresh, Sanitized Microfiber Cloths</p>
-          </div>
-        </ul>
-        <div class="call-container">
-          <div class="call-icon-wrapper">
-            <div class="call-icon">
-              <img
-                class="fa fa-phone"
-                src="../images/home-page/benefits/phone-call.png"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <p>Call Us Anytime!</p>
-              <a class="mobile-number-ref2" href="tel:+917042555401">
-                <p class="benefits-mobile-number">+91 70425 55401</p></a
-              >
-            </div>
-          </div>
-          <button class="open-booking-modal hero-section-btn2">Book Now</button>
-        </div>
-      </div>
-    </section>
-
-    <div id="footer">
-      <script>
-        fetch("../components/footer3.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer").innerHTML = data;
+                toggle.addEventListener("click", function () {
+                  menu.classList.toggle("active");
+                });
+              })
+              .catch((error) => console.error("Error loading navbar:", error));
           });
+        </script>
+      </div>
 
-        document.addEventListener("DOMContentLoaded", function () {
-          let presentYear = new Date().getFullYear();
-          console.log(presentYear);
-          document.getElementById("yearElement").textContent = presentYear;
-          document.getElementById("yearElement").style.fontSize = "12px";
-        });
-      </script>
-    </div>
+      <header class="city-header-section header-background">
+        <p>About Carmaa</p>
+        <div class="breadcrumb">
+          <img class="" src="../common/home.png" loading="lazy" />
+          <p><a href="/" class="breadcrumb-link">Home</a></p>
+          <p>/</p>
+          <p><a href="./" class="breadcrumb-link">About Us</a></p>
+        </div>
+      </header>
 
-    <div id="parent-div">
-      <section class="modal-container">
-        <div class="modal-wrapper">
-          <div class="image-section">
-            <div class="modal-left">
-              <h2>BOOK AN APPOINTMENT</h2>
-              <h2 style="font-size: 30px">
-                Download the App now & get 15% off
-              </h2>
-
-              <div class="contact">
-                <div class="img-wrapper">
-                  <img
-                    src="../images/home-page/modal/icon-phone.png"
-                    alt="phone"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="details">
-                  <h2 style="font-size: 20px">Call us now</h2>
-                  <p>+91 70425 55401</p>
-                </div>
+      <section class="about-us-section">
+        <div class="about-us-left">
+          <div class="about-us-header">
+            <h2>About Carmaa</h2>
+            <h1 style="font-size: 35px">
+              The Future of Doorstep Car Cleaning Services
+            </h1>
+          </div>
+          <p class="about-us-para">
+            At Carmaa Car Care, established in January 2024, we are committed to
+            providing hassle-free, professional car care directly to your
+            doorstep. As a trusted name in the car cleaning industry, we
+            specialize in both on-demand and daily car cleaning services,
+            tailored to meet the unique needs of our customers. With a focus on
+            eco-friendly, waterless car wash solutions and the latest
+            technology, Carmaa ensures a spotless, scratch-free finish every
+            time, making car care both convenient and environmentally conscious.
+          </p>
+          <div class="benefits-cta-section">
+            <a class="btn-href open-booking-modal"
+              ><button class="hero-section-btn2">Book Now</button></a
+            >
+            <div class="call-icon-wrapper">
+              <div class="call-icon">
+                <img
+                  class="fa fa-phone"
+                  src="../images/home-page/benefits/phone-call.png"
+                  loading="lazy"
+                />
               </div>
-              <style>
-                .download-modal-container {
-                  display: flex;
-                  margin-top: 2rem;
-                }
-                .download-btn img {
-                  width: 100%;
-                  max-width: 26rem;
-                  height: auto;
-                }
-              </style>
-
-              <div class="download-modal-container">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-                  target="_blank"
+              <div>
+                <p>Call Us Anytime!</p>
+                <a class="mobile-number-ref2" href="tel:+917042555401">
+                  <h2 class="benefits-mobile-number" style="font-size: 20px">
+                    +91 70425 55401
+                  </h2></a
                 >
-                  <div class="download-btn">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-us-right">
+          <img
+            class="main-img"
+            src="../images/aboutus/sub-image.jpg"
+            loading="lazy"
+          />
+          <img
+            class="element-img"
+            src="../images/aboutus/element.png"
+            loading="lazy"
+          />
+          <div class="about-us-trophy">
+            <img src="../images/aboutus/trophy.png" loading="lazy" />
+            <p>Rated 5 Stars by Thousands of Happy Customers</p>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .about-section {
+          padding: 0px 20px 60px 20px;
+          background-color: #0e111b;
+          text-align: center;
+          padding-top: 60px;
+          padding-bottom: 9rem;
+        }
+
+        .about-section .container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .about-section p {
+          font-size: 1.2rem;
+          color: #fff;
+          line-height: 1.6;
+          margin-bottom: 30px;
+        }
+
+        .logo-container {
+          display: flex;
+          /* flex-direction: column; */
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+          flex-wrap: wrap;
+        }
+
+        .logo {
+          height: 70px;
+          object-fit: contain;
+        }
+      </style>
+
+      <section class="about-section">
+        <div class="container">
+          <p>
+            <strong>Carmaa</strong> is a registered startup recognized under the
+            <strong>Startup India initiative</strong> by the
+            <strong
+              >Department for Promotion of Industry and Internal Trade
+              (DPIIT)</strong
+            >. We are also proudly recognized under the
+            <strong>Uttarakhand Startup Policy</strong>, reflecting our
+            commitment to innovation, sustainability, and local development.
+          </p>
+
+          <div class="logo-container">
+            <div class="certificate-flex-container">
+              <img
+                src="../images/footer/dpiit-logo.png"
+                alt="DPIIT Logo"
+                class="logo"
+                loading="lazy"
+              />
+              <div class="certificate-container">
+                <img
+                  class="certificate-img"
+                  src="../images/aboutus/dpiit-recognition.png"
+                  alt="DPIIT recognition certificate"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- <hr width="100%"/> -->
+            <div class="certificate-flex-container">
+              <img
+                src="../images/footer/startupUK.webp"
+                alt="Uttarakhand Startup Logo"
+                class="logo"
+                loading="lazy"
+              />
+              <div class="certificate-container">
+                <img
+                  class="certificate-img"
+                  src="../images/aboutus/ukStartup_recognition.png"
+                  alt="Uttarakhand recognition"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tbi-section">
+        <h2 class="our-journey-heading">Our Startup Journey with</h2>
+        <div class="tbi-container">
+          <h2>TBI, Graphic Era</h2>
+          <div class="tbi-img-content-container">
+            <div class="tbi-image">
+              <img
+                src="../images/aboutus/tbiLogo.png"
+                alt="TBI Graphic Era"
+                loading="lazy"
+              />
+            </div>
+            <div class="tbi-content">
+              <p>
+                We are proud to share that our startup is officially incubated
+                at the Technology Business Incubator (TBI), Graphic Era (Deemed
+                to be University). This partnership provides us with valuable
+                support, mentorship, and resources that are crucial to our
+                innovation and growth. Being part of TBI enables us to
+                collaborate with a vibrant ecosystem of entrepreneurs,
+                researchers, and industry experts. With access to
+                state-of-the-art facilities and guidance from experienced
+                professionals, we are well-positioned to scale our solutions and
+                bring impactful change through technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission-section-wrapper">
+        <div class="mission-section-counter">
+          <div class="counter-desc">
+            <h2 style="width: 9rem; font-size: 45px; color: white">80+</h2>
+            <p class="desc">Car Cleaned and Counting</p>
+          </div>
+          <div class="counter-desc">
+            <h2 style="width: 9rem; font-size: 45px; color: white">84K+</h2>
+            <p class="desc">Total Cars Washed</p>
+          </div>
+          <div class="counter-desc">
+            <h2 style="width: 9rem; font-size: 45px; color: white">100%</h2>
+            <p class="desc">Customer Satisfaction</p>
+          </div>
+          <div class="counter-desc">
+            <h2 style="width: 9rem; font-size: 45px; color: white">10000+</h2>
+            <p class="desc">Daily Doorstep Car Cleaning</p>
+          </div>
+        </div>
+        <div class="mission-section">
+          <div class="about-us-header">
+            <h2>Carmaa</h2>
+            <h2 class="mission-section-heading" style="font-size: 30px">
+              Our Mission, Vision, Values
+            </h2>
+          </div>
+          <div class="mission-container">
+            <div class="mission-container-element">
+              <img src="../images/aboutus/customer.png" loading="lazy" />
+              <h3>Our Values</h3>
+              <p>
+                We are guided by values of professionalism, quality, and
+                sustainability. We believe in providing services that not only
+                meet but exceed customer expectations, ensuring their vehicles
+                look their best while protecting the environment.
+              </p>
+            </div>
+
+            <div class="mission-container-element">
+              <img src="../images/aboutus/shared-vision.png" loading="lazy" />
+              <h3>Our Vission</h3>
+              <p>
+                Our vision is to become the most trusted and innovative car care
+                provider in India, known for our exceptional service and
+                environmental stewardship. We strive to set new standards in the
+                car detailing industry by combining cutting-edge techniques with
+                a focus on customer convenience and satisfaction.
+              </p>
+            </div>
+            <div class="mission-container-element">
+              <img src="../images/aboutus/mission.png" loading="lazy" />
+              <h3>Our Mission</h3>
+              <p>
+                At Carmaa, our mission is to revolutionize the car cleaning
+                industry by offering eco-friendly, convenient, and high-quality
+                car care services directly to your doorstep. We aim to make car
+                maintenance hassle-free and accessible, ensuring that every
+                customer receives personalized care for their vehicle. By
+                embracing waterless technology and sustainable practices, we are
+                committed to reducing water waste while delivering spotless
+                results.
+              </p>
+            </div>
+
+            <div class="mission-container-element">
+              <img src="../images/aboutus/light-bulb.png" loading="lazy" />
+              <h3>Inspire People to Shine</h3>
+              <p>
+                At Carmaa, we believe that a clean car is more than just an
+                aesthetic choice—it's a reflection of care, pride, and
+                confidence. Through our innovative doorstep car care services,
+                we aim to inspire people to take better care of their vehicles
+                while making eco-conscious choices. By offering waterless car
+                washes and sustainable practices, we empower our customers to
+                maintain their cars with ease.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutus-cta">
+        <div class="aboutus-cta-left">
+          <img src="../images/aboutus/aboutus-bluecar.webp" loading="lazy" />
+          <div class="description-abs">
+            <article>150+ Residential Societies Served</article>
+          </div>
+        </div>
+        <div class="aboutus-cta-right">
+          <h2>Here to Help You</h2>
+          <h2 style="font-size: 40px; color: #000">
+            We’re Ready to Wash Your Cars
+          </h2>
+          <p class="desc">
+            At Carmaa, we’re always ready to provide top-notch car care whenever
+            you need it. Whether it's a quick on-demand wash or a regular daily
+            service, our team is dedicated to making your car cleaning
+            experience seamless and stress-free. With just a simple booking, we
+            bring our expert services to your doorstep, ensuring your car looks
+            its best with minimal effort from your side. Trust us to take care
+            of your vehicle while you focus on the things that matter most.
+          </p>
+          <ul>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Professional and Certified Car Washers</p>
+            </div>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Eco-Friendly, Waterless Cleaning Solutions</p>
+            </div>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Convenient Doorstep Services</p>
+            </div>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Committed to 100% Customer Satisfaction</p>
+            </div>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Specialized in Car Detailing and Interior Cleaning</p>
+            </div>
+            <div class="aboutus-cta-right-points">
+              <img
+                src="../images/home-page/benefits/checked.png"
+                loading="lazy"
+              />
+              <p>Use of Fresh, Sanitized Microfiber Cloths</p>
+            </div>
+          </ul>
+          <div class="call-container">
+            <div class="call-icon-wrapper">
+              <div class="call-icon">
+                <img
+                  class="fa fa-phone"
+                  src="../images/home-page/benefits/phone-call.png"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <p>Call Us Anytime!</p>
+                <a class="mobile-number-ref2" href="tel:+917042555401">
+                  <p class="benefits-mobile-number">+91 70425 55401</p></a
+                >
+              </div>
+            </div>
+            <button class="open-booking-modal hero-section-btn2">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer">
+        <script>
+          fetch("../components/footer3.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("footer").innerHTML = data;
+            });
+
+          document.addEventListener("DOMContentLoaded", function () {
+            let presentYear = new Date().getFullYear();
+            console.log(presentYear);
+            document.getElementById("yearElement").textContent = presentYear;
+            document.getElementById("yearElement").style.fontSize = "12px";
+          });
+        </script>
+      </div>
+
+      <div id="parent-div">
+        <section class="modal-container">
+          <div class="modal-wrapper">
+            <div class="image-section">
+              <div class="modal-left">
+                <h2>BOOK AN APPOINTMENT</h2>
+                <h2 style="font-size: 30px">
+                  Download the App now & get 15% off
+                </h2>
+
+                <div class="contact">
+                  <div class="img-wrapper">
                     <img
-                      src="../images/ui_change_images/download2.jpeg"
-                      alt="Play Store Download"
+                      src="../images/home-page/modal/icon-phone.png"
+                      alt="phone"
                       loading="lazy"
                     />
                   </div>
-                </a>
-              </div>
-              <!-- <div class="contact">
+                  <div class="details">
+                    <h2 style="font-size: 20px">Call us now</h2>
+                    <p>+91 70425 55401</p>
+                  </div>
+                </div>
+                <style>
+                  .download-modal-container {
+                    display: flex;
+                    margin-top: 2rem;
+                  }
+                  .download-btn img {
+                    width: 100%;
+                    max-width: 26rem;
+                    height: auto;
+                  }
+                </style>
+
+                <div class="download-modal-container">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                    target="_blank"
+                  >
+                    <div class="download-btn">
+                      <img
+                        src="../images/ui_change_images/download2.jpeg"
+                        alt="Play Store Download"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <!-- <div class="contact">
                 <div class="img-wrapper2">
                   <img src="../images/home-page/modal/icon-clock.png" loading="lazy"/>
                 </div>
@@ -701,151 +712,159 @@
                   <p>Sat-Thurs: 09.00am-06.00pm</p>
                 </div>
               </div> -->
-            </div>
-          </div>
-          <div class="modal-form">
-            <h2 class="modal-form-heading" style="font-size: 20px">
-              Download the App now & get 15% off
-            </h2>
-            <img
-              id="close-btn"
-              src="../images/home-page/modal/cancel.png"
-              alt="cancel"
-              loading="lazy"
-            />
-            <div style="display: flex; gap: 1rem" class="input-box">
-              <div>
-                <p class="modal-form-label">Name*</p>
-                <input
-                  class="modal-input"
-                  type="text"
-                  id="nameInput"
-                  placeholder="Enter your full name"
-                />
-                <span id="nameError" class="error-message"></span>
-              </div>
-              <div>
-                <p class="modal-form-label">Phone Number*</p>
-                <input
-                  class="modal-input"
-                  type="text"
-                  id="numberInput"
-                  placeholder="Enter your number"
-                />
-                <span id="phoneError" class="error-message"></span>
               </div>
             </div>
-            <div style="display: flex; gap: 1rem" class="input-box">
-              <div>
-                <p class="modal-form-label">Address</p>
-                <input
-                  class="modal-input"
-                  type="text"
-                  id="addressInput"
-                  placeholder="Enter your  address"
-                />
-                <span id="addressError" class="error-message"></span>
-              </div>
-              <div>
-                <p class="modal-form-label">City</p>
-                <input
-                  class="modal-input"
-                  type="text"
-                  id="cityInput"
-                  placeholder="Enter your city"
-                />
-                <span id="cityError" class="error-message"></span>
-              </div>
-            </div>
-            <div>
-              <p class="modal-form-label">Query Related to</p>
-              <select class="modal-input" id="serviceSelect">
-                <option value="" disabled selected>Select a service</option>
-                <option value="interior-car-cleaning">
-                  Interior Car Cleaning
-                </option>
-                <option value="paint-protection-and-coating-services">
-                  Paint Protection And Coating Services
-                </option>
-                <option value="ceramic-coating-service">
-                  Ceramic Coating Service
-                </option>
-
-                <option value="glass-and-surface-coating-services">
-                  Glass-And-Surface-Coating-Services
-                </option>
-                <option value="full-car-detailing-service">
-                  Full Car Detailing Service
-                </option>
-
-                <option value="car-dry-cleaning">Car Dry Cleaning</option>
-                <option value="body-polish-wax">
-                  Complete Car Body Polish and Wax
-                </option>
-                <option value="full-car-wash">Full Car Wash</option>
-                <option value="deep-cleaning">Deep Cleaning</option>
-                <option value="car-decor">Car Decor</option>
-                <option value="other">Other</option>
-              </select>
-              <span id="serviceError" class="error-message"></span>
-            </div>
-            <!--Captcha Code for Auth-->
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
-            ></div>
-
-            <button style="border-radius: 10px" id="modal-booking-btn">
-              <span class="button-text">BOOK</span>
-              <span class="button-loader spinner" style="display: none"></span>
-            </button>
-            <div id="messageContainer">
-              <span id="successMessage" class="success-message"></span>
-              <span id="errorMessage" class="error-message"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- Load reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <div class="animated-thank-you-modal" id="thankYouModal">
-      <div class="thankyou-opacity-container">
-        <div class="thank-you-page-container">
-          <div
-            class="cancel-icon"
-            id="cancel-icon"
-            onclick="cancelThankYouModal()"
-          >
-            <img
-              id="close-btn"
-              src="/images/home-page/modal/cancel.png"
-              alt="waterless car wash"
-              loading="lazy"
-            />
-          </div>
-          <div class="success-img-container">
-            <img src="/images/success.jpg" alt="Thank you" loading="lazy" />
-          </div>
-          <h2>Thank You</h2>
-          <p>Your appointment has been successfully submitted.</p>
-          <div class="visit-app-container">
-            <h3>Visit our app</h3>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-              target="_blank"
-            >
-              <div class="modal-download-container">
-                <div class="btn-download">
-                  <img
-                    src="/images/ui_change_images/play_store.png"
-                    alt="Play Store Download"
-                    loading="lazy"
+            <div class="modal-form">
+              <h2 class="modal-form-heading" style="font-size: 20px">
+                Download the App now & get 15% off
+              </h2>
+              <img
+                id="close-btn"
+                src="../images/home-page/modal/cancel.png"
+                alt="cancel"
+                loading="lazy"
+              />
+              <div style="display: flex; gap: 1rem" class="input-box">
+                <div>
+                  <p class="modal-form-label">Name*</p>
+                  <input
+                    class="modal-input"
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your full name"
                   />
+                  <span id="nameError" class="error-message"></span>
+                </div>
+                <div>
+                  <p class="modal-form-label">Phone Number*</p>
+                  <input
+                    class="modal-input"
+                    type="text"
+                    id="numberInput"
+                    placeholder="Enter your number"
+                  />
+                  <span id="phoneError" class="error-message"></span>
                 </div>
               </div>
-            </a>
+              <div style="display: flex; gap: 1rem" class="input-box">
+                <div>
+                  <p class="modal-form-label">Address</p>
+                  <input
+                    class="modal-input"
+                    type="text"
+                    id="addressInput"
+                    placeholder="Enter your  address"
+                  />
+                  <span id="addressError" class="error-message"></span>
+                </div>
+                <div>
+                  <p class="modal-form-label">City</p>
+                  <input
+                    class="modal-input"
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter your city"
+                  />
+                  <span id="cityError" class="error-message"></span>
+                </div>
+              </div>
+              <div>
+                <p class="modal-form-label">Query Related to</p>
+                <select class="modal-input" id="serviceSelect">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="interior-car-cleaning">
+                    Interior Car Cleaning
+                  </option>
+                  <option value="paint-protection-and-coating-services">
+                    Paint Protection And Coating Services
+                  </option>
+                  <option value="ceramic-coating-service">
+                    Ceramic Coating Service
+                  </option>
+
+                  <option value="glass-and-surface-coating-services">
+                    Glass-And-Surface-Coating-Services
+                  </option>
+                  <option value="full-car-detailing-service">
+                    Full Car Detailing Service
+                  </option>
+
+                  <option value="car-dry-cleaning">Car Dry Cleaning</option>
+                  <option value="body-polish-wax">
+                    Complete Car Body Polish and Wax
+                  </option>
+                  <option value="full-car-wash">Full Car Wash</option>
+                  <option value="deep-cleaning">Deep Cleaning</option>
+                  <option value="car-decor">Car Decor</option>
+                  <option value="other">Other</option>
+                </select>
+                <span id="serviceError" class="error-message"></span>
+              </div>
+              <!--Captcha Code for Auth-->
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
+              ></div>
+
+              <button style="border-radius: 10px" id="modal-booking-btn">
+                <span class="button-text">BOOK</span>
+                <span
+                  class="button-loader spinner"
+                  style="display: none"
+                ></span>
+              </button>
+              <div id="messageContainer">
+                <span id="successMessage" class="success-message"></span>
+                <span id="errorMessage" class="error-message"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Load reCAPTCHA -->
+      <script
+        src="https://www.google.com/recaptcha/api.js"
+        async
+        defer
+      ></script>
+
+      <div class="animated-thank-you-modal" id="thankYouModal">
+        <div class="thankyou-opacity-container">
+          <div class="thank-you-page-container">
+            <div
+              class="cancel-icon"
+              id="cancel-icon"
+              onclick="cancelThankYouModal()"
+            >
+              <img
+                id="close-btn"
+                src="/images/home-page/modal/cancel.png"
+                alt="waterless car wash"
+                loading="lazy"
+              />
+            </div>
+            <div class="success-img-container">
+              <img src="/images/success.jpg" alt="Thank you" loading="lazy" />
+            </div>
+            <h2>Thank You</h2>
+            <p>Your appointment has been successfully submitted.</p>
+            <div class="visit-app-container">
+              <h3>Visit our app</h3>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                target="_blank"
+              >
+                <div class="modal-download-container">
+                  <div class="btn-download">
+                    <img
+                      src="/images/ui_change_images/play_store.png"
+                      alt="Play Store Download"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -967,91 +986,6 @@
         showMoreBtn.style.display = "block";
       }
     </script>
-
-    <!-- <div style="width: 100vw; margin-top: 30px; ">
-        <div
-            style="width: 95%;  max-width: 1200px;margin: auto; display: flex; flex-direction: column; padding: 60px 0px;">
-            <h3 style="font-size: 1.2rem; font-weight: 600; color: #183ea1; text-align: center;">Our Team</h3>
-            <h2 style="font-size: 2rem; text-align: center; width: 95%; max-width: 400px; margin: auto;">
-                Meet Our Team
-            </h2>
-            <div
-                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 50px;">
-                <div
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
-                    <div
-                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
-
-                    </div>
-                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
-                    <p style="text-align: center; ">Founder</p>
-                    <div style="display: flex; width: 90%; justify-content: space-around;">
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
-                    <div
-                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
-
-                    </div>
-                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
-                    <p style="text-align: center; ">Founder</p>
-                    <div style="display: flex; width: 90%; justify-content: space-around;">
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    style="display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; gap: 10px;">
-                    <div
-                        style="border-radius: 7px; border: 1px solid red; width: 100%; aspect-ratio: 9/12;display: flex;align-items: center;justify-content: center;">
-
-                    </div>
-                    <h4 style="font-size: 1.4rem; ">Mike Jones</h4>
-                    <p style="text-align: center; ">Founder</p>
-                    <div style="display: flex; width: 90%; justify-content: space-around;">
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-instagram"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-linkedin"></ion-icon>
-                        </div>
-                        <div
-                            style="border-radius: 50%; background-color: #183ea1; width: 50px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-                            <ion-icon style="color: white; font-size: 1.4rem;" name="logo-twitter"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </div> -->
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
