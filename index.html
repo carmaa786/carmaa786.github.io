@@ -2189,7 +2189,7 @@ window.addEventListener("resize", () => {
 
 
     <div id="parent-div">
-        <section class="modal-container" id="booking-modal">
+        <section class="modal-container modal-container-one" id="booking-modal">
             <div class="modal-wrapper">
                 <div class="image-section">
                     <div class="modal-left">
@@ -2351,8 +2351,6 @@ window.addEventListener("resize", () => {
 
 
 
-
-
         <script>
             // Function to show the parent div after 15 seconds
             function showDivAfterDelay() {
@@ -2435,8 +2433,12 @@ window.addEventListener("resize", () => {
         const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
         bookingOpenBtn.forEach(button => {
         button.addEventListener('click', () => {
-            document.getElementById("parent-div").style.display = "flex";
-        });
+            const modal = document.getElementById("booking-modal");
+        // Remove the modal-hidden class if it exists
+        modal.classList.remove("modal-hidden");
+        // Show the modal
+        document.getElementById("parent-div").style.display = "flex";
+    });
     });
     </script>
     <script>
@@ -2525,10 +2527,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+
      <script type="module">
-         import { CTAApi } from './js/external-integration.js';
+        import { CTAApi } from './js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
-          event.preventDefault();
+            thankYou();
+        event.preventDefault();
           
           // Get input values
           const name = document.getElementById('nameInput').value.trim();
@@ -2602,9 +2606,9 @@ document.addEventListener("DOMContentLoaded", function () {
               CTAApi(data)
               .then(response => {
                   if (response.status === 200) {
-                      // Display success message
-                    //   document.getElementById('successMessage').textContent = 'Appointment successfully made!';
-                      thankYou();
+                    const modal = document.getElementById("booking-modal");
+                     modal.classList.toggle("modal-hidden");
+                    thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
