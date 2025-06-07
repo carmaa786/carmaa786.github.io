@@ -42,6 +42,9 @@ body {
   margin-bottom: 1rem;
   font-family: var(--font);
 }
+.unorder-list-container{
+  padding-left: 2rem;
+}
 .service-para {
   text-align: justify;
   font-size: 1.1rem;
