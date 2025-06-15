@@ -925,9 +925,9 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-#car-mechanic-benefit-element-desc{
-  height: auto;
-  min-height: 0px;
+.car-mechanic-benefit-element-desc {
+  height: auto !important;
+  min-height: 0px !important;
 }
 
 .video-description2 .video-description-img {
