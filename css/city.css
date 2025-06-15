@@ -97,10 +97,32 @@
   color: #424649;
   line-height: 1.6em;
 }
+
+.car-mechanic-description{
+  padding-inline: 4rem;
+}
+
+.car-mechanics-right-desc {
+  font-size: 1.2rem;
+  text-align: justify;
+  font-family: var(--body-font);
+  padding-bottom: 1rem;
+  width: 100%;
+}
+#left-heading-car-mechanic{
+  width: 100%;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+}
 @media (max-width: 900px) and (min-width: 300px) {
   .car-decor-unique-section {
     width: 90%;
     padding-top: 30px;
+  }
+
+  .car-mechanic-description{
+    padding-inline: 0rem;
   }
 }
 
@@ -551,7 +573,8 @@
     margin: 2rem auto;
     justify-content: center;
     gap: 3rem;
-  }
+    padding-inline: 3rem
+}
   .city-why-choose .left-heading {
     width: 100%;
     font-family: var(--font);
@@ -893,6 +916,7 @@
     font-size: 3rem;
     font-weight: 600;
   }
+
   .city-why-choose .right-desc {
     text-align: justify;
     width: 100%;
@@ -903,6 +927,15 @@
     font-family: var(--body-font);
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+    color: #424649;
+    line-height: 1.6em;
+  }
+
+  .car-mechanics-right-desc {
+    text-align: justify;
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--body-font);
     color: #424649;
     line-height: 1.6em;
   }
@@ -1208,6 +1241,15 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
+  }
+
+
+
+  .car-mechanics-right-desc {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-family: var(--body-font);
+    width: 100%;
   }
   .our-services-section-city {
     background-color: #0e111b;
