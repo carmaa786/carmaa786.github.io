@@ -303,7 +303,7 @@
 .rating-customer-container {
   display: flex;
   align-items: center;
-  gap: 20%;
+  gap: 10%;
   padding-bottom: 3rem;
   padding-right: 5px;
   padding-top: 40px;
