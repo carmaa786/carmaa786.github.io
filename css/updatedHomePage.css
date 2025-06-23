@@ -127,6 +127,10 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+#download-ios-app {
+  margin-top: 0rem;
+}
+
 .download-modal-container {
   display: flex;
   margin-top: 2rem;
@@ -207,9 +211,6 @@
   transform: scale(1.05);
 }
 
-#app-store-container {
-  height: 30px;
-}
 .review-image {
   height: 100%;
   width: 100%;
@@ -430,10 +431,6 @@
   .homepage-left-services-container {
     flex: 0 54%;
   }
-  /* 
-  .service-box {
-    padding: 10px 2px;
-  } */
   .rating-container {
     width: 13rem;
   }
@@ -444,9 +441,13 @@
 }
 
 @media (min-width: 1024px) {
-  /* .main-image {
-    width: 262px;
-} */
+  /* .download-modal-container {
+    margin-top: 0rem;
+  } */
+
+  #app-download-modal-container {
+    margin-top: 0rem;
+  }
   .homepage-left-services-container {
     flex: 0 47%;
   }
@@ -455,6 +456,7 @@
   } */
   .rating-container {
     width: 11rem;
+    margin-top: 1rem;
   }
   .rating-customer-container {
     padding-top: 10px;
