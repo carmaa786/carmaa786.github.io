@@ -294,7 +294,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .homepage-left-services-container {
@@ -321,6 +321,23 @@
   padding-top: 65px;
   margin: auto;
   width: 85%;
+}
+
+.google-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.google-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rating-sub-container {
+  padding-left: 2px;
+  display: flex;
+  gap: 8px;
 }
 
 /* .animated-thank-you-modal {
