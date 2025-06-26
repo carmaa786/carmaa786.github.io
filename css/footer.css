@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #0b4c9d;;
+  --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
   --body-font: "Sarabun", sans-serif;
   --silver: #bac4c9;
@@ -38,7 +38,7 @@
   align-items: center;
   gap: 10px;
   color: #ffffff;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-family: var(--font);
   margin-top: 1rem;
   /* margin-left: 1rem; */
@@ -131,6 +131,26 @@
   width: 250px;
   height: auto;
   margin-right: -90px;
+}
+
+.google-play-store-icons {
+  display: flex;
+  align-items: center;
+  /* padding-left: 0.3rem; */
+  gap: 5%;
+}
+
+@media (max-width: 600px) and (min-width: 10px) {
+  .google-play-store-icons {
+    display: flex;
+    padding-left: 0px;
+    gap: 5%;
+    flex-wrap: wrap;
+  }
+
+  .download-btn-footer {
+    padding-top: 0px;
+  }
 }
 
 @media screen and (min-width: 300px) {

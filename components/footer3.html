@@ -44,8 +44,9 @@
         .link-section-child{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            /* align-items: center; */
         }
+
         .link-section-child p{
             font-size: 16px;
             padding-bottom: 5px;
@@ -66,7 +67,7 @@
         }
         .download-btn-footer {
             width: 10rem;
-            padding-top: 20px;
+            /* padding-top: 20px; */
         }
 
         #ios-btn-footer{
@@ -94,9 +95,6 @@
             .link-section-child {
                 align-items: start;
             }
-            /* .footer {
-                padding: 35px 5% 50px 5%;
-} */
         }
 
     </style>
@@ -145,16 +143,18 @@
                             <a  href="./blogs/"><div class="img-wrapper"> <img src="/images/home-page/topbar/blogger.png" alt="blog" loading="lazy"/></div></a>
                     </div> 
                     
-                    <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
-                        <div class="download-btn-footer" >
-                            <img src="/images/footer/google-play-white.png" alt="Play store download" loading="lazy"/>
-                        </div>
-                    </a>
-                     <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
-                        <div class="download-btn-footer" id="ios-btn-footer" >
-                            <img src="/images/footer/App_Store_White_bg.png" alt="App store download" loading="lazy"/>
-                        </div>
-                    </a>
+                    <div class="google-play-store-icons">
+                        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
+                            <div class="download-btn-footer" >
+                                <img src="/images/footer/google-play-white.png" alt="Play store download" loading="lazy"/>
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
+                            <div class="download-btn-footer" id="ios-btn-footer" >
+                                <img src="/images/footer/App_Store_White_bg.png" alt="App store download" loading="lazy"/>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
       <hr>

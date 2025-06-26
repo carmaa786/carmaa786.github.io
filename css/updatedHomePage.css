@@ -171,7 +171,7 @@
   font-size: 18px;
   gap: 10px;
   border: none; /* No border */
-  padding: 0.65rem 1.5rem;
+  padding: 0.67rem 1.5rem;
   border-radius: 6px;
   transition: transform 0.2s;
   cursor: pointer;
@@ -308,11 +308,11 @@
 .rating-customer-container {
   display: flex;
   align-items: center;
-  gap: 10%;
+  /* gap: 10%; */
   padding-bottom: 3rem;
   padding-right: 5px;
   padding-top: 40px;
-  width: 95%;
+  /* width: 95%; */
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -462,6 +462,10 @@
     margin-top: 0rem;
   } */
 
+  .rating-container{
+    padding: 0.47rem 1.5rem;
+  }
+
   #app-download-modal-container {
     margin-top: 0rem;
   }
@@ -473,7 +477,7 @@
   } */
   .rating-container {
     width: 11rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
   .rating-customer-container {
     padding-top: 10px;
@@ -923,7 +927,7 @@
   }
 
   .rating-container {
-    width: 13rem;
+    width: 45%;
     padding: 0.35rem 1.1rem;
   }
   .btns-container {
