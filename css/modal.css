@@ -1,4 +1,4 @@
-.download-btn {
+modal css .download-btn {
   margin-top: 2rem;
   width: 10rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -24,4 +24,89 @@
 
 .download-btn:hover img {
   transform: scale(1.05);
+}
+.img-container {
+  height: 50px;
+  width: 140px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.download-modal-img-main-container {
+  display: none;
+}
+
+#modal-form-container {
+  padding: 1rem;
+}
+
+.img-container {
+  /* margin-top: 2rem; */
+  width: 8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-button-container {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.image-width-container {
+  width: 35px;
+  height: 35px;
+}
+
+.image-width-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  .image-width-container {
+    width: 35px;
+    height: 28px;
+  }
+
+  .download-modal-img-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5%;
+    padding-bottom: 1.5rem;
+  }
+
+  .cancel-button-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .modal-form-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .download-modal-img-main-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 10px) {
+  .download-modal-img-main-container {
+    justify-content: space-around;
+  }
 }

@@ -1,3 +1,5 @@
+/* common css  */
+
 :root {
   --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
@@ -65,9 +67,7 @@
   border-radius: 50px;
   background-color: #01415f;
 }
-/* .social-media-icons .img-wrapper:hover {
-  color: #28b097 !important;
-} */
+
 .img-wrapper:hover {
   background-color: #28b097 !important;
 }
@@ -119,9 +119,6 @@
   height: 1rem;
 }
 @media screen and (min-width: 300px) {
-  .city-header-section {
-    padding: 5.5rem 1rem;
-  }
   .topbar-section-common {
     display: none;
   }
@@ -132,10 +129,8 @@
     gap: 1.5rem;
     flex-direction: column;
     justify-content: space-between;
-    /* max-width: 1200px; */
     margin: 0px auto;
     width: 88%;
-    /* margin: auto; */
   }
   .city-header-section p {
     font-size: 1.55rem;
@@ -146,11 +141,44 @@
   }
 }
 
+.city-header-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 5rem;
+  width: 100%;
+  background-position: left top;
+  background-size: cover;
+  background-image: url("../images/header-img.jpg");
+}
+.city-header-section p {
+  color: white;
+  position: relative;
+  font-size: 2.2rem;
+  font-family: var(--font);
+  line-height: 2;
+  font-weight: 700;
+  z-index: 2;
+}
+.city-header-section .breadcrumb p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  .city-header-section {
+    padding: 5rem 2rem;
+  }
+}
+
 @media (max-width: 900px) and (min-width: 10px) {
   #preloader {
     background-size: 150px 300px; /* optional: size of the GIF */
   }
 }
+
 @media screen and (min-width: 600px) {
   .topbar-section-container {
     margin-top: 0rem !important;
@@ -169,30 +197,7 @@
   .topbar-section-common {
     padding: 0.5rem 2rem;
     background-color: #01628f;
-  }
-  .city-header-section {
-    display: flex;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 5rem;
-    width: 100%;
-    background-position: left top;
-    background-size: cover;
-    background-image: url("../images/header-img.jpg");
-  }
-  .city-header-section p {
-    color: white;
-    position: relative;
-    font-size: 2.2rem;
-    font-family: var(--font);
-    line-height: 2;
-    font-weight: 700;
-    z-index: 2;
-  }
-  .city-header-section .breadcrumb p {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    font-weight: 300;
+    z-index: 9999;
   }
 }
