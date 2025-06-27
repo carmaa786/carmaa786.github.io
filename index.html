@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/common.css"/>
     <link rel="canonical" href="https://carmaacarcare.com"/>
     <link rel="stylesheet" href="./css/navbar.css"/>
+    <link rel="stylesheet" href="../css/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -724,7 +725,7 @@
 </head>
 
 <body>
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
 
     <nav id="nav-placeholder"
     class="main-navbar-container">
@@ -1601,7 +1602,6 @@ window.addEventListener("resize", () => {
     max-width: 26rem; /* Adjust based on design */
     height: auto;
     width: 100%;
-    /* margin-left: 1rem; */
     border-radius: 17px;
 }
 
@@ -2221,118 +2221,219 @@ window.addEventListener("resize", () => {
     </script>
 
 
-    <div id="parent-div">
-        <section class="modal-container modal-container-one" id="booking-modal">
-            <div class="modal-wrapper">
-                <div class="image-section">
-                    <div class="modal-left">
-                        <h2>BOOK AN APPOINTMENT</h2>
-                        <h2>Download the App now & get 15% off</h2>
-                         
-                            <div class="contact">
-                                <div class="img-wrapper">
-                                    <img src="./images/home-page/modal/icon-phone.png" alt="waterless car wash" loading="lazy"/>
-                                </div>
-                                <div class="details">
-                                    <h2>Call us now</h2>
-                                    <p>+91 70425 55401</p>
-                                </div>
-                               
-                               
-                            </div>
+<div id="parent-div">
+    <section class="modal-container">
+      <div class="modal-wrapper">
+        <div class="image-section">
+          <div class="modal-left">
+            <h2>BOOK AN APPOINTMENT</h2>
+            <h2 style="font-size: 30px">
+              Download the App now & get 15% off
+            </h2>
 
-                            <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
-                                <div class="download-modal-container">
-                                    <div class="download-btn">
-                                    <img src="./images/footer/google-play-white.png" alt="Play Store Download" loading="lazy">
-                                    </div>
-                                </div>
-                            </a>
-                             <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
-                                <div class="download-modal-container" id="app-download-modal-container">
-                                    <div class="download-btn" id="app-store-container">
-                                    <img src="./images/footer/App_Store_White_bg.png" alt="Waterless car wash" loading="lazy">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                </div>
-                <div class="modal-form">
-                    <h2 class="modal-form-heading">Download the App now & get 15% off</h2>
-                    <img id="close-btn" src="./images/home-page/modal/cancel.png" alt="waterless car wash" loading="lazy"/>
-                    <div style="display: flex; gap:1rem" class="input-box">
-                    <div>
-                        <p class="modal-form-label">Name*</p>
-                        <input class="modal-input" type="text" id="nameInput" placeholder="Enter your full name">
-                        <span id="nameError" class="error-message"></span>
-                    </div>
-                    <div>
-                        <p class="modal-form-label">Phone Number*</p>
-                        <input class="modal-input" type="text" id="numberInput" placeholder="Enter your number">
-                        <span id="phoneError" class="error-message"></span>
-                    </div>
-                    </div>
-                    <div style="display: flex; gap:1rem" class="input-box">
-                        <div>
-                            <p class="modal-form-label">Address</p>
-                            <input class="modal-input" type="text" id="addressInput" placeholder="Enter your  address"
-                           >
-                           <span id="addressError" class="error-message"></span>
-                        </div>
-                        <div>
-                            <p class="modal-form-label">City</p>
-                            <input class="modal-input" type="text" id="cityInput" placeholder="Enter your city"
-                           >
-                           <span id="cityError" class="error-message"></span>
-                        </div>
-
-
-                    </div>
-                    <div>
-                        <p class="modal-form-label">Query Related to</p>
-                        <select class="modal-input" id="serviceSelect">
-                            <option value="" disabled selected >Select a service</option>
-                            <option value="interior-car-cleaning">Interior Car Cleaning</option>
-                            <option value="paint-protection-and-coating-services">
-                                Paint Protection And Coating Services
-                              </option>
-                              <option value="ceramic-coating-service">
-                                Ceramic Coating Service
-                              </option>
-                             
-                              <option value="glass-and-surface-coating-services">
-                                Glass-And-Surface-Coating-Services
-                              </option>
-                              <option value="full-car-detailing-service">
-                                Full Car Detailing Service
-                              </option>
-                            <option value="exterior-car-cleaning">Exterior Car Cleaning and Washing</option>
-                            <option value="car-dry-cleaning">Car Dry Cleaning</option>
-                            <option value="body-polish-wax">Complete Car Body Polish and Wax</option>
-                            <option value="full-car-wash">Full Car Wash</option>
-                            <option value="deep-cleaning">Deep Cleaning</option>
-                            <option value="car-decor">Car Decor</option>
-                            <option value="car-mechanic">Car Mechanic</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <span id="serviceError" class="error-message"></span>
-                    </div>
-                    <!--Captcha Code for Auth-->
-                    <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
-                    
-                    <button style="border-radius: 10px;"  id="modal-booking-btn"> <span class="button-text">BOOK</span>
-                        <span class="button-loader spinner" style="display: none;"></span></button>                    
-                    <div id="messageContainer">
-                        <span id="successMessage" class="success-message"></span>
-                        <span id="errorMessage" class="error-message"></span>
-                    </div>
-                </div>
-                
+            <div class="contact">
+              <div class="img-wrapper">
+                <img
+                  src="../images/home-page/modal/icon-phone.png"
+                  alt="phone"
+                  loading="lazy"
+                />
+              </div>
+              <div class="details">
+                <h2 style="font-size: 20px">Call us now</h2>
+                <p>+91 70425 55401</p>
+              </div>
             </div>
+            <style>
+              .download-modal-container {
+                display: flex;
+                margin-top: 2rem;
+                gap: 32px;
+              }
+              .download-btn {
+                width: 11rem;
+              }
+              .download-btn img {
+                height: auto;
+                width: 100%;
+                margin-left: 1rem;
+                border-radius: 17px;
+              }
 
-        </section>
+              @media (max-width: 600px) and (min-width: 10px) {
+                .download-btn img {
+                margin-left: 0rem;
+              }
+                
+              }
+            </style>
 
-    </div>
+            <div class="download-modal-container">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                target="_blank"
+              >
+                <div class="download-btn">
+                  <img
+                    src="../images/footer/google-play-white.png"
+                    alt="Play Store Download"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
+                target="_blank"
+              >
+                <div class="download-btn" id="download-ios-app">
+                  <img
+                    src="../images/footer/App_Store_White_bg.png"
+                    alt="App Store Download"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-form-container">
+          <div class="cancel-button-container">
+            <h2 class="modal-form-heading" style="font-size: 20px">
+              Download the App now & get 15% off
+            </h2>
+            <div class="image-width-container">
+              <img
+                id="close-btn"
+                src="../images/home-page/modal/cancel.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="download-modal-img-main-container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img
+                  src="/images/ui_change_images/Play_Store_Black_bg.png"
+                  alt=""
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img
+                  src="/images/ui_change_images/App_Store_Black_bg.png"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div style="display: flex; gap: 1rem" class="input-box">
+            <div>
+              <p class="modal-form-label">Name*</p>
+              <input
+                class="modal-input"
+                type="text"
+                id="nameInput"
+                placeholder="Enter your full name"
+              />
+              <span id="nameError" class="error-message"></span>
+            </div>
+            <div>
+              <p class="modal-form-label">Phone Number*</p>
+              <input
+                class="modal-input"
+                type="text"
+                id="numberInput"
+                placeholder="Enter your number"
+              />
+              <span id="phoneError" class="error-message"></span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem" class="input-box">
+            <div>
+              <p class="modal-form-label">Address</p>
+              <input
+                class="modal-input"
+                type="text"
+                id="addressInput"
+                placeholder="Enter your  address"
+              />
+              <span id="addressError" class="error-message"></span>
+            </div>
+            <div>
+              <p class="modal-form-label">City</p>
+              <input
+                class="modal-input"
+                type="text"
+                id="cityInput"
+                placeholder="Enter your city"
+              />
+              <span id="cityError" class="error-message"></span>
+            </div>
+          </div>
+          <div>
+            <p class="modal-form-label">Query Related to</p>
+            <select class="modal-input" id="serviceSelect">
+              <option value="" disabled selected>Select a service</option>
+              <option value="interior-car-cleaning">
+                Interior Car Cleaning
+              </option>
+              <option value="paint-protection-and-coating-services">
+                Paint Protection And Coating Services
+              </option>
+              <option value="ceramic-coating-service">
+                Ceramic Coating Service
+              </option>
+
+              <option value="glass-and-surface-coating-services">
+                Glass-And-Surface-Coating-Services
+              </option>
+              <option value="full-car-detailing-service">
+                Full Car Detailing Service
+              </option>
+
+              <option value="car-dry-cleaning">Car Dry Cleaning</option>
+              <option value="body-polish-wax">
+                Complete Car Body Polish and Wax
+              </option>
+              <option value="full-car-wash">Full Car Wash</option>
+              <option value="deep-cleaning">Deep Cleaning</option>
+              <option value="car-decor">Car Decor</option>
+              <option value="car-mechanic">Car Mechanic</option>
+              <option value="other">Other</option>
+            </select>
+            <span id="serviceError" class="error-message"></span>
+          </div>
+          <!--Captcha Code for Auth-->
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
+          ></div>
+
+          <button style="border-radius: 10px" id="modal-booking-btn">
+            <span class="button-text">BOOK</span>
+            <span
+              class="button-loader spinner"
+              style="display: none"
+            ></span>
+          </button>
+          <div id="messageContainer">
+            <span id="successMessage" class="success-message"></span>
+            <span id="errorMessage" class="error-message"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
     <!-- Load reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <div id="parent-div2">

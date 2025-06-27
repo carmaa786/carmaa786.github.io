@@ -462,7 +462,7 @@
     margin-top: 0rem;
   } */
 
-  .rating-container{
+  .rating-container {
     padding: 0.47rem 1.5rem;
   }
 
@@ -530,7 +530,7 @@
     width: 100%;
   }
   .rating-container {
-    width: 13rem;
+    width: 11rem;
     flex: 0;
   }
 

@@ -1,3 +1,5 @@
+/* homepage.css */
+
 :root {
   --primary-color: #0b4c9d;
   --font: "Bai Jamjuree", sans-serif;
@@ -644,6 +646,29 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: transform 0.3s ease;
+}
+
+.modal-form-container {
+  padding: 2rem;
+}
+
+.modal-form-container button {
+  margin-top: 1.5rem;
+  width: 100%;
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 18px 28px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.modal-form-container button:hover {
+  transform: scale(0.95);
+  background-color: #28b097;
 }
 .modal-form button:hover {
   transform: scale(0.95);
@@ -1447,6 +1472,8 @@
     width: 100%;
     padding: 0.5rem 1rem;
     margin-top: 0.4rem;
+    border-radius: 1rem;
+    font-size: 13px;
   }
   .modal-form img {
     position: absolute;
@@ -1456,7 +1483,7 @@
     height: 2rem;
     cursor: pointer;
   }
-  .modal-form button {
+  /* .modal-form button {
     margin-top: 1.5rem;
     width: 100%;
     color: white;
@@ -1468,11 +1495,11 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.3s ease;
-  }
-  .modal-form button:hover {
+  } */
+  /* .modal-form button:hover {
     transform: scale(0.95);
     background-color: #28b097;
-  }
+  } */
 
   .benefit-right {
     position: relative;
@@ -2434,7 +2461,7 @@
     width: 70rem;
     flex-direction: row;
     background-color: white;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: slideIn 0.5s forwards ease-out;
@@ -2442,7 +2469,7 @@
     display: flex;
     gap: 6rem;
     overflow: hidden;
-    padding-right: 4rem;
+    padding-right: 3rem;
     position: relative;
   }
   .modal-wrapper .image-section {
@@ -2468,7 +2495,7 @@
   .modal-left {
     position: relative;
     z-index: 10000;
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
   }
   .modal-left h2 {
     color: #ffffff;
@@ -2562,7 +2589,7 @@
     height: 2rem;
     cursor: pointer;
   }
-  .modal-form button {
+  /* .modal-form button {
     margin-top: 1.5rem;
     width: 100%;
     color: white;
@@ -2574,11 +2601,11 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.3s ease;
-  }
-  .modal-form button:hover {
+  } */
+  /* .modal-form button:hover {
     transform: scale(0.95);
     background-color: #28b097;
-  }
+  } */
 
   .cancel-icon {
     display: flex;
