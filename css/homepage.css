@@ -258,6 +258,33 @@
   font-weight: 400;
   line-height: 1.6em;
 }
+.location-download-heading {
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  text-align: center;
+  padding-top: 3rem;
+  color: #28b097;
+}
+
+#download-heading-in-location {
+  color: #0e111b;
+  font-weight: 500;
+}
+.benefits-of-choosing-carmaa-para {
+  text-align: justify;
+  color: #424649;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+  font-family: var(--body-font);
+  padding: 1rem 3rem;
+  line-height: 1.8rem;
+}
+
+#benefits-of-choosing-carmaa-id {
+  padding-inline: 0rem;
+  line-height: 1.5rem;
+}
 
 .counter-section {
   padding: 4.5rem;
@@ -297,7 +324,7 @@
   text-align: center;
 }
 .testimonial-heading {
-  color: #ffffff !important;
+  /* color: #ffffff !important; */
   text-align: center;
   width: 100% !important;
   font-family: var(--font) !important;
@@ -408,6 +435,19 @@
   width: 100% !important;
   font-family: var(--font) !important;
 }
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #20272e;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
 .accordion-title,
 .accordion-content p {
   font-family: var(--body-font) !important;
@@ -480,6 +520,14 @@
   overflow: hidden;
   padding-right: 4rem;
   position: relative;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.no-underline:hover {
+  text-decoration: underline;
 }
 
 .modal-wrapper2 {
@@ -720,6 +768,7 @@
   font-size: 1.1rem;
   font-family: var(--body-font);
   margin-top: 1rem;
+  line-height: 1.6rem;
 }
 .benefit-element {
   margin-top: 2rem;
