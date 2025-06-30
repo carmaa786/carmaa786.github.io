@@ -266,10 +266,6 @@
   color: #28b097;
 }
 
-#download-heading-in-location {
-  color: #0e111b;
-  font-weight: 500;
-}
 .benefits-of-choosing-carmaa-para {
   text-align: justify;
   color: #424649;
@@ -528,6 +524,26 @@
 
 .no-underline:hover {
   text-decoration: underline;
+}
+
+.android-ios-heading {
+  font-size: 1.5rem;
+}
+
+.carmaa-app-download-heading {
+  font-size: 1.3rem;
+}
+
+.Car-service-center {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #28b097;
+  padding-top: 3rem;
+}
+
+.android-ios-heading:hover,
+.carmaa-app-download-heading:hover {
+  color: rgb(176, 98, 176);
 }
 
 .modal-wrapper2 {
