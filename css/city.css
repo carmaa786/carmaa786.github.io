@@ -63,14 +63,17 @@
   border-radius: 100%;
   margin-bottom: 1rem;
 }
+
 .city-benefit-element-img-wrapper2 img {
   width: 2.5rem;
   height: 2.5rem;
 }
+
 .city-benefit-element-img-wrapper img {
   width: 2.5rem;
   height: 2.5rem;
 }
+
 .car-decor-unique-section {
   width: 80%;
   margin: auto;
@@ -746,6 +749,11 @@
     padding-top: 1rem;
     box-shadow: 10px 10px 10px hsl(0, 50%, 2%, 0.5);
     border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .city-call-to-action-btn-component:hover {
+    background-color: #e77640;
   }
 
   .city-benefits-section {
