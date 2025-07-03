@@ -1873,7 +1873,7 @@
   }
 
   .expanded {
-    min-height: 65rem; /* Set to a high value to accommodate longer text */
+    min-height: 65rem;
   }
 
   .parallex-cta {
