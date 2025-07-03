@@ -264,7 +264,7 @@
 .our-services-section-city-right {
   width: 48%;
 }
-.our-services-section-city-right h1 {
+.our-services-section-city-right h2 {
   font-family: var(--font);
   color: #ffffff;
   padding-top: 2rem;
@@ -1250,6 +1250,10 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
+  }
+
+  #location-right-desc {
+    display: inline;
   }
 
   .car-mechanics-right-desc {
