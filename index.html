@@ -192,6 +192,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
     <style>
@@ -1339,7 +1344,7 @@ window.addEventListener("resize", () => {
 
 
     <div class="other-services-new-container">
-        <div class="new-sofa-container open-booking-modal bookNowBtnHide">
+        <div class="new-sofa-container open-booking-modal bookNowBtnHide" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
             <div style="height: 50px; padding-bottom: .8rem;">
                 <p class="other-service-new-heading">Jumpstart, Mechanical Services</p>
             </div>
@@ -1348,7 +1353,7 @@ window.addEventListener("resize", () => {
             </div>
         </div>
 
-          <div class="new-sofa-container open-booking-modal bookNowBtnHide">
+          <div class="new-sofa-container open-booking-modal bookNowBtnHide" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
             <div style="height: 50px; padding-bottom: .8rem;">
                 <p class="other-service-new-heading">Sofa, Mattress & Carpet Cleaning</p>
             </div>
@@ -1358,7 +1363,7 @@ window.addEventListener("resize", () => {
         </div>
 
         <a href="/Doorstep-car-decoration-service-in-dehradun/" target="_blank">
-            <div class="new-sofa-container">
+            <div class="new-sofa-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
               <div class="car-decor-link-heading" >
                   <p class="other-service-new-heading">Car Decor Service</p>
               </div>
@@ -1372,7 +1377,7 @@ window.addEventListener("resize", () => {
 
 
     <section class="benefits-section">
-        <div class="benefit-left">
+        <div class="benefit-left" data-aos="fade-right">
             <h2>BENEFITS</h2>
             <h2>Why Choose Carmaa Car Care</h2>
           
@@ -1423,7 +1428,7 @@ window.addEventListener("resize", () => {
             </div>
         </div>
         </div>
-        <div class="benefit-right">
+        <div class="benefit-right" data-aos="fade-left">
             <div class="description counter">
                 <img src="./images/home-page/benefits/quality.png" alt="waterless car wash" loading="lazy"/>
                 <div style="display: flex;"><p class="counter-js" data-target="100">0</p><p>%</p></div>
@@ -1487,7 +1492,7 @@ window.addEventListener("resize", () => {
         <h2 class="before-after-heading">How Carmaa Works</h2>
     </div>
    <div class="carmaa-timeline-container">
-        <div class="carmaa-timeline-left">
+        <div class="carmaa-timeline-left" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200" >
             <div onclick="carmaaTimelineButton(0)" id="step-one" class="carmaa-timeline-points-wrapper">
                 <h2>1. Download the Carmaa App</h2>
                 <p> Available on Google Play Store and Apple App Store. Install the app on your smartphone.                    .</p>
@@ -1510,7 +1515,7 @@ window.addEventListener("resize", () => {
             </div>
         </div>
 
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1200">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="images/app/app1.jpg" alt="car service provider" loading="lazy"/>
@@ -2752,7 +2757,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   if (response.status === 200) {
                     const modal = document.getElementById("booking-modal");
                      modal.classList.toggle("modal-hidden");
-                    thankYou();
+                    // thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';
@@ -2843,6 +2848,14 @@ observer.observe(carmaaSection);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    AOS.init({
+      duration: 1000,
+      once: false      
+    });
+  </script>
+
       
 
 </body>
