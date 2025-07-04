@@ -1,7 +1,9 @@
 :root {
   --primary-color: #0b4c9d;
-  --font: "Bai Jamjuree", sans-serif;
-  --body-font: "Sarabun", sans-serif;
+  /* --font: "Bai Jamjuree", sans-serif; */
+  --font: "Lexend", "Lexend Placeholder", "sans-serif";
+  /* --body-font: "Sarabun", sans-serif; */
+  --body-font: "Inter", "Inter Placeholder", "sans-serif";
   --silver: #bac4c9;
 }
 .carmaa-timeline-container {
@@ -279,10 +281,13 @@
   .carmaa-timeline-points-wrapper p {
     display: none;
     padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     padding-right: 1.5rem;
     text-align: justify;
     opacity: 0;
     transition: opacity 0.4s ease;
+    padding-top: 0.6rem;
+    line-height: 1.2rem;
+    font-size: 14px;
   }
 }

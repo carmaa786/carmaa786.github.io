@@ -1,7 +1,9 @@
 :root{
     --primary-color:#0b4c9d;;
-    --font:"Bai Jamjuree", sans-serif;
-    --body-font:"Sarabun", sans-serif;
+    /* --font:"Bai Jamjuree", sans-serif; */
+    --font: "Lexend", "Lexend Placeholder", "sans-serif";
+    /* --body-font:"Sarabun", sans-serif; */
+    --body-font: "Inter", "Inter Placeholder", "sans-serif";
     --silver:#BAC4C9
 }
 .whats-included-container{
