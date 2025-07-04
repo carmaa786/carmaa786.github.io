@@ -229,7 +229,7 @@
   display: none;
 }
 
-.hamburger-menu-container{
+.hamburger-menu-container {
   display: none;
 }
 
@@ -241,18 +241,17 @@
     gap: 30px;
   }
 
-  .hamburger-menu-container{
+  .hamburger-menu-container {
     display: flex;
   }
 }
-
 
 .navbar-menu-ul li:hover {
   cursor: pointer;
 }
 .navbar-item-menu-link {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: #000;
 }

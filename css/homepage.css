@@ -2,8 +2,10 @@
 
 :root {
   --primary-color: #0b4c9d;
-  --font: "Bai Jamjuree", sans-serif;
-  --body-font: "Sarabun", sans-serif;
+  /* --font: "Bai Jamjuree", sans-serif; */
+  --font: "Lexend", "Lexend Placeholder", "sans-serif";
+  /* --body-font: "Sarabun", sans-serif; */
+  --body-font: "Inter", "Inter Placeholder", "sans-serif";
   --silver: #bac4c9;
 }
 
@@ -49,9 +51,9 @@
 #messageContainer {
   margin-top: 15px;
 }
-.nav-item-list {
+/* .nav-item-list {
   font-family: var(--font) !important;
-}
+} */
 .nav-item-list:hover {
   color: #28b097 !important;
 }
@@ -166,7 +168,6 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1.2em;
-  letter-spacing: 1px;
   margin-bottom: 0.7rem;
 }
 .why-carmaa-container h1 {
@@ -353,10 +354,11 @@
 }
 
 .testimonial-text {
-  font-size: 1rem;
+  font-size: 14px;
   color: #424649;
   font-family: var(--body-font);
   margin-bottom: 10px;
+  line-height: 1.2rem;
   text-align: justify;
 }
 
@@ -1898,7 +1900,7 @@
   }
   .parallex-cta-inner p {
     color: #bac4c9;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -2208,7 +2210,6 @@
     text-transform: uppercase;
     text-decoration: none;
     line-height: 1.2em;
-    letter-spacing: 1px;
     margin-bottom: 0.7rem;
   }
   .why-carmaa-container h1 {
@@ -2398,11 +2399,12 @@
   }
 
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 14px;
     color: #424649;
     font-family: var(--body-font);
     margin-bottom: 10px;
     text-align: justify;
+    line-height: 1.2rem;
   }
 
   .testimonial-author {
@@ -2742,7 +2744,7 @@
   }
   .benefit-element-desc p {
     color: #424649;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.6em;
     margin-top: 0.2rem;
@@ -3100,6 +3102,7 @@
 .testimonial-text {
   font-size: 0.85rem;
   margin-bottom: 1rem;
+  line-height: 1.2rem;
 }
 
 .stars {
@@ -3136,6 +3139,7 @@
 
   .testimonial-text {
     font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 
   .testimonial-img {
@@ -3155,7 +3159,8 @@
   }
 
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 1.2rem;
   }
 }
 
