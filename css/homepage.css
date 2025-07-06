@@ -156,10 +156,12 @@
   padding: 6rem 0rem;
   overflow-x: hidden;
 }
+
 .why-carmaa-container {
   width: 70%;
   margin: 0px auto;
 }
+
 .why-carmaa-container h2 {
   color: var(--primary-color);
   font-family: var(--font);
@@ -1132,10 +1134,217 @@
   object-fit: contain;
   margin-left: 0rem !important;
 }
+
+.main-app-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5rem;
+}
+
+/* Tilt the first image to the left */
+.app-image-container-one {
+  transform: rotate(-13deg);
+}
+
+/* Tilt the third image to the right */
+.app-image-container-three {
+  transform: rotate(13deg);
+}
+
+/* Slightly lift the middle image forward */
+.app-image-container-two {
+  z-index: 9;
+  margin-bottom: 2rem; /* bring it slightly down so it looks forward */
+}
+
+/* Set fixed height and optional width */
+.app-img-container {
+  height: 35rem;
+  width: 18rem; /* adjust as per design */
+}
+
+.app-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1rem; /* optional: smooth corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* optional: add shadow */
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .app-img-container {
+    height: 30rem;
+    width: 16rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-img-container {
+    height: 26rem;
+    width: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-img-container {
+    height: 22rem;
+    width: 12rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-app-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 2rem;
+    padding-inline: 2rem;
+  }
+  .app-img-container {
+    height: auto;
+    width: auto;
+  }
+  .app-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.downld-carmaa-heading {
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.downld-carmaa-para-content {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
+  color: #666666;
+}
+
+@media (max-width: 600px) {
+  .downld-carmaa-heading {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+  .downld-carmaa-para-content {
+    font-size: 1rem;
+  }
+
+  .three-images-homepage-section {
+    height: 32rem;
+    position: absolute;
+    bottom: -27%;
+    left: 0%;
+    transform: translateX(0%);
+    padding-inline: 1rem;
+  }
+}
+
+.downld-carmaa-heading span {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.app-dwnld-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 5%;
+}
+
+@media (max-width: 600px) {
+  .app-dwnld-main-container {
+    flex-wrap: wrap;
+  }
+}
+
+.how-it-works-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  position: relative;
+  /* margin-top: 3rem; */
+}
+
+.step-container {
+  background-color: #ffff;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: #0b4c9d;
+}
+
+.pick-service-container {
+  color: #ffff;
+  padding-top: 1rem;
+  width: 80%;
+  text-align: center;
+}
+
+.how-it-works-main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10%;
+}
+
+.how-it-works-container {
+  display: flex;
+  height: 22rem;
+  width: 14rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.how-it-works-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.simple-steps-container {
+  background-color: #0b4c9d;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 0rem 0rem 0rem;
+  width: 20rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+#how-it-works-main-container-id {
+  padding-inline: 2rem;
+}
+
+.app-dwnld-img-container {
+  transition: transform 0.3s ease; /* add this here */
+}
+
+.app-dwnld-img-container:hover {
+  transform: scale(1.1);
+}
+
+.app-dwnld-img-container img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+}
+
 @media screen and (min-width: 300px) {
   .more-text {
     min-height: 0;
-
     text-align: justify !important;
     overflow: hidden;
     display: none;
@@ -1319,7 +1528,7 @@
   }
   .modal-form-heading {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     font-family: var(--font);
   }
   .microfiber-button img {

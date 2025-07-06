@@ -696,7 +696,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* other services */
@@ -838,6 +838,7 @@
   .home-page-main-container {
     width: 90%;
     padding-top: 0px;
+    margin-bottom: 12rem;
   }
   .pb {
     padding-bottom: 40px;
