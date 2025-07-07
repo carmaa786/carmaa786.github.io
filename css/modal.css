@@ -59,7 +59,7 @@ modal css .download-btn {
 .cancel-button-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-bottom: 2rem;
 }
 
@@ -72,6 +72,14 @@ modal css .download-btn {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+
+@media (max-width: 1264px) {
+  .cancel-button-container{
+    justify-content: space-between;
+  }
+  
 }
 
 @media (max-width: 900px) and (min-width: 10px) {
