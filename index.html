@@ -645,18 +645,20 @@
             margin: 2em 0;
         }
     </style>
+    
     <script type="application/ld+json">
         {
-          "@context": "http://schema.org",
-          "@type": "Organization",
-          "name": "Carmaa Car Care",
-          "logo": "https://carmaacarcare.com/images/logo.png", 
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "CarmAa Car Care",
+          "image": "https://carmaacarcare.com/logo.png",
           "@id": "https://carmaacarcare.com/",
           "url": "https://carmaacarcare.com/",
-          "telephone": "+91-70425 55401",  
+          "telephone": "+91-7042555401",
+          "email": "support@carmaacarcare.com",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Your Street Address",
+            "streetAddress": "Tea Estate, near Bhadri guest house, Banjarawala",
             "addressLocality": "Dehradun",
             "addressRegion": "Uttarakhand",
             "postalCode": "248001",
@@ -664,16 +666,83 @@
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 30.3165,
-            "longitude": 78.0322
+            "latitude": 30.280775577155474,
+            "longitude": 78.03536506936811
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "92",
+            "bestRating": "5",
+            "worstRating": "4"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "RN Singh"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "I recently had my car serviced by CARMAA at my residence, and I was blown away by the excellent service! The ceramic coating has given my car a stunning shine, and the dry cleaning of my upholstery was top-notch. The team was professional, friendly, and attentive to detail. A special kudos to Shivankar for his meticulous work and not forgetting Smita in sales, Rohit the HR man and Sandeep for their professionalism. Highly recommend CARMAA for premium car care services!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Pankaj Bisht"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Visited Dehradun for some work and chose Carmaa for a quick car wash due to limited time. They exceeded expectations with their service—super efficient, professional, and truly respectful of the customer’s time. Highly recommend Carmaa for anyone looking for a top-notch car wash experience!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Ashutosh Chauhan"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "If you are searching for the best Doorstep car wash service in Dehradun, look no further than Carmaa. Their team provides truly professional car services right at your home, saving time without compromising on quality. I recently got detailing, PPF, and even some mechanical repairs done, and the results were outstanding."
+            }
+          ],
+        
           "sameAs": [
             "https://www.facebook.com/carmaaofficialpage",
             "https://www.instagram.com/carmaa_official",
             "https://x.com/carmaa_official"
           ]
         }
-        </script>
+    </script>
+
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMHL3KW21H"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
