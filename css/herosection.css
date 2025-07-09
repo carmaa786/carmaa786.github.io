@@ -7,17 +7,23 @@
   width: 85%;
 }
 
+#homepage-hero-section-container {
+  margin-bottom: 20rem;
+}
+
 .center-div-container-hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .whole-image-class {
   height: 100%;
   width: 100%;
   object-fit: contain;
-  object-position: center;
+  /* object-position: center; */
 }
 
 #home-page-hero-section {
@@ -29,13 +35,10 @@
   padding-inline: 1rem;
   padding-bottom: 2rem;
 }
-
 .homepage-main-images-container {
-  height: 100vh;
-  width: 55vh;
-  max-width: 100%;
-  overflow: hidden;
-  aspect-ratio: 9/16;
+  width: 60%;
+  max-height: 100vh;
+  margin-bottom: 5rem;
 }
 
 .three-images-homepage-section {
@@ -44,39 +47,61 @@
   bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
+  width: 58%;
 }
 
-/* @media (min-width: 1024px) {
-  .homepage-main-images-container {
-    height: 57vh;
-    width: 28vh;
-    max-width: 100%;
-    overflow: hidden;
-    aspect-ratio: 9 / 16;
-  }
-} */
+.number-hover {
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.number-hover:hover {
+  color: #28b097;
+}
+
+.our-services-container-heading {
+  border: 1px solid #0b4c9d;
+  width: max-content;
+  padding: 0.8rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b4c9d;
+}
+
+#downld-carmaa-heading-one {
+  font-size: 30px;
+}
 
 @media (max-width: 1024px) {
   .homepage-main-images-container {
-    width: 45vh; /* thoda chhota kar diya large tablets ke liye */
+    width: 45vh;
   }
 }
 
 @media (max-width: 900px) and (min-width: 600px) {
   .homepage-main-images-container {
-    /* height: 50vh; */
-    /* width: 25vh; */
-    max-width: 100%;
+    /* max-width: 100%;
     overflow: hidden;
-    /* aspect-ratio: 9 / 16; */
     height: auto;
-    width: 50%;
+    width: 50%; */
+    display: none;
+  }
+
+  .three-images-homepage-section {
+    width: 80%;
   }
 }
 
 @media (max-width: 600px) {
   .homepage-main-images-container {
     display: none;
+  }
+
+  #homepage-hero-section-container {
+    margin-bottom: 10rem;
   }
 
   .homepage-hero-section-container-one {

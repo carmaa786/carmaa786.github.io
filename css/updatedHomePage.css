@@ -340,87 +340,6 @@
   gap: 8px;
 }
 
-/* .animated-thank-you-modal {
-  position: fixed;
-  top: -100%;
-  transition: top 0.5s ease-in-out;
-}
-
-.modal-animated-thank-you {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.thankyou-opacity-container {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.thank-you-page-container {
-  width: 45%;
-  background: white;
-  padding: 1rem 2rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.success-img-container {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1rem;
-}
-
-.success-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.thank-you-page-container h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
-}
-
-.thank-you-page-container p {
-  font-size: 1.3rem;
-  padding: 15px;
-} */
-
-/* .visit-app-container {
-  background-color: #28b097;
-  padding: 16px;
-  border-radius: 5px;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  color: white;
-}
-.modal-download-container {
-  margin-top: 1rem 16px !important;
-}
-.btn-download img {
-  margin-left: 0rem !important;
-}
-
-.cancel-icon {
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  width: 100%;
-} */
-
 .modal-cancel {
   display: none;
 }
@@ -433,9 +352,6 @@
     flex: 0 54%;
   }
 
-  /* .service-box {
-    padding: 10px 2px;
-  } */
   .rating-container {
     width: 13rem;
   }
@@ -462,7 +378,7 @@
     margin-top: 0rem;
   } */
 
-  .rating-container{
+  .rating-container {
     padding: 0.47rem 1.5rem;
   }
 
@@ -617,69 +533,51 @@
 /* carousal */
 
 .carousel-container {
-  position: relative;
-  /* max-width: 1440px; */
-  /* padding-inline: 20px; */
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel {
+.carousel-wrapper {
+  width: 85%;
   display: flex;
-  gap: 19px;
-  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-left 60s linear infinite;
 }
 
 .card {
-  /* flex: 0 0 calc(100% / 3); Default: 3 cards per slide */
-  flex: 0 0 100%;
+  flex: 0 0 auto;
+  width: 250px; /* Adjust width */
+  margin-right: 20px; /* Gap */
   border-radius: 10px;
-  text-align: center;
-  background: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-.carousal-right-btn,
-.carousal-left-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 3px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  z-index: 10;
-}
-
-.prev {
-  left: 10px;
-}
-.prev:hover {
-  cursor: pointer;
-}
-.next:hover {
-  cursor: pointer;
-}
-.next {
-  right: 10px;
-}
-
-.carousal-left-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.carousal-right-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
+/* Smooth scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .home-car-decor-container {
@@ -773,15 +671,15 @@
 }
 
 @media (max-width: 1024px) and (min-width: 900px) {
-  .card {
-    flex: 0 0 50%;
+  /* .card {
+    flex: 0 0 2%;
   }
   .carousal-right-btn,
   .carousal-left-btn {
     padding: 3px;
     height: 30px;
     width: 30px;
-  }
+  } */
 
   .sofa-cleaning-container {
     width: 15rem;
@@ -789,13 +687,9 @@
 }
 
 @media (min-width: 1024px) {
-  .card {
-    flex: 0 0 33%;
-  }
-
-  .carousel-container {
-    /* padding-inline: 10px; */
-  }
+  /* .card {
+    flex: 0 0 2%;
+  } */
 
   .carousal-right-btn,
   .carousal-left-btn {
@@ -812,7 +706,7 @@
 /* Mobile View */
 @media (max-width: 600px) {
   .card {
-    flex: 0 0 100%; /* Show 1 card per slide */
+    /* flex: 0 0 100%;  */
   }
 
   .rating-customer-container {

@@ -166,9 +166,15 @@
   z-index: 2;
 }
 .city-header-section .breadcrumb p {
-  font-family: var(--body-font);
+font-family: var(--body-font);
   font-size: 1rem;
   font-weight: 300;
+}
+
+@media (max-width: 600px) and (min-width: 10px) {
+  .city-header-section p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 900px) and (min-width: 10px) {

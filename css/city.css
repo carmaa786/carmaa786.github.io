@@ -20,7 +20,7 @@
 }
 
 .city-benefits-heading h2 {
-  color: #01628f;
+  color: #0b4c9d;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.2rem;
@@ -57,7 +57,7 @@
 .city-benefit-element-img-wrapper2 {
   width: 4.5rem;
   height: 4.5rem;
-  background-color: black;
+  background-color: #28b097;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,13 +195,13 @@
   height: 1rem;
 }
 .third-img {
-  background-image: url("../images/city-page/intro-img.jpg") !important;
+  background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
 }
 .benefit-right2 {
   position: relative;
   width: 50% !important;
   height: 500px !important;
-  background-image: url("../images/home-page/benefits/car-bg.jpg");
+  background-image: url("/images/new-carmaa/carmaa-new4.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,6 +224,7 @@
 }
 .city-why-choose img {
   width: 100%;
+  height: 100%;
   gap: 5rem;
 }
 .city-why-choose .city-description {
@@ -445,7 +446,7 @@
   margin-bottom: 2rem;
 }
 .city-call-to-action-btn-component {
-  background-color: #e77640;
+  background-color: #0b4c9d;
   cursor: pointer;
   justify-content: center;
   font-size: 1rem;
@@ -513,7 +514,7 @@
     margin-bottom: 2rem;
   }
   .city-call-to-action-btn-component {
-    background-color: #e77640;
+    background-color: #0b4c9d;
     cursor: pointer;
     justify-content: center;
     font-size: 1rem;
@@ -533,7 +534,7 @@
   }
 
   .city-benefits-heading h2 {
-    color: #01628f;
+    color: #0b4c9d;
     text-transform: uppercase;
     text-align: center;
     font-size: 1rem;
@@ -569,7 +570,7 @@
     width: 100%;
   }
   .third-img {
-    background-image: url("../images/city-page/intro-img.jpg") !important;
+    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
   }
   .city-why-choose .city-description {
     display: flex;
@@ -628,8 +629,7 @@
   .benefit-right2 {
     position: relative;
     width: 100% !important;
-
-    background-image: url("../images/home-page/benefits/car-bg.jpg");
+    background-image: url("/images/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -741,7 +741,7 @@
     margin-bottom: 2rem;
   }
   .city-call-to-action-btn-component {
-    background-color: #28b097;
+    background-color: #0b4c9d;
     cursor: pointer;
     justify-content: center;
     font-size: 1rem;
@@ -755,7 +755,7 @@
   }
 
   .city-call-to-action-btn-component:hover {
-    background-color: #e77640;
+    background-color: #28b097;
   }
 
   .city-benefits-section {
@@ -766,7 +766,7 @@
   }
 
   .city-benefits-heading h2 {
-    color: #01628f;
+    color: #0b4c9d;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.2rem;
@@ -812,7 +812,7 @@
   .city-benefit-element-img-wrapper2 {
     width: 4.5rem;
     height: 4.5rem;
-    background-color: black;
+    background-color: #28b097;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -877,13 +877,13 @@
     height: 1rem;
   }
   .third-img {
-    background-image: url("../images/city-page/intro-img.jpg") !important;
+    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
   }
   .benefit-right2 {
     position: relative;
     width: 50% !important;
     height: 500px !important;
-    background-image: url("../images/home-page/benefits/car-bg.jpg");
+    background-image: url("/images/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -906,6 +906,7 @@
   }
   .city-why-choose img {
     width: 100%;
+    height: 100%;
     gap: 5rem;
   }
   .city-why-choose .city-description {
@@ -1138,7 +1139,7 @@
     width: 43%;
     max-width: 500px !important;
     height: 800px;
-    background-image: url("../images/home-page/benefits/car-bg.jpg");
+    background-image: url("/images/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1194,13 +1195,13 @@
     height: 1rem;
   }
   .third-img {
-    background-image: url("../images/city-page/intro-img.jpg") !important;
+    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
   }
   .benefit-right2 {
     position: relative;
     width: 50% !important;
     height: 500px !important;
-    background-image: url("../images/home-page/benefits/car-bg.jpg");
+    background-image: url("/images/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1223,6 +1224,7 @@
   }
   .city-why-choose img {
     width: 100%;
+    height: 100%;
     gap: 5rem;
   }
   .city-why-choose .city-description {

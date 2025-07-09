@@ -30,6 +30,11 @@
   background-color: #28b097;
 }
 
+.homepage-height-margin-container {
+  width: 100vw;
+  margin-top: 2rem;
+}
+
 .error-message {
   color: red;
   font-size: 12px;
@@ -170,7 +175,7 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1.2em;
-  margin-bottom: 0.7rem;
+  /* margin-bottom: 0.7rem; */
 }
 .why-carmaa-container h1 {
   width: 65%;
@@ -266,7 +271,7 @@
   padding-inline: 1rem;
   text-align: center;
   padding-top: 3rem;
-  color: #28b097;
+  color: #0e111b;
 }
 
 .benefits-of-choosing-carmaa-para {
@@ -436,6 +441,11 @@
   width: 100% !important;
   font-family: var(--font) !important;
 }
+
+#downld-carmaa-para {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
 .accordion button {
   position: relative;
   display: block;
@@ -533,22 +543,24 @@
 
 .android-ios-heading {
   font-size: 1.5rem;
+  color: #0b4c9d;
 }
 
 .carmaa-app-download-heading {
   font-size: 1.3rem;
+  color: #0b4c9d;
 }
 
 .Car-service-center {
   text-align: center;
   font-size: 1.3rem;
-  color: #28b097;
+  color: #0e111b;
   padding-top: 3rem;
 }
 
 .android-ios-heading:hover,
 .carmaa-app-download-heading:hover {
-  color: rgb(176, 98, 176);
+  color: #28b097;
 }
 
 .modal-wrapper2 {
@@ -868,6 +880,12 @@
   cursor: pointer;
 }
 
+.why-carmaa-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .video-description .play-button::before {
   content: "";
   position: absolute;
@@ -904,7 +922,7 @@
   }
 }
 .before-after-sub-heading {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   color: var(--primary-color) !important;
   text-align: center;
 }
@@ -1227,6 +1245,7 @@
   text-align: center;
   color: #666666;
   font-weight: 500;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -1236,12 +1255,13 @@
     font-weight: 700;
   }
   .downld-carmaa-para-content {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 
   .three-images-homepage-section {
     height: 32rem;
+    width: 96%;
     position: absolute;
     bottom: -27%;
     left: 0%;
@@ -1252,7 +1272,7 @@
 
 .downld-carmaa-heading span {
   color: var(--primary-color);
-  font-size: 2.5rem;
+  font-size: 58px;
 }
 
 .app-dwnld-main-container {
@@ -1267,6 +1287,21 @@
 @media (max-width: 600px) {
   .app-dwnld-main-container {
     flex-wrap: wrap;
+    padding-top: 0px;
+  }
+
+  .app-dwnld-img-container {
+    transition: transform 0.3s ease;
+    height: 100px;
+    width: 100%;
+  }
+
+  .downld-carmaa-para-content {
+    padding-bottom: 0rem;
+  }
+
+  #downld-carmaa-para {
+    padding-top: 2rem;
   }
 }
 
@@ -1298,6 +1333,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10%;
+  padding-top: 1rem;
 }
 
 .how-it-works-container {
@@ -1482,7 +1518,7 @@
     border-radius: 0.5rem;
     font-size: 0.85rem;
     letter-spacing: 2px;
-    padding: 18px 40px;
+    padding: 13px 25px;
     border: none;
     cursor: pointer;
     position: relative;
@@ -1580,11 +1616,25 @@
       height: 26vh;
     }
 
+    #how-it-works-main-container-id {
+      padding-top: 4rem;
+    }
+
+    .downld-carmaa-heading span {
+      font-size: 36px;
+    }
+
     .thank-you-page-container {
       width: 85%;
     }
     .hero-section-btn2 {
       display: none;
+    }
+  }
+
+  @media (max-width: 900px) and (min-width: 10px) {
+    .homepage-height-margin-container {
+      margin-top: 0px;
     }
   }
 
@@ -1596,6 +1646,10 @@
 
     .thank-you-page-container {
       width: 85%;
+    }
+
+    .hero-section-btn2 {
+      display: none;
     }
   }
   .home-video-desc {
@@ -1942,9 +1996,32 @@
     --speed: 45s;
     --item-width: 300px;
     --item-gap: 25px;
+    position: relative;
     overflow: hidden;
     --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
     --track-width: calc(var(--item-width-plus-gap) * calc(var(--numItems) - 1));
+  }
+  .testimonial-slider-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px; /* adjust width for fade size */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    pointer-events: none; /* so it doesn’t block clicks */
+  }
+
+  .testimonial-slider-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 9;
   }
 
   .testimonial-track-2 {
@@ -2331,6 +2408,10 @@
     .video-section {
       display: block;
     }
+
+    .app-dwnld-main-container {
+      padding-top: 0px;
+    }
   }
   video {
     width: 80%;
@@ -2419,6 +2500,7 @@
   .why-carmaa-container {
     width: 70%;
     margin: 0px auto;
+    margin-top: 3rem;
   }
   .why-carmaa-container h2 {
     color: var(--primary-color);
@@ -2428,7 +2510,7 @@
     text-transform: uppercase;
     text-decoration: none;
     line-height: 1.2em;
-    margin-bottom: 0.7rem;
+    /* margin-bottom: 0.7rem; */
   }
   .why-carmaa-container h1 {
     width: 65%;
@@ -2940,7 +3022,7 @@
   .benefit-element-img-wrapper2 {
     width: 4.5rem;
     height: 4.5rem;
-    background-color: #0e111b;
+    background-color: #28b097;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3075,7 +3157,7 @@
     }
   }
   .before-after-sub-heading {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     color: var(--primary-color) !important;
     text-align: center;
   }
@@ -3233,6 +3315,7 @@
     container-type: inline-size;
     grid-template-columns: var(--track-width) [track] 0px [resting];
     width: max-content;
+    background-color: "#ffff";
   }
 
   .testimonial-card {
@@ -3242,7 +3325,7 @@
     animation-delay: calc(
       var(--speed) / var(--numItems) * var(--itemIndex) * -1
     );
-/* 
+    /* 
     -webkit-box-shadow: 10px 10px 29px -3px rgba(26, 63, 87, 1);
     -moz-box-shadow: 10px 10px 29px -3px rgba(26, 63, 87, 1);
     box-shadow: 10px 10px 29px -3px rgba(26, 63, 87, 1); */
@@ -3415,7 +3498,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F3FF", endColorstr="#01628F", GradientType=1 );
 }
 
-.hero-section-btn2:before {
+/* .hero-section-btn2:before {
   content: "";
   position: absolute;
   height: 100px;
@@ -3428,15 +3511,15 @@
   transition: 0.7s;
   transform: rotate(-20deg) translateX(-60px);
   animation: slide 2s infinite;
-}
-@keyframes slide {
+} */
+/* @keyframes slide {
   0% {
     transform: rotate(-20deg) translateX(-60px);
   }
   100% {
     transform: rotate(-20deg) translateX(200px) translateY(70px);
   }
-}
+} */
 
 .services-card-container {
   display: flex;

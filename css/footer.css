@@ -37,14 +37,15 @@
 
 .follow-us {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   color: #ffffff;
   font-size: 0.9rem;
   font-family: var(--font);
   margin-top: 1rem;
-  /* margin-left: 1rem; */
 }
+
 .follow-us:hover {
   color: #28b097;
 }
@@ -89,6 +90,7 @@
   /* text-align: center; */
   padding-bottom: 0.6rem;
   font-size: 12px;
+  text-align: center;
 }
 .footer-link {
   font-family: var(--body-font);
