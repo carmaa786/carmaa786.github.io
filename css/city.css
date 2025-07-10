@@ -224,7 +224,8 @@
   justify-content: center;
   gap: 20rem;
   align-items: center;
-  padding: 6rem 4rem;
+  /* padding: 6rem 4rem; */
+  padding: 3rem 1rem;
   background-color: #f0f3ff;
 }
 .city-why-choose .img-component {

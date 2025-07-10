@@ -1197,6 +1197,12 @@
   border-radius: 1rem; /* optional: smooth corners */
 }
 
+@media (max-width: 900px) and (min-width: 10px) {
+  .location-map {
+    display: none;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 1200px) {
   .app-img-container {
