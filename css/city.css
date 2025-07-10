@@ -265,9 +265,9 @@
   text-align: justify;
   font-family: var(--body-font);
   width: 65%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 3rem; */
 }
 .our-services-section-city {
   background-color: #0e111b;
@@ -475,6 +475,9 @@
   color: #ffffff;
   border: 1px solid #fff;
 }
+.city-call-to-action-btn-component:hover {
+  background-color: #28b097;
+}
 
 .city-benefit-element {
   width: 100%;
@@ -549,6 +552,7 @@
     font-size: 1.2rem;
     text-align: justify;
     margin-bottom: 2rem;
+    font-weight: 400;
   }
   .city-call-to-action-btn-component {
     background-color: #0b4c9d;

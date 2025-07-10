@@ -166,11 +166,6 @@
   font-size: 2rem;
 }
 
-.menu-navbar-services {
-  border: 1px solid #888;
-  border-bottom: none;
-}
-
 /* Dropdown menu styling */
 .dropdown {
   background-color: white;
@@ -239,6 +234,13 @@
 
 .hamburger-menu-container {
   display: none;
+}
+
+
+@media (max-width: 1150px) and (min-width: 800px){
+  .hamburger-menu-container{
+    display: flex;
+  }
 }
 
 @media (max-width: 900px) and (min-width: 0px) {
