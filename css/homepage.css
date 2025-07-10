@@ -1275,6 +1275,7 @@
     left: 0%;
     transform: translateX(0%);
     padding-inline: 1rem;
+    z-index: 0;
   }
 }
 

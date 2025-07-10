@@ -54,10 +54,14 @@
   color: #000000;
   font-size: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .number-hover:hover {
   color: #28b097;
+  position: relative;
+  z-index: 1;
 }
 
 .our-services-container-heading {
