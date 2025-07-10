@@ -95,7 +95,7 @@ body {
   padding: 10px;
 }
 
-.service-ul-heading{
+.service-ul-heading {
   margin-bottom: 0px !important;
 }
 
@@ -103,7 +103,7 @@ body {
   list-style: disc;
   font-size: 1rem;
   font-family: var(--body-font);
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   /* margin-bottom: 1.5rem; */
   line-height: 1.6em;
 }
@@ -246,10 +246,23 @@ button:hover {
     margin-bottom: 1rem;
     font-family: var(--font);
   }
+  /* .service-right-section {
+    width: 90%;
+  } */
+}
+
+@media screen and (min-width: 600px) {
   .service-right-section {
     width: 90%;
   }
 }
+
+@media (max-width: 600px) and (min-width: 300px) {
+  .service-right-section {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .service-main-section {
     display: flex;

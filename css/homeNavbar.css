@@ -166,6 +166,11 @@
   font-size: 2rem;
 }
 
+.menu-navbar-services {
+  border: 1px solid #888;
+  border-bottom: none;
+}
+
 /* Dropdown menu styling */
 .dropdown {
   background-color: white;
@@ -175,6 +180,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   position: absolute;
+  left: -50px;
 }
 
 /* Show dropdown on hover */
@@ -227,6 +233,8 @@
 
 .navbar-menu-ul {
   display: none;
+  width: 30px;
+  height: 30px;
 }
 
 .hamburger-menu-container {
@@ -279,6 +287,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   position: absolute;
+  left: -50px;
+}
+#services-dropdown {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 318px;
 }
 
 /* Show dropdown on hover */

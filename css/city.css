@@ -37,7 +37,6 @@
 }
 .city-benefit-element {
   width: 46%;
-  padding: 2rem 2rem;
   border-radius: 10px;
   border-style: solid;
   border-color: #01628f;
@@ -121,6 +120,14 @@
   padding-top: 2rem;
   padding-bottom: 0rem;
 }
+
+.service-image-container {
+  width: 64%;
+}
+.accordion {
+  margin: 50px auto;
+  width: 85%;
+}
 @media (max-width: 900px) and (min-width: 300px) {
   .car-decor-unique-section {
     width: 90%;
@@ -129,6 +136,9 @@
 
   .car-mechanic-description {
     padding-inline: 0rem;
+  }
+  .city-why-choose .city-description {
+    padding-inline: 1rem;
   }
 }
 
@@ -140,6 +150,10 @@
   .our-services-section-city-left img {
     height: 400px;
     object-fit: cover;
+  }
+
+  .service-image-container {
+    width: 100%;
   }
 }
 
@@ -312,6 +326,8 @@
   font-size: 1.1rem;
   font-family: var(--body-font);
   text-align: justify;
+  line-height: 1.5rem;
+  padding-top: 1rem;
 }
 
 .commitment-quality-left {
@@ -456,6 +472,34 @@
   padding-top: 1rem;
   box-shadow: 10px 10px 10px hsl(0, 50%, 2%, 0.5);
   border-radius: 10px;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.city-benefit-element {
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #01628f;
+  box-shadow: 5px 5px 5px hsl(0, 50%, 2%, 0.5);
+}
+
+@media (max-width: 600px) and (min-width: 10px) {
+  .city-why-choose .city-description {
+    padding-inline: 1rem;
+  }
+  .city-benefit-element {
+    padding: 1rem;
+  }
+
+  .city-call-to-action-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+    gap: 3rem;
+  }
 }
 
 @media screen and (min-width: 300px) {
@@ -480,14 +524,7 @@
     margin-top: 4rem;
     background-image: url("../images/aboutus/textture-bg.png");
   }
-  .city-call-to-action-wrapper {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    width: 80%;
-    gap: 3rem;
-  }
+
   .city-call-to-action-left {
     width: 100%;
   }
@@ -524,6 +561,8 @@
     padding-top: 1rem;
     box-shadow: 10px 10px 10px hsl(0, 50%, 2%, 0.5);
     border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #fff;
   }
 
   .city-benefits-section {
@@ -545,15 +584,6 @@
     text-align: center;
     font-size: 1rem;
     margin-top: 1.4rem;
-  }
-
-  .city-benefit-element {
-    width: 100%;
-    padding: 2rem 2rem;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #01628f;
-    box-shadow: 5px 5px 5px hsl(0, 50%, 2%, 0.5);
   }
 
   .our-services-section-city {
@@ -590,6 +620,7 @@
   }
   .city-why-choose .right-desc {
     width: 100%;
+    line-height: 1.5rem;
   }
 
   .parallex-cta-inner-city {
@@ -679,7 +710,31 @@
     flex-direction: row;
     gap: 1rem;
   }
+  .city-call-to-action-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 80%;
+    gap: 3rem;
+  }
 }
+
+@media screen and (min-width: 900px) {
+  .city-why-choose .city-description {
+    padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  .city-why-choose .city-description {
+    padding-inline: 0rem;
+  }
+  .city-benefits-section {
+    width: 90%;
+  }
+}
+
 @media screen and (min-width: 1100px) {
   .benefit-element-desc h3 {
     min-height: 3rem;
@@ -752,6 +807,8 @@
     box-shadow: 10px 10px 10px hsl(0, 50%, 2%, 0.5);
     border-radius: 10px;
     transition: background-color 0.3s ease-in-out;
+    color: #ffffff;
+    border: 1px solid #fff;
   }
 
   .city-call-to-action-btn-component:hover {

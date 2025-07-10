@@ -766,6 +766,13 @@
   .counter-section-container {
     display: none;
   }
+  .benefits-of-choosing-carmaa-para {
+    padding: 0rem;
+  }
+  .Car-service-center {
+    text-align: center;
+    padding-inline: 1rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -1250,9 +1257,10 @@
 
 @media (max-width: 600px) {
   .downld-carmaa-heading {
-    font-size: 38px;
+    font-size: 32px;
     padding-top: 2rem;
     font-weight: 700;
+    padding-inline: 1rem;
   }
   .downld-carmaa-para-content {
     font-size: 16px;

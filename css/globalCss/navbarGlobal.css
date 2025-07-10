@@ -82,6 +82,18 @@
   border-radius: 4px;
   position: absolute;
   list-style: none;
+  left: -50px;
+}
+
+.menu-navbar-services {
+  border: 1px solid lightgray;
+  border-bottom: none;
+}
+
+#services-dropdown {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 318px;
 }
 
 /* Show dropdown on hover */
