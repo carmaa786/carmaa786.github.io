@@ -118,12 +118,10 @@ a {
   font-size: 0.9rem;
 }
 .read-more:hover {
-  color: #7e64e6;
+  color: #28b097;
 }
 
 .blog-img-container {
-  /* width: 25rem;
-  height: 13rem; */
   padding: 0rem 1rem 1rem 1rem;
 }
 
@@ -148,7 +146,6 @@ a {
     padding-left: 12px;
     padding-bottom: 5rem;
     padding-top: 2rem;
-
   }
 
   .main-container {

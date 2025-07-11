@@ -582,6 +582,15 @@
     text-decoration: none;
   }
 
+  a {
+    color: #0b4c9d;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #28b097;
+  }
+
   .breadcrumb-link:hover {
     /* color: var(--primary-color); */
     color: #28b097 !important;

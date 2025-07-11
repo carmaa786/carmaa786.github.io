@@ -9,6 +9,16 @@
 .whats-included-container{
     min-height: 21rem;
 }
+
+a {
+    color: #0b4c9d;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #28b097;
+  }
+  
 .spinner {
     border: 2px solid rgba(255, 255, 255, 0.3);
     width: 16px;

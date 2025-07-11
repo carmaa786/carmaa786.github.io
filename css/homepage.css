@@ -32,7 +32,6 @@
 
 .homepage-height-margin-container {
   width: 100vw;
-  margin-top: 2rem;
 }
 
 .error-message {
@@ -42,6 +41,15 @@
   margin-top: 5px;
   margin-bottom: 1.5rem;
   font-family: var(--body-font);
+}
+
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
 }
 
 .success-message {
@@ -270,8 +278,8 @@
   font-size: 1.5rem;
   padding-inline: 1rem;
   text-align: center;
-  padding-top: 3rem;
   color: #0e111b;
+  padding-bottom: 1rem;
 }
 
 .benefits-of-choosing-carmaa-para {
@@ -535,10 +543,12 @@
 
 .no-underline {
   text-decoration: none;
+  color: #0e111b;
 }
 
 .no-underline:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #28b097;
 }
 
 .android-ios-heading {
@@ -548,14 +558,13 @@
 
 .carmaa-app-download-heading {
   font-size: 1.3rem;
-  color: #0b4c9d;
+  color: #28b097;
 }
 
 .Car-service-center {
   text-align: center;
   font-size: 1.3rem;
   color: #0e111b;
-  padding-top: 3rem;
 }
 
 .android-ios-heading:hover,
@@ -1274,8 +1283,8 @@
   }
 
   .three-images-homepage-section {
-    height: 32rem;
-    width: 96%;
+    height: 26rem;
+    width: 100%;
     position: absolute;
     bottom: -27%;
     left: 0%;
@@ -1644,12 +1653,6 @@
     }
     .hero-section-btn2 {
       display: none;
-    }
-  }
-
-  @media (max-width: 900px) and (min-width: 10px) {
-    .homepage-height-margin-container {
-      margin-top: 0px;
     }
   }
 

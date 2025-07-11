@@ -7,12 +7,21 @@
   --silver: #bac4c9;
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+  /* text-decoration: underline; */
+}
+
 .contact-main .heading {
   text-align: center;
   font-size: 3.5rem;
   font-family: var(--font);
   color: black;
-
   font-weight: 800;
   margin-top: 0.6rem;
 }

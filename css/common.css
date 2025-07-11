@@ -23,6 +23,15 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .mobile-number-ref {
   color: white;
   text-decoration: none;
@@ -69,7 +78,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  background-color: #01415f;
+  background-color: #0b4c9d;
 }
 
 .img-wrapper:hover {
@@ -206,7 +215,7 @@
 
   .topbar-section-common {
     padding: 0.5rem 2rem;
-    background-color: #01628f;
+    background-color: #0b4c9d;
     position: relative;
     z-index: 9999;
   }

@@ -6,6 +6,16 @@
     --body-font: "Inter", "Inter Placeholder", "sans-serif";
     --silver:#BAC4C9
 }
+a {
+    color: #0b4c9d;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #28b097;
+    /* text-decoration: underline; */
+  }
+
 .hero-section-btn2-franchise{
     color: white;
     max-width: 20rem;

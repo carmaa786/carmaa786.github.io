@@ -8,6 +8,15 @@ modal css .download-btn {
   margin-top: 0rem;
 }
 
+/* a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+} */
+
 .download-btn img {
   height: auto;
   width: 100%;

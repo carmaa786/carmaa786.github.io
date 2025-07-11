@@ -4,6 +4,15 @@
   display: none;
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .pdInline {
   padding-inline: 92px;
 }
@@ -241,6 +250,7 @@
 .map-address-footer-container {
   text-align: center;
   background-color: #0e111b;
+  margin-top: 2rem;
 }
 
 .map-address-footer-container p {

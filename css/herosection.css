@@ -11,6 +11,15 @@
   margin-bottom: 20rem;
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .center-div-container-hr {
   display: flex;
   align-items: center;
@@ -36,7 +45,7 @@
   padding-bottom: 2rem;
 }
 .homepage-main-images-container {
-  width: 60%;
+  /* width: 60%; */
   max-height: 100vh;
   margin-bottom: 5rem;
 }
@@ -87,10 +96,6 @@
 
 @media (max-width: 900px) and (min-width: 600px) {
   .homepage-main-images-container {
-    /* max-width: 100%;
-    overflow: hidden;
-    height: auto;
-    width: 50%; */
     display: none;
   }
 

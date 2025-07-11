@@ -7,6 +7,16 @@
   --silver: #bac4c9;
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  color: #28b097;
+}
+
 .city-why-choose-heading {
   font-size: 2.5rem;
   line-height: 3.3rem;
@@ -36,6 +46,7 @@
   gap: 2rem;
 }
 .city-benefit-element {
+  padding: 1rem;
   width: 46%;
   border-radius: 10px;
   border-style: solid;
@@ -270,11 +281,17 @@
   justify-content: center;
   gap: 3rem; */
 }
+
+.our-service-main-section {
+  background-image: url(../images/aboutus/textture-bg.png);
+  background-color: #0b4c9d;
+  padding: 1rem 1rem 2rem 1rem;
+}
 .our-services-section-city {
-  background-color: #0e111b;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2%;
+  padding: 1rem;
 }
 .our-services-section-city-left {
   width: 48%;
@@ -295,7 +312,7 @@
 }
 .our-services-section-city-right p {
   font-family: var(--body-font);
-  color: var(--silver);
+  color: #fff;
   text-align: justify;
 
   font-size: 1.1rem;
@@ -421,13 +438,11 @@
 }
 
 .city-call-to-action-btn {
-  background-color: var(--primary-color);
   padding: 4rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
-  background-image: url("../images/aboutus/textture-bg.png");
 }
 .city-call-to-action-wrapper {
   justify-content: center;
@@ -520,13 +535,11 @@
   }
 
   .city-call-to-action-btn {
-    background-color: var(--primary-color);
     padding: 4rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
-    background-image: url("../images/aboutus/textture-bg.png");
   }
 
   .city-call-to-action-left {
@@ -592,12 +605,12 @@
   }
 
   .our-services-section-city {
-    background-color: #0e111b;
     display: flex;
     flex-direction: column;
     gap: 2%;
     padding: 1rem;
   }
+
   .our-services-section-city-left {
     width: 100%;
   }
@@ -689,7 +702,7 @@
     height: 500px;
   }
   .commitment-quality {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     display: flex;
     gap: 2.5rem;
     flex-direction: column;
@@ -757,13 +770,11 @@
   }
 
   .city-call-to-action-btn {
-    background-color: var(--primary-color);
     padding: 4rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
-    background-image: url("../images/aboutus/textture-bg.png");
   }
   .city-call-to-action-wrapper {
     justify-content: center;
@@ -994,9 +1005,9 @@
   .city-why-choose .right-desc {
     text-align: justify;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* gap: 3rem; */
     font-size: 1rem;
     font-family: var(--body-font);
     margin-top: 1rem;
@@ -1015,7 +1026,6 @@
   }
 
   .our-services-section-city {
-    background-color: #0e111b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1027,7 +1037,7 @@
     margin-bottom: 0.5rem;
   }
   .our-services-section-city-right-points strong {
-    color: #01628f;
+    color: #fff;
     font-weight: 700;
   }
   .our-services-section-city-left {
@@ -1049,7 +1059,7 @@
   }
   .our-services-section-city-right p {
     font-family: var(--body-font);
-    color: var(--silver);
+    color: #fff;
     text-align: justify;
 
     font-size: 1rem;
@@ -1329,11 +1339,12 @@
     width: 100%;
   }
   .our-services-section-city {
-    background-color: #0e111b;
     display: flex;
     flex-direction: row;
     gap: 2%;
+    padding: 1rem;
   }
+
   .our-services-section-city-left {
     width: 48%;
     height: 658px;
@@ -1355,7 +1366,7 @@
   }
   .our-services-section-city-right p {
     font-family: var(--body-font);
-    color: var(--silver);
+    color: #fff;
     text-align: justify;
 
     font-size: 1.1rem;

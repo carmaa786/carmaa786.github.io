@@ -35,11 +35,20 @@
   margin-left: 12px;
 }
 
+/* a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+} */
+
 .follow-us {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   color: #ffffff;
   font-size: 0.9rem;
   font-family: var(--font);

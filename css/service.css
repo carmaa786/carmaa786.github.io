@@ -17,6 +17,16 @@ body {
   padding-top: 2rem;
   gap: 2rem;
 }
+
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .service-img-container {
   position: relative;
 }
