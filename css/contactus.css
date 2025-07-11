@@ -94,9 +94,7 @@ a:hover {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-family: var(--font);
-  /* color: var(--primary-color);
-     */
-  color: #01628f;
+  color: var(--primary-color);
 }
 .contact-type-container-right p {
   font-size: 1.1rem;
@@ -126,7 +124,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  background-color: #01628f;
+  background-color: #0b4c9d;
 }
 .social-media-icons2 .img-wrapper:hover {
   background-color: #28b097 !important
@@ -235,8 +233,8 @@ textarea {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     font-family: var(--font);
-    /* color: var(--primary-color); */
-    color: #01628f;
+    color: var(--primary-color);
+    /* color: #01628f; */
   }
   .contact-type-container-right p {
     font-size: 1.1rem;

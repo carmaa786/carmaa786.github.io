@@ -561,6 +561,10 @@ a:hover {
   color: #28b097;
 }
 
+.carmaa-app-download-heading:hover {
+  text-decoration: underline;
+}
+
 .Car-service-center {
   text-align: center;
   font-size: 1.3rem;
@@ -1390,6 +1394,12 @@ a:hover {
 
 #how-it-works-main-container-id {
   padding-inline: 2rem;
+}
+
+@media (max-width: 900px) and (min-width: 10px) {
+  #how-it-works-main-container-id {
+    padding-top: 4rem;
+  }
 }
 
 .app-dwnld-img-container {

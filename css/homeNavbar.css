@@ -71,7 +71,7 @@
   background-color: #f1f1f1;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  max-height: 225px;
+  max-height: 360px;
   width: 100%;
   overflow-y: scroll; /* Always show scrollbar */
   overflow-x: hidden;
@@ -236,9 +236,8 @@
   display: none;
 }
 
-
-@media (max-width: 1150px) and (min-width: 800px){
-  .hamburger-menu-container{
+@media (max-width: 1150px) and (min-width: 800px) {
+  .hamburger-menu-container {
     display: flex;
   }
 }

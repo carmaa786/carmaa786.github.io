@@ -31,7 +31,7 @@ a:hover {
   position: relative;
 }
 .service-img-price-txt {
-  background-color: #01628f;
+  background-color: #28b097;
   padding-left: 1rem;
   padding-right: 1rem;
   position: absolute;
@@ -137,6 +137,7 @@ a:hover {
 .service-contact-section-desc-heading {
   font-size: 1.2rem;
   color: #01628f;
+  /* color: #0b4c9d; */
   margin-bottom: 0.2rem;
   font-weight: 600;
 }
@@ -150,7 +151,7 @@ a:hover {
 
 /* Container for the form */
 .form-container {
-  background-color: #01628f;
+  background-color: #0b4c9d;
   padding: 20px;
   width: 100%;
   border-radius: 8px;

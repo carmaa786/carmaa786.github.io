@@ -65,7 +65,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(245, 245, 245, 1);
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -540,8 +540,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* carousal */
-
 .carousel-container {
   overflow: hidden;
   width: 100%;
@@ -562,13 +560,13 @@ a:hover {
 
 .carousel-track {
   display: flex;
-  animation: scroll-left 60s linear infinite;
+  animation: scroll-left 20s linear infinite;
 }
 
 .card {
   flex: 0 0 auto;
-  width: 250px; /* Adjust width */
-  margin-right: 20px; /* Gap */
+  width: 250px;
+  margin-right: 20px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -580,7 +578,6 @@ a:hover {
   object-fit: cover;
 }
 
-/* Smooth scroll animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
