@@ -76,6 +76,16 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 1100px) and (min-width: 10px) {
+  .city-banner-container-blue {
+    background-color: #0b4c9d;
+  }
+
+  .city-banner-container-green {
+    background-color: #28b097;
+  }
+}
+
 .city-benefit-element-img-wrapper2 img {
   width: 2.5rem;
   height: 2.5rem;
@@ -153,6 +163,12 @@ a:hover {
   }
 }
 
+@media (max-width: 900px) and (min-width: 600px) {
+  .service-image-container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) and (min-width: 300px) {
   .car-decor-unique-section {
     padding-top: 30px;
@@ -166,6 +182,13 @@ a:hover {
   .service-image-container {
     width: 100%;
   }
+}
+
+.our-services-section-city-right h1 {
+  font-family: var(--font);
+  color: #ffffff;
+  padding-top: 2rem;
+  font-size: 2rem;
 }
 
 .pdbottom {
@@ -1045,12 +1068,6 @@ a:hover {
   }
   .our-services-section-city-right {
     width: 80%;
-  }
-  .our-services-section-city-right h1 {
-    font-family: var(--font);
-    color: #ffffff;
-    padding-top: 2rem;
-    font-size: 2rem;
   }
   .our-services-section-city-right .desc {
     font-family: var(--body-font);
