@@ -1097,8 +1097,14 @@
           <li style="cursor: pointer">
             <a class="nav-item-list navbar-item-menu-link" href="../contactus/"
               >Contact Us</a
-            >
-          </li>
+            >            
+        </li>
+        <li style="cursor: pointer">
+            <!-- <a class="nav-item-list navbar-item-menu-link" href="../contactus/"
+              >Contact Us</a
+            >             -->
+            <button class=" open-booking-modal hero-section-btn2 booking-button navbar-book-btn" id="hero-section-btn1">Book Now</button>
+        </li>
     </ul>
         <div class="hamburger-menu-container">
           <button class="toggle navbar-toggle-menu" id="toggle">
@@ -2725,6 +2731,7 @@ document.addEventListener("DOMContentLoaded", function () {
         import { CTAApi } from './js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
         event.preventDefault();
+
           
           // Get input values
           const name = document.getElementById('nameInput').value.trim();

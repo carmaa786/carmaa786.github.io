@@ -1097,7 +1097,7 @@ a:hover {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1005;
+  z-index: 999999;
 }
 
 .thankyou-opacity-container {
@@ -1661,12 +1661,18 @@ a:hover {
     .thank-you-page-container {
       width: 85%;
     }
+    #hero-section-btn1{
+      display: flex;
+    }
     .hero-section-btn2 {
       display: none;
     }
   }
 
   @media (max-width: 900px) and (min-width: 600px) {
+    #hero-section-btn1{
+      display: flex;
+    }
     .video-section {
       width: 51%;
       height: 49vh;
@@ -1728,7 +1734,7 @@ a:hover {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    /* z-index: 100; */
+    z-index: 9999;
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -2823,7 +2829,7 @@ a:hover {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    /* z-index: 100; */
+    z-index: 9999;
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     animation: fadeIn 0.5s forwards;
