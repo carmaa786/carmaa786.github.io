@@ -94,7 +94,7 @@
             transform: scale(1.05);
         }
 
-        @media (max-width: 900px) and (min-width: 10px){
+        @media (max-width: 900px) and (min-width: 600px){
             .links-main-container{
                 gap: 25px;
                 flex-wrap: wrap;
@@ -105,6 +105,19 @@
             }
         }
 
+        @media (max-width: 600px) and (min-width: 200px) {
+            .download-btn-footer{
+                width: 8rem;
+            }
+            .links-main-container{
+                gap: 50px;
+                flex-wrap: wrap;
+
+            } 
+            .link-section-child {
+                align-items: start;
+            }
+        }
     </style>
 
 

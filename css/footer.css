@@ -159,12 +159,9 @@ a:hover {
     display: flex;
     padding-left: 0px;
     gap: 5%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
-  .download-btn-footer {
-    padding-top: 0px;
-  }
 }
 
 @media screen and (min-width: 300px) {

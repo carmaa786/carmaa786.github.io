@@ -415,7 +415,7 @@
     line-height: 1.5rem;
   }
   .mission-section {
-    padding-top: 18rem;
+    padding-top: 16rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -953,9 +953,6 @@
     width: 29%;
     height: 420px;
   }
-  .mission-section {
-    padding-top: 10rem;
-  }
   .mission-container-element {
     width: 23%;
     min-height: 490px;
@@ -969,6 +966,11 @@
   }
 }
 
+@media screen and (min-width: 900px) {
+  .mission-section {
+    padding-top: 10rem;
+  }
+}
 /* .certificate-flex-container{
   padding-inline: 20px;
 } */
