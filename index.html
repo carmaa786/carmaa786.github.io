@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="./css/herosection.css">
     <link rel="stylesheet" href="./css/homeNavbar.css">
     <link rel="stylesheet" href="./css/common.css"/>
     <link rel="canonical" href="https://carmaacarcare.com"/>
@@ -34,9 +35,6 @@
 <meta property="og:image" content="https://carmaacarcare.com/images/logo.png">
 <meta property="og:site_name" content="Carmaa Car Care">
 <meta property="og:locale" content="en_IN">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> -->
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Carmaa Doorstep Car Washing Service | Waterless Car Wash">
 <meta name="twitter:description" content="Carmaa offers doorstep Car washing service and waterless car wash services in Dehradun & Uttarakhand. Book now for fast, convenient car cleaning at home.">
@@ -486,7 +484,6 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-            /* font-family: "Inter", sans-serif; */
             font-family:"Lexend", "Lexend Placeholder", "sans-serif";
             font-size: 16px;
         }
@@ -531,7 +528,7 @@
            
         }
 
-        @media (max-width: 900px) and (min-width: 0px) {
+        @media (max-width: 1150px) and (min-width: 0px) {
              .toggle {
                 display: inline;
                 cursor: pointer;
@@ -781,6 +778,8 @@
         aspect-ratio: 1;
         z-index: 99999999;
       "
+
+      class="whatsapp-icon-container"
     >
       <a
         href="https://api.whatsapp.com/send?phone=917042555401"
@@ -928,8 +927,6 @@
     <button class=" open-booking-modal hero-section-btn2 booking-button navbar-book-btn">Book Now</button>
 
 
-
-
     <ul class="menu navbar-menu-ul" id="menu">
           <li>
             <a class="nav-item-list navbar-item-menu-link" href="/">Home</a>
@@ -941,64 +938,64 @@
           </li>
           <li class="dropdownCon nav-dropdown">
             <span class="nav-item-list navbar-item-menu-link">Services</span>
-            <ul class="dropdown">
-              <li>
+            <ul class="dropdown" id="services-dropdown">
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/interior-car-cleaning-service/"
                   >Interior Car Cleaning</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/paint-protection-and-coating-services/"
                   >Paint Protection And Coating
                 </a>
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/ceramic-coating-service/"
                   >Ceramic Coating
                 </a>
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/glass-and-surface-coating-services/"
                   >Glass And Surface Coating</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/full-car-detailing-service/"
                   >Full Car Detailing</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="exterior-car-cleaning-washing/"
                   >Exterior Car Cleaning & Washing</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/car-dry-cleaning-service/"
                   >Car Dry Cleaning</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/car-body-polish-and-car-waxing-service/"
                   >Complete Car Body Polish and Wax</a
                 >
               </li>
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/full-car-wash-service/"
@@ -1006,7 +1003,7 @@
                 >
               </li>
 
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/car-deep-cleaning-services/"
@@ -1014,7 +1011,7 @@
                 >
               </li>
 
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/glass-and-surface-coating-services/"
@@ -1023,7 +1020,7 @@
               </li>
 
 
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/Doorstep-car-decoration-service-in-dehradun/"
@@ -1031,7 +1028,7 @@
                 >
               </li>
 
-              <li>
+              <li class="menu-navbar-services">
                 <a
                   class="nav-item-list navbar-item-menu-link"
                   href="/best-car-mechanics-in-dehradun/"
@@ -1068,20 +1065,20 @@
                   >Dehradun</a
                 >
               </li>
-              <!-- <li>
+              <li>
                 <a
                   class="nav-item-list navbar-item-menu-link"
-                  href="../doorstep-car-washing-service-in-noida/"
-                  >Noida</a
+                  href="/doorstep-car-washing-service-in-Haridwar/"
+                  >Haridwar</a
                 >
               </li>
               <li>
                 <a
                   class="nav-item-list navbar-item-menu-link"
-                  href="../doorstep-car-washing-service-in-uttarakhand/"
-                  >Uttarakhand</a
+                  href="/doorstep-car-washing-service-in-noida/"
+                  >Noida</a
                 >
-              </li> -->
+              </li>
             </ul>
           </li>
           <!-- <li style="cursor: pointer">
@@ -1100,15 +1097,20 @@
           <li style="cursor: pointer">
             <a class="nav-item-list navbar-item-menu-link" href="../contactus/"
               >Contact Us</a
-            >
-          </li>
+            >            
+        </li>
+        <li style="cursor: pointer">
+            <!-- <a class="nav-item-list navbar-item-menu-link" href="../contactus/"
+              >Contact Us</a
+            >             -->
+            <button class=" open-booking-modal hero-section-btn2 booking-button navbar-book-btn" id="hero-section-btn1">Book Now</button>
+        </li>
     </ul>
         <div class="hamburger-menu-container">
           <button class="toggle navbar-toggle-menu" id="toggle">
-            <ion-icon name="menu"></ion-icon>
+            <ion-icon name="menu" style="width: 30px; height: 30px; color: #0b4c9d"></ion-icon>
           </button>
         </div>
-
     <script>
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -1166,247 +1168,168 @@
     </script>
     </nav>
     
-    <div style="width: 100vw; margin-top: 2rem;" id="home">
-        <div class="home-page-main-container">
-        <div style="position: relative; z-index: 10; " class="homepage-left-services-container">
-            <h2 style="padding-bottom: 1rem; font-size: 2rem;" class="hero-section-heading"  id="homeH1">Premium Doorstep <br> <span class="ityped hero-section-subheading"></span> </h2>
-        <div>
+    <div class="homepage-height-margin-container" id="home">
 
-    <div class="car-services-container">    
-        <div class="looking-for-container">
-            
-            <a href="./car-dry-cleaning-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">
-                        <img src="./images/ui_change_images/dry_cleaning.png" alt="Car Dry Cleaning" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Car Dry Cleaning</p>
-                </div>
-            </a>
-            <a href="./full-car-detailing-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">      
-                        <img src="./images/ui_change_images/car_servicing.png" alt="Full Car Detailing" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Full Car Detailing</p>
-                </div>
-            </a>
-            <a href="./exterior-car-cleaning-washing/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/foam_wash.png" alt="Exterior Car Cleaning & Washing" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Exterior Car Cleaning</p>
-                </div>
-            </a>
-
-            
-            <a href="./interior-car-cleaning-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/paint_protection.png" alt="Interior Car Cleaning" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Interior Car Cleaning</p>
-                </div>
-            </a>
-            <a href="./full-car-wash-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/full_car_wash.png" alt="Full Car Wash" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Full Car Wash</p>
-                </div>
-            </a>
-
-            <a href="./car-deep-cleaning-services/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">    
-                        <img src="./images/ui_change_images/full_car_wash.png" alt="Deep Cleaning" loading="lazy">
-                    </div>                   
-                    <p class="home-service-para">Deep Cleaning</p>
-                </div>
-            </a>
-
-              <a href="./car-body-polish-and-car-waxing-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/rubbing_polishing.png" alt="Body Polish and Wax" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Body Polish & Wax</p>
-                </div>
-            </a>
-
-            <a href="./paint-protection-and-coating-services/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/paint_protection.png" alt="Paint Protection and coating" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Paint Protection & coating</p>
-                </div>
-            </a>
-
-            <a href="./ceramic-coating-service/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/paint_protection.png" alt="Ceramic Coating" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Ceramic Coating</p>
-                </div>
-            </a>
-
-              <a href="./glass-and-surface-coating-services/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="./images/ui_change_images/dry_cleaning.png" alt="Full Car Detailing" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Glass and Surface Coating</p>
-                </div>
-            </a>       
-            <a href="./Doorstep-car-decoration-service-in-dehradun/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="/images/car-decor/car-decor-home-img.png" alt="Full Car Detailing" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Car Decor</p>
-                </div>
-            </a>    
-            
-            <a href="/best-car-mechanics-in-dehradun/" target="_blank" class="homepage-services">
-                <div class="service-box">
-                    <div class="car-care-container">                        
-                        <img src="/images/ui_change_images/car_servicing.png" alt="Car Mechanic" loading="lazy">
-                    </div>
-                    <p class="home-service-para">Car Mechanic</p>
-                </div>
-            </a>       
-        </div>
-    </div>
-
-
-    <div class="rating-customer-container">
-        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
-            <div class="download-btn download-btn-container">
-                <img src="./images/ui_change_images/play_store.png" alt="Car detailing app" loading="lazy">
+        
+        <div class="home-page-main-container" id="home-page-hero-section">
+        <div class="home-page-main-container center-div-container" style="width: 100%; overflow: visible; border-bottom: 10px solid white; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;">
+            <div class="homepage-main-images-container"  style="width: 30rem;">
+                <img src="/images/homepage/leftSide.png" alt="carmaa car care" loading="lazy" class="whole-image-class">
             </div>
-        </a>
-         <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
-            <div class="download-btn download-btn-container">
-                <img src="./images/ui_change_images/App_Store_Black_bg.png" alt="Car detailing app" loading="lazy">
-            </div>
-        </a>
 
-        <a href="https://g.co/kgs/VgMhb2d" target="_blank" class="rating-container">
-            <div class="rating-text">
-                <div class="star-icon-rating-container">
-                    <div class="google-icon">
-                        <img src="/images/ui_change_images/google_logo.png" alt="auto workshop near me">
-                    </div>
-                    <div class="rating-sub-container">
-                        <i class="fa-solid fa-star rating-star" ></i>
-                        <p style="font-size: 1.0rem; font-weight: bold;"> 4.9
-                    </div>
-                    </p>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-
-</div>
-               
+            <div class="homepage-hero-section" id="homepage-hero-section-container">
+                <div class="homepage-hero-section-container-one">
+                    <h1 class="downld-carmaa-heading">India’s First All-in-One Sustainable Car Care App</h1>
+                    <h2 class="downld-carmaa-para-content">Your car, professionally cared for — exactly when you need it</h2>
+    
+                    <div class="app-dwnld-main-container">
+                        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
+                            <div class="app-dwnld-img-container">
+                                <img src="/images/footer/Play_Store_Black_bg.png" alt="Car repair near me" loading="lazy">
+                            </div>
+                        </a>
                 
-            <div>
-           <div>
-                 <div class="image-grid">
-                    <div class="main-image" id="main-image1">
-                        <img class="img1" src="./images/ui_change_images/car_full_wash.jpg" alt="Car Cleaning" loading="lazy">
+                        <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
+                            <div class="app-dwnld-img-container">
+                                <img src="/images/ui_change_images/App_Store_Black_bg.png" alt="Car repair near me" loading="lazy">
+                            </div>
+                        </a>
                     </div>
-                    <div class="main-image" id="main-image2">
-                        <img class="img2" src="./images/ui_change_images/car_interior.jpg" alt="car interior" loading="lazy">
-                    </div>
-                    <div class="main-image" id="main-image4">
-                        <img class="img3" src="./images/ui_change_images/detailing.jpg" alt="car detailing" loading="lazy">
-                    </div>
-                    <div class="main-image" id="main-image3">
-                        <img class="img4" src="./images/ui_change_images/img1.webp" alt="foam-wash" loading="lazy">
-                    </div>
+    
+                    <h2 class="downld-carmaa-para-content" id="downld-carmaa-para"> Ready to book? Download the app or call us at <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
+                    <span class="number-hover">+91 7042555401</span> </a>
+                    </h2>
                 </div>
-     </div>
-    </div>
+              
+
+
+
+                <div class="three-images-homepage-section" >
+                    <img src="/images/homepage/hero_img.png" alt="doorstep car wash" class="whole-image-class" style="object-fit: contain;">
+                </div>
+
+            </div>
+
+            <div class="homepage-main-images-container" style="width: 24rem;">
+                <img src="/images/homepage/rightSide.png" alt="doorstep car wash" loading="lazy" class="whole-image-class">
+            </div>
+
+        </div>
+
     </div>
 
+
+    <section class="carmaa-timeline-section">
+        <div class="why-carmaa-container">
+            <div class="our-services-container-heading">
+                <i class="fa-regular fa-star"></i>
+                <h2 class="before-after-sub-heading">OUR SERVICES</h2>
+            </div>
+        </div>
+        <h2 class="downld-carmaa-heading" id="downld-carmaa-heading-one" style="padding-top: 1rem;"> Book trusted car care services</h2>
+        <h2 class="downld-carmaa-para-content">From deep cleans to quick touch-ups, Carmaa takes care of it all</h2>
 
 
     <!-- slider section -->
-
-    <div class="pb carousal-main-container">
-
-    <section class="carousal-section">
     <div class="carousel-container">
-        <button class="prev carousal-left-btn" onclick="moveSlide(-1)">❮</button>
-        <div class="carousel">
-            <div class="card"><img src="./images/banners/BANNER1.jpg" alt="Dry Cleaning" loading="lazy"></div>
-            <div class="card"><img src="./images/banners/BANNER3.jpg" alt="car repair shops near me" loading="lazy"></div>
-            <div class="card"><img src="./images/banners/BANNER4.jpg" alt="car garage near me" loading="lazy"></div>
-            <div class="card"><img src="./images/banners/BANNER5.jpg" alt="car garage in Dehradun" loading="lazy"></div>
-            <div class="card"><img src="./images/banners/BANNER6.jpg" alt="car garage near me" loading="lazy"></div>
-        </div>
-        <button class="next carousal-right-btn" onclick="moveSlide(1)">❯</button>
+        <div class="carousel-wrapper">
+           <div class="carousel-track">
+             <div class="card"><img src="./images/banners/service1.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service2.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service3.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service6.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service4.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service5.jpg" alt=""></div>
+             <!-- duplicate cards for seamless effect -->
+             <div class="card"><img src="./images/banners/service1.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service2.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service3.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service6.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service4.jpg" alt=""></div>
+             <div class="card"><img src="./images/banners/service5.jpg" alt=""></div>
+           </div>
+         </div>
     </div>
+
+
+          <!-- <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const track = document.querySelector('.carousel-track');
+              let cards = document.querySelectorAll('.card');
+              const gap = 20;
+              let index = 0;
+            
+              // clone cards for infinite loop feel
+              cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                track.appendChild(clone);
+              });
+              cards = document.querySelectorAll('.card'); // update list
+            
+              function getVisibleCards() {
+                if (window.innerWidth < 600) return 1;
+                if (window.innerWidth < 1024) return 2;
+                return 3;
+              }
+            
+              function moveSlide() {
+                const visibleCards = getVisibleCards();
+                const cardWidth = cards[0].offsetWidth + gap;
+                index++;
+            
+                track.style.transition = 'transform 0.5s ease-in-out';
+                track.style.transform = `translateX(${-index * cardWidth}px)`;
+            
+                // when reached duplicate part, reset to original
+                if (index >= cards.length / 2 + 1) {
+                  setTimeout(() => {
+                    track.style.transition = 'none';
+                    index = 0;
+                    track.style.transform = `translateX(0px)`;
+                  }, 500); // wait for animation to finish
+                }
+              }
+            
+              let interval = setInterval(moveSlide, 3000);
+            
+              window.addEventListener('resize', () => {
+                index = 0;
+                track.style.transition = 'none';
+                track.style.transform = `translateX(0px)`;
+                clearInterval(interval);
+                interval = setInterval(moveSlide, 3000);
+              });
+            });
+            </script> -->
+
     </section>
-    </div>
-
-   
-<script>
-let index = 0;
-const carousel = document.querySelector(".carousel");
-const cards = document.querySelectorAll(".card");
-let visibleCards = getVisibleCards();
-let cardWidth = cards[0].offsetWidth + 20; // Updated width with gap
-let direction = 1; // 1 for right, -1 for left
-
-function moveSlide() {
-    visibleCards = getVisibleCards();
-    cardWidth = cards[0].offsetWidth + 20; // Update dynamically
-
-    index += direction;
-
-    // When reaching the rightmost side, change direction to left
-    if (index >= cards.length - visibleCards) {
-        direction = -1;
-    }
-    // When reaching the leftmost side, change direction to right
-    else if (index <= 0) {
-        direction = 1;
-    }
-
-    carousel.style.transform = `translateX(${-index * cardWidth}px)`;
-}
-
-// Function to determine the number of visible cards based on screen width
-function getVisibleCards() {
-    if (window.innerWidth < 600) return 1; // Mobile
-    if (window.innerWidth < 1024) return 2; // Tablet
-    return 3; // Laptop/Desktop
-}
-
-// Auto-slide every 3 seconds
-// setInterval(() => {
-//     moveSlide();
-// }, 3000);
-
-// Handle screen resize
-window.addEventListener("resize", () => {
-    index = 0;
-    moveSlide();
-});
-
-</script>
 
 
-<div  style="position: relative;">
-<section class="pb other-services-main-container" style="width: 85%; margin: auto;">
+
+
+
+
+
+
+
+        
+    
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+            <div  style="position: relative;">
+<!-- <section class="pb other-services-main-container" style="width: 85%; margin: auto;">
     <h2 class="hero-section-heading-update">Other Services</h2>
 
 
@@ -1440,7 +1363,7 @@ window.addEventListener("resize", () => {
           </div>
         </a>
     </div>
-</section>
+</section> -->
 
 
     <section class="benefits-section">
@@ -1540,92 +1463,8 @@ window.addEventListener("resize", () => {
             <p>Professional Team Members</p>
         </div>
         </section>
-
-<!-- </section> -->
-    <section class="parallex-cta">
-        <div class="parallex-cta-inner">
-           <h4> We provide fast & efficient service just for you!</h4>
-           <p>Experience top-notch car care with our swift and reliable services tailored to fit your busy lifestyle. Book now and enjoy a spotless vehicle without the hassle.        </p>
-           <button class=" open-booking-modal hero-section-btn2">Book Now</button>
-        </div>
-    </section>
-
     </div>
-
-
-<section class="carmaa-timeline-section">
-    <div class="why-carmaa-container">
-        <h2 class="before-after-sub-heading">DISCOVER</h2>
-        <h2 class="before-after-heading">How Carmaa Works</h2>
-    </div>
-   <div class="carmaa-timeline-container">
-        <div class="carmaa-timeline-left" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200" >
-            <div onclick="carmaaTimelineButton(0)" id="step-one" class="carmaa-timeline-points-wrapper">
-                <h2>1. Download the Carmaa App</h2>
-                <p> Available on Google Play Store and Apple App Store. Install the app on your smartphone.                    .</p>
-                <div class="bottom-line"></div>
-            </div>
-            <div  onclick="carmaaTimelineButton(1)" id="step-two" class="carmaa-timeline-points-wrapper">
-                <h2>2. Register & Choose Your Service</h2>
-                <p> Sign up or log in, then select your desired service - Doorstep Cleaning, Garage Visit, or Pick & Drop.</p>
-                <div class="bottom-line"></div>
-            </div>
-            <div  onclick="carmaaTimelineButton(2)" id="step-three" class="carmaa-timeline-points-wrapper carmaa-timeline-active">
-                <h2>3. Book & Confirm</h2>
-                <p> Enter your location, choose the nearest service provider, and confirm your booking with just a few taps..</p>
-                <div class="bottom-line"></div>
-            </div>
-            <div  onclick="carmaaTimelineButton(3)" id="step-four" class="carmaa-timeline-points-wrapper">
-                <h2>4. Relax & Track Your Service</h2>
-                <p> Sit back and track the progress of your service in real-time. Review and rate the service once completed.</p>
-                <div class="bottom-line"></div>
-            </div>
-        </div>
-
-        <div class="swiper mySwiper" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1200">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/app/app1.jpg" alt="car service provider" loading="lazy"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/app/app2.jpg" alt="Car detailing app" loading="lazy"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/app/app3.jpg" alt="auto workshop near me" loading="lazy"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/app/app4.jpg" alt="Car repair near me" loading="lazy"/>
-              </div>
-            </div>
-          </div>
-    </div>     
-</section>
 </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-  <script>
-    new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 1, // Center slide
-      loop: true,
-      autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-      },
-      coverflowEffect: {
-        rotate: 20,
-        stretch: 0,
-        depth: 200,
-        modifier: 1,
-        slideShadows: false,
-      },
-    });
-  </script>
-
 
      <script src="https://unpkg.com/ityped@0.0.10"></script>
     <script>
@@ -1634,13 +1473,105 @@ window.addEventListener("resize", () => {
             loop: true
         })
     </script>
+<!-- 
+<div class="center-div-container-hr">
+    <hr style="padding: 1px; background-color: rgb(192, 187, 187); border: none; width:80%">
+</div> -->
 
 
-  <section class="testimonial-section">
+
+    <section class="carmaa-timeline-section" id="how-it-works-main-container-id" >
+        <div class="why-carmaa-container" id="how-it-works-main-id">
+            <div class="our-services-container-heading" >
+                <i class="fa-regular fa-lightbulb"></i>
+                <h2 class="before-after-sub-heading">HOW IT WORKS</h2>
+            </div>
+        </div>
+        <h2 class="downld-carmaa-heading" id="downld-carmaa-heading-one" style="padding-top: .5rem;">Simple steps to effortless car care</h2>
+
+
+        <div class="how-it-works-main-container" data-aos="fade-up" data-aos-delay="3" data-aos-duration="3">
+            <div class="simple-steps-container" >
+                <div class="step-container">
+                    <h3>STEP 1</h3>
+                </div>
+
+                <div class="pick-service-container">
+                    <h2>Pick from a range of Car Care services
+                    </h2>
+                </div>
+                <div class="how-it-works-container">
+                    <img src="/images/app/appCopy1.png" alt="car service provider" loading="lazy">
+                </div>
+            </div>
+
+            <div class="simple-steps-container">
+                <div class="step-container">                    <h3>STEP 2</h3>
+                </div>
+
+                <div class="pick-service-container">
+                    <h2>Schedule the date and time</h2>
+                </div>
+
+
+                <div class="how-it-works-container">
+                    <img src="/images/app/appCopy2.png" alt="car service provider" loading="lazy">
+                </div>
+            </div>
+
+
+            <div class="simple-steps-container">
+                <div class="step-container">                    <h3>STEP 3</h3>
+                </div>
+
+                <div class="pick-service-container">
+                    <h2>Select service mode, Review, Pay and enjoy the services </h2>
+                </div>
+
+
+                <div class="how-it-works-container">
+                    <img src="/images/app/appCopy3.png" alt="car service provider" loading="lazy">
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="testimonial-section" >
     <div class="why-carmaa-container">
-        <h2 class="testimonial-sub-heading">TESTIMONIALS</h2>
-        <h2 class="testimonial-heading">What Client's Say?</h2>
+        <div class="our-services-container-heading">
+            <i class="fa-regular fa-face-smile"></i>            
+            <h2 class="before-after-sub-heading">TESTIMONIALS</h2>
+        </div>
     </div>
+    <h2 class="downld-carmaa-heading" id="downld-carmaa-heading-one" style="padding-top: .5rem; padding-bottom: 1.5rem;">What Client's Say?</h2>
 
 <style>
 .review-client-says-container {
@@ -1986,15 +1917,26 @@ window.addEventListener("resize", () => {
 
         </div>
     </div>
-
-
   </section>
 
+
+
+
+
+
+
+
     <section class="wrapper-faq" >
+
         <div class="why-carmaa-container">
-            <h2 class="testimonial-sub-heading">FREQUENTLY ASKED QUESTIONS</h2>
-            <h2 class="faq-heading">Get Your Questions Answered</h2>
+            <div class="our-services-container-heading">
+                <i class="fa-regular fa-circle-question"></i>
+                <h2 class="before-after-sub-heading">FAQ'S</h2>
+            </div>
         </div>
+        <h2 class="downld-carmaa-heading" id="downld-carmaa-heading-one" style="padding-top: .5rem;">Get Your Questions Answered</h2>
+
+
             <div class="accordion" style="margin: 50px auto; width: 85%; margin: 50px auto;">
                 <div class="accordion-item">
                     <button id="accordion-button-1" aria-expanded="false">
@@ -2091,6 +2033,48 @@ window.addEventListener("resize", () => {
         </div>
     </section>
 
+    
+<section class="carmaa-timeline-section">
+    <div class="why-carmaa-container">
+            <div class="our-services-container-heading">
+                <i class="fa-regular fa-star"></i>
+                <h2 class="before-after-sub-heading">DISCOVER</h2>
+            </div>
+    </div>
+        <h2 class="downld-carmaa-heading" style="padding-top: .5rem;"> India's first all in one car Service app</h2>
+
+
+
+    <div class="main-app-images-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" >
+        <div class="app-image-container-one app-img-container"  >
+            <img src="images/app/app111.png" alt="car service provider" loading="lazy"    />
+        </div>
+        <div class="app-image-container-two app-img-container" >
+            <img src="images/app/app112.png" alt="Car detailing app" loading="lazy"/>
+        </div>
+        <div class="app-image-container-three app-img-container">
+            <img src="images/app/app113.png" alt="Car repair near me" loading="lazy" />
+        </div>
+    </div>
+
+
+    <h2 class="downld-carmaa-heading">Download the <span>Carmaa</span> App now</h2>
+    <p class="downld-carmaa-para-content">Hassle-free car maintenance, instant booking, and expert care — right at your fingertips.</p>
+    <div class="app-dwnld-main-container">
+        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
+            <div class="app-dwnld-img-container">
+                <img src="/images/footer/Play_Store_Black_bg.png" alt="Car repair near me" loading="lazy">
+            </div>
+        </a>
+
+        <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
+            <div class="app-dwnld-img-container">
+                <img src="/images/ui_change_images/App_Store_Black_bg.png" alt="Car repair near me" loading="lazy">
+            </div>
+        </a>
+    </div>
+</section>
+
     <script>
         const toggleSidBar = () => {
             const sidebar = document.querySelectorAll('.center');
@@ -2121,7 +2105,7 @@ window.addEventListener("resize", () => {
         items.forEach((item) => item.addEventListener('click', toggleAccordion));
     </script>
 
-     <div style="margin-top: 4rem">
+     <!-- <div style="margin-top: 4rem">
         <iframe
         class="location-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9508978443537!2d78.00875827556449!3d30.323914474784026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b220f7bb141%3A0x4dcd92ffe2c4d873!2sCarmaa!5e0!3m2!1sen!2sin!4v1728807804305!5m2!1sen!2sin"
@@ -2132,7 +2116,7 @@ window.addEventListener("resize", () => {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </div> -->
 
       <div class="map-address-footer-container">
         <p>Carmaa Car Care
@@ -2476,7 +2460,6 @@ window.addEventListener("resize", () => {
             </select>
             <span id="serviceError" class="error-message"></span>
           </div>
-          <!--Captcha Code for Auth-->
           <div
             class="g-recaptcha"
             data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
@@ -2510,7 +2493,7 @@ window.addEventListener("resize", () => {
     </div> 
 
 
-    <div class="animated-thank-you-modal" id="thankYouModal">
+     <div class="animated-thank-you-modal" id="thankYouModal">
         <div class="thankyou-opacity-container">
             <div class="thank-you-page-container">
                 <div class="cancel-icon" id="cancel-icon" onclick="cancelThankYouModal()">
@@ -2575,7 +2558,7 @@ window.addEventListener("resize", () => {
             let parentDiv2 = document.getElementById("parent-div2");
 
             // Show the div after 15 seconds
-            showDivAfterDelay();
+            // showDivAfterDelay();
 
             // Close button functionality
             document.getElementById("close-btn").addEventListener("click", function () {
@@ -2748,6 +2731,7 @@ document.addEventListener("DOMContentLoaded", function () {
         import { CTAApi } from './js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
         event.preventDefault();
+
           
           // Get input values
           const name = document.getElementById('nameInput').value.trim();
@@ -2823,7 +2807,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   if (response.status === 200) {
                     const modal = document.getElementById("booking-modal");
                      modal.classList.toggle("modal-hidden");
-                    // thankYou();
+                    thankYou();
                   } else {
                       // Display error message
                       document.getElementById('errorMessage').textContent = 'There was an error making the appointment. Please try again.';

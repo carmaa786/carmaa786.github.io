@@ -17,11 +17,21 @@ body {
   padding-top: 2rem;
   gap: 2rem;
 }
+
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .service-img-container {
   position: relative;
 }
 .service-img-price-txt {
-  background-color: #01628f;
+  background-color: #28b097;
   padding-left: 1rem;
   padding-right: 1rem;
   position: absolute;
@@ -95,7 +105,7 @@ body {
   padding: 10px;
 }
 
-.service-ul-heading{
+.service-ul-heading {
   margin-bottom: 0px !important;
 }
 
@@ -103,7 +113,7 @@ body {
   list-style: disc;
   font-size: 1rem;
   font-family: var(--body-font);
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   /* margin-bottom: 1.5rem; */
   line-height: 1.6em;
 }
@@ -127,6 +137,7 @@ body {
 .service-contact-section-desc-heading {
   font-size: 1.2rem;
   color: #01628f;
+  /* color: #0b4c9d; */
   margin-bottom: 0.2rem;
   font-weight: 600;
 }
@@ -140,7 +151,7 @@ body {
 
 /* Container for the form */
 .form-container {
-  background-color: #01628f;
+  background-color: #0b4c9d;
   padding: 20px;
   width: 100%;
   border-radius: 8px;
@@ -246,10 +257,23 @@ button:hover {
     margin-bottom: 1rem;
     font-family: var(--font);
   }
+  /* .service-right-section {
+    width: 90%;
+  } */
+}
+
+@media screen and (min-width: 600px) {
   .service-right-section {
     width: 90%;
   }
 }
+
+@media (max-width: 600px) and (min-width: 300px) {
+  .service-right-section {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .service-main-section {
     display: flex;

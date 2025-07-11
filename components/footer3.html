@@ -2,6 +2,8 @@
     <html lang="en">
     <head>
         <link rel="stylesheet" href="../css/footer.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     <body>
 
@@ -50,6 +52,7 @@
         .link-section-child p{
             font-size: 16px;
             padding-bottom: 5px;
+            font-weight: 500;
         }
         .footer-link{
             font-size: 14px;
@@ -82,11 +85,16 @@
             border-radius: 17px;
         }
 
+        .fa-color{
+            color: #28b097;
+            font-size: 2rem;
+        }
+
         .download-btn-footer img:hover {
             transform: scale(1.05);
         }
 
-        @media (max-width: 900px) and (min-width: 10px){
+        @media (max-width: 900px) and (min-width: 600px){
             .links-main-container{
                 gap: 25px;
                 flex-wrap: wrap;
@@ -97,6 +105,19 @@
             }
         }
 
+        @media (max-width: 600px) and (min-width: 200px) {
+            .download-btn-footer{
+                width: 8rem;
+            }
+            .links-main-container{
+                gap: 50px;
+                flex-wrap: wrap;
+
+            } 
+            .link-section-child {
+                align-items: start;
+            }
+        }
     </style>
 
 
@@ -116,8 +137,22 @@
                 <!-- carmaa footer links -->
             <div class="links-main-container">
                 <div class="support-email-container">
-                    <a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"> <p class="follow-us"><img src="/images/footer/email.png" alt="car garage near me" loading="lazy"/> support@carmaacarcare.com</p></a>
-                    <a class="mobile-number-ref2" href="tel:+917042555401"> <p class="follow-us"><img src="/images/footer/telephone-call.png" alt="car repair shops near me" loading="lazy"/>+91-70425 55401</p></a>
+                    <a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"> <p class="follow-us">
+                        <i class="fa-regular fa-envelope fa-color"></i>
+                        
+                        
+                        
+                        support@carmaacarcare.com</p></a>
+                    <a class="mobile-number-ref2" href="tel:+917042555401"> <p class="follow-us">
+                        <i class="fa-solid fa-phone-volume fa-color"></i>
+                        
+                        +91-70425 55401</p></a>
+
+
+
+                        <a class="mobile-number-ref2" href="https://carmaacarcare.com/"> <p class="follow-us">
+                            <i class="fa-solid fa-users fa-color"></i> recruitment@carmaacarcare.com</p></a>
+
                 </div>
 
                 <div class="link-section-child ">
@@ -133,7 +168,8 @@
                     <a class="footer-link " href="/doorstep-car-washing-service-in-dehradun"><p class="footer-dehradun">Dehradun</p></a>
                     <a class="footer-link " href="/doorstep-car-washing-service-in-aligarh"><p class="footer-dehradun">Aligarh</p></a>
                     <a class="footer-link " href="/doorstep-car-washing-service-in-roorkee"><p class="footer-dehradun">Roorkee</p></a>
-
+                    <a class="footer-link " href="/doorstep-car-washing-service-in-Haridwar/"><p class="footer-dehradun">Haridwar</p></a>
+                    <a class="footer-link " href="/doorstep-car-washing-service-in-noida/"><p class="footer-dehradun">Noida</p></a>
 
                 </div>
 

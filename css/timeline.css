@@ -17,6 +17,15 @@
   gap: 1rem;
 }
 
+a {
+  color: #0b4c9d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28b097;
+}
+
 .animated-slider-container {
   width: 600px;
   height: 1000px;
