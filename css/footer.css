@@ -115,6 +115,10 @@ a:hover {
 .footer-link:hover {
   color: #28b097 !important;
 }
+
+.footer-dehradun:hover {
+  color: #28b097 !important;
+}
 .footer-link2 {
   font-family: var(--body-font);
   color: white;
