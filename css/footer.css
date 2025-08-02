@@ -154,6 +154,33 @@ a:hover {
   gap: 5%;
 }
 
+.link-section-container {
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
+}
+
+.link-section-main-container {
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-dehradun {
+  font-family: var(--body-font);
+  color: var(--silver);
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  text-decoration: none;
+}
+
+.link-section-main-container h5 {
+  margin-bottom: 16px;
+}
+
 @media (max-width: 600px) and (min-width: 10px) {
   .google-play-store-icons {
     display: flex;
@@ -161,7 +188,6 @@ a:hover {
     gap: 5%;
     /* flex-wrap: wrap; */
   }
-
 }
 
 @media screen and (min-width: 300px) {
