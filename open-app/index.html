@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta charset="utf-8" />
+  <script>
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    console.log(userAgent,'User Agent');
+
+    // Your deep link
+    const deepLink = "carmaaapp://home";
+
+    // Store fallback
+    const playStoreURL = "https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa";
+    const appStoreURL = "https://apps.apple.com/in/app/carmaa-car-care/id6746490090"; // Replace with real App Store link
+
+    // Detect OS
+    const isAndroid = /android/i.test(userAgent);
+    const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+    // Attempt to open app
+    window.location = deepLink;
+
+    // If app isn't installed, fallback after 2 seconds
+    setTimeout(() => {
+      if (isAndroid) {
+        window.location = playStoreURL;
+      } else if (isIOS) {
+        window.location = appStoreURL;
+      } else {
+        // fallback to website
+        window.location = "https://carmaacarcare.com";
+      }
+    }, 2000);
+  </script>
+</head>
+<body>
+  <p>Redirecting to Carmaa app...</p>
+</body>
+</html>
