@@ -22,16 +22,16 @@
     window.location = deepLink;
 
     // If app isn't installed, fallback after 2 seconds
-    // setTimeout(() => {
-    //   if (isAndroid) {
-    //     window.location = playStoreURL;
-    //   } else if (isIOS) {
-    //     window.location = appStoreURL;
-    //   } else {
-    //     // fallback to website
-    //     window.location = "https://carmaacarcare.com";
-    //   }
-    // // }, 2000);
+    setTimeout(() => {
+      if (isAndroid) {
+        window.location = playStoreURL;
+      } else if (isIOS) {
+        window.location = appStoreURL;
+      } else {
+        // fallback to website
+        window.location = "https://carmaacarcare.com";
+      }
+     }, 5000);
   </script>
 </head>
 <body>
