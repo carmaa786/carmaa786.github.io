@@ -293,11 +293,130 @@
               </li>
             </ul>
             <p>
-              Carmma shall not be held liable for any deficiencies, damages, or
+              Carmaa shall not be held liable for any deficiencies, damages, or
               personal injury caused by the third-party service providers unless
               arising due to gross negligence or wilful misconduct on our part.
             </p>
 
+            <h1 class="care-title">Post Car Care Recommendations After Ceramic Coating</h1>
+
+          <table class="care-table">
+            <colgroup>
+              <col style="width:56px">
+              <col style="width:320px">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Instruction</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="#">1</td>
+                <td data-label="Instruction"><strong>Avoid Water Contact for 4 Hours</strong></td>
+                <td data-label="Description"><strong>Let the coating cure completely before exposing the vehicle to rain, washing, or even light moisture.</strong></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Do Not Use a Dirty Cloth</strong></td>
+                <td><strong>Always use a clean, damp, high-quality microfiber towel for wiping. A dirty cloth can scratch the fresh coating.</strong></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>pH-Neutral Wash Only</strong></td>
+                <td><strong>When washing after the first week, use a pH-neutral car shampoo or ceramic-safe soap to maintain the coating’s hydrophobic properties.</strong></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>No Automatic Brush Car Washes</strong></td>
+                <td><strong>Brushes can create micro-scratches and reduce coating life. Opt for hand washing with microfiber mitts.</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>Use the Two-Bucket Method</strong></td>
+                <td><strong>One bucket for soapy water, one for rinsing the mitt/towel. This avoids transferring dirt back onto the paint.</strong></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>Boost the Coating Every 2–3 Months</strong></td>
+                <td><strong>Use a ceramic booster spray to refresh shine and hydrophobicity.</strong></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><strong>Wash Only in Shade</strong></td>
+                <td><strong>Direct sunlight can cause water spots and soap streaking on the coating.</strong></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><strong>Dry with a Clean Microfiber</strong></td>
+                <td><strong>Never let the car air dry; water spots can etch into the coating.</strong></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td><strong>No Harsh Chemicals</strong></td>
+                <td><strong>Avoid acidic or highly alkaline cleaners; they can weaken the coating.</strong></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><strong>Second Coat for Maximum Protection</strong></td>
+                <td><strong>For up to 12 months of durability, apply a second coat after 24 hours.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <style>
+            :root{
+              --bg:#e5e7eb; --card:#0f172a; --text:#e5e7eb; --muted:#9ca3af;
+              --line:#273244; --accent:#22c55e; --zebra:#0c1a2e; --hover:#12233d;
+            }
+            body{background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+            .care-title{margin:20px 0 10px; font-size:24px}
+            .care-table{
+              width:100%; border-collapse:separate; border-spacing:0;
+              background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+              box-shadow:0 8px 24px rgba(0,0,0,.25);
+              table-layout:fixed;
+            }
+            .care-table caption{
+              caption-side:top; padding:10px 14px; color:var(--muted); font-style:italic; text-align:left
+            }
+            .care-table thead th{
+              position:sticky; top:0; z-index:1;
+              background:linear-gradient(180deg, rgba(34,197,94,.12), transparent);
+              color:#fff; text-align:left; font-weight:700; letter-spacing:.02em
+            }
+            .care-table th, .care-table td{
+              border-bottom:1px solid var(--line);
+              padding:14px 16px; vertical-align:top; word-wrap:break-word; text-align:left;
+            }
+            .care-table tbody tr:nth-child(odd){ background:var(--zebra) }
+            .care-table tbody tr:hover{ background:var(--hover) }
+            .care-table td:first-child, .care-table th:first-child{ text-align:center; font-variant-numeric:tabular-nums }
+            .care-table td strong{ color:#fff }
+
+            /* Mobile: stack rows into cards */
+            @media (max-width: 680px){
+              .care-table{ border-radius:10px; }
+              .care-table thead{ display:none; }
+              .care-table, .care-table tbody, .care-table tr, .care-table td{ display:block; width:100% }
+              .care-table tr{ border-bottom:1px solid var(--line) }
+              .care-table td{ border:none; padding:10px 14px }
+              .care-table td:first-child{
+                background:rgba(34,197,94,.12);
+                border-bottom:1px solid var(--line);
+                border-top:1px solid var(--line);
+                font-weight:700; display:inline-block; width:auto; border-radius:8px; margin:8px 12px 0 12px; padding:6px 10px;
+              }
+              .care-table td[data-label]:before{
+                content:attr(data-label) " — "; font-weight:600; color:#cbd5e1; display:inline;
+              }
+            }
+          </style>
+
+          
             <li class="list-paragraph pdBottom16 pdTop24">
               4. USER OBLIGATIONS
             </li>
