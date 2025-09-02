@@ -90,6 +90,8 @@
   position: absolute;
   list-style: none;
   left: -50px;
+  height: 20rem;
+  overflow: scroll;
 }
 
 #services-dropdown {
