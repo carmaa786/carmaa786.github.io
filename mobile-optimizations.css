@@ -71,14 +71,12 @@ button,
 
     /* Card Titles Mobile */
     .service-card h3,
-    .promise-card h3,
-    .step-card h3 {
+    .promise-card h3 {
         font-size: 1.3rem !important;
     }
 
     .service-card p,
-    .promise-card p,
-    .step-card p {
+    .promise-card p {
         font-size: 0.95rem;
     }
 }
@@ -152,16 +150,16 @@ button,
 
     .cta-group {
         flex-direction: row !important;
-        gap: 12px;
+        gap: 15px;
         justify-content: center;
         flex-wrap: wrap;
     }
 
     .cta-group .btn {
-        flex: 1;
-        min-width: 140px;
-        max-width: 180px;
-        padding: 14px 20px;
+        flex: 0 1 auto;
+        min-width: 150px;
+        max-width: 200px;
+        padding: 14px 24px;
         font-size: 0.95rem;
     }
 
@@ -196,37 +194,72 @@ button,
 
 @media (max-width: 768px) {
 
-    /* Service Cards */
-    .services-grid,
-    .promises-grid,
-    .steps-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
+    /* Service Cards - Professional Horizontal Carousel */
+    #services .services-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 16px;
+        padding: 10px 20px 30px 20px !important;
+        margin: 0 -20px;
+        -webkit-overflow-scrolling: touch;
+        /* Enable momentum scrolling on iOS */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
     }
 
-    .service-card,
-    .promise-card,
-    .step-card {
-        padding: 30px 24px;
+    /* Hide scrollbar but keep functionality */
+    #services .services-grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    /* Individual Service Cards in Horizontal Layout */
+    #services .service-card {
+        flex: 0 0 calc(100% - 40px);
+        /* Full width minus padding */
+        min-width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        padding: 32px 24px;
         text-align: center !important;
-        /* Force center align all card content */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: var(--surface);
+        border-radius: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .service-card h3,
-    .promise-card h3,
-    .step-card h3 {
+    /* Subtle hover/active effect for touch */
+    #services .service-card:active {
+        transform: scale(0.98);
+    }
+
+    /* Center all content within service cards */
+    #services .service-card h3,
+    #services .service-card p {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        width: 100%;
     }
 
-    .service-card p,
-    .promise-card p,
-    .step-card p {
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+    /* Icon boxes centered */
+    #services .service-card .icon-box {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
     }
+
 
     /* Icon Boxes */
     .icon-box {
@@ -237,18 +270,44 @@ button,
         margin-right: auto;
     }
 
-    .step-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 1.3rem;
+    /* Scroll Indicator for Services Section */
+    #services .container {
+        position: relative;
+    }
+
+    /* Add scroll hint indicator */
+    #services .services-grid::after {
+        content: '← Swipe →';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        color: var(--text-gray);
+        opacity: 0.6;
+        font-weight: 500;
+        letter-spacing: 1px;
+        pointer-events: none;
+        animation: fadeInOut 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+
+        0%,
+        100% {
+            opacity: 0.4;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
     }
 }
 
 @media (max-width: 480px) {
 
     .service-card,
-    .promise-card,
-    .step-card {
+    .promise-card {
         padding: 24px 20px;
         text-align: center !important;
     }

@@ -27,27 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const deviceType = detectDevice();
     const appUrl = APP_STORE_URLS[deviceType];
 
+
     // Update all links with class 'app-download-link'
     const appLinks = document.querySelectorAll('.app-download-link');
     appLinks.forEach(link => {
         link.href = appUrl;
     });
 
-    // Handle hero section buttons - show only relevant store button
-    const heroButtons = document.querySelectorAll('.cta-group .btn');
-    heroButtons.forEach(button => {
-        const href = button.getAttribute('href');
+    // Both buttons are now always visible - removed device-specific hiding
+    // const heroButtons = document.querySelectorAll('.cta-group .btn');
+    // heroButtons.forEach(button => {
+    //     const href = button.getAttribute('href');
+    //
+    //     // Hide iOS button for Android users
+    //     if (deviceType === 'android' && href && href.includes('apps.apple.com')) {
+    //         button.style.display = 'none';
+    //     }
+    //
+    //     // Hide Android button for iOS users
+    //     if (deviceType === 'ios' && href && href.includes('play.google.com')) {
+    //         button.style.display = 'none';
+    //     }
+    // });
 
-        // Hide iOS button for Android users
-        if (deviceType === 'android' && href && href.includes('apps.apple.com')) {
-            button.style.display = 'none';
-        }
-
-        // Hide Android button for iOS users
-        if (deviceType === 'ios' && href && href.includes('play.google.com')) {
-            button.style.display = 'none';
-        }
-    });
 
     // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
@@ -68,6 +70,61 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Auto-scroll for Services Carousel on Mobile
+    const servicesGrid = document.querySelector('.services-grid');
+    let isAutoScrolling = false;
+    let autoScrollInterval;
+
+    const startAutoScroll = () => {
+        if (window.innerWidth <= 768 && servicesGrid) {
+            isAutoScrolling = true;
+            let scrollPosition = 0;
+            const cardWidth = servicesGrid.querySelector('.service-card')?.offsetWidth || 300;
+            const gap = 20;
+            const scrollAmount = cardWidth + gap;
+
+            autoScrollInterval = setInterval(() => {
+                if (!isAutoScrolling) return;
+
+                scrollPosition += scrollAmount;
+
+                // Reset to start when reaching the end
+                if (scrollPosition >= servicesGrid.scrollWidth - servicesGrid.clientWidth) {
+                    scrollPosition = 0;
+                }
+
+                servicesGrid.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }, 3000); // Scroll every 3 seconds
+        }
+    };
+
+    // Pause auto-scroll when user interacts
+    if (servicesGrid) {
+        servicesGrid.addEventListener('touchstart', () => {
+            isAutoScrolling = false;
+            clearInterval(autoScrollInterval);
+        });
+
+        servicesGrid.addEventListener('touchend', () => {
+            setTimeout(() => {
+                startAutoScroll();
+            }, 5000); // Resume after 5 seconds of no interaction
+        });
+
+        // Start auto-scroll on load
+        startAutoScroll();
+
+        // Restart on window resize
+        window.addEventListener('resize', () => {
+            clearInterval(autoScrollInterval);
+            startAutoScroll();
+        });
+    }
+
 
     // Google Reviews Logic
     const reviews = [
@@ -184,5 +241,150 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         renderReviews();
+    }
+
+    // ========================================
+    // STATS COUNTER ANIMATION
+    // Animates numbers from 0 to target value
+    // ========================================
+
+    const animateCounter = (element, target, duration = 2000, suffix = '') => {
+        let startTime = null;
+        const startValue = 0;
+
+        // Parse the target value (remove any non-numeric characters except decimal point)
+        const numericTarget = parseFloat(target.replace(/[^0-9.]/g, ''));
+
+        const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+
+            // Easing function for smooth animation (easeOutExpo)
+            const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+            const currentValue = startValue + (numericTarget - startValue) * easeOutExpo;
+
+            // Format the number based on the original target format
+            let displayValue;
+            if (target.includes('M+')) {
+                displayValue = currentValue.toFixed(1) + 'M+';
+            } else if (target.includes('K+') || target.includes(',')) {
+                displayValue = Math.floor(currentValue).toLocaleString() + '+';
+            } else if (target.includes('/')) {
+                displayValue = currentValue.toFixed(1) + '/5';
+            } else {
+                displayValue = Math.floor(currentValue).toLocaleString() + suffix;
+            }
+
+            element.textContent = displayValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                element.textContent = target; // Ensure final value is exact
+            }
+        };
+
+        requestAnimationFrame(animate);
+    };
+
+    // Intersection Observer for Stats Animation
+    const statsItems = document.querySelectorAll('.stat-item');
+
+    if (statsItems.length > 0) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+
+                    // Find the h3 element and animate its counter
+                    const counterElement = entry.target.querySelector('h3');
+                    if (counterElement) {
+                        const targetValue = counterElement.textContent.trim();
+
+                        // Determine animation duration based on value size
+                        let duration = 2000;
+                        if (targetValue.includes('M+')) {
+                            duration = 2500;
+                        } else if (targetValue.includes('/')) {
+                            duration = 1800;
+                        }
+
+                        // Start counter animation with a slight delay for stagger effect
+                        const delay = Array.from(statsItems).indexOf(entry.target) * 200;
+                        setTimeout(() => {
+                            animateCounter(counterElement, targetValue, duration);
+                        }, delay);
+                    }
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.3, // Trigger when 30% of the element is visible
+            rootMargin: '0px'
+        });
+
+        statsItems.forEach(item => {
+            statsObserver.observe(item);
+        });
+    }
+
+    // Auto-scroll for Stats Carousel on Mobile (similar to services)
+    const statsContainer = document.querySelector('.infographic-stats');
+    let isStatsAutoScrolling = false;
+    let statsAutoScrollInterval;
+
+    const startStatsAutoScroll = () => {
+        if (window.innerWidth <= 768 && statsContainer) {
+            isStatsAutoScrolling = true;
+            let scrollPosition = 0;
+            const statItem = statsContainer.querySelector('.stat-item');
+            if (!statItem) return;
+
+            const itemWidth = statItem.offsetWidth || 300;
+            const gap = 20;
+            const scrollAmount = itemWidth + gap;
+
+            statsAutoScrollInterval = setInterval(() => {
+                if (!isStatsAutoScrolling) return;
+
+                scrollPosition += scrollAmount;
+
+                // Reset to start when reaching the end
+                if (scrollPosition >= statsContainer.scrollWidth - statsContainer.clientWidth) {
+                    scrollPosition = 0;
+                }
+
+                statsContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }, 4000); // Scroll every 4 seconds (slower than services)
+        }
+    };
+
+    // Pause auto-scroll when user interacts with stats
+    if (statsContainer) {
+        statsContainer.addEventListener('touchstart', () => {
+            isStatsAutoScrolling = false;
+            clearInterval(statsAutoScrollInterval);
+        });
+
+        statsContainer.addEventListener('touchend', () => {
+            setTimeout(() => {
+                startStatsAutoScroll();
+            }, 6000); // Resume after 6 seconds of no interaction
+        });
+
+        // Start auto-scroll on load
+        setTimeout(() => {
+            startStatsAutoScroll();
+        }, 1000); // Delay initial auto-scroll by 1 second
+
+        // Restart on window resize
+        window.addEventListener('resize', () => {
+            clearInterval(statsAutoScrollInterval);
+            startStatsAutoScroll();
+        });
     }
 });
