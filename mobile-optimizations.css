@@ -1,0 +1,745 @@
+/* ========================================
+   MOBILE OPTIMIZATION & RESPONSIVE ENHANCEMENTS
+   Professional UI/UX Mobile Compatibility
+   ======================================== */
+
+/* ========================================
+   BASE MOBILE OPTIMIZATIONS
+   ======================================== */
+
+/* Prevent horizontal scroll on mobile */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Touch-friendly tap targets */
+a,
+button,
+.btn {
+    -webkit-tap-highlight-color: rgba(40, 176, 151, 0.2);
+    touch-action: manipulation;
+}
+
+/* ========================================
+   MOBILE TYPOGRAPHY IMPROVEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Better readability on mobile */
+    body {
+        font-size: 16px;
+        /* Prevents iOS zoom on input focus */
+        line-height: 1.6;
+    }
+
+    /* Hero Section Mobile */
+    .hero h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        letter-spacing: 0;
+        margin-bottom: 16px;
+    }
+
+    .hero p {
+        font-size: 1rem !important;
+        margin-bottom: 24px;
+        padding: 0 10px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    /* Section Headers Mobile */
+    .section-header h2 {
+        font-size: 2rem !important;
+        margin-bottom: 12px;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Card Titles Mobile */
+    .service-card h3,
+    .promise-card h3,
+    .step-card h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .service-card p,
+    .promise-card p,
+    .step-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* ========================================
+   NAVBAR MOBILE ENHANCEMENTS
+   ======================================== */
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .nav-links .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   HERO SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .cta-group {
+        flex-direction: row !important;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-group .btn {
+        flex: 1;
+        min-width: 140px;
+        max-width: 180px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Video background optimization */
+    .hero-bg video {
+        object-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 90px 0 50px;
+    }
+
+    .cta-group {
+        flex-direction: column !important;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .cta-group .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   CARDS & GRIDS MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Service Cards */
+    .services-grid,
+    .promises-grid,
+    .steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .service-card,
+    .promise-card,
+    .step-card {
+        padding: 30px 24px;
+        text-align: center !important;
+        /* Force center align all card content */
+    }
+
+    .service-card h3,
+    .promise-card h3,
+    .step-card h3 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .service-card p,
+    .promise-card p,
+    .step-card p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Icon Boxes */
+    .icon-box {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .step-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .service-card,
+    .promise-card,
+    .step-card {
+        padding: 24px 20px;
+        text-align: center !important;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+/* ========================================
+   TIMELINE/STORY SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .story-timeline {
+        padding: 10px 0;
+    }
+
+    .story-timeline::before {
+        left: 20px;
+        margin-left: 0;
+    }
+
+    .story-scene {
+        width: 100% !important;
+        padding-left: 60px;
+        padding-right: 15px;
+        left: 0 !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .story-scene::after {
+        left: 11px !important;
+        right: auto !important;
+    }
+
+    .scene-visual {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .scene-content {
+        max-width: 100%;
+    }
+
+    .scene-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .scene-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   INFOGRAPHIC STATS MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .infographic-stats {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
+
+    .stat-item p {
+        font-size: 1rem;
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================
+   TRANSFORMATION SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .split-image {
+        order: -1;
+        margin-bottom: 0;
+    }
+
+    .split-content {
+        text-align: center;
+    }
+
+    .split-content h2 {
+        font-size: 2rem;
+    }
+
+    .split-content p {
+        font-size: 1rem;
+    }
+
+    .feature-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-list li {
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .before-after-container {
+        border-radius: 20px;
+    }
+}
+
+/* ========================================
+   REVIEWS SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .reviews-slider-container {
+        padding: 30px 0;
+    }
+
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .reviewer-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .reviewer-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .reviewer-info span {
+        font-size: 0.7rem;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .review-footer {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        min-width: 260px;
+        max-width: 260px;
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   REFER & EARN SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .refer-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+        gap: 30px;
+    }
+
+    .refer-content h2 {
+        font-size: 2rem;
+    }
+
+    .refer-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .refer-visual {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .avatar-network {
+        transform: scale(0.8);
+        margin: 0 auto;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .refer-banner {
+        padding: 30px 20px;
+    }
+
+    .refer-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .avatar-network {
+        transform: scale(0.7);
+        width: 240px;
+        height: 240px;
+    }
+}
+
+/* ========================================
+   CTA SECTION MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .app-cta {
+        padding: 60px 0;
+        margin-top: -30px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-xl {
+        padding: 16px 36px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-cta {
+        padding: 50px 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .btn-xl {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   SPACING & PADDING MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding: 50px 0 !important;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* ========================================
+   BUTTONS MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 768px) {
+    .btn {
+        min-height: 44px;
+        /* iOS recommended touch target */
+        padding: 12px 24px;
+    }
+
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn i {
+        font-size: 1.1rem;
+    }
+}
+
+/* ========================================
+   ANIMATIONS MOBILE - REDUCED MOTION
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Faster animations on mobile */
+    .reveal {
+        transition: all 0.6s ease-out;
+    }
+
+    /* Reduce animation complexity */
+    .floating {
+        animation-duration: 6s;
+    }
+
+    .heartbeat-btn:hover {
+        animation: none;
+        transform: scale(1.02);
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   LANDSCAPE MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero p {
+        font-size: 0.95rem !important;
+        margin-bottom: 20px;
+    }
+
+    .cta-group {
+        flex-direction: row !important;
+        gap: 10px;
+    }
+
+    .cta-group .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE DEVICES (320px)
+   ======================================== */
+
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .service-card,
+    .promise-card {
+        padding: 20px 16px;
+    }
+
+    .refer-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* GPU acceleration for smooth scrolling */
+    .hero-bg video,
+    .service-card,
+    .btn {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
+    /* Optimize images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Prevent layout shift */
+    .hero-bg {
+        min-height: 100vh;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Larger focus indicators on mobile */
+    a:focus,
+    button:focus,
+    .btn:focus {
+        outline: 3px solid #28B097;
+        outline-offset: 3px;
+    }
+
+    /* Better contrast for readability */
+    .text-gray {
+        color: #64748b;
+    }
+}
+
+/* ========================================
+   SAFARI iOS SPECIFIC FIXES
+   ======================================== */
+
+@supports (-webkit-touch-callout: none) {
+
+    /* iOS Safari specific */
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+
+    /* Fix iOS input zoom */
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    /* Fix iOS button styling */
+    .btn {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+/* ========================================
+   END MOBILE OPTIMIZATIONS
+   ======================================== */

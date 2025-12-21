@@ -1,0 +1,255 @@
+/* ========================================
+   NEW FOOTER DESIGN
+   ======================================== */
+
+.footer-new {
+    background: #1a1d29;
+    color: #ffffff;
+    padding: 60px 0 0;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo and Contact Section */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.footer-logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: lowercase;
+}
+
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item:hover {
+    color: #28B097;
+}
+
+.footer-contact-item i {
+    color: #28B097;
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+/* Quick Links Section */
+.footer-links-section h4,
+.footer-social-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #28B097;
+}
+
+/* Social Links Section */
+.footer-social-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+    color: #ffffff;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+}
+
+.social-icon.linkedin {
+    background: #0077b5;
+    color: #ffffff;
+}
+
+.social-icon.youtube {
+    background: #ff0000;
+    color: #ffffff;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(40, 176, 151, 0.3);
+}
+
+/* App Buttons */
+.footer-app-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.app-button {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.app-button img {
+    height: 40px;
+    width: auto;
+}
+
+.app-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Locations Section */
+.footer-locations {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-locations h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.locations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.locations-list a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.locations-list a:hover {
+    color: #28B097;
+}
+
+/* Footer Bottom */
+.footer-bottom-new {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-bottom-new p {
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.footer-bottom-new a {
+    color: #28B097;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-new a:hover {
+    color: #1d8a73;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1;
+    }
+
+    .locations-list {
+        gap: 15px;
+    }
+
+    .footer-app-buttons {
+        flex-direction: column;
+    }
+
+    .app-button img {
+        height: 45px;
+    }
+}
+
+/* End of New Footer Design */

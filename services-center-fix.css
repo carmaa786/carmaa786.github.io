@@ -1,0 +1,59 @@
+/* ========================================
+   SERVICES SECTION - MOBILE CENTER ALIGNMENT FIX
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Force center alignment for Our Services section */
+    #services .service-card {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #services .service-card h3 {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #services .service-card p {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #services .icon-box {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Also apply to promises and steps sections */
+    #promises .promise-card,
+    #how-it-works .step-card {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #promises .promise-card h3,
+    #how-it-works .step-card h3 {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #promises .promise-card p,
+    #how-it-works .step-card p {
+        text-align: center !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #services .service-card,
+    #promises .promise-card,
+    #how-it-works .step-card {
+        text-align: center !important;
+    }
+}
