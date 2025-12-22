@@ -1,0 +1,507 @@
+/* ========================================
+   PROFESSIONAL SUBTLE ANIMATIONS
+   Smooth, Modern, Non-Intrusive
+   ======================================== */
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+/* Fade In Up - Cards and Sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Left - Alternating Cards */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In Right - Alternating Cards */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In - Icons and Images */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   HOVER ANIMATIONS - CARDS
+   ======================================== */
+
+.service-card,
+.promise-card,
+.step-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.service-card:hover,
+.promise-card:hover,
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Subtle glow effect on hover */
+.service-card::before,
+.promise-card::before,
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(40, 176, 151, 0.05), rgba(27, 78, 155, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::before,
+.promise-card:hover::before,
+.step-card:hover::before {
+    opacity: 1;
+}
+
+/* ========================================
+   ICON ANIMATIONS
+   ======================================== */
+
+.icon-box {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .icon-box,
+.promise-card:hover .icon-box,
+.step-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(40, 176, 151, 0.3);
+}
+
+/* Icon floating animation */
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating {
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* ========================================
+   BUTTON ANIMATIONS
+   ======================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ripple effect on click */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Smooth scale on hover */
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   NAVBAR ANIMATIONS
+   ======================================== */
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+/* Navbar scroll effect */
+.navbar.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   SECTION HEADER ANIMATIONS
+   ======================================== */
+
+.section-header {
+    transition: all 0.6s ease;
+}
+
+.section-header.active h2 {
+    animation: fadeInUp 0.6s ease;
+}
+
+.section-header.active p {
+    animation: fadeInUp 0.6s ease 0.2s;
+}
+
+/* ========================================
+   STATS COUNTER ANIMATION
+   ======================================== */
+
+.stat-item {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover h3 {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #28B097 0%, #1B4E9B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ========================================
+   REVIEW CARDS ANIMATIONS
+   ======================================== */
+
+.review-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(27, 78, 155, 0.15);
+}
+
+/* Pause scroll animation on hover */
+.reviews-slider-container:hover .reviews-track {
+    animation-play-state: paused;
+}
+
+/* ========================================
+   STORY SCENE ANIMATIONS
+   ======================================== */
+
+.scene-visual {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.story-scene:hover .scene-visual {
+    transform: scale(1.05);
+}
+
+/* Icon animations within scenes */
+.warrior-icon,
+.car-icon,
+.family-icon {
+    transition: all 0.3s ease;
+}
+
+.scene-visual:hover .warrior-icon,
+.scene-visual:hover .car-icon,
+.scene-visual:hover .family-icon {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   BEFORE/AFTER IMAGE ANIMATION
+   ======================================== */
+
+.before-after-container {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.before-after-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.before-after-container img {
+    transition: transform 0.6s ease;
+}
+
+.before-after-container:hover img {
+    transform: scale(1.05);
+}
+
+/* ========================================
+   REFER & EARN ANIMATIONS
+   ======================================== */
+
+.avatar {
+    transition: all 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px rgba(40, 176, 151, 0.3);
+    z-index: 10;
+}
+
+/* Spinning connection lines */
+@keyframes spinSlow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.connection-lines {
+    animation: spinSlow 30s linear infinite;
+}
+
+/* ========================================
+   FOOTER ANIMATIONS
+   ======================================== */
+
+.footer-new a {
+    transition: all 0.3s ease;
+}
+
+.footer-new a:hover {
+    transform: translateX(3px);
+    color: #28B097;
+}
+
+.social-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-button {
+    transition: all 0.3s ease;
+}
+
+.app-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+/* Skeleton loading for images */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ========================================
+   MICRO-INTERACTIONS
+   ======================================== */
+
+/* Input focus animation */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 176, 151, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Link underline animation */
+a {
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #28B097;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   SCROLL PROGRESS INDICATOR
+   ======================================== */
+
+@keyframes progressBar {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ========================================
+   STAGGER ANIMATIONS FOR GRIDS
+   ======================================== */
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Reduce animation complexity on mobile */
+    .service-card:hover,
+    .promise-card:hover,
+    .step-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .icon-box {
+        animation-duration: 4s;
+    }
+
+    /* Disable some animations on mobile for performance */
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* ========================================
+   SMOOTH SCROLL BEHAVIOR
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth scroll with offset for fixed navbar */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* GPU acceleration for smooth animations */
+.service-card,
+.promise-card,
+.step-card,
+.btn,
+.icon-box,
+.review-card {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* ========================================
+   END PROFESSIONAL ANIMATIONS
+   ======================================== */

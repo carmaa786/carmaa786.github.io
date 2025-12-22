@@ -1,0 +1,403 @@
+/* ========================================
+   ENHANCED CARMAA DIFFERENCE SECTION - MOBILE
+   Professional UI/UX Design
+   ======================================== */
+
+/* ========================================
+   MOBILE VIEW ENHANCEMENTS (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Remove the green dotted timeline line on mobile */
+    .story-timeline::before {
+        display: none !important;
+    }
+
+    /* Remove timeline dots on mobile */
+    .story-scene::after {
+        display: none !important;
+    }
+
+    /* Enhanced Section Header */
+    #story .section-header h2 {
+        font-size: 2.2rem !important;
+        font-weight: 800;
+        margin-bottom: 12px;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #story .section-header p {
+        font-size: 1.05rem;
+        color: #64748b;
+        max-width: 90%;
+        margin: 0 auto 40px;
+    }
+
+    /* Story Timeline Container */
+    .story-timeline {
+        padding: 0 !important;
+        margin: 0 -16px !important;
+        /* Negative margin to offset card padding */
+    }
+
+    /* Add padding to the section container */
+    #story .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Story Scene Cards - Modern Card Design */
+    .story-scene {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 16px 24px 16px !important;
+        /* Left and right padding */
+        left: 0 !important;
+        align-items: center !important;
+        /* Center align */
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Scene Visual - Full Width Image Area */
+    .scene-visual {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 200px !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Scene Content - Enhanced Typography */
+    .scene-content {
+        max-width: 100% !important;
+        padding: 24px 20px !important;
+        text-align: center !important;
+        /* Center aligned */
+    }
+
+    .scene-content h3 {
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 12px;
+        display: block;
+        /* Changed from flex */
+        text-align: center;
+        /* Center the heading */
+    }
+
+    /* Remove the accent bar on mobile */
+    .scene-content h3::before {
+        display: none !important;
+    }
+
+    .scene-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.7;
+        color: #475569;
+        text-align: center;
+        /* Center aligned text */
+    }
+
+    .scene-content strong {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    /* Enhanced Visual Backgrounds */
+    .scene-arrival {
+        background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%) !important;
+    }
+
+    .scene-clean {
+        background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%) !important;
+    }
+
+    .scene-joy {
+        background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%) !important;
+    }
+
+    /* Icon Animations - Larger and More Prominent */
+    .warrior-wrapper {
+        font-size: 4rem !important;
+        bottom: 50% !important;
+        transform: translateY(50%);
+    }
+
+    .car-wrapper {
+        font-size: 4.5rem !important;
+    }
+
+    .family-group {
+        font-size: 4.5rem !important;
+    }
+
+    /* Data Badge Enhancement */
+    .data-badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 8px 16px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(40, 176, 151, 0.2);
+    }
+
+    .data-badge span {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--secondary);
+    }
+
+    /* House Marker Enhancement */
+    .house-marker {
+        top: 20px !important;
+        right: 20px !important;
+        font-size: 2rem !important;
+    }
+
+    /* Road Enhancement */
+    .road {
+        bottom: 30px !important;
+        height: 4px !important;
+        background: linear-gradient(90deg, transparent, #94A3B8, transparent);
+    }
+
+    /* Check Animation */
+    .check-list-anim {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: var(--secondary);
+        background: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(40, 176, 151, 0.3);
+    }
+
+    /* Sun Glow Enhancement */
+    .sun-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, rgba(251, 191, 36, 0.3), transparent);
+        border-radius: 50%;
+    }
+
+    /* Infographic Stats - Card Style */
+    .infographic-stats {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        margin-top: 40px !important;
+        padding: 32px 20px !important;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-item {
+        padding: 20px 0;
+    }
+
+    .stat-icon {
+        width: 70px !important;
+        height: 70px !important;
+        font-size: 2rem !important;
+        background: linear-gradient(135deg, #E0F2FE, #BAE6FD);
+        margin-bottom: 12px;
+        box-shadow: 0 4px 16px rgba(40, 176, 151, 0.2);
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem !important;
+        margin-bottom: 4px;
+    }
+
+    .stat-item p {
+        font-size: 1rem !important;
+        color: #64748b;
+        font-weight: 500;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE (≤480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+    #story .section-header h2 {
+        font-size: 1.9rem !important;
+    }
+
+    #story .section-header p {
+        font-size: 0.95rem;
+    }
+
+    .story-scene {
+        margin-bottom: 20px !important;
+        border-radius: 16px;
+    }
+
+    .scene-visual {
+        height: 180px !important;
+    }
+
+    .scene-content {
+        padding: 20px 16px !important;
+    }
+
+    .scene-content h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .scene-content p {
+        font-size: 0.9rem !important;
+        text-align: center;
+        /* Maintain center alignment */
+    }
+
+    .warrior-wrapper,
+    .car-wrapper,
+    .family-group {
+        font-size: 3.5rem !important;
+    }
+
+    .infographic-stats {
+        padding: 24px 16px !important;
+        gap: 24px !important;
+    }
+
+    .stat-icon {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.8rem !important;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem !important;
+    }
+
+    .stat-item p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ========================================
+   PROFESSIONAL TOUCHES
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Smooth Transitions */
+    .story-scene {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .story-scene:active {
+        transform: scale(0.98);
+    }
+
+    /* Better Visual Hierarchy */
+    .scene-content h3 {
+        letter-spacing: -0.5px;
+    }
+
+    /* Improved Readability */
+    .scene-content p {
+        text-align: left;
+        hyphens: auto;
+    }
+
+    /* Consistent Spacing */
+    .story-scene:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Enhanced Focus States */
+    .story-scene:focus-within {
+        outline: 3px solid rgba(40, 176, 151, 0.3);
+        outline-offset: 2px;
+    }
+}
+
+/* ========================================
+   ANIMATION REFINEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Smoother Icon Animations */
+    .warrior-wrapper,
+    .car-wrapper,
+    .family-group {
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+    }
+
+    /* Subtle Hover Effect on Stats */
+    .stat-item {
+        transition: transform 0.3s ease;
+    }
+
+    .stat-item:active {
+        transform: translateY(-4px);
+    }
+
+    .stat-icon {
+        transition: all 0.3s ease;
+    }
+
+    .stat-item:active .stat-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 6px 20px rgba(40, 176, 151, 0.3);
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Better Touch Targets */
+    .story-scene {
+        min-height: 280px;
+    }
+
+    /* Improved Contrast */
+    .scene-content h3 {
+        color: #0F172A;
+    }
+
+    .scene-content p {
+        color: #334155;
+    }
+
+    /* Clear Visual Separation */
+    .story-scene+.story-scene {
+        margin-top: 24px;
+    }
+}
+
+/* ========================================
+   END ENHANCED CARMAA DIFFERENCE SECTION
+   ======================================== */
