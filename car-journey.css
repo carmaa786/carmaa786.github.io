@@ -1,0 +1,496 @@
+/* Car Journey Storytelling Design for Carmaa Difference Section */
+
+.car-journey-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    position: relative;
+    padding: 40px 0;
+}
+
+/* Journey Road - Connecting Line */
+.journey-road {
+    position: absolute;
+    top: 180px;
+    left: 15%;
+    right: 15%;
+    height: 4px;
+    background: linear-gradient(to right,
+            var(--primary) 0%,
+            var(--secondary) 50%,
+            #FBBF24 100%);
+    border-radius: 2px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.journey-road::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right,
+            transparent 0%,
+            transparent 48%,
+            white 48%,
+            white 52%,
+            transparent 52%,
+            transparent 100%);
+    background-size: 60px 100%;
+    animation: road-move 2s linear infinite;
+}
+
+@keyframes road-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 60px 0;
+    }
+}
+
+/* Journey Card with Stacking Animation */
+.journey-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--border-light);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: sticky;
+    top: 120px;
+    z-index: 1;
+    transform-origin: top center;
+}
+
+/* Stacking effect - each card stacks on top of previous */
+.journey-card:nth-child(2) {
+    top: 140px;
+    z-index: 2;
+}
+
+.journey-card:nth-child(3) {
+    top: 160px;
+    z-index: 3;
+}
+
+.journey-card:nth-child(4) {
+    top: 180px;
+    z-index: 4;
+}
+
+/* Scale and fade animation on scroll */
+.journey-card {
+    animation: card-stack-in 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+}
+
+.journey-card.reveal {
+    animation: card-stack-in 0.6s ease-out forwards;
+}
+
+@keyframes card-stack-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.journey-card:hover {
+    transform: translateY(-10px) scale(1.02) translateZ(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(27, 78, 155, 0.3);
+    z-index: 10;
+    will-change: transform, box-shadow;
+}
+
+/* Journey Visual Container */
+.journey-visual {
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Journey Content */
+.journey-content {
+    text-align: center;
+}
+
+.journey-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 12px rgba(27, 78, 155, 0.3);
+}
+
+.icon-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: white;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
+}
+
+.journey-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.journey-content p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Scene 1: Arrival - Dirty Car */
+.scene-arrival-new {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+}
+
+.car-dirty {
+    font-size: 4rem;
+    color: #64748B;
+    position: relative;
+    animation: car-arrive 3s ease-in-out infinite;
+}
+
+.dirt-particles {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #94A3B8;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.dirt-particles::before,
+.dirt-particles::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #94A3B8;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.dirt-particles::before {
+    top: 15px;
+    left: -15px;
+}
+
+.dirt-particles::after {
+    top: -5px;
+    left: 20px;
+}
+
+.service-van {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary);
+    animation: van-bounce 2s ease-in-out infinite;
+}
+
+.location-pin {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    animation: pin-pulse 2s ease-in-out infinite;
+}
+
+@keyframes car-arrive {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes van-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pin-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Scene 2: Service - Car Being Cleaned */
+.scene-service-new {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+}
+
+.car-service {
+    font-size: 4rem;
+    color: var(--secondary);
+    position: relative;
+    animation: car-shake 3s ease-in-out infinite;
+}
+
+.foam-spray {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: spray-float 2s ease-in-out infinite;
+}
+
+.foam-spray-2 {
+    left: auto;
+    right: -30px;
+    animation-delay: 1s;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary);
+    animation: badge-spin 4s linear infinite;
+}
+
+@keyframes car-shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes spray-float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.5);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-60px) scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes badge-spin {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Scene 3: Finish - Clean Sparkling Car */
+.scene-finish-new {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+}
+
+.car-clean {
+    font-size: 4rem;
+    color: var(--primary);
+    position: relative;
+    animation: car-shine 3s ease-in-out infinite;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 1.2rem;
+    color: #FBBF24;
+    animation: sparkle-twinkle 2s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    top: -15px;
+    left: -20px;
+    animation-delay: 0s;
+}
+
+.sparkle-2 {
+    top: -20px;
+    right: -15px;
+    animation-delay: 0.7s;
+}
+
+.sparkle-3 {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1.4s;
+}
+
+.quality-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #FBBF24;
+    animation: medal-swing 3s ease-in-out infinite;
+}
+
+@keyframes car-shine {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+@keyframes sparkle-twinkle {
+
+    0%,
+    100% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.3) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes medal-swing {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-15deg);
+    }
+
+    75% {
+        transform: rotate(15deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .car-journey-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .journey-road {
+        display: none;
+    }
+
+    /* Disable sticky stacking on mobile */
+    .journey-card,
+    .journey-card:nth-child(2),
+    .journey-card:nth-child(3),
+    .journey-card:nth-child(4) {
+        position: relative;
+        top: auto;
+    }
+
+    .journey-visual {
+        height: 180px;
+    }
+
+    .car-dirty,
+    .car-service,
+    .car-clean {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .journey-card {
+        padding: 20px;
+    }
+
+    .journey-visual {
+        height: 150px;
+    }
+
+    .journey-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .journey-content p {
+        font-size: 0.95rem;
+    }
+}

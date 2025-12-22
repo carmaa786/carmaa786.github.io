@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="how-it-works-carousel.css">
     <link rel="stylesheet" href="professional-animations.css">
     <link rel="stylesheet" href="stats-carousel.css">
+    <link rel="stylesheet" href="car-journey.css">
+    <link rel="stylesheet" href="scroll-animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
@@ -200,15 +202,19 @@
                 </div>
                 <div class="refer-visual">
                     <div class="avatar-network">
-                        <div class="avatar av-1"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
-                                alt="User"></div>
-                        <div class="avatar av-2"><img
-                                src="https://ui-avatars.com/api/?name=Jane+Smith&background=random" alt="User"></div>
+                        <div class="avatar av-1 icon-avatar car-icon">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <div class="avatar av-2 icon-avatar person-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa"></div>
-                        <div class="avatar av-3"><img src="https://ui-avatars.com/api/?name=Mike+Ross&background=random"
-                                alt="User"></div>
-                        <div class="avatar av-4"><img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=random"
-                                alt="User"></div>
+                        <div class="avatar av-3 icon-avatar car-icon">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <div class="avatar av-4 icon-avatar person-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
                         <div class="connection-lines"></div>
                     </div>
                 </div>
@@ -249,60 +255,76 @@
                 <p>Advanced technology meeting sustainability and convenience.</p>
             </div>
 
-            <div class="story-timeline show-timeline">
-                <!-- Scene 1: Convenience -->
-                <div class="story-scene fade-left">
-                    <div class="scene-visual scene-arrival">
-                        <div class="road"></div>
-                        <div class="warrior-wrapper">
-                            <i class="fa-solid fa-motorcycle warrior-icon"></i>
-                            <!-- Carmaa Warrior - Biker arriving at your doorstep -->
-                            <div class="wind-lines"></div>
+            <div class="car-journey-container">
+                <!-- Journey Road -->
+                <div class="journey-road"></div>
+
+                <!-- Scene 1: We Come To You -->
+                <div class="journey-card reveal fade-up delay-1">
+                    <div class="journey-visual scene-arrival-new">
+                        <div class="car-dirty">
+                            <i class="fa-solid fa-car"></i>
+                            <div class="dirt-particles"></div>
                         </div>
-                        <div class="house-marker">
+                        <div class="service-van">
+                            <i class="fa-solid fa-van-shuttle"></i>
+                        </div>
+                        <div class="location-pin">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                     </div>
-                    <div class="scene-content">
-                        <h3>1. We Come To You</h3>
+                    <div class="journey-content">
+                        <div class="journey-number">1</div>
+                        <h3>We Come To You</h3>
                         <p><strong>Doorstep Convenience:</strong> Whether at home or office, our fully equipped
                             professionals arrive at your location. We bring our own power and tools, requiring zero
                             hassle from you.</p>
                     </div>
                 </div>
 
-                <!-- Scene 2: Authentic Products & Convenience -->
-                <div class="story-scene fade-right">
-                    <div class="scene-visual scene-clean">
-                        <div class="car-wrapper">
-                            <i class="fa-solid fa-shield-check car-icon"></i> <!-- Authentic Products Icon -->
-                            <div class="foam-ring"></div>
+                <!-- Scene 2: Relax & Trust -->
+                <div class="journey-card reveal fade-up delay-2">
+                    <div class="journey-visual scene-service-new">
+                        <div class="car-service">
+                            <i class="fa-solid fa-car"></i>
+                            <div class="foam-spray"></div>
+                            <div class="foam-spray foam-spray-2"></div>
                         </div>
-                        <div class="data-badge">
-                            <span>Premium Products</span>
+                        <div class="premium-badge">
+                            <i class="fa-solid fa-shield-check"></i>
                         </div>
                     </div>
-                    <div class="scene-content">
-                        <h3>2. Relax & Trust</h3>
+                    <div class="journey-content">
+                        <div class="journey-number">2</div>
+                        <h3>Relax & Trust</h3>
                         <p><strong>Authentic Products:</strong> We use only genuine, premium-grade products from trusted
                             brands. Sit back and relax while our professionals handle everything - no hassle, no
                             worries, just pure convenience.</p>
                     </div>
                 </div>
 
-                <!-- Scene 3: Quality -->
-                <div class="story-scene fade-left">
-                    <div class="scene-visual scene-joy">
-                        <div class="sun-glow"></div>
-                        <div class="family-group">
-                            <i class="fa-solid fa-medal family-icon"></i>
+                <!-- Scene 3: Showroom Finish -->
+                <div class="journey-card reveal fade-up delay-3">
+                    <div class="journey-visual scene-finish-new">
+                        <div class="car-clean">
+                            <i class="fa-solid fa-car"></i>
+                            <div class="sparkle sparkle-1">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="sparkle sparkle-2">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="sparkle sparkle-3">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                         </div>
-                        <div class="check-list-anim">
-                            <i class="fa-solid fa-check"></i>
+                        <div class="quality-badge">
+                            <i class="fa-solid fa-medal"></i>
                         </div>
                     </div>
-                    <div class="scene-content">
-                        <h3>3. Showroom Finish</h3>
+                    <div class="journey-content">
+                        <div class="journey-number">3</div>
+                        <h3>Showroom Finish</h3>
                         <p><strong>Professional Detailing:</strong> From deep interior vacuuming to exterior polishing,
                             we ensure every corner is spotless. Backed by our 100% satisfaction guarantee.</p>
                     </div>
@@ -375,8 +397,8 @@
             </div>
 
             <div class="review-actions reveal fade-up delay-2">
-                <a href="https://g.page/r/CRmKhbqWlYOaEBM/review" class="btn btn-outline btn-dark-text" target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.google.com/search?q=carmaa+car+care&sca_esv=f992f93e54369060&sxsrf=AE3TifORJxgXoUNy7B4XML4BZl7T8CR7Xg%3A1766387399432&source=hp&ei=x-5Iaf74FY2Vg8UPu8GZ8QQ&iflsig=AOw8s4IAAAAAaUj81-3Kk08XrGntP6DQeGB0Dw3HzxqU&gs_ssp=eJzj4tVP1zc0zEkxtjQxTys3YLRSNagwtjSwNEoyMjJIM09KMjQxtDKoMElJTrE0SktLNUo2SbEwN_biT04syk1MVABSIJwKALHnFGo&oq=carmaa&gs_lp=Egdnd3Mtd2l6IgZjYXJtYWEqAggAMgsQLhivARjHARiABDIFEAAYgAQyBxAAGIAEGAoyBxAAGIAEGAoyBRAAGIAEMgkQABiABBgKGAsyCRAAGIAEGAoYCzIFEAAYgAQyCRAAGIAEGAoYCzIJEC4YgAQYChgLSNGIAVAAWPdPcAZ4AJABAJgBjAOgAfATqgEHMC44LjEuM7gBAcgBAPgBAZgCEqAC2xSoAgrCAgQQIxgnwgIIEAAYgAQYsQPCAgsQABiABBixAxiDAcICERAuGIAEGLEDGIMBGMcBGNEDwgIKECMYyQIY8AUYJ8ICChAjGPAFGMkCGCfCAgcQIxjqAhgnwgINECMYnQYY6AYY6gIYJ8ICChAjGPAFGOoCGCfCAg4QLhiABBixAxjHARjRA8ICDhAAGIAEGIoFGLEDGIMBwgILEC4YgAQYsQMYgwHCAg4QLhjHARixAxjRAxiABMICCxAuGIAEGMcBGK8BwgIMEAAYgAQYAhjLARgKwgIFEC4YgATCAgoQABiABBgCGMsBmAMEkgcJNi44LjEuMi4xoAfge7IHCTAuOC4xLjIuMbgHuhTCBwYyLTE3LjHIB1GACAE&sclient=gws-wiz&zx=1766387379564&no_sw_cr=1#lrd=0x39092b220f7bb141:0x4dcd92ffe2c4d873,1"
+                    class="btn btn-outline btn-dark-text" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-google"></i> Write a Review
                 </a>
             </div>

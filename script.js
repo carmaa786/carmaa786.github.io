@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
 
-    // Scroll Reveal Animation
+    // Enhanced Scroll Reveal Animation System
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Only animate once
+                // Keep observing for parallax effects, don't unobserve
             }
         });
     }, {
@@ -70,6 +70,80 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        // Add scrolled class for styling
+        if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxSpeed = 0.5;
+
+        if (hero && scrolled < hero.offsetHeight) {
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+                heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.8;
+            }
+        }
+    });
+
+    // Footer reveal animation
+    const footer = document.querySelector('.footer-new');
+    if (footer) {
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        footerObserver.observe(footer);
+    }
+
+    // Smooth scroll progress indicator (optional subtle effect)
+    const createScrollProgress = () => {
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
+    };
+
+    // Uncomment to enable scroll progress bar
+    // createScrollProgress();
 
     // Auto-scroll for Services Carousel on Mobile
     const servicesGrid = document.querySelector('.services-grid');
@@ -329,7 +403,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Auto-scroll for Stats Carousel on Mobile (similar to services)
+
+    // Stats auto-scroll disabled - now using grid layout on mobile
+    // All three stats are visible on one screen without scrolling
+    /*
     const statsContainer = document.querySelector('.infographic-stats');
     let isStatsAutoScrolling = false;
     let statsAutoScrollInterval;
@@ -359,11 +436,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     left: scrollPosition,
                     behavior: 'smooth'
                 });
-            }, 4000); // Scroll every 4 seconds (slower than services)
+            }, 4000);
         }
     };
 
-    // Pause auto-scroll when user interacts with stats
     if (statsContainer) {
         statsContainer.addEventListener('touchstart', () => {
             isStatsAutoScrolling = false;
@@ -373,18 +449,17 @@ document.addEventListener('DOMContentLoaded', () => {
         statsContainer.addEventListener('touchend', () => {
             setTimeout(() => {
                 startStatsAutoScroll();
-            }, 6000); // Resume after 6 seconds of no interaction
+            }, 6000);
         });
 
-        // Start auto-scroll on load
         setTimeout(() => {
             startStatsAutoScroll();
-        }, 1000); // Delay initial auto-scroll by 1 second
+        }, 1000);
 
-        // Restart on window resize
         window.addEventListener('resize', () => {
             clearInterval(statsAutoScrollInterval);
             startStatsAutoScroll();
         });
     }
+    */
 });
