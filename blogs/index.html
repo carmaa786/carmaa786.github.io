@@ -1,896 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="canonical" href="https://carmaacarcare.com/blogs/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogs</title>
-    <!-- <link rel="stylesheet" href="../css/pricing.css" /> -->
-    <!-- <link rel="stylesheet" href="../css/globalCss/navbarGlobal.css"> -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../images/favicon-16x16.png"
-    />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="../css/city.css" />
-    <link rel="stylesheet" href="../css/homepage.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/aboutus.css" />
-    <link rel="stylesheet" href="./blogs.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Blogs | Carmaa Premium Car Care</title>
+  <meta name="description"
+    content="Read the latest from Carmaa about premium doorstep car detailing, quick wash techniques, and car maintenance tips.">
+  <link rel="canonical" href="https://carmaacarcare.com/blogs/" />
 
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Lexend", "Lexend Placeholder", "sans-serif";
-        font-size: 16px;
-      }
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer-new.css">
+  <link rel="stylesheet" href="mobile-optimizations.css">
+  <link rel="stylesheet" href="professional-animations.css">
+  <link rel="stylesheet" href="scroll-animations.css">
+  <link rel="stylesheet" href="blogs.css">
 
-      li {
-        list-style: none;
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
 
-      .wave {
-        --size: 50px;
-        --m: 2;
-        --p: calc(var(--m) * var(--size));
-        --R: calc(var(--size) * sqrt(var(--m) * var(--m) + 1));
-        padding-top: 50px;
-        mask: radial-gradient(
-              var(--R) at left 50% top calc(var(--size) + var(--p)),
-              #000 99%,
-              #0000 101%
-            )
-            calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
-          radial-gradient(
-              var(--R) at left 50% top calc(-1 * var(--p)),
-              #0000 99%,
-              #000 101%
-            )
-            left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
-      }
+  <style>
+    .city-header-section {
+      background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../images/banners/centrio3.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 140px 0 60px;
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
 
-      .elementor-shape-fill {
-        fill: white !important;
-      }
+    .city-header-section p.title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-      .TestimonialCard > div {
-        cursor: pointer;
-        transition: all 0.5s;
-        box-shadow: 0px 0px 10px #65c7d06e !important;
-      }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
 
-      .TestimonialCard > div:hover {
-        transform: scale(1.1) !important;
-        box-shadow: 0px 0px 10px #65c7d0 !important;
-      }
+    .breadcrumb img {
+      height: 18px;
+      filter: brightness(0) invert(1);
+    }
 
-      @media screen and (max-width: 1000px) {
-        .TestimonialCard > div {
-          flex: 1 !important;
-          max-width: none !important;
-        }
-      }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="../js/rightClickDisable.js"></script>
+    .breadcrumb-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    .breadcrumb span {
+      color: rgba(255, 255, 255, 0.6);
+    }
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "AW-16789669575");
-    </script>
-    <div
-      style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        height: 50px;
-        aspect-ratio: 1;
-        z-index: 99999999;
-      "
-      class="whatsapp-icon-container"
-    >
-      <a
-        href="https://api.whatsapp.com/send?phone=917042555401"
-        target="_blank"
-      >
-        <img
-          style="height: 100%; width: 100%"
-          src="../images/whatsapp.png"
-          alt="waterless car wash in Noida"
-          loading="lazy"
-        />
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Fix for scroll animations spacing */
+    .reveal {
+      transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.jpg" alt="Carmaa Logo">
+        <span>Carmaa</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+          class="btn btn-primary shimmer-btn" target="_blank" rel="noopener noreferrer">Download App</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="city-header-section">
+    <div class="container">
+      <p class="title reveal fade-bottom">Expert Car Insights</p>
+      <div class="breadcrumb reveal fade-bottom delay-1">
+        <a href="../index.html" class="breadcrumb-link">Home</a>
+        <span>/</span>
+        <p>Blogs</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <!-- Tabs Section -->
+    <div class="blog-header-main-container reveal fade-bottom">
+      <div class="blog-header-container active" onclick="showTab('main-container-one', this)">
+        <div class="blog-icons-container">
+          <img src="../images/ui_change_images/foam_wash.png" alt="Car Cleaning">
+        </div>
+        <p class="blog-heading-para">Car Cleaning</p>
+      </div>
+
+      <div class="blog-header-container" onclick="showTab('main-container-two', this)">
+        <div class="blog-icons-container">
+          <img src="../images/car-decor/car-decor-home-img.png" alt="Car Decor">
+        </div>
+        <p class="blog-heading-para">Car Decor</p>
+      </div>
+
+      <div class="blog-header-container" onclick="showTab('main-container-three', this)">
+        <div class="blog-icons-container">
+          <img src="../images/ui_change_images/car_servicing.png" alt="General Services">
+        </div>
+        <p class="blog-heading-para">Other Services</p>
+      </div>
+    </div>
+
+    <!-- Section 1: Car Cleaning -->
+    <div id="main-container-one" class="main-container active reveal fade-up">
+      <a href="./the-ultimate-doorstep-car-wash-service-provider-in-dehradun/index.html"
+        class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/car-wash-in-dehradun.jpg" alt="Car Wash Dehradun">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">26 Nov, 2024</p>
+          <h2 class="blog-sub-heading">The Ultimate Doorstep Car Wash in Dehradun</h2>
+          <p class="blog-sub-para">Keeping a car clean and well-maintained can be a challenge with a busy pace of life.
+            Discover Dehradun's top provider.</p>
+        </div>
+      </a>
+
+      <a href="./top-tips-for-exterior-and-interior-car-cleaning/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/banners/BANNER4.jpg" alt="Winter Car Care">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">26 Nov, 2024</p>
+          <h2 class="blog-sub-heading">Top Tips for Exterior & Interior Cleaning</h2>
+          <p class="blog-sub-para">Get your car winter-ready with our professional guide to deep cleaning and protection
+            during cold months.</p>
+        </div>
+      </a>
+
+      <a href="./how-to-wash-your-car-without-a-hose/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/waterless-car-car- carma- blog.jpg" alt="Waterless Wash">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">10 Dec, 2024</p>
+          <h2 class="blog-sub-heading">Clean Your Car Without Using a Hose</h2>
+          <p class="blog-sub-para">Learn effective waterless car wash techniques from our experts for a spotless look
+            without wasting water.</p>
+        </div>
+      </a>
+
+      <a href="./ultimate-guide-to-doorstep-car-wash/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/The Ultimate Guide to Doorstep Car Wash (1).jpg" alt="Doorstep Wash Guide">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">12 Feb, 2025</p>
+          <h2 class="blog-sub-heading">The Ultimate Guide to Doorstep Wash</h2>
+          <p class="blog-sub-para">Explore the entire process and the unmatched convenience of having professional car
+            care delivered to you.</p>
+        </div>
+      </a>
+
+      <a href="./why-carmaa-carcare-is-perfect/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/Discover Why Carmaa carcare is Perfect for Car Cleaning Services at Home.jpg"
+            alt="Why Carmaa">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">12 Feb, 2025</p>
+          <h2 class="blog-sub-heading">Why Carmaa is Perfect for Home Care</h2>
+          <p class="blog-sub-para">Discover the difference professional training and premium products make for your
+            vehicle's health.</p>
+        </div>
+      </a>
+
+      <a href="./doorstep-car-cleaning-service-noida/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img
+            src="../images/blogs/Top-Rated Doorstep Car Cleaning & Car Wash Service in Noida – Effortless & Affordable!.jpg"
+            alt="Noida Car Care">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">20 Mar, 2025</p>
+          <h2 class="blog-sub-heading">Top-Rated Car Cleaning in Noida</h2>
+          <p class="blog-sub-para">Keep your car pristine in Noida with our top-rated, effortless, and affordable
+            doorstep wash services.</p>
+        </div>
+      </a>
+
+      <a href="./ultimate-guide-to-car-cleaning-2025/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/The Ultimate Guide to Car Cleaning in 2025.jpg" alt="2025 Industry Trends">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">28 Mar, 2025</p>
+          <h2 class="blog-sub-heading">The 2025 Guide to Car Cleaning</h2>
+          <p class="blog-sub-para">Industry trends, technological innovations, and Carmaa's top strategies for the new
+            year.</p>
+        </div>
+      </a>
+
+      <a href="./dry-cleaning-services-at-your-doorstep/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep (1).jpg"
+            alt="Dry Cleaning">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">13 May, 2025</p>
+          <h2 class="blog-sub-heading">Benefits of Doorstep Dry Cleaning</h2>
+          <p class="blog-sub-para">Don't let busy schedules stop you from maintaining your car's interior. We bring
+            specialized cleaning to you.</p>
+        </div>
       </a>
     </div>
-  </head>
 
-  <body>
-    <div id="preloader"></div>
-
-    <div id="content" style="display: none">
-      <div class="topbar-section-common">
-        <div class="topbar-section-container">
-          <div class="social-media-icons">
-            <a
-              href="https://www.facebook.com/carmaaofficialpage"
-              target="_blank"
-              ><div class="img-wrapper">
-                <img
-                  src="../images/contactus/facebook.png"
-                  alt="mobile mechanic near me"
-                  loading="lazy"
-                /></div
-            ></a>
-            <a
-              href="https://www.instagram.com/carmaa_official"
-              loading="lazy"
-              target="_blank"
-              ><div class="img-wrapper">
-                <img
-                  src="../images/contactus/instagram.png"
-                  alt="car workshop near me"
-                  loading="lazy"
-                /></div
-            ></a>
-            <a href="https://www.youtube.com/@carmaa_Official" target="_blank"
-              ><div class="img-wrapper">
-                <img
-                  src="../images/contactus/youtube.png"
-                  alt="car body shop repair near me"
-                  loading="lazy"
-                /></div
-            ></a>
-            <a href="../blogs/"
-              ><div class="img-wrapper">
-                <img
-                  src="../images/home-page/topbar/blogger.png"
-                  alt="auto workshop near me"
-                  loading="lazy"
-                /></div
-            ></a>
-          </div>
-
-          <p
-            id="topbar-text"
-            style="
-              color: #fff;
-              font-weight: 400;
-              font-size: 0.95rem;
-              margin: 0;
-              font-weight: 600;
-            "
-          >
-            Bring your car's showroom shine back!
-          </p>
-
-          <div
-            style="display: flex; flex-direction: column; align-items: center"
-          >
-            <div style="display: flex; align-items: center; gap: 0.3rem">
-              <img
-                style="width: 1.5rem; height: 1.5rem"
-                alt="Interior Car Cleaning Service"
-                src="../images/home-page/topbar/phone.png"
-                loading="lazy"
-              />
-              <a class="mobile-number-ref" href="tel:+917042555401"
-                ><p>+91 70425 55401</p></a
-              >
-            </div>
-          </div>
+    <!-- Section 2: Car Decor -->
+    <div id="main-container-two" class="main-container reveal fade-up">
+      <a href="./doorstep-car-decor-in-dehradun/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/Celebrate Every Occasion with Carmaa’s Doorstep Car Flower decoration (1).jpg"
+            alt="Car Flower Decor">
         </div>
-      </div>
-
-      <div id="navbar-placeholder" class="navbar-sticky-container">
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            fetch("/components/navbar.html")
-              .then((response) => response.text())
-              .then((html) => {
-                document.getElementById("navbar-placeholder").innerHTML = html;
-
-                // Reinitialize toggle functionality after loading the navbar
-                const toggle = document.getElementById("toggle");
-                const menu = document.getElementById("menu");
-
-                toggle.addEventListener("click", function () {
-                  menu.classList.toggle("active");
-                });
-              })
-              .catch((error) => console.error("Error loading navbar:", error));
-          });
-        </script>
-      </div>
-
-      <header class="city-header-section">
-        <p>Blogs</p>
-        <div class="breadcrumb">
-          <img
-            class=""
-            alt="Interior Car Cleaning Service"
-            src="../common/home.png"
-            loading="lazy"
-          />
-          <p><a href="/" class="breadcrumb-link">Home</a></p>
-          <p>/</p>
-          <p><a href="./" class="breadcrumb-link">Blogs</a></p>
+        <div class="blog-section-container">
+          <p class="blog-date-para">03 May, 2025</p>
+          <h2 class="blog-sub-heading">Celebrate with Doorstep Car Flower Decor</h2>
+          <p class="blog-sub-para">Make every cherished occasion unique with beautiful car flower decor delivered right
+            to your location.</p>
         </div>
-      </header>
-
-      <main class="blog-container">
-        <div class="blog-header-main-container">
-          <div class="blog-header-container" id="blog-navbar-underline">
-            <div class="blog-icons-container">
-              <img
-                src="/images/ui_change_images/foam_wash.png"
-                alt="Car Cleaning"
-                loading="lazy"
-              />
-            </div>
-            <p class="blog-heading-para">Car Cleaning</p>
-          </div>
-
-          <div class="blog-header-container" id="blog-navbar-underline">
-            <div class="blog-icons-container">
-              <img
-                src="/images/car-decor/car-decor-home-img.png"
-                alt="Car Decor"
-                loading="lazy"
-              />
-            </div>
-            <p class="blog-heading-para">Car Decor</p>
-          </div>
-
-          <div class="blog-header-container" id="blog-navbar-underline">
-            <div class="blog-icons-container">
-              <img
-                src="/images/ui_change_images/car_servicing.png"
-                alt="car workshop near me"
-                loading="lazy"
-              />
-            </div>
-            <p class="blog-heading-para">Other Services</p>
-          </div>
-        </div>
-
-        <div class="main-container" id="main-container-one">
-          <a
-            href="./the-ultimate-doorstep-car-wash-service-provider-in-dehradun/"
-          >
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="../images/blogs/car-wash-in-dehradun.jpg"
-                  alt="Car Cleaning Services at Home"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">26th November, 2024</p>
-
-                <h2 class="blog-sub-heading">
-                  The Ultimate Doorstep Car Wash Service Provider in Dehradun
-                </h2>
-                <p class="blog-sub-para">
-                  Keeping a car clean and well-maintained can be a challenge,
-                  especially with the busy pace of life. If you're on the
-                  lookout for the top Doorstep Car Wash service provider in
-                  Dehradun.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./top-tips-for-exterior-and-interior-car-cleaning/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="../images/banners/BANNER4.jpg"
-                  alt="Car Cleaning Services at Home"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">26th November, 2024</p>
-                <h2 class="blog-sub-heading">
-                  Top Tips for Exterior and Interior Car Cleaning: Prepare Your
-                  Car for Winter
-                </h2>
-                <p class="blog-sub-para">
-                  Get your car winter-ready with key tips for exterior and
-                  interior cleaning. Keep your vehicle protected and in great
-                  condition throughout the cold season.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./how-to-wash-your-car-without-a-hose/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="../images/blogs/waterless-car-car- carma- blog.jpg"
-                  alt="Deep Cleaning Service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">10th December, 2024</p>
-                <h2 class="blog-sub-heading">
-                  How to Clean Your Car Without Using a Hose or Running Water
-                </h2>
-                <p class="blog-sub-para">
-                  Learn effective waterless car wash techniques with our
-                  doorstep car wash service. Keep your car spotless with
-                  eco-friendly and hassle-free cleaning. .
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./ultimate-guide-to-doorstep-car-wash">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/The Ultimate Guide to Doorstep Car Wash (1).jpg"
-                  alt="Doorstep Car Cleaning Service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">12th February, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  The Ultimate Guide to Doorstep Car Wash: The Process and Its
-                  Unmatched Convenience
-                </h2>
-                <p class="blog-sub-para">
-                  Doorstep Car Wash, Doorstep Car Wash service, professional car
-                  cleaning.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./why-carmaa-carcare-is-perfect/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/Discover Why Carmaa carcare is Perfect for Car Cleaning Services at Home.jpg"
-                  alt="Interior Car Cleaning Service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">12th February, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  Discover Why Carmaa carcare is Perfect for Car Cleaning
-                  Services at Home.
-                </h2>
-                <p class="blog-sub-para">
-                  Car Cleaning Services at Home, Doorstep Car Cleaning Service,
-                  Deep Cleaning Service, Interior Car Cleaning Service, Exterior
-                  Car Cleaning Service.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./doorstep-car-cleaning-service-noida">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/Top-Rated Doorstep Car Cleaning & Car Wash Service in Noida – Effortless & Affordable!.jpg"
-                  alt="Doorstep Car Cleaning, Car Wash Service in Noida"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">20th March, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  Top-Rated Doorstep Car Cleaning & Car Wash Service in Noida
-                </h2>
-                <p class="blog-sub-para">
-                  Keeping your car clean goes beyond just enhancing its
-                  appearance—it also plays a key role in preserving its value
-                  and maintaining its longevity.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./ultimate-guide-to-car-cleaning-2025">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/The Ultimate Guide to Car Cleaning in 2025.jpg"
-                  alt="Premium Exterior Car Cleaning"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">28th March, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  The Ultimate Guide to Car Cleaning in 2025: Trends, Tips, and
-                  Carmaa’s Top
-                </h2>
-                <p class="blog-sub-para">
-                  The car cleaning industry in 2025 is defined by a shift toward
-                  convenience, sustainability, and technological innovation.
-                  Modern car owners increasingly demand eco-friendly and
-                  efficient solutions that deliver professional results right at
-                  their doorstep.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./dry-cleaning-services-at-your-doorstep/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep (1).jpg"
-                  alt="Car-service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">13th May, 2025</p>
-                <h2 class="blog-sub-heading">
-                  Top Benefits of Opting for Car Dry Cleaning Services at Your
-                  Doorstep
-                </h2>
-                <p class="blog-sub-para">
-                  In today’s fast-paced world, finding time for vehicle
-                  maintenance has become increasingly difficult. With busy
-                  schedules and endless commitments, car owners often struggle
-                  to fit in a visit to the car wash.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./why-carmaa-is-becoming-dehradun's-choice">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="../images/banners/centrio3.jpg"
-                  alt="Car-service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">21st August, 2025</p>
-                <h2 class="blog-sub-heading">
-                  Carmaa’s Waterless Car Wash Trend at Centrio Mall Dehradun
-                </h2>
-                <p class="blog-sub-para">
-                  When it comes to keeping your car impeccably clean and shiny,
-                  Carmaa is quickly becoming the preferred choice for car owners
-                  in Dehradun, turning Centrio Mall into a bustling hub of
-                  activity.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="main-container" id="main-container-two">
-          <a href="./doorstep-car-decor-in-dehradun">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/Celebrate Every Occasion with Carmaa’s Doorstep Car Flower decoration (1).jpg"
-                  alt="Car decor in Dehradun"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">3rd May, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  Celebrate Every Occasion with Carmaa’s Doorstep Car Flower
-                  decoration
-                </h2>
-                <p class="blog-sub-para">
-                  Now make every cherished occasion unique with our new service,
-                  which is Doorstep car decor in Dehradun. Carmaa offers
-                  beautiful Car flower decor at the Doorstep to bring beauty and
-                  elegance to your events.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="main-container" id="main-container-three">
-          <a href="./car-maintenance-doorstep-services">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/the-future-of-car-maintenance-with-doorstep-services.jpg"
-                  alt=" Doorstep car washing services"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">23th March, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  The Future Of Car Maintenance With Doorstep Services
-                </h2>
-                <p class="blog-sub-para">
-                  When it comes to keeping our cars clean, convenience matters
-                  more than ever. The traditional car cleaning process often
-                  feels like a chore. However, the rise of doorstep car washing
-                  services is changing how we think about car maintenance.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./how-to-maintain-your-car-shine/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/Maintain Your Car’s Shine During Dehradun’s Dusty Seasons (1).jpg"
-                  alt="Car-service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">25th, May, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  Maintain Your Car’s Shine During Dehradun’s Dusty Seasons
-                </h2>
-                <p class="blog-sub-para">
-                  The beautiful surroundings of Dehradun always come with dust
-                  and grime in the dry months. This is not an excellent thing
-                  for a vehicle because the dust dulls the appearance of the
-                  vehicle in no time.
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./rise-of-car-subscription-model/">
-            <div class="blog-section-main-container">
-              <div class="blog-img-container">
-                <img
-                  class="blog-image"
-                  src="/images/blogs/The Rise of Car Subscription Models in India Will You Own or Subscribe (1).jpg"
-                  alt="Car-service"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-section-container">
-                <p class="blog-date-para">7th, June, 2025</p>
-
-                <h2 class="blog-sub-heading">
-                  The Rise of Car Subscription Models in India: Will You Own or
-                  Subscribe?
-                </h2>
-                <p class="blog-sub-para">
-                  From the perspective of rapidly growing urban landscape, the
-                  attitude towards vehicle ownership is changing. The cities of
-                  Delhi, Noida, Dehradun, and Bangalore are seeing a change
-                  where traditional ownership is being replaced by convenience
-                  and flexibility.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <script>
-          const blogParas = document.querySelectorAll(".blog-sub-para");
-
-          blogParas.forEach((para) => {
-            const fullText = para.textContent;
-
-            if (fullText.length > 115) {
-              const trimmedText = fullText.slice(0, 115);
-              para.innerHTML = `${trimmedText}<span class="read-more">...Read More</span>`;
-            }
-          });
-        </script>
-
-        <script>
-          const blogContainers = document.querySelectorAll(
-            ".blog-header-container"
-          );
-          const mainContainerOne =
-            document.getElementById("main-container-one");
-          const mainContainerTwo =
-            document.getElementById("main-container-two");
-          const mainContainerThree = document.getElementById(
-            "main-container-three"
-          );
-
-          function resetContainers() {
-            mainContainerOne.classList.remove("active");
-            mainContainerTwo.classList.remove("active");
-            mainContainerThree.classList.remove("active");
-          }
-
-          blogContainers.forEach((container) => {
-            container.addEventListener("click", () => {
-              // Remove active class and underline from all
-              blogContainers.forEach((c) => {
-                c.classList.remove("active");
-                c.style.borderBottom = "none";
-              });
-
-              // Add active class and underline to clicked one
-              container.classList.add("active");
-
-              // Get tab heading
-              const headingText =
-                container.querySelector(".blog-heading-para")?.textContent;
-
-              // Save active tab to localStorage
-              localStorage.setItem("activeBlogTab", headingText);
-
-              resetContainers();
-
-              // Show appropriate container and set underline color
-              switch (headingText) {
-                case "Car Cleaning":
-                  mainContainerOne.classList.add("active");
-                  container.style.borderBottom = "2px solid black";
-                  break;
-                case "Car Decor":
-                  mainContainerTwo.classList.add("active");
-                  container.style.borderBottom = "2px solid black";
-                  break;
-                case "Other Services":
-                  mainContainerThree.classList.add("active");
-                  container.style.borderBottom = "2px solid black";
-                  break;
-                default:
-                  mainContainerOne.classList.add("active");
-                  container.style.borderBottom = "2px solid black";
-              }
-            });
-          });
-
-          // 👉 Select tab from localStorage or default to Car Cleaning
-          window.addEventListener("DOMContentLoaded", () => {
-            const savedTab =
-              localStorage.getItem("activeBlogTab") || "Car Cleaning";
-
-            const defaultTab = Array.from(blogContainers).find(
-              (container) =>
-                container.querySelector(".blog-heading-para")?.textContent ===
-                savedTab
-            );
-            if (defaultTab) defaultTab.click();
-          });
-        </script>
-      </main>
-
-      <script>
-        const bookingOpenBtn = document.querySelectorAll(".open-booking-modal");
-        bookingOpenBtn.forEach((button) => {
-          button.addEventListener("click", () => {
-            document.getElementById("parent-div").style.display = "flex";
-          });
-        });
-      </script>
-      <div id="footer">
-        <script>
-          fetch("../components/footer3.html")
-            .then((response) => response.text())
-            .then((data) => {
-              document.getElementById("footer").innerHTML = data;
-            });
-
-          document.addEventListener("DOMContentLoaded", function () {
-            let presentYear = new Date().getFullYear();
-            console.log(presentYear);
-            document.getElementById("yearElement").textContent = presentYear;
-            document.getElementById("yearElement").style.fontSize = "12px";
-          });
-        </script>
-      </div>
+      </a>
     </div>
 
-    <script>
-      window.onload = function () {
-        document.getElementById("preloader").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      };
-    </script>
+    <!-- Section 3: Other Services -->
+    <div id="main-container-three" class="main-container reveal fade-up">
+      <a href="./car-maintenance-doorstep-services/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/the-future-of-car-maintenance-with-doorstep-services.jpg" alt="Future Maintenance">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">23 Mar, 2025</p>
+          <h2 class="blog-sub-heading">The Future of Car Maintenance</h2>
+          <p class="blog-sub-para">Convenience matters more than ever. See how doorstep services are changing the
+            vehicle maintenance landscape.</p>
+        </div>
+      </a>
 
-    <script type="module">
-      import { CTAApi } from "./js/external-integration.js";
-      // Function to show the parent div after 15 seconds
+      <a href="./how-to-maintain-your-car-shine/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/Maintain Your Car’s Shine During Dehradun’s Dusty Seasons (1).jpg"
+            alt="Dust Management">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">25 May, 2025</p>
+          <h2 class="blog-sub-heading">Maintain Your Car's Shine in Dust</h2>
+          <p class="blog-sub-para">Learn how to protect your vehicle's paint and interior during Dehradun's notoriously
+            dusty seasons.</p>
+        </div>
+      </a>
 
-      // Initially hide the div
-      let parentDiv = document.getElementById("parent-div");
-      let parentDiv2 = document.getElementById("parent-div2");
+      <a href="./rise-of-car-subscription-model/index.html" class="blog-section-main-container">
+        <div class="blog-img-container">
+          <img src="../images/blogs/The Rise of Car Subscription Models in India Will You Own or Subscribe (1).jpg"
+            alt="Car Subscription">
+        </div>
+        <div class="blog-section-container">
+          <p class="blog-date-para">07 Jun, 2025</p>
+          <h2 class="blog-sub-heading">Car Subscription Models in India</h2>
+          <p class="blog-sub-para">To own or subscribe? A deep dive into the rising popularity of vehicle subscription
+            models in modern India.</p>
+        </div>
+      </a>
+    </div>
+  </main>
 
-      // Show the div after 15 seconds
+  <footer class="footer-new" id="common-footer">
+    <!-- Footer injected by js/footer-component.js -->
+  </footer>
 
-      // Close button functionality
-      document
-        .getElementById("close-btn")
-        .addEventListener("click", function () {
-          // Hide the parent div
-          parentDiv.style.display = "none";
-
-          // Show the div again after 15 seconds
-        });
-      document
-        .getElementById("close-btn2")
-        .addEventListener("click", function () {
-          // Hide the parent div
-          parentDiv2.style.display = "none";
-
-          // Show the div again after 15 seconds
-        });
-
-      document
-        .getElementById("contactButton")
-        .addEventListener("click", async function () {
-          // Capture the values from the inputs
-          const button = document.getElementById("contactButton");
-
-          // Disable the button
-          button.style.pointerEvents = "none";
-          button.style.backgroundColor = "#999";
-          const name = document.getElementById("nameInput").value;
-          const number = document.getElementById("numberInput").value;
-          const address = document.getElementById("addressInput").value;
-          if (!name || !number || !address) {
-            alert("Please fill all fields.");
-            return;
-          }
-
-          // Prepare the data object
-          const formData = {
-            name: name,
-            number: number,
-            address: address,
-          };
-
-          try {
-            // Send POST request to the API
-            const response = await CTAApi(formData);
-            if (response.ok) {
-              document.getElementById("parent-div").style.display = "none";
-            } else {
-            }
-          } catch (error) {
-            console.error("Error:", error);
-          } finally {
-            button.style.pointerEvents = "auto";
-            button.style.backgroundColor = "#183ea1";
-          }
-        });
-    </script>
-    <!-- </div> -->
-
-    <script>
-      let scrollContainer = document.querySelector(".gallery");
-      let backBtn = document.getElementById("back-btn");
-      let nextBtn = document.getElementById("next-btn");
-      const scrollAmount = 900;
-
-      // Function to scroll forward
-      function scrollForward() {
-        scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft += scrollAmount;
-
-        // If the scroll reaches the end, reset to the beginning
-        if (
-          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-          scrollContainer.scrollWidth
-        ) {
-          scrollContainer.scrollLeft = 0;
-        }
-      }
-
-      // Function to scroll backward
-      function scrollBackward() {
-        scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft -= scrollAmount;
-
-        // If the scroll goes before the start, move to the end
-        if (scrollContainer.scrollLeft <= 0) {
-          scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-        }
-      }
-
-      // Add event listeners for manual scrolling
-      nextBtn.addEventListener("click", scrollForward);
-      backBtn.addEventListener("click", scrollBackward);
-
-      // Auto-scroll functionality
-      function autoScroll() {
-        scrollForward();
-      }
-
-      // Start auto-scrolling every 3 seconds
-      let autoScrollInterval = setInterval(autoScroll, 2000);
-
-      // Pause auto-scrolling when user hovers over the gallery
-      scrollContainer.addEventListener("mouseover", () => {
-        clearInterval(autoScrollInterval);
+  <script src="../js/footer-component.js"></script>
+  <script src="../js/script.js"></script>
+  <script>
+    function showTab(tabId, element) {
+      document.querySelectorAll('.main-container').forEach(c => {
+        c.classList.remove('active');
+        c.classList.remove('reveal'); // Reset reveal for animation
       });
+      document.querySelectorAll('.blog-header-container').forEach(c => c.classList.remove('active'));
 
-      // Resume auto-scrolling when user leaves the gallery
-      scrollContainer.addEventListener("mouseout", () => {
-        autoScrollInterval = setInterval(autoScroll, 2000);
-      });
-    </script>
-  </body>
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active');
+      element.classList.add('active');
+
+      // Re-trigger reveal animation
+      setTimeout(() => {
+        activeTab.classList.add('reveal');
+        activeTab.classList.add('active-reveal');
+      }, 10);
+    }
+  </script>
+</body>
+
 </html>

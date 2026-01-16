@@ -1,1304 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="preload"
-      href="../css/common.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link rel="stylesheet" href="../css/aboutus.css" />
-    <link rel="stylesheet" href="../css/homepage.css" />
-    <link rel="stylesheet" href="../css/modal.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../images/favicon-16x16.png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Carmaa | Doorstep Car Wash Service in Your City</title>
-    <meta
-      name="description"
-      content="About Carmaa, offers doorstep car wash, waterless car wash, car detailing, and car interior cleaning. Convenient car care services are right at your doorstep."
-    />
-    <meta
-      name="keywords"
-      content="About Carmaa, doorstep car wash, waterless car wash, car detailing, car interior cleaning"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
 
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="../js/rightClickDisable.js"></script>
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMHL3KW21H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16789669575');
+    gtag('config', 'G-YMHL3KW21H');
+  </script>
 
-    <style>
-      .servicesI {
-        cursor: pointer;
-        transition: all 0.5s;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px #65c7d06e;
-      }
-
-      .servicesI:hover {
-        transform: scale(1.1) !important;
-        box-shadow: 0px 0px 10px #65c7d0;
-      }
-
-      @media screen and (max-width: 1200px) {
-        .a {
-          justify-content: center !important;
-        }
-      }
-
-      @media screen and (max-width: 900px) {
-        .bh {
-          flex-direction: column;
-        }
-
-        .bh img {
-          min-height: 300px;
-        }
-      }
-
-      @media screen and (max-width: 800px) {
-        .c {
-          flex-direction: column;
-        }
-      }
-    </style>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: "Lexend", "Lexend Placeholder", "sans-serif";
-        font-size: 16px;
-      }
-
-      *::-webkit-scrollbar {
-        display: none;
-      }
-
-      * {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      @media screen and (max-width: 800px) {
-        .menu {
-          position: fixed;
-          background-color: rgb(255, 255, 255);
-          border-top: 1px solid gray;
-          top: 80px;
-          height: calc(100vh - 80px);
-          width: 100vw;
-          right: 0px;
-          flex-direction: column;
-          justify-content: flex-start !important;
-          padding: 50px 0px;
-          gap: 30px;
-          transform: translateX(100%);
-        }
-
-        .active {
-          transform: translateX(0%) !important;
-        }
-
-        .toggle {
-          display: inline;
-          cursor: pointer;
-        }
-      }
-      .header-background {
-        background-image: url("/images/aboutus/new-about-img1.png");
-      }
-    </style>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "AW-16789669575");
-    </script>
-    <div
-      style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        height: 50px;
-        aspect-ratio: 1;
-        z-index: 99999999;
-      "
-      class="whatsapp-icon-container"
-    >
-      <a
-        href="https://api.whatsapp.com/send?phone=917042555401"
-        target="_blank"
-      >
-        <img
-          style="height: 100%; width: 100%"
-          src="../images/whatsapp.png"
-          alt="waterless car wash in Noida"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </head>
-
-  <body>
-    <div id="preloader"></div>
-
-    <div id="content" style="display: none">
-      <div class="topbar-section-common" id="content">
-        <div class="topbar-section-container">
-          <div class="social-media-icons">
-            <a
-              href="https://www.facebook.com/Carmaaofficialpage"
-              target="_blank"
-            >
-              <div class="img-wrapper">
-                <img
-                  src="../../images/contactus/facebook.png"
-                  alt="facebook logo"
-                  loading="lazy"
-                />
-              </div>
-            </a>
-            <a href="https://www.instagram.com/Carmaa_official" target="_blank">
-              <div class="img-wrapper">
-                <img
-                  src="../../images/contactus/instagram.png"
-                  alt="instargram"
-                  loading="lazy"
-                />
-              </div>
-            </a>
-            <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
-              <div class="img-wrapper">
-                <img
-                  src="../../images/contactus/youtube.png"
-                  alt="youtube"
-                  loading="lazy"
-                />
-              </div>
-            </a>
-            <a href="../../blogs/">
-              <div class="img-wrapper">
-                <img
-                  src="../../images/home-page/topbar/blogger.png"
-                  alt="blog"
-                  loading="lazy"
-                />
-              </div>
-            </a>
-          </div>
-
-          <p
-            id="topbar-text"
-            style="
-              color: #fff;
-              font-weight: 400;
-              font-size: 0.95rem;
-              margin: 0;
-              font-weight: 600;
-            "
-          >
-            Bring your car's showroom shine back!
-          </p>
-
-          <div
-            style="display: flex; flex-direction: column; align-items: center"
-          >
-            <div style="display: flex; align-items: center; gap: 0.3rem">
-              <img
-                style="width: 1.5rem; height: 1.5rem"
-                src="../../images/home-page/topbar/phone.png"
-                loading="lazy"
-              />
-              <a class="mobile-number-ref" href="tel:+917042555401">
-                <p>+91 70425 55401</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="navbar-placeholder" class="navbar-sticky-container">
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            fetch("../components/navbar.html")
-              .then((response) => response.text())
-              .then((html) => {
-                document.getElementById("navbar-placeholder").innerHTML = html;
-
-                // Reinitialize toggle functionality after loading the navbar
-                const toggle = document.getElementById("toggle");
-                const menu = document.getElementById("menu");
-
-                toggle.addEventListener("click", function () {
-                  menu.classList.toggle("active");
-                });
-              })
-              .catch((error) => console.error("Error loading navbar:", error));
-          });
-        </script>
-      </div>
-
-      <header class="city-header-section header-background">
-        <p>About Carmaa</p>
-        <div class="breadcrumb">
-          <img class="" src="../common/home.png" loading="lazy" />
-          <p><a href="/" class="breadcrumb-link">Home</a></p>
-          <p>/</p>
-          <p><a href="./" class="breadcrumb-link">About Us</a></p>
-        </div>
-      </header>
-
-      <section class="about-us-section">
-        <div class="about-us-left">
-          <div class="about-us-header">
-            <h2>About Carmaa</h2>
-            <h1 style="font-size: 35px">
-              The Future of Doorstep Car Cleaning Services
-            </h1>
-          </div>
-          <p class="about-us-para">
-            At Carmaa Car Care, established in January 2024, we are committed to
-            providing hassle-free, professional car care directly to your
-            doorstep. As a trusted name in the car cleaning industry, we
-            specialize in both on-demand and daily car cleaning services,
-            tailored to meet the unique needs of our customers. With a focus on
-            eco-friendly, waterless car wash solutions and the latest
-            technology, Carmaa ensures a spotless, scratch-free finish every
-            time, making car care both convenient and environmentally conscious.
-          </p>
-          <div class="benefits-cta-section">
-            <a class="btn-href open-booking-modal"
-              ><button class="hero-section-btn2">Book Now</button></a
-            >
-            <div class="call-icon-wrapper">
-              <div class="call-icon">
-                <img
-                  class="fa fa-phone"
-                  src="../images/home-page/benefits/phone-call.png"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <p>Call Us Anytime!</p>
-                <a class="mobile-number-ref2" href="tel:+917042555401">
-                  <h2 class="benefits-mobile-number" style="font-size: 20px">
-                    +91 70425 55401
-                  </h2></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-us-right">
-          <img
-            class="main-img"
-            src="../images/new-carmaa/carmaa-new4.png"
-            loading="lazy"
-          />
-          <img
-            class="element-img"
-            src="../images/aboutus/element.png"
-            loading="lazy"
-          />
-          <div class="about-us-trophy">
-            <img src="../images/aboutus/trophy.png" loading="lazy" />
-            <p>Rated 5 Stars by Thousands of Happy Customers</p>
-          </div>
-        </div>
-      </section>
-
-      <style>
-        .about-section {
-          padding: 0px 20px 60px 20px;
-          background-color: #0e111b;
-          text-align: center;
-          padding-top: 60px;
-        }
-
-        .about-section .container {
-          max-width: 900px;
-          margin: 0 auto;
-        }
-
-        .about-section p {
-          font-size: 0.9rem;
-          color: #fff;
-          line-height: 1.6;
-          margin-bottom: 30px;
-        }
-
-        .logo-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
-
-        .logo {
-          height: 70px;
-          object-fit: contain;
-        }
-      </style>
-
-      <section class="about-section">
-        <div class="container">
-          <p>
-            <strong>Carmaa</strong> is a registered startup recognized under the
-            <strong>Startup India initiative</strong> by the
-            <strong
-              >Department for Promotion of Industry and Internal Trade
-              (DPIIT)</strong
-            >. We are also proudly recognized under the
-            <strong>Uttarakhand Startup Policy</strong>, reflecting our
-            commitment to innovation, sustainability, and local development.
-          </p>
-
-          <div class="logo-container">
-            <div class="certificate-flex-container">
-              <img
-                src="../images/footer/dpiit-logo.png"
-                alt="DPIIT Logo"
-                class="logo"
-                loading="lazy"
-              />
-              <!-- <div class="certificate-container">
-                <img
-                  class="certificate-img"
-                  src="../images/aboutus/dpiit-recognition.png"
-                  alt="DPIIT recognition certificate"
-                  loading="lazy"
-                />
-              </div> -->
-            </div>
-            <!-- <hr width="100%"/> -->
-            <div class="certificate-flex-container">
-              <img
-                src="../images/footer/startupUK.png"
-                alt="Uttarakhand Startup Logo"
-                class="logo"
-                loading="lazy"
-              />
-              <!-- <div class="certificate-container">
-                <img
-                  class="certificate-img"
-                  src="../images/aboutus/ukStartup_recognition.png"
-                  alt="Uttarakhand recognition"
-                  loading="lazy"
-                />
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="tbi-section">
-        <h2 class="our-journey-heading">Our Startup Journey with</h2>
-        <div class="tbi-container">
-          <h2>TBI, Graphic Era</h2>
-          <div class="tbi-img-content-container">
-            <div class="tbi-image">
-              <img
-                src="../images/aboutus/tbiLogo.png"
-                alt="TBI Graphic Era"
-                loading="lazy"
-              />
-            </div>
-            <div class="tbi-content">
-              <p>
-                We are proud to share that our startup is officially incubated
-                at the Technology Business Incubator (TBI), Graphic Era (Deemed
-                to be University). This partnership provides us with valuable
-                support, mentorship, and resources that are crucial to our
-                innovation and growth. Being part of TBI enables us to
-                collaborate with a vibrant ecosystem of entrepreneurs,
-                researchers, and industry experts. With access to
-                state-of-the-art facilities and guidance from experienced
-                professionals, we are well-positioned to scale our solutions and
-                bring impactful change through technology.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-<section class="tbi-section">
-        <div class="tbi-container">
-          <h2 style="text-align: center;">Our technology partners</h2>
-          <div class="tbi-img-content-container" style="justify-content: center;">
-            <div class="tbi-image">
-              <img
-                src="../images/aboutus/aws logo.png"
-                alt="TBI Graphic Era"
-                loading="lazy"
-              />
-            </div>
-               <div class="tbi-image">
-              <img
-                src="../images/aboutus/msg91.webp"
-                alt="TBI Graphic Era"
-                loading="lazy"
-              />
-            </div>
-               <div class="tbi-image">
-              <img
-                src="../images/aboutus/zoho.png"
-                alt="TBI Graphic Era"
-                loading="lazy"
-              />
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
-      <section class="mission-section-wrapper">
-        <div class="mission-section-counter">
-          <div class="counter-desc">
-            <h2 style="font-size: 36px; color: white">44K+</h2>
-            <p class="desc">Car Cleaned and Counting</p>
-          </div>
-          <div class="counter-desc">
-            <h2 style="font-size: 36px; color: white">3.5 Million</h2>
-            <p class="desc">Litres of  Water Saved</p>
-          </div>
-          <div class="counter-desc">
-            <h2 style="font-size: 36px; color: white">100%</h2>
-            <p class="desc">Customer Satisfaction</p>
-          </div>
-          <div class="counter-desc">
-            <h2 style="font-size: 36px; color: white">10K+</h2>
-            <p class="desc">Daily Doorstep Car Cleaning</p>
-          </div>
-        </div>
-        <div class="mission-section">
-          <div class="about-us-header">
-            <h2>Carmaa</h2>
-            <h2 class="mission-section-heading" style="font-size: 30px">
-              Our Mission, Vision, Values
-            </h2>
-          </div>
-          <div class="mission-container">
-            <div class="mission-container-element">
-              <img src="../images/aboutus/customer.png" loading="lazy" />
-              <h3>Our Values</h3>
-              <p>
-                We are guided by values of professionalism, quality, and
-                sustainability. We believe in providing services that not only
-                meet but exceed customer expectations, ensuring their vehicles
-                look their best while protecting the environment.
-              </p>
-            </div>
-
-            <div class="mission-container-element">
-              <img src="../images/aboutus/shared-vision.png" loading="lazy" />
-              <h3>Our Vision</h3>
-              <p>
-                Our vision is to become the most trusted and innovative car care
-                provider in India, known for our exceptional service and
-                environmental stewardship. We strive to set new standards in the
-                car detailing industry by combining cutting-edge techniques with
-                a focus on customer convenience and satisfaction.
-              </p>
-            </div>
-            <div class="mission-container-element">
-              <img src="../images/aboutus/mission.png" loading="lazy" />
-              <h3>Our Mission</h3>
-              <p>
-                At Carmaa, our mission is to revolutionize the car cleaning
-                industry by offering eco-friendly, convenient, and high-quality
-                car care services directly to your doorstep. We aim to make car
-                maintenance hassle-free and accessible, ensuring that every
-                customer receives personalized care for their vehicle. By
-                embracing waterless technology and sustainable practices, we are
-                committed to reducing water waste while delivering spotless
-                results.
-              </p>
-            </div>
-
-            <div class="mission-container-element">
-              <img src="../images/aboutus/light-bulb.png" loading="lazy" />
-              <h3>Inspire People to Shine</h3>
-              <p>
-                At Carmaa, we believe that a clean car is more than just an
-                aesthetic choice—it's a reflection of care, pride, and
-                confidence. Through our innovative doorstep car care services,
-                we aim to inspire people to take better care of their vehicles
-                while making eco-conscious choices. By offering waterless car
-                washes and sustainable practices, we empower our customers to
-                maintain their cars with ease.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="aboutus-cta">
-        <div class="aboutus-cta-left">
-          <img src="../images/aboutus/aboutus-bluecar.webp" loading="lazy" />
-          <div class="description-abs">
-            <article>150+ Residential Societies Served</article>
-          </div>
-        </div>
-        <div class="aboutus-cta-right">
-          <h2>Here to Help You</h2>
-          <h2 style="font-size: 40px; color: #000">
-            We’re Ready to Wash Your Cars
-          </h2>
-          <p class="desc">
-            At Carmaa, we’re always ready to provide top-notch car care whenever
-            you need it. Whether it's a quick on-demand wash or a regular daily
-            service, our team is dedicated to making your car cleaning
-            experience seamless and stress-free. With just a simple booking, we
-            bring our expert services to your doorstep, ensuring your car looks
-            its best with minimal effort from your side. Trust us to take care
-            of your vehicle while you focus on the things that matter most.
-          </p>
-          <ul>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Professional and Certified Car Washers</p>
-            </div>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Eco-Friendly, Waterless Cleaning Solutions</p>
-            </div>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Convenient Doorstep Services</p>
-            </div>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Committed to 100% Customer Satisfaction</p>
-            </div>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Specialized in Car Detailing and Interior Cleaning</p>
-            </div>
-            <div class="aboutus-cta-right-points">
-              <img
-                src="../images/home-page/benefits/checked.png"
-                loading="lazy"
-              />
-              <p>Use of Fresh, Sanitized Microfiber Cloths</p>
-            </div>
-          </ul>
-          <div class="call-container">
-            <div class="call-icon-wrapper">
-              <div class="call-icon">
-                <img
-                  class="fa fa-phone"
-                  src="../images/home-page/benefits/phone-call.png"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <p>Call Us Anytime!</p>
-                <a class="mobile-number-ref2" href="tel:+917042555401">
-                  <p class="benefits-mobile-number">+91 70425 55401</p></a
-                >
-              </div>
-            </div>
-            <button class="open-booking-modal hero-section-btn2">
-              Book Now
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <div id="footer">
-        <script>
-          fetch("../components/footer3.html")
-            .then((response) => response.text())
-            .then((data) => {
-              document.getElementById("footer").innerHTML = data;
-            });
-
-          document.addEventListener("DOMContentLoaded", function () {
-            let presentYear = new Date().getFullYear();
-            console.log(presentYear);
-            document.getElementById("yearElement").textContent = presentYear;
-            document.getElementById("yearElement").style.fontSize = "12px";
-          });
-        </script>
-      </div>
-
-      <div id="parent-div">
-        <section class="modal-container">
-          <div class="modal-wrapper">
-            <div class="image-section">
-              <div class="modal-left">
-                <h2>BOOK AN APPOINTMENT</h2>
-                <h2 style="font-size: 30px">
-                  Download the App now & get 15% off
-                </h2>
-
-                <div class="contact">
-                  <div class="img-wrapper">
-                    <img
-                      src="../images/home-page/modal/icon-phone.png"
-                      alt="phone"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="details">
-                    <h2 style="font-size: 20px">Call us now</h2>
-                    <p>+91 70425 55401</p>
-                  </div>
-                </div>
-                <style>
-                  .download-modal-container {
-                    display: flex;
-                    margin-top: 2rem;
-                    gap: 32px;
-                  }
-                  .download-btn {
-                    width: 11rem;
-                  }
-                  .download-btn img {
-                    height: auto;
-                    width: 100%;
-                    margin-left: 1rem;
-                    border-radius: 17px;
-                  }
-                </style>
-
-                <div class="download-modal-container">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-                    target="_blank"
-                  >
-                    <div class="download-btn">
-                      <img
-                        src="../images/footer/google-play-white.png"
-                        alt="Play Store Download"
-                        loading="lazy"
-                      />
-                    </div>
-                  </a>
-                  <a
-                    href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
-                    target="_blank"
-                  >
-                    <div class="download-btn" id="download-ios-app">
-                      <img
-                        src="../images/footer/App_Store_White_bg.png"
-                        alt="App Store Download"
-                        loading="lazy"
-                      />
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="modal-form-container">
-              <div class="cancel-button-container">
-                <h2 class="modal-form-heading" style="font-size: 20px">
-                  Download the App now & get 15% off
-                </h2>
-                <div class="image-width-container">
-                  <img
-                    id="close-btn"
-                    src="../images/home-page/modal/cancel.png"
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div class="download-modal-img-main-container">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-                  target="_blank"
-                >
-                  <div class="img-container">
-                    <img
-                      src="/images/ui_change_images/Play_Store_Black_bg.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
-
-                <a
-                  href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
-                  target="_blank"
-                >
-                  <div class="img-container">
-                    <img
-                      src="/images/ui_change_images/App_Store_Black_bg.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </div>
-              <div style="display: flex; gap: 1rem" class="input-box">
-                <div>
-                  <p class="modal-form-label">Name*</p>
-                  <input
-                    class="modal-input"
-                    type="text"
-                    id="nameInput"
-                    placeholder="Enter your full name"
-                  />
-                  <span id="nameError" class="error-message"></span>
-                </div>
-                <div>
-                  <p class="modal-form-label">Phone Number*</p>
-                  <input
-                    class="modal-input"
-                    type="text"
-                    id="numberInput"
-                    placeholder="Enter your number"
-                  />
-                  <span id="phoneError" class="error-message"></span>
-                </div>
-              </div>
-              <div style="display: flex; gap: 1rem" class="input-box">
-                <div>
-                  <p class="modal-form-label">Address</p>
-                  <input
-                    class="modal-input"
-                    type="text"
-                    id="addressInput"
-                    placeholder="Enter your  address"
-                  />
-                  <span id="addressError" class="error-message"></span>
-                </div>
-                <div>
-                  <p class="modal-form-label">City</p>
-                  <input
-                    class="modal-input"
-                    type="text"
-                    id="cityInput"
-                    placeholder="Enter your city"
-                  />
-                  <span id="cityError" class="error-message"></span>
-                </div>
-              </div>
-              <div>
-                <p class="modal-form-label">Query Related to</p>
-                <select class="modal-input" id="serviceSelect">
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="interior-car-cleaning">
-                    Interior Car Cleaning
-                  </option>
-                  <option value="paint-protection-and-coating-services">
-                    Paint Protection And Coating Services
-                  </option>
-                  <option value="ceramic-coating-service">
-                    Ceramic Coating Service
-                  </option>
-
-                  <option value="glass-and-surface-coating-services">
-                    Glass-And-Surface-Coating-Services
-                  </option>
-                  <option value="full-car-detailing-service">
-                    Full Car Detailing Service
-                  </option>
-
-                  <option value="car-dry-cleaning">Car Dry Cleaning</option>
-                  <option value="body-polish-wax">
-                    Complete Car Body Polish and Wax
-                  </option>
-                  <option value="full-car-wash">Full Car Wash</option>
-                  <option value="deep-cleaning">Deep Cleaning</option>
-                  <option value="car-decor">Car Decor</option>
-                  <option value="car-mechanic">Car Mechanic</option>
-                  <option value="other">Other</option>
-                </select>
-                <span id="serviceError" class="error-message"></span>
-              </div>
-              <!--Captcha Code for Auth-->
-              <div
-                class="g-recaptcha"
-                data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"
-              ></div>
-
-              <button style="border-radius: 10px" id="modal-booking-btn">
-                <span class="button-text">BOOK</span>
-                <span
-                  class="button-loader spinner"
-                  style="display: none"
-                ></span>
-              </button>
-              <div id="messageContainer">
-                <span id="successMessage" class="success-message"></span>
-                <span id="errorMessage" class="error-message"></span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- Load reCAPTCHA -->
-      <script
-        src="https://www.google.com/recaptcha/api.js"
-        async
-        defer
-      ></script>
-
-      <div class="animated-thank-you-modal" id="thankYouModal">
-        <div class="thankyou-opacity-container">
-          <div class="thank-you-page-container">
-            <div
-              class="cancel-icon"
-              id="cancel-icon"
-              onclick="cancelThankYouModal()"
-            >
-              <img
-                id="close-btn"
-                src="/images/home-page/modal/cancel.png"
-                alt="waterless car wash"
-                loading="lazy"
-              />
-            </div>
-            <div class="success-img-container">
-              <img src="/images/success.jpg" alt="Thank you" loading="lazy" />
-            </div>
-            <h2>Thank You</h2>
-            <p>Your appointment has been successfully submitted.</p>
-            <div class="visit-app-container">
-              <h3>Visit our app</h3>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-                target="_blank"
-              >
-                <div class="modal-download-container">
-                  <div class="btn-download">
-                    <img
-                      src="/images/ui_change_images/play_store.png"
-                      alt="Play Store Download"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </a>
-              <a
-                href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
-                target="_blank"
-              >
-                <div class="modal-download-container">
-                  <div class="btn-download">
-                    <img
-                      src="../images/ui_change_images/App_Store_Black_bg.png"
-                      alt="App Store Download"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      window.onload = function () {
-        document.getElementById("preloader").style.display = "none";
-        document.getElementById("content").style.display = "block";
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
-    </script>
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3895402900713863');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3895402900713863&ev=PageView&noscript=1" alt="carmaa-facebook"
+      loading="lazy" /></noscript>
+  <!-- End Meta Pixel Code -->
 
-    <script>
-      const services = [
-        {
-          title: "Car Wash Lift",
-          description:
-            "There are many variations passages of Lorem Ipsum available, but the main majority have suffered alteration.",
-          img: "./images/service.jpeg",
-          flag: false,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-        {
-          title: "Service Two",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text.",
-          img: "../images/service.jpeg",
-          flag: true,
-        },
-      ];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>About Carmaa | Doorstep Car Wash Service in Your City</title>
+  <meta name="description"
+    content="About Carmaa, offers doorstep car wash, waterless car wash, car detailing, and car interior cleaning. Convenient car care services are right at your doorstep." />
+  <meta name="keywords"
+    content="About Carmaa, doorstep car wash, waterless car wash, car detailing, car interior cleaning" />
+  <meta name="author" content="Carmaa Car Care">
 
-      const servicesContainer = document.getElementById("servicesContainer");
-      const showMoreBtn = document.getElementById("showMoreBtn");
-      const showLessBtn = document.getElementById("showLessBtn");
-      const itemsToShow = 6;
-      let currentIndex = 0;
+  <!-- Premium CSS Stack (Relative to root/blogs) -->
+  <link rel="stylesheet" href="../blogs/styles.css">
+  <link rel="stylesheet" href="../blogs/footer-new.css">
+  <link rel="stylesheet" href="../blogs/professional-animations.css">
+  <link rel="stylesheet" href="../blogs/scroll-animations.css">
+  <link rel="stylesheet" href="../blogs/mobile-optimizations.css">
 
-      function createServiceItem(service) {
-        const serviceItem = document.createElement("div");
-        serviceItem.classList.add("servicesI");
-        serviceItem.style.cssText =
-          "display: flex; align-items: center; flex-direction: column; max-width: 380px; min-width: 300px; gap: 10px; position: relative;";
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
 
-        const flag = service.flag
-          ? ` <div
-                        style="top: 10px;border: 1px solid red;  height: 25px; left: 0px; position: absolute; background-color: #ff2222; ">
-                         <p style="color: white; font-size: .7rem; padding: 4px 25px 4px 10px ; ">Discount</p>
-                         <div style=" height: 100%; aspect-ratio: 1; background-color: white; position: absolute; right: -10px; top: 0px; transform: rotate(45deg);"></div>
-                    </div>`
-          : "";
+  <style>
+    .about-header {
+      background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url('../images/aboutus/new-about-img1.png');
+      background-size: cover;
+      background-position: center 20%;
+      padding: 220px 0 100px;
+      color: white;
+      text-align: center;
+    }
 
-        serviceItem.innerHTML = `
-        ${flag}
-        <div style="border-radius: 50%; background-color: #183ea1; width: 70px; aspect-ratio: 1;display: flex;align-items: center;justify-content: center;">
-            <img src="${service.img}" style="height: 100%; width: 100%;" alt="Doorstep Car Wash in Dehradun" loading="lazy" >
-        </div>
-        <h4 style="font-size: 1.4rem;">${service.title}</h4>
-        <p style="text-align: center;">${service.description}</p>
-    `;
+    .about-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
 
-        return serviceItem;
+    .post-container {
+      max-width: 1000px;
+      margin: -60px auto 60px;
+      background: white;
+      border-radius: 30px;
+      padding: 60px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .breadcrumb a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    .breadcrumb span {
+      opacity: 0.6;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    .about-content p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-gray);
+      margin-bottom: 25px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid var(--border-light);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--secondary);
+    }
+
+    .stat-card h3 {
+      font-size: 2.5rem;
+      font-family: 'Oswald', sans-serif;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .stat-card p {
+      margin-bottom: 0;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .recognition-box {
+      background: #0f172a;
+      color: white;
+      padding: 40px;
+      border-radius: 24px;
+      margin: 50px 0;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .recognition-logos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .recognition-logos img {
+      height: 60px;
+      filter: brightness(0) invert(1);
+    }
+
+    .vision-mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .vm-card {
+      padding: 30px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .vm-card i {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .vm-card h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .partners-section {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .partner-logos img {
+      height: 40px;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .partner-logos img:hover {
+      opacity: 1;
+    }
+
+    .cta-box {
+      background: var(--gradient);
+      padding: 50px;
+      border-radius: 30px;
+      color: white;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .cta-box h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 30px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .feature-list li i {
+      color: var(--secondary);
+    }
+
+    @media (max-width: 768px) {
+      .about-header h1 {
+        font-size: 2.5rem;
       }
 
-      function renderServices() {
-        services
-          .slice(currentIndex, currentIndex + itemsToShow)
-          .forEach((service) => {
-            servicesContainer.appendChild(createServiceItem(service));
-          });
-        currentIndex += itemsToShow;
-
-        if (currentIndex >= services.length) {
-          showMoreBtn.style.display = "none";
-          showLessBtn.style.display = "block";
-        }
+      .post-container {
+        padding: 30px 20px;
+        margin: -40px 15px 40px;
       }
 
-      function showLess() {
-        servicesContainer.innerHTML = "";
-        currentIndex = 0;
-        renderServices();
-
-        showMoreBtn.style.display = "block";
-        showLessBtn.style.display = "none";
+      .stats-grid {
+        grid-template-columns: 1fr;
       }
 
-      showMoreBtn.addEventListener("click", renderServices);
-      showLessBtn.addEventListener("click", showLess);
-      window.addEventListener("DOMContentLoaded", renderServices);
-
-      if (services.length > itemsToShow) {
-        showMoreBtn.style.display = "block";
+      .recognition-box {
+        flex-direction: column;
+        text-align: center;
       }
-    </script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 
-    <script>
-      document.querySelectorAll(".number").forEach((numberElement) => {
-        const targetNumber = parseInt(
-          numberElement.getAttribute("data-target"),
-          10
-        );
-        gsap.to(numberElement, {
-          scrollTrigger: {
-            trigger: numberElement,
-            start: "top 80%",
-            end: "bottom 50%",
-          },
-          opaCitys: 1,
-          textContent: targetNumber,
-          duration: 1.5,
-          ease: "power1.inOut",
-          onUpdate: function () {
-            const currentValue = parseInt(numberElement.textContent, 10);
-            numberElement.textContent = currentValue.toLocaleString();
-          },
-        });
-      });
-      gsap.from(".servicesI ", {
-        y: 100,
-        duration: 1,
-        opaCitys: 0,
-        scrollTrigger: {
-          trigger: ".servicesI",
-          scroller: "body",
-          start: "top 90%",
-          start: "top 90%",
-          marker: true,
-          scrub: true,
-          end: "top 50%",
-        },
-        stagger: 0.3,
-      });
-      gsap.from(".services ", {
-        y: 100,
-        duration: 1,
-        opaCitys: 0,
-        scrollTrigger: {
-          trigger: ".services",
-          scroller: "body",
-          start: "top 80%",
-        },
-      });
-    </script>
-    <div id="footer">
-      <script>
-        fetch("../components/footer3.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer").innerHTML = data;
-          });
-
-        document.addEventListener("DOMContentLoaded", function () {
-          let presentYear = new Date().getFullYear();
-          console.log(presentYear);
-          document.getElementById("yearElement").textContent = presentYear;
-          document.getElementById("yearElement").style.fontSize = "12px";
-        });
-      </script>
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.jpg" alt="Carmaa Logo">
+        <span>Carmaa</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+          class="btn btn-primary shimmer-btn" target="_blank" rel="noopener noreferrer">Download App</a>
+      </div>
     </div>
+  </nav>
 
-    <script>
-      function thankYou() {
-        const modal = document.getElementById("thankYouModal");
-        modal.style.display = "flex"; // Ensure modal is visible
-        modal.classList.add("modal-animated-thank-you");
+  <header class="about-header">
+    <div class="container">
+      <h1 class="reveal fade-bottom">About Carmaa</h1>
+      <div class="breadcrumb reveal fade-bottom delay-1">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <span>About Us</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-container reveal fade-up">
+    <section class="about-content">
+      <h2 class="section-title">The Future of Doorstep Car Cleaning</h2>
+      <p>At Carmaa, established in September 2025, we are committed to providing hassle-free, professional
+        car care directly to your doorstep. As a trusted name in the car cleaning industry, we specialize in
+        both on-demand and daily car cleaning services, tailored to meet the unique needs of our customers.</p>
+      <p>With a focus on eco-friendly, waterless car wash solutions and the latest technology, Carmaa ensures a
+        spotless, scratch-free finish every time, making car care both convenient and environmentally
+        conscious.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>44K+</h3>
+          <p>Cars Cleaned & Counting</p>
+        </div>
+        <div class="stat-card">
+          <h3>3.5M</h3>
+          <p>Litres of Water Saved</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Customer Satisfaction</p>
+        </div>
+        <div class="stat-card">
+          <h3>10K+</h3>
+          <p>Daily Home Cleanings</p>
+        </div>
+      </div>
+
+      <div class="recognition-box">
+        <div class="recog-text">
+          <h4 style="font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 10px;">Startup India
+            Recognized</h4>
+          <p style="color: rgba(255,255,255,0.7); margin-bottom: 0; font-size: 1rem;">Proudly recognized under the DPIIT
+            and Uttarakhand Startup Policy, reflecting our commitment to innovation and sustainability.</p>
+        </div>
+        <div class="recognition-logos">
+          <img src="../images/footer/dpiit-logo.png" alt="DPIIT">
+          <img src="../images/footer/startupUK.png" alt="Startup Uttarakhand">
+        </div>
+      </div>
+
+      <h2 class="section-title">Our Incubation Journey</h2>
+      <p>We are proud to be officially incubated at the <strong>Technology Business Incubator (TBI), Graphic Era
+          (Deemed to be University)</strong>. This partnership provides us with valuable support, mentorship,
+        and resources that are crucial to our innovation and growth. Being part of TBI enables us to collaborate
+        with a vibrant ecosystem of entrepreneurs, researchers, and industry experts.</p>
+
+      <div class="vision-mission-grid">
+        <div class="vm-card">
+          <i class="fa-solid fa-eye"></i>
+          <h4>Our Vision</h4>
+          <p>To become the most trusted and innovative car care provider in India, known for exceptional service and
+            environmental stewardship.</p>
+        </div>
+        <div class="vm-card">
+          <i class="fa-solid fa-bullseye"></i>
+          <h4>Our Mission</h4>
+          <p>To revolutionize the car cleaning industry by offering eco-friendly, convenient, and high-quality services
+            at your doorstep.</p>
+        </div>
+        <div class="vm-card">
+          <i class="fa-solid fa-heart"></i>
+          <h4>Our Values</h4>
+          <p>Guided by professionalism, quality, and sustainability. Exceeding customer expectations while protecting
+            the planet.</p>
+        </div>
+      </div>
+
+      <div class="partners-section">
+        <h2 class="section-title" style="text-align: center; display: inline-block;">Technology Partners</h2>
+        <div class="partner-logos">
+          <img src="../images/aboutus/aws logo.png" alt="AWS">
+          <img src="../images/aboutus/msg91.webp" alt="MSG91">
+          <img src="../images/aboutus/zoho.png" alt="Zoho">
+        </div>
+      </div>
+
+      <h2 class="section-title">Why Trust Carmaa?</h2>
+      <ul class="feature-list">
+        <li><i class="fa-solid fa-circle-check"></i> Professional & Certified Washers</li>
+        <li><i class="fa-solid fa-circle-check"></i> Eco-Friendly Waterless Solutions</li>
+        <li><i class="fa-solid fa-circle-check"></i> Convenient Doorstep Service</li>
+        <li><i class="fa-solid fa-circle-check"></i> 100% Satisfaction Guarantee</li>
+        <li><i class="fa-solid fa-circle-check"></i> Premium Specialized Products</li>
+        <li><i class="fa-solid fa-circle-check"></i> Sanitized Microfiber Cloths</li>
+      </ul>
+
+      <div class="cta-box">
+        <h2>Ready to Experience the Shine?</h2>
+        <p>Join thousands of happy customers and give your car the premium care it deserves.</p>
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+          <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
+            class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-apple"></i> App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+            class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-google-play"></i> Play Store
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-new" id="common-footer">
+    <!-- Footer injected by js/footer-component.js -->
+  </footer>
+
+  <!-- Booking Modal (Same as index.html for consistency) -->
+  <div id="parent-div"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center; padding: 20px;">
+    <div
+      style="background: white; width: 100%; max-width: 800px; border-radius: 20px; overflow: hidden; position: relative; display: flex; flex-wrap: wrap;">
+      <button id="close-btn"
+        style="position: absolute; right: 20px; top: 20px; border: none; background: none; font-size: 1.5rem; cursor: pointer; z-index: 10;">&times;</button>
+
+      <div
+        style="flex: 1; min-width: 300px; background: var(--primary); color: white; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 20px;">Book an Appointment</h2>
+        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">Download the app and get 15% OFF on your first
+          service!</p>
+        <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+          <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank"><img
+              src="../images/footer/google-play-white.png" style="height: 40px;" alt="Play Store"></a>
+          <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank"><img
+              src="../images/footer/App_Store_White_bg.png" style="height: 40px;" alt="App Store"></a>
+        </div>
+      </div>
+
+      <div style="flex: 1.2; min-width: 300px; padding: 40px;">
+        <form id="bookingForm" style="display: flex; flex-direction: column; gap: 15px;">
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px;">Name*</label>
+            <input type="text" id="nameInput" placeholder="Full Name"
+              style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+            <span id="nameError" style="color: red; font-size: 0.85rem;"></span>
+          </div>
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px;">Phone Number*</label>
+            <input type="tel" id="numberInput" placeholder="10-digit number"
+              style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+            <span id="phoneError" style="color: red; font-size: 0.85rem;"></span>
+          </div>
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px;">Service*</label>
+            <select id="serviceSelect" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+              <option value="">Select Service</option>
+              <option value="interior">Interior Cleaning</option>
+              <option value="detailing">Car Detailing</option>
+              <option value="wash">Full Car Wash</option>
+              <option value="other">Other</option>
+            </select>
+            <span id="serviceError" style="color: red; font-size: 0.85rem;"></span>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
+          <button type="submit" id="modal-booking-btn" class="btn btn-primary"
+            style="width: 100%; padding: 15px; font-size: 1.1rem;">
+            <span class="button-text">Book Now</span>
+            <span class="button-loader" style="display: none;">Wait...</span>
+          </button>
+          <div id="errorMessage" style="color: red; text-align: center; margin-top: 10px;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thank You Modal -->
+  <div id="thankYouModal"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
+    <div
+      style="background: white; width: 100%; max-width: 500px; border-radius: 24px; padding: 50px; text-align: center; position: relative;">
+      <button onclick="document.getElementById('thankYouModal').style.display='none'"
+        style="position: absolute; right: 20px; top: 20px; border: none; background: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+      <div style="font-size: 5rem; color: #10b981; margin-bottom: 20px;"><i class="fa-solid fa-circle-check"></i></div>
+      <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 15px;">Thank You!</h2>
+      <p style="font-size: 1.2rem; color: var(--text-gray); margin-bottom: 30px;">Your request has been submitted. Our
+        team will contact you shortly.</p>
+      <button onclick="document.getElementById('thankYouModal').style.display='none'" class="btn btn-primary"
+        style="width: 100%;">Close</button>
+    </div>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="../js/footer-component.js"></script>
+  <script src="../js/script.js"></script>
+
+  <script type="module">
+    import { CTAApi } from "../js/external-integration.js";
+
+    // Modal Open/Close Logic
+    document.querySelectorAll(".open-booking-modal").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("parent-div").style.display = "flex";
+      });
+    });
+
+    document.getElementById("close-btn").addEventListener("click", () => {
+      document.getElementById("parent-div").style.display = "none";
+    });
+
+    // Form Submission
+    document.getElementById("bookingForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("nameInput").value.trim();
+      const phone = document.getElementById("numberInput").value.trim();
+      const service = document.getElementById("serviceSelect").value;
+      const recaptcha = grecaptcha.getResponse();
+
+      let valid = true;
+      document.getElementById("nameError").textContent = name ? "" : "Name is required";
+      document.getElementById("phoneError").textContent = /^[0-9]{10}$/.test(phone) ? "" : "Valid 10-digit number required";
+
+      if (!name || !/^[0-9]{10}$/.test(phone) || !recaptcha) {
+        if (!recaptcha) alert("Please complete CAPTCHA");
+        return;
       }
 
-      // Close thank you modal
-      document
-        .getElementById("cancel-icon")
-        .addEventListener("click", function () {
-          const modal = document.getElementById("thankYouModal");
-          modal.style.display = "none";
-          modal.classList.remove("modal-animated-thank-you");
+      const btn = document.getElementById("modal-booking-btn");
+      const text = btn.querySelector(".button-text");
+      const loader = btn.querySelector(".button-loader");
+
+      btn.disabled = true;
+      text.style.display = "none";
+      loader.style.display = "inline";
+
+      try {
+        const response = await CTAApi({
+          name,
+          phone,
+          queryrelatedto: service,
+          recaptchaResponse: recaptcha
         });
-    </script>
 
-    <script type="module">
-      import { CTAApi } from "../js/external-integration.js";
-      document
-        .getElementById("modal-booking-btn")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-
-          // Get input values
-          const name = document.getElementById("nameInput").value.trim();
-          const phoneNumber = document
-            .getElementById("numberInput")
-            .value.trim();
-          const service = document.getElementById("serviceSelect").value;
-          const address = document.getElementById("addressInput").value.trim();
-          const city = document.getElementById("cityInput").value.trim();
-          let isValid = true;
-
-          // Clear previous error messages
-          document.getElementById("nameError").textContent = "";
-          document.getElementById("phoneError").textContent = "";
-          document.getElementById("addressError").textContent = "";
-          document.getElementById("cityError").textContent = "";
-          const nameRegex = /^[A-Za-z\s]+$/;
-          // Validate Name
-          if (name === "") {
-            document.getElementById("nameError").textContent =
-              "Name is required.";
-            isValid = false;
-          } else if (!nameRegex.test(name)) {
-            document.getElementById("nameError").textContent =
-              "Only alphabets are allowed.";
-            isValid = false;
-          }
-          if (phoneNumber === "") {
-            document.getElementById("phoneError").textContent =
-              "Phone Number is required.";
-            isValid = false;
-          }
-          const phoneRegex = /^[0-9]{10}$/;
-          // Validate Phone Number (10 digits only)
-          if (!phoneRegex.test(phoneNumber)) {
-            document.getElementById("phoneError").textContent =
-              "Phone number must be exactly 10 digits.";
-            isValid = false;
-          }
-
-          const recaptchaResponse = grecaptcha.getResponse();
-
-          if (!recaptchaResponse) {
-            document.getElementById("result").textContent =
-              "Please complete the CAPTCHA";
-            return;
-          }
-
-          // If the form is valid, send data through API
-          if (isValid) {
-            const data = {
-              name: name,
-              phone: phoneNumber,
-              address: address,
-              city: city,
-              queryrelatedto: service,
-              recaptchaResponse: recaptchaResponse,
-            };
-            const contactButton = document.getElementById("modal-booking-btn");
-            const buttonText = document.querySelector(".button-text");
-            const buttonLoader = document.querySelector(".button-loader");
-
-            // Disable button and show loader
-            contactButton.disabled = true;
-            buttonText.style.display = "none";
-            buttonLoader.style.display = "inline-block";
-
-            // Send data to API using fetch
-            CTAApi(data)
-              .then((response) => {
-                if (response.status === 200) {
-                  // Display success message
-                  // document.getElementById("successMessage").textContent =
-                  //   "Appointment successfully made!";
-                  thankYou();
-                } else {
-                  // Display error message
-                  document.getElementById("errorMessage").textContent =
-                    "There was an error making the appointment. Please try again.";
-                }
-              })
-              .catch((error) => {
-                // Display error message
-                document.getElementById("errorMessage").textContent =
-                  "There was a problem connecting to the server. Please try again.";
-                console.error("Error:", error);
-              })
-              .finally(() => {
-                // Re-enable the button after the request completes and reset the button state
-                contactButton.disabled = false;
-                buttonText.style.display = "inline";
-                buttonLoader.style.display = "none";
-                document.getElementById("nameInput").value = "";
-                document.getElementById("numberInput").value = "";
-
-                document.getElementById("addressInput").value = "";
-                document.getElementById("cityInput").value = "";
-              });
-          }
-        });
-    </script>
-    <script>
-      document
-        .getElementById("close-btn")
-        .addEventListener("click", function () {
-          // Hide the parent div
+        if (response.status === 200) {
           document.getElementById("parent-div").style.display = "none";
+          document.getElementById("thankYouModal").style.display = "flex";
+          this.reset();
+          grecaptcha.reset();
+        } else {
+          document.getElementById("errorMessage").textContent = "Error occurred. Please try again.";
+        }
+      } catch (err) {
+        document.getElementById("errorMessage").textContent = "Service unavailable. Try again later.";
+      } finally {
+        btn.disabled = false;
+        text.style.display = "inline";
+        loader.style.display = "none";
+      }
+    });
+  </script>
+</body>
 
-          // Show the div again after 15 seconds
-        });
-
-      document.querySelectorAll(".open-booking-modal").forEach((button) => {
-        button.addEventListener("click", () => {
-          document.getElementById("successMessage").textContent = "";
-          document.getElementById("errorMessage").textContent = "";
-          document.getElementById("nameError").textContent = "";
-          document.getElementById("phoneError").textContent = "";
-          document.getElementById("addressError").textContent = "";
-          document.getElementById("cityError").textContent = "";
-          document.getElementById("nameInput").value = "";
-          document.getElementById("numberInput").value = "";
-
-          document.getElementById("addressInput").value = "";
-          document.getElementById("cityInput").value = "";
-          document.getElementById("modal-booking-btn").disabled = false;
-          document.querySelector(".button-text").style.display = "inline";
-          document.querySelector(".button-loader").style.display = "none";
-          document.getElementById("parent-div").style.display = "flex";
-        });
-      });
-    </script>
-  </body>
 </html>
