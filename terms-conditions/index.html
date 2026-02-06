@@ -11,124 +11,213 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CarMaa Terms and Conditions</title>
+  <title>Terms & Conditions | Carmaa</title>
   <meta name="description"
-    content="CarMaa Terms and Conditions|Doorstep car washing service, Doorstep car wash, Doorstep car interior cleaning, Doorstep car cleaning, doorstep car wash, Doorstep car cleaning at doorstep" />
-  <meta name="keywords"
-    content="CarMaa Terms and Conditions, Doorstep car washing service, Doorstep car wash, Doorstep car interior cleaning, Doorstep car cleaning, doorstep car wash, Doorstep car cleaning at doorstep" />
+    content="Carmaa Terms and Conditions - Customer and Partner terms, legal identity, company details, and more." />
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/terms-conditions.css" />
   <link rel="stylesheet" href="../css/aboutus.css" />
   <link rel="stylesheet" href="../css/homepage.css" />
   <link rel="stylesheet" href="../css/service.css" />
-  <script src="../js/rightClickDisable.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <style>
-    .servicesI {
+    /* Hamburger Menu Button */
+    .terms-menu-toggle {
+      background-color: transparent;
+      color: #333;
+      border: 2px solid #ddd;
+      padding: 10px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: all 0.5s;
-      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      margin-left: 20px;
+    }
+
+    .terms-menu-toggle:hover {
+      background-color: #f5f5f5;
+      border-color: #999;
+    }
+
+    .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hamburger-icon span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #333;
+      transition: all 0.3s ease;
+    }
+
+    /* Header with inline hamburger */
+    .terms-conditions-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
-      box-shadow: 0px 0px 10px #65c7d06e;
+      position: relative;
     }
 
-    .servicesI:hover {
-      transform: scale(1.1) !important;
-      box-shadow: 0px 0px 10px #65c7d0;
+    .terms-conditions-header .terms-menu-toggle {
+      position: absolute;
+      left: 20px;
+      margin: 0;
     }
 
-    @media screen and (max-width: 1200px) {
-      .a {
-        justify-content: center !important;
+    /* Sidebar Menu */
+    .terms-sidebar-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 280px;
+      height: 100vh;
+      background-color: white;
+      z-index: 1001;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .terms-sidebar-menu.active {
+      left: 0;
+    }
+
+    .sidebar-header {
+      padding: 25px 20px;
+      background-color: #f8f9fa;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .close-sidebar {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .close-sidebar:hover {
+      color: #333;
+    }
+
+    .sidebar-menu-item {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      background-color: transparent;
+      color: #555;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .sidebar-menu-item:hover {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .sidebar-menu-item.active {
+      background-color: #f0f0f0;
+      color: #000;
+      border-left-color: #333;
+      font-weight: 600;
+    }
+
+    /* Overlay */
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
-    @media screen and (max-width: 900px) {
-      .bh {
-        flex-direction: column;
+    @media (max-width: 768px) {
+      .terms-menu-toggle {
+        top: 90px;
+        left: 15px;
+        padding: 10px 14px;
+        font-size: 13px;
       }
 
-      .bh img {
-        min-height: 300px;
+      .terms-conditions-header .terms-menu-toggle {
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
       }
-    }
 
-    @media screen and (max-width: 800px) {
-      .c {
-        flex-direction: column;
+      .terms-sidebar-menu {
+        width: 250px;
+        left: -250px;
+      }
+
+      .hamburger-icon span {
+        width: 18px;
       }
     }
   </style>
-  <div style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        height: 50px;
-        aspect-ratio: 1;
-        z-index: 99999999;
-      " class="whatsapp-icon-container">
-    <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-      <img style="height: 100%; width: 100%" src="../images/whatsapp.png" alt="waterless car wash in Noida"
-        loading="lazy" />
-    </a>
-  </div>
 </head>
 
 <body>
-  <div class="topbar-section-common">
-    <div class="topbar-section-container">
-      <div class="social-media-icons">
-        <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
-          <div class="img-wrapper">
-            <img src="../images/contactus/facebook.png" alt="car repair near me" loading="lazy" />
-          </div>
-        </a>
-        <a href="https://www.instagram.com/carmaa_official" target="_blank">
-          <div class="img-wrapper">
-            <img src="../images/contactus/instagram.png" alt="car garage near me" loading="lazy" />
-          </div>
-        </a>
-        <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
-          <div class="img-wrapper">
-            <img src="../images/contactus/youtube.png" alt="car repair shops near me" loading="lazy" />
-          </div>
-        </a>
-        <a href="../blogs/">
-          <div class="img-wrapper">
-            <img src="../images/home-page/topbar/blogger.png" alt="mobile mechanic near me" loading="lazy" />
-          </div>
-        </a>
-      </div>
-
-      <p id="topbar-text" style="
-            color: #fff;
-            font-weight: 400;
-            font-size: 0.95rem;
-            margin: 0;
-            font-weight: 600;
-          ">
-        Bring your car's showroom shine back!
-      </p>
-
-      <div style="display: flex; flex-direction: column; align-items: center">
-        <div style="display: flex; align-items: center; gap: 0.3rem">
-          <img style="width: 1.5rem; height: 1.5rem" src="../images/home-page/topbar/phone.png"
-            alt="Doorstep car cleaning at doorstep" loading="lazy" />
-          <a class="mobile-number-ref" href="tel:+917042555401">
-            <p>+91 70425 55401</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div id="navbar-placeholder" class="navbar-sticky-container">
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -136,14 +225,13 @@
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("navbar-placeholder").innerHTML = html;
-
-            // Reinitialize toggle functionality after loading the navbar
             const toggle = document.getElementById("toggle");
             const menu = document.getElementById("menu");
-
-            toggle.addEventListener("click", function () {
-              menu.classList.toggle("active");
-            });
+            if (toggle && menu) {
+              toggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+              });
+            }
           })
           .catch((error) => console.error("Error loading navbar:", error));
       });
@@ -151,641 +239,773 @@
   </div>
 
   <header class="terms-conditions-header">
-    <h2>TERMS AND CONDITIONS</h2>
+    <!-- Hamburger Menu Button -->
+    <button class="terms-menu-toggle" onclick="toggleSidebar()">
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <h2>TERMS & CONDITIONS</h2>
   </header>
 
-  <div class="terms-policy-page-main-container">
-    <div class="terms-policy-page-container">
-      <div class="terms-policy-head-container">
-        <div class="terms-policy-page-content">
-          <p><span style="font-weight: 700">TERMS AND CONDITIONS</span></p>
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar Menu -->
+  <div class="terms-sidebar-menu" id="termsSidebar">
+    <div class="sidebar-header">
+      <span>Terms & Conditions</span>
+      <button class="close-sidebar" onclick="closeSidebar()">×</button>
+    </div>
+    <button class="sidebar-menu-item active" onclick="switchTab('customer')">Customer</button>
+    <button class="sidebar-menu-item" onclick="switchTab('partner')">Partner</button>
+  </div>
+
+  <!-- Customer Terms Content -->
+  <div id="customer-tab" class="tab-content active">
+    <div class="terms-policy-page-main-container">
+      <div class="terms-policy-page-container">
+        <div class="terms-policy-head-container">
+          <div class="terms-policy-page-content">
+            <p><span style="font-weight: 700">CUSTOMER TERMS & CONDITIONS</span></p>
+            <p>Carmaa Technologies Private Limited</p>
+          </div>
+          <p class="terms-policy-page-content">
+            Last updated: <span>22 December 2025</span>
+          </p>
         </div>
-        <p class="terms-policy-page-content">
-          Last updated: <span>27-03-2025</span>
-        </p>
-      </div>
 
-      <div class="terms-policy-page-content">
-        <p>
-          Welcome to <b class="bold-tag">Carmaa Car Care</b> (“Carmaa”,
-          “Company”, “we”, “our”, or “us”). These Terms and Conditions
-          (“Terms”) are published in accordance with Rule 3(1) of the
-          Information Technology (Intermediaries Guidelines and Digital Media
-          Ethics Code) Rules, 2021, and the Information Technology Act, 2000.
-          By accessing or using our mobile application, website (<a href="https://carmaacarcare.com/" target="_blank">
-            www.carmaacarcare.com</a>), or any services provided therein (collectively referred to as
-          the "Platform"), you (“you”, “User”, “Customer”, or “Service
-          Provider”) agree to be legally bound by these Terms.
-        </p>
-      </div>
-
-      <div class="terms-policy-page-content">
-        <ol>
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>1. LEGAL NATURE & INTERMEDIARY STATUS </span>
-          </li>
-          <p class="pdBottom24">
-            Carmaa operates as a
-            <b class="bold-tag">technology-based intermediary</b> as defined
-            under Section 2(w) of the IT Act, 2000. It facilitates the
-            provision of car care services by connecting independent, verified
-            third-party mechanics, service providers, and workshops
-            (“Partners”) with customers. We
-            <b class="bold-tag">do not directly provide</b> any car repair or
-            cleaning services.
-          </p>
-
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>2. ELIGIBILITY TO USE </span>
-          </li>
-          <p style="line-height: 1.5rem">
-            By using this Platform, you confirm that:
-          </p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                You are at least 18 years old and competent to contract under
-                the Indian Contract Act, 1872.
-              </p>
-            </li>
-            <li>
-              <p>You are using the Platform for lawful purposes only.</p>
-            </li>
-            <li>
-              <p>
-                All information provided during registration is accurate,
-                complete, and up to date.
-              </p>
-            </li>
-          </ul>
-
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>3. SERVICES OFFERED </span>
-          </li>
-          <p>Carmaa facilitates a range of services through the Platform:</p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Doorstep Car Wash & Cleaning</p>
-            </li>
-            <li>
-              <p>Mechanical Repairs & Garage Visits</p>
-            </li>
-            <li>
-              <p>Pick & Drop Services</p>
-            </li>
-            <li>
-              <p>Subscription-Based Daily Cleaning</p>
-            </li>
-            <li>
-              <p>Premium Detailing, Ceramic Coating, PPF & Accessories</p>
-            </li>
-          </ul>
-          <p>
-            Carmaa shall not be held liable for any deficiencies, damages, or
-            personal injury caused by the third-party service providers unless
-            arising due to gross negligence or wilful misconduct on our part.
-          </p>
-
-          <h1 class="care-title">Post Car Care Recommendations After Ceramic Coating</h1>
-
-          <table class="care-table">
-            <colgroup>
-              <col style="width:56px">
-              <col style="width:320px">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Instruction</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td><strong>Do Not Use a Dirty Cloth</strong></td>
-                <td><strong>Always use a clean, damp, high-quality microfiber towel for wiping. A dirty cloth can
-                    scratch the fresh coating.</strong></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><strong>pH-Neutral Wash Only</strong></td>
-                <td><strong>When washing after the first week, use a pH-neutral car shampoo or ceramic-safe soap to
-                    maintain the coating’s hydrophobic properties.</strong></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><strong>No Automatic Brush Car Washes</strong></td>
-                <td><strong>Brushes can create micro-scratches and reduce coating life. Opt for hand washing with
-                    microfiber mitts.</strong></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><strong>Use the Two-Bucket Method</strong></td>
-                <td><strong>One bucket for soapy water, one for rinsing the mitt/towel. This avoids transferring dirt
-                    back onto the paint.</strong></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><strong>Boost the Coating Every 2–3 Months</strong></td>
-                <td><strong>Use a ceramic booster spray to refresh shine and hydrophobicity.</strong></td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td><strong>Wash Only in Shade</strong></td>
-                <td><strong>Direct sunlight can cause water spots and soap streaking on the coating.</strong></td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td><strong>Dry with a Clean Microfiber</strong></td>
-                <td><strong>Never let the car air dry; water spots can etch into the coating.</strong></td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td><strong>No Harsh Chemicals</strong></td>
-                <td><strong>Avoid acidic or highly alkaline cleaners; they can weaken the coating.</strong></td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td><strong>Topup Coat for Maximum Protection</strong></td>
-                <td><strong>For up to 12 months of durability, apply next coat after every 3 month.</strong></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <style>
-            :root {
-              --bg: #e5e7eb;
-              --card: #0f172a;
-              --text: #e5e7eb;
-              --muted: #9ca3af;
-              --line: #273244;
-              --accent: #22c55e;
-              --zebra: #0c1a2e;
-              --hover: #12233d;
-            }
-
-            body {
-              background: var(--bg);
-              color: var(--text);
-              font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial
-            }
-
-            .care-title {
-              margin: 20px 0 10px;
-              font-size: 24px
-            }
-
-            .care-table {
-              width: 100%;
-              border-collapse: separate;
-              border-spacing: 0;
-              background: var(--card);
-              border: 1px solid var(--line);
-              border-radius: 12px;
-              overflow: hidden;
-              box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-              table-layout: fixed;
-            }
-
-            .care-table caption {
-              caption-side: top;
-              padding: 10px 14px;
-              color: var(--muted);
-              font-style: italic;
-              text-align: left
-            }
-
-            .care-table thead th {
-              position: sticky;
-              top: 0;
-              z-index: 1;
-              background: linear-gradient(180deg, rgba(34, 197, 94, .12), transparent);
-              color: #fff;
-              text-align: left;
-              font-weight: 700;
-              letter-spacing: .02em
-            }
-
-            .care-table th,
-            .care-table td {
-              border-bottom: 1px solid var(--line);
-              padding: 14px 16px;
-              vertical-align: top;
-              word-wrap: break-word;
-              text-align: left;
-            }
-
-            .care-table tbody tr:nth-child(odd) {
-              background: var(--zebra)
-            }
-
-            .care-table tbody tr:hover {
-              background: var(--hover)
-            }
-
-            .care-table td:first-child,
-            .care-table th:first-child {
-              text-align: center;
-              font-variant-numeric: tabular-nums
-            }
-
-            .care-table td strong {
-              color: #fff
-            }
-
-            /* Mobile: stack rows into cards */
-            @media (max-width: 680px) {
-              .care-table {
-                border-radius: 10px;
-              }
-
-              .care-table thead {
-                display: none;
-              }
-
-              .care-table,
-              .care-table tbody,
-              .care-table tr,
-              .care-table td {
-                display: block;
-                width: 100%
-              }
-
-              .care-table tr {
-                border-bottom: 1px solid var(--line)
-              }
-
-              .care-table td {
-                border: none;
-                padding: 10px 14px
-              }
-
-              .care-table td:first-child {
-                background: rgba(34, 197, 94, .12);
-                border-bottom: 1px solid var(--line);
-                border-top: 1px solid var(--line);
-                font-weight: 700;
-                display: inline-block;
-                width: auto;
-                border-radius: 8px;
-                margin: 8px 12px 0 12px;
-                padding: 6px 10px;
-              }
-
-              .care-table td[data-label]:before {
-                content: attr(data-label) " — ";
-                font-weight: 600;
-                color: #cbd5e1;
-                display: inline;
-              }
-            }
-          </style>
-
-
-          <li class="list-paragraph pdBottom16 pdTop24">
-            4. USER OBLIGATIONS
-          </li>
-          <p>You agree to:</p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Use the services for personal or authorized business use.</p>
-            </li>
-            <li>
-              <p>Provide true vehicle and location details.</p>
-            </li>
-            <li>
-              <p>Ensure the vehicle is accessible at the scheduled time.</p>
-            </li>
-            <li>
-              <p>
-                Confirm completion of service only upon satisfactory delivery.
-              </p>
-            </li>
-            <li>
-              <p>Refrain from posting defamatory or false reviews.</p>
-            </li>
-          </ul>
-
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>5. PARTNER OBLIGATIONS </span>
-          </li>
-          <p>Partners must:</p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Complete registration with valid KYC and documentation.</p>
-            </li>
-            <li>
-              <p>Accept only those jobs they can fulfil reliably.</p>
-            </li>
-            <li>
-              <p>Comply with Standard Operating Procedures (SOPs).</p>
-            </li>
-            <li>
-              <p>Maintain professionalism, hygiene, and timely service.</p>
-            </li>
-            <li>
-              <p>Upload mandatory before/after photos via the Partner App.</p>
-            </li>
-          </ul>
-          <p>
-            <span>Non-compliance may lead to
-              <b class="bold-tag">account suspension or financial penalties</b>.</span>
-          </p>
-
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>6. BOOKINGS, PAYMENTS & REFUNDS </span>
-          </li>
-          <p>Partners must:</p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                <b class="bold-tag">Booking Confirmation: </b>Bookings are
-                confirmed upon app notification.
-              </p>
-            </li>
-            <li>
-              <p>
-                <b class="bold-tag">Payment Options:</b> Razor-pay (Online) or
-                Cash (with tracking via wallet deduction).
-              </p>
-            </li>
-            <li>
-              <p>
-                <b class="bold-tag">Service Charges:</b> Transparent and
-                visible before booking.
-              </p>
-            </li>
-          </ul>
-          <ul style="list-style: none">
+        <div class="terms-policy-page-content">
+          <ol>
             <li class="list-paragraph pdBottom16 pdTop24">
-              <span>Cancellation & Refund Policy</span>
+              <span>1. LEGAL IDENTITY & COMPANY DETAILS</span>
             </li>
-          </ul>
-          <table class="service-table">
-            <tr class="service-table-row">
-              <td style="font-weight: 600">Situation</td>
-              <td style="font-weight: 600">Refund</td>
-            </tr>
-            <tr class="service-table-row">
-              <td>Cancelled ≥1 hour before</td>
-              <td>100%</td>
-            </tr>
-            <tr class="service-table-row">
-              <td>Cancelled <1 hour before</td>
-              <td>80%</td>
-            </tr>
-            <tr class="service-table-row">
-              <td>Post Service Start</td>
-              <td>No Refund</td>
-            </tr>
-            <tr class="service-table-row">
-              <td>Mechanical Service Complaints</td>
-              <td>Valid for 48 hours</td>
-            </tr>
-          </table>
-            <ul style="list-style: none">
-              <li class="list-paragraph pdBottom16 pdTop24">
-                <span>Rescheduling and Cancellation Policy</span>
-              </li>
-            </ul>
-          <p class="pdBottom16">
-            At Carmaa, we are committed to providing timely and premium service
-            to all our clients. To maintain our operational standards and
-            respect the time of our service professionals, the following
-            policy applies to all bookings:
-          </p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                <b class="bold-tag">1. Rescheduling Window:</b> Clients may
-                request to reschedule a confirmed service appointment up to 24
-                hours prior to the scheduled start time without penalty.
-                Requests must be made via our official support channels
-                (Website/App/Customer Care).
-              </p>
-            </li>
-            <li>
-              <p>
-                <b class="bold-tag">2. Late Rescheduling & No-Show:</b> Any
-                rescheduling request made within the 24-hour window preceding
-                the scheduled appointment will be considered a "Late
-                Cancellation." In the event of a Late Cancellation or a
-                failure to be present at the designated location at the
-                scheduled time:
-              </p>
-              <ul class="sub-list-paragraph" style="margin-top: 10px">
-                <li>
-                  <p>The service booking will be effectively nullified.</p>
-                </li>
-                <li>
-                  <p>The appointment slot will be forfeited.</p>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p>
-                <b class="bold-tag">3. Refund Policy on Late Changes:</b>
-                Strictly no refunds or service credits will be issued for
-                appointments that are not rescheduled or cancelled at least 24
-                hours in advance. This policy allows us to compensate our
-                staff and manage inventory effectively, as last-minute
-                vacancies often cannot be filled.
-              </p>
-            </li>
-          </ul>
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>7. SUBSCRIPTIONS & MEMBERSHIPS </span>
-          </li>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                Carmaa offers paid subscription models (e.g.,
-                <b class="bold-tag"> Carmaa-X</b>) that provide discounts,
-                priority support, and additional benefits.
-              </p>
-            </li>
-            <li>
-              <p>
-                Subscription fees/Booking Amounts are
-                <b class="bold-tag">non-refundable</b>, except in cases of
-                technical error or double billing.
-              </p>
-            </li>
-          </ul>
+            <p class="pdBottom24">
+              These Terms & Conditions ("Terms") govern access to and use of the website, mobile
+              applications,
+              and all related digital platforms (collectively, the "Platform") operated by:<br>
+              <b>Legal Name:</b> Carmaa Technologies Private Limited<br>
+              <b>CIN:</b> U45403UT2025PTC019812<br>
+              <b>GSTIN:</b> 05AANCC0341C1Z9<br>
+              <b>PAN:</b> AANCC0341C<br>
+              <b>DPIIT Recognition No.:</b> DIPP223487<br>
+              <b>MSME (Udyam):</b> UDYAM-UK-05-0116928<br>
+              <b>Registered Office:</b> 197 Tea Estate, Near Bhadri Guest House, Banjarawala, Dehradun –
+              248001, Uttarakhand, India<br>
+              Hereinafter referred to as "Carmaa", "Company", "we", "us", or "our".
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>8. INTELLECTUAL PROPERTY </span>
-          </li>
-          <p>
-            All logos, software, text, visuals, trademarks, and backend
-            systems belong to Carmaa or its licensors.
-            <b class="bold-tag">Unauthorized copying, distribution, reverse engineering, or
-              rebranding is strictly prohibited</b>
-            and may invite civil or criminal liability under the Copyright
-            Act, 1957.
-          </p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>2. ACCEPTANCE OF TERMS</span>
+            </li>
+            <p class="pdBottom24">
+              2.1 By accessing, browsing, registering on, or using the Platform in any manner, whether as a
+              customer ("Customer") or service partner ("Partner"), you confirm that you have read,
+              understood, and agreed to be legally bound by these Terms.<br>
+              2.2 These Terms shall be read together with and form an integral part of:<br>
+              The Privacy Policy;<br>
+              Subscription-specific terms (Section C);<br>
+              Partner guidelines, SOPs, penalty policies;<br>
+              Any other policy or notice published by Carmaa from time to time.<br>
+              2.3 If you do not agree with these Terms, you must immediately discontinue use of the
+              Platform.<br>
+              2.4 Continued use of the Platform after modification of these Terms constitutes deemed
+              acceptance of the revised Terms.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>9. REVIEWS & RATINGS</span>
-          </li>
-          <p>All user-generated reviews are:</p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>3. DEFINITIONS</span>
+            </li>
+            <p class="pdBottom24">
+              For the purpose of these Terms:<br>
+              "Customer" means any person or entity booking or subscribing to Services via the Platform.<br>
+              "Partner" means an independent third-party service provider delivering Services to Customers
+              through the Platform.<br>
+              "Platform" includes Carmaa's website, mobile apps, APIs, dashboards, software, and backend
+              systems.<br>
+              "Services" mean non-mechanical doorstep car care services only.<br>
+              "Subscription" means a prepaid, recurring, vehicle-specific service plan.<br>
+              "Booking" means a confirmed service request via the Platform.<br>
+              "Wallet" means any digital balance or credit facility offered on the Platform.<br>
+              "Applicable Law" includes all Indian laws, rules, regulations, and judicial orders in force.
+            </p>
 
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Subject to moderation.</p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>4. NATURE OF PLATFORM – INTERMEDIARY ROLE</span>
             </li>
-            <li>
-              <p>Must be genuine, lawful, and free from abuse.</p>
-            </li>
-            <li>
-              <p>
-                Misuse (e.g., fake reviews or blackmail) may lead to
-                <b class="bold-tag">legal action</b> under the IPC and IT Act.
-              </p>
-            </li>
-          </ul>
+            <p class="pdBottom24">
+              4.1 Carmaa is a technology intermediary facilitating:<br>
+              Discovery and booking of Services;<br>
+              Communication between Customers and Partners;<br>
+              Collection and settlement of payments;<br>
+              Complaint facilitation and quality monitoring.<br>
+              4.2 Carmaa does not provide car care services and is not a party to the service contract
+              between
+              Customer and Partner, except as a payment collection and facilitation agent.<br>
+              4.3 All Services are performed solely by independent Partners.<br>
+              4.4 No agency, partnership, franchise, joint venture, or employer-employee relationship is
+              created between Carmaa and any Partner or Customer.<br>
+              4.5 Carmaa does not guarantee service quality or outcomes but may assist in dispute
+              facilitation.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>10. LIMITATION OF LIABILITY</span>
-          </li>
-          <p>
-            To the maximum extent permitted under Indian law, Carmaa shall not
-            be liable for:
-          </p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Service quality or performance of third-party providers.</p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>5. ELIGIBILITY</span>
             </li>
-            <li>
-              <p>
-                Delays caused by force majeure, traffic, natural disasters, or
-                app outages.
-              </p>
-            </li>
-            <li>
-              <p>Any indirect, incidental, or consequential loss.</p>
-            </li>
-          </ul>
-          <p>
-            <b class="bold-tag">Total liability</b>, if any, arising from use
-            of the platform, shall be
-            <b class="bold-tag">limited to ₹1,000 only</b>.
-          </p>
+            <p class="pdBottom24">
+              You must:<br>
+              Be at least 18 years of age;<br>
+              Be legally competent to contract under Indian law;<br>
+              Use the Platform only for lawful purposes.<br>
+              Carmaa reserves the right to suspend or deny access at its sole discretion.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>11. INDEMNIFICATION</span>
-          </li>
-          <p>
-            <span>You agree to indemnify and hold harmless Carmaa, its directors,
-              employees, affiliates, and partners against any third-party
-              claims arising from:
-            </span>
-          </p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>Your misuse of the Platform;</p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>6. SERVICES COVERED (MECHANICAL EXCLUSION)</span>
             </li>
-            <li>
-              <p>Violation of these Terms;</p>
-            </li>
-            <li>
-              <p>
-                Any loss or damage caused to service providers, other users,
-                or the platform.
-              </p>
-            </li>
-          </ul>
+            <p class="pdBottom24">
+              6.1 Only non-mechanical car care services are permitted, including:<br>
+              Exterior washing and cleaning;<br>
+              Interior vacuuming and detailing;<br>
+              Polishing, waxing, cosmetic care;<br>
+              Subscription-based recurring cleaning.<br>
+              6.2 Mechanical, electrical, diagnostic, repair, or modification services are strictly
+              excluded.<br>
+              6.3 Any mechanical service offered or performed by a Partner is unauthorised and outside the
+              Platform's scope.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>12. ACCOUNT TERMINATION & RESTRICTION</span>
-          </li>
-          <p>Carmaa may:</p>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                Suspend or terminate access without notice for violations or
-                suspected fraud.
-              </p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>7. BOOKINGS & PAYMENTS</span>
             </li>
-            <li>
-              <p>
-                Withhold partner payments in cases of dispute, fraud, or
-                customer harm.
-              </p>
-            </li>
-            <li>
-              <p>Report illegal behaviour to authorities.</p>
-            </li>
-          </ul>
+            <p class="pdBottom24">
+              7.1 All Bookings must be placed through the Platform.<br>
+              7.2 Pricing, taxes, and service details are displayed before confirmation.<br>
+              7.3 By confirming a Booking, the Customer authorises Carmaa to collect payments on behalf of
+              the
+              Partner.<br>
+              7.4 Supported payment modes may include UPI, cards, net banking, wallets, or others as
+              enabled.<br>
+              7.5 Wallet credits or promotional offers:<br>
+              Have no cash value unless stated;<br>
+              May be modified or withdrawn at Carmaa's discretion.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>13. GOVERNING LAW & DISPUTE RESOLUTION </span>
-          </li>
-          <ul class="sub-list-paragraph">
-            <li>
-              <p>
-                <b class="bold-tag">Governing Law:</b> These Terms are
-                governed by the laws of <b class="bold-tag">India</b>.
-              </p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>8. CANCELLATION & REFUNDS (NON-SUBSCRIPTION)</span>
             </li>
-            <li>
-              <p>
-                <b class="bold-tag">Jurisdiction:</b> All disputes are subject
-                to the exclusive jurisdiction of the competent courts in
-                <b class="bold-tag">Dehradun, Uttarakhand</b>.
-              </p>
+            <p class="pdBottom24">
+              8.1 Cancellations before Partner dispatch may be eligible for refund or credit.<br>
+              8.2 Cancellations after Partner dispatch or arrival may attract charges.<br>
+              8.3 No refunds once service has commenced.<br>
+              8.4 No-shows or access failure may be treated as completed services.<br>
+              8.5 Carmaa may deny refunds in cases of misuse or fraud.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>9. CUSTOMER OBLIGATIONS</span>
             </li>
-            <li>
-              <p>
-                <b class="bold-tag">Dispute Process:</b> Users must contact
-                Carmaa support before initiating legal proceedings.
-              </p>
+            <p class="pdBottom24">
+              Customers must:<br>
+              Provide accurate vehicle and location details;<br>
+              Ensure vehicle access at service time;<br>
+              Remove valuables and personal items;<br>
+              Provide water/electricity if required;<br>
+              Maintain respectful conduct.<br>
+              Failure may result in denial of service without refund.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>10. DAMAGE, COMPLAINTS & DISPUTES</span>
             </li>
-          </ul>
+            <p class="pdBottom24">
+              10.1 Complaints must be raised within 24 hours of service completion.<br>
+              10.2 Normal wear and tear does not constitute damage.<br>
+              10.3 Carmaa may rely on photos, logs, timestamps, and Partner input.<br>
+              10.4 Carmaa's determination is final for Platform-level resolution.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>14. DATA PROTECTION & PRIVACY</span>
-          </li>
-          <p>
-            Carmaa complies with the
-            <b class="bold-tag">Information Technology (Reasonable Security Practices and
-              Procedures and Sensitive Personal Data or Information) Rules,
-              2011</b>.
-          </p>
-          <p>
-            Please refer to our
-            <a href="https://carmaacarcare.com/privacy-policy/" target="_blank">Privacy Policy</a>
-            for full details on data handling and protection.
-          </p>
+            <h3 class="pdTop24 pdBottom16">SUBSCRIPTION-ONLY TERMS</h3>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>15. CHANGES TO TERMS</span>
-          </li>
-          <p>
-            Carmaa reserves the right to revise these Terms at any time
-            without prior notice. Users are encouraged to check this page
-            periodically. Continued use post-update implies acceptance of the
-            revised Terms.
-          </p>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>11. SUBSCRIPTION SCOPE</span>
+            </li>
+            <p class="pdBottom24">
+              11.1 Subscriptions are prepaid, vehicle-specific, and non-transferable.<br>
+              11.2 Services are subject to availability, weather, safety, and operational constraints.
+            </p>
 
-          <li class="list-paragraph pdBottom16 pdTop24">
-            <span>16. GRIEVANCE REDRESSAL</span>
-          </li>
-          <p>
-            As per Rule 3(2) of the IT Rules, the following Grievance Officer
-            has been designated:
-          </p>
-          <p>Email: grievanceofficer@carmaacarcare.com</p>
-          <p>
-            Complaints will be acknowledged within 48 hours and resolved
-            within 15 days.
-          </p>
-        </ol>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>12. PAUSE, SKIP & RESCHEDULING</span>
+            </li>
+            <p class="pdBottom24">
+              12.1 Pauses or skips must be requested in advance.<br>
+              12.2 Missed visits due to Customer unavailability may be marked as utilised.<br>
+              12.3 Unused visits expire at the end of the Subscription term.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>13. SUBSCRIPTION REFUNDS</span>
+            </li>
+            <p class="pdBottom24">
+              13.1 No refunds once a Subscription has commenced.<br>
+              13.2 Pre-start cancellations may follow plan-specific rules.<br>
+              13.3 No cash refunds for operational rescheduling unless mandated by law.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>14. SUBSCRIPTION TERMINATION</span>
+            </li>
+            <p class="pdBottom24">
+              14.1 Customers may terminate without refund.<br>
+              14.2 Carmaa may terminate for misuse, abuse, or legal reasons.<br>
+              14.3 If Carmaa discontinues services, credits or pro-rata relief may be offered.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>15. INTELLECTUAL PROPERTY</span>
+            </li>
+            <p class="pdBottom24">
+              All Platform content, software, branding, and IP belong to Carmaa. No unauthorised use is
+              permitted.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>16. SUSPENSION & TERMINATION</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa may suspend or terminate accounts for:<br>
+              Breach of Terms;<br>
+              Fraud or misuse;<br>
+              Legal or security reasons.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>17. LIMITATION OF LIABILITY</span>
+            </li>
+            <p class="pdBottom24">
+              No liability for indirect or consequential damages.<br>
+              Maximum liability limited to ₹1,000 or the amount paid, whichever is lower.<br>
+              No exclusion for fraud or non-excludable statutory liability.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>18. INDEMNITY</span>
+            </li>
+            <p class="pdBottom24">
+              Users agree to indemnify Carmaa against claims arising from:<br>
+              Breach of Terms;<br>
+              Misuse of Platform;<br>
+              Violation of law;<br>
+              Third-party claims caused by the user.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>19. FORCE MAJEURE</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa is not liable for delays or failures caused by events beyond reasonable control.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>20. GOVERNING LAW & JURISDICTION</span>
+            </li>
+            <p class="pdBottom24">
+              These Terms are governed by Indian law. Courts at Dehradun, Uttarakhand have exclusive
+              jurisdiction.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>21. GRIEVANCE REDRESSAL (IT RULES 2021)</span>
+            </li>
+            <p class="pdBottom24">
+              <b>Grievance Officer</b><br>
+              Email: <a href="mailto:grievanceofficer@carmaacarcare.com">grievanceofficer@carmaacarcare.com</a><br>
+              Address: Registered Office Address<br>
+              Acknowledgement within 48 hours<br>
+              Resolution within 15 working days
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>22. AMENDMENTS</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa may modify these Terms at any time. Continued use constitutes acceptance.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>23. MISCELLANEOUS</span>
+            </li>
+            <p class="pdBottom24">
+              Severability<br>
+              No waiver<br>
+              Assignment<br>
+              Entire agreement clause
+            </p>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Partner Terms Content -->
+  <div id="partner-tab" class="tab-content">
+    <div class="terms-policy-page-main-container">
+      <div class="terms-policy-page-container">
+        <div class="terms-policy-head-container">
+          <div class="terms-policy-page-content">
+            <p><span style="font-weight: 700">PARTNER TERMS & CONDITIONS</span></p>
+            <p>Carmaa Technologies Private Limited</p>
+          </div>
+          <p class="terms-policy-page-content">
+            Last updated: <span>22 December 2025</span>
+          </p>
+        </div>
+
+        <div class="terms-policy-page-content">
+          <p class="pdBottom24">
+            This Agreement is made between Carmaa Technologies Private Limited ("Company") and the undersigned
+            Worker / Service Partner ("Service Provider").
+          </p>
+
+          <p class="pdBottom24" style="font-weight: 600;">
+            By accepting any job, logging into the Carmaa system, or performing any service, the Service
+            Provider accepts all terms of this Agreement.
+          </p>
+
+          <ol>
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>1. PARTNER ONBOARDING & KYC</span>
+            </li>
+            <p class="pdBottom24">
+              1.1 Partners must complete KYC and onboarding requirements.<br>
+              1.2 Carmaa may approve, suspend, or reject Partners at its discretion.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>2. PARTNER STATUS – INDEPENDENT CONTRACTOR</span>
+            </li>
+            <p class="pdBottom24">
+              2.1 Partners operate as independent contractors.<br>
+              2.2 Partners are responsible for:<br>
+              Their staff;<br>
+              Taxes, licences, and insurance;<br>
+              Compliance with Applicable Law.<br>
+              2.3 No employment relationship exists with Carmaa.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>3. PARTNER OBLIGATIONS</span>
+            </li>
+            <p class="pdBottom24">
+              Partners must:<br>
+              Follow SOPs and quality standards;<br>
+              Use approved products where required;<br>
+              Maintain hygiene and professional conduct;<br>
+              Use the Partner app correctly;<br>
+              Protect Customer data;<br>
+              Avoid off-platform dealings.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>4. PROHIBITED CONDUCT</span>
+            </li>
+            <p class="pdBottom24">
+              Partners shall not:<br>
+              Accept off-platform payments;<br>
+              Misuse Customer data;<br>
+              Perform services intoxicated;<br>
+              Misrepresent Carmaa;<br>
+              Engage in fraudulent activity.<br>
+              Violations may result in immediate termination.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>5. PAYMENTS, PENALTIES & DEDUCTIONS</span>
+            </li>
+            <p class="pdBottom24">
+              5.1 Partner payouts may be subject to deductions for:<br>
+              Platform fees;<br>
+              Penalties;<br>
+              Refunds;<br>
+              Damage liabilities.<br>
+              5.2 Platform records are conclusive unless manifest error is shown.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>6. Nature of Engagement</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider is an independent task-based contractor and not an employee of Carmaa.<br>
+              No PF, ESI, gratuity, paid leave, bonus, minimum wages or permanent employment applies.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>7. Job Acceptance & Availability</span>
+            </li>
+            <p class="pdBottom24">
+              Every job must be accepted within 1 minute.<br>
+              If the Service Provider does not accept the job, it will be treated as missed duty and future
+              jobs may be reduced or stopped.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>8. Arrival & Timing</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider must reach the customer location at least 10 minutes before the scheduled
+              time.<br>
+              If there is any delay, the Support Team must be informed immediately.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>9. Customer & Payment Verification</span>
+            </li>
+            <p class="pdBottom24">
+              Before starting work, the Service Provider must verify Customer name, service package and
+              payment status.<br>
+              Service without payment confirmation is strictly prohibited.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>10. Service Scope</span>
+            </li>
+            <p class="pdBottom24">
+              Only the services booked through Carmaa are allowed.<br>
+              No free service, personal work, or extra service is permitted.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>11. Proof of Work</span>
+            </li>
+            <p class="pdBottom24">
+              Before-service and after-service photos must be uploaded.<br>
+              No proof means no payment.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>12. Service Refusal</span>
+            </li>
+            <p class="pdBottom24">
+              Service can be refused only if customer is abusive, location is unsafe, payment is not done, or
+              booking is fake.<br>
+              Support team must be informed.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>13. Cancellation & No-Show (By Service Provider)</span>
+            </li>
+            <p class="pdBottom24">
+              If the Service Provider accepts a booking and then cancels it, does not arrive, or refuses to
+              perform the service, the following penalties shall apply:
+            </p>
+
+            <div class="pdBottom24">
+              <table style="width: 100%; border-collapse: collapse; border: 1px solid #e2e8f0;">
+                <thead>
+                  <tr style="background-color: #f8fafc;">
+                    <th style="padding: 12px; border: 1px solid #e2e8f0; text-align: left;">Occurrence
+                    </th>
+                    <th style="padding: 12px; border: 1px solid #e2e8f0; text-align: left;">Penalty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">First time cancellation after
+                      accepting a booking</td>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">50% of the last accepted
+                      booking amount will be deducted</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">Second time cancellation after
+                      accepting a booking</td>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">100% of the last accepted
+                      booking amount will be deducted</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">Repeated cancellations,
+                      refusals or no-shows</td>
+                    <td style="padding: 12px; border: 1px solid #e2e8f0;">Permanent suspension and
+                      blacklisting from Carmaa platform</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="pdBottom24">
+              These deductions shall be made from the Service Provider's salary, incentives, or security
+              deposit without requiring any additional approval.<br>
+              Repeated cancellation or refusal is treated as serious misconduct and breach of contract.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>14. Customer Ratings</span>
+            </li>
+            <p class="pdBottom24">
+              Poor ratings will reduce work and may lead to removal.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>15. Behaviour & Hygiene</span>
+            </li>
+            <p class="pdBottom24">
+              Uniform, cleanliness and polite behaviour are mandatory.<br>
+              Alcohol, drugs, tobacco or abuse is strictly prohibited.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>16. No Direct Dealing</span>
+            </li>
+            <p class="pdBottom24">
+              No cash, no phone number, no private work with customers.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>17. Zero Tolerance to Alcohol & Drugs</span>
+            </li>
+            <p class="pdBottom24">
+              If found under influence, FIR will be filed and service terminated.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>18. Security Deposit</span>
+            </li>
+            <p class="pdBottom24">
+              Part of earnings will be kept as security for any loss or fraud.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>19. Forfeiture of Security</span>
+            </li>
+            <p class="pdBottom24">
+              Security will be taken if fraud, cheating or leaving without notice.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>20. 15-Day Notice</span>
+            </li>
+            <p class="pdBottom24">
+              Leaving without notice will result in loss of all unpaid money.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>21. Final Settlement</span>
+            </li>
+            <p class="pdBottom24">
+              All payments only after notice, tools return and complaint clearance.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>22. Data & Fraud</span>
+            </li>
+            <p class="pdBottom24">
+              Customer data is company property. Misuse will lead to FIR.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>23. Monitoring</span>
+            </li>
+            <p class="pdBottom24">
+              Calls, GPS and photos may be recorded.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>24. Termination</span>
+            </li>
+            <p class="pdBottom24">
+              Company can remove worker anytime for violation.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>25. Jurisdiction</span>
+            </li>
+            <p class="pdBottom24">
+              All disputes, claims, or legal proceedings arising out of or related to this Agreement shall be
+              subject to the jurisdiction of courts across India, and Carmaa Technologies Private Limited
+              shall have the right to initiate legal proceedings in any court within India as per its
+              choice.<br>
+              The Service Provider expressly agrees and consents to such All-India jurisdiction and waives any
+              objection regarding place or territorial limits.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>26. Legal Consent & Right to Deduct</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider gives full legal consent to Carmaa to deduct, hold, adjust, or forfeit any
+              amount from salary, incentives, or security deposit in case of penalty, loss, fraud, damage,
+              customer complaint, or policy violation.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>27. ₹300 Guaranteed Minimum Income (Conditional)</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa provides a guaranteed minimum earning of ₹300 per day only if the Service Provider is
+              logged into the Carmaa app, active and available, remains in the assigned working zone, accepts
+              all jobs given, and does not cancel, reject or delay.<br>
+              If total earnings are less than ₹300, Carmaa will pay ₹300. If earnings exceed ₹300, full actual
+              earnings will be paid.<br>
+              This guarantee will be cancelled immediately if the Service Provider goes offline, rejects jobs,
+              leaves the zone, arrives late, cancels bookings, or violates any company rule.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>28. Binding Acceptance & Waiver of Claims</span>
+            </li>
+            <p class="pdBottom24">
+              By accepting any job through Carmaa, the Service Provider legally confirms that he has read,
+              understood, and agreed to all terms of this Agreement and waives all claims against Carmaa
+              arising out of penalties, deductions, termination, or suspension.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>29. Company Assets, Tools & Equipment</span>
+            </li>
+            <p class="pdBottom24">
+              All machines, tools, kits, uniforms, chemicals, devices, and accessories provided by Carmaa
+              remain the property of the Company.<br>
+              The Service Provider is fully responsible for their safety and proper use. Any loss, theft,
+              breakage, misuse, or damage shall be fully recovered from the Service Provider's salary,
+              security deposit, or through legal recovery.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>30. Indemnity & Loss Protection</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider shall fully indemnify and protect Carmaa from any customer complaint,
+              injury, accident, damage, legal case, penalty, or financial loss caused due to his/her
+              negligence, mistake, misconduct, or illegal action.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>31. No Legal Relationship with Customers</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider shall not create or claim any legal, financial, or contractual relationship
+              with customers.<br>
+              All service contracts exist only between Carmaa and the customer.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>32. Non-Compete & Non-Solicitation</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider shall not work for, associate with, or start any competing car-care,
+              home-service, or similar business during the term of this Agreement and for six (6) months after
+              leaving Carmaa.<br>
+              The Service Provider shall also not contact, approach, or serve any Carmaa customer privately at
+              any time.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>33. Confidentiality</span>
+            </li>
+            <p class="pdBottom24">
+              All business information, customer data, pricing, operations, software, processes, and trade
+              secrets of Carmaa are strictly confidential.<br>
+              Any disclosure, misuse, or sharing with any third party will result in termination, legal
+              action, and full recovery of losses.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>34. Suspension Rights</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa has the right to suspend the Service Provider during any investigation of complaint,
+              fraud, misconduct, theft, or policy violation. During suspension, no payment shall be released
+              until the matter is resolved.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>35. No Partnership, Agency or Ownership Rights</span>
+            </li>
+            <p class="pdBottom24">
+              This Agreement does not create any partnership, franchise, agency, or ownership rights. The
+              Service Provider has no claim on Carmaa's brand, customers, revenue, or intellectual property.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>36. Force Majeure</span>
+            </li>
+            <p class="pdBottom24">
+              Carmaa shall not be responsible for any failure or delay in providing services due to natural
+              disasters, floods, strikes, pandemics, government orders, internet failure, technical
+              breakdowns, or events beyond the Company's control.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>37. Theft, Misappropriation & Criminal Breach of Trust</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider shall not steal, misuse, hide, or remove any customer or company property
+              including vehicles, valuables, cash, tools, kits, chemicals, inventory, or data. Any theft,
+              attempted theft, or dishonesty will be treated as a criminal offence and Carmaa shall have the
+              right to terminate immediately, permanently blacklist, file police FIR, and recover the full
+              loss. No pending payment or security shall be released in such cases.
+            </p>
+
+            <li class="list-paragraph pdBottom16 pdTop24">
+              <span>38. No Reimbursement of Fuel, Bike or Vehicle Expenses</span>
+            </li>
+            <p class="pdBottom24">
+              The Service Provider clearly understands and agrees that Carmaa shall not provide or reimburse
+              any expenses related to petrol, diesel, CNG, bike servicing, repairs, maintenance, puncture,
+              insurance, EMI, or any personal vehicle cost.<br>
+              All transportation and vehicle-related expenses shall be entirely borne by the Service Provider.
+              The Service Provider shall not raise any claim, dispute, or demand against Carmaa for such
+              expenses at any time.
+            </p>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('termsSidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    function closeSidebar() {
+      const sidebar = document.getElementById('termsSidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+
+    function switchTab(tabName) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(content => {
+        content.classList.remove('active');
+      });
+
+      // Remove active class from all sidebar menu items
+      const menuItems = document.querySelectorAll('.sidebar-menu-item');
+      menuItems.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Show selected tab content
+      document.getElementById(tabName + '-tab').classList.add('active');
+
+      // Add active class to clicked menu item
+      event.target.classList.add('active');
+
+      // Close sidebar after selection
+      closeSidebar();
+
+      // Scroll to top of content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 
 </html>
