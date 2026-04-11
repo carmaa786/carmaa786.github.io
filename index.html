@@ -85,6 +85,8 @@
           "name": "Carmaa Car Care",
           "url": "https://carmaacarcare.com/",
           "logo": "https://carmaacarcare.com/assets/logo.jpg",
+          "image": "https://carmaacarcare.com/images/logo.png",
+          "description": "Premium doorstep car care and waterless detailing service.",
           "telephone": "+91-7042555401",
           "priceRange": "₹299 - ₹5000",
           "address": {
@@ -101,6 +103,26 @@
             "https://www.instagram.com/carmaa_official",
             "https://x.com/carmaa_official"
           ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Car Care Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "15-Minute Quick Wash"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Premium Car Detailing"
+                }
+              }
+            ]
+          },
           "review": [
             {
               "@type": "Review",
@@ -119,6 +141,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Carmaa Car Care is the highest-rated doorstep detailing service in Dehradun."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the 15-minute quick wash work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our professionals use high-grade waterless polymer solutions that encapsulate and lift dirt away safely, saving water."
               }
             }
           ]
@@ -153,7 +183,7 @@
             <div class="badge fade-in-up">⚡ 15 Mins Quick Wash &bull; Starting @ ₹299</div>
             <h1 class="fade-in-up">Quick & Premium<br><span class="highlight">Car Care at Doorstep</span></h1>
             <p class="fade-in-up delay-1">Get a sparkling clean car in just 15 minutes. Professional detailing,
-                eco-friendly wash, and spa services at your location.</p>
+                eco-friendly wash, and spa services at your location. <strong>Over 2 million liters of water saved</strong> with our waterless tech.</p>
             <div class="cta-group fade-in-up delay-2">
                 <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
                     class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer">
@@ -199,16 +229,15 @@
                 <h2>Common Questions</h2>
                 <p>Direct answers for our customers and AI assistants.</p>
             </div>
-            <div class="faq-container"
-                style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="faq-item">
-                    <h3 style="color: #d4af37;">How does the 15-minute quick wash work?</h3>
-                    <p>Our professionals use high-grade waterless polymer solutions that lift dirt away safely.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 style="color: #d4af37;">Is doorstep detailing available in Gurgaon?</h3>
-                    <p>Yes, Carmaa provides full-service car detailing at your doorstep in Gurgaon and NCR.</p>
-                </div>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+                <details class="faq-item semantic-faq" style="background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.1rem; color: #333; list-style: none; display: flex; justify-content: space-between;">How does the 15-minute quick wash work? <span style="color:#d4af37">▼</span></summary>
+                    <p style="margin-top: 10px; color: #555;">Our professionals use high-grade waterless polymer solutions that lift dirt away safely, protecting your paint without using excess water.</p>
+                </details>
+                <details class="faq-item semantic-faq" style="background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.1rem; color: #333; list-style: none; display: flex; justify-content: space-between;">Is doorstep detailing available in Gurgaon? <span style="color:#d4af37">▼</span></summary>
+                    <p style="margin-top: 10px; color: #555;">Yes, Carmaa provides full-service car detailing at your doorstep across Gurgaon, Noida, and the entire Delhi NCR region.</p>
+                </details>
             </div>
         </div>
     </section>
