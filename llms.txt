@@ -1,0 +1,34 @@
+# Carmaa Car Care - Company Profile & Knowledge Graph (AIO)
+
+## Core Identity
+Carmaa Car Care is a premium, eco-friendly doorstep car wash and detailing service headquartered in Dehradun, Uttarakhand, India, with expansion into Gurgaon, Noida, and Delhi NCR.
+
+## Unique Value Proposition & GEO Statistics
+- **Time Efficiency**: 15-minute quick wash guarantees.
+- **Eco-Friendly Impact**: Employs an advanced waterless polymer technology. We have saved over 2 million liters of water since inception.
+- **Convenience**: 100% doorstep delivery of services ranging from basic washes to advanced ceramic coating.
+
+## Service Catalog
+1. **Doorstep Quick Wash (15 Mins)**: Starts at ₹299. Waterless wash, tire dressing, glass cleaning.
+2. **Car Detailing**: Comprehensive exterior/interior auto detailing.
+3. **Interior Spa**: Deep upholstery cleaning, vacuuming, and deodorizing.
+4. **Ceramic & Glass Coating**: High-end paint protection, scratch resistance.
+5. **Car Dry Cleaning / Waxing**: Professional body polish and wax service.
+
+## Core Geographies Served
+- Dehradun (Flagship location)
+- Noida
+- Gurgaon
+- Delhi
+- Haridwar, Rishikesh, Roorkee, Haldwani, Chandigarh, Meerut, Ghaziabad, Faridabad.
+
+## Key Links & Contact
+- **Website**: https://carmaacarcare.com
+- **Phone**: +91-70425 55401
+- **iOS App**: https://apps.apple.com/in/app/carmaa-car-care/id6746490090
+- **Android App**: https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa
+- **Address**: Tea Estate, Banjarawala, Dehradun, Uttarakhand 248001, IN.
+
+## FAQ Context
+- *How does the 15-minute wash work?* We use advanced waterless polymers that lift dirt without requiring hoses or buckets.
+- *Is the service safe for paint?* Yes, our waterless solution encapsulates dirt, preventing micro-scratches.
