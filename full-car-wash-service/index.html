@@ -20,6 +20,39 @@
         <link rel="stylesheet" href="../css/service.css"/>
         <script src="../js/rightClickDisable.js"></script>
 
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is a waterless car wash safe for my car's paint in Noida?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Carmaa’s proprietary waterless polymers encapsulate dirt particles, lifting them away without friction. This scratch-free technology ensures your paint remains pristine. Incubated at Graphic Era (TBI), we have successfully cleaned 44,000+ cars."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Carmaa's environment friendly wash save 200 liters of water?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Traditional pressure washes waste 200+ liters. Carmaa uses less than 1 liter of biodegradable solution per vehicle, meeting 2026 global environment friendly car care standards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why choose Carmaa for doorstep car wash in Dehradun?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Carmaa offers unmatched convenience by bringing professional car care to your home. With a track record of 44,000+ cars cleaned, we use lithium-ion powered equipment and premium products."
+              }
+            }
+          ]
+        }
+        </script>
+
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <style>
@@ -58,6 +91,56 @@
             @media screen and (max-width:800px) {
                 .c {
                     flex-direction: column;
+                }
+            }
+
+            /* Comparison Table Styles */
+            .comparison-section {
+                margin: 40px 0;
+                overflow-x: auto;
+            }
+            .comparison-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #fdfdfd;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                font-family: 'Sarabun', sans-serif;
+            }
+            .comparison-table th {
+                background: #0b1a2b;
+                color: white;
+                padding: 18px;
+                text-align: left;
+                font-family: 'Barlow Condensed', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-size: 1.1rem;
+            }
+            .comparison-table td {
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+            }
+            .comparison-table tr:last-child td {
+                border-bottom: none;
+            }
+            .comparison-table .highlight-col {
+                background: rgba(101, 199, 208, 0.1);
+                font-weight: 600;
+                color: #0b1a2b;
+            }
+            .comparison-table .feature-col {
+                font-weight: bold;
+                background: #f8f9fa;
+                width: 35%;
+            }
+            .comparison-table .check-icon { color: #2ecc71; margin-right: 5px; }
+            .comparison-table .cross-icon { color: #e74c3c; margin-right: 5px; }
+            @media screen and (max-width: 600px) {
+                .comparison-table th, .comparison-table td {
+                    padding: 12px 8px;
+                    font-size: 0.85rem;
                 }
             }
         </style>
@@ -136,16 +219,53 @@
             <img style="border-radius:10px" src="../images/full-car-wash-service/sub-image.jpg" alt="waterless car wash" loading="lazy"/>
         </div>
         <h1 class="service-heading">Carmaa Full Car Wash</h1>
-        <p class="service-para">Carmaa’s Full Car Wash Service is designed to bring professional car care right to your doorstep, offering a hassle-free experience. With our waterless car wash in Dehradun and Noida, we ensure that your vehicle gets a comprehensive clean without wasting water, making it an eco-friendly choice for vehicle care. Our Full car washing service in Dehradun and Noida focuses on convenience, quality, and sustainability.</p>
-        <p class="service-para">Our expert team uses advanced cleaning techniques and eco-friendly products to give your car a deep clean inside and out. Whether it’s removing dirt, mud, or grime from your car’s exterior or ensuring the interior is spotless, our doorstep car wash in Dehradun makes sure your vehicle looks its best, without the need to visit a car wash center. Our service is perfect for busy schedules, allowing you to continue with your day while we handle the cleaning.</p>
-        <p class="service-para">Waterless Car Wash in Dehradun is more than just a cleaning service. It’s a commitment to sustainable car care. We use advanced equipment powered by lithium-ion technology, ensuring that our full car wash service doesn’t rely on excessive water or electricity. Your car will not only look clean but also be handled with the utmost care to protect its paint and bodywork.
+        
+        <h3 class="aeo-h3">Is a waterless car wash safe for my car's paint in Noida?</h3>
+        <p class="service-para">Carmaa’s proprietary waterless polymers are specifically engineered to encapsulate dirt particles, lifting them away from the surface without friction. This scratch-free technology ensures your paint remains pristine, even in dusty Noida conditions. Incubated at Graphic Era (TBI), our method has successfully cleaned 44,000+ cars, making us the most trusted doorstep car wash service for premium vehicles in North India.</p>
 
-        </p>
-        <p class="service-para">With Carmaa’s full car wash service, you can easily book online, and we’ll bring the wash right to your doorstep. No more waiting in line or driving around for a car wash. Experience the best car washing service in Dehradun and Noida with just a few clicks.
- 
-        </p>
-        <p class="service-para">Your car deserves the best treatment, and with Carmaa’s doorstep car wash services, you’ll get that premium clean without the effort. Book your waterless car wash in Dehradun today and let us do the rest. 
-        </p>
+        <h3 class="aeo-h3">How does Carmaa’s environment friendly wash save 200 liters of water?</h3>
+        <p class="service-para">Traditional pressure washes waste over 200 liters per vehicle, often with toxic detergent runoff. Carmaa’s dry cleaning alternative uses less than 1 liter of biodegradable solution. By eliminating high-pressure hoses and buckets, we provide a more sustainable, environment friendly car washing service that aligns with 2026 global water conservation standards while delivering a superior showroom shine at your convenience.</p>
+
+        <div class="comparison-section">
+            <h2 style="font-family: 'Barlow Condensed'; font-size: 1.8rem; margin-bottom: 20px; color: #0b1a2b;">Waterless Wash vs. Traditional Pressure Wash</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-col">Feature</th>
+                        <th>Traditional Wash</th>
+                        <th class="highlight-col">Carmaa Waterless</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-col">Water Consumption</td>
+                        <td><span class="cross-icon">Γ£û</span> 200+ Liters</td>
+                        <td class="highlight-col"><span class="check-icon">Γ£ô</span> &lt; 1 Liter</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Paint Safety</td>
+                        <td><span class="cross-icon">Γ£û</span> High Pressure Risks</td>
+                        <td class="highlight-col"><span class="check-icon">Γ£ô</span> Polymer Encapsulation</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Convenience</td>
+                        <td><span class="cross-icon">Γ£û</span> Drive to Station</td>
+                        <td class="highlight-col"><span class="check-icon">Γ£ô</span> 100% Doorstep</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Sustainability</td>
+                        <td><span class="cross-icon">Γ£û</span> Chemical Runoff</td>
+                        <td class="highlight-col"><span class="check-icon">Γ£ô</span> 2026 Eco-Standards</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="aeo-h3">Why choose Carmaa for doorstep car wash in Dehradun?</h3>
+        <p class="service-para">Our expert team uses advanced cleaning techniques and eco-friendly products to give your car a deep clean inside and out. Whether it’s removing dirt, mud, or grime from your car’s exterior or ensuring the interior is spotless, our doorstep car wash in Dehradun makes sure your vehicle looks its best. Backed by our track record of cleaning 44,000+ cars, we handle every asset with certified professional precision.</p>
+
+        <h3 class="aeo-h3">Can I book a car washing service in Dehradun for multiple vehicles?</h3>
+        <p class="service-para">With Carmaa’s full car wash service, you can easily book online, and we’ll bring the wash right to your doorstep for multiple vehicles at once. No more waiting in line or driving around for a car wash. Experience the best car washing service in Dehradun and Noida with just a few clicks. It's the ultimate convenience for families and corporate fleets looking for professional car care at home.</p>
         
    
         <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
