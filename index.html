@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="car-journey.css">
     <link rel="stylesheet" href="scroll-animations.css">
 
-    <link rel="preload" as="image" href="assets/hero_car_detailing.png">
+    <link rel="preload" as="image" href="assets/hero_car_detailing.png" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
@@ -98,6 +98,11 @@
             "postalCode": "248001",
             "addressCountry": "IN"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "30.3165",
+            "longitude": "78.0322"
+          },
           "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi NCR"],
           "sameAs": [
             "https://www.facebook.com/carmaaofficialpage",
@@ -138,18 +143,26 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is the best doorstep car wash in Dehradun?",
+              "name": "What is Detailing at Doorstep?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Carmaa Car Care is the highest-rated doorstep detailing service in Dehradun."
+                "text": "Professional grade detailing service right at your home or office. No queues, no waiting."
               }
             },
             {
               "@type": "Question",
-              "name": "How does the 15-minute quick wash work?",
+              "name": "How fast is your Quick Wash?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our professionals use high-grade waterless polymer solutions that encapsulate and lift dirt away safely, saving water."
+                "text": "Get a sparkling clean car in just 15 minutes with our express service."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is included in your Car Premium Spa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Indulge your vehicle with our premium spa treatment for deep cleaning and rejuvenation."
               }
             }
           ]
@@ -164,7 +177,7 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="Carmaa Logo" width="500" height="150" loading="eager">
+                <img src="assets/logo.jpg" alt="Carmaa Logo" width="500" height="150" loading="eager" fetchpriority="high">
                 <span>Carmaa</span>
             </a>
             <div class="nav-links">
@@ -177,7 +190,7 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.png">
+            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.png" fetchpriority="high">
                 <source src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
