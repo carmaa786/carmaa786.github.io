@@ -1114,22 +1114,23 @@
   
                   // Show the div again after 15 seconds
               });
-      const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+            const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
       bookingOpenBtn.forEach(button => {
       button.addEventListener('click', () => {
-        document.getElementById('nameError').textContent = '';
-          document.getElementById('phoneError').textContent = '';
-          document.getElementById('addressError').textContent = '';
-          document.getElementById('cityError').textContent = '';
-        document.getElementById('nameInput').value='';
-       document.getElementById('numberInput').value='';
-
-       document.getElementById('addressInput').value='';
-          document.getElementById('cityInput').value='';
+          setTimeout(() => {
+              document.getElementById('nameError').textContent = '';
+              document.getElementById('phoneError').textContent = '';
+              document.getElementById('addressError').textContent = '';
+              document.getElementById('cityError').textContent = '';
+              document.getElementById('nameInput').value='';
+              document.getElementById('numberInput').value='';
+              document.getElementById('addressInput').value='';
+              document.getElementById('cityInput').value='';
               document.getElementById('modal-booking-btn').disabled = false;
               document.querySelector('.button-text').style.display = "inline";
               document.querySelector('.button-loader').style.display = "none";
-          document.getElementById("parent-div").style.display = "flex";
+              document.getElementById("parent-div").style.display = "flex";
+          }, 0);
       });
   });
   </script>

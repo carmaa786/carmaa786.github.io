@@ -306,6 +306,59 @@
         </div>
 
         <div class="main-container" id="main-container-one">
+          <a href="./professional-guide-car-wash-home-noida/">
+            <div class="blog-section-main-container">
+              <div class="blog-img-container">
+                <img class="blog-image" src="../images/blogs/car-wash-home-noida.jpg" alt="Car wash at home in Noida" loading="lazy" />
+              </div>
+              <div class="blog-section-container">
+                <p class="blog-date-para">20th April, 2026</p>
+                <h2 class="blog-sub-heading">The Professional's Guide to Car Wash at Home in Noida</h2>
+                <p class="blog-sub-para">Tired of weekend queues? Reclaim your time with our guide to professional car wash at home, specifically tailored for busy Noida residents in Sector 62 and 137.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="./how-carmaa-saved-water-graphic-era-tbi/">
+            <div class="blog-section-main-container">
+              <div class="blog-img-container">
+                <img class="blog-image" src="../images/blogs/water-savings.jpg" alt="Water savings impact Dehradun" loading="lazy" />
+              </div>
+              <div class="blog-section-container">
+                <p class="blog-date-para">20th April, 2026</p>
+                <h2 class="blog-sub-heading">How Carmaa Saved 3.5 Million Liters of Water</h2>
+                <p class="blog-sub-para">Learn how our incubation at Graphic Era TBI led to a revolution in waterless car care, saving millions of liters for the Dehradun community.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="./protecting-luxury-car-dehradun-monsoon/">
+            <div class="blog-section-main-container">
+              <div class="blog-img-container">
+                <img class="blog-image" src="../images/blogs/dehradun-monsoon-protection.jpg" alt="Ceramic coating Dehradun monsoon" loading="lazy" />
+              </div>
+              <div class="blog-section-container">
+                <p class="blog-date-para">20th April, 2026</p>
+                <h2 class="blog-sub-heading">Protecting Your Luxury Car from Dehradun’s Monsoon</h2>
+                <h3 style="display:none">Is a waterless car wash safe for my car's paint in Dehradun?</h3>
+                <p class="blog-sub-para">Heavy rains and humidity don't have to ruin your luxury vehicle. Discover how advanced ceramic coating provides the ultimate hydrophobic shield.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="./science-interior-dry-cleaning-sanitization/">
+            <div class="blog-section-main-container">
+              <div class="blog-img-container">
+                <img class="blog-image" src="../images/blogs/interior-dry-cleaning-science.jpg" alt="Interior dry cleaning Noida" loading="lazy" />
+              </div>
+              <div class="blog-section-container">
+                <p class="blog-date-para">20th April, 2026</p>
+                <h2 class="blog-sub-heading">Beyond Surface Clean: The Science of Interior Dry Cleaning</h2>
+                <p class="blog-sub-para">Surface cleaning isn't enough. We explore the health-first science behind deep interior sanitization and why dry cleaning is a must for your family.</p>
+              </div>
+            </div>
+          </a>
+
           <a
             href="./the-ultimate-doorstep-car-wash-service-provider-in-dehradun/"
           >
@@ -741,7 +794,13 @@
         const bookingOpenBtn = document.querySelectorAll(".open-booking-modal");
         bookingOpenBtn.forEach((button) => {
           button.addEventListener("click", () => {
-            document.getElementById("parent-div").style.display = "flex";
+            // INP Optimization: Defer UI state change to next micro-task to keep main thread responsive
+            setTimeout(() => {
+              const bookingModal = document.getElementById("parent-div");
+              if (bookingModal) {
+                  bookingModal.style.display = "flex";
+              }
+            }, 0);
           });
         });
       </script>

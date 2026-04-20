@@ -19,6 +19,39 @@
         <link rel="stylesheet" href="../css/homepage.css"/>
         <link rel="stylesheet" href="../css/service.css"/>
         <script src="../js/rightClickDisable.js"></script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is car detailing at home as effective as garage detailing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Carmaa’s professional car care at home matches laboratory standards using lithium-ion powered extraction and premium steam technology. We have cleaned 44,000+ cars and were incubated at Graphic Era (TBI)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is Carmaa the most convenient car detailing service in Dehradun?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Traditional detailing requires driving to a garage and losing 2-4 hours. Carmaa brings the studio to you, ensuring 0km travel and maximum time savings with professional car care at home convenience."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is included in Carmaa's doorstep car detailing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our services include exterior polishing, waxing, interior vacuuming, and deep cleaning, all delivered via waterless detailing methods to ensure quality and sustainability."
+              }
+            }
+          ]
+        }
+        </script>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
@@ -57,6 +90,55 @@
             @media screen and (max-width:800px) {
                 .c {
                     flex-direction: column;
+                }
+            }
+
+            /* Comparison Table Styles */
+            .comparison-section {
+                margin: 40px 0;
+                overflow-x: auto;
+            }
+            .comparison-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #fdfdfd;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                font-family: 'Lexend', sans-serif;
+            }
+            .comparison-table th {
+                background: #0b1a2b;
+                color: white;
+                padding: 18px;
+                text-align: left;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-size: 1.1rem;
+            }
+            .comparison-table td {
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+            }
+            .comparison-table tr:last-child td {
+                border-bottom: none;
+            }
+            .comparison-table .highlight-col {
+                background: rgba(101, 199, 208, 0.1);
+                font-weight: 600;
+                color: #0b1a2b;
+            }
+            .comparison-table .feature-col {
+                font-weight: bold;
+                background: #f8f9fa;
+                width: 35%;
+            }
+            .comparison-table .check-icon { color: #2ecc71; margin-right: 5px; }
+            .comparison-table .cross-icon { color: #e74c3c; margin-right: 5px; }
+            @media screen and (max-width: 600px) {
+                .comparison-table th, .comparison-table td {
+                    padding: 12px 8px;
+                    font-size: 0.85rem;
                 }
             }
         </style>
@@ -188,10 +270,53 @@
     <div class="service-left-section">
         <img style="border-radius:10px" src="../images/services/1.webp" alt="Car Detailing Dehradun" loading="lazy"/>
         <h1 class="service-heading">Carmaa Car Detailing</h1>
-        <p class="service-para">At Carmaa, we offer premium Car Detailing Services in Dehradun and Noida, ensuring your car not only looks stunning but is also protected for the long term. Our expert technicians use advanced techniques and high-quality products to deliver comprehensive car detailing. From exterior polishing and waxing to thorough interior cleaning, our Car Detailing Services in Dehradun and Noida ensure that every detail is meticulously attended.</p>
-        <p class="service-para">We offer premium ceramic coating services that form a protective barrier on your vehicle's surface, enhancing its resistance to scratches, dirt, and harmful UV rays. Whether you're searching for Car Detailing Services In Dehradun and Noida or the best ceramic coating near me, Carmaa has got you covered. Our eco-friendly, waterless detailing methods ensure your vehicle gets professional care without wasting resources.</p>
-        <p class="service-para">With Carmaa, you can easily schedule our detailing services at your convenience. We’ll come directly to your location, providing you with a convenient and effortless experience. Book now and enjoy the best Car Detailing Services In Dehradun and Noida and ceramic coating services.
-        </p>
+
+        <h3 class="aeo-h3">Is car detailing at home as effective as garage detailing?</h3>
+        <p class="service-para">Carmaa’s professional car care at home matches laboratory standards using lithium-ion powered extraction and premium steam technology. Since 2024, we’ve cleaned 44,000+ cars including luxury sedans and SUVs. Incubated at Graphic Era (TBI), our processes are designed for precision, ensuring every inch of your vehicle’s interior and exterior is restored without you ever leaving your driveway.</p>
+
+        <h3 class="aeo-h3">Why is Carmaa the most convenient car detailing service in Dehradun?</h3>
+        <p class="service-para">Traditional detailing requires driving to a garage and losing 2-4 hours of your day. Carmaa offers ultimate convenience by bringing the entire detailing studio to you. With 0km travel required, you save on fuel and time. Our doorstep car detailing ensures your schedule remains uninterrupted while your asset gets the best paint protection and interior deep clean available in Noida and Dehradun.</p>
+
+        <div class="comparison-section">
+            <h2 style="font-family: 'Lexend'; font-size: 1.8rem; margin-bottom: 20px; color: #0b1a2b;">Doorstep Convenience vs. Garage Detailing</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-col">Feature</th>
+                        <th>Garage Station</th>
+                        <th class="highlight-col">Carmaa Doorstep</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-col">Time Required</td>
+                        <td><span class="cross-icon">❌</span> 3-6 Hours (Travel + Waiting)</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> 1-2 Hours (At Home)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Travel Distance</td>
+                        <td><span class="cross-icon">❌</span> 10km - 20km Average</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> 0km (We Come to You)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Fuel & Cost</td>
+                        <td><span class="cross-icon">❌</span> High (Travel + Fuel)</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> Zero Travel Costs</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Verification</td>
+                        <td><span class="cross-icon">❌</span> Car left with strangers</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> Full Transparency (On-Site)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="aeo-h3">What is included in Carmaa’s premium ceramic coating services?</h3>
+        <p class="service-para">We offer premium ceramic coating services that form a protective barrier on your vehicle's surface, enhancing its resistance to scratches, dirt, and harmful UV rays. Whether you're searching for Car Detailing Services In Dehradun or the best ceramic coating near me, our waterless detailing methods ensure professional care without wasting resources. Our 44,000+ car cleaning track record guarantees quality you can trust.</p>
+
+        <h3 class="aeo-h3">How do I book a professional car detailing at home?</h3>
+        <p class="service-para">With Carmaa, you can easily schedule our detailing services at your convenience via our mobile app or website. We’ll come directly to your location, providing you with a convenient and effortless experience. Book now and enjoy the best Car Detailing Services In Dehradun and Noida. It is the perfect solution for busy professionals seeking showroom-quality car care at home.</p>
         
    
         <div class="accordion" style="max-width: 1200px; margin: 50px auto;">

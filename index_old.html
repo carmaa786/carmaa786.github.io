@@ -2630,16 +2630,25 @@
         });
     </script>
     <script>
-        const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
-        bookingOpenBtn.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = document.getElementById("booking-modal");
-        // Remove the modal-hidden class if it exists
-        modal.classList.remove("modal-hidden");
-        // Show the modal
-        document.getElementById("parent-div").style.display = "flex";
-    });
-    });
+              const bookingOpenBtn=document.querySelectorAll('.open-booking-modal');
+      bookingOpenBtn.forEach(button => {
+      button.addEventListener('click', () => {
+          setTimeout(() => {
+              document.getElementById('nameError').textContent = '';
+              document.getElementById('phoneError').textContent = '';
+              document.getElementById('addressError').textContent = '';
+              document.getElementById('cityError').textContent = '';
+              document.getElementById('nameInput').value='';
+              document.getElementById('numberInput').value='';
+              document.getElementById('addressInput').value='';
+              document.getElementById('cityInput').value='';
+              document.getElementById('modal-booking-btn').disabled = false;
+              document.querySelector('.button-text').style.display = "inline";
+              document.querySelector('.button-loader').style.display = "none";
+              document.getElementById("parent-div").style.display = "flex";
+          }, 0);
+      });
+  });
     </script>
     <script>
         const openVideo=document.querySelector('.youtube-video-btn');
