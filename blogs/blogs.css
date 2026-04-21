@@ -67,14 +67,27 @@ a {
 }
 .blog-section-main-container {
   width: 25rem;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 360px;
-  overflow: scroll;
+  height: 480px; /* Increased to fit content better without scroll */
+  overflow: hidden;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.blog-section-main-container:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px;
 }
 .blog-section-container {
   flex: 1;
@@ -136,6 +149,7 @@ a {
   .blog-container {
     padding: 0rem;
     padding-top: 0.5rem;
+    padding-bottom: 5rem;
   }
 
   .blog-section-main-container {
@@ -144,8 +158,6 @@ a {
 
   .blog-header-main-container {
     padding-left: 12px;
-    padding-bottom: 5rem;
-    padding-top: 2rem;
   }
 
   .main-container {

@@ -177,7 +177,7 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="Carmaa Logo" width="500" height="150" loading="eager" fetchpriority="high">
+                <img src="assets/logo.jpg" alt="Carmaa Logo" loading="eager" fetchpriority="high">
                 <span>Carmaa</span>
             </a>
             <div class="nav-links">
@@ -300,7 +300,7 @@
                         <div class="avatar av-2 icon-avatar person-icon">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="500" height="150" loading="lazy"></div>
+                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" loading="lazy"></div>
                         <div class="avatar av-3 icon-avatar car-icon">
                             <i class="fa-solid fa-car-side"></i>
                         </div>
@@ -467,6 +467,61 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════
+         SNAPIT-STYLE FAQ SECTION
+         Minimalist Row Design
+         ─────────────────────────────────────────── -->
+    <section id="faq" class="section-padding faq-section">
+        <div class="container">
+            <div class="section-header reveal fade-bottom">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our doorstep services.</p>
+            </div>
+            
+            <div class="faq-container reveal fade-up">
+                <div class="faq-row">
+                    <button class="faq-row-header">
+                        <h3>What is detailing at doorstep?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our doorstep detailing service brings professional-grade care to your location. We use advanced tools and eco-friendly products to clean and protect your car right at your home or office, saving you hours of time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-row">
+                    <button class="faq-row-header">
+                        <h3>How does a waterless car wash work?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use high-grade lubricants and polymers that lift dirt away from the surface safely. This allows us to clean your vehicle without a single drop of running water, preventing swirls and scratches while being 100% eco-friendly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-row">
+                    <button class="faq-row-header">
+                        <h3>How long does a 15-minute quick wash take?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Exactly what it says! Our optimized workflow allows us to give your car a thorough exterior refresh in just 15 minutes, making it the fastest professional wash in India.</p>
+                    </div>
+                </div>
+
+                <div class="faq-row">
+                    <button class="faq-row-header">
+                        <h3>Which locations do you currently serve?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We are currently operating at scale in Dehradun and Gurgaon, with active service expansions across Noida and major parts of the Delhi NCR region.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="reviews" class="section-padding overflow-hidden">
         <div class="container">
             <div class="section-header reveal fade-bottom">
@@ -514,7 +569,7 @@
                 <!-- Left Column: Logo and Contact Info -->
                 <div class="footer-brand">
                     <a href="#" class="footer-logo-link">
-                        <img src="assets/logo.jpg" alt="Carmaa Logo" class="footer-logo-img" width="500" height="150" loading="lazy">
+                        <img src="assets/logo.jpg" alt="Carmaa Logo" class="footer-logo-img" loading="lazy">
                         <span class="footer-logo-text">carmaa</span>
                     </a>
 
@@ -603,6 +658,25 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-row-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const row = header.parentElement;
+                const isActive = row.classList.contains('active');
+                
+                // Close all rows
+                document.querySelectorAll('.faq-row').forEach(otherRow => {
+                    otherRow.classList.remove('active');
+                });
+                
+                // Toggle clicked row
+                if (!isActive) {
+                    row.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 

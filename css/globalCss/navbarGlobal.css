@@ -28,13 +28,23 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  width: fit-content !important;
+  flex: none !important;
 }
 .navbar-carmaa-logo-link {
   height: 100%;
+  display: flex;
+  align-items: center;
+  width: fit-content !important;
 }
-.navbar-carmaa-logo-img {
-  width: 150px;
-  margin-top: 10px;
+/* Standardized Logo Proportions */
+.main-navbar-container .navbar-carmaa-logo-img {
+  height: 50px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  display: block;
 }
 .navbar-menu-ul {
   display: flex;

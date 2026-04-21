@@ -1942,7 +1942,13 @@
 
       document.querySelectorAll(".pricing-booking-btn").forEach((btn) => {
         btn.addEventListener("click", function () {
-          document.getElementById("parent-div").style.display = "flex";
+          // INP Optimization: Defer modal display to next task
+          setTimeout(() => {
+            const modal = document.getElementById("parent-div");
+            if (modal) {
+                modal.style.display = "flex";
+            }
+          }, 0);
 
           // Capture the values from the button clicked
           currentModalTarget = btn.getAttribute("data-target");

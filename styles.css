@@ -78,10 +78,8 @@ body {
 }
 
 .logo img {
-    height: 40px;
+    height: 48px;
     width: auto;
-    border-radius: 8px;
-    /* Softens the square edges of the jpg */
 }
 
 .logo span {
@@ -2028,4 +2026,196 @@ body {
     font-weight: 500;
 }
 
-/* End of Design System */
+/* ═══════════════════════════════════════════
+   SNAPIT-STYLE FAQ ACCORDION
+   Full-width rows · Carmaa brand colors
+   ─────────────────────────────────────────── */
+#carmaa-faq {
+    background: var(--bg);
+}
+
+.faq-accordion {
+    max-width: 840px;
+    margin: 0 auto;
+    border-top: 1px solid #eee;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 4px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    gap: 24px;
+}
+
+.faq-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary, #1b4e9b);
+    line-height: 1.45;
+    flex: 1;
+    transition: color 0.2s ease;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--primary, #1b4e9b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary, #1b4e9b);
+    line-height: 1;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+/* Answer body — hidden by default */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s ease;
+    padding: 0 4px;
+}
+
+.faq-answer p {
+    padding-bottom: 22px;
+    color: var(--text-gray, #475569);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Toggle open state */
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 400px;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-label .faq-icon {
+    transform: rotate(45deg);
+    background: var(--primary, #1b4e9b);
+    color: #fff;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-label .faq-question {
+    color: var(--text-main, #1e293b);
+}
+
+.faq-label:hover .faq-question {
+    color: var(--primary-dark, #163b7a);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .faq-label {
+        padding: 18px 2px;
+    }
+    .faq-question {
+        font-size: 0.95rem;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   BLOG THUMBNAILS — border-radius + cover
+   ─────────────────────────────────────────── */
+.blog-img-container img {
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    height: 250px !important;
+    width: 100% !important;
+    display: block;
+}
+
+/* ═══════════════════════════════════════════
+   SNAPIT-STYLE FAQ ARCHITECTURE
+   Minimalist rows · Brand blue accents
+   ─────────────────────────────────────────── */
+.faq-section {
+    background: var(--darker-bg);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-row {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 0;
+}
+
+.faq-row-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.3s;
+}
+
+.faq-row-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary);
+    font-family: inherit;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+    background: #f4f4f4;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 0;
+}
+
+.faq-answer p {
+    padding-bottom: 24px;
+    color: var(--text-gray);
+    margin: 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Active state */
+.faq-row.active .faq-icon {
+    transform: rotate(45deg); /* Turns + into x or rotates it */
+}
+
+.faq-row.active .faq-answer {
+    max-height: 500px; /* Arbitrary large height */
+    padding-top: 0;
+}
+
+/* End of Design System */
