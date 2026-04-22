@@ -33,8 +33,10 @@
   height: 100%;
 }
 .navbar-carmaa-logo-img {
-  width: 150px;
-  margin-top: 10px;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 .navbar-menu-ul {
   display: flex;

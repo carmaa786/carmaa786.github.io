@@ -1,14 +1,18 @@
 /* common css  */
 
 :root {
-  --primary-color: #0b4c9d;
-  /* --font: "Bai Jamjuree", sans-serif; */
-  --font: "Lexend", "Lexend Placeholder", "sans-serif";
-  /* --body-font: "Sarabun", sans-serif; */
-  --body-font: "Inter", "Inter Placeholder", "sans-serif";
-  /* --body-font: "Lexend", "Lexend Placeholder", "sans-serif"; */
-
+  --primary: #1B4E9B;
+  --primary-dark: #143d7a;
+  --secondary: #28B097;
+  --primary-color: #1B4E9B; /* Legacy support */
+  
+  --font-main: 'Metropolis', 'Inter', sans-serif;
+  --font-display: 'Oswald', 'Lexend', sans-serif;
+  --font: var(--font-display);
+  --body-font: var(--font-main);
+  
   --silver: #bac4c9;
+  --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%);
 }
 
 #preloader {
