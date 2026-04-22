@@ -1,0 +1,148 @@
+/* Blog Post Styles */
+.blog-post-hero {
+    position: relative;
+    padding: 100px 0 60px;
+    background: var(--darker-bg);
+    text-align: center;
+}
+
+.blog-post-hero h1 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.blog-breadcrumb {
+    font-size: 1rem;
+    color: var(--text-gray);
+}
+
+.blog-breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-breadcrumb a:hover {
+    color: var(--secondary);
+}
+
+.featured-image-container {
+    max-width: 1000px;
+    margin: -40px auto 40px;
+    position: relative;
+    z-index: 5;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.featured-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.blog-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.blog-main-content {
+    font-family: var(--font-main);
+    line-height: 1.8;
+    font-size: 1.15rem;
+    color: var(--text-main);
+}
+
+.blog-main-content h2 {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin: 40px 0 20px;
+}
+
+.blog-main-content p {
+    margin-bottom: 25px;
+}
+
+.blog-main-content a {
+    color: var(--secondary);
+    font-weight: 600;
+    border-bottom: 2px solid rgba(40, 176, 151, 0.2);
+    transition: all 0.3s ease;
+}
+
+.blog-main-content a:hover {
+    border-bottom-color: var(--secondary);
+}
+
+.technician-insight {
+    background: #f8fafc;
+    border-left: 5px solid var(--secondary);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 0 16px 16px 0;
+    font-style: italic;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.technician-insight h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-style: normal;
+}
+
+.geo-impact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e0f2f1;
+    color: #00695c;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.blog-cta-box {
+    background: var(--gradient);
+    padding: 40px;
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.blog-cta-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.blog-cta-box p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .blog-post-hero h1 {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+    
+    .featured-image-container {
+        margin-top: -20px;
+        border-radius: 0;
+    }
+    
+    .blog-main-content {
+        font-size: 1.05rem;
+    }
+}
