@@ -1,3 +1,15 @@
+:root {
+    --primary: #1B4E9B;
+    --primary-dark: #143d7a;
+    --secondary: #28B097;
+    --text-main: #333333;
+    --text-gray: #64748b;
+    --darker-bg: #f8fafc;
+    --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%);
+    --font-main: 'Metropolis', 'Inter', sans-serif;
+    --font-display: 'Oswald', 'Lexend', sans-serif;
+}
+
 /* Blog Post Styles */
 .blog-post-hero {
     position: relative;
@@ -145,4 +157,20 @@
     .blog-main-content {
         font-size: 1.05rem;
     }
+}
+
+/* Footer Reset for Blog Pages */
+.footer img {
+    width: auto !important;
+    height: auto !important;
+    display: inline-block !important;
+}
+
+.footer-logo-img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.footer-dehradun {
+    margin-bottom: 0.5rem !important;
 }
