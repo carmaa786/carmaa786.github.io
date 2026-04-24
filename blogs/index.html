@@ -227,12 +227,11 @@
             <div class="blog-img-container">
               <img class="blog-image" src="/images/blogs/water-savings.png" alt="Water savings impact Dehradun"
                 loading="lazy" />
+              <h2 class="blog-overlay-title">How Carmaa Saved 3.5 Million Liters of Water</h2>
             </div>
             <div class="blog-section-container">
               <p class="blog-date-para">20th April, 2026</p>
-              <h2 class="blog-sub-heading">How Carmaa Saved 3.5 Million Liters of Water</h2>
-              <p class="blog-sub-para">Learn how our incubation at Graphic Era TBI led to a revolution in waterless car
-                care, saving millions of liters for the Dehradun community.</p>
+              <p class="blog-sub-para">Discover how our incubation at Graphic Era TBI led to a revolution in waterless car care, saving millions of liters for Dehradun.</p>
             </div>
           </div>
         </a>
@@ -242,13 +241,11 @@
             <div class="blog-img-container">
               <img class="blog-image" src="/images/blogs/monsoon-protection.png" alt="Ceramic coating Dehradun monsoon"
                 loading="lazy" />
+              <h2 class="blog-overlay-title">Protecting Your Luxury Car from Dehradun’s Monsoon</h2>
             </div>
             <div class="blog-section-container">
               <p class="blog-date-para">20th April, 2026</p>
-              <h2 class="blog-sub-heading">Protecting Your Luxury Car from Dehradun’s Monsoon</h2>
-              <h3 style="display:none">Is a waterless car wash safe for my car's paint in Dehradun?</h3>
-              <p class="blog-sub-para">Heavy rains and humidity don't have to ruin your luxury vehicle. Discover how
-                advanced ceramic coating provides the ultimate hydrophobic shield.</p>
+              <p class="blog-sub-para">Heavy rains don't have to ruin your luxury vehicle. Learn how advanced ceramic coating provides the ultimate hydrophobic shield.</p>
             </div>
           </div>
         </a>
@@ -258,12 +255,11 @@
             <div class="blog-img-container">
               <img class="blog-image" src="/images/blogs/interior-sanitization.png" alt="Interior dry cleaning Dehradun"
                 loading="lazy" />
+              <h2 class="blog-overlay-title">The Science of Interior Dry Cleaning</h2>
             </div>
             <div class="blog-section-container">
               <p class="blog-date-para">20th April, 2026</p>
-              <h2 class="blog-sub-heading">Beyond Surface Clean: The Science of Interior Dry Cleaning</h2>
-              <p class="blog-sub-para">Surface cleaning isn't enough. We explore the health-first science behind deep
-                interior sanitization and why dry cleaning is a must for your family.</p>
+              <p class="blog-sub-para">We explore the health-first science behind deep interior sanitization and why professional dry cleaning is a must for your family.</p>
             </div>
           </div>
         </a>
@@ -659,39 +655,23 @@
 
   <script type="module">
     import { CTAApi } from "/js/external-integration.js";
-    // Function to show the parent div after 15 seconds
-
-    // Initially hide the div
     let parentDiv = document.getElementById("parent-div");
     let parentDiv2 = document.getElementById("parent-div2");
 
-    // Show the div after 15 seconds
-
-    // Close button functionality
-    document
-      .getElementById("close-btn")
-      .addEventListener("click", function () {
-        // Hide the parent div
+    if (document.getElementById("close-btn")) {
+      document.getElementById("close-btn").addEventListener("click", function () {
         parentDiv.style.display = "none";
-
-        // Show the div again after 15 seconds
       });
-    document
-      .getElementById("close-btn2")
-      .addEventListener("click", function () {
-        // Hide the parent div
+    }
+    if (document.getElementById("close-btn2")) {
+      document.getElementById("close-btn2").addEventListener("click", function () {
         parentDiv2.style.display = "none";
-
-        // Show the div again after 15 seconds
       });
+    }
 
-    document
-      .getElementById("contactButton")
-      .addEventListener("click", async function () {
-        // Capture the values from the inputs
+    if (document.getElementById("contactButton")) {
+      document.getElementById("contactButton").addEventListener("click", async function () {
         const button = document.getElementById("contactButton");
-
-        // Disable the button
         button.style.pointerEvents = "none";
         button.style.backgroundColor = "#999";
         const name = document.getElementById("nameInput").value;
@@ -699,22 +679,16 @@
         const address = document.getElementById("addressInput").value;
         if (!name || !number || !address) {
           alert("Please fill all fields.");
+          button.style.pointerEvents = "auto";
+          button.style.backgroundColor = "#183ea1";
           return;
         }
 
-        // Prepare the data object
-        const formData = {
-          name: name,
-          number: number,
-          address: address,
-        };
-
+        const formData = { name, number, address };
         try {
-          // Send POST request to the API
           const response = await CTAApi(formData);
           if (response.ok) {
             document.getElementById("parent-div").style.display = "none";
-          } else {
           }
         } catch (error) {
           console.error("Error:", error);
@@ -723,73 +697,8 @@
           button.style.backgroundColor = "#183ea1";
         }
       });
+    }
   </script>
-  <!-- </div> -->
-
-  <script>
-    let scrollContainer = document.querySelector(".gallery");
-    let backBtn = document.getElementById("back-btn");
-    let nextBtn = document.getElementById("next-btn");
-    const scrollAmount = 900;
-
-    // Function to scroll forward
-    function scrollForward() {
-      scrollContainer.style.scrollBehavior = "smooth";
-      scrollContainer.scrollLeft += scrollAmount;
-
-      // If the scroll reaches the end, reset to the beginning
-      if (
-        scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-        scrollContainer.scrollWidth
-      ) {
-        scrollContainer.scrollLeft = 0;
-      }
-    }
-
-    // Function to scroll backward
-    function scrollBackward() {
-      scrollContainer.style.scrollBehavior = "smooth";
-      scrollContainer.scrollLeft -= scrollAmount;
-
-      // If the scroll goes before the start, move to the end
-      if (scrollContainer.scrollLeft <= 0) {
-        scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-      }
-    }
-
-    // Add event listeners for manual scrolling
-    nextBtn.addEventListener("click", scrollForward);
-    backBtn.addEventListener("click", scrollBackward);
-
-    // Auto-scroll functionality
-    function autoScroll() {
-      scrollForward();
-    }
-
-    // Start auto-scrolling every 3 seconds
-    let autoScrollInterval = setInterval(autoScroll, 2000);
-
-    // Pause auto-scrolling when user hovers over the gallery
-    scrollContainer.addEventListener("mouseover", () => {
-      clearInterval(autoScrollInterval);
-    });
-
-    // Resume auto-scrolling when user leaves the gallery
-    scrollContainer.addEventListener("mouseout", () => {
-      autoScrollInterval = setInterval(autoScroll, 2000);
-    });
-  </script>
-    <div id="footer"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("/components/footer3.html")
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch((error) => console.error("Error loading footer:", error));
-        });
-    </script>
 </body>
 </html>
 
