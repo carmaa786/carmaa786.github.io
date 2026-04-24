@@ -42,6 +42,15 @@ a:hover {
   border-radius: 5px;
   font-family: var(--body-font);
 }
+
+/* Navbar logo sizing normalization */
+.navbar-carmaa-logo-img {
+  height: 45px !important;
+  width: auto !important;
+  max-height: 45px !important;
+  display: block !important;
+}
+
 .service-left-section {
   width: 40%;
 }
