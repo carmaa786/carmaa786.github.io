@@ -2,20 +2,59 @@
 <html lang="en">
 
 <head>
-    <link rel="canonical" href="https://carmaacarcare.com/blogs/how-carmaa-saved-water-graphic-era-tbi" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="canonical" href="https://carmaacarcare.com/blogs/how-carmaa-saved-water-graphic-era-tbi/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Carmaa Saved 3.5 Million Liters of Water | Sustainability in Dehradun</title>
     <meta name="description" content="Discover how Carmaa's waterless car wash technology saved 3.5 million liters of water. Born at Graphic Era TBI, we are leading the sustainability charge in Dehradun.">
-    <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/service.css" />
-    <link rel="stylesheet" href="../../css/blog-post.css" />
-    <link rel="stylesheet" href="../../css/footer-new.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    
+    <link rel="stylesheet" href="/css/blog-post.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <style>
+        /* Body and horizontal stability */
+        body {
+            overflow-x: hidden !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #ffffff !important; /* Reset to white to match master */
+        }
+
+        /* Navbar logo sizing - Nuclear Fix */
+        .navbar-carmaa-logo-img {
+            height: 45px !important;
+            width: auto !important;
+            max-height: 45px !important;
+            display: block !important;
+        }
+
+        /* Hero image standardization */
+        .featured-image-container {
+            margin-bottom: 30px !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+        }
+
+        .featured-image-container img {
+            width: 100% !important;
+            height: 450px !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+
+        @media (max-width: 768px) {
+            .featured-image-container img {
+                height: 250px !important;
+            }
+        }
+    </style>
     
     <script type="application/ld+json">
     {
@@ -32,14 +71,14 @@
         "name": "Carmaa Car Care",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://carmaacarcare.com/assets/logo.jpg"
+          "url": "https://carmaacarcare.com/images/logo.png"
         }
       },
       "datePublished": "2026-04-20",
       "description": "Learn about Carmaa's journey from Graphic Era TBI to saving millions of liters of water through innovative waterless car wash technology.",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://carmaacarcare.com/blogs/how-carmaa-saved-water-graphic-era-tbi"
+        "@id": "https://carmaacarcare.com/blogs/how-carmaa-saved-water-graphic-era-tbi/"
       }
     }
     </script>
@@ -68,11 +107,11 @@
     <header class="blog-post-hero">
         <div class="container">
             <div class="featured-image-container">
-                <img src="/assets/water_saving_impact_dehradun.png" style="width: 100% !important; height: 240px !important; object-fit: cover !important; display: block !important; border-radius: 8px;" alt="Water">
+                <img src="/images/blogs/water-savings.png" alt="Carmaa Water Savings" loading="eager">
             </div>
             <h1>How Carmaa Saved 3.5 Million Liters of Water</h1>
             <div class="blog-breadcrumb">
-                <a href="/">Home</a> / <a href="../">Blogs</a> / <span>Water Savings Story</span>
+                <a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>Water Savings Story</span>
             </div>
         </div>
     </header>
@@ -109,17 +148,20 @@
             </div>
         </article>
     </section>
-
-    <div class="footer-wrapper">
-        <div id="footer"></div>
-        <script>
-            fetch('/components/footer3.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-        </script>
-    </div>
+    <div id="footer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("/components/footer3.html")
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+                .catch((error) => console.error("Error loading footer:", error));
+        });
+    </script>
 </body>
 
 </html>
+
+
+
