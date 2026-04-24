@@ -187,7 +187,7 @@ label {
 }
 
 /* Input styling */
-input[type="text"] {
+.form-container input[type="text"] {
   width: 100%;
   padding: 8px;
   border-radius: 4px;
@@ -195,7 +195,7 @@ input[type="text"] {
 }
 
 /* Submit button styling */
-button {
+.form-container button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -211,7 +211,7 @@ button {
 }
 
 /* Button hover effect */
-button:hover {
+.form-container button:hover {
   background-color: #f2f2f2;
 }
 
