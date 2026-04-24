@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/aboutus.css" />
     <link rel="stylesheet" href="./blogs.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
       * {
@@ -309,7 +311,7 @@
           <a href="./professional-guide-car-wash-home-noida/">
             <div class="blog-section-main-container">
               <div class="blog-img-container">
-                <img class="blog-image" src="../images/blogs/car-wash-home-noida.jpg" alt="Car wash at home in Noida" loading="lazy" />
+                <img class="blog-image" src="../images/blogs/noida-guide.png" alt="Car wash at home in Noida" loading="lazy" />
               </div>
               <div class="blog-section-container">
                 <p class="blog-date-para">20th April, 2026</p>
@@ -322,7 +324,7 @@
           <a href="./how-carmaa-saved-water-graphic-era-tbi/">
             <div class="blog-section-main-container">
               <div class="blog-img-container">
-                <img class="blog-image" src="../images/blogs/water-savings.jpg" alt="Water savings impact Dehradun" loading="lazy" />
+                <img class="blog-image" src="../images/blogs/water-savings.png" alt="Water savings impact Dehradun" loading="lazy" />
               </div>
               <div class="blog-section-container">
                 <p class="blog-date-para">20th April, 2026</p>
@@ -335,7 +337,7 @@
           <a href="./protecting-luxury-car-dehradun-monsoon/">
             <div class="blog-section-main-container">
               <div class="blog-img-container">
-                <img class="blog-image" src="../images/blogs/dehradun-monsoon-protection.jpg" alt="Ceramic coating Dehradun monsoon" loading="lazy" />
+                <img class="blog-image" src="../images/blogs/monsoon-protection.png" alt="Ceramic coating Dehradun monsoon" loading="lazy" />
               </div>
               <div class="blog-section-container">
                 <p class="blog-date-para">20th April, 2026</p>
@@ -349,7 +351,7 @@
           <a href="./science-interior-dry-cleaning-sanitization/">
             <div class="blog-section-main-container">
               <div class="blog-img-container">
-                <img class="blog-image" src="../images/blogs/interior-dry-cleaning-science.jpg" alt="Interior dry cleaning Noida" loading="lazy" />
+                <img class="blog-image" src="../images/blogs/interior-sanitization.png" alt="Interior dry cleaning Noida" loading="lazy" />
               </div>
               <div class="blog-section-container">
                 <p class="blog-date-para">20th April, 2026</p>
@@ -806,18 +808,17 @@
       </script>
       <div id="footer">
         <script>
-          fetch("../components/footer3.html")
+          fetch("/components/footer3.html")
             .then((response) => response.text())
             .then((data) => {
               document.getElementById("footer").innerHTML = data;
+              // Set year after footer HTML is injected
+              let yearEl = document.getElementById("yearElement");
+              if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+                yearEl.style.fontSize = "12px";
+              }
             });
-
-          document.addEventListener("DOMContentLoaded", function () {
-            let presentYear = new Date().getFullYear();
-            console.log(presentYear);
-            document.getElementById("yearElement").textContent = presentYear;
-            document.getElementById("yearElement").style.fontSize = "12px";
-          });
         </script>
       </div>
     </div>
