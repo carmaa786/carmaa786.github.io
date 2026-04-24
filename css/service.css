@@ -42,6 +42,15 @@ a:hover {
   border-radius: 5px;
   font-family: var(--body-font);
 }
+
+/* Navbar logo sizing normalization */
+.navbar-carmaa-logo-img {
+  height: 45px !important;
+  width: auto !important;
+  max-height: 45px !important;
+  display: block !important;
+}
+
 .service-left-section {
   width: 40%;
 }
@@ -187,7 +196,7 @@ label {
 }
 
 /* Input styling */
-input[type="text"] {
+.form-container input[type="text"] {
   width: 100%;
   padding: 8px;
   border-radius: 4px;
@@ -195,7 +204,7 @@ input[type="text"] {
 }
 
 /* Submit button styling */
-button {
+.form-container button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -211,7 +220,7 @@ button {
 }
 
 /* Button hover effect */
-button:hover {
+.form-container button:hover {
   background-color: #f2f2f2;
 }
 
