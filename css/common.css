@@ -109,14 +109,18 @@ a:hover {
   background-size: cover;
   background-image: url("../images/header-img.jpg");
 }
-.city-header-section p {
+.city-header-section p, 
+.city-header-section h1,
+.city-header-section .breadcrumb {
   color: white;
   position: relative;
+  z-index: 15; /* Increased to stay above featured images */
+}
+.city-header-section p {
   font-size: 2.2rem;
   font-family: var(--font) !important;
   line-height: 2;
   font-weight: 700;
-  z-index: 2;
 }
 .city-header-section::before {
   content: "";
@@ -133,8 +137,6 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
-  position: relative;
-  z-index: 2;
 }
 
 .city-header-section .breadcrumb img {
@@ -164,32 +166,6 @@ a:hover {
   }
 }
 
-.city-header-section {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 5rem;
-  width: 100%;
-  background-position: left top;
-  background-size: cover;
-  background-image: url("../images/header-img.jpg");
-}
-.city-header-section p {
-  color: white;
-  position: relative;
-  font-size: 2.2rem;
-  font-family: var(--font) !important;
-  line-height: 2;
-  font-weight: 700;
-  z-index: 2;
-}
-.city-header-section .breadcrumb p {
-  font-family: var(--body-font);
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 @media (max-width: 600px) and (min-width: 10px) {
   .city-header-section p {
     font-size: 1.5rem;
@@ -198,7 +174,7 @@ a:hover {
 
 @media (max-width: 900px) and (min-width: 10px) {
   .city-header-section {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 8rem; /* Increased padding-bottom for mobile clearance */
   }
 }
 
