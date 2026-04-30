@@ -97,9 +97,33 @@
 }
 
 #services-dropdown {
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  height: 318px;
+  max-height: 318px;
+  height: auto;
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #65c7d0 #f1f1f1;
+}
+
+#services-dropdown::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+
+#services-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#services-dropdown::-webkit-scrollbar-thumb {
+  background: #65c7d0;
+  border-radius: 4px;
+}
+
+#services-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #28b097;
 }
 
 /* Show dropdown on hover */
