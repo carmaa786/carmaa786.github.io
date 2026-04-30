@@ -1,0 +1,18 @@
+# 301 Redirects for 404 errors found on 2026-04-30
+RewriteEngine On
+
+# Redirects for location and blog pages
+Redirect 301 /blogs/doorstep-car-cleaning-service-noida /doorstep-car-washing-service-in-noida/
+Redirect 301 /why-carmaa-is-becoming-dehradun's-choice /blogs/why-carmaa-is-becoming-dehradun's-choice/
+Redirect 301 /blogs/doorstep-car-washing-service-in-gurgaon/ /doorstep-car-washing-service-in-gurgaon/
+Redirect 301 /doorstep-car-washing-service-in-delhi/blogs/ /doorstep-car-washing-service-in-delhi/
+Redirect 301 /best-car-mechanics-in-dehradun/blogs/ /best-car-mechanics-in-dehradun/
+Redirect 301 /blogs/why-carmaa-is-becoming-dehradun's-choice/blogs/ /blogs/why-carmaa-is-becoming-dehradun's-choice/
+Redirect 301 /blogs/dry-cleaning-services-at-your-doorstep/blogs/ /blogs/dry-cleaning-services-at-your-doorstep/
+Redirect 301 /blogs/about/ /about/
+Redirect 301 /blogs/doorstep-car-washing-service-in-dehradun/ /doorstep-car-washing-service-in-dehradun/
+
+# Redirects for non-existent pages to general blog index
+Redirect 301 /blogs/doorstep-car-washing-service-in-meerut/ /blogs/
+Redirect 301 /doorstep-car-washing-service-in-Rishikesh/blogs/ /blogs/
+Redirect 301 /doorstep-car-washing-service-in-Haridwar/blogs/ /blogs/
