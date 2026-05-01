@@ -1,0 +1,304 @@
+/* ========================================
+   STATS SECTION - MOBILE OPTIMIZED
+   All 3 stats visible on single screen
+   Professional compact layout
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Container - Compact grid layout */
+    .infographic-stats {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+        padding: 30px 16px !important;
+        margin: 40px 0 0 0 !important;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        overflow: visible !important;
+    }
+
+    /* Individual stat items - Compact cards */
+    .stat-item {
+        text-align: center !important;
+        padding: 16px 8px !important;
+        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        border-radius: 16px;
+        border: 2px solid rgba(40, 176, 151, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 140px;
+    }
+
+    /* Active state for touch feedback */
+    .stat-item:active {
+        transform: scale(0.95) translateY(-2px);
+        border-color: rgba(40, 176, 151, 0.3);
+        box-shadow: 0 8px 20px rgba(40, 176, 151, 0.15);
+    }
+
+    /* Decorative gradient background */
+    .stat-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at top, rgba(40, 176, 151, 0.05), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    .stat-item:active::before {
+        opacity: 1;
+    }
+
+    /* Icon styling - Compact size */
+    .stat-icon {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.5rem !important;
+        margin: 0 auto 10px !important;
+        background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%) !important;
+        border: 2px solid rgba(40, 176, 151, 0.2);
+        box-shadow: 0 4px 12px rgba(40, 176, 151, 0.12) !important;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .stat-item:active .stat-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 6px 16px rgba(40, 176, 151, 0.2) !important;
+    }
+
+    /* Counter number styling - Compact but readable */
+    .stat-item h3 {
+        font-size: 1.75rem !important;
+        font-weight: 900 !important;
+        margin: 0 0 4px 0 !important;
+        background: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+        font-family: 'Metropolis', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Description text - Compact */
+    .stat-item p {
+        font-size: 0.7rem !important;
+        color: #64748b !important;
+        font-weight: 600 !important;
+        margin: 0 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        line-height: 1.2;
+    }
+}
+
+/* ========================================
+   COUNTER ANIMATION
+   Animates numbers from 0 to target value
+   ======================================== */
+
+/* Counter animation keyframes */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when element is visible */
+.stat-item h3 {
+    animation: countUp 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+/* Trigger animation when in viewport */
+.stat-item.animated h3 {
+    animation-play-state: running;
+}
+
+/* Stagger animation for each stat */
+.stat-item:nth-child(1) h3 {
+    animation-delay: 0.1s;
+}
+
+.stat-item:nth-child(2) h3 {
+    animation-delay: 0.3s;
+}
+
+.stat-item:nth-child(3) h3 {
+    animation-delay: 0.5s;
+}
+
+/* Icon entrance animation */
+@keyframes iconBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+
+    60% {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.stat-item .stat-icon {
+    animation: iconBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-play-state: paused;
+}
+
+.stat-item.animated .stat-icon {
+    animation-play-state: running;
+}
+
+/* Stagger icon animations */
+.stat-item:nth-child(1) .stat-icon {
+    animation-delay: 0s;
+}
+
+.stat-item:nth-child(2) .stat-icon {
+    animation-delay: 0.2s;
+}
+
+.stat-item:nth-child(3) .stat-icon {
+    animation-delay: 0.4s;
+}
+
+/* Shimmer effect on numbers */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.stat-item.animated h3 {
+    background-size: 200% auto;
+    animation: countUp 0.8s ease-out forwards, shimmer 3s linear infinite;
+}
+
+/* ========================================
+   TABLET ADJUSTMENTS
+   ======================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .stat-item {
+        flex: 0 0 calc(50% - 30px);
+        min-width: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+
+    .infographic-stats::after {
+        content: '← Swipe for more →';
+    }
+}
+
+/* ========================================
+   SMALL MOBILE DEVICES (< 480px)
+   Extra compact for smaller screens
+   ======================================== */
+
+@media (max-width: 480px) {
+    .infographic-stats {
+        gap: 8px !important;
+        padding: 24px 12px !important;
+    }
+
+    .stat-item {
+        padding: 12px 6px !important;
+        min-height: 120px;
+        border-radius: 12px;
+    }
+
+    .stat-item h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .stat-icon {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.25rem !important;
+        margin: 0 auto 8px !important;
+    }
+
+    .stat-item p {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.2px;
+    }
+}
+
+/* ========================================
+   DESKTOP - Keep original vertical layout
+   ======================================== */
+
+@media (min-width: 769px) {
+    .stat-item h3 {
+        animation: countUp 0.8s ease-out forwards;
+        animation-play-state: paused;
+    }
+
+    .stat-item.animated h3 {
+        animation-play-state: running;
+        background-size: 200% auto;
+        animation: countUp 0.8s ease-out forwards, shimmer 3s linear infinite;
+    }
+
+    .stat-item .stat-icon {
+        animation: iconBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        animation-play-state: paused;
+    }
+
+    .stat-item.animated .stat-icon {
+        animation-play-state: running;
+    }
+
+    /* Stagger for desktop */
+    .stat-item:nth-child(1) h3,
+    .stat-item:nth-child(1) .stat-icon {
+        animation-delay: 0.1s;
+    }
+
+    .stat-item:nth-child(2) h3 {
+        animation-delay: 0.3s;
+    }
+
+    .stat-item:nth-child(2) .stat-icon {
+        animation-delay: 0.3s;
+    }
+
+    .stat-item:nth-child(3) h3 {
+        animation-delay: 0.5s;
+    }
+
+    .stat-item:nth-child(3) .stat-icon {
+        animation-delay: 0.5s;
+    }
+}

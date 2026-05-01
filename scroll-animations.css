@@ -1,0 +1,429 @@
+/* ============================================
+   PROFESSIONAL SCROLL ANIMATIONS
+   Ultra-smooth, buttery transitions
+   ============================================ */
+
+/* Base reveal animation setup with performance optimization */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade animations with directional entry - Ultra smooth easing */
+.fade-bottom {
+    opacity: 0;
+    transform: translateY(40px) translateZ(0);
+}
+
+.fade-bottom.active {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px) translateZ(0);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-50px) translateZ(0);
+    transition: opacity 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.fade-left.active {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(50px) translateZ(0);
+    transition: opacity 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.fade-right.active {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+/* Stagger delays for sequential animations - Smooth timing */
+.delay-1 {
+    transition-delay: 0.15s;
+}
+
+.delay-2 {
+    transition-delay: 0.25s;
+}
+
+.delay-3 {
+    transition-delay: 0.35s;
+}
+
+.delay-4 {
+    transition-delay: 0.45s;
+}
+
+/* Scale animations for cards and images - Buttery smooth */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.92) translateZ(0);
+    transition: opacity 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: opacity, transform;
+}
+
+.scale-in.active {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+}
+
+/* Rotate animations for icons - Smooth spring effect */
+.rotate-in {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.85) translateZ(0);
+    transition: opacity 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: opacity, transform;
+}
+
+.rotate-in.active {
+    opacity: 1;
+    transform: rotate(0deg) scale(1) translateZ(0);
+}
+
+/* Blur fade-in for premium effect - Ultra smooth */
+.blur-in {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px) translateZ(0);
+    transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, filter, transform;
+}
+
+.blur-in.active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) translateZ(0);
+}
+
+/* Slide animations for horizontal elements - Silky smooth */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px) translateZ(0);
+    transition: opacity 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.95s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: opacity, transform;
+}
+
+.slide-in-left.active {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px) translateZ(0);
+    transition: opacity 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.95s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: opacity, transform;
+}
+
+.slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+/* Parallax effect for hero and sections - Buttery smooth */
+.parallax-slow {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+/* Navbar scroll effect - Ultra smooth transition */
+.navbar {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: padding, box-shadow, background;
+}
+
+.navbar.scrolled {
+    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Section headers with underline animation - Smooth reveal */
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0) translateZ(0);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+
+.section-header.active h2::after {
+    transform: translateX(-50%) scaleX(1) translateZ(0);
+}
+
+/* Icon boxes with bounce effect - Smooth spring */
+.icon-box {
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+
+.service-card.active .icon-box {
+    animation: icon-bounce 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+@keyframes icon-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Stats counter animation enhancement */
+.stat-item {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-item.animated {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.stat-item .stat-icon {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-item.animated .stat-icon {
+    animation: icon-pop 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+@keyframes icon-pop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button hover enhancements - Silky smooth */
+.btn {
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) translateZ(0);
+    transition: width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Image reveal with clip-path - Smooth unveil */
+.split-image img,
+.before-after-container img {
+    transition: clip-path 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    clip-path: inset(0 100% 0 0);
+    will-change: clip-path;
+}
+
+.split-image.active img,
+.before-after-container.active img {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Review cards entrance animation - Buttery smooth */
+.review-card {
+    transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
+}
+
+.review-card:hover {
+    transform: translateY(-8px) scale(1.02) translateZ(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Step cards with number animation - Smooth entrance */
+.step-card {
+    opacity: 0;
+    transform: translateY(40px) translateZ(0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.step-card.active {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
+.step-icon {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+
+.step-card.active .step-icon {
+    animation: number-pulse 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+@keyframes number-pulse {
+
+    0%,
+    100% {
+        transform: scale(1) translateZ(0);
+    }
+
+    50% {
+        transform: scale(1.3) translateZ(0);
+    }
+}
+
+/* Footer fade-in - Ultra smooth */
+.footer-new {
+    opacity: 0;
+    transform: translateY(30px) translateZ(0);
+    transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.footer-new.active {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
+/* CTA section with gradient animation - Smooth flow */
+.app-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.app-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-cta.active::before {
+    opacity: 1;
+    animation: gradient-move 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes gradient-move {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10%, 10%);
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+
+    .reveal,
+    .fade-bottom,
+    .fade-up,
+    .fade-left,
+    .fade-right {
+        transform: translateY(20px);
+    }
+
+    .slide-in-left,
+    .slide-in-right {
+        transform: translateY(30px);
+    }
+}
