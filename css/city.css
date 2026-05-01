@@ -1610,21 +1610,7 @@ a:hover {
     }
 }
 
-/* 3. Hover Overlay Constraints — prevent white outlines from escaping parent bounds */
-.commitment-quality-right .img-wrapper {
-    overflow: hidden !important;
-    position: relative !important;
-}
-.commitment-quality-right .img-wrapper img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-}
-.commitment-quality-right .img-wrapper .overlay-text {
-    z-index: 4 !important;
-    pointer-events: none !important;
-}
+
 /* Constrain any pseudo-element overlays on icon wrappers */
 .city-benefit-element-img-wrapper,
 .city-benefit-element-img-wrapper2 {
@@ -1645,3 +1631,147 @@ a:hover {
 }
 
 
+/* ============================================================
+   CITY PAGE LAYOUT FIXES — 3 broken sections
+   ============================================================ */
+
+/* -------- FIX 1: Benefits Section (Image left / Text right) --------
+   Problem: .benefit-left had no width — left half was blank empty space.   */
+.benefit-left {
+    width: 50%;
+    padding: 0 3rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    box-sizing: border-box;
+}
+.benefit-head-desc {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #424649;
+    text-align: justify;
+}
+
+/* -------- FIX 2: city-why-choose — Two images SIDE BY SIDE --------
+   Problem: width:100% on each image caused them to stack vertically full-width. */
+.city-why-choose .img-component {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 1.5rem !important;
+    width: 85% !important;
+    max-width: 1200px !important;
+    margin: 0 auto 2.5rem auto !important;
+}
+.city-why-choose .img-component img {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    height: 350px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+}
+
+/* Center text + comparison tables below the images */
+.city-why-choose > h3,
+.city-why-choose > p.right-desc,
+.city-why-choose > .comparison-table-container {
+    width: 85%;
+    max-width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    box-sizing: border-box;
+}
+.city-why-choose > h3 {
+    color: #0b3d91;
+    margin-top: 2rem;
+}
+
+/* -------- FIX 3: Commitment section — Images properly sized --------
+   Problem: .img-wrapper had no height. Using explicit px everywhere. */
+.commitment-quality {
+    align-items: flex-start !important;
+    padding: 4rem 7.5% !important;
+    box-sizing: border-box !important;
+}
+.commitment-quality-left {
+    width: 50% !important;
+}
+.commitment-quality-right {
+    width: 45% !important;
+    height: 320px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    align-items: stretch !important;
+}
+.commitment-quality-right .img-wrapper {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    height: 320px !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    position: relative !important;
+}
+.commitment-quality-right .img-wrapper img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    display: block !important;
+}
+.commitment-quality-right .img-wrapper .overlay-text img {
+    display: none !important;
+}
+
+/* -------- MOBILE RESPONSIVE -------- */
+@media (max-width: 768px) {
+
+    .benefits-section {
+        flex-direction: column !important;
+        padding: 2rem 1rem !important;
+        width: 100% !important;
+    }
+    .benefit-right2 {
+        width: 100% !important;
+        height: 260px !important;
+    }
+    .benefit-left {
+        width: 100% !important;
+        padding: 1.5rem 1rem !important;
+    }
+
+    .city-why-choose .img-component {
+        flex-direction: column !important;
+        width: 92% !important;
+        gap: 1rem !important;
+    }
+    .city-why-choose .img-component img {
+        flex: none !important;
+        width: 100% !important;
+        height: 220px !important;
+    }
+    .city-why-choose > h3,
+    .city-why-choose > p.right-desc,
+    .city-why-choose > .comparison-table-container {
+        width: 92% !important;
+    }
+
+    .commitment-quality {
+        flex-direction: column !important;
+        padding: 2rem 1rem !important;
+    }
+    .commitment-quality-left {
+        width: 100% !important;
+    }
+    .commitment-quality-right {
+        width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    .commitment-quality-right .img-wrapper img {
+        height: 200px !important;
+    }
+}
