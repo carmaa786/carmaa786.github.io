@@ -148,19 +148,17 @@ button,
         padding: 0 20px;
     }
 
-    .cta-group {
-        flex-direction: row !important;
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero .cta-group {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+        padding: 0 20px !important;
     }
 
-    .cta-group .btn {
-        flex: 0 1 auto;
-        min-width: 150px;
-        max-width: 200px;
-        padding: 14px 24px;
-        font-size: 0.95rem;
+    .hero .cta-group .btn {
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     /* Video background optimization */
@@ -194,39 +192,25 @@ button,
 
 @media (max-width: 768px) {
 
-    /* Service Cards - Professional Horizontal Carousel */
-    #services .services-grid {
+    /* Service Cards - Professional Vertical Stack */
+    #services .services-grid, 
+    .promises-grid, 
+    .steps-grid {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 16px;
-        padding: 10px 20px 30px 20px !important;
-        margin: 0 -20px;
-        -webkit-overflow-scrolling: touch;
-        /* Enable momentum scrolling on iOS */
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 10px 0 !important;
     }
 
-    /* Hide scrollbar but keep functionality */
-    #services .services-grid::-webkit-scrollbar {
-        display: none;
-        /* Chrome, Safari, Opera */
-    }
-
-    /* Individual Service Cards in Horizontal Layout */
-    #services .service-card {
-        flex: 0 0 calc(100% - 40px);
-        /* Full width minus padding */
-        min-width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
+    /* Individual Service Cards in Vertical Layout */
+    #services .service-card,
+    .promise-card,
+    .step-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
         padding: 32px 24px;
         text-align: center !important;
         display: flex;
@@ -236,17 +220,22 @@ button,
         background: var(--surface);
         border-radius: 24px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Subtle hover/active effect for touch */
-    #services .service-card:active {
-        transform: scale(0.98);
+    /* Scoped Icon Scaling */
+    .service-card i, 
+    .promise-card i, 
+    .stat-icon i,
+    .faq-question i {
+        max-width: 100% !important;
+        height: auto !important;
     }
 
     /* Center all content within service cards */
-    #services .service-card h3,
-    #services .service-card p {
+    .service-card h3,
+    .service-card p,
+    .promise-card h3,
+    .promise-card p {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -254,53 +243,13 @@ button,
     }
 
     /* Icon boxes centered */
-    #services .service-card .icon-box {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-    }
-
-
-    /* Icon Boxes */
     .icon-box {
         width: 70px;
         height: 70px;
         font-size: 1.8rem;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    /* Scroll Indicator for Services Section */
-    #services .container {
-        position: relative;
-    }
-
-    /* Add scroll hint indicator */
-    #services .services-grid::after {
-        content: '← Swipe →';
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.75rem;
-        color: var(--text-gray);
-        opacity: 0.6;
-        font-weight: 500;
-        letter-spacing: 1px;
-        pointer-events: none;
-        animation: fadeInOut 3s ease-in-out infinite;
-    }
-
-    @keyframes fadeInOut {
-
-        0%,
-        100% {
-            opacity: 0.4;
-        }
-
-        50% {
-            opacity: 0.8;
-        }
+        margin-bottom: 20px;
     }
 }
 
@@ -561,6 +510,20 @@ button,
     }
 }
 
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 15px 60px 15px 20px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+    }
+}
+
 @media (max-width: 480px) {
     .app-cta {
         padding: 50px 0;
@@ -586,21 +549,45 @@ button,
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 60px 0 !important;
+        padding: 40px 0 !important;
     }
 
     .container {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-padding {
-        padding: 50px 0 !important;
+        padding: 0 15px;
     }
 
-    .container {
-        padding: 0 16px;
+    /* Footer Stacking Fix */
+    .footer-container, 
+    .link-section-container,
+    .social-media-icons,
+    .follow-us {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 15px !important;
+        text-align: left !important;
+    }
+
+    .footer-column, 
+    .link-section-child,
+    .support-email-container {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* FAQ Question Fix */
+    .faq-question {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 15px 60px 15px 0 !important;
+        position: relative;
+    }
+    .faq-question i {
+        position: absolute;
+        right: 10px;
     }
 }
 

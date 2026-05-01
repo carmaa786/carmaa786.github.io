@@ -6,17 +6,19 @@
 
 @media (max-width: 768px) {
 
-    /* Container - Compact grid layout */
+    /* Container - Vertical stack layout */
     .infographic-stats {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 12px !important;
-        padding: 30px 16px !important;
-        margin: 40px 0 0 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 30px 15px !important;
+        margin: 40px auto 0 !important;
         background: white;
         border-radius: 20px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
         overflow: visible !important;
+        width: 100% !important;
     }
 
     /* Individual stat items - Compact cards */
@@ -217,7 +219,7 @@
     }
 
     .infographic-stats::after {
-        content: '← Swipe for more →';
+        content: none !important;
     }
 }
 

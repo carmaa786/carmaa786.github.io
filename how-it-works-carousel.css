@@ -5,25 +5,17 @@
 
 @media (max-width: 768px) {
 
-    /* Steps Grid - Professional Horizontal Carousel */
+    /* Steps Grid - Professional Vertical Stack */
     #how-it-works .steps-grid {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 16px;
-        padding: 10px 20px 30px 20px !important;
-        margin: 0 -20px;
-        -webkit-overflow-scrolling: touch;
-        /* Enable momentum scrolling on iOS */
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        grid-template-columns: unset !important;
-        /* Override any grid layout */
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 20px 0 !important;
+        margin: 0 auto !important;
+        overflow-x: visible !important;
+        grid-template-columns: 1fr !important;
     }
 
     /* Hide scrollbar but keep functionality */
@@ -32,14 +24,13 @@
         /* Chrome, Safari, Opera */
     }
 
-    /* Individual Step Cards in Horizontal Layout */
+    /* Individual Step Cards in Vertical Layout */
     #how-it-works .step-card {
-        flex: 0 0 calc(100% - 40px);
-        /* Full width minus padding */
-        min-width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        scroll-snap-align: none;
+        scroll-snap-stop: normal;
         padding: 32px 24px;
         text-align: center !important;
         display: flex;
@@ -78,20 +69,9 @@
         position: relative;
     }
 
-    /* Add scroll hint indicator */
+    /* Scroll Indicator - Removed for Vertical Stack */
     #how-it-works .steps-grid::after {
-        content: '← Swipe →';
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.75rem;
-        color: var(--text-gray);
-        opacity: 0.6;
-        font-weight: 500;
-        letter-spacing: 1px;
-        pointer-events: none;
-        animation: fadeInOutSteps 3s ease-in-out infinite;
+        content: none !important;
     }
 
     @keyframes fadeInOutSteps {
