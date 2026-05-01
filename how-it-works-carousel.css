@@ -1,0 +1,115 @@
+/* ========================================
+   HOW IT WORKS - MOBILE HORIZONTAL CAROUSEL
+   Professional UI/UX Mobile Optimization
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Steps Grid - Professional Vertical Stack */
+    #how-it-works .steps-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 20px 0 !important;
+        margin: 0 auto !important;
+        overflow-x: visible !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Hide scrollbar but keep functionality */
+    #how-it-works .steps-grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    /* Individual Step Cards in Vertical Layout */
+    #how-it-works .step-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        scroll-snap-align: none;
+        scroll-snap-stop: normal;
+        padding: 32px 24px;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: var(--surface);
+        border-radius: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Subtle hover/active effect for touch */
+    #how-it-works .step-card:active {
+        transform: scale(0.98);
+    }
+
+    /* Center all content within step cards */
+    #how-it-works .step-card h3,
+    #how-it-works .step-card p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+    }
+
+    /* Step icons centered */
+    #how-it-works .step-card .step-icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Scroll Indicator for How It Works Section */
+    #how-it-works .container {
+        position: relative;
+    }
+
+    /* Scroll Indicator - Removed for Vertical Stack */
+    #how-it-works .steps-grid::after {
+        content: none !important;
+    }
+
+    @keyframes fadeInOutSteps {
+
+        0%,
+        100% {
+            opacity: 0.4;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    #how-it-works .step-card {
+        padding: 24px 20px;
+        text-align: center !important;
+    }
+
+    #how-it-works .step-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* GPU acceleration for smooth scrolling */
+    #how-it-works .step-card {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}

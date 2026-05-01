@@ -195,33 +195,61 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 768px) {
   .footer-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
   }
   .logo-section {
     width: 100%;
-    margin: 0px auto;
-    margin-bottom: 50px;
+    margin: 0px;
+    margin-bottom: 30px;
   }
   .logo-section .brand-summary {
-    text-align: center;
+    text-align: left;
     width: 100%;
+    margin-left: 0;
+  }
+  .footer-logo {
+    margin-left: 0;
   }
   .link-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding-left: 1.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
     width: 100%;
+    padding: 0;
   }
   .link-section-child {
-    /* width: 100%; */
-    color: #ffffff;
+    width: 100%;
+    text-align: left;
+  }
+  .google-play-store-icons {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .follow-us {
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .link-section {
+    width: 90%;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 800px) {

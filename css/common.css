@@ -27,10 +27,40 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-@media screen and (min-width: 900px) {
-  .whatsapp-icon-container {
-    display: none;
-  }
+/* Global removal of WhatsApp icon variants */
+.whatsapp-icon-container, 
+.whatsapp-icon, 
+a[href*="wa.me"], 
+a[href*="whatsapp.com"],
+.whatsapp_float { 
+    display: none !important; 
+    visibility: hidden !important; 
+    pointer-events: none !important; 
+}
+
+/* Global removal of distracting background textures and white silhouettes (Desktop + Mobile) */
+[style*="textture-bg.png"], 
+[style*="carmaa-new"],
+[style*="wavy-lines"],
+.our-service-main-section,
+.aboutus-cta-section,
+.city-why-choose,
+.our-services-section-city,
+.our-services-section-city-right,
+.third-img,
+.benefit-right2,
+.counter-section {
+  background-image: none !important;
+}
+
+/* Aspect ratio protection for images to prevent 'tiny dots' or distortion */
+.service-box img,
+.city-why-choose img,
+.benefit-element-img-wrapper img,
+.why-carmaa-card img,
+.our-services-section-city-left img {
+  height: auto !important;
+  max-width: 100%;
 }
 
 a {

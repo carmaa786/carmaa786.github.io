@@ -1,0 +1,324 @@
+/* ========================================
+   CARMAA DIFFERENCE SECTION - HORIZONTAL CAROUSEL
+   Professional Mobile UI Design
+   ======================================== */
+
+/* ========================================
+   MOBILE HORIZONTAL CAROUSEL (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Override the vertical stacking from story-mobile-enhanced.css */
+    /* Story Timeline Container - Horizontal Scroll */
+    .story-timeline {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        scroll-behavior: smooth !important;
+        gap: 16px !important;
+        padding: 10px 20px 30px 20px !important;
+        margin: 0 -20px !important;
+        -webkit-overflow-scrolling: touch !important;
+        /* Enable momentum scrolling on iOS */
+        scrollbar-width: none !important;
+        /* Firefox */
+        -ms-overflow-style: none !important;
+        /* IE and Edge */
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .story-timeline::-webkit-scrollbar {
+        display: none !important;
+        /* Chrome, Safari, Opera */
+    }
+
+    /* Story Scene Cards - Horizontal Layout */
+    .story-scene {
+        flex: 0 0 calc(100% - 40px) !important;
+        /* Full width minus padding */
+        min-width: calc(100% - 40px) !important;
+        max-width: calc(100% - 40px) !important;
+        scroll-snap-align: center !important;
+        scroll-snap-stop: always !important;
+        width: calc(100% - 40px) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        /* Remove individual margins */
+        left: 0 !important;
+        align-items: center !important;
+        background: #ffffff !important;
+        border-radius: 20px !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    /* Subtle touch effect */
+    .story-scene:active {
+        transform: scale(0.98) !important;
+    }
+
+    /* Scene Visual - Full Width Image Area */
+    .scene-visual {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 200px !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Scene Content - Enhanced Typography */
+    .scene-content {
+        max-width: 100% !important;
+        padding: 24px 20px !important;
+        text-align: center !important;
+    }
+
+    .scene-content h3 {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+        margin-bottom: 12px !important;
+        display: block !important;
+        text-align: center !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* Remove the accent bar on mobile */
+    .scene-content h3::before {
+        display: none !important;
+    }
+
+    .scene-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        color: #475569 !important;
+        text-align: center !important;
+    }
+
+    .scene-content strong {
+        color: var(--primary) !important;
+        font-weight: 600 !important;
+    }
+
+    /* Enhanced Visual Backgrounds */
+    .scene-arrival {
+        background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%) !important;
+    }
+
+    .scene-clean {
+        background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%) !important;
+    }
+
+    .scene-joy {
+        background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%) !important;
+    }
+
+    /* Icon Animations - Larger and More Prominent */
+    .warrior-wrapper {
+        font-size: 4rem !important;
+        bottom: 50% !important;
+        transform: translateY(50%) !important;
+    }
+
+    .car-wrapper {
+        font-size: 4.5rem !important;
+    }
+
+    .family-group {
+        font-size: 4.5rem !important;
+    }
+
+    /* Data Badge Enhancement */
+    .data-badge {
+        position: absolute !important;
+        top: 16px !important;
+        right: 16px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        padding: 8px 16px !important;
+        border-radius: 20px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(40, 176, 151, 0.2) !important;
+    }
+
+    .data-badge span {
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        color: var(--secondary) !important;
+    }
+
+    /* House Marker Enhancement */
+    .house-marker {
+        top: 20px !important;
+        right: 20px !important;
+        font-size: 2rem !important;
+    }
+
+    /* Road Enhancement */
+    .road {
+        bottom: 30px !important;
+        height: 4px !important;
+        background: linear-gradient(90deg, transparent, #94A3B8, transparent) !important;
+    }
+
+    /* Check Animation */
+    .check-list-anim {
+        position: absolute !important;
+        top: 20px !important;
+        right: 20px !important;
+        font-size: 1.5rem !important;
+        color: var(--secondary) !important;
+        background: white !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 12px rgba(40, 176, 151, 0.3) !important;
+    }
+
+    /* Sun Glow Enhancement */
+    .sun-glow {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 120px !important;
+        height: 120px !important;
+        background: radial-gradient(circle, rgba(251, 191, 36, 0.3), transparent) !important;
+        border-radius: 50% !important;
+    }
+
+    /* Scroll Indicator for Carmaa Difference Section */
+    #story .container {
+        position: relative !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Add scroll hint indicator */
+    .story-timeline::after {
+        content: '← Swipe →' !important;
+        position: absolute !important;
+        bottom: 5px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        font-size: 0.75rem !important;
+        color: var(--text-gray) !important;
+        opacity: 0.6 !important;
+        font-weight: 500 !important;
+        letter-spacing: 1px !important;
+        pointer-events: none !important;
+        animation: fadeInOut 3s ease-in-out infinite !important;
+    }
+
+    @keyframes fadeInOut {
+
+        0%,
+        100% {
+            opacity: 0.4;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+    }
+
+    /* Remove the green dotted timeline line on mobile */
+    .story-timeline::before {
+        display: none !important;
+    }
+
+    /* Remove timeline dots on mobile */
+    .story-scene::after {
+        display: none !important;
+    }
+
+    /* Enhanced Focus States */
+    .story-scene:focus-within {
+        outline: 3px solid rgba(40, 176, 151, 0.3) !important;
+        outline-offset: 2px !important;
+    }
+
+    /* Smoother Icon Animations */
+    .warrior-wrapper,
+    .car-wrapper,
+    .family-group {
+        animation-duration: 4s !important;
+        animation-timing-function: ease-in-out !important;
+    }
+
+    /* Better Touch Targets */
+    .story-scene {
+        min-height: 320px !important;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE (≤480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+
+    .story-scene {
+        min-height: 300px !important;
+        border-radius: 16px !important;
+    }
+
+    .scene-visual {
+        height: 180px !important;
+    }
+
+    .scene-content {
+        padding: 20px 16px !important;
+    }
+
+    .scene-content h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .scene-content p {
+        font-size: 0.9rem !important;
+    }
+
+    .warrior-wrapper,
+    .car-wrapper,
+    .family-group {
+        font-size: 3.5rem !important;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Improved Contrast */
+    .scene-content h3 {
+        color: #0F172A !important;
+    }
+
+    .scene-content p {
+        color: #334155 !important;
+    }
+
+    /* GPU acceleration for smooth scrolling */
+    .story-timeline,
+    .story-scene {
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+    }
+}
+
+/* ========================================
+   END CARMAA DIFFERENCE CAROUSEL
+   ======================================== */

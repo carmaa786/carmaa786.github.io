@@ -127,10 +127,16 @@
         .links-main-container {
             gap: 25px;
             flex-wrap: wrap;
+            justify-content: flex-start !important;
         }
 
         .link-section-child {
-            align-items: start;
+            align-items: flex-start !important;
+            text-align: left !important;
+        }
+        
+        .social-media-icons, .google-play-store-icons, .link-section-container {
+            justify-content: flex-start !important;
         }
     }
 
@@ -140,12 +146,48 @@
         }
 
         .links-main-container {
-            gap: 50px;
+            gap: 30px;
             flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
         }
 
         .link-section-child {
-            align-items: start;
+            align-items: flex-start !important;
+            text-align: left !important;
+            width: 100%;
+        }
+
+        .footer-container-div {
+            width: 90%;
+            margin-left: 0 !important;
+            padding-left: 1.5rem !important;
+        }
+        
+        .footer-logo-container {
+            text-align: left !important;
+            margin-left: 0 !important;
+        }
+
+        .link-section-main-container {
+            text-align: left !important;
+            width: 100%;
+        }
+
+        .link-section-container, .social-media-icons, .google-play-store-icons {
+            justify-content: flex-start !important;
+            gap: 15px;
+        }
+
+        .link-section-container {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            flex-wrap: nowrap !important;
+        }
+
+        .follow-us {
+            justify-content: flex-start !important;
         }
     }
 </style>

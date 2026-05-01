@@ -1,0 +1,37 @@
+/* ========================================
+   SERVICES SECTION - MOBILE CENTER ALIGNMENT FIX
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Force center alignment for Our Services section */
+    #services .service-card {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #services .service-card h3 {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #services .service-card p {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #services .icon-box {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #services .service-card {
+        text-align: center !important;
+    }
+}
