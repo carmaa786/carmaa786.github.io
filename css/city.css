@@ -245,10 +245,20 @@ a:hover {
 .third-img {
   background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
 }
+.benefits-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 88%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
 .benefit-right2 {
   position: relative;
-  width: 50% !important;
-  height: 500px !important;
+  width: 50%;
+  height: 500px;
   background-image: url("/images/new-carmaa/carmaa-new4.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -256,9 +266,8 @@ a:hover {
 }
 .city-why-choose {
   justify-content: center;
-  gap: 20rem;
+  gap: 3rem;
   align-items: center;
-  /* padding: 6rem 4rem; */
   padding: 3rem 1rem;
   background-color: #f0f3ff;
 }
@@ -411,13 +420,14 @@ a:hover {
 }
 
 .commitment-quality-left {
-  width: 40%;
+  width: 45%;
 }
 .commitment-quality-right {
-  width: 40%;
+  width: 45%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  overflow: hidden;
 }
 .commitment-quality-right .img-wrapper {
   position: relative;
@@ -1025,9 +1035,9 @@ a:hover {
   }
   .city-why-choose {
     justify-content: center;
-    gap: 20rem;
+    gap: 3rem;
     align-items: center;
-    padding: 6rem 4rem;
+    padding: 4rem 2rem;
     background-color: #f0f3ff;
   }
   .city-why-choose .img-component {
@@ -1125,10 +1135,9 @@ a:hover {
   }
 
   .commitment-quality {
-    padding: 2rem 4rem !important;
-
+    padding: 2rem 2rem !important;
     display: flex;
-    gap: 8rem;
+    gap: 3rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -1151,15 +1160,16 @@ a:hover {
   }
 
   .commitment-quality-left {
-    width: 40%;
-    max-width: 800px;
+    width: 45%;
+    max-width: 600px;
   }
   .commitment-quality-right {
-    width: 40%;
-    max-width: 800px;
+    width: 45%;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    overflow: hidden;
   }
   .commitment-quality-right .img-wrapper {
     position: relative;
@@ -1244,8 +1254,8 @@ a:hover {
     flex-direction: row !important;
   }
   .benefit-left {
-    width: 50% !important;
-    max-width: 500px !important;
+    width: 45% !important;
+    flex: 1;
   }
   .benefit-width {
     width: 100% !important;
@@ -1511,3 +1521,127 @@ a:hover {
     min-height: 16rem;
   }
 }
+
+/* ==========================================================================
+   SURGICAL REFACTOR: LOCATION PAGE STRUCTURAL FIXES (v2 - clean)
+   ========================================================================== */
+
+/* 1. Desktop centering for sections that don't have their own wrapper (≥ 769px) */
+@media screen and (min-width: 769px) {
+    .city-benefits-section {
+        width: 85% !important;
+        max-width: 1400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* 2. Mobile Responsiveness & Vertical Stacking (≤ 768px) */
+@media screen and (max-width: 768px) {
+    /* Benefits Section - stack image above text */
+    .benefits-section {
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 2rem 1rem !important;
+        margin: 0 !important;
+    }
+    .benefit-left,
+    .benefit-right2 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .benefit-right2 {
+        height: 280px !important;
+        min-height: 280px !important;
+    }
+
+    /* Commitment quality - stack left and right */
+    .commitment-quality {
+        flex-direction: column !important;
+        padding: 2rem 1rem !important;
+        gap: 1.5rem !important;
+    }
+    .commitment-quality-left,
+    .commitment-quality-right {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .commitment-quality-right {
+        flex-direction: column !important;
+    }
+    .commitment-quality-right .img-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* City why choose - already column on mobile via earlier rules, just ensure padding */
+    .city-why-choose {
+        padding: 2rem 1rem !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Benefits section within our-service-main-section */
+    .city-benefits-section {
+        width: 95% !important;
+        margin: 0 auto !important;
+        padding: 1.5rem 0 !important;
+    }
+
+    /* City call to action */
+    .city-call-to-action-btn {
+        padding: 2rem 1rem !important;
+        margin-top: 1rem !important;
+    }
+    .city-call-to-action-wrapper {
+        flex-direction: column !important;
+        width: 95% !important;
+        gap: 1.5rem !important;
+    }
+    .city-call-to-action-left,
+    .city-call-to-action-right {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .city-call-to-action-left img {
+        position: static !important;
+        bottom: auto !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* 3. Hover Overlay Constraints — prevent white outlines from escaping parent bounds */
+.commitment-quality-right .img-wrapper {
+    overflow: hidden !important;
+    position: relative !important;
+}
+.commitment-quality-right .img-wrapper img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+.commitment-quality-right .img-wrapper .overlay-text {
+    z-index: 4 !important;
+    pointer-events: none !important;
+}
+/* Constrain any pseudo-element overlays on icon wrappers */
+.city-benefit-element-img-wrapper,
+.city-benefit-element-img-wrapper2 {
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* 4. Image Aspect Ratio Stability — prevent squashed images site-wide on city pages */
+.our-services-section-city-left img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+.city-call-to-action-left img {
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+
