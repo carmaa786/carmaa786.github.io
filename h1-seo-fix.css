@@ -1,0 +1,9 @@
+/* SEO H1 Fix - Ensures correct scaling and gradient for the highlight span in the hero section */
+.hero h1 .highlight {
+    font-size: inherit !important;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block; /* Required for some gradient text behaviors */
+}
