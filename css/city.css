@@ -46,12 +46,18 @@ a:hover {
   gap: 2rem;
 }
 .city-benefit-element {
-  padding: 1rem;
+  padding: 2.5rem; /* More padding */
   width: 46%;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #01628f;
-  box-shadow: 5px 5px 5px hsl(0, 50%, 2%, 0.5);
+  border-radius: 20px; /* Softer corners */
+  border: 1px solid rgba(11, 76, 157, 0.1);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Modern soft shadow */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.city-benefit-element:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(11, 76, 157, 0.15);
+  border-color: #28b097;
 }
 .city-benefit-element-img-wrapper {
   width: 4.5rem;
@@ -209,11 +215,12 @@ a:hover {
 .city-header-section p {
   color: white;
   position: relative;
-  font-size: 2.2rem;
+  font-size: 2.8rem; /* Increased size for impact */
   font-family: var(--font);
-  line-height: 2;
-  font-weight: 700;
+  line-height: 1.2;
+  font-weight: 800;
   z-index: 2;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Better readability */
 }
 .city-header-section::before {
   content: "";
@@ -570,18 +577,21 @@ a:hover {
   background-color: #0b4c9d;
   cursor: pointer;
   justify-content: center;
-  font-size: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  box-shadow: 10px 10px 10px hsl(0, 50%, 2%, 0.5);
-  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1.2rem 3.5rem;
+  box-shadow: 0 10px 20px rgba(11, 76, 157, 0.3);
+  border-radius: 50px; /* Pill shape */
   color: #ffffff;
-  border: 1px solid #fff;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .city-call-to-action-btn-component:hover {
   background-color: #28b097;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(40, 176, 151, 0.4);
 }
 
 .city-benefit-element {
@@ -1791,4 +1801,171 @@ a:hover {
     .commitment-quality-right .img-wrapper img {
         height: auto;
     }
+}
+
+/* ==========================================================================
+   Redesign 2026 - Modern Structure Support
+   ========================================================================== */
+
+/* Hero Redesign */
+.header-content-wrapper {
+    position: relative;
+    z-index: 5;
+    max-width: 800px;
+    padding: 0 15px; /* Added side padding for mobile */
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.trust-badge {
+    background: #28b097; /* Carmaa Teal */
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.header-sub-text {
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+    opacity: 0.9;
+    margin-bottom: 30px !important;
+}
+
+.header-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-main {
+    background: #0b4c9d;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative; /* Ensure it respects z-index */
+    z-index: 10; /* High z-index to be on top of overlays */
+    pointer-events: auto; /* Force interactivity */
+}
+
+.btn-main:hover {
+    background: #083a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.header-call {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Stronger shadow */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-call span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.header-call a {
+    color: #fff;
+    background: #28b097;
+    padding: 12px 25px; /* Slightly larger */
+    border-radius: 50px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(40, 176, 151, 0.4);
+    border: 2px solid #28b097;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+.header-call a:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px; /* Maximize spacing */
+    align-items: center;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.why-choose-left {
+    padding-right: 40px;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px; /* Increased gap */
+    margin-top: 40px; /* More breathing room */
+}
+
+.why-choose-right img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Section Spacing */
+.city-why-choose, .city-benefits-section, .commitment-quality, .our-service-main-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+@media (max-width: 992px) {
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 90%;
+        padding: 40px 0;
+    }
+    .why-choose-left {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 20px; /* Space between text and image */
+    }
+    .why-choose-right img {
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+    .points-grid {
+        justify-items: center;
+        gap: 15px;
+    }
+    .header-cta-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .header-call {
+        margin-top: 5px;
+    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
