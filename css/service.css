@@ -56,6 +56,11 @@ a:hover {
 }
 .service-left-section img {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 .service-heading {
   font-size: 2rem;

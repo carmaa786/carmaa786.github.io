@@ -21,7 +21,7 @@
   left: 0;
   width: 100%; /* Cover full width */
   height: 100%; /* Cover full height */
-  background: white url("/images/loader.gif") no-repeat center center;
+  background: white url("/assets/loader.gif") no-repeat center center;
   background-size: 210px 400px;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.9);
@@ -133,7 +133,7 @@ a:hover {
   width: 100%;
   background-position: left top;
   background-size: cover;
-  background-image: url("../images/header-img.jpg");
+  background-image: url("../assets/header-img.jpg");
 }
 .city-header-section p, 
 .city-header-section h1,

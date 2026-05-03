@@ -210,7 +210,7 @@ a:hover {
   width: 100%;
   background-position: left top;
   background-size: cover;
-  background-image: url("../images/header-img.jpg");
+  background-image: url("../assets/header-img.jpg");
 }
 .city-header-section p {
   color: white;
@@ -250,7 +250,7 @@ a:hover {
   height: 1rem;
 }
 .third-img {
-  background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
+  background-image: url("/assets/new-carmaa/carmaa-new4.png") !important;
 }
 .benefits-section {
   display: flex;
@@ -266,7 +266,7 @@ a:hover {
   position: relative;
   width: 50%;
   height: 500px;
-  background-image: url("/images/new-carmaa/carmaa-new4.png");
+  background-image: url("/assets/new-carmaa/carmaa-new4.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -322,7 +322,7 @@ a:hover {
 }
 
 .our-service-main-section {
-  background-image: linear-gradient(rgba(11, 76, 157, 0.9), rgba(11, 76, 157, 0.9)), url(../images/aboutus/textture-bg.png);
+  background-image: linear-gradient(rgba(11, 76, 157, 0.9), rgba(11, 76, 157, 0.9)), url(../assets/aboutus/textture-bg.png);
   background-color: #0b4c9d;
   background-blend-mode: overlay;
   padding: 1rem 1rem 2rem 1rem;
@@ -475,7 +475,7 @@ a:hover {
 }
 
 .parallex-cta-city {
-  background-image: url("../images/home-page/cta/cta-bg.jpg");
+  background-image: url("../assets/home-page/cta/cta-bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
@@ -717,7 +717,7 @@ a:hover {
     width: 100%;
   }
   .third-img {
-    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
+    background-image: url("/assets/new-carmaa/carmaa-new4.png") !important;
   }
   .city-why-choose .city-description {
     display: flex;
@@ -777,7 +777,7 @@ a:hover {
   .benefit-right2 {
     position: relative;
     width: 100% !important;
-    background-image: url("/images/new-carmaa/carmaa-new4.png");
+    background-image: url("/assets/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1010,7 +1010,7 @@ a:hover {
     width: 100%;
     background-position: left top;
     background-size: cover;
-    background-image: url("../images/header-img.jpg");
+    background-image: url("../assets/header-img.jpg");
   }
   .city-header-section p {
     color: white;
@@ -1049,13 +1049,13 @@ a:hover {
     height: 1rem;
   }
   .third-img {
-    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
+    background-image: url("/assets/new-carmaa/carmaa-new4.png") !important;
   }
   .benefit-right2 {
     position: relative;
     width: 50% !important;
     height: 500px !important;
-    background-image: url("/images/new-carmaa/carmaa-new4.png");
+    background-image: url("/assets/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1220,7 +1220,7 @@ a:hover {
   }
 
   .parallex-cta-city {
-    background-image: url("../images/home-page/cta/cta-bg.jpg");
+    background-image: url("../assets/home-page/cta/cta-bg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -1304,7 +1304,7 @@ a:hover {
     width: 43%;
     max-width: 500px !important;
     height: 800px;
-    background-image: url("/images/new-carmaa/carmaa-new4.png");
+    background-image: url("/assets/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1321,7 +1321,7 @@ a:hover {
     width: 100%;
     background-position: left top;
     background-size: cover;
-    background-image: url("../images/header-img.jpg");
+    background-image: url("../assets/header-img.jpg");
   }
   .city-header-section p {
     color: white;
@@ -1360,13 +1360,13 @@ a:hover {
     height: 1rem;
   }
   .third-img {
-    background-image: url("/images/new-carmaa/carmaa-new4.png") !important;
+    background-image: url("/assets/new-carmaa/carmaa-new4.png") !important;
   }
   .benefit-right2 {
     position: relative;
     width: 50% !important;
     height: 500px !important;
-    background-image: url("/images/new-carmaa/carmaa-new4.png");
+    background-image: url("/assets/new-carmaa/carmaa-new4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
