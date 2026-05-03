@@ -28,6 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const appUrl = APP_STORE_URLS[deviceType];
 
 
+    // Lazy load hero video after LCP
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const video = document.getElementById('heroVideo');
+            if (video) {
+                const source = document.createElement('source');
+                source.src = 'assets/hero_video.mp4';
+                source.type = 'video/mp4';
+                video.appendChild(source);
+                video.load();
+                video.play().catch(e => console.log("Autoplay prevented"));
+            }
+        }, 2000); // 2s delay
+    });
+
     // Update all links with class 'app-download-link'
     const appLinks = document.querySelectorAll('.app-download-link');
     appLinks.forEach(link => {
@@ -74,35 +89,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
+    let ticking = false;
 
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add scrolled class for styling
-        if (currentScroll > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                lastScroll = currentScroll;
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        lastScroll = currentScroll;
-    });
+    }, { passive: true });
 
     // Parallax effect for hero section
     const hero = document.querySelector('.hero');
     const heroContent = document.querySelector('.hero-content');
+    let heroTicking = false;
 
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.5;
+        if (!heroTicking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                const parallaxSpeed = 0.5;
 
-        if (hero && scrolled < hero.offsetHeight) {
-            if (heroContent) {
-                heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-                heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.8;
-            }
+                if (hero && scrolled < hero.offsetHeight) {
+                    if (heroContent) {
+                        heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+                        heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.8;
+                    }
+                }
+                heroTicking = false;
+            });
+            heroTicking = true;
         }
-    });
+    }, { passive: true });
 
     // Footer reveal animation
     const footer = document.querySelector('.footer-new');
