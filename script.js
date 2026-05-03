@@ -28,19 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const appUrl = APP_STORE_URLS[deviceType];
 
 
-    // Lazy load hero video after LCP
+    // Optimized Hero Video Loading for LCP
     window.addEventListener('load', () => {
-        setTimeout(() => {
+        const loadVideo = () => {
             const video = document.getElementById('heroVideo');
-            if (video) {
+            if (video && !video.querySelector('source')) {
                 const source = document.createElement('source');
-                source.src = 'assets/hero_video.mp4';
+                source.src = 'assets/doorstep_arrival.mp4';
                 source.type = 'video/mp4';
                 video.appendChild(source);
                 video.load();
-                video.play().catch(e => console.log("Autoplay prevented"));
+                video.play().catch(e => console.log("Hero video autoplay delayed"));
             }
-        }, 2000); // 2s delay
+        };
+        
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => setTimeout(loadVideo, 2000));
+        } else {
+            setTimeout(loadVideo, 3000);
+        }
     });
 
     // Update all links with class 'app-download-link'
