@@ -137,33 +137,68 @@ button,
    HERO SECTION MOBILE
    ======================================== */
 
-@media (max-width: 768px) {
+    /* Hero Section Mobile - Enforcing Perfect Typography */
     .hero {
         min-height: 100vh;
         height: auto;
         padding: 100px 0 60px;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .hero-content {
         padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 2.4rem !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+
+    .hero p {
+        font-size: 1.05rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 30px !important;
+        padding: 0 10px;
+        text-align: center !important;
+        color: rgba(255, 255, 255, 0.95) !important;
     }
 
     .hero .cta-group {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
         gap: 12px !important;
-        padding: 0 20px !important;
     }
 
     .hero .cta-group .btn {
         width: 100% !important;
         margin: 0 !important;
+        justify-content: center !important;
     }
 
-    /* Video background optimization */
-    .hero-bg video {
-        object-position: center;
+    /* Enforce Oswald for all Section Headers */
+    .section-header h2,
+    #story h2,
+    #services h2,
+    #refer h2,
+    #how-it-works h2,
+    #reviews h2,
+    .cta-content h2 {
+        font-family: 'Oswald', sans-serif !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
     }
 }
 
@@ -192,64 +227,44 @@ button,
 
 @media (max-width: 768px) {
 
-    /* Service Cards - Professional Vertical Stack */
+    /* Service Cards - Balanced Layout */
     #services .services-grid, 
     .promises-grid, 
     .steps-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
         gap: 20px !important;
         padding: 10px 0 !important;
     }
 
-    /* Individual Service Cards in Vertical Layout */
+    /* Individual Service Cards - Centered & Professional */
     #services .service-card,
     .promise-card,
     .step-card {
         width: 100% !important;
         max-width: 100% !important;
-        min-width: 0 !important;
         padding: 32px 24px;
-        text-align: center !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
         background: var(--surface);
         border-radius: 24px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
     }
 
-    /* Scoped Icon Scaling */
-    .service-card i, 
-    .promise-card i, 
-    .stat-icon i,
-    .faq-question i {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Center all content within service cards */
+    /* Centered Text within Cards */
     .service-card h3,
     .service-card p,
     .promise-card h3,
     .promise-card p {
         text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
         width: 100%;
     }
 
-    /* Icon boxes centered */
+    /* Icon box centering */
     .icon-box {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
+        margin: 0 auto 20px !important;
     }
 }
 
@@ -321,24 +336,37 @@ button,
 
 @media (max-width: 768px) {
     .infographic-stats {
-        flex-direction: column;
-        gap: 30px;
-        padding: 30px 20px;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 30px 20px !important;
+        padding: 30px 15px !important;
         margin-top: 40px;
     }
 
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat-item:last-child {
+        grid-column: span 2;
+    }
+
     .stat-item h3 {
-        font-size: 2.2rem;
+        font-size: 1.8rem !important;
     }
 
     .stat-item p {
-        font-size: 1rem;
+        font-size: 0.9rem !important;
     }
 
     .stat-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2.2rem;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.8rem !important;
+        margin-bottom: 12px;
     }
 }
 
@@ -556,9 +584,8 @@ button,
         padding: 0 15px;
     }
 
-    /* Footer Stacking Fix */
+    /* Footer Stacking Fix - Left Aligned */
     .footer-container, 
-    .link-section-container,
     .social-media-icons,
     .follow-us {
         display: flex !important;
@@ -569,11 +596,25 @@ button,
         text-align: left !important;
     }
 
+    .link-section-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+
     .footer-column, 
     .link-section-child,
     .support-email-container {
         width: 100% !important;
         margin-bottom: 20px !important;
+        text-align: left !important;
+    }
+
+    .footer-logo-container {
+        text-align: left !important;
+        margin: 0 0 20px 0 !important;
     }
 
     /* FAQ Question Fix */

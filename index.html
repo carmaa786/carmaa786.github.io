@@ -65,14 +65,12 @@
     <link rel="stylesheet" href="mobile-optimizations.css">
     <link rel="stylesheet" href="story-mobile-enhanced.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="carmaa-difference-carousel.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="services-center-fix.css">
     <link rel="stylesheet" href="promises-carousel.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="how-it-works-carousel.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="professional-animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="stats-carousel.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="car-journey.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="scroll-animations.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="h1-seo-fix.css">
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,8 +311,8 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" fetchpriority="high" preload="metadata" width="1920" height="1080">
-                <source src="assets/doorstep_arrival.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" fetchpriority="high" preload="metadata" width="1920" height="1080" id="heroVideo">
+                <!-- Video source loaded via script.js to optimize LCP -->
             </video>
             <div class="overlay"></div>
         </div>
