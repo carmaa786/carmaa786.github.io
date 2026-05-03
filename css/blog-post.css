@@ -168,3 +168,14 @@
 }
 
 
+
+/* Fix for internal blog images to prevent bad cropping */
+.blog-main-content img,
+.service-left-section img {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
