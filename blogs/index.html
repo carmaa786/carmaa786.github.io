@@ -8,9 +8,9 @@
   <title>Blogs</title>
   <!-- <link rel="stylesheet" href="/css/pricing.css" /> -->
   <!-- <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css"> -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
   <!-- <link
       href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/service.css" />
   
-  <link rel="stylesheet" href="/blogs/blogs.css" />
+  <link rel="stylesheet" href="/css/blog-v2.css" />
 
   <style>
     * {
@@ -108,7 +108,7 @@
         z-index: 99999999;
       " class="whatsapp-icon-container">
     <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-      <img style="height: 100%; width: 100%" src="/images/whatsapp.png" alt="waterless car wash in Dehradun"
+      <img style="height: 100%; width: 100%" src="/assets/whatsapp.png" alt="waterless car wash in Dehradun"
         loading="lazy" />
     </a>
   </div>
@@ -123,22 +123,22 @@
         <div class="social-media-icons">
           <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
             <div class="img-wrapper">
-              <img src="/images/contactus/facebook.png" alt="mobile mechanic near me" loading="lazy" />
+              <img src="/assets/contactus/facebook.png" alt="mobile mechanic near me" loading="lazy" />
             </div>
           </a>
           <a href="https://www.instagram.com/carmaa_official" loading="lazy" target="_blank">
             <div class="img-wrapper">
-              <img src="/images/contactus/instagram.png" alt="car workshop near me" loading="lazy" />
+              <img src="/assets/contactus/instagram.png" alt="car workshop near me" loading="lazy" />
             </div>
           </a>
           <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
             <div class="img-wrapper">
-              <img src="/images/contactus/youtube.png" alt="car body shop repair near me" loading="lazy" />
+              <img src="/assets/contactus/youtube.png" alt="car body shop repair near me" loading="lazy" />
             </div>
           </a>
           <a href="/blogs/">
             <div class="img-wrapper">
-              <img src="/images/home-page/topbar/blogger.png" alt="auto workshop near me" loading="lazy" />
+              <img src="/assets/home-page/topbar/blogger.png" alt="auto workshop near me" loading="lazy" />
             </div>
           </a>
         </div>
@@ -156,7 +156,7 @@
         <div style="display: flex; flex-direction: column; align-items: center">
           <div style="display: flex; align-items: center; gap: 0.3rem">
             <img style="width: 1.5rem; height: 1.5rem" alt="Interior Car Cleaning Service"
-              src="/images/home-page/topbar/phone.png" loading="lazy" />
+              src="/assets/home-page/topbar/phone.png" loading="lazy" />
             <a class="mobile-number-ref" href="tel:+917042555401">
               <p>+91 70425 55401</p>
             </a>
@@ -196,722 +196,508 @@
       </div>
     </header>
 
-    <main class="blog-container">
-      <div class="blog-header-main-container">
-        <div class="blog-header-container" id="blog-navbar-underline">
-          <div class="blog-icons-container">
-            <img src="/images/ui_change_images/foam_wash.png" alt="Car Cleaning" loading="lazy" />
-          </div>
-          <p class="blog-heading-para">Car Cleaning</p>
-        </div>
+            <main class="carmaa-blog-system-v2">
+        <section class="section-padding">
+            <div class="container">
+                <div class="blog-filter-tabs" id="blogFilterTabs">
+                    <div class="filter-tab active" data-filter="all">All Articles</div>
+                    <div class="filter-tab" data-filter="car-cleaning">Car Cleaning</div>
+                    <div class="filter-tab" data-filter="car-decor-detailing">Car Decor & Detailing</div>
+                    <div class="filter-tab" data-filter="education-maintenance">Education & Maintenance</div>
+                    <div class="filter-tab" data-filter="sustainability-impact">Sustainability & Impact</div>
+                    <div class="filter-tab" data-filter="local-guides">Local Guides</div>
+                    <div class="filter-tab" data-filter="industry-news">Industry News</div>
+                    <div class="filter-tab" data-filter="other-services">Other Services</div>
+                </div>
 
-        <div class="blog-header-container" id="blog-navbar-underline">
-          <div class="blog-icons-container">
-            <img src="/images/car-decor/car-decor-home-img.png" alt="Car Decor" loading="lazy" />
-          </div>
-          <p class="blog-heading-para">Car Decor</p>
-        </div>
+                <div class="blog-grid" id="blogGrid">
+                    <a href="./is-waterless-truly-scratch-free/" class="blog-card" data-category="education-maintenance">
+                        <div class="blog-card-img"><img src="/assets/blogs/waterless-car-care-blog.jpg" alt="Is Waterless Truly Scratch-Free? We Put Our Lab-Tested Lubricants to the Test." width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Education & Maintenance</span>
+                            <h3>Is Waterless Truly Scratch-Free? We Put Our Lab-Tested Lubricants to the Test.</h3>
+                            <p>Is waterless Truly scratch-free? We put our lab-tested lubricants to the test to see if waterless is truly safe for your car's paint.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">3rd May, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./b2b-fleet-car-washing-in-dehradun/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/carmaa-city-reach.png" alt="The Ultimate Guide to B2B Fleet Car Washing Services in Dehradun" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>The Ultimate Guide to B2B Fleet Car Washing Services in Dehradun</h3>
+                            <p>Discover why local enterprises in Dehradun rely on CarMaa's enterprise doorstep car washing services to maintain their commercial fleets.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./can-car-wash-chemicals-damage-ceramic-coating/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/chemicals_vs_ceramic.png" alt="Chemical Safety: Can Car Wash Chemicals Damage Ceramic Coating?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Chemical Safety: Can Car Wash Chemicals Damage Ceramic Coating?</h3>
+                            <p>You invested in a ceramic coating, but are you washing it wrong? Learn how harsh chemicals at local washes can strip away your expensive protection.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./can-carmaa-wash-car-in-apartment-basement-parking/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/basement-parking-logistics.png" alt="Can  Wash Your Car in Basement Parking? | Logistics Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Can  Wash Your Car in Basement Parking? | Logistics Guide</h3>
+                            <p>Wondering if a professional car wash works in tight basement parking? Learn how Carmaa's low-moisture technology is perfect for Dehradun's apartment complexes.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./car-maintenance-doorstep-services/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/the-future-of-car-maintenance-with-doorstep-services.jpg" alt="The Future Of Car Maintenance With Doorstep Services" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>The Future Of Car Maintenance With Doorstep Services</h3>
+                            <p> Carmaa! Save time and enjoy professional Car care with Doorstep car washing service, Doorstep car cleaning solutions, Doorstep car detailing services, etc.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./carmaa-creating-employment-opportunities-dehradun/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/employment-impact-v2.png" alt="Creating Employment in Dehradun | Our Community Impact" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>Creating Employment in Dehradun | Our Community Impact</h3>
+                            <p>Carmaa is more than just a car wash. Discover how we are creating professional careers and empowering local youth in Dehradun through training and fair employment.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./carmaa-operational-cities-reach/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/carmaa-city-reach.png" alt="Where Does  Operate? Our Growing City Reach in India" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Where Does  Operate? Our Growing City Reach in India</h3>
+                            <p>Looking for the best doorstep car wash in your city? Discover the operational areas of Carmaa Car Care, including Dehradun, Gurgaon, and Noida.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./ceramic-coating-worth-it-india/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/ceramic-coating-benefits.png" alt="Is Ceramic Coating Worth It in India? | Costs, Benefits & Durability" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Is Ceramic Coating Worth It in India? | Costs, Benefits & Durability</h3>
+                            <p>Considering ceramic coating for your car? Learn how it protects against Indian sun, dust, and rain, and whether it is worth the investment for Indian road conditions.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./cost-comparison-doorstep-vs-local-car-wash/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/cost-comparison.png" alt="Doorstep vs. Local Garage: Which is Better Value? | Cost Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>Doorstep vs. Local Garage: Which is Better Value? | Cost Guide</h3>
+                            <p>Is a doorstep car wash really more expensive? We compare the hidden costs of local garages in Dehradun with the premium value of Carmaa's doorstep service.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./cost-of-full-car-detailing-service-in-dehradun/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/detailing_cost_dehradun.png" alt="Regional Pricing: What's the Cost of a Full Car Detailing Service in Dehradun?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Regional Pricing: What's the Cost of a Full Car Detailing Service in Dehradun?</h3>
+                            <p>Wondering how much a professional car detail costs in Dehradun? We break down the pricing factors and what you should expect to pay for premium services.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./diy-vs-pro-better-to-wash-car-yourself-or-hire-professionals/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/diy_vs_pro_wash.png" alt="DIY vs Pro: Is it Better to Wash Your Car Yourself or Hire Professionals?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>DIY vs Pro: Is it Better to Wash Your Car Yourself or Hire Professionals?</h3>
+                            <p>Should you spend your Sunday washing your car with a bucket, or hire a professional? We compare the pros, cons, and hidden costs of both methods.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-carmaa-saved-water-graphic-era-tbi/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/water-savings.png" alt="How  Saved 3.5 Million Liters of Water | Sustainability in Dehradun" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>How  Saved 3.5 Million Liters of Water | Sustainability in Dehradun</h3>
+                            <p>Discover how Carmaa's waterless car wash technology saved 3.5 million liters of water. Born at Graphic Era TBI, we are leading the sustainability charge in Dehradun.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-long-does-carmaa-car-wash-take/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/wash-time-efficiency.png" alt="How Much Time Does a  Wash Take? | Efficiency Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>How Much Time Does a  Wash Take? | Efficiency Guide</h3>
+                            <p>Time is precious. Learn exactly how long a Carmaa car wash takes, from express exterior cleans to deep interior detailing at your doorstep in Dehradun.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-often-should-i-wash-my-car-india/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/car-wash-frequency-india.png" alt="How Often Should I Wash My Car in India? | Expert Maintenance Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>How Often Should I Wash My Car in India? | Expert Maintenance Guide</h3>
+                            <p>Struggling with Indian dust and pollution? Learn the ideal car wash frequency for Indian roads to protect your paint and maintain your car's resale value.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-to-book-doorstep-car-wash-carmaa/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/booking-process-v2.png" alt="How to Book a Doorstep Car Wash on  | Easy Step-by-Step Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>How to Book a Doorstep Car Wash on  | Easy Step-by-Step Guide</h3>
+                            <p>Booking a professional car wash in Dehradun has never been easier. Follow our simple 3-step guide to get your car cleaned at your home or office with Carmaa.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-to-maintain-your-car-shine/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/maintain-car-shine-dehradun.jpg" alt="how-to-maintain-your-car-shine" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>how-to-maintain-your-car-shine</h3>
+                            <p>Keep your vehicle looking showroom-new. Explore professional secrets for maintaining a long-lasting shine and protecting your car's paint from the elements.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./how-to-wash-your-car-without-a-hose/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/waterless-car-care-blog.jpg" alt="Waterless Car Care: How to Wash Your Car Without a Hose" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>Waterless Car Care: How to Wash Your Car Without a Hose</h3>
+                            <p> Learn effective waterless car wash techniques with our doorstep car wash service. Keep your car spotless with eco-friendly and hassle-free cleaning.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./interior-cleaning-and-hard-water-stains/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/interior_cleaning_hard_water.png" alt="Interior Care & Exterior Woes: Best Way to Clean Your Car Interior & Remove Hard Water Stains" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Interior Care & Exterior Woes: Best Way to Clean Your Car Interior & Remove Hard Water Stains</h3>
+                            <p>Discover the best way to deep clean your car's interior and learn the secret to safely removing those stubborn hard water stains from your paint.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./new-car-protection-why-do-new-cars-need-paint-protection/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/new_car_protection.png" alt="New Car Protection: Why Do New Cars Need Paint Protection?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>New Car Protection: Why Do New Cars Need Paint Protection?</h3>
+                            <p>Just bought a new car? Learn why paint protection is essential to maintain that showroom shine and protect your investment from Day 1.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./paint-protection-ppf-vs-ceramic-coating/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/ppf_vs_ceramic_coating.png" alt="Paint Protection: PPF vs Ceramic Coating - Which Should I Choose?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Paint Protection: PPF vs Ceramic Coating - Which Should I Choose?</h3>
+                            <p>Deciding between Paint Protection Film (PPF) and Ceramic Coating? We explore the pros, cons, and best use cases to help you protect your car's paint effectively.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./protecting-car-paint-delhi-ncr-pollution/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/car_paint_pollution.png" alt="How to Protect Your Car Paint from Delhi/NCR Pollution" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>How to Protect Your Car Paint from Delhi/NCR Pollution</h3>
+                            <p>Delhi's smog and dust don't just affect our lungs; they ruin car paint. Learn actionable steps to shield your car's clear coat from harsh urban pollution.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./protecting-luxury-car-dehradun-monsoon/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/monsoon-protection.png" alt="Protecting Your Luxury Car in Dehradun’s Heavy Monsoon" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Protecting Your Luxury Car in Dehradun’s Heavy Monsoon</h3>
+                            <p>Expert tips on protecting your luxury car from Dehradun's heavy monsoon. Learn about ceramic coating and hydrophobic protection for Doon valley climate.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./rise-of-car-subscription-model/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/rise-car-subscription.jpg" alt="rise-of-car-subscription-model" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>rise-of-car-subscription-model</h3>
+                            <p>Discover the future of vehicle ownership. Learn how car subscription models are changing the game in India and what it means for your next ride.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./science-interior-dry-cleaning-sanitization/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/interior-sanitization.png" alt="The Science of Interior Dry Cleaning and Sanitization" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>The Science of Interior Dry Cleaning and Sanitization</h3>
+                            <p>Learn the science behind professional interior car dry cleaning and sanitization. Discover why deep cleaning is essential for your health and vehicle longevity.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./seasonal-car-care-monsoon-and-summer/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/seasonal_car_care.png" alt="Seasonal Car Care: Monsoon Washing and Hot Summer Tips" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Seasonal Car Care: Monsoon Washing and Hot Summer Tips</h3>
+                            <p>Is it useless to wash your car in the rain? Will washing a hot car ruin the paint? We bust common seasonal car care myths with expert advice.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./service-definitions-car-wash-vs-car-detailing/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/car_wash_vs_detailing.png" alt="Car Wash vs. Car Detailing: What's the Difference?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>Car Wash vs. Car Detailing: What's the Difference?</h3>
+                            <p>Confused about whether you need a basic wash or full detailing? We break down the differences and help you decide the best service for your car.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./the-ultimate-doorstep-car-wash-service-provider-in-dehradun/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/car-wash-in-dehradun.jpg" alt="The Ultimate Doorstep Car Wash Service Provider in Dehradun" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>The Ultimate Doorstep Car Wash Service Provider in Dehradun</h3>
+                            <p>Discover why CarMaa is the leading provider of professional, eco-friendly doorstep car washing in Dehradun, Uttarakhand.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./top-tips-for-exterior-and-interior-car-cleaning/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/banners/BANNER4.jpg" alt="Top Tips for Exterior and Interior Car Cleaning" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>Top Tips for Exterior and Interior Car Cleaning</h3>
+                            <p>Expert advice on keeping your vehicle spotless. Learn the best techniques for professional-grade exterior washing and deep interior cleaning.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./travel-prep-how-to-prepare-your-car-for-long-road-trip/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/road_trip_prep.png" alt="Travel Prep: How to Prepare Your Car for a Long Road Trip" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Travel Prep: How to Prepare Your Car for a Long Road Trip</h3>
+                            <p>Planning a long drive? Ensure your safety and comfort with our comprehensive guide on preparing your car for a long road trip.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./trust-signals-how-to-choose-a-reliable-doorstep-car-wash-service/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/trust_signals.png" alt="Trust Signals: How to Choose a Reliable Doorstep Car Wash Service" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>Trust Signals: How to Choose a Reliable Doorstep Car Wash Service</h3>
+                            <p>Not all doorstep car washes are created equal. Discover the key trust signals to look for when choosing a reliable service for your vehicle.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./ultimate-guide-to-doorstep-car-wash/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/ultimate-guide-doorstep.jpg" alt="The Ultimate Guide to Doorstep Car Wash Car Care" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>The Ultimate Guide to Doorstep Car Wash Car Care</h3>
+                            <p>Everything you need to know about professional mobile car washing services. From the process to the unmatched convenience for busy car owners.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./what-is-included-in-a-professional-car-spa-services/" class="blog-card" data-category="sustainability-impact">
+                        <div class="blog-card-img"><img src="/assets/blogs/professional_car_spa.png" alt="Service Scope: What is Included in a Professional Car Spa Service?" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Sustainability & Impact</span>
+                            <h3>Service Scope: What is Included in a Professional Car Spa Service?</h3>
+                            <p>Discover what a professional car spa service entails. From interior deep cleaning to exterior paint protection, learn how a premium spa rejuvenates your vehicle.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./what-products-does-carmaa-use/" class="blog-card" data-category="local-guides">
+                        <div class="blog-card-img"><img src="/assets/blogs/products-transparency.png" alt="What Products Does  Use? | Transparency Guide" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Local Guides</span>
+                            <h3>What Products Does  Use? | Transparency Guide</h3>
+                            <p>We believe in total transparency. Discover the premium, eco-friendly products Carmaa uses to give your car a showroom shine without damaging the environment.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./why-carmaa-carcare-is-perfect/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/blogs/why-carmaa-perfect.jpg" alt="carcare is Perfect for Car Cleaning Services at Home." width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>carcare is Perfect for Car Cleaning Services at Home.</h3>
+                            <p>Learn why CarMaa's unique approach to vehicle maintenance makes it the perfect choice for high-quality, convenient home car cleaning services.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./why-carmaa-is-becoming-dehradun's-choice/" class="blog-card" data-category="industry-news">
+                        <div class="blog-card-img"><img src="/assets/banners/centrio.jpg" alt="’s Waterless Car Wash Trend at Centrio Mall Dehradun" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Industry News</span>
+                            <h3>’s Waterless Car Wash Trend at Centrio Mall Dehradun</h3>
+                            <p>Join the eco-friendly revolution. See how our waterless car wash technology is trending at Dehradun's Centrio Mall, saving millions of liters of water.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">25th April, 2026</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./doorstep-car-decor-in-dehradun/" class="blog-card" data-category="car-decor-detailing">
+                        <div class="blog-card-img"><img src="/assets/blogs/car-flower-decoration.jpg" alt="Celebrate Every Occasion with Doorstep car decor in Dehradun" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Car Decor & Detailing</span>
+                            <h3>Celebrate Every Occasion with Doorstep car decor in Dehradun</h3>
+                            <p>Carmaa Car flower decor at the Doorstep, Car flower bouquet at the Doorstep, Doorstep car decor in Dehradun, Doorstep car decoration bouquet in Dehradun.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">5th May, 2025</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./dry-cleaning-services-at-your-doorstep/" class="blog-card" data-category="car-cleaning">
+                        <div class="blog-card-img"><img src="/assets/blogs/dry-cleaning-benefits.jpg" alt="Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Car Cleaning</span>
+                            <h3>Top Benefits of Opting for Car Dry Cleaning Services at Your Doorstep</h3>
+                            <p> Watch out Carmaa Car care new blog on Top Rated Doorstep Car Cleaning & Car Wash Service in Noida – Effortless & Affordable.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">5th May, 2025</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./ultimate-guide-to-car-cleaning-2025/" class="blog-card" data-category="education-maintenance">
+                        <div class="blog-card-img"><img src="/assets/blogs/ultimate_car_2025.jpg" alt="The Ultimate Guide to Car Cleaning in 2025: Trends, Tips, and ’s Top Services" width="400" height="225" loading="lazy"></div>
+                        <div class="blog-card-content">
+                            <span class="category-tag">Education & Maintenance</span>
+                            <h3>The Ultimate Guide to Car Cleaning in 2025: Trends, Tips, and ’s Top Services</h3>
+                            <p> Carmaa! Save time and enjoy professional Car care with Doorstep car washing service, Doorstep car cleaning solutions, Doorstep car detailing services, etc.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date">5th May, 2025</span>
+                                <span class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+            </div>
+        </section>
 
-        <div class="blog-header-container" id="blog-navbar-underline">
-          <div class="blog-icons-container">
-            <img src="/images/ui_change_images/car_servicing.png" alt="car workshop near me" loading="lazy" />
-          </div>
-          <p class="blog-heading-para">Other Services</p>
-        </div>
-      </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tabs = document.querySelectorAll('.filter-tab');
+                const cards = document.querySelectorAll('.blog-card');
 
-      <div class="main-container active" id="main-container-one">
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const filter = tab.dataset.filter;
 
-        <a href="./new-car-protection-why-do-new-cars-need-paint-protection/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/new_car_protection.png" alt="New Car Protection"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">New Car Protection: Why Your Brand New Car Needs Paint Protection from Day 1</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">2nd May, 2026</p>
-              <p class="blog-sub-para">Just bought a new car? Learn why paint protection is essential to maintain that showroom shine and protect your investment from Day 1.</p>
-            </div>
-          </div>
-        </a>
+                        // Update tabs
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
 
-        <a href="./trust-signals-how-to-choose-a-reliable-doorstep-car-wash-service/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/trust_signals.png" alt="Trust Signals for Car Wash"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Trust Signals: How to Choose a Reliable Doorstep Car Wash Service</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">2nd May, 2026</p>
-              <p class="blog-sub-para">Not all doorstep car washes are created equal. Discover the key trust signals to look for when choosing a reliable service for your vehicle.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./what-is-included-in-a-professional-car-spa-services/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/professional_car_spa.png" alt="Professional Car Spa Services"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Service Scope: What is Included in a Professional Car Spa Service?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">30th April, 2026</p>
-              <p class="blog-sub-para">Discover what a professional car spa service entails. From interior deep cleaning to exterior paint protection, learn how a premium spa rejuvenates your vehicle.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./service-definitions-car-wash-vs-car-detailing/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/car_wash_vs_detailing.png" alt="Car wash vs detailing"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Car Wash vs. Car Detailing: What's the Difference?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">28th April, 2026</p>
-              <p class="blog-sub-para">Confused about whether you need a basic wash or full detailing? We break down the differences and help you decide the best service for your car.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./paint-protection-ppf-vs-ceramic-coating/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/ppf_vs_ceramic_coating.png" alt="PPF vs Ceramic Coating"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Paint Protection: PPF vs Ceramic Coating - Which Should I Choose?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">29th April, 2026</p>
-              <p class="blog-sub-para">Deciding between Paint Protection Film (PPF) and Ceramic Coating? We explore the pros, cons, and best use cases to help you protect your car's paint effectively.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./travel-prep-how-to-prepare-your-car-for-long-road-trip/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/road_trip_prep.png" alt="Road Trip Car Prep"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Travel Prep: How to Prepare Your Car for a Long Road Trip</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">29th April, 2026</p>
-              <p class="blog-sub-para">Planning a long drive? Ensure your safety and comfort with our comprehensive guide on preparing your car for a long road trip.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./cost-of-full-car-detailing-service-in-dehradun/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/detailing_cost_dehradun.png" alt="Detailing Cost in Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Regional Pricing: What's the Cost of a Full Car Detailing Service in Dehradun?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">29th April, 2026</p>
-              <p class="blog-sub-para">Wondering how much a professional car detail costs in Dehradun? We break down the pricing factors and what you should expect to pay for premium services.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./can-car-wash-chemicals-damage-ceramic-coating/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/chemicals_vs_ceramic.png" alt="Chemicals vs Ceramic Coating"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Chemical Safety: Can Car Wash Chemicals Damage Ceramic Coating?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">29th April, 2026</p>
-              <p class="blog-sub-para">You invested in a ceramic coating, but are you washing it wrong? Learn how harsh chemicals at local washes can strip away your expensive protection.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./diy-vs-pro-better-to-wash-car-yourself-or-hire-professionals/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/diy_vs_pro_wash.png" alt="DIY vs Professional Car Wash"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">DIY vs Pro: Is it Better to Wash Your Car Yourself or Hire Professionals?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">29th April, 2026</p>
-              <p class="blog-sub-para">Should you spend your Sunday washing your car with a bucket, or hire a professional? We compare the pros, cons, and hidden costs of both methods.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./protecting-car-paint-delhi-ncr-pollution/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/car_paint_pollution.png" alt="Car paint protection from pollution"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Protecting Car Paint from Delhi/NCR Pollution</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">28th April, 2026</p>
-              <p class="blog-sub-para">Learn how smog, dust, and acid rain impact your car's clear coat in the NCR region, and discover actionable tips to protect your paint.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./seasonal-car-care-monsoon-and-summer/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/seasonal_car_care.png" alt="Seasonal car care"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Seasonal Car Care: Monsoon Washing & Summer Myths</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">28th April, 2026</p>
-              <p class="blog-sub-para">Is it safe to wash a hot car in summer? Should you avoid washing in the monsoon? We bust seasonal car care myths with expert advice.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./interior-cleaning-and-hard-water-stains/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/interior_cleaning_hard_water.png" alt="Interior cleaning and hard water stains"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Deep Cleaning Interiors & Banishing Hard Water Stains</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">28th April, 2026</p>
-              <p class="blog-sub-para">Discover the best way to deep clean your car's interior cabin and the secret to safely removing those stubborn hard water spots from your paint.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./carmaa-operational-cities-reach/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/carmaa-city-reach.png" alt="Carmaa operational cities reach"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Where Does Carmaa Operate?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">27th April, 2026</p>
-              <p class="blog-sub-para">Discover the growing footprint of Carmaa Car Care as we bring premium doorstep detailing to more cities across India, including Dehradun, Gurgaon, and Noida.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-often-should-i-wash-my-car-india/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/car-wash-frequency-india.png" alt="Car wash frequency in India"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">How Often Should I Wash My Car in India?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">27th April, 2026</p>
-              <p class="blog-sub-para">Struggling with Indian dust and pollution? Learn the ideal car wash frequency for Indian roads to protect your paint and maintain your car's resale value.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./ceramic-coating-worth-it-india/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/ceramic-coating-benefits.png" alt="Ceramic coating benefits India"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Is Ceramic Coating Worth It for Indian Roads?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">27th April, 2026</p>
-              <p class="blog-sub-para">We explore the 9H hardness, hydrophobic benefits, and durability of ceramic coating under harsh Indian road conditions and whether it's worth your investment.</p>
-            </div>
-          </div>
-        </a>
-
-
-        <a href="./what-products-does-carmaa-use/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/products-transparency.png" alt="Premium car detailing products"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">What Products Does Carmaa Use?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">A transparent look at the world-class, eco-friendly chemicals and tools we bring to your doorstep to ensure your car's safety.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-to-book-doorstep-car-wash-carmaa/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/booking-process-v2.png" alt="How to book on Carmaa Car Care"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">How Do I Book on Carmaa Car Care?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">Booking a professional doorstep shine through the Carmaa Car Care platform is faster than you think. Follow our definitive 3-step guide.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./cost-comparison-doorstep-vs-local-car-wash/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/cost-comparison.png" alt="Cost comparison car wash Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Doorstep vs. Local Garage: Which is Better Value?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">Is doorstep detailing actually more expensive? We break down the hidden costs of local garages and why Carmaa offers superior value.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./carmaa-creating-employment-opportunities-dehradun/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/employment-impact-v2.png" alt="Creating employment in Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Beyond the Shine: Creating Professional Careers</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">Discover how Carmaa is empowering local youth in Dehradun through technical training, fair wages, and professional growth.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./can-carmaa-wash-car-in-apartment-basement-parking/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/basement-parking-logistics.png" alt="Basement car wash Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Can Carmaa Wash Your Car in Basement Parking?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">We break down the logistics of doorstep cleaning in tight apartment basements and why our tech is perfect for Dehradun's complexes.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-long-does-carmaa-car-wash-take/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/wash-time-efficiency.png" alt="Car wash efficiency Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">How Much Time Does a Carmaa Wash Actually Take?</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th April, 2026</p>
-              <p class="blog-sub-para">An honest look at the time required for a professional doorstep detail versus traditional washing, and how we save you hours.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-carmaa-saved-water-graphic-era-tbi/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/water-savings.png" alt="Water savings impact Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">How Carmaa Saved 3.5 Million Liters of Water</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">20th April, 2026</p>
-              <p class="blog-sub-para">Discover how our incubation at Graphic Era TBI led to a revolution in waterless car care, saving millions of liters for Dehradun.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./protecting-luxury-car-dehradun-monsoon/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/monsoon-protection.png" alt="Ceramic coating Dehradun monsoon"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">Protecting Your Luxury Car from Dehradun’s Monsoon</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">20th April, 2026</p>
-              <p class="blog-sub-para">Heavy rains don't have to ruin your luxury vehicle. Learn how advanced ceramic coating provides the ultimate hydrophobic shield.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./science-interior-dry-cleaning-sanitization/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/interior-sanitization.png" alt="Interior dry cleaning Dehradun"
-                loading="lazy" />
-              <h2 class="blog-overlay-title">The Science of Interior Dry Cleaning</h2>
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">20th April, 2026</p>
-              <p class="blog-sub-para">We explore the health-first science behind deep interior sanitization and why professional dry cleaning is a must for your family.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./the-ultimate-doorstep-car-wash-service-provider-in-dehradun/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/car-wash-in-dehradun.jpg" alt="Car Cleaning Services at Home"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">26th November, 2024</p>
-
-              <h2 class="blog-sub-heading">
-                The Ultimate Doorstep Car Wash Service Provider in Dehradun
-              </h2>
-              <p class="blog-sub-para">
-                Keeping a car clean and well-maintained can be a challenge,
-                especially with the busy pace of life. If you're on the
-                lookout for the top Doorstep Car Wash service provider in
-                Dehradun.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./top-tips-for-exterior-and-interior-car-cleaning/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/banners/BANNER4.jpg" alt="Car Cleaning Services at Home"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">26th November, 2024</p>
-              <h2 class="blog-sub-heading">
-                Top Tips for Exterior and Interior Car Cleaning: Prepare Your
-                Car for Winter
-              </h2>
-              <p class="blog-sub-para">
-                Get your car winter-ready with key tips for exterior and
-                interior cleaning. Keep your vehicle protected and in great
-                condition throughout the cold season.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-to-wash-your-car-without-a-hose/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/waterless-car-car- carma- blog.jpg" alt="Deep Cleaning Service"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">10th December, 2024</p>
-              <h2 class="blog-sub-heading">
-                How to Clean Your Car Without Using a Hose or Running Water
-              </h2>
-              <p class="blog-sub-para">
-                Learn effective waterless car wash techniques with our
-                doorstep car wash service. Keep your car spotless with
-                eco-friendly and hassle-free cleaning. .
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./ultimate-guide-to-doorstep-car-wash">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/ultimate-guide-doorstep.jpg"
-                alt="Doorstep Car Cleaning Service" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">12th February, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                The Ultimate Guide to Doorstep Car Wash: The Process and Its
-                Unmatched Convenience
-              </h2>
-              <p class="blog-sub-para">
-                Doorstep Car Wash, Doorstep Car Wash service, professional car
-                cleaning.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./why-carmaa-carcare-is-perfect/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/why-carmaa-perfect.jpg" alt="Interior Car Cleaning Service"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">12th February, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                Discover Why Carmaa carcare is Perfect for Car Cleaning
-                Services at Home.
-              </h2>
-              <p class="blog-sub-para">
-                Car Cleaning Services at Home, Doorstep Car Cleaning Service,
-                Deep Cleaning Service, Interior Car Cleaning Service, Exterior
-                Car Cleaning Service.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./ultimate-guide-to-car-cleaning-2025">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/car-cleaning-2025.jpg" alt="Premium Exterior Car Cleaning"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">28th March, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                The Ultimate Guide to Car Cleaning in 2025: Trends, Tips, and
-                Carmaa’s Top
-              </h2>
-              <p class="blog-sub-para">
-                The car cleaning industry in 2025 is defined by a shift toward
-                convenience, sustainability, and technological innovation.
-                Modern car owners increasingly demand eco-friendly and
-                efficient solutions that deliver professional results right at
-                their doorstep.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./dry-cleaning-services-at-your-doorstep/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/dry-cleaning-benefits.jpg" alt="Car-service" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">13th May, 2025</p>
-              <h2 class="blog-sub-heading">
-                Top Benefits of Opting for Car Dry Cleaning Services at Your
-                Doorstep
-              </h2>
-              <p class="blog-sub-para">
-                In today’s fast-paced world, finding time for vehicle
-                maintenance has become increasingly difficult. With busy
-                schedules and endless commitments, car owners often struggle
-                to fit in a visit to the car wash.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./why-carmaa-is-becoming-dehradun's-choice">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/banners/centrio3.jpg" alt="Car-service" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">21st August, 2025</p>
-              <h2 class="blog-sub-heading">
-                Carmaa’s Waterless Car Wash Trend at Centrio Mall Dehradun
-              </h2>
-              <p class="blog-sub-para">
-                When it comes to keeping your car impeccably clean and shiny,
-                Carmaa is quickly becoming the preferred choice for car owners
-                in Dehradun, turning Centrio Mall into a bustling hub of
-                activity.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="main-container" id="main-container-two">
-        <a href="./doorstep-car-decor-in-dehradun">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image"
-                src="/images/blogs/Celebrate Every Occasion with Carmaa’s Doorstep Car Flower decoration (1).jpg"
-                alt="Car decor in Dehradun" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">3rd May, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                Celebrate Every Occasion with Carmaa’s Doorstep Car Flower
-                decoration
-              </h2>
-              <p class="blog-sub-para">
-                Now make every cherished occasion unique with our new service,
-                which is Doorstep car decor in Dehradun. Carmaa offers
-                beautiful Car flower decor at the Doorstep to bring beauty and
-                elegance to your events.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="main-container" id="main-container-three">
-        <a href="./car-maintenance-doorstep-services">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image" src="/images/blogs/the-future-of-car-maintenance-with-doorstep-services.jpg"
-                alt=" Doorstep car washing services" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">23th March, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                The Future Of Car Maintenance With Doorstep Services
-              </h2>
-              <p class="blog-sub-para">
-                When it comes to keeping our cars clean, convenience matters
-                more than ever. The traditional car cleaning process often
-                feels like a chore. However, the rise of doorstep car washing
-                services is changing how we think about car maintenance.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./how-to-maintain-your-car-shine/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image"
-                src="/images/blogs/Maintain Your Car’s Shine During Dehradun’s Dusty Seasons (1).jpg" alt="Car-service"
-                loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">25th, May, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                Maintain Your Car’s Shine During Dehradun’s Dusty Seasons
-              </h2>
-              <p class="blog-sub-para">
-                The beautiful surroundings of Dehradun always come with dust
-                and grime in the dry months. This is not an excellent thing
-                for a vehicle because the dust dulls the appearance of the
-                vehicle in no time.
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a href="./rise-of-car-subscription-model/">
-          <div class="blog-section-main-container">
-            <div class="blog-img-container">
-              <img class="blog-image"
-                src="/images/blogs/The Rise of Car Subscription Models in India Will You Own or Subscribe (1).jpg"
-                alt="Car-service" loading="lazy" />
-            </div>
-            <div class="blog-section-container">
-              <p class="blog-date-para">7th, June, 2025</p>
-
-              <h2 class="blog-sub-heading">
-                The Rise of Car Subscription Models in India: Will You Own or
-                Subscribe?
-              </h2>
-              <p class="blog-sub-para">
-                Dehradun and other growing cities are seeing a change
-                where traditional ownership is being replaced by convenience
-                and flexibility.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <script>
-        const blogParas = document.querySelectorAll(".blog-sub-para");
-
-        blogParas.forEach((para) => {
-          const fullText = para.textContent;
-
-          if (fullText.length > 115) {
-            const trimmedText = fullText.slice(0, 115);
-            para.innerHTML = `${trimmedText}<span class="read-more">...Read More</span>`;
-          }
-        });
-      </script>
-
-      <script>
-        const blogContainers = document.querySelectorAll(
-          ".blog-header-container"
-        );
-        const mainContainerOne =
-          document.getElementById("main-container-one");
-        const mainContainerTwo =
-          document.getElementById("main-container-two");
-        const mainContainerThree = document.getElementById(
-          "main-container-three"
-        );
-
-        function resetContainers() {
-          mainContainerOne.classList.remove("active");
-          mainContainerTwo.classList.remove("active");
-          mainContainerThree.classList.remove("active");
-        }
-
-        blogContainers.forEach((container) => {
-          container.addEventListener("click", () => {
-            // Remove active class and underline from all
-            blogContainers.forEach((c) => {
-              c.classList.remove("active");
-              c.style.borderBottom = "none";
+                        // Filter cards
+                        window.requestAnimationFrame(() => {
+                            cards.forEach(card => {
+                                if (filter === 'all' || card.dataset.category === filter) {
+                                    card.classList.remove('hidden');
+                                } else {
+                                    card.classList.add('hidden');
+                                }
+                            });
+                        });
+                    });
+                });
             });
-
-            // Add active class and underline to clicked one
-            container.classList.add("active");
-
-            // Get tab heading
-            const headingText =
-              container.querySelector(".blog-heading-para")?.textContent;
-
-            // Save active tab to localStorage
-            localStorage.setItem("activeBlogTab", headingText);
-
-            resetContainers();
-
-            // Show appropriate container and set underline color
-            switch (headingText) {
-              case "Car Cleaning":
-                mainContainerOne.classList.add("active");
-                container.style.borderBottom = "2px solid black";
-                break;
-              case "Car Decor":
-                mainContainerTwo.classList.add("active");
-                container.style.borderBottom = "2px solid black";
-                break;
-              case "Other Services":
-                mainContainerThree.classList.add("active");
-                container.style.borderBottom = "2px solid black";
-                break;
-              default:
-                mainContainerOne.classList.add("active");
-                container.style.borderBottom = "2px solid black";
-            }
-          });
-        });
-
-        // 👉 Select tab from localStorage or default to Car Cleaning
-        window.addEventListener("DOMContentLoaded", () => {
-          const savedTab =
-            localStorage.getItem("activeBlogTab") || "Car Cleaning";
-
-          const defaultTab = Array.from(blogContainers).find(
-            (container) =>
-              container.querySelector(".blog-heading-para")?.textContent ===
-              savedTab
-          );
-          if (defaultTab) defaultTab.click();
-        });
-      </script>
+        </script>
     </main>
 
     <script>

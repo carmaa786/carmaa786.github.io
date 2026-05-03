@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="preload" as="image" href="assets/hero_car_detailing.webp" fetchpriority="high">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Professional Doorstep Car Wash & Car Detailing | Carmaa</title>
@@ -20,63 +21,68 @@
         content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
     <meta property="og:url" content="https://carmaacarcare.com">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://carmaacarcare.com/images/logo.png">
+    <meta property="og:image" content="https://carmaacarcare.com/assets/logo.png">
     <meta property="og:site_name" content="Carmaa Car Care">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Professional Doorstep Car Wash & Car Detailing | Carmaa">
     <meta name="twitter:description"
         content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
-    <meta name="twitter:image" content="https://carmaacarcare.com/images/logo.png">
+    <meta name="twitter:image" content="https://carmaacarcare.com/assets/logo.png">
     <meta name="robots" content="index, follow">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer-new.css">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <style>
+        :root {
+            --primary: #1B4E9B;
+            --primary-dark: #143d7a;
+            --secondary: #28B097;
+            --dark-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-white: #FFFFFF;
+            --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%);
+            --font-main: 'Metropolis', sans-serif;
+            --font-display: 'Oswald', sans-serif;
+        }
+        @font-face { font-family: 'Metropolis'; font-display: swap; }
+        @font-face { font-family: 'Oswald'; font-display: swap; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); background-color: var(--dark-bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); }
+                .hero-bg { background: url("assets/hero_car_detailing.webp") center/cover no-repeat; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .hero-bg video { width: 100%; height: 100%; object-fit: cover; }
+        .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.95) 90%, #020617 100%); backdrop-filter: blur(2px); }
+        .hero-content { z-index: 1; max-width: 800px; padding: 0 20px; }
+        .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; border: none; }
+        .btn-primary { background: var(--primary); color: white; }
+        .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .hero p { font-size: 1.1rem; } }
+    </style>
+    <link rel="stylesheet" href="footer-new.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="mobile-optimizations.css">
-    <link rel="stylesheet" href="story-mobile-enhanced.css">
-    <link rel="stylesheet" href="carmaa-difference-carousel.css">
+    <link rel="stylesheet" href="story-mobile-enhanced.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="carmaa-difference-carousel.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="services-center-fix.css">
-    <link rel="stylesheet" href="promises-carousel.css">
-    <link rel="stylesheet" href="how-it-works-carousel.css">
-    <link rel="stylesheet" href="professional-animations.css">
-    <link rel="stylesheet" href="stats-carousel.css">
-    <link rel="stylesheet" href="car-journey.css">
-    <link rel="stylesheet" href="scroll-animations.css">
+    <link rel="stylesheet" href="promises-carousel.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="how-it-works-carousel.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="professional-animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="stats-carousel.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="car-journey.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="scroll-animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="h1-seo-fix.css">
 
-    <link rel="preload" as="image" href="assets/hero_car_detailing.png" fetchpriority="high">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typehaus/metropolis@12.0.0-next.7/index.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
     <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMHL3KW21H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-16789669575');
-        gtag('config', 'G-YMHL3KW21H');
-    </script>
-
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '3895402900713863');
-        fbq('track', 'PageView');
-    </script>
 
     <script type="application/ld+json">
     {
@@ -88,7 +94,7 @@
           "name": "Carmaa Car Care",
           "url": "https://carmaacarcare.com/",
           "logo": "https://carmaacarcare.com/assets/logo.jpg",
-          "image": "https://carmaacarcare.com/images/logo.png",
+          "image": "https://carmaacarcare.com/assets/logo.png",
           "description": "Premium doorstep car care and waterless detailing service.",
           "telephone": "+91-7042555401",
           "priceRange": "₹₹",
@@ -296,7 +302,7 @@
 
 <body>
 
-    <div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder" style="min-height: 80px;"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch("/components/navbar.html")
@@ -307,7 +313,7 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.png" fetchpriority="high">
+            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" fetchpriority="high" preload="metadata" width="1920" height="1080">
                 <source src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
@@ -823,8 +829,27 @@
         });
     </script>
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const gtm = document.createElement('script');
+                gtm.async = true; gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-YMHL3KW21H';
+                document.body.appendChild(gtm);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date()); gtag('config', 'AW-16789669575'); gtag('config', 'G-YMHL3KW21H');
 
-
+                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+                }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '1106673891043810'); fbq('track', 'PageView');
+            }, 3500);
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
 </body>
 
 </html>

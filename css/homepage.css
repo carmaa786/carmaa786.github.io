@@ -149,7 +149,7 @@ a:hover {
   z-index: 1;
   border-radius: 20px;
   pointer-events: none;
-  background-image: url("../images/home-page/before-afer/microfiber.png");
+  background-image: url("../assets/home-page/before-afer/microfiber.png");
 }
 
 .microfiber-button:hover {
@@ -301,7 +301,7 @@ a:hover {
 .counter-section {
   padding: 4.5rem;
   background-color: var(--primary-color);
-  background-image: url("../images/aboutus/textture-bg.png");
+  background-image: url("../assets/aboutus/textture-bg.png");
   display: flex;
   justify-content: center;
 }
@@ -607,7 +607,7 @@ a:hover {
 .modal-wrapper .image-section {
   width: 50%;
 
-  background-image: url("../images/home-page/modal/bg-img.jpg");
+  background-image: url("../assets/home-page/modal/bg-img.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -834,7 +834,7 @@ a:hover {
   position: relative;
   width: 43%;
   height: 700px;
-  background-image: url("../images/home-page/benefits/car-bg.jpg");
+  background-image: url("../assets/home-page/benefits/car-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1043,7 +1043,7 @@ a:hover {
   background-color: white !important;
 }
 .second-img {
-  background-image: url("../images/home-page/benefits/car-bg02.jpg");
+  background-image: url("../assets/home-page/benefits/car-bg02.jpg");
 }
 .video-description2 {
   position: absolute;
@@ -1430,7 +1430,7 @@ a:hover {
     min-height: 25rem; /* Set to a high value to accommodate longer text */
   }
   .parallex-cta {
-    background-image: url("../images/home-page/cta/cta-bg.jpg");
+    background-image: url("../assets/home-page/cta/cta-bg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -1721,7 +1721,7 @@ a:hover {
   .modal-wrapper .image-section {
     width: 100%;
 
-    background-image: url("../images/home-page/modal/bg-img.jpg");
+    background-image: url("../assets/home-page/modal/bg-img.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2191,7 +2191,7 @@ a:hover {
   }
 
   .parallex-cta {
-    background-image: url("../images/home-page/cta/cta-bg.jpg");
+    background-image: url("../assets/home-page/cta/cta-bg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -2325,7 +2325,7 @@ a:hover {
   .counter-section {
     padding: 4.5rem 0rem;
     background-color: var(--primary-color);
-    background-image: url("../images/aboutus/textture-bg.png");
+    background-image: url("../assets/aboutus/textture-bg.png");
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -2666,7 +2666,7 @@ a:hover {
   .counter-section {
     padding: 4.5rem;
     background-color: var(--primary-color);
-    background-image: url("../images/aboutus/textture-bg.png");
+    background-image: url("../assets/aboutus/textture-bg.png");
     display: flex;
 
     justify-content: center;
@@ -2860,7 +2860,7 @@ a:hover {
   .modal-wrapper .image-section {
     width: 50%;
 
-    background-image: url("../images/home-page/modal/bg-img.jpg");
+    background-image: url("../assets/home-page/modal/bg-img.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3089,7 +3089,7 @@ a:hover {
     position: relative;
     width: 43%;
     height: 800px;
-    background-image: url("../images/home-page/benefits/car-bg.jpg");
+    background-image: url("../assets/home-page/benefits/car-bg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3296,7 +3296,7 @@ a:hover {
     background-color: white !important;
   }
   .second-img {
-    background-image: url("../images/home-page/benefits/car-bg02.jpg");
+    background-image: url("../assets/home-page/benefits/car-bg02.jpg");
   }
   .video-description2 {
     position: absolute;
