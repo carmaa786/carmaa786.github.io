@@ -410,7 +410,7 @@
                         <div class="avatar av-2 icon-avatar person-icon">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="50" height="50" loading="lazy"></div>
+                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="50" height="50" loading="eager"></div>
                         <div class="avatar av-3 icon-avatar car-icon">
                             <i class="fa-solid fa-car-side"></i>
                         </div>
@@ -856,8 +856,7 @@
         // Fallback: load after 15 seconds if no interaction
         window.addEventListener('load', () => setTimeout(loadTrackingScripts, 15000));
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
+    <noscript><img loading="eager" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
 </body>
 
 </html>
