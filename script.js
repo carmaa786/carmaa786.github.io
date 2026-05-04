@@ -117,6 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
     const heroContent = document.querySelector('.hero-content');
     let heroTicking = false;
+    let heroHeight = hero ? hero.offsetHeight : 0;
+
+    // Cache layout read on resize to prevent layout thrashing during scroll
+    window.addEventListener('resize', () => {
+        if (hero) {
+            heroHeight = hero.offsetHeight;
+        }
+    }, { passive: true });
 
     window.addEventListener('scroll', () => {
         if (!heroTicking) {
@@ -124,10 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const scrolled = window.pageYOffset;
                 const parallaxSpeed = 0.5;
 
-                if (hero && scrolled < hero.offsetHeight) {
+                if (hero && scrolled < heroHeight) {
                     if (heroContent) {
                         heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-                        heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.8;
+                        heroContent.style.opacity = 1 - (scrolled / heroHeight) * 0.8;
                     }
                 }
                 heroTicking = false;
