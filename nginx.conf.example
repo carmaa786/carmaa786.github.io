@@ -1,0 +1,16 @@
+server {
+    # Other configuration...
+
+    # Cache static assets for 1 year
+    location ~* \.(jpg|jpeg|png|gif|ico|webp|svg|css|js|mp4)$ {
+        expires 1y;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        access_log off;
+    }
+
+    # Do not cache HTML to ensure cache-busting URLs are fetched
+    location ~* \.(html|htm)$ {
+        expires -1;
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0";
+    }
+}
