@@ -120,6 +120,67 @@
             .cs-card { padding: 1.25rem 1.1rem; }
             .cs-title { font-size: 1.1rem; }
         }
+
+        /* ── YouTube facade embed — zero render-blocking ── */
+        .yt-facade {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 2rem 0 2.5rem;
+        }
+        .yt-facade img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.2s;
+        }
+        .yt-facade:hover img { opacity: 0.85; }
+        .yt-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 48px;
+            background: #ff0000;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .yt-play-btn svg { width: 24px; height: 24px; fill: #fff; }
+        .yt-facade iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .cs-video-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #65c7d0;
+            margin-bottom: 0.4rem;
+        }
+        .cs-video-heading {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0a3d62;
+            margin-bottom: 0.5rem;
+        }
+        .cs-video-note {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 0;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16789669575');</script>
@@ -174,6 +235,30 @@
     <div class="cs-wrapper">
 
         <p class="cs-intro">Behind every clean car is a real problem that needed a real solution. Here are three stories from Carmaa customers — the challenge they faced, what we did about it, and what changed as a result. Names have been kept general for privacy.</p>
+
+        <!-- ═══════════════════════════════════════════
+             VIDEO SECTION — YouTube facade (click-to-load)
+             Replace YOUR_VIDEO_ID with the actual YouTube video ID
+             from https://www.youtube.com/@carmaa_Official
+        ═══════════════════════════════════════════ -->
+        <p class="cs-video-label">Watch It In Action</p>
+        <h2 class="cs-video-heading">See How Carmaa's Waterless Process Works</h2>
+        <p class="cs-video-note">Click the thumbnail below to play — no autoplay, no tracking until you choose to watch.</p>
+
+        <div class="yt-facade" data-videoid="9X9YxNIadxA" role="button" aria-label="Play Carmaa waterless car wash demonstration video" tabindex="0">
+            <!-- YouTube auto-generates thumbnails at this URL — replace YOUR_VIDEO_ID -->
+            <img
+                src="https://i.ytimg.com/vi/9X9YxNIadxA/hqdefault.jpg"
+                alt="Carmaa waterless car wash demonstration in Dehradun"
+                width="480"
+                height="270"
+                loading="lazy"
+            >
+            <div class="yt-play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </div>
+        <!-- end video section -->
 
         <!-- ═══════════════════════════════════════════
              CASE STUDY 1: Society Parking Ban
@@ -272,6 +357,26 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch("/components/footer3.html").then(r=>r.text()).then(html=>{document.getElementById("footer").innerHTML=html;}).catch(e=>console.error(e));
+        });
+    </script>
+
+    <!-- YouTube facade: loads iframe ONLY when user clicks — no render-blocking, no LCP impact -->
+    <script>
+        document.querySelectorAll('.yt-facade').forEach(function(facade) {
+            function loadVideo() {
+                var id = facade.dataset.videoid;
+                if (!id || id === 'YOUR_VIDEO_ID') return;
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0');
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('loading', 'lazy');
+                iframe.setAttribute('title', 'Carmaa car wash demonstration video');
+                facade.innerHTML = '';
+                facade.appendChild(iframe);
+            }
+            facade.addEventListener('click', loadVideo);
+            facade.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') loadVideo(); });
         });
     </script>
 </body>
