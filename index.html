@@ -3,7 +3,6 @@
 
 <head>
     <link rel="canonical" href="https://carmaacarcare.com/" />
-    <link rel="preload" as="image" href="assets/hero_car_detailing.webp" fetchpriority="high">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Professional Doorstep Car Wash & Car Detailing | Carmaa</title>
@@ -44,8 +43,6 @@
             --font-main: 'Metropolis', sans-serif;
             --font-display: 'Oswald', sans-serif;
         }
-        @font-face { font-family: 'Metropolis'; font-display: swap; }
-        @font-face { font-family: 'Oswald'; font-display: swap; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); background-color: var(--dark-bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
         .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); }
@@ -305,8 +302,8 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" fetchpriority="high" preload="metadata" width="1920" height="1080" id="heroVideo">
-                <!-- Video source loaded via script.js to optimize LCP -->
+            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" class="hero-video" id="heroVideo">
+                <source src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
