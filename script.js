@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (window.pageYOffset / windowHeight) * 100;
             progressBar.style.width = scrolled + '%';
-        });
+        }, { passive: true });
     };
 
     // Uncomment to enable scroll progress bar
@@ -507,4 +507,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Lazy load hero video to prioritize LCP
+    const loadHeroVideo = () => {
+        const video = document.getElementById('heroVideo');
+        if (video) {
+            const source = video.querySelector('source');
+            if (source && source.dataset.src) {
+                source.src = source.dataset.src;
+                video.load();
+                video.play().catch(e => console.log("Video autoplay blocked or failed:", e));
+            }
+        }
+    };
+
+    // Load video after page is fully loaded
+    if (document.readyState === 'complete') {
+        loadHeroVideo();
+    } else {
+        window.addEventListener('load', loadHeroVideo, { once: true, passive: true });
+    }
 });

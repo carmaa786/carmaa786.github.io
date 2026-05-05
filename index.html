@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="canonical" href="https://carmaacarcare.com/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="preload" as="image" href="assets/hero_car_detailing.webp" fetchpriority="high">
     <title>Professional Doorstep Car Wash & Car Detailing | Carmaa</title>
     <meta name="description"
         content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
@@ -302,8 +306,8 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" class="hero-video" id="heroVideo">
-                <source src="assets/doorstep_arrival.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" class="hero-video" id="heroVideo" width="1920" height="1080">
+                <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
@@ -777,7 +781,7 @@
             </div>
 
             <!-- Dynamic Reviews Slider Container -->
-            <div class="reviews-slider-container reveal fade-up delay-1">
+            <div class="reviews-slider-container reveal fade-up delay-1" style="min-height: 300px;">
                 <div class="reviews-track" id="reviewsTrack">
                     <!-- Reviews will be injected here by script.js -->
                 </div>
