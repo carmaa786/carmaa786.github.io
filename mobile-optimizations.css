@@ -968,3 +968,119 @@ button,
 /* ========================================
    END MOBILE OVERFLOW FIX ADDITIONS
    ======================================== */
+
+/* ========================================
+   IMAGE & ICON RENDERING INTEGRITY
+   Fixes for tiny dots, outlined icons, and overlaps.
+   Added: Safe, additive overrides
+   ======================================== */
+
+/* --------------------------------------------------
+   FIX 1: Icon Rendering Integrity
+   Force solid weight for FontAwesome solid icons to prevent 'outlined' look.
+   This resolves the 'white outlined shapes' issue.
+   -------------------------------------------------- */
+.fa-solid, 
+.fas,
+[class*="fa-star"] {
+    font-weight: 900 !important;
+}
+
+/* Ensure brands also render with correct weight (FA6 brands use 400) */
+.fa-brands, 
+.fab {
+    font-weight: 400 !important;
+}
+
+/* Safety for gradient icons (like Google Reviews) to prevent invisibility */
+.colored-google-icon {
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    text-shadow: 0 0 0 rgba(0,0,0,0.01) !important; 
+}
+
+/* --------------------------------------------------
+   FIX 2: Prevent 'Tiny Dots' (Image Collapsing)
+   Ensures images have a minimum presence and maintain aspect ratio.
+   -------------------------------------------------- */
+img {
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* Targeted fixes for components where images may shrink or distort */
+.service-card img,
+.benefit-element-img-wrapper img,
+.why-carmaa-card img,
+.our-services-section-city-left img,
+.story-scene img,
+.promises-grid .promise-card img,
+.avatar-network img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* --------------------------------------------------
+   FIX 3: Mobile Overlap Prevention
+   Ensures absolute-positioned images do not cover text on small screens.
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Convert potential overlap containers to flow layout */
+    .commitment-quality-right,
+    .refer-visual,
+    .scene-visual,
+    .avatar-network {
+        position: relative !important;
+        height: auto !important;
+        min-height: unset !important;
+        margin: 20px 0 !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    /* Force images inside these containers to stack naturally */
+    .commitment-quality-right img,
+    .refer-visual img,
+    .scene-visual img,
+    .avatar-network img {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        max-height: 400px !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+
+    /* Ensure parent sections don't constrain height on mobile */
+    .promises-grid,
+    .services-grid,
+    .refer-banner {
+        height: auto !important;
+        flex-direction: column !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 4: Review Stars Alignment
+   Ensures stars stay in a single row and don't shrink.
+   -------------------------------------------------- */
+.review-stars {
+    display: flex !important;
+    gap: 2px !important;
+    margin-bottom: 10px !important;
+}
+
+.review-stars i {
+    font-size: 0.9rem !important;
+    color: #FBBF24 !important; /* Golden Star Color */
+    flex-shrink: 0 !important;
+}
