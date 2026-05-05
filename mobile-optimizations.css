@@ -830,3 +830,141 @@ button,
 /* ========================================
    END MOBILE OPTIMIZATIONS
    ======================================== */
+
+/* ========================================
+   MOBILE OVERFLOW FIX ADDITIONS
+   Branch: feature/mobile-fixes
+   Added: Safe, additive-only overrides
+   ======================================== */
+
+/* --------------------------------------------------
+   FIX 1: Global horizontal overflow prevention
+   Catches any element wider than the viewport.
+   Safe: only applies on mobile, uses max-width not width.
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+        max-width: 100%;
+    }
+
+    /* Restore exceptions that need to exceed 100% for layout to work */
+    /* (e.g., infinite-scroll tracks use translateX, not actual width) */
+    .reviews-track,
+    .reviews-track * {
+        max-width: none;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 2: Section header h2 — override white-space: nowrap
+   The inline <style> sets white-space: nowrap which causes
+   text to push the layout beyond the viewport width on mobile.
+   Using higher specificity to safely override.
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    html body .section-header h2 {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 3: Avatar network — prevent overflow on narrow screens
+   .avatar-network has a fixed 350px width; on screens < 375px
+   this overflows even after the existing scale(0.7) override.
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    .refer-visual {
+        width: 100% !important;
+        overflow: hidden !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .avatar-network {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .avatar-network {
+        width: 260px !important;
+        height: 260px !important;
+        transform: scale(0.85) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 4: Refer banner — ensure no overflow on container
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    .refer-banner {
+        overflow: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 5: Stat item tablet range — flex sizing correction
+   At 481–768px, stat-item uses calc(50% - 30px) on a
+   flex-direction: column parent, which can misalign.
+   -------------------------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    .stat-item {
+        width: 100% !important;
+        flex: none !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 6: FAQ question — very small screens padding safety
+   On screens < 320px the 60px right-padding can cause overflow.
+   -------------------------------------------------- */
+@media (max-width: 360px) {
+    .faq-question {
+        padding-right: 44px !important;
+    }
+
+    .faq-question h3 {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 7: Images, iframes, video — hard max-width cap
+   Belt-and-suspenders for any media that may break layout.
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    img:not(.hero-bg img),
+    video:not(.hero-bg video),
+    iframe,
+    embed,
+    object {
+        max-width: 100% !important;
+        height: auto;
+    }
+}
+
+/* --------------------------------------------------
+   FIX 8: Container — ensure no negative horizontal bleed
+   -------------------------------------------------- */
+@media (max-width: 768px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+/* ========================================
+   END MOBILE OVERFLOW FIX ADDITIONS
+   ======================================== */
