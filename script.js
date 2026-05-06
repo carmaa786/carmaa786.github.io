@@ -508,23 +508,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lazy load hero video to prioritize LCP
-    const loadHeroVideo = () => {
-        const video = document.getElementById('heroVideo');
-        if (video) {
-            const source = video.querySelector('source');
-            if (source && source.dataset.src) {
-                source.src = source.dataset.src;
-                video.load();
-                video.play().catch(e => console.log("Video autoplay blocked or failed:", e));
-            }
-        }
-    };
-
-    // Load video after page is fully loaded
-    if (document.readyState === 'complete') {
-        loadHeroVideo();
-    } else {
-        window.addEventListener('load', loadHeroVideo, { once: true, passive: true });
-    }
+    // Native video loading used instead of JS to prevent TBT spikes
 });
