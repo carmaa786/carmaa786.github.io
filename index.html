@@ -81,13 +81,24 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "AutoWash",
+          "@type": "Organization",
           "@id": "https://carmaacarcare.com/#organization",
           "name": "Carmaa Car Care",
           "url": "https://carmaacarcare.com/",
-          "logo": "https://carmaacarcare.com/assets/logo.jpg",
+          "logo": "https://carmaacarcare.com/assets/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/carmaaofficialpage",
+            "https://www.instagram.com/carmaa_official",
+            "https://x.com/carmaa_official"
+          ]
+        },
+        {
+          "@type": "AutomotiveBusiness",
+          "@id": "https://carmaacarcare.com/#localbusiness",
+          "name": "Carmaa Car Care",
+          "url": "https://carmaacarcare.com/",
           "image": "https://carmaacarcare.com/assets/logo.png",
-          "description": "Premium doorstep car care and waterless detailing service.",
+          "description": "Premium doorstep car wash and waterless detailing service.",
           "telephone": "+91-7042555401",
           "priceRange": "₹₹",
           "address": {
@@ -103,12 +114,7 @@
             "latitude": "30.3165",
             "longitude": "78.0322"
           },
-          "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi NCR"],
-          "sameAs": [
-            "https://www.facebook.com/carmaaofficialpage",
-            "https://www.instagram.com/carmaa_official",
-            "https://x.com/carmaa_official"
-          ],
+          "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi"],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Car Care Services",
@@ -117,14 +123,28 @@
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Quick Wash"
+                  "name": "doorstep car wash"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Premium Car Detailing"
+                  "name": "car detailing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "ceramic coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "interior cleaning"
                 }
               }
             ]
@@ -137,6 +157,15 @@
               "reviewBody": "If you are searching for the best Doorstep car wash service in Dehradun, look no further than Carmaa."
             }
           ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://carmaacarcare.com/#website",
+          "url": "https://carmaacarcare.com/",
+          "name": "Carmaa Car Care",
+          "publisher": {
+            "@id": "https://carmaacarcare.com/#organization"
+          }
         },
         {
           "@type": "FAQPage",
