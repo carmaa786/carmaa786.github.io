@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="canonical" href="https://carmaacarcare.com/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <link rel="preload" as="image" href="assets/hero_car_detailing.webp" fetchpriority="high">
+    <link rel="preload" as="image" imagesrcset="assets/hero_car_detailing_mobile.avif 768w, assets/hero_car_detailing_desktop.avif 1920w" imagesizes="100vw" fetchpriority="high">
     <title>Professional Doorstep Car Wash & Car Detailing | Carmaa</title>
     <meta name="description"
         content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
@@ -50,7 +49,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); background-color: var(--dark-bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
         .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); }
-                .hero-bg { background: url("assets/hero_car_detailing.webp") center/cover no-repeat; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
         .hero-bg video { width: 100%; height: 100%; object-fit: cover; }
         .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.95) 90%, #020617 100%); backdrop-filter: blur(2px); }
@@ -66,6 +64,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/bundle.min.css?v=1.0.2" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.2"></noscript>
     <style>
         .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.8rem) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; max-width: 1200px; }
         @media (max-width: 768px) { .section-header h2 { font-size: clamp(1.1rem, 4vw, 1.8rem) !important; } }
@@ -306,7 +306,12 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline poster="assets/hero_car_detailing.webp" class="hero-video" id="heroVideo" width="1920" height="1080">
+            <picture>
+                <source type="image/avif" srcset="assets/hero_car_detailing_mobile.avif 768w, assets/hero_car_detailing_desktop.avif 1920w" sizes="100vw">
+                <source type="image/webp" srcset="assets/hero_car_detailing_mobile.webp 768w, assets/hero_car_detailing_desktop.webp 1920w" sizes="100vw">
+                <img src="assets/hero_car_detailing_desktop.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1920" height="1080" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1;">
+            </picture>
+            <video autoplay muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
                 <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
@@ -411,7 +416,7 @@
                         <div class="avatar av-2 icon-avatar person-icon">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="50" height="50" loading="eager"></div>
+                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="50" height="50" loading="lazy" decoding=\"async\"></div>
                         <div class="avatar av-3 icon-avatar car-icon">
                             <i class="fa-solid fa-car-side"></i>
                         </div>
@@ -761,7 +766,7 @@
                 </div>
                 <div class="split-image reveal fade-right">
                     <div class="before-after-container">
-                        <img src="assets/before_after_split.png" alt="Before and After Car Detailing" width="800" height="400" loading="lazy">
+                        <img src="assets/before_after_split.png" alt="Before and After Car Detailing" width="800" height="400" loading="lazy" decoding=\"async\">
                         <div class="badge-label">Real Results</div>
                     </div>
                 </div>
@@ -829,6 +834,17 @@
             if (trackingLoaded) return;
             trackingLoaded = true;
             
+            // Load Hero Video
+            const video = document.getElementById('heroVideo');
+            if (video) {
+                const source = video.querySelector('source');
+                if (source && source.dataset.src) {
+                    source.src = source.dataset.src;
+                    video.load();
+                    video.play().catch(e => console.log("Video autoplay blocked or failed:", e));
+                }
+            }
+
             // Google Tag Manager
             const gtm = document.createElement('script');
             gtm.async = true; 
@@ -849,15 +865,23 @@
             fbq('init', '1106673891043810'); fbq('track', 'PageView');
         }
 
-        // Load on user interaction
+        // Load on user interaction but defer execution to avoid blocking the main thread
+        const initTracking = () => {
+            if (window.requestIdleCallback) {
+                requestIdleCallback(() => setTimeout(loadTrackingScripts, 500));
+            } else {
+                setTimeout(loadTrackingScripts, 1000);
+            }
+        };
+
         ['scroll', 'mousemove', 'touchstart'].forEach(event => {
-            window.addEventListener(event, loadTrackingScripts, { once: true, passive: true });
+            window.addEventListener(event, initTracking, { once: true, passive: true });
         });
 
         // Fallback: load after 15 seconds if no interaction
         window.addEventListener('load', () => setTimeout(loadTrackingScripts, 15000));
     </script>
-    <noscript><img loading="eager" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
+    <noscript><img loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
 </body>
 
 </html>
