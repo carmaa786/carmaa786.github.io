@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
+Disallow: /old_index.html
+Disallow: /old_index_8a.html
+Disallow: /scratch/
+Disallow: /lh-report.json
+Disallow: /*.py$
+Disallow: /*.md$
+Disallow: /CITY_PAGE_SEO_STRATEGY.md
+Disallow: /OPTIMIZATION_SUMMARY.md
+Disallow: /PERFORMANCE_GUIDELINES.md
 
 # Sitemaps
 Sitemap: https://carmaacarcare.com/sitemap.xml
