@@ -64,6 +64,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/bundle.min.css?v=1.0.2" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.2"></noscript>
     <style>
         .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.8rem) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; max-width: 1200px; }
         @media (max-width: 768px) { .section-header h2 { font-size: clamp(1.1rem, 4vw, 1.8rem) !important; } }
@@ -863,9 +865,17 @@
             fbq('init', '1106673891043810'); fbq('track', 'PageView');
         }
 
-        // Load on user interaction
+        // Load on user interaction but defer execution to avoid blocking the main thread
+        const initTracking = () => {
+            if (window.requestIdleCallback) {
+                requestIdleCallback(() => setTimeout(loadTrackingScripts, 500));
+            } else {
+                setTimeout(loadTrackingScripts, 1000);
+            }
+        };
+
         ['scroll', 'mousemove', 'touchstart'].forEach(event => {
-            window.addEventListener(event, loadTrackingScripts, { once: true, passive: true });
+            window.addEventListener(event, initTracking, { once: true, passive: true });
         });
 
         // Fallback: load after 15 seconds if no interaction
