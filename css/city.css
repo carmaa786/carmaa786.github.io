@@ -212,6 +212,7 @@ a:hover {
   background-size: cover;
   background-image: url("../assets/header-img.jpg");
 }
+.city-header-section h1,
 .city-header-section p {
   color: white;
   position: relative;
