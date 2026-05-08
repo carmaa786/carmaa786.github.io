@@ -35,6 +35,7 @@
         content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
     <meta name="twitter:image" content="https://carmaacarcare.com/assets/logo.png">
     <meta name="robots" content="index, follow">
+    <meta name="msvalidate.01" content="95A1E1E6B9B78B45E1A1A1A1A1A1A1A1" />
 
     <style>
         :root { --primary: #1B4E9B; --primary-dark: #143d7a; --secondary: #28B097; --dark-bg: #FFFFFF; --text-main: #0F172A; --text-white: #FFFFFF; --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%); --font-main: 'Inter', sans-serif; --font-display: 'Oswald', sans-serif; --body-font: var(--font-main); --font: var(--font-main); }
@@ -83,8 +84,8 @@
     <!-- Critical Font Preloading -->
     <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/bundle.min.css?v=1.0.2" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.2"></noscript>
+    <link rel="stylesheet" href="/bundle.min.css?v=1.0.3" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.3"></noscript>
     <style>
         .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.8rem) !important; width: 100%; max-width: 1200px; line-height: 1.3; }
         @media (max-width: 768px) { .section-header h2 { font-size: clamp(1.1rem, 4vw, 1.8rem) !important; } }
@@ -893,35 +894,9 @@
             setTimeout(loadFooter, 500);
         }
     </script>
+    <script src="/js/analytics.js" defer></script>
     <script src="script.js?v=1.0.4" defer></script>
     <script>
-        let trackingLoaded = false;
-        
-        function loadTrackingScripts() {
-            if (trackingLoaded) return;
-            trackingLoaded = true;
-            
-
-            // Google Tag Manager
-            const gtm = document.createElement('script');
-            gtm.async = true; 
-            gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-YMHL3KW21H';
-            document.body.appendChild(gtm);
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date()); 
-            gtag('config', 'AW-16789669575'); 
-            gtag('config', 'G-YMHL3KW21H');
-
-            // Facebook Pixel
-            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
-            }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1106673891043810'); fbq('track', 'PageView');
-        }
-
         const loadHeroVideo = () => {
             const video = document.getElementById('heroVideo');
             if (video && !video.src) {
@@ -935,15 +910,8 @@
             }
         };
 
-        // Defer tracking and heavy JS until interaction
-        const initHeavyJS = () => {
-            if (trackingLoaded) return;
-            loadHeroVideo();
-            setTimeout(loadTrackingScripts, 2000);
-        };
-
         ['scroll', 'click', 'touchstart'].forEach(event => {
-            window.addEventListener(event, initHeavyJS, { once: true, passive: true });
+            window.addEventListener(event, loadHeroVideo, { once: true, passive: true });
         });
     </script>
     <noscript><img loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
