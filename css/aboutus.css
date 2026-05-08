@@ -1,9 +1,7 @@
 :root {
   --primary-color: #0b4c9d;
-  /* --font: "Bai Jamjuree", sans-serif; */
-  --font: "Lexend", "Lexend Placeholder", "sans-serif";
-  /* --body-font: "Sarabun", sans-serif; */
-  --body-font: "Inter", "Inter Placeholder", "sans-serif";
+  --font: "Oswald", "sans-serif";
+  --body-font: "Inter", "sans-serif";
   --silver: #bac4c9;
 }
 .breadcrumb-link {
@@ -23,8 +21,8 @@
 .about-us-section {
   margin-top: 4rem;
 
-  padding: 0rem 6rem;
-  gap: 5rem;
+  padding: 0rem 4rem;
+  gap: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +77,7 @@
   font-weight: 400;
   line-height: 1.6em;
   margin-top: 0.2rem;
+  letter-spacing: -0.01em;
 }
 .benefits-cta-section {
   border-top: #bac4c9;
@@ -165,11 +164,10 @@
   margin-top: 3rem;
   padding-top: 10rem;
   padding-bottom: 8rem;
-  background-color: #f0f3ff;
-  padding-left: 5rem;
   background-color: #0e111b;
-
+  padding-left: 5rem;
   padding-right: 3rem;
+  scroll-margin-top: 130px;
 }
 .mission-section-heading {
   color: #ffffff !important;
@@ -200,18 +198,23 @@
 
 .mission-section-counter .counter-desc {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 0.5rem;
+  flex: 1;
+  padding: 1rem;
 }
 
 .mission-section-counter .counter-desc .desc {
-  width: 40%;
+  width: 100%;
   color: white;
   text-transform: uppercase;
   font-family: var(--font);
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  margin-top: 0.5rem;
 }
 
 .aboutus-cta {
@@ -342,11 +345,11 @@
   font-size: 14px;
 }
 @media screen and (min-width: 300px) {
-  .mission-section-counter .counter-desc h1 {
-    font-size: 2rem;
-
+  .mission-section-counter .counter-desc h3 {
+    font-size: 2.2rem;
     font-family: var(--font);
     color: white;
+    margin: 0;
   }
   .mission-section-counter {
     display: flex;
@@ -597,8 +600,8 @@
   }
   .about-us-section {
     margin-top: 4rem;
-    padding: 0rem 3rem;
-    gap: 2rem;
+    padding: 0rem 4rem;
+    gap: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -715,7 +718,7 @@
     position: absolute;
     bottom: 20px;
     z-index: 5;
-    right: -100px;
+    right: -40px;
     width: 220px;
     height: 180px;
     background-color: var(--primary-color);
@@ -1002,6 +1005,7 @@
   padding-bottom: 116px;
   padding-left: 5rem;
   padding-right: 5rem;
+  scroll-margin-top: 130px;
 }
 
 .tbi-container {
@@ -1038,14 +1042,16 @@
   font-family: var(--body-font);
   line-height: 1.6;
   text-align: justify;
-  color: #424649;
+  color: #424649 !important;
   font-size: 1rem;
   font-weight: 400;
   margin-top: 0.2rem;
 }
 
 .tbi-img-content-container {
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .our-journey-heading {
