@@ -1,9 +1,7 @@
 :root {
   --primary-color: #0b4c9d;
-  /* --font: "Bai Jamjuree", sans-serif; */
   --font: 'Inter', sans-serif;
-  /* --body-font: "Sarabun", sans-serif; */
-  --body-font: "Inter", "Inter Placeholder", "sans-serif";
+  --body-font: "Inter", sans-serif;
   --silver: #bac4c9;
 }
 .footer {
@@ -75,7 +73,8 @@ a:hover {
   /* width: 100%; */
   color: #ffffff;
 }
-.link-section-child h5 {
+.link-section-child h5,
+.link-section-main-container h5 {
   font-family: var(--font);
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -167,7 +166,7 @@ a:hover {
 
 .link-section-main-container {
   color: #ffffff;
-  font-family: var(--font);
+  font-family: var(--body-font);
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -332,7 +331,8 @@ a:hover {
     /* width: 80%; */
     color: #ffffff;
   }
-  .link-section-child h5 {
+  .link-section-child h5,
+  .link-section-main-container h5 {
     font-family: var(--font);
     font-size: 1rem;
     margin-bottom: 1rem;

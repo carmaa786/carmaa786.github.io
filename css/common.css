@@ -55,6 +55,11 @@ a[href*="whatsapp.com"],
 /* Note: Background images are preserved to maintain UI integrity. Optimizations focus on format and lazy loading. */
 
 /* Aspect ratio protection for images to prevent 'tiny dots' or distortion */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .service-box img,
 .benefit-element-img-wrapper img,
 .why-carmaa-card img,
