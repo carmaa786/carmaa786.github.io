@@ -148,33 +148,33 @@ body {
     box-shadow: 0 6px 20px rgba(27, 78, 155, 0.3);
 }
 
-/* Shimmer Effect for Buttons */
+/* Shimmer Effect for Buttons - Performance Optimized */
 .shimmer-btn::after {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 50%;
     height: 100%;
     background: linear-gradient(to right,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.3) 50%,
             rgba(255, 255, 255, 0) 100%);
-    transform: skewX(-25deg);
+    transform: translateX(-200%) skewX(-25deg);
     animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
     0% {
-        left: -100%;
+        transform: translateX(-200%) skewX(-25deg);
     }
 
     20% {
-        left: 200%;
+        transform: translateX(400%) skewX(-25deg);
     }
 
     100% {
-        left: 200%;
+        transform: translateX(400%) skewX(-25deg);
     }
 }
 
@@ -2150,4 +2150,23 @@ body {
 .services .service-card:hover .icon-box {
     background: linear-gradient(135deg, rgba(27, 78, 155, 0.08) 0%, rgba(40, 176, 151, 0.08) 100%) !important;
     border-color: rgba(27, 78, 155, 0.12) !important;
+}
+
+/* Performance Optimizations - Hardware Acceleration & Layout Containment */
+.hero-section {
+    content-visibility: auto;
+    contain: layout style paint;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.hero-wrapper {
+    contain: content;
+}
+
+/* Mobile Performance - Hiding non-critical decorative elements */
+@media (max-width: 768px) {
+    .hero-extra {
+        display: none !important;
+    }
 }
