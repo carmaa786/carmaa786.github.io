@@ -1,4 +1,18 @@
-/* common css  */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/assets/fonts/inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/oswald-600.woff2') format('woff2');
+}
 
 :root {
   --primary: #1B4E9B;
@@ -6,9 +20,9 @@
   --secondary: #28B097;
   --primary-color: #1B4E9B; /* Legacy support */
   
-  --font-main: 'Metropolis', 'Inter', sans-serif;
-  --font-display: 'Oswald', 'Lexend', sans-serif;
-  --font: var(--font-display);
+  --font-main: 'Inter', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font: var(--font-main);
   --body-font: var(--font-main);
   
   --silver: #bac4c9;
@@ -38,17 +52,7 @@ a[href*="whatsapp.com"],
     pointer-events: none !important; 
 }
 
-/* Global removal of distracting background textures and white silhouettes (Desktop + Mobile) */
-[style*="textture-bg.png"], 
-[style*="carmaa-new"],
-[style*="wavy-lines"],
-.our-service-main-section,
-.aboutus-cta-section,
-.our-services-section-city,
-.our-services-section-city-right,
-.counter-section {
-  background-image: none !important;
-}
+/* Note: Background images are preserved to maintain UI integrity. Optimizations focus on format and lazy loading. */
 
 /* Aspect ratio protection for images to prevent 'tiny dots' or distortion */
 .service-box img,
