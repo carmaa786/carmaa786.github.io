@@ -1,7 +1,7 @@
 .navbar-sticky-container {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 100000;
   min-height: 80px;
 }
 
@@ -12,7 +12,7 @@
   background-color: transparent;
   position: sticky !important;
   top: 0px !important;
-  z-index: 9999;
+  z-index: 100000;
   background-color: white;
 }
 
@@ -95,6 +95,7 @@
   left: -50px;
   height: 20rem;
   overflow: scroll;
+  z-index: 99999;
 }
 
 #services-dropdown {

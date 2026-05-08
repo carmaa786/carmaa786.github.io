@@ -66,6 +66,7 @@
         #services, #promises, #refer, #how-it-works, #aeo-faq, #story, #reviews, #transformation, .app-cta, #footer {
             content-visibility: auto;
             contain-intrinsic-size: 1px 1000px;
+            contain: layout paint;
         }
         #services { contain-intrinsic-size: 1px 800px; }
         #promises { contain-intrinsic-size: 1px 600px; }
@@ -77,6 +78,7 @@
         #transformation { contain-intrinsic-size: 1px 600px; }
         .app-cta { contain-intrinsic-size: 1px 400px; }
         #footer { contain-intrinsic-size: 1px 600px; }
+        .service-card, .promise-card, .stat-item, .review-card { will-change: transform, opacity; }
 
     </style>
 
@@ -344,7 +346,7 @@
 
 <body>
 
-    <div id="navbar-placeholder" style="min-height: 80px; content-visibility: auto; contain-intrinsic-size: 80px;"></div>
+    <div id="navbar-placeholder" style="min-height: 80px; position: relative; z-index: 100000;"></div>
     <script>
         // Defer navbar loading to idle time to prioritize hero render
         const loadNavbar = () => {
@@ -370,7 +372,7 @@
                                 assets/hero/hero_car_detailing_desktop_768w.webp 768w,
                                 assets/hero/hero_car_detailing_desktop_1200w.webp 1200w" 
                         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px">
-                <img src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                <img decoding="async" src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
             </picture>
             <video autoplay muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
                 <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
@@ -914,7 +916,7 @@
             window.addEventListener(event, loadHeroVideo, { once: true, passive: true });
         });
     </script>
-    <noscript><img loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
+    <noscript><img decoding="async" loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
 </body>
 
 </html>
