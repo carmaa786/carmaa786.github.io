@@ -337,7 +337,8 @@ a:hover {
 @media (max-width: 768px) {
   .our-service-main-section {
     background-image: none !important;
-    background-color: #0b4c9d !important;
+    background-color: #f9fbfd !important;
+    padding: 1rem 0.5rem 2rem 0.5rem;
   }
   
   /* Suppress decorative background silhouettes that overlap text */
@@ -575,16 +576,15 @@ a:hover {
   margin-bottom: 2rem;
 }
 .city-call-to-action-btn-component {
-  background-color: #0b4c9d;
+  background-color: transparent;
   cursor: pointer;
   justify-content: center;
   font-size: 1.1rem;
   font-weight: 700;
   padding: 1.2rem 3.5rem;
-  box-shadow: 0 10px 20px rgba(11, 76, 157, 0.3);
   border-radius: 50px; /* Pill shape */
   color: #ffffff;
-  border: none;
+  border: none; /* Removed border */
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1447,10 +1447,11 @@ a:hover {
     width: 48%;
     max-width: 850px;
   }
+  .our-services-section-city-right h2,
   .our-services-section-city-right h1 {
     font-family: var(--font);
-    color: #ffffff;
-    padding-top: 2rem;
+    color: #1b4e9b !important; /* Brand blue */
+    padding-top: 1rem;
     font-size: 2rem;
   }
   .our-services-section-city-right .desc {
@@ -1460,7 +1461,7 @@ a:hover {
   }
   .our-services-section-city-right p {
     font-family: var(--body-font);
-    color: #fff;
+    color: #444 !important; /* Changed from white to dark for visibility */
     text-align: justify;
 
     font-size: 1.1rem;
@@ -1474,7 +1475,8 @@ a:hover {
 @media (max-width: 768px) {
   .our-service-main-section {
     background-image: none !important;
-    background-color: #0b4c9d !important;
+    background-color: #f9fbfd !important;
+    padding: 1rem 0.5rem 2rem 0.5rem;
   }
   
   /* Remove the two small icons on top of images */
@@ -1818,7 +1820,8 @@ a:hover {
 }
 
 .trust-badge {
-    background: #28b097; /* Carmaa Teal */
+    background: transparent;
+    border: none; /* Removed border */
     color: #fff;
     padding: 6px 15px;
     border-radius: 50px;
@@ -1844,12 +1847,12 @@ a:hover {
 }
 
 .btn-main {
-    background: #0b4c9d;
+    background: transparent;
     color: #fff;
     padding: 15px 35px;
     border-radius: 8px;
     font-weight: 700;
-    border: none;
+    border: none; /* Removed border */
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -1859,15 +1862,12 @@ a:hover {
 }
 
 .btn-main:hover {
-    background: #083a7a;
+    background: transparent;
+    color: #28b097;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .header-call {
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Stronger shadow */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1875,30 +1875,33 @@ a:hover {
 
 .header-call span {
     font-size: 0.9rem;
-    opacity: 0.9;
     text-transform: uppercase;
 }
 
 .header-call a {
-    color: #fff;
-    background: #28b097;
-    padding: 12px 25px; /* Slightly larger */
+    padding: 12px 25px; 
     border-radius: 50px;
     font-size: 1.3rem;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(40, 176, 151, 0.4);
-    border: 2px solid #28b097;
     display: inline-block;
     position: relative;
     z-index: 10;
 }
 
 .header-call a:hover {
-    background: transparent;
-    color: #fff;
-    border-color: #fff;
     transform: translateY(-3px);
+}
+
+/* Ensure nested paragraphs in topbar/contacts inherit white color */
+.mobile-number-ref p,
+.mobile-number-ref span {
+    color: inherit !important;
+}
+
+/* Fix for hardcoded black text in benefits section */
+.benefits-mobile-number {
+    color: #1b4e9b !important; /* Brand primary blue */
 }
 
 .why-choose-grid {
@@ -1952,21 +1955,193 @@ a:hover {
         margin: 0 auto;
         display: block;
     }
-    .points-grid {
-        justify-items: center;
-        gap: 15px;
+}
+    
+/* ==========================================================================
+   FINAL BRAND STANDARDIZATION & VISIBILITY OVERRIDES (2026)
+   ========================================================================== */
+
+/* 1. Global Button & Badge Reset (Clean, Transparent Aesthetic) */
+.btn-main, 
+.hero-section-btn2, 
+.city-call-to-action-btn-component, 
+.trust-badge,
+.hero-section-btn {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 12px 24px !important;
+    cursor: pointer !important;
+}
+
+.btn-main:hover, 
+.hero-section-btn2:hover, 
+.city-call-to-action-btn-component:hover {
+    color: #28b097 !important; /* Brand teal hover */
+    transform: translateY(-2px);
+}
+
+/* 2. Mobile Visibility & Spacing Audit (≤ 768px) */
+@media screen and (max-width: 768px) {
+    /* FORCE LIGHT BACKGROUNDS FOR ALL CONTENT SECTIONS */
+    section:not(.city-header-section),
+    .our-service-main-section,
+    .city-benefits-section,
+    .commitment-quality,
+    .benefits-section,
+    .city-why-choose,
+    .why-choose-grid {
+        background-color: #f9fbfd !important;
+        background-image: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-    .header-cta-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+
+    /* FORCE VISIBILITY: Dark text for ALL body content outside hero */
+    section:not(.city-header-section) p,
+    section:not(.city-header-section) li,
+    section:not(.city-header-section) .desc,
+    section:not(.city-header-section) .right-desc,
+    .our-service-main-section p,
+    .city-benefits-section p,
+    .commitment-quality p,
+    .benefits-section p,
+    .city-why-choose p,
+    .benefit-element-desc p {
+        color: #444 !important;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
-    .header-call {
-        margin-top: 5px;
+
+    /* FORCE BRAND BLUE: For all headings and bold text outside hero */
+    section:not(.city-header-section) h1,
+    section:not(.city-header-section) h2,
+    section:not(.city-header-section) h3,
+    section:not(.city-header-section) h4,
+    section:not(.city-header-section) strong,
+    .our-service-main-section h2,
+    .city-benefits-heading h2,
+    .commitment-quality h2,
+    .benefits-section h2,
+    .city-why-choose h2,
+    .city-why-choose-heading,
+    .benefit-element-desc h3,
+    .our-services-section-city-right-points strong {
+        color: #1b4e9b !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        font-size: 1.6rem !important;
+    }
+
+    /* FORCE BRAND TEAL: For all links in content */
+    section:not(.city-header-section) a {
+        color: #28b097 !important;
+        text-decoration: underline !important;
+    }
+
+    /* IMAGE SPACING: Force absolute edge-to-edge images */
+    .our-services-section-city-left, 
+    .why-choose-right,
+    .city-benefit-element-img-wrapper,
+    .city-benefit-element-img-wrapper2,
+    .commitment-quality-right,
+    .benefit-right2,
+    .img-wrapper,
+    .third-img {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        overflow: hidden !important;
+    }
+
+    .our-services-section-city-left img, 
+    .why-choose-right img, 
+    .city-benefit-element-img-wrapper img,
+    .city-benefit-element-img-wrapper2 img,
+    .commitment-quality-right img,
+    .benefit-right2 img,
+    .img-wrapper img,
+    .third-img img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        display: block !important;
+        box-shadow: none !important;
+        object-fit: cover !important;
+    }
+
+    /* Remove specific problematic margins and constraints */
+    .our-services-section-city,
+    .why-choose-grid,
+    .city-benefit-container,
+    .commitment-quality,
+    .benefits-section,
+    .our-services-section-city-right,
+    .why-choose-left,
+    .commitment-quality-left,
+    .benefit-left {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .our-services-section-city-right,
+    .why-choose-left,
+    .commitment-quality-left,
+    .benefit-left {
+        padding: 2rem 1.2rem !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix comparison table mobile padding */
+    .comparison-table-container {
+        padding: 10px !important;
+        overflow-x: auto !important;
     }
 }
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* FINAL DEFINITIVE VISIBILITY FIX */
+@media screen and (max-width: 768px) {
+    section:not(.city-header-section) p, 
+    section:not(.city-header-section) li, 
+    section:not(.city-header-section) span {
+        color: #444 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    section:not(.city-header-section) h2, 
+    section:not(.city-header-section) h3, 
+    section:not(.city-header-section) h1 {
+        color: #1b4e9b !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    .our-service-main-section, .city-benefits-section, .commitment-quality, .benefits-section {
+        background-color: #f9fbfd !important;
+    }
 }

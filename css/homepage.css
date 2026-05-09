@@ -1543,25 +1543,25 @@ a:hover {
     width: 100%;
   }
   .hero-section-btn2 {
-    color: white;
-    box-shadow: -1 3px 13px;
-    background-color: var(--primary-color);
+    background-color: transparent !important;
+    color: white !important;
     margin-top: 2rem;
     border-radius: 0.5rem;
     font-size: 0.85rem;
     letter-spacing: 2px;
     padding: 13px 25px;
-    border: none;
+    border: none !important; /* Removed border */
     cursor: pointer;
     position: relative;
     font-weight: 600;
     text-transform: uppercase;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     overflow: hidden;
   }
   .hero-section-btn2:hover {
-    transform: scale(0.95);
-    background-color: #28b097;
+    transform: scale(0.95) translateY(-5px);
+    background-color: white !important;
+    color: #0b4c9d !important;
   }
 
   .hero-section-btn-width {
