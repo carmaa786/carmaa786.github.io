@@ -1,14 +1,33 @@
 User-agent: *
 Allow: /
-Disallow: /old_index.html
-Disallow: /old_index_8a.html
 Disallow: /scratch/
-Disallow: /lh-report.json
-Disallow: /*.py$
-Disallow: /*.md$
-Disallow: /CITY_PAGE_SEO_STRATEGY.md
-Disallow: /OPTIMIZATION_SUMMARY.md
-Disallow: /PERFORMANCE_GUIDELINES.md
+Disallow: /node_modules/
 
-# Sitemaps
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://carmaacarcare.com/sitemap.xml
+Sitemap: https://carmaacarcare.com/sitemap-cities.xml
+Sitemap: https://carmaacarcare.com/sitemap-services.xml
+Sitemap: https://carmaacarcare.com/sitemap-blog.xml
