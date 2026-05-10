@@ -30,3 +30,13 @@ yarn-error.log*
 *.log
 *.tmp
 *~
+
+# Project-specific ignores
+*.py
+*.md
+!README.md
+lh-report.json
+blog_audit.json
+blog_metadata*.json
+missing_images.json
+nginx.conf.example

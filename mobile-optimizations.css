@@ -585,9 +585,7 @@ button,
     }
 
     /* Footer Stacking Fix - Left Aligned */
-    .footer-container, 
-    .social-media-icons,
-    .follow-us {
+    .footer-container {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -596,12 +594,37 @@ button,
         text-align: left !important;
     }
 
-    .link-section-container {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
+    .social-media-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
         gap: 15px !important;
+        width: auto !important;
+    }
+
+    .follow-us {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
         width: 100% !important;
         text-align: left !important;
+    }
+
+    .link-section-container {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 10px 5% !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .link-section-container a {
+        flex: 0 0 auto !important;
+        width: auto !important;
     }
 
     .footer-column, 
@@ -849,11 +872,21 @@ button,
         max-width: 100%;
     }
 
-    /* Restore exceptions that need to exceed 100% for layout to work */
-    /* (e.g., infinite-scroll tracks use translateX, not actual width) */
     .reviews-track,
     .reviews-track * {
         max-width: none;
+    }
+
+    .social-media-icons,
+    .social-media-icons * {
+        max-width: none;
+    }
+
+    .img-wrapper {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        flex-shrink: 0 !important;
     }
 }
 
@@ -944,13 +977,31 @@ button,
    Belt-and-suspenders for any media that may break layout.
    -------------------------------------------------- */
 @media (max-width: 768px) {
-    img:not(.hero-bg img),
+    img:not(.hero-bg img):not(.img-wrapper img):not(.download-btn-footer img):not(.footer-logo-img),
     video:not(.hero-bg video),
     iframe,
     embed,
     object {
         max-width: 100% !important;
         height: auto;
+    }
+
+    .img-wrapper img {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        object-fit: contain !important;
+    }
+
+    .download-btn-footer img {
+        width: 130px !important;
+        max-width: 130px !important;
+        height: auto !important;
+    }
+
+    .footer-logo-img {
+        max-width: 120px !important;
+        height: auto !important;
     }
 }
 
