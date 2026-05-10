@@ -47,6 +47,15 @@
         padding-bottom: 1.5rem;
     }
 
+    @media (max-width: 768px) {
+        .links-main-container {
+            flex-direction: column !important;
+            gap: 24px !important;
+            padding-top: 16px !important;
+            padding-bottom: 16px !important;
+        }
+    }
+
     .footer {
         padding-top: 35px;
         padding-bottom: 35px;
@@ -108,6 +117,18 @@
         flex-wrap: wrap;
     }
 
+    @media (max-width: 480px) {
+        .google-play-store-icons {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 8px !important;
+        }
+
+        .download-btn-footer {
+            width: 150px !important;
+        }
+    }
+
     .download-btn-footer {
         width: 130px;
         cursor: pointer;
@@ -140,6 +161,26 @@
 
         .footer-logo-container {
             text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .link-section-container {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                gap: 6px 12px !important;
+                width: 100% !important;
+            }
+
+            .link-section-container a {
+                flex: 0 0 auto !important;
+                white-space: nowrap !important;
+            }
+
+            .link-section-container .footer-dehradun {
+                font-size: 13px !important;
+                margin-bottom: 2px !important;
+            }
         }
     }
 </style>
