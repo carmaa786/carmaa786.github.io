@@ -49,6 +49,8 @@
         .hero-bg video.loaded { opacity: 1; }
         .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.95) 90%, #020617 100%); }
         .hero-content { z-index: 1; max-width: 800px; padding: 0 20px; }
+        @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
         .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; letter-spacing: 1px; }
         @media (max-width: 768px) { .hero h1 { font-size: clamp(1.6rem, 7vw, 2.8rem) !important; letter-spacing: 0 !important; word-break: break-word !important; } }
         .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -79,7 +81,7 @@
         #transformation { contain-intrinsic-size: 1px 600px; }
         .app-cta { contain-intrinsic-size: 1px 400px; }
         #footer { contain-intrinsic-size: 1px 600px; }
-        .service-card, .promise-card, .stat-item, .review-card { will-change: transform, opacity; }
+        .service-card, .promise-card, .stat-item, .review-card {}
 
     </style>
 
@@ -375,7 +377,7 @@
                         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px">
                 <img decoding="async" src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
             </picture>
-            <video autoplay muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
+            <video muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
                 <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay hero-extra"></div>
