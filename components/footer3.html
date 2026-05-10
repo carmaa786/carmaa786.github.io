@@ -73,11 +73,12 @@
     }
 
     .social-media-icons {
-        display: flex;
-        gap: 12px;
+        display: flex !important;
+        flex-direction: row !important; /* Ensure horizontal on mobile */
+        gap: 15px !important;
         margin-top: 15px;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap !important; /* Prevent wrapping on mobile */
     }
 
     .img-wrapper {
@@ -124,72 +125,21 @@
         transform: scale(1.05);
     }
 
-    @media (max-width: 900px) and (min-width: 600px) {
+    @media (max-width: 900px) {
         .links-main-container {
-            gap: 25px;
+            flex-direction: row; /* Keep horizontal where possible */
             flex-wrap: wrap;
-            justify-content: flex-start !important;
-        }
-
-        .link-section-child {
-            align-items: flex-start !important;
-            text-align: left !important;
-        }
-        
-        .social-media-icons, .google-play-store-icons, .link-section-container {
-            justify-content: flex-start !important;
-        }
-    }
-
-    @media (max-width: 600px) and (min-width: 200px) {
-        .download-btn-footer {
-            width: 110px;
-        }
-
-        .links-main-container {
             gap: 30px;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: flex-start !important;
-            align-items: flex-start !important;
+            justify-content: space-between;
         }
 
         .link-section-child {
-            align-items: flex-start !important;
-            text-align: left !important;
-            width: 100%;
+            width: auto;
+            min-width: 150px;
         }
 
-        .footer-container-div {
-            width: 100%;
-            padding: 0 20px;
-        }
-        
         .footer-logo-container {
-            text-align: left !important;
-            margin-left: 0 !important;
-        }
-
-        .link-section-main-container {
-            text-align: left !important;
-            width: 100%;
-        }
-
-        .link-section-container, .social-media-icons, .google-play-store-icons {
-            justify-content: flex-start !important;
-            gap: 15px;
-        }
-
-        .link-section-container {
-            display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            gap: 15px !important;
-            width: 100% !important;
-            text-align: left !important;
-        }
-
-        .follow-us {
-            justify-content: flex-start !important;
+            text-align: left;
         }
     }
 </style>

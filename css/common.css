@@ -281,14 +281,20 @@ a:hover {
     background-color: #fcfcfc;
 }
 
-.comparison-table .feature-col {
-    font-weight: 600;
-    color: #333;
+.comparison-table td.feature-col {
+    font-weight: 700;
+    color: #28b097; /* Match brand teal from highlight column */
+    background-color: #ffffff;
     width: 30%;
 }
 
+.comparison-table th.feature-col {
+    background-color: #0b4c9d !important;
+    color: #ffffff !important;
+}
+
 .comparison-table .highlight {
-    background-color: #e8f5f3;
+    background-color: #f0f9f7; /* Very light teal background */
     color: #28b097;
     font-weight: 700;
 }
@@ -310,4 +316,62 @@ a:hover {
         padding: 12px 15px;
         font-size: 0.95rem;
     }
+}
+
+/* Contact Visibility Overrides - Redesign 2026 */
+.city-header-section .header-call {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;
+}
+
+.city-header-section .header-call span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+.city-header-section .header-call a {
+    color: #ffffff !important;
+    background: transparent !important; /* Removed teal background */
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 1.5rem; /* Slightly larger for visibility without background */
+    font-weight: 700 !important;
+    padding: 0 !important; /* Reset padding since it's just text now */
+}
+
+.city-header-section .header-call a:hover {
+    background: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.trust-badge {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: none !important; /* Removed border per user request */
+    box-shadow: none !important;
+}
+
+.btn-main {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: none !important; /* Removed border per user request */
+    transition: all 0.3s ease !important;
+    font-weight: 800 !important;
+}
+
+.btn-main:hover {
+    background: transparent !important;
+    color: #28b097 !important;
+    transform: scale(1.05);
+}
+
+.mobile-number-ref p,
+.mobile-number-ref span {
+    color: inherit !important;
+}
+
+.benefits-mobile-number {
+    color: #1b4e9b !important;
 }
