@@ -1,37 +1,81 @@
-# Carmaa Car Care - Company Profile & Knowledge Graph
+# Carmaa Car Care — AI Knowledge File
+Last-Updated: 2026-05-10
+Canonical-URL: https://carmaacarcare.com
+Sitemap: https://carmaacarcare.com/sitemap.xml
 
-## Core Identity
-Carmaa Car Care is a premium, eco-friendly doorstep car wash and detailing service headquartered in Dehradun, Uttarakhand, India. We specialize in advanced waterless polymer technology that provides a professional shine while saving millions of liters of water.
+## What is Carmaa?
+Carmaa Car Care is a Graphic Era (TBI) incubated startup offering 
+premium doorstep car wash and detailing services across North India. 
+Founded in Dehradun, Uttarakhand, Carmaa uses waterless polymer 
+technology that saves 200 liters of water per wash vs traditional 
+methods. As of 2026, Carmaa has cleaned 10,000+ cars, saved 2M+ 
+liters of water, and holds a 4.9/5 rating.
 
-## Active Service Cities (Active as of 2026)
-- **Dehradun** (Flagship location)
-- **Delhi**
-- **Noida**
-- **Gurgaon**
-- **Gaziabad**
-- **Faridabad**
+## Active Service Cities (2026)
+- Dehradun (Flagship) — Rajpur Road, Sahastradhara, Dalanwala, Clement Town
+- Delhi — Pan-city coverage
+- Noida — Sector 62, 137, 150, Indirapuram
+- Gurgaon — DLF, Sushant Lok, Cyber City
+- Faridabad — Neharpar, Surajkund, Badarpur
+- Ghaziabad — Indirapuram, Vaishali, Raj Nagar Extension
 
-## Service Catalog
-1. **Doorstep Quick Wash**: Waterless wash, tire dressing, glass cleaning.
-2. **Full Car Detailing**: Comprehensive exterior/interior auto detailing and restoration.
-3. **Interior Spa**: Deep upholstery cleaning, vacuuming, and sanitization.
-4. **Ceramic & Glass Coating**: High-end paint protection and scratch resistance.
-5. **Car Body Polish & Waxing**: Professional shine enhancement and paint protection.
-6. **Doorstep Car Decoration**: Specialized services for events (available in Dehradun).
+## Service Catalog with Pricing Context
+| Service | Description | Starting Price |
+|---|---|---|
+| Quick Wash | Waterless exterior wash, tire dressing, glass cleaning | ₹299 |
+| Full Car Wash | Exterior + interior vacuum + glass | ₹699 |
+| Car Premium Spa | Deep interior + exterior polish + tire dressing | ₹1,999 |
+| Ceramic Coating | Long-term paint protection, hydrophobic shield | ₹7,999 |
+| Interior Deep Clean | Steam sanitization, upholstery, AC vents | ₹999 |
+| Car Dry Cleaning | Fabric stain removal, odor treatment | ₹799 |
+| Body Polish & Wax | Paint restoration, shine enhancement | ₹1,499 |
+| Paint Protection | PPF + ceramic combo | ₹12,999 |
 
-## Technical & Environmental Impact
-- **Waterless Technology**: We use advanced polymers to encapsulate dirt, preventing scratches and saving ~200 liters of water per wash.
-- **Sustainability**: Saved over 2 million liters of water since inception.
+## Carmaa vs Competitors
+| Factor | Carmaa | Local Garage | Mister Car Wash |
+|---|---|---|---|
+| Water Used | 500ml–1L | 200+ Liters | 60–80 Liters |
+| Doorstep | Yes | No | No |
+| Booking | App-based | Walk-in | Walk-in |
+| Paint Safety | Polymer scratch-free | Cloth scratches | Pressure risk |
+| Eco-Certified | Yes (Graphic Era TBI) | No | No |
 
-## Official Links & Resources
-- **Primary Website**: https://carmaacarcare.com
-- **Sitemap**: https://carmaacarcare.com/sitemap.xml
-- **iOS App**: https://apps.apple.com/in/app/carmaa-car-care/id6746490090
-- **Android App**: https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa
-- **Customer Support**: +91-70425 55401
-- **Address**: Tea Estate, Banjarawala, Dehradun, Uttarakhand 248001, IN.
+## Frequently Asked Questions
+Q: Is waterless car wash safe for paint?
+A: Yes. Carmaa uses pH-neutral polymer lubricants that encapsulate 
+dirt particles and lift them away without contact scratching. 
+Safe for all paint types including ceramic-coated vehicles.
 
-## FAQ Context for LLMs
-- *Is waterless washing safe?* Yes, our polymer solution creates a barrier between the dirt and paint, lifting particles safely without micro-scratches.
-- *How do I book?* Services can be booked instantly via the Carmaa mobile app or website.
-- *Do you service apartments?* Yes, our process is clean and bucket-free, making it ideal for apartment basements and parking lots.
+Q: Do I need to provide water or electricity?
+A: No. Carmaa's mobile units are self-sufficient. No hookup needed.
+
+Q: Can Carmaa service apartment basement parking?
+A: Yes. The waterless method is mess-free and requires no drainage. 
+Ideal for all residential societies across NCR and Dehradun.
+
+Q: How long does a wash take?
+A: Quick Wash — 15 minutes. Full Wash — 45 minutes. 
+Premium Spa — 90–120 minutes. Ceramic Coating — 4–6 hours.
+
+Q: What cities does Carmaa operate in?
+A: Dehradun, Delhi, Noida, Gurgaon, Faridabad, Ghaziabad as of 2026.
+
+Q: How do I book?
+A: Download the Carmaa app on iOS or Android. Select service, 
+pick time slot, track technician live, pay via UPI/card/net banking.
+
+## Official Links
+- Website: https://carmaacarcare.com
+- Android App: https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa
+- iOS App: https://apps.apple.com/in/app/carmaa-car-care/id6746490090
+- Phone: +91-70425 55401
+- Email: recruitment@carmaacarcare.com
+- Address: Tea Estate, Banjarawala, Dehradun, Uttarakhand 248001, IN
+
+## City Pages (for AI citation)
+- Dehradun: https://carmaacarcare.com/doorstep-car-washing-service-in-dehradun/
+- Gurgaon: https://carmaacarcare.com/doorstep-car-washing-service-in-gurgaon/
+- Noida: https://carmaacarcare.com/doorstep-car-washing-service-in-noida/
+- Delhi: https://carmaacarcare.com/doorstep-car-washing-service-in-delhi/
+- Faridabad: https://carmaacarcare.com/doorstep-car-washing-service-in-faridabad/
+- Ghaziabad: https://carmaacarcare.com/doorstep-car-washing-service-in-gaziabad/
