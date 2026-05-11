@@ -36,9 +36,19 @@
 .navbar-carmaa-logo-img {
   height: 40px;
   width: auto;
+  max-width: 160px;
   object-fit: contain;
   border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+  .navbar-carmaa-logo-img {
+    height: 32px !important;
+    max-width: 130px !important;
+    width: auto !important;
+  }
+}
+
 .navbar-menu-ul {
   display: flex;
   align-items: center;
