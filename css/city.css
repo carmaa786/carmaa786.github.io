@@ -441,17 +441,20 @@ a:hover {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 10px;
-  background: #f9f9f9;
-  border-radius: 15px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 .commitment-quality-right .img-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 280px;
   display: block;
-  border-radius: 10px;
+  border-radius: 0;
   margin: 0;
+  object-fit: cover;
 }
 .commitment-quality-right .img-wrapper .overlay-text {
   position: absolute;
@@ -1201,6 +1204,10 @@ a:hover {
   }
   .commitment-quality-right .img-wrapper {
     position: relative;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
   }
   .commitment-quality-right .img-wrapper .overlay-text {
     position: absolute;
@@ -1743,16 +1750,19 @@ a:hover {
 }
 .commitment-quality-right .img-wrapper {
     flex: 1;
-    border-radius: 15px;
+    border-radius: 0;
     position: relative;
-    padding: 10px;
-    background: #f9f9f9;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
 }
 .commitment-quality-right .img-wrapper img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 0;
     display: block;
+    object-fit: cover;
 }
 .commitment-quality-right .img-wrapper .overlay-text img {
     display: none;
@@ -2131,9 +2141,12 @@ a:hover {
         padding: 4rem 1.2rem 2rem 1.2rem !important;
     }
     .city-header-section h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
         line-height: 1.3 !important;
         word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        max-width: 100% !important;
     }
 }
 
@@ -2160,5 +2173,49 @@ a:hover {
     }
     .our-service-main-section, .city-benefits-section, .commitment-quality, .benefits-section {
         background-color: #f9fbfd !important;
+    }
+    .commitment-quality-right .img-wrapper .overlay-text {
+        display: none !important;
+    }
+    .commitment-quality-right .img-wrapper {
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        overflow: hidden !important;
+    }
+    .commitment-quality-right .img-wrapper img {
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 220px !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+}
+
+/* === MOBILE IMAGE AND OVERLAY FINAL FIX === */
+@media (max-width: 768px) {
+    .commitment-quality-right .img-wrapper {
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        overflow: hidden !important;
+        margin-bottom: 12px !important;
+    }
+    .commitment-quality-right .img-wrapper img {
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        min-height: 220px !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block !important;
+        box-shadow: none !important;
+    }
+    .commitment-quality-right .img-wrapper .overlay-text {
+        display: none !important;
     }
 }
