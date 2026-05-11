@@ -48,6 +48,60 @@
     }
   }
 
+  @media screen and (max-width: 1150px) {
+    /* Fix dropdowns inside mobile full-screen menu */
+    .dropdownCon {
+      position: relative !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    .dropdown {
+      position: static !important;
+      visibility: visible !important;
+      display: none !important;
+      width: 100% !important;
+      max-width: 280px !important;
+      margin: 8px auto 0 auto !important;
+      left: 0 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      border-radius: 8px !important;
+      overflow: visible !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+
+    .dropdownCon:hover .dropdown,
+    .dropdownCon:focus-within .dropdown {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .dropdown li {
+      width: 100% !important;
+    }
+
+    .dropdown li a {
+      white-space: normal !important;
+      word-break: break-word !important;
+      padding: 10px 16px !important;
+      font-size: 0.95rem !important;
+      display: block !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    /* Ensure Contact Us is never hidden behind dropdown */
+    .menu > li {
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    .menu > li.dropdownCon {
+      z-index: 10 !important;
+    }
+  }
+
   @media (max-width: 1150px) and (min-width: 0px) {
     .toggle {
       display: inline;
