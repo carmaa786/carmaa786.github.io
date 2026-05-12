@@ -73,11 +73,11 @@ a:hover {
 }
 .service-para {
   text-align: justify;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   font-family: var(--body-font);
   font-size: 1rem;
   /* color: #424649; */
-  line-height: 1.6em;
+  line-height: 1.75;
 }
 
 .service-list {
@@ -325,4 +325,29 @@ label {
     object-fit: contain !important;
     border-radius: 12px;
     margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .service-para {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .service-heading {
+        font-size: 1.3rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0.75rem !important;
+        margin-top: 1.5rem !important;
+    }
+    .service-main-section {
+        flex-direction: column !important;
+        padding: 1.5rem 1rem !important;
+        gap: 2rem !important;
+    }
+    .service-left-section {
+        width: 100% !important;
+    }
+    .service-right-section {
+        width: 100% !important;
+    }
 }
