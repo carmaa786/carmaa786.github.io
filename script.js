@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const navbar = document.querySelector('.navbar');
         const hero = document.querySelector('.hero');
         const heroContent = document.querySelector('.hero-content');
-        if (heroContent) heroContent.style.willChange = 'transform, opacity';
+        if (heroContent) heroContent.style.willChange = 'auto';
         
         let ticking = false;
         const heroHeight = hero ? hero.offsetHeight : 0;
@@ -28,9 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.requestAnimationFrame(() => {
                     const scrolled = window.pageYOffset;
                     if (navbar) navbar.classList.toggle('scrolled', scrolled > 100);
-                    if (hero && scrolled < heroHeight && heroContent) {
-                        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-                        heroContent.style.opacity = 1 - (scrolled / heroHeight) * 0.8;
+                    if (hero && heroContent) {
+                        if (scrolled < heroHeight) {
+                            if (heroContent.style.willChange !== 'transform, opacity') {
+                                heroContent.style.willChange = 'transform, opacity';
+                            }
+                            heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                            heroContent.style.opacity = 1 - (scrolled / heroHeight) * 0.7;
+                        } else {
+                            heroContent.style.transform = '';
+                            heroContent.style.opacity = '';
+                            heroContent.style.willChange = 'auto';
+                        }
                     }
                     ticking = false;
                 });
@@ -116,11 +125,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const grid = document.querySelector('.services-grid');
             if (grid && window.innerWidth <= 768) {
                 let pos = 0;
-                setInterval(() => {
-                    const w = grid.querySelector('.service-card')?.offsetWidth || 300;
-                    pos = (pos + w + 20 >= grid.scrollWidth - grid.clientWidth) ? 0 : pos + w + 20;
-                    grid.scrollTo({ left: pos, behavior: 'smooth' });
-                }, 4000);
+                let carouselTimer = null;
+                const startCarousel = () => {
+                    if (carouselTimer) return;
+                    carouselTimer = setInterval(() => {
+                        const w = grid.querySelector('.service-card')?.offsetWidth || 300;
+                        pos = (pos + w + 20 >= grid.scrollWidth - grid.clientWidth) ? 0 : pos + w + 20;
+                        grid.scrollTo({ left: pos, behavior: 'smooth' });
+                    }, 4000);
+                };
+                const stopCarousel = () => {
+                    if (carouselTimer) {
+                        clearInterval(carouselTimer);
+                        carouselTimer = null;
+                    }
+                };
+                const carouselObserver = new IntersectionObserver((entries) => {
+                    entries[0].isIntersecting ? startCarousel() : stopCarousel();
+                }, { threshold: 0.1 });
+                carouselObserver.observe(grid);
             }
         }
     ];
