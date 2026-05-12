@@ -43,8 +43,8 @@
 
 @media (max-width: 768px) {
   .navbar-carmaa-logo-img {
-    height: 32px !important;
-    max-width: 130px !important;
+    height: 42px !important;
+    max-width: 160px !important;
     width: auto !important;
   }
 }

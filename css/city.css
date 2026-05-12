@@ -2219,3 +2219,35 @@ a:hover {
         display: none !important;
     }
 }
+
+/* Fix comparison table mobile padding */
+@media (max-width: 768px) {
+    .comparison-table-container {
+        padding: 0 1rem !important;
+        margin: 1.5rem 0 !important;
+        overflow-x: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .comparison-table {
+        min-width: 480px !important;
+        font-size: 0.85rem !important;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px 10px !important;
+        font-size: 0.82rem !important;
+    }
+}
+
+/* Fix heading size inconsistency across city page sections */
+@media (max-width: 768px) {
+    .benefit-left h2,
+    .commitment-quality-left-header h2,
+    .city-call-to-action-heading,
+    .city-why-choose-heading {
+        font-size: 1.5rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 12px !important;
+    }
+}
