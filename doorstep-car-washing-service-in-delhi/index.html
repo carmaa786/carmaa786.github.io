@@ -2,17 +2,18 @@
 <html lang="en-IN">
 
 <head>
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preload" as="image" href="/assets/header-img.jpg" fetchpriority="high">
 <link rel="stylesheet" href="/css/city.css"/>
-<link rel="stylesheet" href="/css/service.css"/>
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/aboutus.css"/>
-<link rel="stylesheet" href="/css/homepage.css"/>
-<link rel="stylesheet" href="/css/modal.css">
 <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
+<link rel="stylesheet" href="/css/common.css"/>
+<link rel="stylesheet" href="/css/service.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/service.css"></noscript>
+<link rel="stylesheet" href="/css/modal.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/modal.css"></noscript>
+<link rel="stylesheet" href="/css/aboutus.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/aboutus.css"></noscript>
+<link rel="stylesheet" href="/css/homepage.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/homepage.css"></noscript>
 
 
     <meta charset="UTF-8">
@@ -50,18 +51,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .servicesI {
             cursor: pointer;
@@ -99,14 +91,20 @@
         }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
     <script src="/js/rightClickDisable.js"></script>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'AW-16789669575');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16789669575';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'AW-16789669575');
+      });
     </script>
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;" class="whatsapp-icon-container">
         <a href="https://api.whatsapp.com/send?phone=917042555401" class="no-underline" target="_blank">
@@ -352,7 +350,7 @@
         <h1>Premium Doorstep Car Wash in Delhi</h1>
         <p class="header-sub-text">Experience eco-friendly, RWA-compliant car care at your parking spot.</p>
         <div class="header-cta-row">
-            <button class="open-booking-modal btn-main">BOOK NOW</button>
+            <button class="open-booking-modal btn-main" aria-label="Book a doorstep car wash">BOOK NOW</button>
             <div class="header-call">
                 <span>Or Call:</span>
                 <a href="tel:+917042555401">+91 70425 55401</a>
@@ -480,26 +478,26 @@
               <p class="desc">Delhi, a city of historical grandeur and intense urban pressure, demands a level of car care that is both resilient and refined. At Carmaa, we provide a premium car washing service in Delhi that is engineered to combat the capital's unique environmental stresses—from the fine PM2.5 dust and industrial smog to the abrasive road grime accumulated on the <strong>Ring Road and Outer Ring Road</strong>. Our services ensure your vehicle remains a pristine sanctuary amidst the city's chaotic energy.
               </p>
               <ul class="desc">
-                  <div class="our-services-section-city-right-points">
+                  <li class="our-services-section-city-right-points">
                       <strong>1. Boutique Doorstep Car Cleaning:</strong> 
                       <p>Avoid the grueling weekend wait times at local workshops in <strong>South Extension or Lajpat Nagar</strong>. Our mobile detailing units bring a world-class workshop experience directly to your residence in <strong>Vasant Vihar, Greater Kailash, or Punjabi Bagh</strong>. We provide a bespoke cleaning service that respects your privacy and schedule, ensuring your car is boardroom-ready without you ever having to navigate Delhi's infamous traffic.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>2. Eco-Luxe Waterless Car Wash:</strong> 
                       <p>In the water-conscious neighborhoods of <strong>Lutyens' Delhi</strong> and high-rise clusters of <strong>Dwarka</strong>, traditional washing is often restricted. Our specialized <a href="/full-car-wash-service/">waterless car wash service in Delhi</a> uses proprietary polymer encapsulation technology. This method lifts grime safely without needing running water, leaving your driveway dry and your car protected with a high-gloss finish. It is the most sophisticated and environmentally responsible way to maintain a car in the capital.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>3. Master Car Detailing & Paint Correction:</strong> 
                       <p>The capital's harsh seasonal shifts and high pollution levels can quickly oxidize your car’s paintwork. Our professional <a href="/car-detailing-services/">car detailing in Delhi</a> involves an intensive process of surface decontamination and multi-stage machine polishing. We use laboratory-grade sealants and waxes that create a hydrophobic barrier against Delhi's acidic pollutants, restoring the deep, mirror-like clarity of your vehicle's finish.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>4. Clinical Car Interior Cleaning:</strong> 
                       <p>With Delhi's air quality often hitting critical levels, your car’s cabin can trap a dangerous amount of fine dust and urban allergens. Our <a href="/interior-car-cleaning-service/">car interior cleaning in Delhi</a> utilizes medical-grade vacuuming and steam-extraction technology to sanitize every surface. We focus on AC vent purification and upholstery deep-cleaning, removing 99.9% of bacteria and fine particulates (PM2.5), ensuring the air inside your car is as pure as possible.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>5. Specialized Ceramic Shield Refresh:</strong> 
                       <p>For high-end vehicles in Delhi's luxury enclaves, we offer advanced <a href="/ceramic-coating-service/">ceramic refresh treatments</a> that maintain the integrity of existing coatings. These services involve chemical decontamination that removes industrial fallout and "hard water" deposits common in the NCR region. It’s a targeted maintenance session that ensures your car's protection remains absolute and its aesthetic remains peerless.</p>
-                  </div>
+                  </li>
               </ul>
               <p>Incubated at <strong>Graphic Era (TBI)</strong>, Carmaa brings a research-led, tech-enabled approach to car care in Delhi. Our technicians use pH-balanced products and high-GSM microfibers to ensure a swirl-free, professional finish every time. Whether it's a routine <strong>doorstep car wash in Delhi</strong> or comprehensive detailing, we deliver excellence at your location, preserving the majesty of your vehicle.
               </p>
@@ -549,7 +547,7 @@
                 <h2 class="city-call-to-action-heading">Book the Best Car Washing Service in Delhi Today!</h2>
                 <p class="city-call-to-action-para">Whether you need a quick, one-time car wash service in Delhi or prefer the convenience of a regular doorstep car wash in Delhi, Carmaa has you covered. Our professional and eco-friendly services are designed to fit seamlessly into your schedule, providing reliable and top-quality car care wherever you are. Don’t settle for less—give your car the treatment it deserves with Carmaa’s premium car washing service in Delhi. Book now and enjoy a spotless, well-maintained vehicle without any hassle.
                 </p>
-                <button class=" open-booking-modal city-call-to-action-btn-component">BOOK NOW</button>
+                <button class=" open-booking-modal city-call-to-action-btn-component" aria-label="Book a doorstep car wash">BOOK NOW</button>
             </div>
         </div>
     </section>
@@ -1183,23 +1181,6 @@
           });
       </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $(document).ready(function () {
-            $('.slider1').slick({
-                infinite: true,
-                dots: true,
-                speed: 300,
-                draggable: false
-            });
-        });
-    </script>
     <script type="module">
           import { CTAApi } from '/js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {

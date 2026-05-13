@@ -2,17 +2,18 @@
 <html lang="en-IN">
 
 <head>
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preload" as="image" href="/assets/header-img.jpg" fetchpriority="high">
 <link rel="stylesheet" href="/css/city.css"/>
-<link rel="stylesheet" href="/css/service.css"/>
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/aboutus.css"/>
-<link rel="stylesheet" href="/css/homepage.css"/>
-<link rel="stylesheet" href="/css/modal.css">
 <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
+<link rel="stylesheet" href="/css/common.css"/>
+<link rel="stylesheet" href="/css/service.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/service.css"></noscript>
+<link rel="stylesheet" href="/css/modal.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/modal.css"></noscript>
+<link rel="stylesheet" href="/css/aboutus.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/aboutus.css"></noscript>
+<link rel="stylesheet" href="/css/homepage.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/homepage.css"></noscript>
 
 
     <meta charset="UTF-8">
@@ -50,18 +51,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .servicesI {
             cursor: pointer;
@@ -99,14 +91,20 @@
         }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
     <script src="/js/rightClickDisable.js"></script>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'AW-16789669575');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16789669575';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'AW-16789669575');
+      });
     </script>
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;" class="whatsapp-icon-container">
         <a href="https://api.whatsapp.com/send?phone=917042555401" class="no-underline" target="_blank">
@@ -416,7 +414,7 @@
         <h1>Premium Doorstep Car Wash in Faridabad</h1>
         <p class="header-sub-text">Industrial-grade protection for Faridabad’s modern car owners.</p>
         <div class="header-cta-row">
-            <button class="open-booking-modal btn-main">BOOK NOW</button>
+            <button class="open-booking-modal btn-main" aria-label="Book a doorstep car wash">BOOK NOW</button>
             <div class="header-call">
                 <span>Or Call:</span>
                 <a href="tel:+917042555401">+91 70425 55401</a>
@@ -543,26 +541,26 @@
               <p class="desc">As Faridabad transforms from an industrial powerhouse into a modern residential hub, the needs for car care have evolved. At Carmaa, we provide a premium car washing service in Faridabad that balances industrial-strength cleaning with delicate detailing precision. We understand that a car parked in <strong>Greater Faridabad (Neharpar)</strong> faces different challenges than one in the heart of <strong>NIT</strong>. Our services are engineered to remove the specific metallic fallout and heavy dust prevalent in the city's air.
               </p>
               <ul class="desc">
-                  <div class="our-services-section-city-right-points">
+                  <li class="our-services-section-city-right-points">
                       <strong>1. Neighborhood Doorstep Car Cleaning:</strong> 
                       <p>Skip the hassle of driving through the congested stretches of <strong>Mathura Road</strong>. Our mobile detailing units bring a professional service center right to your independent floor in <strong>Sector 15</strong>, <strong>Sainik Colony</strong>, or your high-rise apartment in <strong>Sector 77</strong>. We provide a fully self-sufficient cleaning experience that saves you hours of travel time, ensuring your vehicle stays pristine without you leaving your home.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>2. Society-Safe Waterless Car Wash:</strong> 
                       <p>In modern gated communities like <strong>BPTP Park 81</strong> or <strong>Omaxe New Heights</strong>, water conservation is a priority. Our proprietary <a href="/full-car-wash-service/">waterless car wash service in Faridabad</a> uses high-lubricity cleaning agents that encapsulate grime and industrial soot safely. This mess-free method ensures zero water runoff in your parking area, making it 100% compliant with RWA guidelines while delivering a superior shine compared to traditional hose-washing.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>3. Industrial-Grade Car Detailing & Surface Care:</strong> 
                       <p>Faridabad’s unique industrial environment often leaves microscopic metallic particles on your car’s paint, which can lead to rust and dullness. Our professional <a href="/car-detailing-services/">car detailing in Faridabad</a> includes deep decontamination processes and machine polishing. We apply protective sealants that create a sacrificial layer against the city’s harsh elements, restoring your car's gloss and protecting its structural integrity.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>4. Sanitized Car Interior Cleaning:</strong> 
                       <p>The interior of your car can easily accumulate industrial dust and fine allergens. Our <a href="/interior-car-cleaning-service/">car interior cleaning in Faridabad</a> involves deep-extraction vacuuming and high-temperature steam sanitization. We focus on neutralizing odors and removing 99.9% of bacteria from upholstery, carpets, and dashboard surfaces. We ensure that your car’s cabin remains a fresh, healthy, and hygienic space for your daily commute.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>5. Specialized Anti-Corrosion Coatings:</strong> 
                       <p>Given the industrial context of Faridabad, we offer specialized protective coatings that guard against chemical fallout and "hard water" marks from groundwater supplies. These hydrophobic layers make routine maintenance much easier and ensure that your car's paint remains shielded from the corrosive elements found in the urban atmosphere. It’s the ultimate protection for the long-term value of your vehicle.</p>
-                  </div>
+                  </li>
               </ul>
               <p>Backed by our incubation at <strong>Graphic Era (TBI)</strong>, Carmaa brings research-based, professional standards to every doorstep in Faridabad. Whether you need a routine <strong>doorstep car wash in Faridabad</strong> or a comprehensive detailing session, we are committed to delivering excellence at your location and convenience.
               </p>
@@ -614,7 +612,7 @@
                 <h2 class="city-call-to-action-heading">Book the Best Car Washing Service in Faridabad Today!</h2>
                 <p class="city-call-to-action-para">Whether you need a quick, one-time car wash service in Faridabad or prefer the convenience of a regular doorstep car wash in Faridabad, Carmaa has you covered. Our professional and eco-friendly services are designed to fit seamlessly into your schedule, providing reliable and top-quality car care wherever you are. Don’t settle for less—give your car the treatment it deserves with Carmaa’s premium car washing service in Faridabad. Book now and enjoy a spotless, well-maintained vehicle without any hassle.
                 </p>
-                <button class=" open-booking-modal city-call-to-action-btn-component">BOOK NOW</button>
+                <button class=" open-booking-modal city-call-to-action-btn-component" aria-label="Book a doorstep car wash">BOOK NOW</button>
             </div>
         </div>
     </section>
@@ -1252,23 +1250,6 @@
           });
       </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $(document).ready(function () {
-            $('.slider1').slick({
-                infinite: true,
-                dots: true,
-                speed: 300,
-                draggable: false
-            });
-        });
-    </script>
     <script type="module">
           import { CTAApi } from '/js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {

@@ -2,17 +2,18 @@
 <html lang="en-IN">
 
 <head>
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preload" as="image" href="/assets/header-img.jpg" fetchpriority="high">
 <link rel="stylesheet" href="/css/city.css"/>
-<link rel="stylesheet" href="/css/service.css"/>
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/aboutus.css"/>
-<link rel="stylesheet" href="/css/homepage.css"/>
-<link rel="stylesheet" href="/css/modal.css">
 <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
+<link rel="stylesheet" href="/css/common.css"/>
+<link rel="stylesheet" href="/css/service.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/service.css"></noscript>
+<link rel="stylesheet" href="/css/modal.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/modal.css"></noscript>
+<link rel="stylesheet" href="/css/aboutus.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/aboutus.css"></noscript>
+<link rel="stylesheet" href="/css/homepage.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/homepage.css"></noscript>
 
 
     <meta charset="UTF-8">
@@ -50,18 +51,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .servicesI {
             cursor: pointer;
@@ -99,14 +91,20 @@
         }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
     <script src="/js/rightClickDisable.js"></script>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'AW-16789669575');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16789669575';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'AW-16789669575');
+      });
     </script>
 
     <script type="application/ld+json">
@@ -409,7 +407,7 @@
         <h1>Premium Doorstep Car Wash in Gurgaon</h1>
         <p class="header-sub-text">RWA-Compliant, waterless car care for the Millennium City.</p>
         <div class="header-cta-row">
-            <button class="open-booking-modal btn-main">BOOK NOW</button>
+            <button class="open-booking-modal btn-main" aria-label="Book a doorstep car wash">BOOK NOW</button>
             <div class="header-call">
                 <span>Or Call:</span>
                 <a href="tel:+917042555401">+91 70425 55401</a>
@@ -533,26 +531,26 @@
               <p class="desc">Gurgaon, the Millennium City, is a hub of high-performance lifestyles where every second counts. At Carmaa, we provide a car washing service in Gurgaon that mirrors this efficiency. We understand that a car in <strong>Cyber City</strong> or <strong>Golf Course Road</strong> isn't just a vehicle—it's a reflection of professional success. That is why we have engineered our service suite to handle the specific environmental demands of Gurgaon, from the heavy construction dust in <strong>New Gurgaon</strong> to the abrasive pollutants found along the <strong>NH-48 corridor</strong>.
               </p>
               <ul class="desc">
-                  <div class="our-services-section-city-right-points">
+                  <li class="our-services-section-city-right-points">
                       <strong>1. Executive Doorstep Car Cleaning:</strong> 
                       <p>Don't let your car's hygiene be a victim of your busy schedule. Whether you are parked in a corporate basement in <strong>Sector 44</strong> or a luxury villa in <strong>DLF Phase 1</strong>, our mobile detailing units bring a world-class workshop to your doorstep. We specialize in executive-grade cleaning that ensures your vehicle is boardroom-ready, saving you the 2-3 hours typically lost in Gurgaon's weekend workshop traffic.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>2. Zero-Mess Waterless Car Wash:</strong> 
                       <p>In high-density societies like <strong>M3M Golf Estate</strong> or <strong>DLF The Crest</strong>, traditional washing is often restricted due to water conservation and basement maintenance rules. Our proprietary <a href="/full-car-wash-service/">waterless car wash service in Gurgaon</a> uses advanced polymer encapsulation. This technology lifts dirt away without needing a single bucket of water, leaving your parking spot dry and your RWA happy. It’s the most sophisticated and eco-safe way to maintain a car in Gurgaon.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>3. Professional Car Detailing & Paint Restoration:</strong> 
                       <p>Gurgaon's harsh urban heat and dust can quickly strip away your car’s factory shine. Our professional <a href="/car-detailing-services/">car detailing in Gurgaon</a> involves a multi-stage process of paint decontamination and machine polishing. We use laboratory-grade sealants that provide a hydrophobic barrier against the city's acidic pollutants, ensuring that your car's finish remains deep, glossy, and resilient against environmental aging.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>4. Deep-Extraction Car Interior Cleaning:</strong> 
                       <p>With high levels of road dust and urban allergens, your car’s cabin can become a health hazard. Our <a href="/interior-car-cleaning-service/">car interior cleaning in Gurgaon</a> utilizes high-power vacuuming and steam-sanitization to deep-clean upholstery, carpets, and AC vents. We remove 99.9% of bacteria and fine dust particles, ensuring the air inside your vehicle is as clean as a modern Gurgaon office space.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>5. Ceramic & Nano-Coating Solutions:</strong> 
                       <p>For long-term protection, we offer specialized <a href="/ceramic-coating-service/">ceramic coatings</a> that are essential for the Gurgaon climate. These coatings prevent "hard water" etching from society water supplies and provide a shield against the intense UV rays that cause paint fading. It's a one-time investment that keeps your car looking new for years while making routine maintenance effortless.</p>
-                  </div>
+                  </li>
               </ul>
         </section>
         <h2 class="location-download-heading">Install the <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" class="carmaa-app-download-heading" target="_blank">CARMAA APP</a> today and book car wash, repair, and detailing services in just a few taps!</h2>
@@ -598,7 +596,7 @@
                 <h2 class="city-call-to-action-heading">Book the Best Car Washing Service in Gurgaon Today!</h2>
                 <p class="city-call-to-action-para">Whether you need a quick, one-time car wash service in Gurgaon or prefer the convenience of a regular doorstep car wash in Gurgaon, Carmaa has you covered. Our professional and eco-friendly services are designed to fit seamlessly into your schedule, providing reliable and top-quality car care wherever you are. Don’t settle for less—give your car the treatment it deserves with Carmaa’s premium car washing service in Gurgaon. Book now and enjoy a spotless, well-maintained vehicle without any hassle.
                 </p>
-                <button class=" open-booking-modal city-call-to-action-btn-component">BOOK NOW</button>
+                <button class=" open-booking-modal city-call-to-action-btn-component" aria-label="Book a doorstep car wash">BOOK NOW</button>
             </div>
         </div>
     </section>
@@ -1225,23 +1223,6 @@
           });
       </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $(document).ready(function () {
-            $('.slider1').slick({
-                infinite: true,
-                dots: true,
-                speed: 300,
-                draggable: false
-            });
-        });
-    </script>
     <script type="module">
           import { CTAApi } from '/js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {

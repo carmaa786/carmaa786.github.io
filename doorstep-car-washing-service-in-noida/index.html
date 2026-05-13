@@ -2,9 +2,6 @@
 <html lang="en-IN">
 
 <head>
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preload" as="image" href="/assets/header-img.jpg" fetchpriority="high">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,28 +22,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 <link rel="stylesheet" href="/css/city.css"/>
-<link rel="stylesheet" href="/css/service.css"/>
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/aboutus.css"/>
-<link rel="stylesheet" href="/css/homepage.css"/>
-<link rel="stylesheet" href="/css/modal.css">
 <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
+<link rel="stylesheet" href="/css/common.css"/>
+<link rel="stylesheet" href="/css/service.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/service.css"></noscript>
+<link rel="stylesheet" href="/css/modal.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/modal.css"></noscript>
+<link rel="stylesheet" href="/css/aboutus.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/aboutus.css"></noscript>
+<link rel="stylesheet" href="/css/homepage.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/homepage.css"></noscript>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .servicesI {
             cursor: pointer;
@@ -84,14 +76,20 @@
         }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16789669575"></script>
     <script src="/js/rightClickDisable.js"></script>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'AW-16789669575');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16789669575';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'AW-16789669575');
+      });
     </script>
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;" class="whatsapp-icon-container">
         <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
@@ -336,7 +334,7 @@
         <h1>Premium Doorstep Car Wash in Noida</h1>
         <p class="header-sub-text">Eco-friendly, RWA-compliant detailing delivered to your parking spot.</p>
         <div class="header-cta-row">
-            <button class="open-booking-modal btn-main">BOOK NOW</button>
+            <button class="open-booking-modal btn-main" aria-label="Book a doorstep car wash">BOOK NOW</button>
             <div class="header-call">
                 <span>Or Call:</span>
                 <a href="tel:+917042555401">+91 70425 55401</a>
@@ -476,7 +474,7 @@
         <div class="parallex-cta-inner-city">
            <h4>Book the Best Car Washing Service in Noida Today!</h4>
            <p>Whether you need a quick, one-time car wash service in Noida or prefer the convenience of a regular doorstep car wash in Noida, Carmaa has you covered. Our professional and eco-friendly services are designed to fit seamlessly into your schedule, providing reliable and top-quality car care wherever you are. Don’t settle for less—give your car the treatment it deserves with Carmaa’s premium car washing service in Noida. Book now and enjoy a spotless, well-maintained vehicle without any hassle.</p>
-           <button class=" open-booking-modal hero-section-btn2">Book Now</button>
+           <button class=" open-booking-modal hero-section-btn2" aria-label="Book a doorstep car wash">Book Now</button>
         </div>
     </section>
     <section class="city-benefits-section">
@@ -541,26 +539,26 @@
               <p class="desc">At Carmaa, we recognize that every car in Noida has a different story—from the daily commuters on the <strong>Noida-Greater Noida Expressway</strong> to luxury vehicles parked in the premium basements of <strong>Sector 150</strong>. Our car washing service in Noida is designed to provide more than just a surface clean; we provide a restoration experience that preserves your vehicle's value. We have optimized our 44,000+ car cleaning insights to build a service menu that addresses Noida's specific environmental challenges, such as construction dust and industrial smog.
               </p>
               <ul class="desc">
-                  <div class="our-services-section-city-right-points">
+                  <li class="our-services-section-city-right-points">
                       <strong>1. Hyper-Local Doorstep Car Cleaning:</strong> 
                       <p>Stop wasting your weekends in the congested lanes of <strong>Sector 10</strong> or <strong>Sector 16</strong>. Our mobile detailing units are fully self-sufficient and reach your location in <strong>Sector 62</strong>, <strong>Sector 137</strong>, or <strong>Greater Noida</strong> with all the necessary specialized equipment. We bring the professional workshop experience to your driveway, allowing you to focus on your work or family while we restore your car's shine.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>2. RWA-Compliant Waterless Car Wash:</strong> 
                       <p>Most modern high-rise societies in Noida, like <strong>ATS One Hamlet</strong> or <strong>Supertech Ecociti</strong>, have strict prohibitions on traditional hose-washing to prevent water wastage and basement flooding. Our proprietary <a href="/full-car-wash-service/">waterless car wash service in Noida</a> uses high-lubricity polymers that safely encapsulate dirt particles, lifting them away without a single drop of water hitting the floor. It is the most sustainable and society-friendly way to maintain a luxury vehicle.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>3. Precision Car Detailing & Paint Correction:</strong> 
                       <p>Noida's extreme summers and industrial pollutants can quickly oxidize your car’s clear coat, making it look dull and aged. Our professional <a href="/car-detailing-services/">car detailing in Noida</a> includes deep paint decontamination, machine polishing, and protective waxing. We use laboratory-grade products to ensure that your car doesn't just look clean, but stays protected against the harsh UV rays of the NCR region.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>4. Anti-Allergen Car Interior Cleaning:</strong> 
                       <p>With high AQI levels often recorded in the Noida-Delhi corridor, the interior of your car can become a trap for fine dust and pollutants. Our <a href="/interior-car-cleaning-service/">car interior cleaning in Noida</a> involves deep vacuuming, steam sanitization of upholstery, and dashboard conditioning. We focus on every corner, including AC vents and roof linings, to ensure that the air you breathe inside your car is fresh, clean, and free of allergens.</p>
-                  </div>
-                  <div class="our-services-section-city-right-points">
+                  </li>
+                  <li class="our-services-section-city-right-points">
                       <strong>5. Specialized Ceramic & Surface Coating:</strong> 
                       <p>For those looking for long-term protection, we offer advanced <a href="/ceramic-coating-service/">Ceramic & Surface Coating</a> solutions. These hydrophobic layers are essential for vehicles in Noida, as they prevent "hard water" marks from society borewell water and provide a shield against the acidic pollutants found in industrial zones like <strong>Phase II</strong>. Your car will stay cleaner for longer and will be much easier to maintain.</p>
-                  </div>
+                  </li>
               </ul>
               <p>Choosing Carmaa means choosing a service that is incubated at <strong>Graphic Era (TBI)</strong>, ensuring that every technique we use is backed by research and professional standards. Whether you are looking for a routine <strong>doorstep car wash in Noida</strong> or a specialized restoration, we deliver excellence at your convenience.
               </p>
@@ -629,7 +627,7 @@
                 <h2 class="city-call-to-action-heading">Book the Best Car Washing Service in Noida Today!</h2>
                 <p class="city-call-to-action-para">Whether you need a quick, one-time car wash service in Noida or the convenience of regular doorstep car wash in Noida, Carmaa is the ideal choice. Our professional, eco-friendly services are designed to fit your schedule, providing reliable and high-quality car care right at your doorstep. Don’t settle for less—give your car the attention it deserves with Carmaa’s premium car washing service in Noida. Book now and enjoy a spotless, well-maintained vehicle without any hassle.
                 </p>
-                <button class=" open-booking-modal city-call-to-action-btn-component">BOOK NOW</button>
+                <button class=" open-booking-modal city-call-to-action-btn-component" aria-label="Book a doorstep car wash">BOOK NOW</button>
             </div>
         </div>
     </section>
@@ -1192,23 +1190,6 @@
         <!-- Load reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $(document).ready(function () {
-            $('.slider1').slick({
-                infinite: true,
-                dots: true,
-                speed: 300,
-                draggable: false
-            });
-        });
-    </script>
     <script type="module">
           import { CTAApi } from '/js/external-integration.js';
         document.getElementById('modal-booking-btn').addEventListener('click', function (event) {
