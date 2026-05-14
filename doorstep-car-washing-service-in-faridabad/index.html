@@ -387,7 +387,7 @@
         </div>
     </div>
 
-    <div id="navbar-placeholder" class="navbar-sticky-container">
+    <div id="navbar-placeholder" class="navbar-sticky-container" style="height: 80px; min-height: 80px; contain: layout size;">
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           fetch("/components/navbar.html")
@@ -978,13 +978,20 @@
         items.forEach((item) => item.addEventListener('click', toggleAccordion));
     </script>
 
-    <div id="footer">
+    <div id="footer" style="min-height: 400px; content-visibility: auto;">
         <script>
-            fetch('/components/footer3.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
+            const loadCityFooter = () => {
+                fetch('/components/footer3.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer').innerHTML = data;
+                    });
+            };
+            if (window.requestIdleCallback) {
+                requestIdleCallback(loadCityFooter);
+            } else {
+                setTimeout(loadCityFooter, 500);
+            }
 
     document.addEventListener("DOMContentLoaded", function () {
     let presentYear = new Date().getFullYear();
