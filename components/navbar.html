@@ -104,8 +104,14 @@
 
   @media (max-width: 1150px) and (min-width: 0px) {
     .toggle {
-      display: inline;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      background: transparent;
+      border: none;
     }
   }
 
@@ -440,11 +446,9 @@
         class="toggle navbar-toggle-menu"
         id="toggle"
         style="margin-top: 0px"
+        aria-label="Toggle Menu"
       >
-        <ion-icon
-          name="menu"
-          style="width: 30px; height: 30px; color: #0b4c9d"
-        ></ion-icon>
+        <i class="fa-solid fa-bars" style="font-size: 24px; color: #0b4c9d"></i>
       </button>
     </div>
   </div>

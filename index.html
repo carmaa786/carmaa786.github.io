@@ -5,6 +5,7 @@
     <link rel="canonical" href="https://carmaacarcare.com/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preload" as="image" href="assets/hero/hero_car_detailing_desktop_480w.webp" media="(max-width: 480px)" fetchpriority="high">
     <link rel="preload" as="image" href="assets/hero/hero_car_detailing_desktop_768w.webp" media="(min-width: 481px) and (max-width: 768px)" fetchpriority="high">
     <link rel="preload" as="image" href="assets/hero/hero_car_detailing_desktop_1200w.webp" media="(min-width: 769px)" fetchpriority="high">
@@ -36,59 +37,36 @@
     <meta name="msvalidate.01" content="95A1E1E6B9B78B45E1A1A1A1A1A1A1A1" />
 
     <style>
-        :root { --primary: #1B4E9B; --primary-dark: #143d7a; --secondary: #28B097; --dark-bg: #FFFFFF; --text-main: #0F172A; --text-white: #FFFFFF; --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%); --font-main: 'Inter', sans-serif; --font-display: 'Oswald', sans-serif; --body-font: var(--font-main); --font: var(--font-main); }
+        :root { --primary: #1B4E9B; --primary-dark: #143d7a; --secondary: #28B097; --dark-bg: #FFFFFF; --text-main: #0F172A; --text-white: #FFFFFF; --gradient: linear-gradient(135deg, #1B4E9B 0%, #28B097 100%); --font-main: 'Inter', sans-serif; --font-display: 'Oswald', sans-serif; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); background: var(--dark-bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); }
+        .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); background: #020617; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-        .hero-bg img, .hero-bg video { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
-        .hero-bg video { opacity: 0; transition: opacity 0.8s ease; }
-        .hero-bg video.loaded { opacity: 1; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; aspect-ratio: 16 / 9; }
+        @media (max-width: 768px) { .hero-bg img { aspect-ratio: 9 / 16; } }
         .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.95) 90%, #020617 100%); }
         .hero-content { z-index: 1; max-width: 800px; padding: 0 20px; }
         @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: optional; }
         @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: optional; }
-        .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; letter-spacing: 1px; }
-        @media (max-width: 768px) { .hero h1 { font-size: clamp(1.6rem, 7vw, 2.8rem) !important; letter-spacing: 0 !important; word-break: break-word !important; } }
-        .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; border: none; cursor: pointer; }
-        .btn-primary { background: var(--primary); color: white; box-shadow: 0 4px 14px rgba(27, 78, 155, 0.4); }
+        .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; letter-spacing: 1px; min-height: 1.1em; }
+        @media (max-width: 768px) { .hero h1 { font-size: clamp(1.6rem, 7vw, 2.8rem) !important; letter-spacing: 0 !important; } }
+        .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; min-height: 3em; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: transform 0.3s ease, background 0.3s ease; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; }
         .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-        .navbar-placeholder { min-height: 80px; }
-        
-        /* Critical Animations */
-        @keyframes fadeInUp { from { opacity: 0.01; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in-up { opacity: 0.01; animation: fadeInUp 0.8s ease forwards; }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
+        .navbar-placeholder { min-height: 80px; background: #fff; }
+        .section-header h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 5vw, 3rem); text-transform: uppercase; }
 
-        /* Rendering Optimization */
-        #services, #promises, #refer, #how-it-works, #aeo-faq, #story, #reviews, #transformation, .app-cta, #footer {
-            content-visibility: auto;
-            contain-intrinsic-size: 1px 1000px;
-            contain: layout paint;
-        }
-        #services { contain-intrinsic-size: 1px 800px; }
-        #promises { contain-intrinsic-size: 1px 600px; }
-        #refer { contain-intrinsic-size: 1px 400px; }
-        #how-it-works { contain-intrinsic-size: 1px 600px; }
-        #aeo-faq { contain-intrinsic-size: 1px 1500px; }
-        #story { contain-intrinsic-size: 1px 1200px; }
-        #reviews { contain-intrinsic-size: 1px 500px; }
-        #transformation { contain-intrinsic-size: 1px 600px; }
-        .app-cta { contain-intrinsic-size: 1px 400px; }
-        #footer { contain-intrinsic-size: 1px 600px; }
-        .service-card, .promise-card, .stat-item, .review-card {}
 
     </style>
 
 
-    <!-- Critical Font Preloading -->
+    
     <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/bundle.min.css?v=1.0.3" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.3"></noscript>
+    <link rel="stylesheet" href="/bundle.min.css?v=1.0.4" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.4"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
     <style>
@@ -101,175 +79,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
     <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://carmaacarcare.com/#organization",
-          "name": "Carmaa Car Care",
-          "url": "https://carmaacarcare.com/",
-          "logo": "https://carmaacarcare.com/assets/logo.png",
-          "sameAs": [
-            "https://www.facebook.com/carmaaofficialpage",
-            "https://www.instagram.com/carmaa_official",
-            "https://x.com/carmaa_official"
-          ]
-        },
-        {
-          "@type": "AutomotiveBusiness",
-          "@id": "https://carmaacarcare.com/#localbusiness",
-          "name": "Carmaa Car Care",
-          "url": "https://carmaacarcare.com/",
-          "image": "https://carmaacarcare.com/assets/logo.png",
-          "description": "Premium doorstep car wash and waterless detailing service.",
-          "telephone": "+91-7042555401",
-          "priceRange": "₹₹",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Tea Estate, Banjarawala",
-            "addressLocality": "Dehradun",
-            "addressRegion": "Uttarakhand",
-            "postalCode": "248001",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "30.3165",
-            "longitude": "78.0322"
-          },
-          "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi"],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Car Care Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "doorstep car wash"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "car detailing"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "ceramic coating"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "interior cleaning"
-                }
-              }
-            ]
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": {"@type": "Person", "name": "Ashutosh Chauhan"},
-              "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-              "reviewBody": "If you are searching for the best Doorstep car wash service in Dehradun, look no further than Carmaa."
-            }
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://carmaacarcare.com/#website",
-          "url": "https://carmaacarcare.com/",
-          "name": "Carmaa Car Care",
-          "publisher": {
-            "@id": "https://carmaacarcare.com/#organization"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is a waterless car wash really safe for my car's paint?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "It definitely is! At Carmaa, we use specialized lubricants that wrap around dirt particles and lift them away without scrubbing. It’s actually safer than traditional washing because it avoids those tiny 'swirl mark' scratches."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much time and water can I really save with Carmaa?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A lot! While a normal wash wastes 200+ liters, we use less than 2 liters. Plus, you save hours of driving and waiting at a garage since we come directly to your parking spot."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Why should I pick doorstep detailing instead of a local car wash?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "It's all about convenience and quality. You get professional-grade detailing while you relax at home. No traffic, no queues, and you can see exactly what products we’re using on your car."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I need to give your team any water or a power outlet?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not at all! Our service vans are like mobile workshops—they carry their own water and electricity. We just need your car keys and enough space to walk around the vehicle."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you clean my car in a narrow basement or a busy street?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, we can. Because our method is compact and doesn't involve splashing water everywhere, we’re able to work in tight spots where traditional washing just isn't possible."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if my car is really muddy? Does waterless still work?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our tech is great for everyday city dirt, dust, and rain spots. If your car is caked in heavy off-road mud, we might suggest a quick rinse first, but for 95% of cars, our method works perfectly."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I book a slot and how do I pay?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Just download the 'Carmaa Car Care' app! You can pick your time, track the technician, and pay securely using UPI, cards, or net banking—all in a few taps."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are your cleaning chemicals safe for kids and pets?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Safety is our priority. We use eco-friendly, non-toxic, and pH-neutral products. They’re tough on dirt but completely safe for your car’s interior and your family."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
+    
 
 </head>
 
 <body>
 
-    <div id="navbar-placeholder" style="height: 80px; min-height: 80px; position: relative; z-index: 100000; contain: layout size;"></div>
+    <div id="navbar-placeholder" class="navbar-placeholder" style="height: 80px; min-height: 80px; position: relative; z-index: 100000; contain: layout size;"></div>
     <script>
         // Defer navbar loading to idle time to prioritize hero render
         const loadNavbar = () => {
@@ -277,7 +93,15 @@
                 .then(r => r.text())
                 .then(h => {
                     const placeholder = document.getElementById("navbar-placeholder");
-                    if (placeholder) placeholder.innerHTML = h;
+                    if (placeholder) {
+                        placeholder.innerHTML = h;
+                        // Re-initialize toggle after fetch
+                        const toggle = document.getElementById("toggle");
+                        const menu = document.getElementById("menu");
+                        if (toggle && menu) {
+                            toggle.addEventListener("click", () => menu.classList.toggle("active"));
+                        }
+                    }
                 });
         };
         if (window.requestIdleCallback) {
@@ -402,7 +226,7 @@
                         <div class="avatar av-2 icon-avatar person-icon">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="avatar av-center"><img src="assets/logo.jpg" alt="Carmaa" width="50" height="50" loading="lazy" decoding="async"></div>
+                        <div class="avatar av-center"><img src="assets/logo.webp" alt="Carmaa" width="50" height="50" loading="lazy" decoding="async"></div>
                         <div class="avatar av-3 icon-avatar car-icon">
                             <i class="fa-solid fa-car-side"></i>
                         </div>
@@ -641,10 +465,10 @@
             </div>
 
             <div class="car-journey-container">
-                <!-- Journey Road -->
+                
                 <div class="journey-road"></div>
 
-                <!-- Scene 1: We Come To You -->
+                
                 <div class="journey-card reveal fade-up delay-1">
                     <div class="journey-visual scene-arrival-new">
                         <div class="car-dirty">
@@ -667,7 +491,7 @@
                     </div>
                 </div>
 
-                <!-- Scene 2: Relax & Trust -->
+                
                 <div class="journey-card reveal fade-up delay-2">
                     <div class="journey-visual scene-service-new">
                         <div class="car-service">
@@ -688,7 +512,7 @@
                     </div>
                 </div>
 
-                <!-- Scene 3: Showroom Finish -->
+                
                 <div class="journey-card reveal fade-up delay-3">
                     <div class="journey-visual scene-finish-new">
                         <div class="car-clean">
@@ -716,7 +540,7 @@
                 </div>
             </div>
 
-            <!-- New Infographic Stats Bar -->
+            
             <div class="infographic-stats reveal fade-up">
                 <div class="stat-item">
                     <div class="stat-icon"><i class="fa-solid fa-car-on"></i></div>
@@ -771,13 +595,13 @@
                 <p>See why thousands trust us with their premium vehicles.</p>
             </div>
 
-            <!-- Dynamic Reviews Slider Container -->
+            
             <div class="reviews-slider-container reveal fade-up delay-1" style="min-height: 300px;">
                 <div class="reviews-track" id="reviewsTrack">
-                    <!-- Reviews will be injected here by script.js -->
+                    
                 </div>
                 <div class="reviews-track" id="reviewsTrackDuplicate">
-                    <!-- Duplicate for infinite scroll effect -->
+                    
                 </div>
             </div>
 
@@ -840,6 +664,153 @@
         });
     </script>
     <noscript><img decoding="async" loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://carmaacarcare.com/#organization",
+          "name": "Carmaa Car Care",
+          "url": "https://carmaacarcare.com/",
+          "logo": "https://carmaacarcare.com/assets/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/carmaaofficialpage",
+            "https://www.instagram.com/carmaa_official",
+            "https://x.com/carmaa_official"
+          ]
+        },
+        {
+          "@type": "AutomotiveBusiness",
+          "@id": "https://carmaacarcare.com/#localbusiness",
+          "name": "Carmaa Car Care",
+          "url": "https://carmaacarcare.com/",
+          "image": "https://carmaacarcare.com/assets/logo.png",
+          "description": "Premium doorstep car wash and waterless detailing service.",
+          "telephone": "+91-7042555401",
+          "priceRange": "₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tea Estate, Banjarawala",
+            "addressLocality": "Dehradun",
+            "addressRegion": "Uttarakhand",
+            "postalCode": "248001",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "30.3165",
+            "longitude": "78.0322"
+          },
+          "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Car Care Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "doorstep car wash"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "car detailing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "ceramic coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "interior cleaning"
+                }
+              }
+            ]
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {"@type": "Person", "name": "Ashutosh Chauhan"},
+              "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+              "reviewBody": "If you are searching for the best Doorstep car wash service in Dehradun, look no further than Carmaa."
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://carmaacarcare.com/#website",
+          "url": "https://carmaacarcare.com/",
+          "name": "Carmaa Car Care",
+          "publisher": {
+            "@id": "https://carmaacarcare.com/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is a waterless car wash really safe for my car's paint?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It definitely is! At Carmaa, we use specialized lubricants that wrap around dirt particles and lift them away without scrubbing. It’s actually safer than traditional washing because it avoids those tiny 'swirl mark' scratches."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much time and water can I really save with Carmaa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A lot! While a normal wash wastes 200+ liters, we use less than 2 liters. Plus, you save hours of driving and waiting at a garage since we come directly to your parking spot."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why should I pick doorstep detailing instead of a local car wash?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It's all about convenience and quality. You get professional-grade detailing while you relax at home. No traffic, no queues, and you can see exactly what products we’re using on your car."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to give your team any water or a power outlet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not at all! Our service vans are like mobile workshops—they carry their own water and electricity. We just need your car keys and enough space to walk around the vehicle."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you clean my car in a narrow basement or a busy street?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we can. Because our method is compact and doesn't involve splashing water everywhere, we’re able to work in tight spots where traditional washing just isn't possible."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book a slot and how do I pay?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Just download the 'Carmaa Car Care' app! You can pick your time, track the technician, and pay securely using UPI, cards, or net banking—all in a few taps."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </body>
-
 </html>
+
