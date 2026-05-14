@@ -1529,6 +1529,7 @@ body {
     font-size: 0.9rem;
     display: flex;
     gap: 2px;
+    min-height: 16px;
 }
 
 .review-text {
@@ -1639,6 +1640,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
+    min-height: 180px;
 }
 
 /* Decorative background glow for stats */

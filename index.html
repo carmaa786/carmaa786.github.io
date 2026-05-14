@@ -66,19 +66,19 @@
         /* Rendering Optimization */
         #services, #promises, #refer, #how-it-works, #aeo-faq, #story, #reviews, #transformation, .app-cta, #footer {
             content-visibility: auto;
-            contain-intrinsic-size: 1px 1000px;
+            contain-intrinsic-size: auto 1000px;
             contain: layout paint;
         }
-        #services { contain-intrinsic-size: 1px 800px; }
-        #promises { contain-intrinsic-size: 1px 600px; }
-        #refer { contain-intrinsic-size: 1px 400px; }
-        #how-it-works { contain-intrinsic-size: 1px 600px; }
-        #aeo-faq { contain-intrinsic-size: 1px 1500px; }
-        #story { contain-intrinsic-size: 1px 1200px; }
-        #reviews { contain-intrinsic-size: 1px 500px; }
-        #transformation { contain-intrinsic-size: 1px 600px; }
-        .app-cta { contain-intrinsic-size: 1px 400px; }
-        #footer { contain-intrinsic-size: 1px 600px; }
+        #services { contain-intrinsic-size: auto 800px; }
+        #promises { contain-intrinsic-size: auto 600px; }
+        #refer { contain-intrinsic-size: auto 400px; }
+        #how-it-works { contain-intrinsic-size: auto 600px; }
+        #aeo-faq { contain-intrinsic-size: auto 1500px; }
+        #story { contain-intrinsic-size: auto 1200px; }
+        #reviews { contain-intrinsic-size: auto 500px; }
+        #transformation { contain-intrinsic-size: auto 600px; }
+        .app-cta { contain-intrinsic-size: auto 400px; }
+        #footer { contain-intrinsic-size: auto 600px; }
         .service-card, .promise-card, .stat-item, .review-card {}
 
     </style>
@@ -269,7 +269,7 @@
 
 <body>
 
-    <div id="navbar-placeholder" style="height: 80px; min-height: 80px; position: relative; z-index: 100000; contain: layout size;"></div>
+    <div id="navbar-placeholder" class="navbar-placeholder" style="height: 80px; min-height: 80px; position: relative; z-index: 100000; contain: layout size;"></div>
     <script>
         // Defer navbar loading to idle time to prioritize hero render
         const loadNavbar = () => {
