@@ -389,6 +389,11 @@ a:hover {
   font-family: var(--body-font);
   margin-bottom: 1.2rem;
   margin-top: 1.2rem;
+  list-style: none;
+  padding-left: 0;
+}
+.our-services-section-city-right-points {
+  list-style: none;
 }
 .our-services-section-city-right p {
   font-family: var(--body-font);
@@ -1138,6 +1143,7 @@ a:hover {
   }
   .our-services-section-city-right-points {
     margin-bottom: 0.5rem;
+    list-style: none;
   }
   .our-services-section-city-right-points strong {
     color: #fff;
@@ -1465,6 +1471,8 @@ a:hover {
     font-family: var(--body-font);
     margin-bottom: 1.2rem;
     margin-top: 1.2rem;
+    list-style: none;
+    padding-left: 0;
   }
   .our-services-section-city-right p {
     font-family: var(--body-font);
