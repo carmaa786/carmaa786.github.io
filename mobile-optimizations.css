@@ -14,9 +14,10 @@ body {
     width: 100%;
 }
 
-/* Smooth scrolling for better UX */
-html {
-    scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 /* Touch-friendly tap targets */
@@ -137,6 +138,7 @@ button,
    HERO SECTION MOBILE
    ======================================== */
 
+@media (max-width: 768px) {
     /* Hero Section Mobile - Enforcing Perfect Typography */
     .hero {
         min-height: 100vh;
@@ -153,6 +155,7 @@ button,
         width: 100%;
         max-width: 100%;
     }
+}
 
     @media (max-width: 768px) {
         .hero h1 {
@@ -179,6 +182,7 @@ button,
         }
     }
 
+@media (max-width: 768px) {
     .hero p {
         font-size: 1.05rem !important;
         line-height: 1.5 !important;
