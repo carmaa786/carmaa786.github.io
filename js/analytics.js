@@ -65,11 +65,19 @@
         window.addEventListener(event, initOnInteraction, { once: true, passive: true });
     });
 
-    // Fallback: Load after 4 seconds if no interaction
+    // Optimized Fallback: Load after 10 seconds if no interaction, using idle time
+    const scheduleFallback = () => {
+        if (window.requestIdleCallback) {
+            requestIdleCallback(() => setTimeout(loadScripts, 10000));
+        } else {
+            setTimeout(loadScripts, 10000);
+        }
+    };
+
     if (document.readyState === 'complete') {
-        setTimeout(loadScripts, 4000);
+        scheduleFallback();
     } else {
-        window.addEventListener('load', () => setTimeout(loadScripts, 4000));
+        window.addEventListener('load', scheduleFallback);
     }
 
     /**

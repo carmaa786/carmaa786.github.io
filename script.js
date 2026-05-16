@@ -14,6 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         document.querySelectorAll('.app-download-link').forEach(link => link.href = urls[deviceType]);
 
+        // --- WhatsApp Button Transformation (Critical) ---
+        const whatsappUrl = "https://wa.me/917042555401?text=Hi%20Carmaa,%20I'd%20like%20to%20book%20a%20car%20service.";
+        const cityButtons = document.querySelectorAll('.open-booking-modal');
+        cityButtons.forEach(btn => {
+            btn.classList.add('whatsapp-btn-city');
+            btn.innerHTML = `<img src="/assets/whatsapp.png" alt="WhatsApp" style="width:24px; height:24px; vertical-align:middle; margin-right:10px;"> WhatsApp Now`;
+        });
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.open-booking-modal');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(whatsappUrl, '_blank');
+            }
+        }, true);
+
         // Navbar & Hero Scroll (Hardware Accelerated)
         const navbar = document.querySelector('.navbar');
         const hero = document.querySelector('.hero');
@@ -62,11 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }, { threshold: 0.15 });
             revealElements.forEach(el => observer.observe(el));
         },
-        // Task 2: Reviews Rendering
+        // Task 2: Reviews Rendering (Deferred further to protect TBT)
         () => {
-            const track = document.getElementById('reviewsTrack');
-            const trackDup = document.getElementById('reviewsTrackDuplicate');
-            if (track && trackDup) {
+            const reviewsTarget = document.getElementById('reviewsTrack');
+            if (!reviewsTarget) return;
+
+            const renderReviews = () => {
+                const track = document.getElementById('reviewsTrack');
+                const trackDup = document.getElementById('reviewsTrackDuplicate');
+                if (!track || track.children.length > 0) return;
+
                 const reviews = [
                     { name: "Rahul Sharma", role: "Local Guide", text: "Absolutely game changer! Saved me 3 hours of waiting. Showroom quality finish.", stars: 5, initial: "R", bg: "#E0F2FE", color: "#0369A1" },
                     { name: "Priya Patel", role: "Local Guide", text: "The app is so easy to use. Spotless car while I was at the gym!", stars: 5, initial: "P", bg: "#FDF4FF", color: "#A21CAF" },
@@ -74,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { name: "Sneha Gupta", role: "Local Guide", text: "Best detailing service in Noida. Interior deep clean removed all stains.", stars: 5, initial: "S", bg: "#FFF7ED", color: "#C2410C" },
                     { name: "Vikram Singh", role: "Local Guide", text: "Finally a service that understands luxury cars. Fortuner handled with care.", stars: 5, initial: "V", bg: "#F0F9FF", color: "#0F766E" }
                 ];
+                
                 const frag = document.createDocumentFragment();
                 reviews.forEach(r => {
                     const card = document.createElement('div');
@@ -81,9 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.innerHTML = `<div class="review-header"><div class="reviewer-profile"><div class="reviewer-avatar" style="background:${r.bg};color:${r.color}">${r.initial}</div><div class="reviewer-info"><h4>${r.name}</h4><span>${r.role}</span></div></div><i class="fa-brands fa-google colored-google-icon"></i></div><div class="review-stars">${Array(r.stars).fill('<i class="fa-solid fa-star"></i>').join('')}</div><p class="review-text">${r.text}</p>`;
                     frag.appendChild(card);
                 });
+                
                 track.appendChild(frag.cloneNode(true));
-                trackDup.appendChild(frag);
-            }
+                if (trackDup) trackDup.appendChild(frag);
+            };
+
+            // Use IntersectionObserver to render reviews only when near them
+            const revObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    renderReviews();
+                    revObserver.disconnect();
+                }
+            }, { rootMargin: '200px' });
+            revObserver.observe(reviewsTarget);
         },
         // Task 3: Stats Animation
         () => {
