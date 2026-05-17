@@ -786,13 +786,7 @@ button,
 
 @media (max-width: 768px) {
 
-    /* GPU acceleration for smooth scrolling */
-    .hero-bg video,
-    .service-card,
-    .btn {
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-    }
+
 
     /* Optimize images */
     img {
@@ -1063,29 +1057,7 @@ button,
     text-shadow: 0 0 0 rgba(0,0,0,0.01) !important; 
 }
 
-/* --------------------------------------------------
-   FIX 2: Prevent 'Tiny Dots' (Image Collapsing)
-   Ensures images have a minimum presence and maintain aspect ratio.
-   -------------------------------------------------- */
-img {
-    min-width: 1px;
-    min-height: 1px;
-}
 
-/* Targeted fixes for components where images may shrink or distort */
-.service-card img,
-.benefit-element-img-wrapper img,
-.why-carmaa-card img,
-.our-services-section-city-left img,
-.story-scene img,
-.promises-grid .promise-card img,
-.avatar-network img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-}
 
 /* --------------------------------------------------
    FIX 3: Mobile Overlap Prevention
