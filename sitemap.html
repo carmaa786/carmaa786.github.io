@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
-    <link rel="canonical" href="https://carmaacarcare.com/sitemap.html/" />
+    <link rel="canonical" href="https://carmaacarcare.com/sitemap.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - CarMaa Car Care</title>
-    <meta name="description" content="HTML Sitemap for CarMaa Car Care. Explore our doorstep car washing services, locations, blogs, and other pages.">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Sitemap | Carmaa Car Care</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/service.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <script src="/js/rightClickDisable.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #fff; color: #333; margin: 0; padding: 0; }
         .sitemap-container { max-width: 1200px; margin: 40px auto; padding: 20px; }
         .sitemap-header { text-align: center; margin-bottom: 40px; }
-        .sitemap-header h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 10px; }
+        .sitemap-header h1 { font-size: 2.5rem; color: #1B4E9B; margin-bottom: 10px; }
         .sitemap-header p { font-size: 1.1rem; color: #666; }
         .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .sitemap-section { background: #f9f9f9; border-radius: 8px; padding: 25px; border-top: 4px solid #65c7d0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .sitemap-section h2 { font-size: 1.5rem; color: #333; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .sitemap-section h2 { font-size: 1.5rem; color: #1B4E9B; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
         .sitemap-list { list-style: none; padding: 0; margin: 0; }
         .sitemap-list li { margin-bottom: 12px; }
         .sitemap-list a { color: #0056b3; text-decoration: none; font-size: 1.05rem; transition: color 0.2s; }
-        .sitemap-list a:hover { color: #65c7d0; text-decoration: underline; }
+        .sitemap-list a:hover { color: #28B097; text-decoration: underline; }
     </style>
 </head>
+
 <body>
-    <div id="navbar-placeholder"></div>
+    <div class="topbar-section-common">
+        <div class="topbar-section-container">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img decoding="async" src="/assets/contactus/facebook.png" alt="car workshop near me" loading="eager" width="64" height="64"/></div></a>
+                <a href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img decoding="async" src="/assets/contactus/instagram.png" alt="car body shop near me" loading="eager" width="64" height="64"/></div></a>
+                <a href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"><img decoding="async" src="/assets/contactus/youtube.png" alt="car paint shop near me" loading="eager" width="64" height="64"/></div></a>
+                <a href="/blogs/"><div class="img-wrapper"><img decoding="async" src="/assets/home-page/topbar/blogger.png" alt="car blog" loading="eager" width="64" height="64"/></div></a>
+            </div>
+            <p id="topbar-text" style="color:#fff;font-weight:600;font-size:0.95rem;margin:0;">Bring your car's showroom shine back!</p>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="display:flex;align-items:center;gap:0.3rem">
+                    <img decoding="async" style="width:1.5rem;height:1.5rem" src="/assets/home-page/topbar/phone.png" alt="doorstep car wash" loading="eager" width="64" height="64"/>
+                    <a class="mobile-number-ref" href="tel:+917042555401"><p>+91 70425 55401</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar-placeholder" class="navbar-sticky-container">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("/components/navbar.html").then(r=>r.text()).then(html=>{
+                    document.getElementById("navbar-placeholder").innerHTML=html;
+                    document.getElementById("toggle").addEventListener("click",function(){document.getElementById("menu").classList.toggle("active");});
+                }).catch(e=>console.error(e));
+            });
+        </script>
+    </div>
+
     <div class="sitemap-container">
         <div class="sitemap-header">
             <h1>Site Map</h1>
@@ -40,6 +79,9 @@
                     <li><a href='/contactus/'>Contact Us</a></li>
                     <li><a href='/pricing/'>Pricing</a></li>
                     <li><a href='/blogs/'>Our Blogs</a></li>
+                    <li><a href='/faq/'>FAQ</a></li>
+                    <li><a href='/franchise/'>Franchise</a></li>
+                    <li><a href='/case-studies/'>Case Studies</a></li>
                 </ul>
             </div>
             
@@ -58,15 +100,20 @@
                     <li><a href='/doorstep-car-washing-service-in-delhi/'>Doorstep Car Washing in Delhi</a></li>
                     <li><a href='/doorstep-car-washing-service-in-gurgaon/'>Doorstep Car Washing in Gurgaon</a></li>
                     <li><a href='/doorstep-car-washing-service-in-faridabad/'>Doorstep Car Washing in Faridabad</a></li>
-                    <li><a href='/doorstep-car-washing-service-in-gaziabad/'>Doorstep Car Washing in Gaziabad</a></li>
+                    <li><a href='/doorstep-car-washing-service-in-gaziabad/'>Doorstep Car Washing in Ghaziabad</a></li>
                     <li><a href='/doorstep-car-decoration-service-in-dehradun/'>Car Decoration Service</a></li>
                     <li><a href='/best-car-mechanics-in-dehradun/'>Best Car Mechanics in Dehradun</a></li>
+                    <li><a href='/full-car-wash-service/'>Full Car Wash Service</a></li>
+                    <li><a href='/car-body-polish-and-car-waxing-service/'>Car Body Polish and Waxing</a></li>
+                    <li><a href='/glass-and-surface-coating-services/'>Glass and Surface Coating</a></li>
+                    <li><a href='/paint-protection-and-coating-services/'>Paint Protection and Coating</a></li>
                 </ul>
             </div>
             
             <div class="sitemap-section">
-                <h2>Our Blogs (Dehradun Focus)</h2>
+                <h2>Our Blogs & Policies</h2>
                 <ul class="sitemap-list">
+                    <li><a href='/blogs/why-you-shouldnt-wash-your-car-yourself/'>Why You Shouldn't Wash Your Car Yourself</a></li>
                     <li><a href='/blogs/b2b-fleet-car-washing-in-dehradun/'>B2B Fleet Car Washing in Dehradun</a></li>
                     <li><a href='/blogs/doorstep-car-decor-in-dehradun/'>Doorstep Car Decor in Dehradun</a></li>
                     <li><a href='/blogs/the-ultimate-doorstep-car-wash-service-provider-in-dehradun/'>Ultimate Doorstep Car Wash in Dehradun</a></li>
@@ -81,28 +128,22 @@
                     <li><a href='/blogs/save-money-with-preventive-car-maintenance/'>Save Money with Preventive Maintenance</a></li>
                     <li><a href='/blogs/car-servicing-myths-costing-you-thousands/'>Car Servicing Myths You Should Know</a></li>
                     <li><a href='/blogs/trust-signals-how-to-choose-a-reliable-doorstep-car-wash-service/'>How to Choose a Reliable Doorstep Car Wash</a></li>
+                    <li><a href='/privacy-policy/'>Privacy Policy</a></li>
+                    <li><a href='/terms-conditions/'>Terms and Conditions</a></li>
+                    <li><a href='/customer-terms/'>Customer Terms</a></li>
+                    <li><a href='/partner-terms/'>Partner Terms</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
     <div id="footer"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Navbar fetch
-            fetch("/components/navbar.html")
-                .then(r => r.text())
-                .then(h => document.getElementById("navbar-placeholder").innerHTML = h);
-
-            // Footer fetch
-            fetch("/components/footer3.html")
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch((error) => console.error("Error loading footer:", error));
+            fetch("/components/footer3.html").then(r=>r.text()).then(html=>{document.getElementById("footer").innerHTML=html;}).catch(e=>console.error(e));
         });
     </script>
 
-<script src='/script.js' defer></script>
+    <script src='/script.js' defer></script>
 </body>
 </html>

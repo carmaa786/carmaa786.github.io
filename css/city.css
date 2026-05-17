@@ -2259,3 +2259,40 @@ a:hover {
         margin-bottom: 12px !important;
     }
 }
+
+/* Premium WhatsApp Button for City Pages */
+.whatsapp-btn-city {
+    background-color: #25D366 !important;
+    color: white !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 1rem 2.5rem !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    min-width: 180px;
+    margin: 10px 0;
+}
+
+.whatsapp-btn-city:hover {
+    background-color: #128C7E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+}
+
+.whatsapp-btn-city i {
+    font-size: 1.2em;
+}
+
+/* Hide legacy hardcoded WhatsApp icons to prevent duplication with the new footer widget */
+.whatsapp-icon-container {
+    display: none !important;
+}

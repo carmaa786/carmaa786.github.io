@@ -1,5 +1,44 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # 301 Redirects for removed/broken blog pages
+    Redirect 301 /blogs/car-fluid-levels-beginners-guide/ /blogs/
+    Redirect 301 /blogs/car-maintenance-fluids-levels/ /blogs/
+    Redirect 301 /blogs/seasonal-car-care-guide/ /blogs/
+    Redirect 301 /blogs/detailing-preserves-resale-value/ /blogs/
+    Redirect 301 /blogs/eco-friendly-detailing-future/ /blogs/
+    Redirect 301 /blogs/environmental-impact-traditional-detergents/ /blogs/
+    Redirect 301 /blogs/essential-car-care-noida-dust/ /blogs/
+    Redirect 301 /blogs/evolution-car-aesthetics-detailing/ /blogs/
+    Redirect 301 /blogs/future-waterless-technology-global/ /blogs/
+    Redirect 301 /blogs/glass-coating-benefits-hydrophobic/ /blogs/
+    Redirect 301 /blogs/headlight-restoration-safety-visibility/ /blogs/
+    Redirect 301 /blogs/how-to-increase-car-resale-value/ /blogs/
+    Redirect 301 /blogs/importance-engine-bay-cleaning/ /blogs/
+    Redirect 301 /blogs/maintaining-clean-car-mussoorie-dust/ /blogs/
+    Redirect 301 /blogs/mobile-detailing-overtaking-static-workshops/ /blogs/
+    Redirect 301 /blogs/navigating-dehradun-monsoons-car-tips/ /blogs/
+    Redirect 301 /blogs/new-trends-hydrophobic-paint-protection/ /blogs/
+    Redirect 301 /blogs/odor-removal-secrets-persistent-smells/ /blogs/
+    Redirect 301 /blogs/paint-correction-vs-polishing/ /blogs/
+    Redirect 301 /blogs/pro-car-waxing-tips/ /blogs/
+    Redirect 301 /blogs/pro-interior-detailing-checklist/ /blogs/
+    Redirect 301 /blogs/reasons-doorstep-car-cleaning-dehradun/ /blogs/
+    Redirect 301 /blogs/rise-doorstep-services-automotive-sector/ /blogs/
+    Redirect 301 /blogs/steam-cleaning-vs-traditional-wash/ /blogs/
+    Redirect 301 /blogs/summer-maintenance-tips-protection/ /blogs/
+    Redirect 301 /blogs/top-road-trip-destinations-near-dehradun/ /blogs/
+    Redirect 301 /blogs/waterless-wash-scratch-safety/ /blogs/
+    Redirect 301 /blogs/waterless-wash-water-savings-dehradun/ /blogs/
+    Redirect 301 /blogs/why-sustainable-car-care-efficient/ /blogs/
+    Redirect 301 /blogs/winter-car-care-cold-climates/ /blogs/
+    
+    # 301 Redirects for city pages that were accidentally in /blogs/
+    Redirect 301 /blogs/doorstep-car-cleaning-service-noida/ /doorstep-car-washing-service-in-noida/
+    Redirect 301 /blogs/doorstep-car-washing-service-in-dehradun/ /doorstep-car-washing-service-in-dehradun/
+    Redirect 301 /blogs/doorstep-car-washing-service-in-gurgaon/ /doorstep-car-washing-service-in-gurgaon/
+    Redirect 301 /blogs/doorstep-car-washing-service-in-meerut/ /doorstep-car-washing-service-in-noida/
+
     # Enforce HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

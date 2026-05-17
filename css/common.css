@@ -2,7 +2,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400 600;
-  font-display: optional;
+  font-display: swap;
   src: url('/assets/fonts/inter.woff2') format('woff2');
 }
 
@@ -10,7 +10,7 @@
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 600;
-  font-display: optional;
+  font-display: swap;
   src: url('/assets/fonts/oswald-600.woff2') format('woff2');
 }
 
@@ -18,6 +18,16 @@
   --primary: #1B4E9B;
   --primary-dark: #143d7a;
   --secondary: #28B097;
+  --brand-blue: #1B4E9B;
+  --brand-blue-dark: #143d7a;
+  --brand-teal: #28B097;
+  --brand-navy: #0F2D5E;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --bg-surface: #F8FAFC;
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 2px 8px rgba(15, 45, 94, 0.08);
+  --shadow-md: 0 4px 20px rgba(15, 45, 94, 0.12);
   --primary-color: #1B4E9B; /* Legacy support */
   
   --font-main: 'Inter', sans-serif;
