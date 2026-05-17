@@ -292,6 +292,57 @@ a {
     height: 3rem;
 }
 
+/* ==========================================================================
+   Franchise Page Mobile Optimization (Why Partner With Us? Section)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .section-why-carmaa {
+    padding: 3.5rem 0 !important;
+  }
+
+  .why-carmaa-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .why-carmaa-container h2 {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .why-carmaa-container h2[style*="font-size: 40px"],
+  .why-carmaa-container h2[style*="font-size:40px"] {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .why-carmaa-card-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.5rem !important;
+    align-items: center !important;
+    margin-top: 3rem !important;
+    width: 100% !important;
+  }
+
+  .why-carmaa-card {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
+    padding: 3.5rem 1.5rem 1.5rem 1.5rem !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
 
 
 
