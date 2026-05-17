@@ -24,21 +24,19 @@
 <body>
     <div id="navbar-placeholder" class="navbar-sticky-container">
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("/components/navbar.html")
-                    .then((response) => response.text())
-                    .then((html) => {
-                        document.getElementById("navbar-placeholder").innerHTML = html;
-                        const toggle = document.getElementById("toggle");
-                        const menu = document.getElementById("menu");
-                        if (toggle && menu) {
-                            toggle.addEventListener("click", function () {
-                                menu.classList.toggle("active");
-                            });
-                        }
-                    })
-                    .catch((error) => console.error("Error loading navbar:", error));
-            });
+            fetch("/components/navbar.html")
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+                    const toggle = document.getElementById("toggle");
+                    const menu = document.getElementById("menu");
+                    if (toggle && menu) {
+                        toggle.addEventListener("click", function () {
+                            menu.classList.toggle("active");
+                        });
+                    }
+                })
+                .catch((error) => console.error("Error loading navbar:", error));
         </script>
     </div>
 
@@ -462,14 +460,12 @@
     </div>
     <div id="footer"></div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("/components/footer3.html")
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch((error) => console.error("Error loading footer:", error));
-        });
+        fetch("/components/footer3.html")
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch((error) => console.error("Error loading footer:", error));
     </script>
 
 <script src='/script.js' defer></script>

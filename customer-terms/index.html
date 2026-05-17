@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/terms-conditions.css" />
     <link rel="stylesheet" href="/css/aboutus.css" />
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css" />
+    <link rel="canonical" href="https://carmaacarcare.com/customer-terms/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Terms & Conditions | Carmaa</title>
+    <meta name="description"
+        content="Carmaa Customer Terms and Conditions - Legal Identity, Company Details, Acceptance of Terms, and more." />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/terms-conditions.css" />
+    <link rel="stylesheet" href="/css/aboutus.css" />
     <link rel="stylesheet" href="/css/homepage.css" />
     <link rel="stylesheet" href="/css/service.css" />
     <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
@@ -24,21 +42,19 @@
 <body>
     <div id="navbar-placeholder" class="navbar-sticky-container">
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("/components/navbar.html")
-                    .then((response) => response.text())
-                    .then((html) => {
-                        document.getElementById("navbar-placeholder").innerHTML = html;
-                        const toggle = document.getElementById("toggle");
-                        const menu = document.getElementById("menu");
-                        if (toggle && menu) {
-                            toggle.addEventListener("click", function () {
-                                menu.classList.toggle("active");
-                            });
-                        }
-                    })
-                    .catch((error) => console.error("Error loading navbar:", error));
-            });
+            fetch("/components/navbar.html")
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById("navbar-placeholder").innerHTML = html;
+                    const toggle = document.getElementById("toggle");
+                    const menu = document.getElementById("menu");
+                    if (toggle && menu) {
+                        toggle.addEventListener("click", function () {
+                            menu.classList.toggle("active");
+                        });
+                    }
+                })
+                .catch((error) => console.error("Error loading navbar:", error));
         </script>
     </div>
 
@@ -329,14 +345,14 @@
     </div>
     <div id="footer"></div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("/components/footer3.html")
-                .then((response) => response.text())
-                .then((html) => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch((error) => console.error("Error loading footer:", error));
-        });
+        fetch("/components/footer3.html")
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch((error) => console.error("Error loading footer:", error));
     </script>
+
+<script src='/script.js' defer></script>
 </body>
 </html>
