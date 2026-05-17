@@ -41,14 +41,6 @@ button,
         line-height: 1.6;
     }
 
-    /* Hero Section Mobile */
-    .hero h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2;
-        letter-spacing: 0;
-        margin-bottom: 16px;
-    }
-
     .hero p {
         font-size: 1rem !important;
         margin-bottom: 24px;
@@ -157,30 +149,19 @@ button,
     }
 }
 
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-family: 'Oswald', sans-serif !important;
-            font-size: 1.6rem !important;
-            line-height: 1.2 !important;
-            letter-spacing: 0 !important;
-            margin-bottom: 16px !important;
-            text-align: center !important;
-            word-break: break-word !important;
-            white-space: normal !important;
-            padding: 0 8px !important;
-        }
+@media (max-width: 768px) {
+    .hero h1 {
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0 !important;
+        margin-bottom: 16px !important;
+        text-align: center !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        padding: 0 8px !important;
     }
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-family: 'Oswald', sans-serif !important;
-            font-size: 1.8rem !important;
-            line-height: 1.2 !important;
-            letter-spacing: 0 !important;
-            margin-bottom: 20px !important;
-            text-align: center !important;
-            word-break: break-word !important;
-        }
-    }
+}
 
 @media (max-width: 768px) {
     .hero p {
@@ -902,11 +883,22 @@ button,
         max-width: none;
     }
 
-    .img-wrapper {
+    .topbar-section-common .img-wrapper,
+    .topbar-section-container .img-wrapper,
+    .social-media-icons .img-wrapper {
         width: 28px !important;
         height: 28px !important;
         max-width: 28px !important;
         flex-shrink: 0 !important;
+    }
+    .commitment-quality-right .img-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        flex-shrink: 1 !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
 }
 
