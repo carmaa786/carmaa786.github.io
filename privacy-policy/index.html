@@ -142,22 +142,22 @@
 
     <div id="navbar-placeholder" class="navbar-sticky-container">
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          fetch("/components/navbar.html")
-            .then((response) => response.text())
-            .then((html) => {
-              document.getElementById("navbar-placeholder").innerHTML = html;
+        fetch("/components/navbar.html")
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById("navbar-placeholder").innerHTML = html;
 
-              // Reinitialize toggle functionality after loading the navbar
-              const toggle = document.getElementById("toggle");
-              const menu = document.getElementById("menu");
+            // Reinitialize toggle functionality after loading the navbar
+            const toggle = document.getElementById("toggle");
+            const menu = document.getElementById("menu");
 
+            if (toggle && menu) {
               toggle.addEventListener("click", function () {
                 menu.classList.toggle("active");
               });
-            })
-            .catch((error) => console.error("Error loading navbar:", error));
-        });
+            }
+          })
+          .catch((error) => console.error("Error loading navbar:", error));
       </script>
     </div>
 
@@ -416,6 +416,7 @@ of the revised Policy. </p>
           </ol>
         </div>
       </div>
+    </div>
     <div id="footer"></div>
     <script>
       fetch("/components/footer3.html")

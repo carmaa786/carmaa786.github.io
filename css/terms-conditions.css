@@ -5,7 +5,10 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 a {
@@ -39,7 +42,8 @@ a:hover {
 
 .terms-policy-page-main-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   text-align: center;
   margin: inline;
 }
@@ -149,4 +153,28 @@ text-align: justify;
   font-size: 11pt;
   font-weight: 700;
 
+}
+
+/* Added top padding to clear sticky navbar */
+.terms-policy-page-main-container,
+.terms-policy-page-container {
+  padding-top: var(--navbar-height, 70px);
+}
+
+/* Ensure full-height layout with footer at bottom */
+html {
+  height: 100%;
+}
+body {
+  display: flex !important;
+  flex-direction: column !important;
+}
+/* Let main content take remaining space */
+.terms-policy-page-main-container {
+  flex: 1 !important;
+}
+/* Basic footer styling (optional) */
+#footer {
+  margin-top: auto;
+  flex-shrink: 0;
 }
