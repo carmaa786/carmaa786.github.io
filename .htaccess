@@ -42,6 +42,17 @@
     # Enforce HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Fix trailing slash — redirect all non-file, non-directory 
+    # URLs without trailing slash to add trailing slash
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+    # Block direct index.html access — redirect to clean URL
+    RewriteCond %{THE_REQUEST} /index\.html
+    RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
 </IfModule>
 
 <IfModule mod_expires.c>
