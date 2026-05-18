@@ -1,379 +1,129 @@
 <!DOCTYPE html>
 <html lang="en-IN">
     <head>
-        <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
+        <link rel="preload" as="image" href="/assets/new-carmaa/carmaa-new1.jpg" fetchpriority="high">
+        <link rel="stylesheet" href="..//css/globalCss/navbarGlobal.css">
         <link rel="canonical" href="https://carmaacarcare.com/interior-car-cleaning-service/" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" crossorigin="anonymous">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
-        
-
-        <style>
-            * {
-                margin: 0px;
-                padding: 0px;
-                box-sizing: border-box;
-                /* font-family: "Inter", sans-serif; */
-                font-family:'Inter', "Inter Placeholder", "sans-serif";
-                font-size: 16px;
-            }
-    
-            li {
-                list-style: none;
-            }
-    
-            .toggle {
-                display: none;
-            }
-    
-            *::-webkit-scrollbar {
-                display: none;
-            }
-    
-            * {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-    
-            @media screen and (max-width:1150px) {
-                .menu {
-                    position: fixed;
-                    background-color: rgb(255, 255, 255);
-                    border-top: 1px solid gray;
-                    top: 80px;
-                    height: calc(100vh - 80px);
-                    width: 100vw;
-                    right: 0px;
-                    flex-direction: column;
-                    justify-content: flex-start !important;
-                    padding: 50px 0px;
-                    gap: 30px;
-                    transform: translateX(100%);
-                }
-    
-                .active {
-                    transform: translateX(0%) !important;
-                }
-    
-                .toggle {
-                    display: inline;
-                    cursor: pointer;
-                }
-            }
-
-            .accordion .accordion-item {
-                border-bottom: 1px solid #e5e5e5;
-            }
-    
-            .accordion .accordion-item button[aria-expanded='true'] {
-                border-bottom: 1px solid #28b097;
-            }
-    
-            .accordion button {
-                position: relative;
-                display: block;
-                text-align: left;
-                width: 100%;
-                /* padding: 1em 0; */
-                color: #20272e;
-                font-size: 1.15rem;
-                font-weight: 400;
-                border: none;
-                background: none;
-                outline: none;
-            }
-    
-            .accordion button:hover,
-            .accordion button:focus {
-                cursor: pointer;
-                color: #28b097;
-            }
-            .accordion-title{
-                width: 50%;
-            }
-    
-            .accordion button:hover::after,
-            .accordion button:focus::after {
-                cursor: pointer;
-                color: #28b097;
-                border: 1px solid #03b5d2;
-            }
-    
-            .accordion button .accordion-title {
-                padding: 1em 1.5em 1em 0;
-                font-size: 1.3rem;
-            }
-    
-            .accordion button .icon {
-                display: inline-block;
-                position: absolute;
-                bottom: 10px;
-                right: 0;
-                width: 22px;
-                height: 22px;
-                border: 1px solid;
-                border-radius: 22px;
-            }
-    
-            .accordion button .icon::before {
-                display: block;
-                position: absolute;
-                content: '';
-                top: 9px;
-                left: 5px;
-                width: 10px;
-                height: 2px;
-                background: currentColor;
-            }
-    
-            .accordion button .icon::after {
-                display: block;
-                position: absolute;
-                content: '';
-                top: 5px;
-                left: 9px;
-                width: 2px;
-                height: 10px;
-                background: currentColor;
-            }
-    
-            .accordion button[aria-expanded='true'] {
-                color: #28b097;
-            }
-    
-            .accordion button[aria-expanded='true'] .icon::after {
-                width: 0;
-            }
-    
-            .accordion button[aria-expanded='true']+.accordion-content {
-                opacity: 1;
-                max-height: 9em;
-                transition: all 200ms linear;
-                will-change: opacity, max-height;
-            }
-    
-            .accordion .accordion-content {
-                opacity: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: opacity 200ms linear, max-height 200ms linear;
-                will-change: opacity, max-height;
-            }
-    
-            .accordion .accordion-content p {
-                font-size: 1rem;
-                font-weight: 300;
-                margin: 2em 0;
-            }
-        </style>
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-        
-        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carmaa Interior Car Cleaning Service | Dehradun | Noida</title>
-        <meta name="description" content="Carmaa offers expert Interior Car Cleaning Service in Dehradun and Noida, keeping your car's interior fresh & spotless. Book Your car interior cleaning service." />
-        <meta name="keywords" content="Interior Car Cleaning Service, car interior cleaning service, car interior cleaning in Dehradun, Interior Car Cleaning Service In Dehradun"/>
+        <title>Book Carmaa Interior Car Cleaning Service in Dehradun | Doorstep Car Dry Cleaning</title>
+        <meta name="description" content="Book Carmaa interior car cleaning service in Dehradun. Get doorstep car dry cleaning near me. Professional dashboard, seats, ceiling and carpet vacuum cleaning." />
+        <meta name="keywords" content="interior car cleaning service, car dry cleaning Dehradun, doorstep car dry cleaning, car interior vacuum, car seat cleaning Dehradun"/>
+        <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="/css/common.css"/>
         <link rel="stylesheet" href="/css/aboutus.css"/>
         <link rel="stylesheet" href="/css/homepage.css"/>
         <link rel="stylesheet" href="/css/service.css"/>
-        <script src="/js/rightClickDisable.js"></script>
-
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
-        <style>
-            .servicesI {
-                cursor: pointer;
-                transition: all 0.5s;
-                border-radius: 8px;
-                padding: 20px;
-                box-shadow: 0px 0px 10px #65c7d06e;
-            }
-    
-            .servicesI:hover {
-                transform: scale(1.1) !important;
-                box-shadow: 0px 0px 10px #65c7d0;
-            }
-            .header-background{
-                background-image: url("/assets/new-carmaa/carnaa-new10.jpg");
-            }
-    
-            @media screen and (max-width: 1200px) {
-                .a {
-                    justify-content: center !important;
-                }
-            }
-    
-            @media screen and (max-width: 900px) {
-                .bh {
-                    flex-direction: column;
-                }
-    
-                .bh img {
-                    min-height: 300px;
-                }
-            }
-    
-            @media screen and (max-width:800px) {
-                .c {
-                    flex-direction: column;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="/css/footer.css"/>
+        <script src="/js/rightClickDisable.js" defer></script>
+        <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script> -->
+        <!-- <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script> -->
         <script src="/js/analytics.js" defer></script>
-        
-    
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is included in Carmaa interior car cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our service includes vacuuming, dashboard polishing, seat dry cleaning, roof ceiling cleaning, door trim wipe, floor mat cleaning, and sanitisation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you clean car seats?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We use specialised fabric foam and leather conditioners with soft extraction brushes to lift dirt and stains without wetting the cushions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for seats to dry after cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Thanks to our low-moisture extraction methods, the seats typically dry completely within 1 to 2 hours of completion."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you remove tough stains from roof ceiling?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Our gentle dry-cleaning solvents dissolve grease, water stains, and exhaust smoke marks from fabric headliners without sagging the roof material."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is cabin sanitisation included in this service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we perform a complete anti-bacterial wipe down of all high-touch surfaces including steering wheel, gear knob, and door handles."
+              }
+            }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {"@type":"ListItem","position":1,"name":"Home","item":"https://carmaacarcare.com/"},
+                {"@type":"ListItem","position":2,"name":"Carmaa Interior Car Cleaning","item":"https://carmaacarcare.com/interior-car-cleaning-service/"}
+              ]
+            }
+          ]
+        }
+        </script>
+        <style>
+            .comparison-section { margin: 40px 0; overflow-x: auto; }
+            .comparison-table { width: 100%; border-collapse: collapse; background: #fdfdfd; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-family: 'Inter', sans-serif; }
+            .comparison-table th { background: #0b1a2b; color: white; padding: 18px; text-align: left; text-transform: uppercase; letter-spacing: 1.5px; font-size: 1.1rem; }
+            .comparison-table td { padding: 15px; border-bottom: 1px solid #eee; }
+            .comparison-table tr:last-child td { border-bottom: none; }
+            .comparison-table .highlight-col { background: rgba(101,199,208,0.1); font-weight: 600; color: #0b1a2b; }
+            .comparison-table .feature-col { font-weight: bold; background: #f8f9fa; width: 35%; }
+            .comparison-table .check-icon { color: #2ecc71; margin-right: 5px; }
+            .comparison-table .cross-icon { color: #e74c3c; margin-right: 5px; }
+            @media screen and (max-width: 600px) { .comparison-table th, .comparison-table td { padding: 12px 8px; font-size: 0.85rem; } }
+        </style>
+        <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
+        <style>
+          @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+          @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+        </style>
         <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "@id": "https://carmaacarcare.com/interior-car-cleaning-service/#service",
-      "name": "Carmaa Interior Car Cleaning Service",
-      "description": "Carmaa offers expert Interior Car Cleaning Service in Dehradun and Noida, keeping your car's interior fresh & spotless. Book Your car interior cleaning service.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Carmaa Car Care",
-        "url": "https://carmaacarcare.com/",
-        "image": "https://carmaacarcare.com/assets/logo.png",
-        "telephone": "+91-7042555401",
-        "priceRange": "\u20b9\u20b9",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Dehradun",
-          "addressRegion": "Uttarakhand",
-          "addressCountry": "IN"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Dehradun"
-        },
-        {
-          "@type": "City",
-          "name": "Noida"
-        },
-        {
-          "@type": "City",
-          "name": "Gurgaon"
-        },
-        {
-          "@type": "City",
-          "name": "Delhi"
-        },
-        {
-          "@type": "City",
-          "name": "Faridabad"
-        },
-        {
-          "@type": "City",
-          "name": "Ghaziabad"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://carmaacarcare.com/interior-car-cleaning-service/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is Carmaa's interior car cleaning different from a local garage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Unlike local garages that use harsh detergents, Carmaa uses laboratory-grade, eco-friendly sanitizers incubated at Graphic Era (TBI). Having cleaned over 44,000+ cars, we ensure a deep sanitization process that removes 99% of bacteria and allergens from your cabin at your doorstep."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is car interior dry cleaning safe for leather seats?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our specialized dry cleaning agents are pH-neutral and safe for all premium materials, including Nappa leather and Alcantara. We provide a technician's perspective on material preservation, ensuring your luxury interior stays in showroom condition without risk of cracking or discoloration."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much time does Carmaa's Interior Car Cleaning Service typically require?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The time required for our Interior Car Cleaning Service generally ranges between 1 to 2 hours, depending on your vehicle's size and interior condition."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Carmaa's car interior cleaning safe for delicate upholstery and leather materials?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our car interior cleaning service uses specialized, safe cleaning products that are gentle on delicate materials like leather and upholstery, ensuring thorough cleaning without any damage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I arrange Carmaa's car interior cleaning service for more than one vehicle in Dehradun?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely! You can book our Interior Car Cleaning Service in Dehradun, for multiple cars at once, making it convenient for families or businesses with several vehicles. Let us know your needs, and we\u2019ll take care of the rest."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://carmaacarcare.com/interior-car-cleaning-service/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://carmaacarcare.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Carmaa Interior Car Cleaning Service",
-          "item": "https://carmaacarcare.com/interior-car-cleaning-service/"
-        }
-      ]
-    }
-  ]
-}
-    </script>
-</head>
-<body>
-    <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;" class="whatsapp-icon-container">
-            <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-      
-                <img decoding="async" style="height: 100%; width: 100%;" src="/assets/whatsapp.png" alt="waterless car wash in Noida" loading="eager" width="1280" height="1280" />
-            </a>
-        </div>
-
+    </head>
+    <body>
+    <div style="position:fixed;bottom:20px;right:20px;height:50px;aspect-ratio:1;z-index:99999999;" class="whatsapp-icon-container">
+        <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
+            <img style="height:100%;width:100%;" src="/assets/whatsapp.png" alt="doorstep car wash in Dehradun" loading="eager" width="1280" height="1280">
+        </a>
+    </div>
     <div class="topbar-section-common">
         <div class="topbar-section-container">
             <div class="social-media-icons">
-                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img decoding="async" src="/assets/contactus/facebook.png" alt="car repair near me" loading="eager" width="64" height="64" /></div></a>
-                <a  href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img decoding="async" src="/assets/contactus/instagram.png" alt="car garage near me" loading="eager" width="64" height="64" /></div></a>
-               <a  href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"> <img decoding="async" src="/assets/contactus/youtube.png" alt="car repair shops near me" loading="eager" width="64" height="64" /></div></a>
-               <a  href="/blogs/"><div class="img-wrapper"> <img decoding="async" src="/assets/home-page/topbar/blogger.png" alt="mobile mechanic near me" loading="eager" width="64" height="64" /></div></a>
+                <a href="https://www.facebook.com/carmaaofficialpage" target="_blank"><div class="img-wrapper"><img src="/assets/contactus/facebook.png" alt="car repair near me" loading="eager" width="64" height="64" /></div></a>
+                <a href="https://www.instagram.com/carmaa_official" target="_blank"><div class="img-wrapper"><img src="/assets/contactus/instagram.png" alt="car garage near me" loading="eager" width="64" height="64" /></div></a>
+                <a href="https://www.youtube.com/@carmaa_Official" target="_blank"><div class="img-wrapper"><img src="/assets/contactus/youtube.png" alt="car repair shops near me" loading="eager" width="64" height="64" /></div></a>
+                <a href="/blogs/"><div class="img-wrapper"><img src="/assets/home-page/topbar/blogger.png" alt="mobile mechanic near me" loading="eager" width="64" height="64" /></div></a>
             </div>
-         
-            <p id="topbar-text" style="color: #fff; font-weight: 400; font-size: 0.95rem; margin: 0;font-weight: 600;">
-                Bring your car's showroom shine back!
-            </p>
-
-            <div style="display:flex;flex-direction: column; align-items: center;">
-                <div  style="display:flex;align-items: center;gap:0.3rem">
-                    <img decoding="async" style="width: 1.5rem;height:1.5rem" src="/assets/home-page/topbar/phone.png" alt="Interior Car Cleaning Service In Dehradun" loading="eager" width="64" height="64" />
-                    <a class="mobile-number-ref" href="tel:+917042555401"><p >+91 70425 55401</p></a>
-                </div>   
+            <p id="topbar-text" style="color:#fff;font-weight:600;font-size:0.95rem;margin:0;">Bring your car's showroom shine back!</p>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <div style="display:flex;align-items:center;gap:0.3rem">
+                    <img style="width:1.5rem;height:1.5rem" src="/assets/home-page/topbar/phone.png" alt="Interior car cleaning service in Dehradun" loading="eager" width="64" height="64" />
+                    <a class="mobile-number-ref" href="tel:+917042555401"><p>+91 70425 55401</p></a>
+                </div>
             </div>
         </div>
     </div>
-
     <div id="navbar-placeholder" class="navbar-sticky-container">
       <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -381,350 +131,215 @@
             .then((response) => response.text())
             .then((html) => {
               document.getElementById("navbar-placeholder").innerHTML = html;
-
-              // Reinitialize toggle functionality after loading the navbar
               const toggle = document.getElementById("toggle");
               const menu = document.getElementById("menu");
-
-              toggle.addEventListener("click", function () {
-                menu.classList.toggle("active");
-              });
+              toggle.addEventListener("click", function () { menu.classList.toggle("active"); });
             })
             .catch((error) => console.error("Error loading navbar:", error));
         });
       </script>
     </div>
-
 <header class="city-header-section header-background">
     <p>Carmaa Interior Car Cleaning</p>
     <div class="breadcrumb">
-        <img decoding="async" class="" src="../common/home.png" alt="car interior cleaning in Dehradun" loading="eager" width="64" height="64" />
-            <p><a href="/" class="breadcrumb-link">Home</a></p>
-            <p>/</p>
-            <p><a href="./" class="breadcrumb-link">Carmaa Interior Car Cleaning</a></p>
-       
+        <img class="" src="../common/home.png" alt="home" loading="eager" width="64" height="64" />
+        <p><a href="/" class="breadcrumb-link">Home</a></p>
+        <p>/</p>
+        <p><a href="./" class="breadcrumb-link">Carmaa Interior Car Cleaning</a></p>
     </div>
 </header>
 <section class="service-main-section">
     <div class="service-left-section">
         <div class="service-img-container">
-            <!-- <p class="service-img-price-txt">Starting at  ₹299</p> -->
-            <img decoding="async" style="border-radius:10px" src="/assets/new-carmaa/carmaa-new1.jpg" alt="car interior cleaning service" loading="lazy" width="708" height="397" />
+            <img style="border-radius:10px" src="/assets/new-carmaa/carmaa-new1.jpg" alt="Interior car cleaning service in Dehradun" loading="eager" fetchpriority="high" width="1280" height="854" />
         </div>
-        <h1 class="service-heading">Carmaa Interior Car Cleaning</h1>
+        <h1 class="service-heading">Carmaa Interior Car Cleaning Service</h1>
         
-        <h3 style="font-size: 1.5rem; font-family: var(--font); margin-bottom: 10px;">Why is professional interior car cleaning essential in Noida and Dehradun?</h3>
-        <p class="service-para">Experience premium <strong>Interior Car Cleaning Service</strong> at your doorstep with Carmaa. Incubated at <strong>Graphic Era (TBI)</strong>, we bring scientific precision to cabin sanitization. Having cleaned more than <strong>44,000+ cars</strong>, we understand that your car’s interior is more than just a cabin—it’s a living space. Our team ensures every corner is spotless and medically sanitized, whether you’re in the humid climate of Dehradun or the dusty atmosphere of Noida.</p>
+        <h3 class="aeo-h3">Why is deep interior car cleaning vital for your family's health?</h3>
+        <p class="service-para">A car's cabin is a closed environment that traps dust, pollen, food crumbs, sweat, and bacteria. Over time, these contaminants settle deep into the fabric seats, carpet fibres, and AC vents, causing musty odours and potential allergies. Carmaa's premium interior car cleaning service uses germicidal detergents and powerful industrial vacuums to extract deep-seated dust and allergens. Having cleaned over 44,000+ vehicles since 2024, our team ensures your cabin is not just visually spotless but thoroughly sanitised and safe for children and pets. Our processes align with modern 2026 sanitisation standards for private transit vehicles.</p>
 
-        <div class="comparison-table-container">
+        <h3 class="aeo-h3">How does Carmaa's doorstep dry cleaning prevent fabric damage?</h3>
+        <p class="service-para">Many traditional cleaning shops use harsh liquid soaps that soak deep into seat foam, leading to mold growth and musty smells. Carmaa utilizes advanced dry foam encapsulation and low-moisture steam extraction technology. We apply foam cleaners that bind to dirt particles, allowing them to be extracted without soaking the underlying cushions. Whether your car has premium fabric upholstery or fine leather, our tailored cleaners maintain material elasticity and texture. This doorstep service is carried out directly in your driveway, saving you from leaving your vehicle at a detailing shop for days.</p>
+
+        <div class="comparison-section">
+            <h2 style="font-family: 'Inter'; font-size: 1.8rem; margin-bottom: 20px; color: #0b1a2b;">Carmaa Dry Cleaning vs. Local Washing Centre</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th class="feature-col">Benefit</th>
-                        <th>Carmaa Doorstep Service</th>
-                        <th>Local Garage/Shop</th>
+                        <th class="feature-col">Feature</th>
+                        <th>Local Washing Centre</th>
+                        <th class="highlight-col">Carmaa Interior Care</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="feature-col">Time Consumed</td>
-                        <td class="highlight"><span class="check-icon">✅</span> 0 Mins (We come to you)</td>
-                        <td><span class="cross-icon">❌</span> 2-3 Hours (Travel + Wait)</td>
+                        <td class="feature-col">Moisture Level</td>
+                        <td><span class="cross-icon">❌</span> High (Wet seats, mold risk)</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> Dry foam & low moisture extraction</td>
                     </tr>
                     <tr>
-                        <td class="feature-col">Sanitization Standard</td>
-                        <td class="highlight"><span class="check-icon">✅</span> 99% Bacteria-Free (Eco-Lab)</td>
-                        <td><span class="cross-icon">❌</span> Simple Soap/Water Surface Clean</td>
+                        <td class="feature-col">Chemical Quality</td>
+                        <td><span class="cross-icon">❌</span> Cheap household detergents</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> pH-balanced safe enzyme cleaners</td>
                     </tr>
                     <tr>
-                        <td class="feature-col">Convenience</td>
-                        <td class="highlight"><span class="check-icon">✅</span> Work/Relax while we clean</td>
-                        <td><span class="cross-icon">❌</span> Productive time lost</td>
+                        <td class="feature-col">Sanitisation</td>
+                        <td><span class="cross-icon">❌</span> No germicidal treatment</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> Anti-bacterial sanitisation included</td>
                     </tr>
                     <tr>
-                        <td class="feature-col">Fuel & Safety</td>
-                        <td class="highlight"><span class="check-icon">✅</span> Zero fuel wastage</td>
-                        <td><span class="cross-icon">❌</span> Risky traffic commute</td>
+                        <td class="feature-col">Drying Time</td>
+                        <td><span class="cross-icon">❌</span> 12 - 24 Hours required</td>
+                        <td class="highlight-col"><span class="check-icon">✅</span> Under 2 Hours (Ready to drive)</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h3 style="font-size: 1.5rem; font-family: var(--font); margin-bottom: 10px;">How does Carmaa ensure a scratch-free, deep clean at home?</h3>
-        <p class="service-para">Our Interior Car Cleaning Service in Dehradun includes thorough vacuuming, deep cleaning of carpets, and dashboard polishing using <strong>hydrophobic technology</strong>. We use eco-friendly products that are safe for pets and children. By bringing the detailing center to your parking spot, we eliminate the need for you to navigate heavy traffic, saving 2-3 hours of your day while providing a finish that local garages simply cannot match.</p>
-        
-        <p class="service-para">With a focus on sustainability and E-E-A-T standards, Carmaa uses eco-friendly methods that protect both your car and the environment. Your car deserves premium care, and that’s exactly what our 44,000+ car cleaning experience delivers with unmatched attention to detail.</p>
+        <h3 class="aeo-h3">Does interior cleaning remove smoke and pet odours?</h3>
+        <p class="service-para">Persistent odours from smoking, pets, or spilled milk are hard to mask with simple air fresheners. Our deep cleaning process targets the source of these smells. We clean the fabric fibres, scrub door panels, and treat the AC ventilation system with specialised enzyme deodorisers. This breaks down organic molecules and bacteria rather than just covering them up, resulting in a neutral, genuinely clean scent that stays in the car. For ultimate results, we recommend pairing our dry cleaning with an AC vent sanitisation treatment.</p>
 
-        <div class="accordion" style="max-width: 1200px; margin: 50px auto;">
-            <div class="accordion-item">
-                <button id="accordion-button-1" aria-expanded="false">
-                    <span class="accordion-title">How much time does Carmaa's Interior Car Cleaning Service typically require?
-                    </span>
-                    <span class="icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        The time required for our Interior Car Cleaning Service generally ranges between 1 to 2 hours, depending on your vehicle's size and interior condition.
+        <h2 class="service-heading">What's included in Carmaa's Interior Car Cleaning?</h2>
+        <p class="service-para">Our signature doorstep interior detailing package is comprehensive. We treat every surface from the roof ceiling down to the floor carpets. With professional dry cleaning in Dehradun and Noida, our experts use the finest imported detailing chemicals to ensure your cabin is spotless and rejuvenated.</p>
 
-                    </p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-1" aria-expanded="false">
-                    <span class="accordion-title">Is Carmaa's car interior cleaning safe for delicate upholstery and leather materials?
-                    </span>
-                    <span class="icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        Yes, our car interior cleaning service uses specialized, safe cleaning products that are gentle on delicate materials like leather and upholstery, ensuring thorough cleaning without any damage.
-
-                    </p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-1" aria-expanded="false">
-                    <span class="accordion-title">Can I arrange Carmaa's car interior cleaning service for more than one vehicle in Dehradun?
-
-                    </span>
-                    <span class="icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        Absolutely! You can book our Interior Car Cleaning Service in Dehradun, for multiple cars at once, making it convenient for families or businesses with several vehicles. Let us know your needs, and we’ll take care of the rest.
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Global CTA Banner -->
-        <div class="global-cta-banner" style="background: linear-gradient(135deg, #0b1a2b 0%, #1a365d 100%); padding: 35px 25px; border-radius: 12px; text-align: center; margin-top: 45px; margin-bottom: 20px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            <h3 style="margin-bottom: 15px; font-size: 1.8rem; font-weight: 600; color: #fff;">Book Your Premium Car Care Today!</h3>
-            <p style="margin-bottom: 25px; font-size: 1.1rem; opacity: 0.9;">Join thousands of satisfied customers who trust CarMaa for a showroom shine right at their doorstep.</p>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="tel:+917042555401" style="background: #d4af37; color: #111; text-decoration: none; padding: 14px 30px; border-radius: 8px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: transform 0.2s;"><i class="fa fa-phone"></i> Call +91 70425 55401</a>
-                <a href="#enquiryForm" style="background: transparent; color: white; border: 2px solid white; text-decoration: none; padding: 14px 30px; border-radius: 8px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: background 0.2s;"><i class="fa fa-envelope"></i> Enquire Online</a>
-            </div>
-        </div>
-
-        <div class="related-reading">
-            <h3 class="service-heading">Related Reading</h3>
-            <ul class="unorder-list-container">
-                <li class="service-list"><a href="/blogs/science-interior-dry-cleaning-sanitization/">Beyond Surface Clean: The Science of Interior Dry Cleaning & Sanitization</a></li>
+        <div class="service-para">
+            <h3>Vacuuming & Extraction</h3>
+            <ul class="service-para-ul">
+                <li style="margin-left: 20px;">Deep vacuuming of seats, floor carpets, and boot</li>
+                <li style="margin-left: 20px;">Floor mat deep cleaning and extraction</li>
+            </ul>
+            <h3>Surface Dry Cleaning</h3>
+            <ul class="service-para-ul">
+                <li style="margin-left: 20px;">Upholstery seat scrub (fabric/leather) with dry foam</li>
+                <li style="margin-left: 20px;">Roof ceiling cleaning to remove dust and stains</li>
+                <li style="margin-left: 20px;">Door pad scrubbing and cleaning</li>
             </ul>
         </div>
-
+        
+        <div class="accordion" style="max-width:1200px;margin:50px auto;">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false" aria-label="What is included in Carmaa interior car cleaning?">
+                    <span class="accordion-title">What is included in Carmaa interior car cleaning?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content"><p>Our service includes vacuuming, dashboard polishing, seat dry cleaning, roof ceiling cleaning, door trim wipe, floor mat cleaning, and sanitisation.</p></div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-2" aria-expanded="false" aria-label="How do you clean car seats?">
+                    <span class="accordion-title">How do you clean car seats?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content"><p>We use specialised fabric foam and leather conditioners with soft extraction brushes to lift dirt and stains without wetting the cushions.</p></div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-3" aria-expanded="false" aria-label="How long does it take for seats to dry after cleaning?">
+                    <span class="accordion-title">How long does it take for seats to dry after cleaning?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content"><p>Thanks to our low-moisture extraction methods, the seats typically dry completely within 1 to 2 hours of completion.</p></div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-4" aria-expanded="false" aria-label="Do you remove tough stains from roof ceiling?">
+                    <span class="accordion-title">Do you remove tough stains from roof ceiling?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content"><p>Yes. Our gentle dry-cleaning solvents dissolve grease, water stains, and exhaust smoke marks from fabric headliners without sagging the roof material.</p></div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-5" aria-expanded="false" aria-label="Is cabin sanitisation included in this service?">
+                    <span class="accordion-title">Is cabin sanitisation included in this service?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content"><p>Yes, we perform a complete anti-bacterial wipe down of all high-touch surfaces including steering wheel, gear knob, and door handles.</p></div>
+            </div>
+        </div>
+        <div class="global-cta-banner" style="background:linear-gradient(135deg,#0b1a2b 0%,#1a365d 100%);padding:35px 25px;border-radius:12px;text-align:center;margin-top:45px;margin-bottom:20px;color:white;box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+            <h3 style="margin-bottom:15px;font-size:1.8rem;font-weight:600;color:#fff;">Book Your Premium Car Care Today!</h3>
+            <p style="margin-bottom:25px;font-size:1.1rem;opacity:0.9;">Join thousands of satisfied customers who trust Carmaa for a showroom shine right at their doorstep.</p>
+            <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+                <a href="tel:+917042555401" style="background:#d4af37;color:#111;text-decoration:none;padding:14px 30px;border-radius:8px;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;"><i class="fa-solid fa-phone"></i> Call +91 70425 55401</a>
+                <a href="#enquiryForm" style="background:transparent;color:white;border:2px solid white;text-decoration:none;padding:14px 30px;border-radius:8px;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;"><i class="fa-regular fa-envelope"></i> Enquire Online</a>
+            </div>
+        </div>
     </div>
     <div class="service-right-section">
         <div class="form-container">
             <h2>Make an enquiry</h2>
             <hr class="underline" />
             <form id="enquiryForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile Number:</label>
-                    <input type="text" id="mobile" name="mobile" required>
-                </div>
-
-                 <!--Captcha Code for Auth-->
+                <div class="form-group"><label for="name">Name:</label><input type="text" id="name" name="name" required></div>
+                <div class="form-group"><label for="mobile">Mobile Number:</label><input type="text" id="mobile" name="mobile" required></div>
                 <div class="g-recaptcha" data-sitekey="6LcWpwIrAAAAAM8iBbivNe-njKpUX3NYCzgYQjfI"></div>
-
                 <button type="submit" id="submitBtn">Submit</button>
                 <p id="message"></p>
             </form>
         </div>
-
-        <!-- Load reCAPTCHA -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-        <a href="/interior-car-cleaning-service/" class="service-link-point-link"><div class="services-links">
-            <div class="service-link-point">
-                <p class="link-name" >Carmaa Interior Car Cleaning</p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div>
-        </a>
-        <a href="/exterior-car-cleaning-washing/" class="service-link-point-link"><div class="service-link-point">
-                <p class="link-name" >Carmaa Exterior Car Cleaning & Washing</p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div>
-            </a>
-            <a href="/car-dry-cleaning-service/" class="service-link-point-link"> <div class="service-link-point">
-                <p class="link-name" >Carmaa Car Dry Cleaning</p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div></a>
-            <a href="/car-body-polish-and-car-waxing-service/" class="service-link-point-link"> <div class="service-link-point">
-                <p class="link-name" >Complete Car Body Polish and Wax </p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div>
-            </a>
-
-            <a href="/car-detailing-services/" class="service-link-point-link">
-            <div class="service-link-point">
-                <p class="link-name" >Carmaa Car Detailing  </p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div>
-            </a>
-            <a href="/car-deep-cleaning-services/" class="service-link-point-link">
-                <div class="service-link-point">
-                    <p class="link-name" >Carmaa Deep Cleaning  </p>
-                    <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                    
-                </div>
-                </a>
-           <a href="/full-car-wash-service/" class="service-link-point-link"><div class="service-link-point">
-                <p class="link-name" >Carmaa Full Car Wash</p>
-                <i class="fa fa-chevron-right" style="font-size:15px"></i>
-                
-            </div>
-        </a> 
-
-        </div>
-
+        <a href="/interior-car-cleaning-service/" class="service-link-point-link"><div class="services-links"><div class="service-link-point"><p class="link-name">Carmaa Interior Car Cleaning</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></div></a>
+        <a href="/exterior-car-cleaning-washing/" class="service-link-point-link"><div class="service-link-point"><p class="link-name">Carmaa Exterior Car Cleaning &amp; Washing</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
+        <a href="/car-dry-cleaning-service/" class="service-link-point-link"><div class="service-link-point"><p class="link-name">Carmaa Car Dry Cleaning</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
+        <a href="/car-body-polish-and-car-waxing-service/" class="service-link-point-link"><div class="service-link-point"><p class="link-name">Complete Car Body Polish and Wax</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
+        <a href="/ceramic-coating-service/" class="service-link-point-link"><div class="service-link-point"><p class="link-name">Carmaa Ceramic Coating</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
+        <a href="/car-deep-cleaning-services/" class="service-link-point-link"><div class="service-link-point"><p class="link-name">Carmaa Deep Cleaning</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
         <div class="contact-section">
-            <h2 class="service-contact-section-heading" style="font-size: 24px;">Contact Us</h2>
+            <h2 class="service-contact-section-heading">Contact Us</h2>
             <div class="service-contact-section-points">
-                <img decoding="async" src="/assets/services/location.png" alt="Interior Car Cleaning Service" style="width: 1.5rem;height: 1.5rem;" loading="eager" width="64" height="64" />
-                <div class="service-contact-section-desc">
-                    <p class="service-contact-section-desc-heading">Address</p>
-                    <p>Tea Estate Banjarawala, Kedarpur, Dehradun</p>
-                </div>
-
+                <img src="/assets/services/location.png" alt="location" style="width:1.5rem;height:1.5rem;" loading="eager" width="64" height="64" />
+                <div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Address</p><p>Tea Estate Banjarawala, Kedarpur, Dehradun</p></div>
             </div>
             <div class="service-contact-section-points">
-                <img decoding="async" src="/assets/services/phone-call.png" alt="Interior Car Cleaning Service" style="width: 1.5rem;height: 1.5rem;" loading="eager" width="64" height="64" />
-                <div class="service-contact-section-desc">
-                    <p class="service-contact-section-desc-heading">Phone</p>
-                    <a class="mobile-number-ref2" href="tel:+917042555401"> <p>+91-70425 55401</p></a>
-                </div>
-
+                <img src="/assets/services/phone-call.png" alt="phone" style="width:1.5rem;height:1.5rem;" loading="eager" width="64" height="64" />
+                <div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Phone</p><a class="mobile-number-ref2" href="tel:+917042555401"><p>+91-70425 55401</p></a></div>
             </div>
             <div class="service-contact-section-points">
-                <img decoding="async" src="/assets/services/mail.png" alt="car interior cleaning in Dehradun" style="width: 1.5rem;height: 1.5rem;" loading="eager" width="64" height="64" />
-                <div class="service-contact-section-desc">
-                    <p class="service-contact-section-desc-heading">Email</p>
-                    <a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"> <p>support@carmaacarcare.com</p></a>
-                </div>
-
+                <img src="/assets/services/mail.png" alt="email" style="width:1.5rem;height:1.5rem;" loading="eager" width="64" height="64" />
+                <div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Email</p><a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"><p>support@carmaacarcare.com</p></a></div>
             </div>
         </div>
     </div>
-    
 </section>
 <div id="footer">
-        <script>
-            fetch('/components/footer3.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    let presentYear = new Date().getFullYear();
-    console.log(presentYear);
-    document.getElementById('yearElement').textContent = presentYear;
-    document.getElementById('yearElement').style.fontSize = "12px";
-  });
-        </script>
+    <script>
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function() {
+                fetch('/components/footer3.html').then(r=>r.text()).then(d=>{document.getElementById('footer').innerHTML=d;});
+                document.addEventListener('DOMContentLoaded',function(){let y=new Date().getFullYear();if(document.getElementById('yearElement')){document.getElementById('yearElement').textContent=y;document.getElementById('yearElement').style.fontSize='12px';}});
+            });
+        } else {
+            fetch('/components/footer3.html').then(r=>r.text()).then(d=>{document.getElementById('footer').innerHTML=d;});
+        }
+    </script>
 </div>
 <script>
-    const toggleSidBar = () => {
-        const sidebar = document.querySelectorAll('.center');
-        const style = window.getComputedStyle(sidebar[0])
-        const top = new WebKitCSSMatrix(style.transform).m41;
-        if (top > 0) {
-            sidebar[0].style.transform = "translateX(0%)"
-        }
-        else {
-
-            sidebar[0].style.transform = "translateX(100%)"
-        }
-    }
     const items = document.querySelectorAll('.accordion button');
-
     function toggleAccordion() {
         const itemToggle = this.getAttribute('aria-expanded');
-
-        for (i = 0; i < items.length; i++) {
-            items[i].setAttribute('aria-expanded', 'false');
-        }
-
-        if (itemToggle == 'false') {
-            this.setAttribute('aria-expanded', 'true');
-        }
+        for (let i = 0; i < items.length; i++) { items[i].setAttribute('aria-expanded','false'); }
+        if (itemToggle == 'false') { this.setAttribute('aria-expanded','true'); }
     }
-
     items.forEach((item) => item.addEventListener('click', toggleAccordion));
 </script>
-    <script type="module">
-         import { CTAApi } from '/js/external-integration.js';
-        document.getElementById('enquiryForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const mobile = document.getElementById('mobile').value.trim();
-    const messageElement = document.getElementById('message');
-    const submitBtn = document.getElementById('submitBtn');
-
-    // Form validation
-    if (!name || !mobile) {
-        messageElement.textContent = 'Name and Mobile number are required.';
-        messageElement.style.color = 'red';
-        return;
-    }
-
-    if (!/^\d{10}$/.test(mobile)) {
-        messageElement.textContent = 'Mobile number must be a 10-digit number.';
-        messageElement.style.color = 'red';
-        return;
-    }
-
-     const recaptchaResponse = grecaptcha.getResponse();
-
-          if (!recaptchaResponse) {
-              document.getElementById('result').textContent = 'Please complete the CAPTCHA';
-              return;
-          }
-
-    // Reset message and set loading state
-    messageElement.textContent = '';
-    submitBtn.textContent = 'Submitting...';
-    submitBtn.disabled = true;
-
-    // Simulate API request
-
-    CTAApi({ name, mobile, recaptchaResponse, enquiryPage:"Carmaa Interior Car Cleaning",enquiryPageLink:"https://carmaacarcare.com/interior-car-cleaning-service/" })
-    .then(response => {
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        if(response.ok){
-            messageElement.textContent = 'Enquiry submitted successfully!';
-            messageElement.style.color = 'white';
-    }
-    else{
-        messageElement.textContent = 'There was an error submitting your enquiry.';
-        messageElement.style.color = 'red';
-    }
-
-}).catch(error => {
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        messageElement.textContent = 'An error occurred. Please try again.';
-        messageElement.style.color = 'red';
+<script type="module">
+    import { CTAApi } from '/js/external-integration.js';
+    document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const messageElement = document.getElementById('message');
+        const submitBtn = document.getElementById('submitBtn');
+        if (!name || !mobile) { messageElement.textContent='Name and Mobile number are required.'; messageElement.style.color='red'; return; }
+        if (!/^\d{10}$/.test(mobile)) { messageElement.textContent='Mobile number must be a 10-digit number.'; messageElement.style.color='red'; return; }
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) { messageElement.textContent='Please complete the CAPTCHA'; return; }
+        messageElement.textContent=''; submitBtn.textContent='Submitting...'; submitBtn.disabled=true;
+        CTAApi({ name, mobile, recaptchaResponse, enquiryPage:"Carmaa Interior Car Cleaning", enquiryPageLink:"https://carmaacarcare.com/interior-car-cleaning-service" })
+        .then(response => {
+            submitBtn.textContent='Submit'; submitBtn.disabled=false;
+            if(response.ok) { messageElement.textContent='Enquiry submitted successfully!'; messageElement.style.color='white'; }
+            else { messageElement.textContent='There was an error submitting your enquiry.'; messageElement.style.color='red'; }
+        }).catch(error => { submitBtn.textContent='Submit'; submitBtn.disabled=false; messageElement.textContent='An error occurred. Please try again.'; messageElement.style.color='red'; });
     });
-});
-    </script>
-
+</script>
 <script src='/script.js' defer></script>
-</body>
+    </body>
 </html>
-

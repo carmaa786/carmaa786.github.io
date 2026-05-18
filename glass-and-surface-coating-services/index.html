@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-IN">
     <head>
+        <link rel="preload" as="image" href="/assets/glass_first.webp" fetchpriority="high">
         <link rel="stylesheet" href="/css/globalCss/navbarGlobal.css">
         <link rel="canonical" href="https://carmaacarcare.com/glass-and-surface-coating-services/" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" crossorigin="anonymous">
@@ -15,14 +16,15 @@
         <title>  Book Carmaa Glass and Surface Coating Services in Dehradun</title>
         <meta name="description" content=" Book Carmaa Glass and Surface Coating Services | Premium water repellent in Dehradun, hydrophobic glass coating, water repellent coating, car lamination." />
         <meta name="keywords" content="Premium water repellent in Dehradun, Premium hydrophobic glass coating in Dehradun, Premium water repellent coating, premium car lamination in Dehradun, car glass water repellent, Doorstep water repellent in Dehradun, Doorstep hydrophobic glass coating in Dehradun, Doorstep water repellent coating, Doorstep car lamination."/>
+        <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="/css/common.css"/>
         <link rel="stylesheet" href="/css/aboutus.css"/>
         <link rel="stylesheet" href="/css/homepage.css"/>
         <link rel="stylesheet" href="/css/service.css"/>
-        <script src="/js/rightClickDisable.js"></script>
+        <script src="/js/rightClickDisable.js" defer></script>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+        <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script> -->
+        <!-- <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script> -->
         <style>
             .servicesI {
                 cursor: pointer;
@@ -248,7 +250,7 @@
     <div class="service-left-section">
         <div class="service-img-container">
             <!-- <p class="service-img-price-txt">Starting at  ₹299</p> -->
-            <img decoding="async" style="border-radius:10px" src="/assets/glass_first.webp" alt="waterless car wash" loading="lazy" width="1920" height="1281" />
+            <img decoding="async" style="border-radius:10px" src="/assets/glass_first.webp" alt="waterless car wash" loading="eager" fetchpriority="high" width="1920" height="1281" />
         </div>
         
         <h1 class="service-heading">Carmaa Glass and Surface Coating Services</h1>
