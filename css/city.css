@@ -236,8 +236,9 @@ a:hover {
 }
 .city-header-section .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem 1rem;
   position: relative;
   z-index: 2;
 }
@@ -339,6 +340,16 @@ a:hover {
     background-image: none !important;
     background-color: #f9fbfd !important;
     padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  .our-service-main-section .our-services-section-city-right h2,
+  .our-service-main-section .our-services-section-city-right h1 {
+    color: #1b4e9b !important;
+  }
+  .our-service-main-section .our-services-section-city-right p {
+    color: #444444 !important;
+  }
+  .our-service-main-section .our-services-section-city-right-points strong {
+    color: #1b4e9b !important;
   }
   
   /* Suppress decorative background silhouettes that overlap text */
@@ -2295,4 +2306,57 @@ a:hover {
 /* Hide legacy hardcoded WhatsApp icons to prevent duplication with the new footer widget */
 .whatsapp-icon-container {
     display: none !important;
+}
+
+/* Custom mobile layout optimizations for service and decoration pages */
+@media (max-width: 768px) {
+    /* 1. Fix doorstep car decoration service empty space issue */
+    body .decor-image {
+        width: 100% !important;
+        height: 280px !important;
+        min-height: 280px !important;
+        max-width: 100% !important;
+        margin: 0 0 1.5rem 0 !important;
+    }
+    body .decor-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* 2. Fix our commitment to quality section collapsed images and text squeezing */
+    body .commitment-quality-right .img-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        background-color: transparent !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        margin-bottom: 15px !important;
+    }
+    body .commitment-quality-right .img-wrapper img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 220px !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+    body .commitment-quality-right .img-wrapper .overlay-text {
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 0 !important;
+        top: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    body .commitment-quality-right .img-wrapper .overlay-text p {
+        color: #ffffff !important;
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+    }
 }

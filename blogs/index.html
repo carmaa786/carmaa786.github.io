@@ -12,10 +12,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Inter:wght@100..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+    
+  
 
   <link rel="stylesheet" href="/css/city.css" />
   
@@ -73,17 +73,28 @@
       }
     }
   </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet" />
+  
+  
+  
   <script src="/js/rightClickDisable.js"></script>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
   <script src="/js/analytics.js" defer></script>
-  <div style="
+  
+    <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
+
+    <!-- Local Preloaded Fonts to Eliminate Render Block -->
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+      @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+    </style>
+</head>
+
+<body>
+    <div style="
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -95,10 +106,7 @@
       <img style="height: 100%; width: 100%" src="/assets/whatsapp.png" alt="waterless car wash in Dehradun" loading="eager" width="1280" height="1280" />
     </a>
   </div>
-    <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
-</head>
 
-<body>
   <div id="preloader"></div>
 
   <div id="content">
