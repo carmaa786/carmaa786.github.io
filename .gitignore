@@ -40,3 +40,4 @@ blog_audit.json
 blog_metadata*.json
 missing_images.json
 nginx.conf.example
+lighthouse_report*.json
