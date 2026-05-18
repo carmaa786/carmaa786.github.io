@@ -42,20 +42,14 @@
     <link rel="stylesheet" href="/css/aboutus.css"/>
     <link rel="stylesheet" href="/css/homepage.css"/>
     <link rel="stylesheet" href="/css/modal.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .servicesI {
             cursor: pointer;
@@ -101,6 +95,84 @@
       gtag('js', new Date());
       gtag('config', 'AW-16789669575');
     </script>
+    
+
+    <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
+
+    <!-- Local Preloaded Fonts to Eliminate Render Block -->
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+      @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+
+      /* Mobile layout overrides for doorstep car decoration pages */
+      @media screen and (max-width: 768px) {
+          /* 1. Fix decoration service page empty space below images */
+          body .decor-image {
+              width: 100% !important;
+              height: 280px !important;
+              min-height: 280px !important;
+              max-width: 100% !important;
+              margin: 0 0 1.5rem 0 !important;
+          }
+          body .decor-image img {
+              width: 100% !important;
+              height: 100% !important;
+              object-fit: cover !important;
+          }
+          body .our-services-section-city-left {
+              width: 100% !important;
+              height: auto !important;
+              min-height: unset !important;
+              margin-bottom: 20px !important;
+          }
+          body .our-services-section-city-left img {
+              width: 100% !important;
+              height: auto !important;
+              object-fit: cover !important;
+          }
+
+          /* 2. Fix our commitment to quality section collapsed images and text squeezing */
+          body .commitment-quality-right .img-wrapper {
+              width: 100% !important;
+              max-width: 100% !important;
+              height: auto !important;
+              background-color: transparent !important;
+              background: transparent !important;
+              border-radius: 0 !important;
+              margin-bottom: 15px !important;
+          }
+          body .commitment-quality-right .img-wrapper img {
+              width: 100% !important;
+              max-width: 100% !important;
+              height: auto !important;
+              min-height: 220px !important;
+              object-fit: cover !important;
+              display: block !important;
+          }
+          body .commitment-quality-right .img-wrapper .overlay-text {
+              position: absolute !important;
+              bottom: 10px !important;
+              left: 0 !important;
+              top: auto !important;
+              width: 100% !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+          }
+          body .commitment-quality-right .img-wrapper .overlay-text p {
+              color: #ffffff !important;
+              font-size: 1.2rem !important;
+              font-weight: 700 !important;
+              margin: 0 !important;
+              text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+          }
+      }
+    </style>
+</head>
+
+<body style="background-color: #f0f3ff;">
     <div style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;"  class="whatsapp-icon-container"
     >
         <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
@@ -109,10 +181,6 @@
         </a>
     </div>
 
-    <link rel="stylesheet" href="/bundle.min.css" media="print" onload="this.media='all'">
-</head>
-
-<body style="background-color: #f0f3ff;">
     <div class="topbar-section-common">
         <div class="topbar-section-container">
             <div class="social-media-icons">
@@ -318,26 +386,26 @@
             Our services are backed by transparency, professionalism, and customer-first support. Whether you’re looking for an affordable auto repair near me, a certified car mechanic near me, or a fast-response mobile mechanic near me, Carmaa ensures a seamless experience backed by quality and trust.
             </p>
             <ul class="desc">
-                </p>
-                <p class="our-services-section-city-right-points"><strong>1. Doorstep Car Repair in Dehradun
+                <li class="our-services-section-city-right-points"><strong>1. Doorstep Car Repair in Dehradun
                     <br>
                 </strong> Our doorstep <b>car repair in Dehradun</b> lets you skip the garage. Whether it’s engine trouble or AC issues, our experts fix your car on-site, saving time and hassle.
-                </p>
-                <p class="our-services-section-city-right-points"><strong>2. Mobile Mechanic in Dehradun
+                </li>
+                <li class="our-services-section-city-right-points"><strong>2. Mobile Mechanic in Dehradun
                     <br>
                 </strong> Our trained <b>mobile mechanic in Dehradun</b> team is ready to travel across the city with the tools and skills needed for quick and efficient repairs at your location.
-                </p>
-                <p class="our-services-section-city-right-points"><strong>3. Auto Repair in Dehradun
+                </li>
+                <li class="our-services-section-city-right-points"><strong>3. Auto Repair in Dehradun
                     <br>
                 </strong> From battery replacement and brake repair to suspension checks and diagnostics, we provide complete <b>auto repair in Dehradun </b> services at competitive rates.
-                </p>
-                <p class="our-services-section-city-right-points"><strong>4. Car Mechanics Near Me
+                </li>
+                <li class="our-services-section-city-right-points"><strong>4. Car Mechanics Near Me
                     <br>
                 </strong> Our app helps you find verified <b>car mechanics near me</b> instantly, ensuring your car is handled only by trusted professionals with a track record of excellence.
-                </p><p class="our-services-section-city-right-points"><strong>5. Mobile Mechanic Near Me
+                </li>
+                <li class="our-services-section-city-right-points"><strong>5. Mobile Mechanic Near Me
                     <br>
                 </strong> Need a fast solution? Just search for a <b>mobile mechanic near me,</b> and Carmaa will dispatch a trained professional to your location in minutes.
-                </p>
+                </li>
             </ul>
              <p class="desc">With Carmaa's doorstep car care, you don't just have convenience, you have reliability, speed, and professionalism at each step. From booking via the <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank" class="no-underline">Ios app</a> or <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank" class="no-underline">Andriod app</a> and  website, everything from scheduling to payments is smooth sailing. We promise to offer you the best car mechanics in Dehradun, solve search queries like car repair near me and trusted auto repair near me, all at your fingertips. Let Carmaa relieve you of the stress of car issues with intelligent, pocket-friendly, and professional solutions brought to your doorstep in Dehradun.
             </p>
