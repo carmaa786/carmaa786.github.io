@@ -1,7 +1,21 @@
 User-agent: *
 Allow: /
-Disallow: /scratch/
+Disallow: /components/
+Disallow: /scripts/
+Disallow: /images/
+Disallow: /*.py$
 Disallow: /node_modules/
+Disallow: /open-app/
+Disallow: /app/
+Disallow: /scratch/
+Disallow: /src/
+
+# Block /index.html variants being crawled directly
+Disallow: /index.html
+Disallow: /*/index.html
+
+# Block apostrophe URLs
+Disallow: /why-carmaa-is-becoming-dehradun*
 
 User-agent: GPTBot
 Allow: /
