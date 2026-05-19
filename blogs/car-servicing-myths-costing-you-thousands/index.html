@@ -84,29 +84,47 @@
 <body>
 <div class="whatsapp-icon-container" style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
 <a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-<img alt="whatsapp carmaa" height="1280" loading="eager" src="/assets/whatsapp.png" style="height: 100%; width: 100%;" width="1280"/>
+<picture>
+  <source srcset="/assets/whatsapp.webp" type="image/webp">
+  <img alt="whatsapp carmaa" height="1280" src="/assets/whatsapp.png" style="height: 100%; width: 100%;" width="1280" fetchpriority="high" decoding="async" />
+</picture>
 </a>
 </div>
 <div class="topbar-section-common">
 <div class="topbar-section-container">
 <div class="social-media-icons">
 <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
-<div class="img-wrapper"><img alt="facebook" height="64" loading="eager" src="/assets/contactus/facebook.png" width="64"/></div>
+<div class="img-wrapper"><picture>
+  <source srcset="/assets/contactus/facebook.webp" type="image/webp">
+  <img alt="facebook" height="64" src="/assets/contactus/facebook.png" width="64" loading="lazy" decoding="async" />
+</picture></div>
 </a>
 <a href="https://www.instagram.com/carmaa_official" target="_blank">
-<div class="img-wrapper"><img alt="instagram" height="64" loading="eager" src="/assets/contactus/instagram.png" width="64"/></div>
+<div class="img-wrapper"><picture>
+  <source srcset="/assets/contactus/instagram.webp" type="image/webp">
+  <img alt="instagram" height="64" src="/assets/contactus/instagram.png" width="64" loading="lazy" decoding="async" />
+</picture></div>
 </a>
 <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
-<div class="img-wrapper"><img alt="youtube" height="64" loading="eager" src="/assets/contactus/youtube.png" width="64"/></div>
+<div class="img-wrapper"><picture>
+  <source srcset="/assets/contactus/youtube.webp" type="image/webp">
+  <img alt="youtube" height="64" src="/assets/contactus/youtube.png" width="64" loading="lazy" decoding="async" />
+</picture></div>
 </a>
 <a href="/blogs/">
-<div class="img-wrapper"><img alt="blogs" height="64" loading="eager" src="/assets/home-page/topbar/blogger.png" width="64"/></div>
+<div class="img-wrapper"><picture>
+  <source srcset="/assets/home-page/topbar/blogger.webp" type="image/webp">
+  <img alt="blogs" height="64" src="/assets/home-page/topbar/blogger.png" width="64" loading="lazy" decoding="async" />
+</picture></div>
 </a>
 </div>
 <p id="topbar-text" style="color: #fff; font-weight: 600; font-size: 0.95rem; margin: 0;">Bring your car's showroom shine back!</p>
 <div style="display:flex;flex-direction: column; align-items: center;">
 <div style="display:flex;align-items: center;gap:0.3rem">
-<img alt="phone" height="64" loading="eager" src="/assets/home-page/topbar/phone.png" style="width: 1.5rem;height:1.5rem" width="64"/>
+<picture>
+  <source srcset="/assets/home-page/topbar/phone.webp" type="image/webp">
+  <img alt="phone" height="64" src="/assets/home-page/topbar/phone.png" style="width: 1.5rem;height:1.5rem" width="64" loading="lazy" decoding="async" />
+</picture>
 <a class="mobile-number-ref" href="tel:+917042555401"><p>+91 70425 55401</p></a>
 </div>
 </div>
@@ -126,7 +144,10 @@
 <header class="city-header-section">
 <p>Car Servicing Myths</p>
 <div class="breadcrumb">
-<img alt="home" height="64" loading="eager" src="/common/home.png" width="64"/>
+<picture>
+  <source srcset="/common/home.webp" type="image/webp">
+  <img alt="home" height="64" src="/common/home.png" width="64" loading="lazy" decoding="async" />
+</picture>
 <p><a class="breadcrumb-link" href="/">Home</a></p><p>/</p>
 <p><a class="breadcrumb-link" href="../">Blogs</a></p><p>/</p>
 <p><a class="breadcrumb-link" href="./">Car Servicing Myths</a></p>
@@ -162,6 +183,15 @@
 <p style="background:#eef4ff; border-left:4px solid #1b4e9b; border-radius:6px; padding:1rem 1.2rem; margin-top:2rem;">
                Give your car the care it deserves without leaving your home. Book our signature doorstep car wash today. <a href="/doorstep-car-washing-service-in-dehradun/" style="color:#1b4e9b; font-weight:600; text-decoration:underline;">Let our experts handle it at your doorstep.</a>
 </p>
+<div class="author-bio" style="margin-top:2rem;padding:1.2rem;background:#f9f9f9;border:1px solid #e0e0e0;border-radius:8px;display:flex;gap:1rem;align-items:center;width:100%;box-sizing:border-box;">
+              <div style="width:64px;height:64px;border-radius:50%;background:#1b4e9b;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="color:#fff;font-size:1.5rem;font-weight:700;">C</span>
+              </div>
+              <div>
+                <strong style="font-size:1rem;color:#1b4e9b;">Carmaa Car Care Team</strong>
+                <p style="margin:0.3rem 0 0;font-size:0.9rem;color:#555;line-height:1.5;">Written by the Carmaa Car Care team — certified auto-detailing professionals serving Dehradun, Delhi-NCR, and beyond since 2021. We bring expert car care knowledge from thousands of doorstep services.</p>
+              </div>
+            </div>
 </div>
 <div class="service-right-section">
 <div class="form-container">
@@ -187,9 +217,18 @@
 <a class="service-link-point-link" href="../save-money-with-preventive-car-maintenance/" style="display: block; margin-bottom: 0.8rem;"><div class="service-link-point"><p class="link-name">Preventive Maintenance Guide</p><i class="fa fa-chevron-right" style="font-size:15px"></i></div></a>
 <div class="contact-section">
 <p class="service-contact-section-heading">Contact Us</p>
-<div class="service-contact-section-points"><img alt="location" height="64" loading="lazy" src="/assets/services/location.png" style="width: 1.5rem;height: 1.5rem;" width="64"/><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Address</p><p>Tea Estate Banjarawala, Kedarpur, Dehradun</p></div></div>
-<div class="service-contact-section-points"><img alt="phone" height="64" loading="lazy" src="/assets/services/phone-call.png" style="width: 1.5rem;height: 1.5rem;" width="64"/><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Phone</p><a class="mobile-number-ref2" href="tel:+917042555401"><p>+91-70425 55401</p></a></div></div>
-<div class="service-contact-section-points"><img alt="email" height="64" loading="lazy" src="/assets/services/mail.png" style="width: 1.5rem;height: 1.5rem;" width="64"/><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Email</p><a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"><p>support@carmaacarcare.com</p></a></div></div>
+<div class="service-contact-section-points"><picture>
+  <source srcset="/assets/services/location.webp" type="image/webp">
+  <img alt="location" height="64" src="/assets/services/location.png" style="width: 1.5rem;height: 1.5rem;" width="64" loading="lazy" decoding="async" />
+</picture><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Address</p><p>Tea Estate Banjarawala, Kedarpur, Dehradun</p></div></div>
+<div class="service-contact-section-points"><picture>
+  <source srcset="/assets/services/phone-call.webp" type="image/webp">
+  <img alt="phone" height="64" src="/assets/services/phone-call.png" style="width: 1.5rem;height: 1.5rem;" width="64" loading="lazy" decoding="async" />
+</picture><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Phone</p><a class="mobile-number-ref2" href="tel:+917042555401"><p>+91-70425 55401</p></a></div></div>
+<div class="service-contact-section-points"><picture>
+  <source srcset="/assets/services/mail.webp" type="image/webp">
+  <img alt="email" height="64" src="/assets/services/mail.png" style="width: 1.5rem;height: 1.5rem;" width="64" loading="lazy" decoding="async" />
+</picture><div class="service-contact-section-desc"><p class="service-contact-section-desc-heading">Email</p><a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com"><p>support@carmaacarcare.com</p></a></div></div>
 </div>
 </div>
 </section>
