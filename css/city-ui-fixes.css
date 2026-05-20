@@ -1,8 +1,8 @@
 /* ===================================================================
    Carmaa city-page UI fixes
    Loaded AFTER city.min.css and after the inline mobile-visibility
-   block. Doubled-class selectors (.x.x) are used where needed so
-   these overrides beat the aggressive mobile-visibility hack.
+   block. Doubled-class selectors (.x.x) raise specificity so these
+   overrides beat the aggressive mobile-visibility hack.
    =================================================================== */
 
 /* Fix: the "Why Doon Valley's Residents Trust Carmaa" description
@@ -33,19 +33,24 @@
 }
 
 /* Fix: the "Book the Best Car Wash" CTA section.
-   - The previous gradient + texture + background-blend-mode:overlay
-     produced a washed-out light-blue background. Use a SOLID dark
-     blue panel instead.
-   - The mobile-visibility hack was forcing the text grey/blue and a
-     stuck reveal animation dimmed it. Force solid white, full opacity.
-   The doubled class (.our-service-main-section.our-service-main-section)
-   raises specificity so these rules cannot lose to the hack. */
-.our-service-main-section.our-service-main-section {
+   The inner <section class="city-call-to-action-btn"> is a <section>
+   element, so the mobile-visibility hack (section:not(.city-header-
+   section){background:#f9fbfd}) painted it near-white. That near-white
+   layer covered the dark-blue panel, leaving white text on a white
+   background (DevTools contrast 1.03 = invisible).
+   Fix: force the WHOLE CTA container chain to solid dark blue, and
+   force all the CTA text solid white. Doubled-class specificity
+   guarantees these win over the hack. */
+.our-service-main-section.our-service-main-section,
+.our-service-main-section.our-service-main-section .city-call-to-action-btn,
+.our-service-main-section.our-service-main-section .city-call-to-action-wrapper,
+.our-service-main-section.our-service-main-section .city-call-to-action-left,
+.our-service-main-section.our-service-main-section .city-call-to-action-right {
   background: #0b4c9d !important;
+  background-image: none !important;
 }
 .our-service-main-section.our-service-main-section .city-call-to-action-heading,
 .our-service-main-section.our-service-main-section .city-call-to-action-para,
-.our-service-main-section.our-service-main-section .city-call-to-action-right,
 .our-service-main-section.our-service-main-section .city-call-to-action-right * {
   color: #ffffff !important;
   opacity: 1 !important;
