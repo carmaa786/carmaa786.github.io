@@ -1,0 +1,52 @@
+/* ===================================================================
+   Carmaa city-page UI fixes
+   Loaded AFTER city.min.css and after the inline mobile-visibility
+   block so these overrides win the cascade.
+   =================================================================== */
+
+/* Fix: the "Why Doon Valley's Residents Trust Carmaa" description
+   paragraph (.right-desc) had display:flex applied to it, which
+   scattered its text + <strong> tags into broken vertical columns.
+   A running-text paragraph must render as a normal block. */
+.city-why-choose .right-desc,
+.city-why-choose p.right-desc {
+  display: block !important;
+  width: 100% !important;
+  gap: 0 !important;
+  text-align: left !important;
+}
+
+/* Fix: benefit description paragraphs had a forced min-height of
+   16-20rem, creating huge empty gaps below short text. */
+.benefit-element-desc p {
+  min-height: 0 !important;
+}
+
+/* Fix: the "Car Washing" / "Auto Detailing" service-card images were
+   stretched / distorted. object-fit:cover fills the box without
+   distortion. */
+.commitment-quality-right .img-wrapper img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Fix: the "Book the Best Car Wash" CTA section rendered with a grey
+   background on mobile (the mobile-visibility hack forced
+   background-color:#f9fbfd). Restore the intended blue panel
+   with white text. */
+@media screen and (max-width: 768px) {
+  .our-service-main-section {
+    background-color: #0b4c9d !important;
+    background-image:
+      linear-gradient(rgba(11, 76, 157, 0.92), rgba(11, 76, 157, 0.92)),
+      url(/assets/aboutus/textture-bg.png) !important;
+    background-blend-mode: overlay !important;
+  }
+  .our-service-main-section .city-call-to-action-heading,
+  .our-service-main-section .city-call-to-action-para {
+    color: #ffffff !important;
+  }
+}

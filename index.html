@@ -137,6 +137,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
     <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
+    <style>
+        /* Fix: "The Carmaa Effect" before/after image overflowing / stretching out of its column */
+        .split-layout { min-width: 0; }
+        .split-content, .split-image { min-width: 0; }
+        .before-after-container { max-width: 100%; }
+        .before-after-container img { width: 100%; height: auto; max-width: 100%; display: block; }
+    </style>
+
 </head>
 
 <body>
