@@ -178,14 +178,15 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
   max-width: 100% !important;
   box-sizing: border-box !important;
   display: block !important;
-  overflow: hidden !important;
+  overflow: visible !important;
+  height: auto !important;
+  align-self: flex-start !important;
 }
 .our-services-section-city-left img {
   width: 100% !important;
   height: auto !important;
   max-width: 100% !important;
   max-height: none !important;
-  object-fit: contain !important;
   border-radius: 10px !important;
   display: block !important;
 }
