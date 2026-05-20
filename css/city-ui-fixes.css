@@ -49,10 +49,18 @@
   background: #0b4c9d !important;
   background-image: none !important;
 }
+/* Both .our-service-main-section blocks (the services-list section AND
+   the "Book the Best Car Wash" CTA) have a solid blue background, so
+   ALL their text must be white. Previously only the CTA text was
+   whitened, leaving the services-list section with black text on blue
+   (unreadable, especially on desktop where the mobile hack is off). */
+.our-service-main-section.our-service-main-section,
+.our-service-main-section.our-service-main-section * {
+  color: #ffffff !important;
+}
 .our-service-main-section.our-service-main-section .city-call-to-action-heading,
 .our-service-main-section.our-service-main-section .city-call-to-action-para,
 .our-service-main-section.our-service-main-section .city-call-to-action-right * {
-  color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
