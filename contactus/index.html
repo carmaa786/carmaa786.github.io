@@ -88,6 +88,16 @@
           flex-direction: column;
         }
       }
+
+      /* Fix: contact details were white-on-white, only visible on hover */
+      .contact-type-container .mobile-number-ref,
+      .contact-type-container .mobile-number-ref p {
+        color: #62718d;
+      }
+      .contact-type-container .mobile-number-ref:hover,
+      .contact-type-container .mobile-number-ref:hover p {
+        color: #28b097;
+      }
     </style>
 
     <script src="/js/rightClickDisable.js"></script>
