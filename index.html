@@ -127,7 +127,7 @@
                         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px">
                 <img src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
             </picture>
-            <video muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
+            <video muted loop playsinline autoplay preload="auto" class="hero-video" id="heroVideo" width="1920" height="1080">
                 <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay hero-extra"></div>
@@ -655,22 +655,31 @@
     <script src="/js/analytics.js" defer></script>
     <script src="script.js?v=1.0.4" defer></script>
     <script>
-        const loadHeroVideo = () => {
-            const video = document.getElementById('heroVideo');
-            if (video && !video.src) {
-                const source = video.querySelector('source');
-                if (source && source.dataset.src) {
-                    source.src = source.dataset.src;
-                    video.load();
-                    video.oncanplay = () => video.classList.add('loaded');
-                    video.play().catch(e => {});
-                }
-            }
-        };
-
-        ['scroll', 'click', 'touchstart'].forEach(event => {
-            window.addEventListener(event, loadHeroVideo, { once: true, passive: true });
-        });
+      const loadHeroVideo = () => {
+        const video = document.getElementById('heroVideo');
+        if (video && !video.src) {
+          const source = video.querySelector('source');
+          if (source && source.dataset.src) {
+            source.src = source.dataset.src;
+            video.load();
+            video.muted = true;
+            video.oncanplay = () => {
+              video.classList.add('loaded');
+              const p = video.play();
+              if (p && p.catch) p.catch(() => {});
+            };
+          }
+        }
+      };
+      if (window.requestIdleCallback) {
+        requestIdleCallback(loadHeroVideo, { timeout: 1500 });
+      } else {
+        setTimeout(loadHeroVideo, 600);
+      }
+      // safety fallback — also try on first interaction in case autoplay was blocked
+      ['scroll','click','touchstart'].forEach(e =>
+        window.addEventListener(e, loadHeroVideo, { once: true, passive: true })
+      );
     </script>
     <noscript><img decoding="async" loading="lazy" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
     <script type="application/ld+json">
