@@ -137,6 +137,23 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
     <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
 
+    <style>
+        /* Fix: "The Carmaa Effect" before/after image overflowing / stretching out of its column */
+        .split-layout { min-width: 0; }
+        .split-content, .split-image { min-width: 0; }
+        .before-after-container { max-width: 100%; }
+        .before-after-container img { width: 100%; height: auto; max-width: 100%; display: block; }
+
+        /* Fix: the decorative referral avatar graphic uses fixed
+           positioning that overlaps/clips on small screens. It is
+           purely decorative, so hide it below desktop width — the
+           heading, text and Download App button remain. */
+        @media (max-width: 991px) {
+            .refer-visual { display: none !important; }
+            .refer-banner { justify-content: center !important; text-align: center !important; }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -630,7 +647,7 @@
                     <div class="before-after-container">
                         <picture>
   <source srcset="assets/before_after_split.webp" type="image/webp">
-  <img src="assets/before_after_split.jpg" alt="Before and After Car Detailing" width="800" height="400" style="aspect-ratio: 2/1; width: 100%; height: auto;" decoding="async" loading="lazy">
+  <img src="assets/before_after_split.jpg" alt="Before and After Car Detailing" width="1024" height="1024" style="aspect-ratio: 1/1; width: 100%; height: auto;" decoding="async" loading="lazy">
 </picture>
                         <div class="badge-label">Real Results</div>
                     </div>

@@ -1,0 +1,202 @@
+/* ===================================================================
+   Carmaa city-page UI fixes
+   Loaded AFTER city.min.css and after the inline mobile-visibility
+   block. Doubled-class selectors (.x.x) raise specificity so these
+   overrides beat the aggressive mobile-visibility hack.
+   =================================================================== */
+
+/* Fix: the "Why Doon Valley's Residents Trust Carmaa" description
+   paragraph (.right-desc) had display:flex applied to it, which
+   scattered its text + <strong> tags into broken vertical columns. */
+.city-why-choose .right-desc,
+.city-why-choose p.right-desc {
+  display: block !important;
+  width: 100% !important;
+  gap: 0 !important;
+  text-align: left !important;
+}
+
+/* Fix: benefit description paragraphs had a forced min-height of
+   16-20rem, creating huge empty gaps below short text. */
+.benefit-element-desc p {
+  min-height: 0 !important;
+}
+
+/* Fix: the "Car Washing" / "Auto Detailing" service-card images were
+   stretched / distorted. object-fit:cover fills the box cleanly. */
+.commitment-quality-right .img-wrapper img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Fix: the "Book the Best Car Wash" CTA section.
+   The inner <section class="city-call-to-action-btn"> is a <section>
+   element, so the mobile-visibility hack (section:not(.city-header-
+   section){background:#f9fbfd}) painted it near-white. That near-white
+   layer covered the dark-blue panel, leaving white text on a white
+   background (DevTools contrast 1.03 = invisible).
+   Fix: force the WHOLE CTA container chain to solid dark blue, and
+   force all the CTA text solid white. Doubled-class specificity
+   guarantees these win over the hack. */
+.our-service-main-section.our-service-main-section,
+.our-service-main-section.our-service-main-section .city-call-to-action-btn,
+.our-service-main-section.our-service-main-section .city-call-to-action-wrapper,
+.our-service-main-section.our-service-main-section .city-call-to-action-left,
+.our-service-main-section.our-service-main-section .city-call-to-action-right {
+  background: #0b4c9d !important;
+  background-image: none !important;
+}
+/* Both .our-service-main-section blocks (the services-list section AND
+   the "Book the Best Car Wash" CTA) have a solid blue background, so
+   ALL their text must be white. Previously only the CTA text was
+   whitened, leaving the services-list section with black text on blue
+   (unreadable, especially on desktop where the mobile hack is off). */
+.our-service-main-section.our-service-main-section,
+.our-service-main-section.our-service-main-section * {
+  color: #ffffff !important;
+}
+.our-service-main-section.our-service-main-section .city-call-to-action-heading,
+.our-service-main-section.our-service-main-section .city-call-to-action-para,
+.our-service-main-section.our-service-main-section .city-call-to-action-right * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Fix: city testimonials were a static vertical stack. Lay them out as
+   a horizontal row; js/city-testimonials.js duplicates the cards and
+   drives a continuous auto-scroll (like the homepage reviews). */
+.testimonial-section.testimonial-section .testimonial-slider-2 {
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+.testimonial-section.testimonial-section .testimonial-track-2 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+}
+.testimonial-section.testimonial-section .testimonial-track-2 .testimonial-card {
+  flex: 0 0 auto !important;
+  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
+  margin: 0 16px 0 0 !important;
+  position: static !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+/* Fix: the trailing classless <p> inside .city-benefits-section sits on
+   a LIGHT background (rgb(240,243,255)); force dark text so it is
+   readable (DevTools confirmed contrast was 1.1 with white text). */
+.city-benefits-section > p:not([class]) {
+  color: #333333 !important;
+}
+
+/* Fix: the parallax CTA section (section.parallex-cta-city) — the
+   mobile-visibility hack killed its background image and greyed the
+   panel, while its ::before dark overlay (rgba(0,0,0,0.5)) stayed on
+   top, producing a murky grey panel with dim text. Make it a solid
+   blue panel, remove the dark overlay, force the text white. */
+section.parallex-cta-city.parallex-cta-city {
+  background: #0b4c9d !important;
+  background-image: none !important;
+}
+section.parallex-cta-city.parallex-cta-city::before {
+  display: none !important;
+  background: transparent !important;
+}
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city h4,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city p,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Fix: the .commitment-quality section ("Our Commitment to Quality...")
+   has a light background, but on desktop its body text was light/faint
+   because the mobile-visibility hack that darkens text only runs at
+   <=768px. Force readable dark body text + blue headings on desktop.
+   (The white overlay text on the service-card images keeps its own
+   higher-specificity white rule, so it is unaffected.) */
+.commitment-quality p,
+.commitment-quality li,
+.commitment-quality .right-desc,
+.commitment-quality .desc {
+  color: #333333 !important;
+}
+.commitment-quality h2,
+.commitment-quality h3,
+.commitment-quality h4,
+.commitment-quality h5,
+.commitment-quality strong {
+  color: #1b4e9b !important;
+}
+
+/* Fix: the .commitment-quality images overflowed/stuck out of their
+   column. Flex children defaulted to min-width:auto (won't shrink
+   below content size). Force min-width:0 + max-width + flex-wrap so
+   the section stays contained at every width. */
+.commitment-quality {
+  flex-wrap: wrap !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.commitment-quality-left,
+.commitment-quality-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.commitment-quality-right {
+  flex-wrap: wrap !important;
+}
+.commitment-quality-right .img-wrapper {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.commitment-quality-right .img-wrapper img {
+  max-width: 100% !important;
+}
+
+/* Fix: the services-section image (.our-services-section-city-left img,
+   carmaa-new5.jpg) rendered ~1044px tall, blowing the section out of
+   proportion. Cap its height with object-fit:cover and contain the
+   columns so nothing overflows. */
+.our-services-section-city-left,
+.our-services-section-city-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.our-services-section-city-left {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  overflow: visible !important;
+  height: auto !important;
+  align-self: flex-start !important;
+}
+.our-services-section-city-left img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  border-radius: 10px !important;
+  display: block !important;
+}
