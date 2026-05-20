@@ -63,29 +63,79 @@
         .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
         .navbar-placeholder { min-height: 80px; background: #fff; }
         .section-header h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 5vw, 3rem); text-transform: uppercase; }
-
+        
+        /* Standardized Floating WhatsApp Widget */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0,0,0,.25);
+            z-index: 99999;
+            transition: transform .2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        .whatsapp-float img,
+        .whatsapp-float picture {
+            width: 34px;
+            height: 34px;
+            display: block;
+        }
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 16px;
+                right: 16px;
+            }
+            .whatsapp-float img {
+                width: 30px;
+                height: 30px;
+            }
+        }
 
     </style>
 
-
-    
     <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/bundle.min.css?v=1.0.4" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/bundle.min.css?v=1.0.4"></noscript>
+    <link rel="stylesheet" href="/bundle.min.css?v=1.0.4">
+    <link rel="stylesheet" href="/css/globalCss/navbarGlobal.min.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
     <style>
         .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.8rem) !important; width: 100%; max-width: 1200px; line-height: 1.3; }
         @media (max-width: 768px) { .section-header h2 { font-size: clamp(1.1rem, 4vw, 1.8rem) !important; } }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hero-video.loaded {
+            opacity: 1;
+        }
+        .hero-poster {
+            z-index: 0;
+        }
     </style>
 
-    
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
     <meta name="google-site-verification" content="fn6ti47KfYJqItUBiZiQ-Dt005jyRVMN_Nle5McNudY" />
-
-    
 
 </head>
 
@@ -127,7 +177,7 @@
                         sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px">
                 <img src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
             </picture>
-            <video muted loop playsinline class="hero-video" id="heroVideo" width="1920" height="1080">
+            <video muted loop playsinline autoplay preload="auto" class="hero-video" id="heroVideo" width="1920" height="1080">
                 <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
             </video>
             <div class="overlay hero-extra"></div>
@@ -474,7 +524,6 @@
                 
                 <div class="journey-road"></div>
 
-                
                 <div class="journey-card reveal fade-up delay-1">
                     <div class="journey-visual scene-arrival-new">
                         <div class="car-dirty">
@@ -497,7 +546,6 @@
                     </div>
                 </div>
 
-                
                 <div class="journey-card reveal fade-up delay-2">
                     <div class="journey-visual scene-service-new">
                         <div class="car-service">
@@ -518,7 +566,6 @@
                     </div>
                 </div>
 
-                
                 <div class="journey-card reveal fade-up delay-3">
                     <div class="journey-visual scene-finish-new">
                         <div class="car-clean">
@@ -546,7 +593,6 @@
                 </div>
             </div>
 
-            
             <div class="infographic-stats reveal fade-up">
                 <div class="stat-item">
                     <div class="stat-icon"><i class="fa-solid fa-car-on"></i></div>
@@ -584,7 +630,7 @@
                     <div class="before-after-container">
                         <picture>
   <source srcset="assets/before_after_split.webp" type="image/webp">
-  <img src="assets/before_after_split.jpg" alt="Before and After Car Detailing" width="800" height="400" style="aspect-ratio: 2/1; width: 100%; height: auto;" fetchpriority="high" decoding="async">
+  <img src="assets/before_after_split.jpg" alt="Before and After Car Detailing" width="800" height="400" style="aspect-ratio: 2/1; width: 100%; height: auto;" decoding="async" loading="lazy">
 </picture>
                         <div class="badge-label">Real Results</div>
                     </div>
@@ -604,7 +650,6 @@
                 <p>See why thousands trust us with their premium vehicles.</p>
             </div>
 
-            
             <div class="reviews-slider-container reveal fade-up delay-1" style="min-height: 300px;">
                 <div class="reviews-track" id="reviewsTrack">
                     
@@ -655,24 +700,56 @@
     <script src="/js/analytics.js" defer></script>
     <script src="script.js?v=1.0.4" defer></script>
     <script>
-        const loadHeroVideo = () => {
-            const video = document.getElementById('heroVideo');
-            if (video && !video.src) {
-                const source = video.querySelector('source');
-                if (source && source.dataset.src) {
-                    source.src = source.dataset.src;
-                    video.load();
-                    video.oncanplay = () => video.classList.add('loaded');
-                    video.play().catch(e => {});
-                }
-            }
-        };
+      let videoLoaded = false;
+      const loadHeroVideo = () => {
+        const video = document.getElementById('heroVideo');
+        if (video && !videoLoaded) {
+          videoLoaded = true;
+          
+          // Remove interaction fallback event listeners immediately to prevent any double-loading
+          ['scroll', 'click', 'touchstart'].forEach(e => {
+            window.removeEventListener(e, loadHeroVideo);
+          });
 
-        ['scroll', 'click', 'touchstart'].forEach(event => {
-            window.addEventListener(event, loadHeroVideo, { once: true, passive: true });
-        });
+          const source = video.querySelector('source');
+          if (source && source.dataset.src) {
+            video.muted = true;
+            
+            const playVideo = () => {
+              video.classList.add('loaded');
+              const p = video.play();
+              if (p && p.catch) p.catch(() => {});
+            };
+
+            // Set up event handlers BEFORE assigning source and calling load()
+            video.oncanplay = playVideo;
+            video.onloadeddata = playVideo;
+            video.onplaying = () => video.classList.add('loaded');
+
+            source.src = source.dataset.src;
+            video.load();
+            
+            // Try to play immediately (browser will buffer and play as soon as ready)
+            const p = video.play();
+            if (p && p.catch) {
+              p.catch(() => {
+                // Autoplay blocked or deferred
+              });
+            }
+          }
+        }
+      };
+      if (window.requestIdleCallback) {
+        requestIdleCallback(loadHeroVideo, { timeout: 1500 });
+      } else {
+        setTimeout(loadHeroVideo, 600);
+      }
+      // safety fallback — also try on first interaction in case autoplay was blocked
+      ['scroll','click','touchstart'].forEach(e =>
+        window.addEventListener(e, loadHeroVideo, { once: true, passive: true })
+      );
     </script>
-    <noscript><img decoding="async" loading="eager" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
+    <noscript><img decoding="async" loading="lazy" height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1106673891043810&ev=PageView&noscript=1" /></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -820,6 +897,15 @@
       ]
     }
     </script>
+
+  <!-- Standardized Floating WhatsApp Widget -->
+  <a href="https://api.whatsapp.com/send?phone=917042555401&text=Hi%20Carmaa%2C%20I%20want%20to%20book%20a%20car%20wash" class="whatsapp-float" aria-label="Chat with Carmaa on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="/assets/whatsapp.webp" type="image/webp">
+      <img src="/assets/whatsapp.png" alt="WhatsApp" width="34" height="34">
+    </picture>
+  </a>
+
 </body>
 </html>
 

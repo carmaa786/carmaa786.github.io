@@ -235,21 +235,7 @@
     </script>
 </head>
 <body>
-<div class="whatsapp-icon-container" style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        height: 50px;
-        aspect-ratio: 1;
-        z-index: 99999999;
-      ">
-<a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-<picture>
-  <source srcset="/assets/whatsapp.webp" type="image/webp">
-  <img alt="waterless car wash in Noida" height="1280" src="/assets/whatsapp.png" style="height: 100%; width: 100%" width="1280" fetchpriority="high" decoding="async" />
-</picture>
-</a>
-</div>
+>
 <div class="topbar-section-common">
 <div class="topbar-section-container">
 <div class="social-media-icons">
@@ -513,7 +499,7 @@
 <div class="gallery-wrap">
 <picture>
   <source srcset="/assets/pricing/back.webp" type="image/webp">
-  <img height="64" id="back-btn" src="/assets/pricing/back.png" style="width: 2rem; height: 2rem; cursor: pointer" width="64" loading="lazy" decoding="async" />
+  <img height="64" id="back-btn" src="/assets/pricing/back.png" style="width: 2rem; height: 2rem; cursor: pointer" width="64" decoding="async" fetchpriority="high" />
 </picture>
 <div class="gallery">
 <div class="gallery-wrapper">
@@ -1096,7 +1082,7 @@
 </div>
 <div class="gallery2-wrapper">
 <span class="gallery2-card">
-<img decoding="async" height="430" loading="lazy" src="/assets/aboutus/about-us.webp" width="530"/>
+<img decoding="async" height="430" loading="lazy" src="/assets/aboutus/about-us.webp" width="530" />
 <div class="gallery2-card-desc">
 <h3>Exterior cleaning</h3>
 <main style="
@@ -2110,5 +2096,14 @@
         });
     </script>
 <script defer="" src="/script.js"></script>
+
+  <!-- Standardized Floating WhatsApp Widget -->
+  <a href="https://api.whatsapp.com/send?phone=917042555401&text=Hi%20Carmaa%2C%20I%20want%20to%20book%20a%20car%20wash" class="whatsapp-float" aria-label="Chat with Carmaa on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="/assets/whatsapp.webp" type="image/webp">
+      <img src="/assets/whatsapp.png" alt="WhatsApp" width="34" height="34">
+    </picture>
+  </a>
+
 </body>
 </html>

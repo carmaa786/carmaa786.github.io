@@ -2000,29 +2000,51 @@ a:hover {
    FINAL BRAND STANDARDIZATION & VISIBILITY OVERRIDES (2026)
    ========================================================================== */
 
-/* 1. Global Button & Badge Reset (Clean, Transparent Aesthetic) */
+/* 1. Global Button Reset (Solid, Beautiful brand aesthetic always visible by default) */
 .btn-main, 
 .hero-section-btn2, 
 .city-call-to-action-btn-component, 
-.trust-badge,
 .hero-section-btn {
-    background: transparent !important;
-    background-color: transparent !important;
+    background-color: #1b4e9b !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 14px rgba(27, 78, 155, 0.3) !important;
     color: #ffffff !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
-    padding: 12px 24px !important;
+    padding: 14px 28px !important;
     cursor: pointer !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
 }
 
 .btn-main:hover, 
 .hero-section-btn2:hover, 
-.city-call-to-action-btn-component:hover {
-    color: #28b097 !important; /* Brand teal hover */
-    transform: translateY(-2px);
+.city-call-to-action-btn-component:hover,
+.hero-section-btn:hover {
+    background-color: #28b097 !important; /* Brand teal hover */
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(40, 176, 151, 0.4) !important;
+}
+
+/* Trust Badge (Clean, transparent topbar aesthetic) */
+.trust-badge {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    padding: 6px 15px !important;
+    border-radius: 50px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
 }
 
 /* 2. Mobile Visibility & Spacing Audit (≤ 768px) */

@@ -121,17 +121,10 @@
           @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
           @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
         </style>
-<link href="/bundle.min.css" media="print" onload="this.media='all'" rel="stylesheet">
+<link href="/bundle.min.css" rel="stylesheet">
 </link></link></link></link></meta></link></head>
 <body>
-<div class="whatsapp-icon-container" style="position:fixed;bottom:20px;right:20px;height:50px;aspect-ratio:1;z-index:99999999;">
-<a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-<picture>
-  <source srcset="/assets/whatsapp.webp" type="image/webp">
-  <img alt="doorstep car wash in Dehradun" height="1280" src="/assets/whatsapp.png" style="height:100%;width:100%;" width="1280" fetchpriority="high" decoding="async" />
-</picture>
-</a>
-</div>
+>
 <div class="topbar-section-common">
 <div class="topbar-section-container">
 <div class="social-media-icons">
@@ -194,7 +187,7 @@
 <section class="service-main-section">
 <div class="service-left-section">
 <div class="service-img-container">
-<img alt="Paint protection film service in Dehradun by Carmaa" fetchpriority="high" height="1709" loading="eager" src="/assets/blogs/ceramic-coating-benefits.webp" style="border-radius:10px" width="2560"/>
+<img alt="Paint protection film service in Dehradun by Carmaa" fetchpriority="high" height="1709" loading="eager" src="/assets/blogs/ceramic-coating-benefits.webp" style="border-radius:10px" width="2560" />
 </div>
 <h1 class="service-heading">Paint Protection Film (PPF) — Self-Healing Shield for Your Car</h1>
 <h2 class="service-heading">What is Paint Protection Film and How Does it Work?</h2>
@@ -437,5 +430,14 @@
     });
 </script>
 <script defer="" src="/script.js"></script>
+
+  <!-- Standardized Floating WhatsApp Widget -->
+  <a href="https://api.whatsapp.com/send?phone=917042555401&text=Hi%20Carmaa%2C%20I%20want%20to%20book%20a%20car%20wash" class="whatsapp-float" aria-label="Chat with Carmaa on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="/assets/whatsapp.webp" type="image/webp">
+      <img src="/assets/whatsapp.png" alt="WhatsApp" width="34" height="34">
+    </picture>
+  </a>
+
 </body>
 </html>

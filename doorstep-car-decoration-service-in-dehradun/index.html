@@ -35,7 +35,7 @@
 <link href="/css/city.min.css" rel="stylesheet">
 <link href="/css/common.min.css" rel="stylesheet">
 <link href="/css/aboutus.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="/css/homepage.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="/css/homepage.min.css" rel="stylesheet"/>
 <link href="/css/modal.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
 <script defer="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
 <script defer="" nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -88,7 +88,7 @@
       gtag('js', new Date());
       gtag('config', 'AW-16789669575');
     </script>
-<link href="/bundle.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="/bundle.min.css" rel="stylesheet"/>
 <!-- Local Preloaded Fonts to Eliminate Render Block -->
 <link as="font" crossorigin="" href="/assets/fonts/inter.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="/assets/fonts/oswald-600.woff2" rel="preload" type="font/woff2"/>
@@ -174,14 +174,7 @@
     }
 }</script></head>
 <body style="background-color: #f0f3ff;">
-<div class="whatsapp-icon-container" style="position: fixed; bottom: 20px; right: 20px; height: 50px; aspect-ratio: 1; z-index: 99999999;">
-<a href="https://api.whatsapp.com/send?phone=917042555401" target="_blank">
-<picture>
-  <source srcset="/assets/whatsapp.webp" type="image/webp">
-  <img alt="waterless car wash in Noida" height="1280" src="/assets/whatsapp.png" style="height: 100%; width: 100%;" width="1280" fetchpriority="high" decoding="async" />
-</picture>
-</a>
-</div>
+>
 <div class="topbar-section-common">
 <div class="topbar-section-container">
 <div class="social-media-icons">
@@ -252,7 +245,7 @@
 <div class="decor-image" style="width: 500px; height: 600px;">
 <picture>
   <source srcset="/assets/car-decor/car_decor4.webp" type="image/webp">
-  <img alt="car decoration" height="366" src="/assets/car-decor/car_decor4.jpg" style="width: 100%; height: 100%; object-fit: cover;" width="550" loading="lazy" decoding="async" />
+  <img alt="car decoration" height="366" src="/assets/car-decor/car_decor4.jpg" style="width: 100%; height: 100%; object-fit: cover;" width="550" decoding="async" fetchpriority="high" />
 </picture>
 </div>
 <div class="benefit-left">
@@ -281,12 +274,10 @@ Fortifying service and expertise in doorstep car decor for weddings, doorstep br
 </div>
 </div>
 
-
-
 </section>
 <section class="city-why-choose">
 <div class="img-component" style="max-width: 950px;">
-<img alt="Doorstep car flower decor in Dehradun" height="448" loading="lazy" src="/assets/car-decor/car_decor3.webp" width="678"/>
+<img alt="Doorstep car flower decor in Dehradun" height="448" loading="lazy" src="/assets/car-decor/car_decor3.webp" width="678" decoding="async" />
 </div>
 <div class="city-description">
 <div class="left-heading">
@@ -864,5 +855,14 @@ Fortifying service and expertise in doorstep car decor for weddings, doorstep br
   });
   </script>
 <script defer="" src="/script.js"></script>
+
+  <!-- Standardized Floating WhatsApp Widget -->
+  <a href="https://api.whatsapp.com/send?phone=917042555401&text=Hi%20Carmaa%2C%20I%20want%20to%20book%20a%20car%20wash" class="whatsapp-float" aria-label="Chat with Carmaa on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="/assets/whatsapp.webp" type="image/webp">
+      <img src="/assets/whatsapp.png" alt="WhatsApp" width="34" height="34">
+    </picture>
+  </a>
+
 </body>
 </html>
