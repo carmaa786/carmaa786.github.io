@@ -98,10 +98,10 @@
 }
 
 /* Fix: the trailing classless <p> inside .city-benefits-section sits on
-   the blue panel but had dark default text (faint/unreadable). Force
-   it white so it reads on the blue background. */
+   a LIGHT background (rgb(240,243,255)); force dark text so it is
+   readable (DevTools confirmed contrast was 1.1 with white text). */
 .city-benefits-section > p:not([class]) {
-  color: #ffffff !important;
+  color: #333333 !important;
 }
 
 /* Fix: the parallax CTA section (section.parallex-cta-city) — the
