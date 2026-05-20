@@ -58,3 +58,30 @@
   transform: none !important;
   filter: none !important;
 }
+
+/* Fix: city testimonials were a static vertical stack. Lay them out as
+   a horizontal row; js/city-testimonials.js duplicates the cards and
+   drives a continuous auto-scroll (like the homepage reviews). */
+.testimonial-section .testimonial-slider-2 {
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+.testimonial-section .testimonial-track-2 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+}
+.testimonial-section .testimonial-card {
+  flex: 0 0 auto !important;
+  width: 300px !important;
+  min-width: 300px !important;
+  max-width: 300px !important;
+  margin: 0 16px 0 0 !important;
+  position: static !important;
+  box-sizing: border-box !important;
+}
