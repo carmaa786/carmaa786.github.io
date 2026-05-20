@@ -162,3 +162,25 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
 .commitment-quality-right .img-wrapper img {
   max-width: 100% !important;
 }
+
+/* Fix: the services-section image (.our-services-section-city-left img,
+   carmaa-new5.jpg) rendered ~1044px tall, blowing the section out of
+   proportion. Cap its height with object-fit:cover and contain the
+   columns so nothing overflows. */
+.our-services-section-city-left,
+.our-services-section-city-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.our-services-section-city-left {
+  overflow: hidden !important;
+}
+.our-services-section-city-left img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 480px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  display: block !important;
+}
