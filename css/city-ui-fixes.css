@@ -97,6 +97,13 @@
   right: auto !important;
 }
 
+/* Fix: the trailing classless <p> inside .city-benefits-section sits on
+   the blue panel but had dark default text (faint/unreadable). Force
+   it white so it reads on the blue background. */
+.city-benefits-section > p:not([class]) {
+  color: #ffffff !important;
+}
+
 /* Fix: the parallax CTA section (section.parallex-cta-city) — the
    mobile-visibility hack killed its background image and greyed the
    panel, while its ::before dark overlay (rgba(0,0,0,0.5)) stayed on
