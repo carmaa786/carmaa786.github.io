@@ -78,6 +78,23 @@
     <style>
         .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.8rem) !important; width: 100%; max-width: 1200px; line-height: 1.3; }
         @media (max-width: 768px) { .section-header h2 { font-size: clamp(1.1rem, 4vw, 1.8rem) !important; } }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hero-video.loaded {
+            opacity: 1;
+        }
+        .hero-poster {
+            z-index: 0;
+        }
     </style>
 
     
@@ -655,19 +672,42 @@
     <script src="/js/analytics.js" defer></script>
     <script src="script.js?v=1.0.4" defer></script>
     <script>
+      let videoLoaded = false;
       const loadHeroVideo = () => {
         const video = document.getElementById('heroVideo');
-        if (video && !video.src) {
+        if (video && !videoLoaded) {
+          videoLoaded = true;
+          
+          // Remove interaction fallback event listeners immediately to prevent any double-loading
+          ['scroll', 'click', 'touchstart'].forEach(e => {
+            window.removeEventListener(e, loadHeroVideo);
+          });
+
           const source = video.querySelector('source');
           if (source && source.dataset.src) {
-            source.src = source.dataset.src;
-            video.load();
             video.muted = true;
-            video.oncanplay = () => {
+            
+            const playVideo = () => {
               video.classList.add('loaded');
               const p = video.play();
               if (p && p.catch) p.catch(() => {});
             };
+
+            // Set up event handlers BEFORE assigning source and calling load()
+            video.oncanplay = playVideo;
+            video.onloadeddata = playVideo;
+            video.onplaying = () => video.classList.add('loaded');
+
+            source.src = source.dataset.src;
+            video.load();
+            
+            // Try to play immediately (browser will buffer and play as soon as ready)
+            const p = video.play();
+            if (p && p.catch) {
+              p.catch(() => {
+                // Autoplay blocked or deferred
+              });
+            }
           }
         }
       };
