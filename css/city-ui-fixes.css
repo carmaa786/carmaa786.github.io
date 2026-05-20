@@ -115,3 +115,23 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* Fix: the .commitment-quality section ("Our Commitment to Quality...")
+   has a light background, but on desktop its body text was light/faint
+   because the mobile-visibility hack that darkens text only runs at
+   <=768px. Force readable dark body text + blue headings on desktop.
+   (The white overlay text on the service-card images keeps its own
+   higher-specificity white rule, so it is unaffected.) */
+.commitment-quality p,
+.commitment-quality li,
+.commitment-quality .right-desc,
+.commitment-quality .desc {
+  color: #333333 !important;
+}
+.commitment-quality h2,
+.commitment-quality h3,
+.commitment-quality h4,
+.commitment-quality h5,
+.commitment-quality strong {
+  color: #1b4e9b !important;
+}
