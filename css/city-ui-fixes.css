@@ -1,13 +1,13 @@
 /* ===================================================================
    Carmaa city-page UI fixes
    Loaded AFTER city.min.css and after the inline mobile-visibility
-   block so these overrides win the cascade.
+   block. Doubled-class selectors (.x.x) are used where needed so
+   these overrides beat the aggressive mobile-visibility hack.
    =================================================================== */
 
 /* Fix: the "Why Doon Valley's Residents Trust Carmaa" description
    paragraph (.right-desc) had display:flex applied to it, which
-   scattered its text + <strong> tags into broken vertical columns.
-   A running-text paragraph must render as a normal block. */
+   scattered its text + <strong> tags into broken vertical columns. */
 .city-why-choose .right-desc,
 .city-why-choose p.right-desc {
   display: block !important;
@@ -23,8 +23,7 @@
 }
 
 /* Fix: the "Car Washing" / "Auto Detailing" service-card images were
-   stretched / distorted. object-fit:cover fills the box without
-   distortion. */
+   stretched / distorted. object-fit:cover fills the box cleanly. */
 .commitment-quality-right .img-wrapper img {
   width: 100% !important;
   height: auto !important;
@@ -33,36 +32,24 @@
   display: block !important;
 }
 
-/* Fix: the "Book the Best Car Wash" CTA section rendered grey on
-   mobile AND its text was faint/dimmed because the scroll-reveal
-   animation was stuck at low opacity. Restore the blue panel and
-   force the content fully visible at all screen sizes. */
-.our-service-main-section,
-.our-service-main-section .city-call-to-action-btn,
-.our-service-main-section .city-call-to-action-wrapper,
-.our-service-main-section .city-call-to-action-left,
-.our-service-main-section .city-call-to-action-right,
-.our-service-main-section .city-call-to-action-heading,
-.our-service-main-section .city-call-to-action-para,
-.our-service-main-section .city-call-to-action-left img {
+/* Fix: the "Book the Best Car Wash" CTA section.
+   - The previous gradient + texture + background-blend-mode:overlay
+     produced a washed-out light-blue background. Use a SOLID dark
+     blue panel instead.
+   - The mobile-visibility hack was forcing the text grey/blue and a
+     stuck reveal animation dimmed it. Force solid white, full opacity.
+   The doubled class (.our-service-main-section.our-service-main-section)
+   raises specificity so these rules cannot lose to the hack. */
+.our-service-main-section.our-service-main-section {
+  background: #0b4c9d !important;
+}
+.our-service-main-section.our-service-main-section .city-call-to-action-heading,
+.our-service-main-section.our-service-main-section .city-call-to-action-para,
+.our-service-main-section.our-service-main-section .city-call-to-action-right,
+.our-service-main-section.our-service-main-section .city-call-to-action-right * {
+  color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
   filter: none !important;
-}
-.our-service-main-section .city-call-to-action-heading,
-.our-service-main-section .city-call-to-action-para {
-  color: #ffffff !important;
-  position: relative !important;
-  z-index: 5 !important;
-}
-
-@media screen and (max-width: 768px) {
-  .our-service-main-section {
-    background-color: #0b4c9d !important;
-    background-image:
-      linear-gradient(rgba(11, 76, 157, 0.92), rgba(11, 76, 157, 0.92)),
-      url(/assets/aboutus/textture-bg.png) !important;
-    background-blend-mode: overlay !important;
-  }
 }
