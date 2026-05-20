@@ -135,3 +135,30 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
 .commitment-quality strong {
   color: #1b4e9b !important;
 }
+
+/* Fix: the .commitment-quality images overflowed/stuck out of their
+   column. Flex children defaulted to min-width:auto (won't shrink
+   below content size). Force min-width:0 + max-width + flex-wrap so
+   the section stays contained at every width. */
+.commitment-quality {
+  flex-wrap: wrap !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.commitment-quality-left,
+.commitment-quality-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.commitment-quality-right {
+  flex-wrap: wrap !important;
+}
+.commitment-quality-right .img-wrapper {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.commitment-quality-right .img-wrapper img {
+  max-width: 100% !important;
+}
