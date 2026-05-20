@@ -174,16 +174,17 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
   box-sizing: border-box !important;
 }
 .our-services-section-city-left {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: visible !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  overflow: hidden !important;
 }
 .our-services-section-city-left img {
-  width: auto !important;
+  width: 100% !important;
   height: auto !important;
   max-width: 100% !important;
-  max-height: 520px !important;
+  max-height: none !important;
   object-fit: contain !important;
   border-radius: 10px !important;
   display: block !important;
