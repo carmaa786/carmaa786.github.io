@@ -80,11 +80,11 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Global removal of WhatsApp icon variants */
+/* Global removal of WhatsApp icon variants (excluding the standardized floating widget) */
 .whatsapp-icon-container, 
 .whatsapp-icon, 
 a[href*="wa.me"], 
-a[href*="whatsapp.com"],
+a[href*="whatsapp.com"]:not(.whatsapp-float),
 .whatsapp_float { 
     display: none !important; 
     visibility: hidden !important; 
@@ -434,3 +434,42 @@ a:hover {
 .benefits-mobile-number {
     color: #1b4e9b !important;
 }
+
+/* Standardized Floating WhatsApp Widget */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.25);
+    z-index: 99999;
+    transition: transform .2s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+.whatsapp-float img,
+.whatsapp-float picture {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 16px;
+        right: 16px;
+    }
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+}
+

@@ -63,6 +63,44 @@
         .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
         .navbar-placeholder { min-height: 80px; background: #fff; }
         .section-header h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 5vw, 3rem); text-transform: uppercase; }
+        
+        /* Standardized Floating WhatsApp Widget */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0,0,0,.25);
+            z-index: 99999;
+            transition: transform .2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        .whatsapp-float img,
+        .whatsapp-float picture {
+            width: 34px;
+            height: 34px;
+            display: block;
+        }
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 16px;
+                right: 16px;
+            }
+            .whatsapp-float img {
+                width: 30px;
+                height: 30px;
+            }
+        }
 
     </style>
 
@@ -859,6 +897,15 @@
       ]
     }
     </script>
+
+  <!-- Standardized Floating WhatsApp Widget -->
+  <a href="https://api.whatsapp.com/send?phone=917042555401&text=Hi%20Carmaa%2C%20I%20want%20to%20book%20a%20car%20wash" class="whatsapp-float" aria-label="Chat with Carmaa on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="/assets/whatsapp.webp" type="image/webp">
+      <img src="/assets/whatsapp.png" alt="WhatsApp" width="34" height="34">
+    </picture>
+  </a>
+
 </body>
 </html>
 
