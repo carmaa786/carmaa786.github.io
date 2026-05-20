@@ -33,10 +33,30 @@
   display: block !important;
 }
 
-/* Fix: the "Book the Best Car Wash" CTA section rendered with a grey
-   background on mobile (the mobile-visibility hack forced
-   background-color:#f9fbfd). Restore the intended blue panel
-   with white text. */
+/* Fix: the "Book the Best Car Wash" CTA section rendered grey on
+   mobile AND its text was faint/dimmed because the scroll-reveal
+   animation was stuck at low opacity. Restore the blue panel and
+   force the content fully visible at all screen sizes. */
+.our-service-main-section,
+.our-service-main-section .city-call-to-action-btn,
+.our-service-main-section .city-call-to-action-wrapper,
+.our-service-main-section .city-call-to-action-left,
+.our-service-main-section .city-call-to-action-right,
+.our-service-main-section .city-call-to-action-heading,
+.our-service-main-section .city-call-to-action-para,
+.our-service-main-section .city-call-to-action-left img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+}
+.our-service-main-section .city-call-to-action-heading,
+.our-service-main-section .city-call-to-action-para {
+  color: #ffffff !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
 @media screen and (max-width: 768px) {
   .our-service-main-section {
     background-color: #0b4c9d !important;
@@ -44,9 +64,5 @@
       linear-gradient(rgba(11, 76, 157, 0.92), rgba(11, 76, 157, 0.92)),
       url(/assets/aboutus/textture-bg.png) !important;
     background-blend-mode: overlay !important;
-  }
-  .our-service-main-section .city-call-to-action-heading,
-  .our-service-main-section .city-call-to-action-para {
-    color: #ffffff !important;
   }
 }
