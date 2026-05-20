@@ -182,6 +182,44 @@
             }
         }
     }
+
+    /* === Mobile footer alignment fix — keep every section consistently
+       left-aligned, full width, with even spacing === */
+    @media (max-width: 768px) {
+        .footer .footer-container-div {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        .footer .footer-logo-container {
+            text-align: left !important;
+        }
+        .footer .links-main-container {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 28px !important;
+        }
+        .footer .support-email-container,
+        .footer .link-section-child,
+        .footer .link-section-child-container,
+        .footer .link-section-main-container {
+            width: 100% !important;
+            text-align: left !important;
+            align-items: flex-start !important;
+        }
+        .footer .link-section-container {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            gap: 8px 20px !important;
+        }
+        .footer .social-media-icons,
+        .footer .google-play-store-icons {
+            justify-content: flex-start !important;
+        }
+        .footer .follow-us {
+            margin-top: 8px !important;
+        }
+    }
 </style>
 
 <footer class="footer">
