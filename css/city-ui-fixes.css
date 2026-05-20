@@ -85,3 +85,25 @@
   position: static !important;
   box-sizing: border-box !important;
 }
+
+/* Fix: the parallax CTA section (section.parallex-cta-city) — the
+   mobile-visibility hack killed its background image and greyed the
+   panel, while its ::before dark overlay (rgba(0,0,0,0.5)) stayed on
+   top, producing a murky grey panel with dim text. Make it a solid
+   blue panel, remove the dark overlay, force the text white. */
+section.parallex-cta-city.parallex-cta-city {
+  background: #0b4c9d !important;
+  background-image: none !important;
+}
+section.parallex-cta-city.parallex-cta-city::before {
+  display: none !important;
+  background: transparent !important;
+}
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city h4,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city p,
+section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
