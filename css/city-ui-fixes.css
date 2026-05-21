@@ -200,3 +200,15 @@ section.parallex-cta-city.parallex-cta-city .parallex-cta-inner-city * {
   border-radius: 10px !important;
   display: block !important;
 }
+
+/* Fix: The contact mobile number in the benefits section was inheriting white text
+   making it invisible on light backgrounds. Force it to be visible before hover. */
+a.mobile-number-ref p.benefits-mobile-number,
+a.mobile-number-ref span.benefits-mobile-number {
+  color: #1b4e9b !important; /* Brand primary blue */
+}
+
+a.mobile-number-ref:hover p.benefits-mobile-number,
+a.mobile-number-ref:hover span.benefits-mobile-number {
+  color: #28b097 !important; /* Brand teal on hover */
+}
