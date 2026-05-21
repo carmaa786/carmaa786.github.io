@@ -152,6 +152,145 @@
             .refer-visual { display: none !important; }
             .refer-banner { justify-content: center !important; text-align: center !important; }
         }
+
+        /* ===== Active Cities interactive component ===== */
+        .cities-block { margin-top: 64px; }
+        .cities-eyebrow {
+            text-align: center;
+            font-family: var(--font-display);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--text-main);
+        }
+        .cities-sub {
+            text-align: center;
+            color: #64748B;
+            margin: 6px auto 32px;
+            max-width: 560px;
+            font-size: 1rem;
+        }
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 900px) { .cities-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 560px) { .cities-grid { grid-template-columns: repeat(2, 1fr); } }
+        .city-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 14px;
+            background: #fff;
+            border: 2px solid #E2E8F0;
+            border-radius: 16px;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-main);
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+        .city-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(15,23,42,.12); }
+        .city-card:focus-visible { outline: 3px solid var(--secondary); outline-offset: 2px; }
+        .city-card.active {
+            border-color: var(--secondary);
+            box-shadow: 0 12px 30px rgba(40,176,151,.22);
+        }
+        .city-card .city-name {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+        .city-card.active .city-name { color: var(--primary); }
+        .city-card .city-count { font-size: .82rem; color: #64748B; }
+        .city-card .city-thumb {
+            margin-top: auto;
+            height: 104px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,.92);
+            font-size: 2.4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .city-card .city-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            display: block;
+        }
+        .city-panel {
+            margin-top: 22px;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 18px;
+            padding: 22px 24px;
+        }
+        .city-panel-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .city-panel-head h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(1.05rem, 2.6vw, 1.4rem);
+            color: var(--text-main);
+        }
+        .city-panel-head h4 span { color: var(--primary); }
+        .city-viewall {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 18px;
+            border: 1.5px solid var(--primary);
+            border-radius: 50px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: .9rem;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .25s ease, color .25s ease;
+        }
+        .city-viewall:hover { background: var(--primary); color: #fff; }
+        .city-areas {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .city-areas span {
+            background: #fff;
+            border: 1px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 7px 14px;
+            font-size: .85rem;
+            color: #334155;
+        }
+        .cities-links {
+            margin-top: 18px;
+            text-align: center;
+            font-size: .92rem;
+            color: #64748B;
+            line-height: 1.9;
+        }
+        .cities-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .cities-links a:hover { text-decoration: underline; }
     </style>
 
 </head>
@@ -219,7 +358,7 @@
         <div class="container">
             <div class="section-header reveal fade-bottom">
                 <h2>What Car Care Services Does Carmaa Offer?</h2>
-                <p>Top-tier car care delivered to you in <a href="/doorstep-car-washing-service-in-dehradun/">Dehradun</a>, <a href="/doorstep-car-washing-service-in-noida/">Noida</a>, <a href="/doorstep-car-washing-service-in-gurgaon/">Gurgaon</a>, <a href="/doorstep-car-washing-service-in-delhi/">Delhi</a>, <a href="/doorstep-car-washing-service-in-faridabad/">Faridabad</a>, and <a href="/doorstep-car-washing-service-in-gaziabad/">Ghaziabad</a>.</p>
+                <p>Top-tier car care delivered right to your doorstep across North India.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal fade-left delay-1">
@@ -244,8 +383,132 @@
                     <p>Give your car the ultimate rejuvenation. Our Premium Spa includes deep extraction vacuuming, dashboard conditioning, and hydrophobic paint finishing.</p>
                 </div>
             </div>
+
+            <div class="cities-block reveal fade-bottom">
+                <p class="cities-eyebrow">Carmaa's Active Cities</p>
+                <p class="cities-sub">Premium doorstep car care, now live across 6 cities. Tap a city to explore the areas we cover.</p>
+                <div class="cities-grid" id="citiesGrid" role="tablist" aria-label="Carmaa active cities">
+                    <button type="button" class="city-card active" data-city="dehradun" role="tab" aria-selected="true" aria-controls="cityPanel">
+                        <span class="city-name">Dehradun</span>
+                        <span class="city-count">12 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#1B4E9B,#28B097)" aria-hidden="true"><i class="fa-solid fa-mountain-sun"></i><img class="city-photo" src="/images/cities/dehradun.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                    <button type="button" class="city-card" data-city="noida" role="tab" aria-selected="false" aria-controls="cityPanel">
+                        <span class="city-name">Noida</span>
+                        <span class="city-count">16 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#2563EB,#1B4E9B)" aria-hidden="true"><i class="fa-solid fa-city"></i><img class="city-photo" src="/images/cities/noida.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                    <button type="button" class="city-card" data-city="gurgaon" role="tab" aria-selected="false" aria-controls="cityPanel">
+                        <span class="city-name">Gurgaon</span>
+                        <span class="city-count">14 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#0E7490,#28B097)" aria-hidden="true"><i class="fa-solid fa-building"></i><img class="city-photo" src="/images/cities/gurgaon.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                    <button type="button" class="city-card" data-city="delhi" role="tab" aria-selected="false" aria-controls="cityPanel">
+                        <span class="city-name">Delhi</span>
+                        <span class="city-count">15 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#1B4E9B,#3B82F6)" aria-hidden="true"><i class="fa-solid fa-landmark"></i><img class="city-photo" src="/images/cities/delhi.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                    <button type="button" class="city-card" data-city="faridabad" role="tab" aria-selected="false" aria-controls="cityPanel">
+                        <span class="city-name">Faridabad</span>
+                        <span class="city-count">10 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#155E75,#1B4E9B)" aria-hidden="true"><i class="fa-solid fa-industry"></i><img class="city-photo" src="/images/cities/faridabad.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                    <button type="button" class="city-card" data-city="ghaziabad" role="tab" aria-selected="false" aria-controls="cityPanel">
+                        <span class="city-name">Ghaziabad</span>
+                        <span class="city-count">11 areas</span>
+                        <span class="city-thumb" style="background:linear-gradient(135deg,#28B097,#1B4E9B)" aria-hidden="true"><i class="fa-solid fa-building-columns"></i><img class="city-photo" src="/images/cities/ghaziabad.webp" alt="" loading="lazy" decoding="async"></span>
+                    </button>
+                </div>
+                <div class="city-panel" id="cityPanel" role="tabpanel">
+                    <div class="city-panel-head">
+                        <h4>Serving <span id="cityAreaCount">12 Areas</span> in <span id="cityName">Dehradun</span></h4>
+                        <a class="city-viewall" id="cityViewAll" href="/doorstep-car-washing-service-in-dehradun/" aria-label="View all car wash areas in Dehradun">View all <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="city-areas" id="cityAreas"></div>
+                </div>
+                <p class="cities-links">Explore doorstep car wash in
+                    <a href="/doorstep-car-washing-service-in-dehradun/">Dehradun</a>,
+                    <a href="/doorstep-car-washing-service-in-noida/">Noida</a>,
+                    <a href="/doorstep-car-washing-service-in-gurgaon/">Gurgaon</a>,
+                    <a href="/doorstep-car-washing-service-in-delhi/">Delhi</a>,
+                    <a href="/doorstep-car-washing-service-in-faridabad/">Faridabad</a> &amp;
+                    <a href="/doorstep-car-washing-service-in-gaziabad/">Ghaziabad</a>.
+                </p>
+            </div>
         </div>
     </section>
+
+    <script>
+        (function () {
+            var CITIES = {
+                dehradun: {
+                    name: 'Dehradun', url: '/doorstep-car-washing-service-in-dehradun/',
+                    areas: ['Rajpur Road', 'Clement Town', 'Dalanwala', 'Sahastradhara Road', 'Vasant Vihar', 'Ballupur', 'GMS Road', 'Patel Nagar', 'Prem Nagar', 'ISBT', 'Mussoorie Road', 'Race Course']
+                },
+                noida: {
+                    name: 'Noida', url: '/doorstep-car-washing-service-in-noida/',
+                    areas: ['Sector 15', 'Sector 18', 'Sector 50', 'Sector 62', 'Sector 75', 'Sector 78', 'Sector 93', 'Sector 104', 'Sector 110', 'Sector 128', 'Sector 137', 'Sector 150', 'Sector 168', 'Noida Extension', 'Greater Noida West', 'Pari Chowk']
+                },
+                gurgaon: {
+                    name: 'Gurgaon', url: '/doorstep-car-washing-service-in-gurgaon/',
+                    areas: ['DLF Phase 1', 'DLF Phase 2', 'DLF Phase 3', 'DLF Phase 5', 'Golf Course Road', 'Sohna Road', 'MG Road', 'Sector 56', 'Sector 57', 'Cyber City', 'Sushant Lok', 'Palam Vihar', 'Nirvana Country', 'South City']
+                },
+                delhi: {
+                    name: 'Delhi', url: '/doorstep-car-washing-service-in-delhi/',
+                    areas: ['Dwarka', 'Rohini', 'Saket', 'Vasant Kunj', 'Pitampura', 'Janakpuri', 'Lajpat Nagar', 'Mayur Vihar', 'Punjabi Bagh', 'Greater Kailash', 'Karol Bagh', 'Hauz Khas', 'Connaught Place', 'Vasant Vihar', 'Patparganj']
+                },
+                faridabad: {
+                    name: 'Faridabad', url: '/doorstep-car-washing-service-in-faridabad/',
+                    areas: ['Sector 15', 'Sector 21', 'Sector 37', 'Sector 46', 'Sector 88', 'NIT Faridabad', 'Old Faridabad', 'Greater Faridabad', 'Neelam Bata Road', 'Ballabgarh']
+                },
+                ghaziabad: {
+                    name: 'Ghaziabad', url: '/doorstep-car-washing-service-in-gaziabad/',
+                    areas: ['Indirapuram', 'Vaishali', 'Vasundhara', 'Raj Nagar', 'Raj Nagar Extension', 'Kaushambi', 'Crossings Republik', 'Govindpuram', 'Shastri Nagar', 'Nehru Nagar', 'Wave City']
+                }
+            };
+            var grid = document.getElementById('citiesGrid');
+            if (!grid) return;
+
+            // Graceful fallback: if a city photo is missing/fails to load,
+            // remove it so the gradient + landmark icon shows instead.
+            grid.querySelectorAll('.city-photo').forEach(function (img) {
+                function fallback() { img.remove(); }
+                img.addEventListener('error', fallback);
+                if (img.complete && img.naturalWidth === 0) fallback();
+            });
+
+            var nameEl = document.getElementById('cityName');
+            var countEl = document.getElementById('cityAreaCount');
+            var viewAll = document.getElementById('cityViewAll');
+            var areasEl = document.getElementById('cityAreas');
+
+            function render(key) {
+                var c = CITIES[key];
+                if (!c) return;
+                nameEl.textContent = c.name;
+                countEl.textContent = c.areas.length + ' Areas';
+                viewAll.href = c.url;
+                viewAll.setAttribute('aria-label', 'View all car wash areas in ' + c.name);
+                areasEl.innerHTML = c.areas.map(function (a) {
+                    return '<span>' + a + '</span>';
+                }).join('');
+            }
+
+            grid.addEventListener('click', function (e) {
+                var btn = e.target.closest('.city-card');
+                if (!btn) return;
+                grid.querySelectorAll('.city-card').forEach(function (b) {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                render(btn.dataset.city);
+            });
+
+            render('dehradun');
+        })();
+    </script>
 
     <section id="promises" class="section-padding bg-surface">
         <div class="container">
@@ -805,7 +1068,7 @@
             "latitude": "30.3165",
             "longitude": "78.0322"
           },
-          "areaServed": ["Dehradun", "Gurgaon", "Noida", "Delhi"],
+          "areaServed": ["Dehradun", "Noida", "Gurgaon", "Delhi", "Faridabad", "Ghaziabad"],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Car Care Services",
