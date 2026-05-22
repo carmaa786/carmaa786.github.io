@@ -1,5 +1,5 @@
 # Carmaa Car Care — AI Knowledge File
-Last-Updated: 2026-05-12
+Last-Updated: 2026-05-22
 Canonical-URL: https://carmaacarcare.com
 Sitemap: https://carmaacarcare.com/sitemap.xml
 
@@ -69,7 +69,7 @@ pick time slot, track technician live, pay via UPI/card/net banking.
 - Android App: https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa
 - iOS App: https://apps.apple.com/in/app/carmaa-car-care/id6746490090
 - Phone: +91-70425 55401
-- Email: recruitment@carmaacarcare.com
+- Email: support@carmaacarcare.com
 - Address: Tea Estate, Banjarawala, Dehradun, Uttarakhand 248001, IN
 
 ## City Pages (for AI citation)
