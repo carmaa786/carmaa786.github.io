@@ -603,8 +603,8 @@
   }
   .about-us-section {
     margin-top: 4rem;
-    padding: 0rem 4rem;
-    gap: 4rem;
+    padding: 0rem 2rem;
+    gap: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -612,10 +612,10 @@
     padding-bottom: 4rem;
   }
   .about-us-left {
-    width: 40%;
+    width: 50%;
   }
   .about-us-right {
-    width: 40%;
+    width: 45%;
     position: relative;
   }
   .about-us-right .main-img {
@@ -964,10 +964,10 @@
     min-height: 490px;
   }
   .about-us-left {
-    width: 38%;
+    width: 50%;
   }
   .about-us-right {
-    width: 30%;
+    width: 40%;
     position: relative;
   }
 }
