@@ -38,6 +38,7 @@
     Redirect 301 /blogs/doorstep-car-washing-service-in-dehradun/ /doorstep-car-washing-service-in-dehradun/
     Redirect 301 /blogs/doorstep-car-washing-service-in-gurgaon/ /doorstep-car-washing-service-in-gurgaon/
     Redirect 301 /blogs/doorstep-car-washing-service-in-meerut/ /doorstep-car-washing-service-in-noida/
+    Redirect 301 /doorstep-car-washing-service-in-delhi/blogs/ /doorstep-car-washing-service-in-delhi/
 
     # Enforce HTTPS
     RewriteCond %{HTTPS} off
