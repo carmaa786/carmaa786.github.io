@@ -42,8 +42,7 @@
 <script defer="" src="/js/analytics.js"></script>
 </head>
 <body>
-<div id="preloader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:999999;display:flex;justify-content:center;align-items:center;">
-<div class="loader"></div>
+
 </div>
 <div class="topbar-section-common">
 <div class="topbar-section-container">
@@ -80,11 +79,7 @@
 <div class="navbar-sticky-container" id="navbar-placeholder" style="height:80px; min-height:80px;"></div>
 <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Safer way to hide preloader instantly
-            const preloader = document.getElementById("preloader");
-            if (preloader) {
-                setTimeout(() => { preloader.style.opacity = '0'; setTimeout(() => preloader.remove(), 300); }, 200);
-            }
+            
 
             fetch("/components/navbar.html")
                 .then(r => r.text())
@@ -188,7 +183,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             fetch("/components/footer3.html").then(r => r.text()).then(h => { document.getElementById("footer").innerHTML = h; }).catch(e => console.error("Error loading footer:", e));
             // Hide preloader
-            setTimeout(() => { document.getElementById("preloader").style.display = "none"; }, 500);
+
         });
     </script>
 <script defer="" src="/script.js"></script>
