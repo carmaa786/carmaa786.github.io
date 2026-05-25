@@ -223,6 +223,10 @@
     line-height: 1.3rem;
     margin: 2em 0;
   }
+
+  @keyframes fadeInNavbar {
+    to { opacity: 1; }
+  }
 </style>
 
 <style>
@@ -253,7 +257,7 @@
   }
 </style>
 
-<nav id="nav-placeholder" class="main-navbar-container">
+<nav id="nav-placeholder" class="main-navbar-container" style="opacity: 0; animation: fadeInNavbar 0s forwards 0.1s;">
   <div class="navbar-main-container">
     <div class="navbar-carmaa-logo-container">
       <a href="/" class="navbar-carmaa-logo-link">
