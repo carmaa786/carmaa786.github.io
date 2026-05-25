@@ -229,9 +229,13 @@
             margin-top: 8px !important;
         }
     }
+
+    @keyframes fadeInNavbar {
+        to { opacity: 1; }
+    }
 </style>
 
-<footer class="footer">
+<footer class="footer" style="opacity: 0; animation: fadeInNavbar 0s forwards 0.1s;">
     <div class="footer-container-div">
         <!-- carmaa logo -->
         <div class="footer-logo-container">
