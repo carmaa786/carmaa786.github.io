@@ -4,8 +4,6 @@ Disallow: /scripts/
 Disallow: /images/
 Disallow: /*.py$
 Disallow: /node_modules/
-Disallow: /open-app/
-Disallow: /app/
 Disallow: /scratch/
 Disallow: /src/
 Allow: /
