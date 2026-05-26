@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /components/
 Disallow: /scripts/
-Disallow: /images/
 Disallow: /*.py$
 Disallow: /node_modules/
 Disallow: /scratch/
