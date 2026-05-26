@@ -40,6 +40,11 @@
     Redirect 301 /blogs/doorstep-car-washing-service-in-meerut/ /doorstep-car-washing-service-in-noida/
     Redirect 301 /doorstep-car-washing-service-in-delhi/blogs/ /doorstep-car-washing-service-in-delhi/
 
+    # 410 Gone for discontinued services/pages to prevent Soft 404s in GSC
+    Redirect 410 /doorstep-car-decoration-service-in-dehradun/
+    Redirect 410 /blogs/doorstep-car-decor-in-dehradun/
+    Redirect 410 /exterior-car-cleaning-washing/
+
     # Enforce HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
