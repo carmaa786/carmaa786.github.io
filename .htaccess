@@ -40,6 +40,33 @@
     Redirect 301 /blogs/doorstep-car-washing-service-in-meerut/ /doorstep-car-washing-service-in-noida/
     Redirect 301 /doorstep-car-washing-service-in-delhi/blogs/ /doorstep-car-washing-service-in-delhi/
 
+    # 301 Redirects for Google Search Console crawl errors (relative links with nested paths)
+    Redirect 301 /doorstep-car-washing-service-in-haldwani/blogs/ /blogs/
+    Redirect 301 /best-car-mechanics-in-dehradun/blogs/ /blogs/
+    Redirect 301 /blogs/about/ /about/
+    Redirect 301 /blogs/dry-cleaning-services-at-your-doorstep/blogs/ /blogs/
+
+    # 301 Redirects for discontinued/non-existent city pages (mapped geographically)
+    Redirect 301 /doorstep-car-washing-service-in-meerut /doorstep-car-washing-service-in-noida/
+    Redirect 301 /doorstep-car-washing-service-in-haldwani /doorstep-car-washing-service-in-dehradun/
+    Redirect 301 /doorstep-car-washing-service-in-aligarh /doorstep-car-washing-service-in-noida/
+    Redirect 301 /doorstep-car-washing-service-in-roorkee /doorstep-car-washing-service-in-dehradun/
+    Redirect 301 /doorstep-car-washing-service-in-rishikesh /doorstep-car-washing-service-in-dehradun/
+    Redirect 301 /doorstep-car-washing-service-in-haridwar /doorstep-car-washing-service-in-dehradun/
+    Redirect 301 /doorstep-car-washing-service-in-mussoorie /doorstep-car-washing-service-in-dehradun/
+
+    # 301 Redirects for why-carmaa-is-becoming-dehradun-choice blog slug variants
+    Redirect 301 /why-carmaa-is-becoming-dehradun's-choice /blogs/why-carmaa-is-becoming-dehradun-choice/
+    Redirect 301 /why-carmaa-is-becoming-dehradun-choice /blogs/why-carmaa-is-becoming-dehradun-choice/
+    Redirect 301 /blogs/why-carmaa-is-becoming-dehradun's-choice/blogs/ /blogs/
+    Redirect 301 /blogs/why-carmaa-is-becoming-dehradun's-choice/ /blogs/why-carmaa-is-becoming-dehradun-choice/
+    Redirect 301 /blogs/why-carmaa-is-becoming-dehradun&apos;s-choice/ /blogs/why-carmaa-is-becoming-dehradun-choice/
+
+    # 410 Gone for discontinued services/pages to prevent Soft 404s in GSC
+    Redirect 410 /doorstep-car-decoration-service-in-dehradun/
+    Redirect 410 /blogs/doorstep-car-decor-in-dehradun/
+    Redirect 410 /exterior-car-cleaning-washing/
+
     # Enforce HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
