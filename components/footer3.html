@@ -1,349 +1,473 @@
-<link rel="stylesheet" href="/css/footer.min.css" />
 <style>
-    .wave {
-        --size: 50px;
-        --m: 2;
-        --p: calc(var(--m)*var(--size));
-        --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1));
-        padding-top: 50px;
-        mask:
-            radial-gradient(var(--R) at left 50% top calc(var(--size) + var(--p)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0/calc(4 * var(--size)) 100%,
-            radial-gradient(var(--R) at left 50% top calc(-1 * var(--p)), #0000 99%, #000 101%) left 50% top var(--size) / calc(4 * var(--size)) 100% repeat-x;
-    }
-
-    .footer-container-div {
-        width: 100%;
+    /* Premium Footer Styles matching the reference UI */
+    .premium-footer {
+        background: #090d14; /* Elegant deep dark gray/black matching the reference */
+        border-radius: 28px;
+        padding: 50px 40px 40px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        margin: 40px auto;
         max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        color: #e2e8f0;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
     }
 
-    .footer a,
-    .footer a:hover,
-    .footer a:visited,
-    .footer a *,
-    .footer a:hover *,
-    .footer a:visited * {
-        text-decoration: none !important;
-    }
-
-    .logo-img-container {
-        width: 120px;
-        margin-bottom: 16px;
-    }
-
-    .footer-logo-img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .links-main-container {
+    .premium-footer-grid {
         display: flex;
-        align-items: baseline;
-        padding-top: 20px;
         justify-content: space-between;
-        padding-bottom: 1.5rem;
+        align-items: stretch;
+        gap: 30px;
     }
 
-    @media (max-width: 768px) {
-        .links-main-container {
-            flex-direction: column !important;
-            gap: 24px !important;
-            padding-top: 16px !important;
-            padding-bottom: 16px !important;
-        }
-    }
-
-    .footer {
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
-
-    .link-section-child {
+    /* Left Column: Brand & Newsletter */
+    .premium-footer-brand {
+        flex: 1.4;
         display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 
-    .link-section-child p {
-        font-size: 16px;
-        padding-bottom: 5px;
+    .premium-footer-logo-wrapper {
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .premium-footer-logo {
+        height: 38px;
+        width: auto;
+        display: block;
+        opacity: 0.95;
+        transition: opacity 0.3s ease;
+    }
+
+    .premium-footer-logo:hover {
+        opacity: 1;
+    }
+
+    .premium-footer-tagline {
+        font-size: 1.45rem;
+        line-height: 1.35;
         font-weight: 500;
+        color: #94a3b8; /* Faded light gray text */
+        margin: 0;
+        max-width: 290px;
     }
 
-    /* Footer column headings: keep a consistent, deliberate size
-       (these use <h3> for a valid heading order on the page). */
-    .footer-container-div h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin: 0 0 8px;
-        line-height: 1.3;
+    .premium-footer-newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 5px;
     }
 
-    .footer-link {
-        font-size: 14px;
+    .premium-footer-newsletter span {
+        font-size: 0.9rem;
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
-    .fa-color {
-        color: #28b097;
-        font-size: 2rem;
-    }
-
-    .social-media-icons {
-        display: flex !important;
-        flex-direction: row !important; /* Ensure horizontal on mobile */
-        gap: 15px !important;
-        margin-top: 15px;
+    .newsletter-form {
+        display: flex;
         align-items: center;
-        flex-wrap: nowrap !important; /* Prevent wrapping on mobile */
+        position: relative;
+        max-width: 290px;
+        width: 100%;
     }
 
-    .img-wrapper {
-        width: 28px;
-        height: 28px;
+    .newsletter-input {
+        width: 100%;
+        padding: 12px 50px 12px 18px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50px;
+        color: #ffffff;
+        font-size: 0.9rem;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-input:focus {
+        border-color: #28B097;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 0 15px rgba(40, 176, 151, 0.15);
+    }
+
+    .newsletter-btn {
+        position: absolute;
+        right: 5px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s ease;
-    }
-
-    .img-wrapper:hover {
-        transform: scale(1.1);
-    }
-
-    .img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .google-play-store-icons {
-        display: flex;
-        gap: 10px;
-        margin-top: 15px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    @media (max-width: 480px) {
-        .google-play-store-icons {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 8px !important;
-        }
-
-        .download-btn-footer {
-            width: 150px !important;
-        }
-    }
-
-    .download-btn-footer {
-        width: 130px;
         cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .download-btn-footer img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10px;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .download-btn-footer img:hover {
+    .newsletter-btn:hover {
+        background: #28B097;
+        border-color: #28B097;
+        color: #ffffff;
         transform: scale(1.05);
     }
 
-    @media (max-width: 900px) {
-        .links-main-container {
-            flex-direction: row; /* Keep horizontal where possible */
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: space-between;
-        }
-
-        .link-section-child {
-            width: auto;
-            min-width: 150px;
-        }
-
-        .footer-logo-container {
-            text-align: left;
-        }
-
-        @media (max-width: 768px) {
-            .link-section-container {
-                display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                gap: 6px 12px !important;
-                width: 100% !important;
-            }
-
-            .link-section-container a {
-                flex: 0 0 auto !important;
-                white-space: nowrap !important;
-            }
-
-            .link-section-container .footer-dehradun {
-                font-size: 13px !important;
-                margin-bottom: 2px !important;
-            }
-        }
+    .newsletter-btn svg {
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
     }
 
-    /* === Mobile footer alignment fix — keep every section consistently
-       left-aligned, full width, with even spacing === */
-    @media (max-width: 768px) {
-        .footer .footer-container-div {
-            padding-left: 20px !important;
-            padding-right: 20px !important;
-        }
-        .footer .footer-logo-container {
-            text-align: left !important;
-        }
-        .footer .links-main-container {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 28px !important;
-        }
-        .footer .support-email-container,
-        .footer .link-section-child,
-        .footer .link-section-child-container,
-        .footer .link-section-main-container {
-            width: 100% !important;
-            text-align: left !important;
-            align-items: flex-start !important;
-        }
-        .footer .link-section-container {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: wrap !important;
-            gap: 8px 20px !important;
-        }
-        .footer .social-media-icons,
-        .footer .google-play-store-icons {
-            justify-content: flex-start !important;
-        }
-        .footer .follow-us {
-            margin-top: 8px !important;
-        }
+    .premium-footer-apps {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    @keyframes fadeInNavbar {
+    .download-btn-footer-new {
+        height: 36px;
+        width: auto;
+        display: block;
+        border-radius: 6px;
+        transition: transform 0.2s ease;
+    }
+
+    .download-btn-footer-new:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    /* Vertical Divider Lines */
+    .premium-footer-divider {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.05);
+        align-self: stretch;
+    }
+
+    /* Center Section: Three Link Columns */
+    .premium-footer-links-group {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .premium-footer-col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .premium-footer-col h4 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #64748b;
+        font-weight: 600;
+        margin: 0 0 6px 0;
+    }
+
+    .premium-footer-col a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        font-weight: 500;
+        width: fit-content;
+    }
+
+    .premium-footer-col a:hover {
+        color: #28B097;
+        transform: translateX(4px);
+    }
+
+    .premium-footer-col p {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* Contact Details Faded Rows */
+    .contact-item-new {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #94a3b8 !important;
+        font-size: 0.88rem !important;
+        transition: color 0.2s ease !important;
+    }
+
+    .contact-item-new:hover {
+        color: #28B097 !important;
+        transform: none !important;
+    }
+
+    .contact-item-new i {
+        color: #28B097;
+        font-size: 1rem;
+        width: 16px;
+        text-align: center;
+    }
+
+    /* Right Column: Social Stack */
+    .premium-footer-socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding-left: 20px;
+    }
+
+    .social-circle-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+    }
+
+    .social-circle-btn:hover {
+        border-color: #28B097;
+        color: #28B097;
+        background: rgba(40, 176, 151, 0.04);
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 4px 12px rgba(40, 176, 151, 0.12);
+    }
+
+    .social-circle-btn img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: grayscale(1) brightness(1.2);
+        transition: filter 0.3s ease;
+    }
+
+    .social-circle-btn:hover img {
+        filter: none;
+    }
+
+    /* Bottom Copyright Section */
+    .premium-footer-bottom {
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .premium-copyright {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin: 0;
+    }
+
+    .premium-ssl {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    .premium-ssl i {
+        color: #28B097;
+    }
+
+    /* Animation */
+    @keyframes fadeInFooter {
         to { opacity: 1; }
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 991px) {
+        .premium-footer-grid {
+            gap: 25px;
+        }
+        .premium-footer-links-group {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .premium-footer {
+            padding: 40px 24px 30px;
+            margin: 20px auto;
+            width: calc(100% - 24px);
+        }
+
+        .premium-footer-grid {
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .premium-footer-divider {
+            display: none;
+        }
+
+        .premium-footer-links-group {
+            flex-direction: column;
+            gap: 24px;
+            padding: 0;
+            width: 100%;
+        }
+
+        .premium-footer-col {
+            width: 100%;
+        }
+
+        .premium-footer-socials {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 12px;
+            padding-left: 0;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .premium-footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 30px;
+        }
     }
 </style>
 
-<footer class="footer" style="opacity: 0; animation: fadeInNavbar 0s forwards 0.1s;">
-    <div class="footer-container-div">
-        <!-- carmaa logo -->
-        <div class="footer-logo-container">
-            <a href="/">
-            <div class="logo-img-container">
+<footer class="premium-footer" style="opacity: 0; animation: fadeInFooter 0.4s forwards 0.1s;">
+    <div class="premium-footer-grid">
+        
+        <!-- Left Brand & Newsletter Column -->
+        <div class="premium-footer-brand">
+            <a href="/" class="premium-footer-logo-wrapper" aria-label="Carmaa Home">
                 <picture>
-                  <source srcset="/assets/carmaa_footer_logo.webp" type="image/webp">
-                  <img src="/assets/carmaa_footer_logo.webp" alt="Carmaa Car Care - #1 Doorstep Detailing" class="footer-logo-img" loading="lazy" decoding="async" width="200" height="40" />
+                    <source srcset="/assets/carmaa_footer_logo.webp" type="image/webp">
+                    <img src="/assets/carmaa_footer_logo.webp" alt="Carmaa Car Care Logo" class="premium-footer-logo" loading="lazy" decoding="async" width="140" height="38" />
                 </picture>
-            </div>
-        </a>
-        </div>
-
-        <!-- carmaa footer links -->
-        <div class="links-main-container">
-            <div class="support-email-container">
-                <a class="mobile-number-ref2" href="mailto:support@carmaacarcare.com">
-                    <p class="follow-us">
-                        <i class="fa-regular fa-envelope fa-color"></i>
-                        support@carmaacarcare.com
-                    </p>
-                </a>
-                <a class="mobile-number-ref2" href="tel:+917042555401">
-                    <p class="follow-us">
-                        <i class="fa-solid fa-phone fa-color"></i>
-                        +91-70425 55401
-                    </p>
-                </a>
-                <a class="mobile-number-ref2" href="https://carmaacarcare.com/">
-                    <p class="follow-us">
-                        <i class="fa-solid fa-users fa-color"></i> recruitment@carmaacarcare.com
-                    </p>
-                </a>
-            </div>
-
-            <div class="link-section-child ">
-                <h3>Quick Links</h3>
-                <p><a class="footer-link" href="/blogs/">Blogs</a></p>
-                <p><a class="footer-link" href="/about/">About Us</a></p>
-                <p><a class="footer-link" href="/contactus/">Contact Us</a></p>
-            </div>
-
-            <div class="link-section-child link-section-child-container">
-                <h3>Social links</h3>
-                <div class="social-media-icons">
-                    <a href="https://www.facebook.com/carmaaofficialpage" target="_blank">
-                        <div class="img-wrapper"><img src="/assets/contactus/facebook.png" alt="facebook logo" loading="lazy" decoding="async" width="64" height="64" /></div>
-                    </a>
-                    <a href="https://www.instagram.com/carmaa_official" target="_blank">
-                        <div class="img-wrapper"><img src="/assets/contactus/instagram.png" alt="instargram" loading="lazy" decoding="async" width="64" height="64" /></div>
-                    </a>
-                    <a href="https://www.youtube.com/@carmaa_Official" target="_blank">
-                        <div class="img-wrapper"> <img src="/assets/contactus/youtube.png" alt="youtube" loading="lazy" decoding="async" width="64" height="64" />
-                        </div>
-                    </a>
-                    <a href="/blogs/">
-                        <div class="img-wrapper"> <img src="/assets/home-page/topbar/blogger.png" alt="auto repair near me" loading="lazy" decoding="async" width="64" height="64" /></div>
-                    </a>
-                </div>
-
-                <div class="google-play-store-icons">
-                    <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank">
-                        <div class="download-btn-footer">
-                            <img src="/assets/footer/google-play-white.png" alt="Carmaa Blog" loading="lazy" decoding="async" width="300" height="169" />
-                        </div>
-                    </a>
-                    <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank">
-                        <div class="download-btn-footer" id="ios-btn-footer">
-                            <img src="/assets/footer/App_Store_White_bg.png" alt="car workshop near me" loading="lazy" decoding="async" width="300" height="169" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="link-section-main-container">
-            <h3>Our Locations</h3>
-            <div class="link-section-container">
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-dehradun/">
-                    <p class="footer-dehradun">Dehradun</p>
-                </a>
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-noida/">
-                    <p class="footer-dehradun">Noida</p>
-                </a>
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-delhi/">
-                    <p class="footer-dehradun">Delhi</p>
-                </a>
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-gurgaon/">
-                    <p class="footer-dehradun">Gurgaon</p>
-                </a>
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-faridabad/">
-                    <p class="footer-dehradun">Faridabad </p>
-                </a>
-                <a class="footer-link1 " href="/doorstep-car-washing-service-in-gaziabad/">
-                    <p class="footer-dehradun">Ghaziabad </p>
-                </a>
-            </div>
-        </div>
-        <hr>
-
-        <div class="copyright">
-            <p>
-                &copy; <span id="yearElement">2026</span> Carmaa Technologies Pvt Ltd. All Rights Reserved.
+            </a>
+            
+            <p class="premium-footer-tagline">
+                Eco-friendly detailing spa delivered right to your parking spot.
             </p>
-            <div style="margin-top: 10px; font-size: 11px; opacity: 0.7; display: flex; align-items: center; justify-content: center; gap: 5px;">
-                <i class="fa-solid fa-shield-halved" style="color: #28B097;"></i>
-                <span>Secure SSL Encrypted Transaction</span>
+
+            <div class="premium-footer-newsletter">
+                <span>Subscribe to our newsletter</span>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+                    <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email Address for Newsletter" />
+                    <button type="submit" class="newsletter-btn" aria-label="Submit Subscription">
+                        <!-- Premium top-right pointing arrow SVG like the reference -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </button>
+                </form>
             </div>
+
+            <!-- Playstore and Appstore links directly under input -->
+            <div class="premium-footer-apps">
+                <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/footer/google-play-white.png" alt="Get it on Google Play Store" class="download-btn-footer-new" loading="lazy" decoding="async" width="120" height="36" />
+                </a>
+                <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/footer/App_Store_White_bg.png" alt="Download on App Store" class="download-btn-footer-new" loading="lazy" decoding="async" width="120" height="36" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="premium-footer-divider" aria-hidden="true"></div>
+
+        <!-- Center Links Columns -->
+        <div class="premium-footer-links-group">
+            
+            <!-- Locations Column -->
+            <div class="premium-footer-col">
+                <h4>Our Locations</h4>
+                <a href="/doorstep-car-washing-service-in-dehradun/">Dehradun</a>
+                <a href="/doorstep-car-washing-service-in-noida/">Noida</a>
+                <a href="/doorstep-car-washing-service-in-delhi/">Delhi</a>
+                <a href="/doorstep-car-washing-service-in-gurgaon/">Gurgaon</a>
+                <a href="/doorstep-car-washing-service-in-faridabad/">Faridabad</a>
+                <a href="/doorstep-car-washing-service-in-gaziabad/">Ghaziabad</a>
+            </div>
+
+            <!-- Company / Quick Links Column -->
+            <div class="premium-footer-col">
+                <h4>Company</h4>
+                <a href="/blogs/">Blogs</a>
+                <a href="/about/">About Us</a>
+                <a href="/contactus/">Contact Us</a>
+            </div>
+
+            <!-- Support / Contact Details Column -->
+            <div class="premium-footer-col">
+                <h4>Support</h4>
+                <a href="mailto:support@carmaacarcare.com" class="contact-item-new">
+                    <i class="fa-regular fa-envelope"></i>
+                    support@carmaacarcare.com
+                </a>
+                <a href="tel:+917042555401" class="contact-item-new">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 70425 55401
+                </a>
+                <a href="mailto:recruitment@carmaacarcare.com" class="contact-item-new">
+                    <i class="fa-solid fa-users"></i>
+                    recruitment@carmaacarcare.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="premium-footer-divider" aria-hidden="true"></div>
+
+        <!-- Right Stack of Circular Social Icons -->
+        <div class="premium-footer-socials">
+            <a href="https://www.facebook.com/carmaaofficialpage" class="social-circle-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/carmaa_official" class="social-circle-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@carmaa_Official" class="social-circle-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="/blogs/" class="social-circle-btn" aria-label="Blogs">
+                <i class="fa-solid fa-blog"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="premium-footer-bottom">
+        <p class="premium-copyright">
+            &copy; <span id="yearElement">2026</span> Carmaa Technologies Pvt Ltd. All Rights Reserved.
+        </p>
+        <div class="premium-ssl">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>Secure SSL Encrypted Transaction</span>
         </div>
     </div>
 </footer>
@@ -353,9 +477,6 @@
         const yearElement = document.getElementById('yearElement');
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();
-            yearElement.style.fontSize = "12px";
         }
     })();
 </script>
-
-
