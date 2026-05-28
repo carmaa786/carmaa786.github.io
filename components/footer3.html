@@ -2,16 +2,13 @@
     /* Premium Footer Styles matching the reference UI */
     .premium-footer {
         background: #090d14; /* Elegant deep dark gray/black matching the reference */
-        border-radius: 28px;
         padding: 50px 40px 40px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        margin: 40px auto;
-        max-width: 1200px;
-        width: calc(100% - 40px);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin: 40px 0 0 0;
+        width: 100%;
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
         color: #e2e8f0;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
         position: relative;
         overflow: hidden;
     }
@@ -21,6 +18,8 @@
         justify-content: space-between;
         align-items: stretch;
         gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     /* Left Column: Brand & Newsletter */
@@ -274,6 +273,8 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 15px;
+        max-width: 1200px;
+        margin: 40px auto 0;
     }
 
     .premium-copyright {
@@ -335,14 +336,15 @@
 
         .premium-footer-logo-wrapper {
             margin: 0 auto;
-            display: block;
+            display: inline-block !important;
         }
 
         .premium-footer-logo {
             height: 30px !important;
-            width: auto !important;
-            max-width: 130px !important;
+            width: 154px !important; /* Matches natural 5.13 aspect ratio (2002/390) at 30px height */
+            max-width: 100% !important;
             margin: 0 auto;
+            display: block;
         }
 
         .premium-footer-tagline {

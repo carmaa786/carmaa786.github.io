@@ -1107,3 +1107,13 @@
     padding-inline: 40px;
   }
 }
+
+.hero-section-btn2 {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.hero-section-btn2:hover {
+  background-color: #28b097 !important;
+  color: white !important;
+}

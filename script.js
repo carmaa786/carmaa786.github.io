@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.app-download-link').forEach(link => link.href = urls[deviceType]);
 
         // --- WhatsApp Button Transformation (Critical) ---
-        const whatsappUrl = "https://wa.me/917042555401?text=Hi%20Carmaa,%20I'd%20like%20to%20book%20a%20car%20service.";
+        const whatsappUrl = "https://wa.me/917042555401?text=Hi%20Carmaa%2C%20I%20want%20to%20book%20professional%20car%20care%20services";
         const cityButtons = document.querySelectorAll('.open-booking-modal');
         cityButtons.forEach(btn => {
             btn.classList.add('whatsapp-btn-city');
