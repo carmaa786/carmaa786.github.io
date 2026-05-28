@@ -327,14 +327,19 @@
         }
 
         .premium-footer-links-group {
-            flex-direction: column;
-            gap: 24px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 20px;
             padding: 0;
             width: 100%;
         }
 
         .premium-footer-col {
             width: 100%;
+        }
+
+        .support-col-footer {
+            grid-column: span 2;
         }
 
         .premium-footer-socials {
@@ -408,7 +413,7 @@
             </div>
 
             <!-- Support / Contact Details Column -->
-            <div class="premium-footer-col">
+            <div class="premium-footer-col support-col-footer">
                 <h4>Support</h4>
                 <a href="mailto:support@carmaacarcare.com" class="contact-item-new">
                     <i class="fa-regular fa-envelope"></i>
