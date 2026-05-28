@@ -227,6 +227,34 @@
   @keyframes fadeInNavbar {
     to { opacity: 1; }
   }
+
+  .nav-download-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .nav-download-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  @media screen and (max-width: 600px) {
+    .download-btn-text {
+      display: none;
+    }
+    .nav-download-btn {
+      padding: 8px 12px;
+    }
+  }
 </style>
 
 <style>
@@ -456,7 +484,10 @@
         >
       </li>
     </ul>
-    <div class="hamburger-menu-container">
+    <div class="hamburger-menu-container" style="align-items: center;">
+      <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" class="nav-download-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-google-play"></i> <span class="download-btn-text">Download App</span>
+      </a>
       <button
         class="toggle navbar-toggle-menu"
         id="toggle"
