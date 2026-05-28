@@ -60,6 +60,7 @@
         .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
         .navbar-placeholder { min-height: 80px; background: #fff; }
         .section-header h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 5vw, 3rem); text-transform: uppercase; }
+        h2 { font-weight: 600 !important; }
         
         /* Standardized Floating WhatsApp Widget */
         .whatsapp-float {
@@ -99,6 +100,92 @@
             }
         }
 
+        /* Services Slider */
+        .services-slider-container {
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0 40px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        .services-track {
+            display: flex;
+            gap: 20px;
+            animation: scroll-loop 40s linear infinite;
+            flex-shrink: 0;
+            width: max-content;
+            padding-right: 20px;
+        }
+        .services-track,
+        .services-track * {
+            max-width: none !important;
+        }
+        .services-slider-container:hover .services-track {
+            animation-play-state: paused;
+        }
+        .all-service-card {
+            background: #f8fafc;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 16px;
+            padding: 30px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            width: 220px;
+            min-width: 220px;
+            max-width: 220px;
+            flex: 0 0 220px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+        .all-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+        .all-service-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .all-service-icon-wrapper i {
+            font-size: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .all-service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .service-badge-new {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
     </style>
 
     <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
@@ -364,27 +451,109 @@
                 <h2>What Car Care Services Does Carmaa Offer?</h2>
                 <p>Top-tier car care delivered right to your doorstep across North India.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal fade-left delay-1">
-                    <div class="icon-box floating">
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                    </div>
-                    <h3>Detailing at Doorstep</h3>
-                    <p>Professional-grade detailing delivered to your home or office. Skip the queues with our specialized paint protection and deep interior restoration.</p>
+            <div class="services-slider-container reveal fade-up">
+                <div class="services-track">
+                    <a href="/full-car-wash-service/" class="all-service-card" title="Full Car Wash Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>Full Car Wash</h3>
+                    </a>
+                    <a href="/full-car-detailing-service/" class="all-service-card" title="Full Car Detailing Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-car-burst"></i></div>
+                        <h3>Car Detailing</h3>
+                    </a>
+                    <a href="/car-deep-cleaning-services/" class="all-service-card" title="Car Deep Cleaning Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-broom"></i></div>
+                        <h3>Deep Cleaning</h3>
+                    </a>
+                    <a href="/ceramic-coating-service/" class="all-service-card" title="Ceramic Coating Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Ceramic Coating</h3>
+                    </a>
+                    <a href="/graphene-coating-service/" class="all-service-card" title="Graphene Coating Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Graphene Coating</h3>
+                    </a>
+                    <a href="/paint-protection-and-coating-services/" class="all-service-card" title="Paint Protection and Coating Services">
+                        <span class="service-badge-new">New</span>
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-paint-roller"></i></div>
+                        <h3>Paint Protection</h3>
+                    </a>
+                    <a href="/car-body-polish-and-car-waxing-service/" class="all-service-card" title="Car Body Polish and Car Waxing Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                        <h3>Body Polish & Wax</h3>
+                    </a>
+                    <a href="/interior-car-cleaning-service/" class="all-service-card" title="Interior Car Cleaning Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-couch"></i></div>
+                        <h3>Interior Cleaning</h3>
+                    </a>
+                    <a href="/premium-car-services/" class="all-service-card" title="Premium Car Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Premium Services</h3>
+                    </a>
+                    <a href="/steam-wash-service/" class="all-service-card" title="Steam Wash Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                        <h3>Steam Wash</h3>
+                    </a>
+                    <a href="/glass-and-surface-coating-services/" class="all-service-card" title="Glass and Surface Coating Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-window-maximize"></i></div>
+                        <h3>Glass & Surface Coating</h3>
+                    </a>
+                    <a href="/car-dry-cleaning-service/" class="all-service-card" title="Car Dry Cleaning Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-soap"></i></div>
+                        <h3>Dry Cleaning</h3>
+                    </a>
                 </div>
-                <div class="service-card reveal fade-bottom delay-2">
-                    <div class="icon-box floating">
-                        <i class="fa-solid fa-stopwatch"></i>
-                    </div>
-                    <h3>Quick Wash</h3>
-                    <p>Need a refresh? Our high-efficiency express wash uses premium pH-neutral cleaners to deliver a spotless finish in record time without wasting water.</p>
-                </div>
-                <div class="service-card reveal fade-right delay-3">
-                    <div class="icon-box floating">
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-                    <h3>Car Premium Spa</h3>
-                    <p>Give your car the ultimate rejuvenation. Our Premium Spa includes deep extraction vacuuming, dashboard conditioning, and hydrophobic paint finishing.</p>
+                <!-- Duplicate track for infinite scroll loop -->
+                <div class="services-track" aria-hidden="true">
+                    <a href="/full-car-wash-service/" class="all-service-card" title="Full Car Wash Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>Full Car Wash</h3>
+                    </a>
+                    <a href="/full-car-detailing-service/" class="all-service-card" title="Full Car Detailing Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-car-burst"></i></div>
+                        <h3>Car Detailing</h3>
+                    </a>
+                    <a href="/car-deep-cleaning-services/" class="all-service-card" title="Car Deep Cleaning Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-broom"></i></div>
+                        <h3>Deep Cleaning</h3>
+                    </a>
+                    <a href="/ceramic-coating-service/" class="all-service-card" title="Ceramic Coating Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Ceramic Coating</h3>
+                    </a>
+                    <a href="/graphene-coating-service/" class="all-service-card" title="Graphene Coating Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Graphene Coating</h3>
+                    </a>
+                    <a href="/paint-protection-and-coating-services/" class="all-service-card" title="Paint Protection and Coating Services">
+                        <span class="service-badge-new">New</span>
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-paint-roller"></i></div>
+                        <h3>Paint Protection</h3>
+                    </a>
+                    <a href="/car-body-polish-and-car-waxing-service/" class="all-service-card" title="Car Body Polish and Car Waxing Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                        <h3>Body Polish & Wax</h3>
+                    </a>
+                    <a href="/interior-car-cleaning-service/" class="all-service-card" title="Interior Car Cleaning Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-couch"></i></div>
+                        <h3>Interior Cleaning</h3>
+                    </a>
+                    <a href="/premium-car-services/" class="all-service-card" title="Premium Car Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Premium Services</h3>
+                    </a>
+                    <a href="/steam-wash-service/" class="all-service-card" title="Steam Wash Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                        <h3>Steam Wash</h3>
+                    </a>
+                    <a href="/glass-and-surface-coating-services/" class="all-service-card" title="Glass and Surface Coating Services">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-window-maximize"></i></div>
+                        <h3>Glass & Surface Coating</h3>
+                    </a>
+                    <a href="/car-dry-cleaning-service/" class="all-service-card" title="Car Dry Cleaning Service">
+                        <div class="all-service-icon-wrapper"><i class="fa-solid fa-soap"></i></div>
+                        <h3>Dry Cleaning</h3>
+                    </a>
                 </div>
             </div>
 
