@@ -14,7 +14,7 @@
     <link rel="preload" as="image" href="/assets/logo.webp" type="image/webp">
     <title>Professional Doorstep Car Wash & Car Detailing | Carmaa</title>
     <meta name="description"
-        content="Professional doorstep car wash and expert car detailing services at your location. Eco-friendly, waterless cleaning for a showroom shine. Book Carmaa now!">
+        content="India's most trusted car care brand. Professional doorstep car wash and expert car detailing services at your location.">
     <meta name="keywords"
         content="waterless car wash, doorstep car wash, car washing service, car wash service, car interior cleaning, car cleaning at doorstep, car detailing, doorstep car wash in Dehradun, doorstep car wash in Uttarakhand, car washing service in Dehradun, eco-friendly doorstep car wash.">
     <meta name="author" content="Carmaa Car Care">
@@ -44,24 +44,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); background: var(--dark-bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--text-white); background: #020617; padding-top: 100px; padding-bottom: 50px; }
-        .split-hero-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; width: 100%; }
-        .hero-content { z-index: 1; flex: 1; text-align: left; max-width: 600px; }
-        .hero-media { flex: 1; display: flex; justify-content: flex-end; position: relative; z-index: 1; }
-        .hero-video-wrapper { position: relative; width: 100%; max-width: 600px; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); }
-        .hero-video-wrapper video { width: 100%; height: auto; display: block; position: relative; z-index: 1; }
-        .hero-video-wrapper .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.1) 0%, rgba(2, 6, 23, 0.4) 100%); pointer-events: none; z-index: 2; }
-        @media (max-width: 991px) {
-            .split-hero-container { flex-direction: column; text-align: center; gap: 40px; }
-            .hero-content { text-align: center; max-width: 100%; }
-            .hero-media { width: 100%; justify-content: center; }
-            .hero-video-wrapper { max-width: 800px; }
-            .hero .cta-group { justify-content: center; }
-        }
-        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
-        .fade-in-left { opacity: 0; animation: fadeInLeft 0.8s ease forwards; }
-        .fade-in-right { opacity: 0; animation: fadeInRight 0.8s ease forwards; }
+        .hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; color: var(--text-white); background: #020617; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; aspect-ratio: 16 / 9; }
+        @media (max-width: 768px) { .hero-bg img { aspect-ratio: 9 / 16; } }
+        .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.95) 90%, #020617 100%); }
+        .hero-content { z-index: 1; max-width: 800px; padding: 0 20px; }
         @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
         @font-face { font-family: 'Oswald'; src: url('/assets/fonts/oswald-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
         @font-face { font-family: 'Font Awesome 6 Free'; font-style: normal; font-weight: 900; font-display: swap; src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2') format('woff2'); }
@@ -69,8 +57,7 @@
         @font-face { font-family: 'Font Awesome 6 Brands'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2') format('woff2'); }
         .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; letter-spacing: 1px; min-height: 1.1em; }
         @media (max-width: 768px) { .hero h1 { font-size: clamp(1.6rem, 7vw, 2.8rem) !important; letter-spacing: 0 !important; } }
-        .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; min-height: 3em; }
-        @media (max-width: 991px) { .hero p { margin-left: auto; margin-right: auto; } }
+        .hero p { font-size: clamp(1rem, 4vw, 1.4rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; min-height: 3em; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: transform 0.3s ease, background 0.3s ease; border: none; cursor: pointer; }
         .btn-primary { background: var(--primary); color: white; }
         .highlight { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -344,36 +331,32 @@
     </script>
 
     <header class="hero hero-section">
-        <div class="container split-hero-container">
-            <div class="hero-content fade-in-left">
-                <h1>Premium <span class="highlight">Car Wash and Detailing</span> At Your Home</h1>
-                <p>Experience India's most trusted waterless car wash. Our certified experts deliver professional detailing and eco-friendly spa services right to your parking spot.</p>
-                <div class="cta-group">
-                    <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
-                        class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Carmaa on App Store">
-                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right:8px"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.308.085-1.071.234-1.287.234-.307 0-1.441-.418-1.776-.418-.335 0-1.89.135-2.394.752-1.131 1.381-1.264 4.193-.307 5.928.647 1.17 1.688 1.939 2.106 1.939.431 0 .665-.132 1.424-.132.76 0 .923.132 1.424.132.538 0 1.201-.18 1.746-.81.379-.437.605-.911.605-.911a2.72 2.72 0 0 1-.05-.033Z"/></svg> App Store
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
-                        class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Carmaa on Google Play Store">
-                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right:8px"><path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.208 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/></svg> Play Store
-                    </a>
-                </div>
-            </div>
-            <div class="hero-media fade-in-right delay-1">
-                <div class="hero-video-wrapper">
-                    <picture>
-                        <source type="image/webp" 
-                                srcset="assets/hero/hero_car_detailing_desktop_480w.webp 480w,
-                                        assets/hero/hero_car_detailing_desktop_768w.webp 768w,
-                                        assets/hero/hero_car_detailing_desktop_1200w.webp 1200w" 
-                                sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 600px">
-                        <img src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 0;">
-                    </picture>
-                    <video poster="assets/hero/hero_car_detailing_desktop_1200w.webp" muted loop playsinline autoplay preload="auto" class="hero-video" id="heroVideo" width="1920" height="1080">
-                        <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay"></div>
-                </div>
+        <div class="hero-bg hero-wrapper">
+            <picture>
+                <source type="image/webp" 
+                        srcset="assets/hero/hero_car_detailing_desktop_480w.webp 480w,
+                                assets/hero/hero_car_detailing_desktop_768w.webp 768w,
+                                assets/hero/hero_car_detailing_desktop_1200w.webp 1200w" 
+                        sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px">
+                <img src="assets/hero/hero_car_detailing_desktop_1200w.webp" alt="Doorstep car detailing" fetchpriority="high" loading="eager" width="1200" height="675" class="hero-poster" style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+            </picture>
+            <video poster="assets/hero/hero_car_detailing_desktop_1200w.webp" muted loop playsinline autoplay preload="auto" class="hero-video" id="heroVideo" width="1920" height="1080">
+                <source data-src="assets/doorstep_arrival.mp4" type="video/mp4">
+            </video>
+            <div class="overlay hero-extra"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up" style="color: white; font-weight: bold;">Premium Car Services At Your Home</h1>
+            <p class="fade-in-up delay-1">India's most trusted car care brand. Our certified experts deliver professional detailing and eco-friendly spa services right to your parking spot.</p>
+            <div class="cta-group fade-in-up delay-2">
+                <a href="https://apps.apple.com/in/app/carmaa-car-care/id6746490090"
+                    class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Carmaa on App Store">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right:8px"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.308.085-1.071.234-1.287.234-.307 0-1.441-.418-1.776-.418-.335 0-1.89.135-2.394.752-1.131 1.381-1.264 4.193-.307 5.928.647 1.17 1.688 1.939 2.106 1.939.431 0 .665-.132 1.424-.132.76 0 .923.132 1.424.132.538 0 1.201-.18 1.746-.81.379-.437.605-.911.605-.911a2.72 2.72 0 0 1-.05-.033Z"/></svg> App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa"
+                    class="btn btn-lg btn-primary heartbeat-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Carmaa on Google Play Store">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right:8px"><path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.208 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/></svg> Play Store
+                </a>
             </div>
         </div>
     </header>
