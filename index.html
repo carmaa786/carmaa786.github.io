@@ -392,7 +392,7 @@
     <script>
         // Defer navbar loading to idle time to prioritize hero render
         const loadNavbar = () => {
-            fetch("/components/navbar.html")
+            fetch("/components/navbar.html?v=1.1.3")
                 .then(r => r.text())
                 .then(h => {
                     const placeholder = document.getElementById("navbar-placeholder");
@@ -1136,7 +1136,7 @@
     <script>
         // Defer footer loading to idle time
         const loadFooter = () => {
-            fetch("/components/footer3.html")
+            fetch("/components/footer3.html?v=1.1.3")
                 .then((response) => response.text())
                 .then((html) => {
                     const footerElem = document.getElementById("footer");
