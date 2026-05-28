@@ -311,15 +311,39 @@
 
     @media (max-width: 768px) {
         .premium-footer {
-            padding: 40px 24px 30px;
-            margin: 20px auto;
-            width: calc(100% - 24px);
+            padding: 30px 16px 20px;
+            margin: 0;
+            border-radius: 0;
+            width: 100%;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
         }
 
         .premium-footer-grid {
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
             align-items: flex-start;
+        }
+
+        .premium-footer-logo {
+            height: 24px;
+        }
+
+        .premium-footer-tagline {
+            font-size: 0.92rem;
+            line-height: 1.45;
+            max-width: 100%;
+            color: #94a3b8;
+        }
+
+        .premium-footer-apps {
+            margin-top: 4px;
+            gap: 8px;
+        }
+
+        .download-btn-footer-new {
+            height: 28px;
         }
 
         .premium-footer-divider {
@@ -329,13 +353,39 @@
         .premium-footer-links-group {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px 20px;
+            gap: 20px 12px;
             padding: 0;
             width: 100%;
         }
 
         .premium-footer-col {
             width: 100%;
+            gap: 6px;
+        }
+
+        .premium-footer-col h4 {
+            font-size: 0.75rem;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .premium-footer-col a {
+            font-size: 0.78rem;
+        }
+
+        .contact-item-new {
+            font-size: 0.76rem !important;
+        }
+
+        .locations-col-footer {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 6px 12px !important;
+            grid-column: span 2;
+        }
+
+        .locations-col-header {
+            grid-column: span 2;
         }
 
         .support-col-footer {
@@ -345,17 +395,35 @@
         .premium-footer-socials {
             flex-direction: row;
             justify-content: flex-start;
-            gap: 12px;
+            gap: 8px;
             padding-left: 0;
-            margin-top: 10px;
+            margin-top: 5px;
             width: 100%;
+        }
+
+        .social-circle-btn {
+            width: 34px;
+            height: 34px;
+        }
+
+        .social-circle-btn i {
+            font-size: 0.85rem;
         }
 
         .premium-footer-bottom {
             flex-direction: column;
             align-items: flex-start;
-            gap: 12px;
-            margin-top: 30px;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        .premium-copyright {
+            font-size: 0.72rem;
+        }
+
+        .premium-ssl {
+            font-size: 0.72rem;
         }
     }
 </style>
@@ -394,8 +462,8 @@
         <div class="premium-footer-links-group">
             
             <!-- Locations Column -->
-            <div class="premium-footer-col">
-                <h4>Our Locations</h4>
+            <div class="premium-footer-col locations-col-footer">
+                <h4 class="locations-col-header">Our Locations</h4>
                 <a href="/doorstep-car-washing-service-in-dehradun/">Dehradun</a>
                 <a href="/doorstep-car-washing-service-in-noida/">Noida</a>
                 <a href="/doorstep-car-washing-service-in-delhi/">Delhi</a>
