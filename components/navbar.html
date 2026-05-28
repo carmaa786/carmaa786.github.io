@@ -227,6 +227,49 @@
   @keyframes fadeInNavbar {
     to { opacity: 1; }
   }
+
+  .nav-download-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .nav-download-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  @media screen and (max-width: 800px) {
+    .nav-download-btn {
+      padding: 6px 8px;
+      font-size: 11px;
+      border-radius: 4px;
+    }
+    .navbar-main-container {
+      width: 92% !important;
+    }
+    .navbar-carmaa-logo-img {
+      height: 32px !important;
+      max-width: 130px !important;
+    }
+    .hamburger-menu-container {
+      gap: 8px !important;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .nav-download-btn {
+      font-size: 10px;
+      padding: 5px 6px;
+    }
+  }
 </style>
 
 <style>
@@ -456,7 +499,10 @@
         >
       </li>
     </ul>
-    <div class="hamburger-menu-container">
+    <div class="hamburger-menu-container" style="align-items: center; gap: 15px;">
+      <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" class="nav-download-btn" target="_blank" rel="noopener noreferrer">
+        <span class="download-btn-text">Download the App</span>
+      </a>
       <button
         class="toggle navbar-toggle-menu"
         id="toggle"
