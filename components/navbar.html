@@ -231,8 +231,8 @@
   .nav-download-btn {
     background-color: #000;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 8px 14px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -249,7 +249,25 @@
   }
   @media screen and (max-width: 800px) {
     .nav-download-btn {
-      display: none !important;
+      padding: 6px 8px;
+      font-size: 11px;
+      border-radius: 4px;
+    }
+    .navbar-main-container {
+      width: 92% !important;
+    }
+    .navbar-carmaa-logo-img {
+      height: 32px !important;
+      max-width: 130px !important;
+    }
+    .hamburger-menu-container {
+      gap: 8px !important;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .nav-download-btn {
+      font-size: 10px;
+      padding: 5px 6px;
     }
   }
 </style>
@@ -481,9 +499,9 @@
         >
       </li>
     </ul>
-    <div class="hamburger-menu-container" style="align-items: center;">
+    <div class="hamburger-menu-container" style="align-items: center; gap: 15px;">
       <a href="https://play.google.com/store/apps/details?id=com.carmaacarcare.carmaa" class="nav-download-btn" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-google-play"></i> <span class="download-btn-text">Get App</span>
+        <span class="download-btn-text">Download the App</span>
       </a>
       <button
         class="toggle navbar-toggle-menu"
