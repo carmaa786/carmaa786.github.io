@@ -7,9 +7,6 @@ Disallow: /scratch/
 Disallow: /src/
 Allow: /
 
-# Block apostrophe URLs
-Disallow: /why-carmaa-is-becoming-dehradun*
-
 User-agent: GPTBot
 Allow: /
 
