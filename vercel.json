@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/blogs/why-carmaa-is-becoming-dehradun's-choice/",
+      "destination": "/blogs/why-carmaa-is-becoming-dehradun-choice/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/why-carmaa-is-becoming-dehradun's-choice",
+      "destination": "/blogs/why-carmaa-is-becoming-dehradun-choice/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
