@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /components/
+
 Disallow: /scripts/
 Disallow: /*.py$
 Disallow: /node_modules/
