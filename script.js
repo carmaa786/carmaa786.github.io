@@ -158,11 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (grid && window.innerWidth <= 768) {
                 let pos = 0;
                 let carouselTimer = null;
+                let cachedW = 0;
+                let cachedScrollW = 0;
+                let cachedClientW = 0;
+                const updateDims = () => {
+                    cachedW = grid.querySelector('.service-card')?.offsetWidth || 300;
+                    cachedScrollW = grid.scrollWidth;
+                    cachedClientW = grid.clientWidth;
+                };
                 const startCarousel = () => {
                     if (carouselTimer) return;
+                    updateDims();
                     carouselTimer = setInterval(() => {
-                        const w = grid.querySelector('.service-card')?.offsetWidth || 300;
-                        pos = (pos + w + 20 >= grid.scrollWidth - grid.clientWidth) ? 0 : pos + w + 20;
+                        pos = (pos + cachedW + 20 >= cachedScrollW - cachedClientW) ? 0 : pos + cachedW + 20;
                         grid.scrollTo({ left: pos, behavior: 'smooth' });
                     }, 4000);
                 };
