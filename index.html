@@ -1193,6 +1193,7 @@
     <script>
       let videoLoaded = false;
       const loadHeroVideo = () => {
+        if (window.innerWidth <= 768) return; // Prevent 3MB video payload on mobile
         const video = document.getElementById('heroVideo');
         if (video && !videoLoaded) {
           videoLoaded = true;
