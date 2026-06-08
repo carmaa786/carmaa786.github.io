@@ -387,8 +387,8 @@
           <div class="tbi-img-content-container" style="display: flex; justify-content: center; gap: 2rem; flex-direction: row; flex-wrap: wrap; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto;">
             <div class="tbi-image" style="width: clamp(100px, 20vw, 150px);">
               <picture>
-  <source srcset="/assets/aboutus/aws logo.webp" type="image/webp">
-  <img src="/assets/aboutus/aws logo.png" alt="AWS Logo" width="1024" height="900" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async" />
+  <source srcset="/assets/aboutus/aws%20logo.webp" type="image/webp">
+  <img src="/assets/aboutus/aws%20logo.png" alt="AWS Logo" width="1024" height="900" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async" />
 </picture>
             </div>
             <div class="tbi-image" style="width: clamp(100px, 20vw, 150px);">
@@ -979,11 +979,11 @@
         showLessBtn.style.display = "none";
       }
 
-      showMoreBtn.addEventListener("click", renderServices);
-      showLessBtn.addEventListener("click", showLess);
-      window.addEventListener("DOMContentLoaded", renderServices);
+      if (showMoreBtn) showMoreBtn.addEventListener("click", renderServices);
+      if (showLessBtn) showLessBtn.addEventListener("click", showLess);
+      if (servicesContainer) window.addEventListener("DOMContentLoaded", renderServices);
 
-      if (services.length > itemsToShow) {
+      if (showMoreBtn && services.length > itemsToShow) {
         showMoreBtn.style.display = "block";
       }
     </script>
@@ -1023,31 +1023,35 @@
           },
         });
       });
-      gsap.from(".servicesI ", {
-        y: 100,
-        duration: 1,
-        opaCitys: 0,
-        scrollTrigger: {
-          trigger: ".servicesI",
-          scroller: "body",
-          start: "top 90%",
-          start: "top 90%",
-          marker: true,
-          scrub: true,
-          end: "top 50%",
-        },
-        stagger: 0.3,
-      });
-      gsap.from(".services ", {
-        y: 100,
-        duration: 1,
-        opaCitys: 0,
-        scrollTrigger: {
-          trigger: ".services",
-          scroller: "body",
-          start: "top 80%",
-        },
-      });
+      if (document.querySelector(".servicesI")) {
+        gsap.from(".servicesI ", {
+          y: 100,
+          duration: 1,
+          opaCitys: 0,
+          scrollTrigger: {
+            trigger: ".servicesI",
+            scroller: "body",
+            start: "top 90%",
+            start: "top 90%",
+            marker: true,
+            scrub: true,
+            end: "top 50%",
+          },
+          stagger: 0.3,
+        });
+      }
+      if (document.querySelector(".services")) {
+        gsap.from(".services ", {
+          y: 100,
+          duration: 1,
+          opaCitys: 0,
+          scrollTrigger: {
+            trigger: ".services",
+            scroller: "body",
+            start: "top 80%",
+          },
+        });
+      }
     </script>
     <div id="footer">
       <script>
@@ -1060,8 +1064,11 @@
         document.addEventListener("DOMContentLoaded", function () {
           let presentYear = new Date().getFullYear();
           console.log(presentYear);
-          document.getElementById("yearElement").textContent = presentYear;
-          document.getElementById("yearElement").style.fontSize = "12px";
+          let yearElement = document.getElementById("yearElement");
+          if (yearElement) {
+            yearElement.textContent = presentYear;
+            yearElement.style.fontSize = "12px";
+          }
         });
       </script>
     </div>
