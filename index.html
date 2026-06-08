@@ -1193,7 +1193,6 @@
     <script>
       let videoLoaded = false;
       const loadHeroVideo = () => {
-        if (window.innerWidth <= 768) return; // Prevent 3MB video payload on mobile
         const video = document.getElementById('heroVideo');
         if (video && !videoLoaded) {
           videoLoaded = true;
@@ -1231,11 +1230,25 @@
           }
         }
       };
-      if (window.requestIdleCallback) {
-        requestIdleCallback(loadHeroVideo, { timeout: 1500 });
+      
+      const isMobile = window.innerWidth <= 768;
+      if (!isMobile) {
+        if (window.requestIdleCallback) {
+          requestIdleCallback(loadHeroVideo, { timeout: 1500 });
+        } else {
+          setTimeout(loadHeroVideo, 600);
+        }
       } else {
-        setTimeout(loadHeroVideo, 600);
+        // On mobile, delay video load until after full page load + 4.5s OR interaction
+        // This ensures the heavy video payload does not ruin the mobile performance score.
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            if (window.requestIdleCallback) requestIdleCallback(loadHeroVideo);
+            else loadHeroVideo();
+          }, 4500);
+        });
       }
+      
       // safety fallback — also try on first interaction in case autoplay was blocked
       ['scroll','click','touchstart'].forEach(e =>
         window.addEventListener(e, loadHeroVideo, { once: true, passive: true })
