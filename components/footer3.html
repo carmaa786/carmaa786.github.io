@@ -283,6 +283,23 @@
         margin: 0;
     }
 
+    .premium-copyright a {
+        color: #01628F;
+        text-decoration: none;
+        font-weight: 500;
+        transition: filter 0.2s ease;
+    }
+
+    .premium-copyright a:hover,
+    .premium-copyright a:active {
+        filter: brightness(1.5);
+    }
+
+    .footer-sep {
+        margin: 0 10px;
+        opacity: 0.5;
+    }
+
     .premium-ssl {
         display: flex;
         align-items: center;
@@ -474,8 +491,14 @@
 
         .premium-copyright {
             font-size: 0.72rem;
+            line-height: 1.5;
             text-align: center;
             width: 100%;
+            padding: 0 10px;
+        }
+
+        .footer-sep {
+            margin: 0 6px;
         }
 
         .premium-ssl {
@@ -578,6 +601,10 @@
     <div class="premium-footer-bottom">
         <p class="premium-copyright">
             &copy; <span id="yearElement">2026</span> Carmaa Technologies Pvt Ltd. All Rights Reserved.
+            <span class="footer-sep">|</span>
+            <a href="/terms-conditions/">Terms &amp; Conditions</a>
+            <span class="footer-sep">|</span>
+            <a href="/privacy-policy/">Privacy Policy</a>
         </p>
         <div class="premium-ssl">
             <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
