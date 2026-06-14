@@ -648,6 +648,78 @@
         </div>
     </section>
 
+    <!-- ===== Services & Pricing catalog (moving carousel) — scoped hsvc-, JS-driven ===== -->
+    <style>
+        #home-services .hsvc-head{text-align:center;max-width:720px;margin:0 auto 28px;}
+        #home-services .hsvc-head h2{font-size:clamp(1.5rem,3.5vw,2.2rem);color:#0b1a2b;margin:0 0 8px;font-weight:800;}
+        #home-services .hsvc-head h2 span{color:#0b4c9d;}
+        #home-services .hsvc-head p{color:#5b6675;margin:0;font-size:1.02rem;}
+        #home-services .hsvc-marquee{overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+        #home-services .hsvc-track{display:flex;width:max-content;will-change:transform;}
+        #home-services .hsvc-card{width:250px;flex:0 0 auto;margin:0 .6rem;background:#fff;border:1px solid #d7deea;border-radius:16px;overflow:hidden;text-decoration:none;box-shadow:0 4px 14px rgba(16,40,80,.07);transition:transform .25s,box-shadow .25s;display:block;}
+        #home-services .hsvc-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(16,40,80,.16);}
+        #home-services .hsvc-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#eef2f7;}
+        #home-services .hsvc-img img{width:100%;height:100%;object-fit:cover;display:block;}
+        #home-services .hsvc-badge{position:absolute;top:10px;left:10px;background:#0b4c9d;color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.03em;padding:4px 10px;border-radius:20px;text-transform:uppercase;}
+        #home-services .hsvc-body{padding:14px 16px 16px;}
+        #home-services .hsvc-name{font-size:1.02rem;font-weight:700;color:#0b1a2b;margin:0 0 10px;line-height:1.3;min-height:2.6em;}
+        #home-services .hsvc-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+        #home-services .hsvc-price{font-size:1.25rem;font-weight:800;color:#0b4c9d;line-height:1.1;}
+        #home-services .hsvc-price small{display:block;font-size:.7rem;color:#6b7280;font-weight:500;}
+        #home-services .hsvc-go{display:inline-flex;align-items:center;gap:5px;background:#eef3fb;color:#0b4c9d;font-weight:700;font-size:.85rem;padding:8px 13px;border-radius:8px;white-space:nowrap;transition:background .2s,color .2s;}
+        #home-services .hsvc-card:hover .hsvc-go{background:#0b4c9d;color:#fff;}
+    </style>
+    <section id="home-services" class="section-padding">
+        <div class="container">
+            <div class="hsvc-head">
+                <h2>Our Services &amp; <span>Pricing</span></h2>
+                <p>Doorstep car care for every need — transparent starting prices, booked in seconds.</p>
+            </div>
+            <!-- Prices mirror the Carmaa app; see each service page for full details -->
+            <div class="hsvc-marquee">
+                <div class="hsvc-track">
+                    <!-- set 1 -->
+                    <a class="hsvc-card" href="/full-car-wash-service/"><div class="hsvc-img"><img src="/assets/full-car-wash-service/hero-image.webp" alt="In & Out Premium Wash & Wax" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Popular</span></div><div class="hsvc-body"><h3 class="hsvc-name">In &amp; Out Premium Wash &amp; Wax</h3><div class="hsvc-foot"><span class="hsvc-price">₹999<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/interior-car-cleaning-service/"><div class="hsvc-img"><img src="/assets/interior-car-cleaning-service/hero-image.webp" alt="Interior Premium Spa" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Interior Premium Spa</h3><div class="hsvc-foot"><span class="hsvc-price">₹1199<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-deep-cleaning-services/"><div class="hsvc-img"><img src="/assets/car-deep-cleaning-services/hero-image.webp" alt="Deep All Round Spa" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Best Value</span></div><div class="hsvc-body"><h3 class="hsvc-name">Deep All Round Spa</h3><div class="hsvc-foot"><span class="hsvc-price">₹1499<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-dry-cleaning-service/"><div class="hsvc-img"><img src="/assets/car-dry-cleaning-service/hero-image.webp" alt="Car Dry Clean" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Car Dry Clean</h3><div class="hsvc-foot"><span class="hsvc-price">₹1499<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-body-polish-and-car-waxing-service/"><div class="hsvc-img"><img src="/assets/car-body-polish-and-car-waxing-service/hero-image.webp" alt="Rubbing & Polishing and Waxing" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Rubbing, Polishing &amp; Waxing</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹1799</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/paint-protection-and-coating-services/"><div class="hsvc-img"><img src="/assets/blogs/monsoon-protection.webp" alt="Paint Protection and Wax Coating" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Paint Protection &amp; Wax</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹2099</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/ceramic-coating-service/"><div class="hsvc-img"><img src="/assets/blogs/ceramic-coating-benefits.webp" alt="Ceramic Coating" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Premium</span></div><div class="hsvc-body"><h3 class="hsvc-name">Ceramic Coating (1/3/5 yr)</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹7499</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/graphene-coating-service/"><div class="hsvc-img"><img src="/assets/blogs/ppf_vs_ceramic_coating.webp" alt="Graphene Coating" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Graphene Coating (1/3/5 yr)</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹7499</span><span class="hsvc-go">View →</span></div></div></a>
+                    <!-- set 2 (duplicate for seamless loop) -->
+                    <a class="hsvc-card" href="/full-car-wash-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/full-car-wash-service/hero-image.webp" alt="" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Popular</span></div><div class="hsvc-body"><h3 class="hsvc-name">In &amp; Out Premium Wash &amp; Wax</h3><div class="hsvc-foot"><span class="hsvc-price">₹999<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/interior-car-cleaning-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/interior-car-cleaning-service/hero-image.webp" alt="" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Interior Premium Spa</h3><div class="hsvc-foot"><span class="hsvc-price">₹1199<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-deep-cleaning-services/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/car-deep-cleaning-services/hero-image.webp" alt="" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Best Value</span></div><div class="hsvc-body"><h3 class="hsvc-name">Deep All Round Spa</h3><div class="hsvc-foot"><span class="hsvc-price">₹1499<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-dry-cleaning-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/car-dry-cleaning-service/hero-image.webp" alt="" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Car Dry Clean</h3><div class="hsvc-foot"><span class="hsvc-price">₹1499<small>onwards</small></span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/car-body-polish-and-car-waxing-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/car-body-polish-and-car-waxing-service/hero-image.webp" alt="" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Rubbing, Polishing &amp; Waxing</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹1799</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/paint-protection-and-coating-services/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/blogs/monsoon-protection.webp" alt="" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Paint Protection &amp; Wax</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹2099</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/ceramic-coating-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/blogs/ceramic-coating-benefits.webp" alt="" width="400" height="250" loading="lazy" decoding="async"><span class="hsvc-badge">Premium</span></div><div class="hsvc-body"><h3 class="hsvc-name">Ceramic Coating (1/3/5 yr)</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹7499</span><span class="hsvc-go">View →</span></div></div></a>
+                    <a class="hsvc-card" href="/graphene-coating-service/" aria-hidden="true" tabindex="-1"><div class="hsvc-img"><img src="/assets/blogs/ppf_vs_ceramic_coating.webp" alt="" width="400" height="250" loading="lazy" decoding="async"></div><div class="hsvc-body"><h3 class="hsvc-name">Graphene Coating (1/3/5 yr)</h3><div class="hsvc-foot"><span class="hsvc-price">from ₹7499</span><span class="hsvc-go">View →</span></div></div></a>
+                </div>
+            </div>
+        </div>
+        <script>
+          (function(){
+            function init(){
+              var track=document.querySelector('#home-services .hsvc-track');
+              if(!track || track.dataset.hsvc) return;
+              var cards=Array.prototype.slice.call(track.children);
+              if(cards.length<2) return;
+              track.dataset.hsvc='1';
+              var half=Math.floor(cards.length/2);
+              function setW(){var w=0;for(var i=0;i<half;i++){var c=cards[i],r=c.getBoundingClientRect(),st=window.getComputedStyle(c);w+=r.width+parseFloat(st.marginLeft||0)+parseFloat(st.marginRight||0);}return w;}
+              var sw=setW(),x=0,sp=0.5,paused=false;
+              track.addEventListener('mouseenter',function(){paused=true;});
+              track.addEventListener('mouseleave',function(){paused=false;});
+              window.addEventListener('resize',function(){sw=setW();});
+              (function step(){if(!paused&&sw>0){x-=sp;if(Math.abs(x)>=sw)x=0;track.style.setProperty('transform','translateX('+x+'px)','important');}window.requestAnimationFrame(step);})();
+            }
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+          })();
+        </script>
+    </section>
+
     <script>
         (function () {
             var CITIES = {
