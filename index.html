@@ -490,6 +490,10 @@
         #home-trust .htrust-item strong{display:block;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;line-height:1.1;}
         #home-trust .htrust-item span{display:block;font-size:.86rem;color:#cfe0f3;margin-top:4px;}
         #home-trust .htrust-item i{color:#25d366;margin-right:4px;}
+        /* cohesive modern touches (additive, scoped to homepage sections) */
+        #promises .section-header h2::after,#how-it-works .section-header h2::after,#home-services .hsvc-head h2::after,#aeo-faq .section-header h2::after,#reviews .section-header h2::after,#transformation .section-header h2::after{content:"";display:block;width:64px;height:4px;background:#0b4c9d;border-radius:3px;margin:14px auto 0;}
+        #promises .promise-card,#how-it-works .step-card{transition:transform .25s ease,box-shadow .25s ease;}
+        #promises .promise-card:hover,#how-it-works .step-card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(11,76,157,.14);}
     </style>
     <section id="home-trust" aria-label="Why customers trust Carmaa">
         <div class="htrust-row">
