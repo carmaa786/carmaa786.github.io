@@ -190,6 +190,18 @@
             .svcx-related a{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;text-decoration:none;background:#fff;border:1px solid #d7deea;border-radius:14px;padding:20px 12px;color:#0b1a2b;font-weight:600;box-shadow:0 4px 14px rgba(16,40,80,.06);transition:transform .2s,box-shadow .2s;}
             .svcx-related a:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(16,40,80,.13);}
             .svcx-related a i{font-size:1.7rem;color:#0b4c9d;}
+            /* plans / price tiers */
+            .svcx-plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px;align-items:stretch;}
+            .svcx-plan{background:#fff;border:1px solid #d7deea;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 14px rgba(16,40,80,.06);display:flex;flex-direction:column;}
+            .svcx-plan.featured{border:2px solid #0b4c9d;box-shadow:0 12px 30px rgba(11,76,157,.18);}
+            .svcx-plan .badge{display:inline-block;background:#0b4c9d;color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.03em;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin:0 auto 10px;}
+            .svcx-plan h3{margin:0 0 6px;font-size:1.15rem;color:#0b1a2b;}
+            .svcx-plan .pp{font-size:1.85rem;font-weight:800;color:#0b4c9d;margin:4px 0 2px;}
+            .svcx-plan .pp small{display:block;font-size:.78rem;color:#6b7280;font-weight:500;margin-top:2px;}
+            .svcx-plan ul{list-style:none;padding:0;margin:14px 0 18px;text-align:left;display:flex;flex-direction:column;gap:8px;}
+            .svcx-plan li{position:relative;padding-left:24px;color:#4b5563;font-size:.92rem;line-height:1.4;}
+            .svcx-plan li::before{content:"\2713";position:absolute;left:0;color:#0e9f6e;font-weight:800;}
+            .svcx-plan .svcx-btn{margin-top:auto;justify-content:center;}
             /* responsive */
             @media (max-width:860px){ .svcx-hero{grid-template-columns:1fr;gap:24px;} .svcx-hero-img{order:-1;} .svcx-split{grid-template-columns:1fr;gap:24px;} .svcx-enquiry{grid-template-columns:1fr;} .svcx-band,.svcx-hero-band,.svcx-enquiry-band,.svcx-trust-band{padding:36px 0;} }
             @media (max-width:480px){ .svcx-cta .svcx-btn{width:100%;justify-content:center;} .svcx-inner{padding:0 16px;} }
