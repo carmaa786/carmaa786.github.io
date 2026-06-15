@@ -421,6 +421,23 @@
       ]
     }
     </script>
+<style>
+        /* ===== Homepage modern pass (scoped, brand tokens) ===== */
+        .hero-section .overlay.hero-extra{background:linear-gradient(120deg,rgba(11,26,43,.72) 0%,rgba(11,26,43,.35) 55%,rgba(11,26,43,.15) 100%);}
+        .hero-section .hero-content{position:relative;z-index:3;}
+        .hero-section .hero-content h1{font-size:clamp(2.1rem,5.4vw,3.5rem);line-height:1.1;letter-spacing:-.5px;text-shadow:0 3px 22px rgba(0,0,0,.45);}
+        .hero-section .hero-content > p{font-size:clamp(1.02rem,2.4vw,1.3rem);font-weight:500;opacity:.96;text-shadow:0 2px 12px rgba(0,0,0,.4);margin-top:.4rem;}
+        .hero-section .cta-group{gap:14px;margin-top:1.6rem;}
+        .hero-section .cta-group .btn{padding:14px 26px;box-shadow:0 12px 30px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease;}
+        .hero-section .cta-group .btn:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(0,0,0,.34);}
+        /* Promises + How-it-works: bolder modern cards */
+        #promises .promise-card,#how-it-works .step-card{border-radius:18px;box-shadow:0 8px 26px rgba(16,40,80,.08);padding:30px 26px;border:1px solid rgba(27,78,155,.08);background:#fff;}
+        #promises .icon-box{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:14px;}
+        #how-it-works .step-icon{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;background:linear-gradient(135deg,#1B4E9B,#28B097);color:#fff;margin-bottom:14px;}
+        #promises .promise-card h3,#how-it-works .step-card h3{font-size:1.2rem;color:#0F172A;margin-bottom:8px;}
+        /* section heading accent (brand) */
+        #services .section-header h2::after,#story .section-header h2::after,#aeo-faq .section-header h2::after{content:"";display:block;width:64px;height:4px;background:linear-gradient(135deg,#1B4E9B,#28B097);border-radius:3px;margin:14px auto 0;}
+    </style>
 </head>
 
 <body>
