@@ -212,3 +212,34 @@ a.mobile-number-ref:hover p.benefits-mobile-number,
 a.mobile-number-ref:hover span.benefits-mobile-number {
   color: #28b097 !important; /* Brand teal on hover */
 }
+
+/* ===================================================================
+   IMAGE PROPORTIONS ONLY (no structural / card restyle — the original
+   .city-benefit-element cards + solid-colour icon badges are kept as-is).
+   The swapped per-city photos vary in aspect ratio, so we lock the two
+   big image slots to a clean, cover-cropped ratio. Bounding the height
+   also collapses the tall empty rows that caused the whitespace.
+   =================================================================== */
+
+/* "Why … Trust Carmaa" image */
+.city-why-choose .why-choose-right img,
+.city-why-choose .img-component .why-choose-right img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 2 !important;
+  max-height: 420px !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+  display: block !important;
+}
+
+/* "Book the Best Car Wash" CTA illustration (portrait photos) */
+.our-service-main-section.our-service-main-section .city-call-to-action-left img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 360px !important;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+  border-radius: 14px !important;
+  display: block !important;
+}
