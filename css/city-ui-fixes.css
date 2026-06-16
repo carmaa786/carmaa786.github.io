@@ -243,3 +243,35 @@ a.mobile-number-ref:hover span.benefits-mobile-number {
   border-radius: 14px !important;
   display: block !important;
 }
+
+/* ===================================================================
+   COMPARISON TABLES — mobile margin / padding fix.
+   On phones the tables ran edge-to-edge with cramped cells. Give the
+   container side padding, let wide tables scroll horizontally, and
+   restore comfortable cell padding. (city.min.css never received the
+   source mobile rule, so this shared sheet supplies it.)
+   =================================================================== */
+@media (max-width: 768px) {
+  .comparison-table-container,
+  .city-why-choose > .comparison-table-container {
+    padding: 0 16px !important;
+    margin: 1.25rem 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .comparison-table {
+    width: 100% !important;
+    min-width: 460px !important;
+    border-collapse: collapse !important;
+    font-size: 0.86rem !important;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 11px 13px !important;
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    vertical-align: middle !important;
+  }
+}
