@@ -16,9 +16,6 @@
   <url>
     <loc>https://carmaacarcare.com/about/</loc>
     <image:image>
-      <image:loc>https://carmaacarcare.com/about/${service.img}</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://carmaacarcare.com/assets/aboutus/aboutus-bluecar.webp</image:loc>
     </image:image>
     <image:image>
